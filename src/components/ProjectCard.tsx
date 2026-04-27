@@ -26,23 +26,21 @@ export default function ProjectCard({
   sourceUrl,
   href,
 }: ProjectCardProps) {
-  const Title = (
-    <h3 className="mb-1 text-heading-xl text-text">
-      {href ? (
-        <Link href={href} className="transition-colors hover:text-primary">
-          {title}
-        </Link>
-      ) : (
-        title
-      )}
-    </h3>
-  );
-
   return (
-    <div className="card flex flex-col gap-1 overflow-hidden p-2">
-      <div className="h-[200px] w-full bg-elevated" aria-hidden />
-      <div className="px-1 pb-1 pt-2">
-        {Title}
+    <div className="card group relative flex flex-col gap-1 overflow-hidden p-2">
+      {href && (
+        <Link
+          href={href}
+          aria-label={`Open case study: ${title}`}
+          className="absolute inset-0 z-0"
+        />
+      )}
+
+      <div className="relative z-10 h-[200px] w-full bg-elevated" aria-hidden />
+      <div className="relative z-10 px-1 pb-1 pt-2">
+        <h3 className="mb-1 text-heading-xl text-text transition-colors group-hover:text-primary">
+          {title}
+        </h3>
         <p className="clamp-2 h-10 text-sm font-medium leading-5 text-text-muted">
           {description}
         </p>
@@ -61,17 +59,12 @@ export default function ProjectCard({
         </div>
 
         <div className="mt-2 flex gap-4">
-          {href && (
-            <Link href={href} className="text-sm font-medium text-primary hover:underline">
-              Case study
-            </Link>
-          )}
           {liveUrl && (
             <Link
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-primary hover:underline"
+              className="relative z-20 text-sm font-medium text-primary hover:underline"
             >
               View Live
             </Link>
@@ -81,7 +74,7 @@ export default function ProjectCard({
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-text-muted hover:underline"
+              className="relative z-20 text-sm font-medium text-text-muted hover:underline"
             >
               Source Code
             </Link>
