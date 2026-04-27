@@ -1,0 +1,329 @@
+/* ============================================================
+   globals.css — Tailwind v4
+   Single source of truth for your entire design system.
+   No tailwind.config.ts needed — everything lives here.
+   ============================================================ */
+
+@import "tailwindcss";
+@import "../src/styles/tokens.css";
+
+/* ── Dark mode: class-based (add/remove .dark on <html>) ── */
+@variant dark (&:is(.dark *));
+
+/* ============================================================
+   @theme — Design tokens
+   These become both:
+   1. CSS custom properties (var(--color-bg))
+   2. Tailwind utility classes (bg-bg, text-text, etc.)
+   Tailwind v4 handles both automatically.
+   ============================================================ */
+
+@theme {
+
+  /* ── Colour — Light mode defaults ── */
+
+  /* Backgrounds */
+  --color-bg:              #faf7f0;   /* page background */
+  --color-surface:         #f2ede4;   /* cards, panels */
+  --color-elevated:        #e8e2d8;   /* modals, dropdowns */
+
+  /* Text */
+  --color-text:            #0c0e1a;   /* primary text */
+  --color-text-muted:      #6b6560;   /* secondary, captions */
+  --color-text-subtle:     #a09890;   /* placeholders, disabled */
+  --color-text-inverse:    #faf7f0;   /* text on dark backgrounds */
+  --color-text-on-accent:  #0c0e1a;   /* text on gold background */
+
+  /* Borders */
+  --color-border-subtle:   #e8e2d8;
+  --color-border:          #d4cdc0;
+  --color-border-strong:   #8fa3b8;
+
+  /* Brand */
+  --color-primary:         #1a3a6e;
+  --color-primary-hover:   #02285a;
+  --color-primary-muted:   #e8eef5;
+  --color-secondary:       #2a4470;
+  --color-accent:          #e8a820;   /* gold */
+  --color-accent-hover:    #b8963c;
+  --color-accent-muted:    #faf3e6;
+  --color-accent-light:    #e8c97a;
+  --color-tertiary:     #6888c4;
+  --color-accent-dark:  #b87808;
+
+  /* Semantic status */
+  --color-success:         #2d6a4f;
+  --color-success-bg:      #edf5f1;
+  --color-success-text:    #1a4a34;
+  --color-warning:         #b87020;
+  --color-warning-bg:      #fdf4e8;
+  --color-warning-text:    #7a4a10;
+  --color-error:           #b83232;
+  --color-error-bg:        #fdf0f0;
+  --color-error-text:      #7a1f1f;
+  --color-info:            #2a4470;
+  --color-info-bg:         #edf1f6;
+  --color-info-text:       #1a3050;
+
+  /* ── Typography ── */
+  --font-heading:          'Cinzel', 'Georgia', serif;
+  --font-body:             'Montserrat', 'system-ui', sans-serif;
+  --font-mono:             'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type scale — perfect fourth ratio (×1.333) */
+  --text-xs:   0.563rem;
+  --text-sm:   0.750rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-heading-xl: 1.333rem;
+  --text-heading-2xl:  1.777rem;
+  --text-heading-3xl:  2.369rem;
+  --text-heading-4xl:  3.158rem;
+  --text-heading-5xl:  4.210rem;
+
+  /* ── Spacing — 4px grid ── */
+  --spacing-px:  1px;
+  --spacing-0:   0;
+  --spacing-1:   4px;
+  --spacing-2:   8px;
+  --spacing-3:   12px;
+  --spacing-4:   16px;
+  --spacing-5:   20px;
+  --spacing-6:   24px;
+  --spacing-8:   32px;
+  --spacing-10:  40px;
+  --spacing-12:  48px;
+  --spacing-16:  64px;
+  --spacing-20:  80px;
+  --spacing-24:  96px;
+  --spacing-32:  128px;
+
+  /* ── Border radius (sharp corners) ── */
+  --radius-sm:   0;
+  --radius:      0;
+  --radius-md:   0;
+  --radius-lg:   0;
+  --radius-xl:   0;
+  --radius-full: 0;
+
+  /* ── Shadows — warm navy tint ── */
+  --shadow-sm:      0 1px 3px rgba(12, 14, 26, 0.06);
+  --shadow:         0 2px 8px rgba(12, 14, 26, 0.08);
+  --shadow-md:      0 4px 16px rgba(12, 14, 26, 0.10);
+  --shadow-lg:      0 8px 32px rgba(12, 14, 26, 0.12);
+  --shadow-xl:      0 16px 48px rgba(12, 14, 26, 0.14);
+  --shadow-accent:  0 4px 20px rgba(201, 168, 76, 0.30);
+  --shadow-primary: 0 4px 20px rgba(2, 32, 90, 0.22);
+
+  /* ── Transitions ── */
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --duration-fast:   150ms;
+  --duration:        200ms;
+  --duration-slow:   300ms;
+  --duration-slower: 500ms;
+
+  /* ── Breakpoints ── */
+  --breakpoint-sm:  640px;
+  --breakpoint-md:  768px;
+  --breakpoint-lg:  1024px;
+  --breakpoint-xl:  1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Dark mode color + shadow overrides: generated from design-tokens/tokens.json (imported in layout, after this file). */
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    transition:
+      background-color var(--duration-slow) var(--ease),
+      color var(--duration-slow) var(--ease);
+  }
+
+  /* Smooth transition on mode switch */
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-duration: var(--duration-slow);
+    transition-timing-function: var(--ease);
+  }
+
+  /* Heading defaults */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+  }
+
+  /* Heading scale utilities: size tokens + display font */
+  .text-heading-xl,
+  .text-heading-2xl,
+  .text-heading-3xl,
+  .text-heading-4xl,
+  .text-heading-5xl {
+    font-family: var(--font-heading);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-border-strong); }
+}
+
+/* ============================================================
+   COMPONENT LAYER
+   Reusable base classes using @utility (v4 syntax)
+   ============================================================ */
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  white-space: nowrap;
+}
+
+@utility btn-primary {
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  &:hover {
+    background: var(--color-accent-hover);
+    box-shadow: var(--shadow-accent);
+    transform: translateY(-1px);
+  }
+  &:active { transform: translateY(0); }
+}
+
+@utility btn-navy {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  &:hover {
+    background: var(--color-primary-hover);
+    box-shadow: var(--shadow-primary);
+    transform: translateY(-1px);
+  }
+}
+
+@utility btn-outline {
+  background: transparent;
+  color: var(--color-text);
+  border: 1.5px solid var(--color-border);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  &:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-surface);
+  }
+}
+
+@utility btn-ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-subtle);
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  &:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+}
+
+@utility card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease),
+    border-color var(--duration) var(--ease);
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border);
+  }
+}
+
+@utility input {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  transition:
+    border-color var(--duration) var(--ease),
+    box-shadow var(--duration) var(--ease);
+  &::placeholder { color: var(--color-text-subtle); }
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+  }
+}
+
+@utility nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition:
+    background var(--duration-slow) var(--ease),
+    border-color var(--duration-slow) var(--ease);
+}
+
+@utility section-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+@utility divider {
+  border: none;
+  border-top: 1px solid var(--color-border-subtle);
+}
+

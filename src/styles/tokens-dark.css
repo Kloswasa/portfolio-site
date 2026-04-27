@@ -1,0 +1,40 @@
+/* Auto-generated. Do not edit directly. */
+.dark {
+  --color-bg: #0a0e18;
+  --color-surface: #151828;
+  --color-elevated: #1e2235;
+  --color-text: #eeeaf2;
+  --color-text-muted: #8a8fa8;
+  --color-text-subtle: #4a5070;
+  --color-text-inverse: #0d0f1a;
+  --color-border-subtle: #1e2235;
+  --color-border: #2a2f48;
+  --color-border-strong: #3d4a6a;
+  --color-primary: #3a6fd8;
+  --color-primary-hover: #4a80e8;
+  --color-primary-muted: #1a2540;
+  --color-secondary: #4a6a9a;
+  --color-tertiary: #6888c0;
+  --color-accent: #ecb838;
+  --color-accent-hover: #e0c070;
+  --color-accent-muted: #1e1a0a;
+  --color-success: #4ade80;
+  --color-success-bg: #0d2818;
+  --color-success-text: #86efac;
+  --color-warning: #fbbf24;
+  --color-warning-bg: #1f1500;
+  --color-warning-text: #fcd34d;
+  --color-error: #f87171;
+  --color-error-bg: #1f0808;
+  --color-error-text: #fca5a5;
+  --color-info: #3a6fd8;
+  --color-info-bg: #0d1a30;
+  --color-info-text: #93c5fd;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.20);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.42);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.50);
+  --shadow-accent: 0 4px 20px rgba(212, 176, 90, 0.20);
+  --shadow-primary: 0 4px 20px rgba(58, 111, 216, 0.30);
+}

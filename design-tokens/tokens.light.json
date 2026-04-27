@@ -1,0 +1,90 @@
+{
+  "$schema": "https://unpkg.com/@tokens-studio/schema@latest",
+  "color": {
+    "bg": { "value": "#faf7f0", "type": "color" },
+    "surface": { "value": "#f2ede4", "type": "color" },
+    "elevated": { "value": "#e8e2d8", "type": "color" },
+    "text": { "value": "#0c0e1a", "type": "color" },
+    "textMuted": { "value": "#6b6560", "type": "color" },
+    "textSubtle": { "value": "#a09890", "type": "color" },
+    "textInverse": { "value": "#faf7f0", "type": "color" },
+    "textOnAccent": { "value": "#0c0e1a", "type": "color" },
+    "borderSubtle": { "value": "#e8e2d8", "type": "color" },
+    "border": { "value": "#d4cdc0", "type": "color" },
+    "borderStrong": { "value": "#8fa3b8", "type": "color" },
+    "primary": { "value": "#1a3a6e", "type": "color" },
+    "primaryHover": { "value": "#02285a", "type": "color" },
+    "primaryMuted": { "value": "#e8eef5", "type": "color" },
+    "secondary": { "value": "#2a4470", "type": "color" },
+    "tertiary": { "value": "#6888c4", "type": "color" },
+    "accent": { "value": "#e8a820", "type": "color" },
+    "accentHover": { "value": "#b8963c", "type": "color" },
+    "accentMuted": { "value": "#faf3e6", "type": "color" },
+    "accentLight": { "value": "#e8c97a", "type": "color" },
+    "accentDark": { "value": "#b87808", "type": "color" },
+    "success": { "value": "#2d6a4f", "type": "color" },
+    "successBg": { "value": "#edf5f1", "type": "color" },
+    "successText": { "value": "#1a4a34", "type": "color" },
+    "warning": { "value": "#b87020", "type": "color" },
+    "warningBg": { "value": "#fdf4e8", "type": "color" },
+    "warningText": { "value": "#7a4a10", "type": "color" },
+    "error": { "value": "#b83232", "type": "color" },
+    "errorBg": { "value": "#fdf0f0", "type": "color" },
+    "errorText": { "value": "#7a1f1f", "type": "color" },
+    "info": { "value": "#2a4470", "type": "color" },
+    "infoBg": { "value": "#edf1f6", "type": "color" },
+    "infoText": { "value": "#1a3050", "type": "color" }
+  },
+  "font": {
+    "heading": { "value": "'Cinzel', 'Georgia', serif", "type": "fontFamilies" },
+    "body": { "value": "'Montserrat', 'system-ui', sans-serif", "type": "fontFamilies" },
+    "mono": { "value": "'JetBrains Mono', 'Fira Code', monospace", "type": "fontFamilies" }
+  },
+  "text": {
+    "xs": { "value": "0.563rem", "type": "fontSizes" },
+    "sm": { "value": "0.750rem", "type": "fontSizes" },
+    "base": { "value": "1rem", "type": "fontSizes" },
+    "lg": { "value": "1.125rem", "type": "fontSizes" },
+    "heading": {
+      "xl": { "value": "1.333rem", "type": "fontSizes" },
+      "2xl": { "value": "1.777rem", "type": "fontSizes" },
+      "3xl": { "value": "2.369rem", "type": "fontSizes" },
+      "4xl": { "value": "3.158rem", "type": "fontSizes" },
+      "5xl": { "value": "4.210rem", "type": "fontSizes" }
+    }
+  },
+  "spacing": {
+    "px": { "value": "1px", "type": "spacing" },
+    "0": { "value": "0", "type": "spacing" },
+    "1": { "value": "4px", "type": "spacing" },
+    "2": { "value": "8px", "type": "spacing" },
+    "3": { "value": "12px", "type": "spacing" },
+    "4": { "value": "16px", "type": "spacing" },
+    "5": { "value": "20px", "type": "spacing" },
+    "6": { "value": "24px", "type": "spacing" },
+    "8": { "value": "32px", "type": "spacing" },
+    "10": { "value": "40px", "type": "spacing" },
+    "12": { "value": "48px", "type": "spacing" },
+    "16": { "value": "64px", "type": "spacing" },
+    "20": { "value": "80px", "type": "spacing" },
+    "24": { "value": "96px", "type": "spacing" },
+    "32": { "value": "128px", "type": "spacing" }
+  },
+  "radius": {
+    "sm": { "value": "0", "type": "borderRadius" },
+    "md": { "value": "0", "type": "borderRadius" },
+    "lg": { "value": "0", "type": "borderRadius" },
+    "xl": { "value": "0", "type": "borderRadius" },
+    "full": { "value": "0", "type": "borderRadius" }
+  },
+  "shadow": {
+    "default": { "value": "0 2px 8px rgba(12, 14, 26, 0.08)", "type": "boxShadow" },
+    "sm": { "value": "0 1px 3px rgba(12, 14, 26, 0.06)", "type": "boxShadow" },
+    "md": { "value": "0 4px 16px rgba(12, 14, 26, 0.10)", "type": "boxShadow" },
+    "lg": { "value": "0 8px 32px rgba(12, 14, 26, 0.12)", "type": "boxShadow" },
+    "xl": { "value": "0 16px 48px rgba(12, 14, 26, 0.14)", "type": "boxShadow" },
+    "accent": { "value": "0 4px 20px rgba(201, 168, 76, 0.30)", "type": "boxShadow" },
+    "primary": { "value": "0 4px 20px rgba(2, 32, 90, 0.22)", "type": "boxShadow" }
+  }
+}
+

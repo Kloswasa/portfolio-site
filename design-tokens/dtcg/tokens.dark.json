@@ -1,0 +1,245 @@
+{
+  "color": {
+    "bg": {
+      "$value": "#0a0e18"
+    },
+    "surface": {
+      "$value": "#151828"
+    },
+    "elevated": {
+      "$value": "#1e2235"
+    },
+    "text": {
+      "$value": "#eeeaf2"
+    },
+    "textMuted": {
+      "$value": "#8a8fa8"
+    },
+    "textSubtle": {
+      "$value": "#4a5070"
+    },
+    "textInverse": {
+      "$value": "#0d0f1a"
+    },
+    "borderSubtle": {
+      "$value": "#1e2235"
+    },
+    "border": {
+      "$value": "#2a2f48"
+    },
+    "borderStrong": {
+      "$value": "#3d4a6a"
+    },
+    "primary": {
+      "$value": "#3a6fd8"
+    },
+    "primaryHover": {
+      "$value": "#4a80e8"
+    },
+    "primaryMuted": {
+      "$value": "#1a2540"
+    },
+    "secondary": {
+      "$value": "#4a6a9a"
+    },
+    "tertiary": {
+      "$value": "#6888c0"
+    },
+    "accent": {
+      "$value": "#ecb838"
+    },
+    "accentHover": {
+      "$value": "#e0c070"
+    },
+    "accentMuted": {
+      "$value": "#1e1a0a"
+    },
+    "success": {
+      "$value": "#4ade80"
+    },
+    "successBg": {
+      "$value": "#0d2818"
+    },
+    "successText": {
+      "$value": "#86efac"
+    },
+    "warning": {
+      "$value": "#fbbf24"
+    },
+    "warningBg": {
+      "$value": "#1f1500"
+    },
+    "warningText": {
+      "$value": "#fcd34d"
+    },
+    "error": {
+      "$value": "#f87171"
+    },
+    "errorBg": {
+      "$value": "#1f0808"
+    },
+    "errorText": {
+      "$value": "#fca5a5"
+    },
+    "info": {
+      "$value": "#3a6fd8"
+    },
+    "infoBg": {
+      "$value": "#0d1a30"
+    },
+    "infoText": {
+      "$value": "#93c5fd"
+    },
+    "$type": "color"
+  },
+  "shadow": {
+    "default": {
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.28)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 2,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 8,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "sm": {
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.20)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 1,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 3,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "md": {
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.35)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 4,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 16,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "lg": {
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.42)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 8,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 32,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "xl": {
+      "$value": {
+        "color": "rgba(0, 0, 0, 0.50)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 16,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 48,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "accent": {
+      "$value": {
+        "color": "rgba(212, 176, 90, 0.20)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 4,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 20,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "primary": {
+      "$value": {
+        "color": "rgba(58, 111, 216, 0.30)",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 4,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 20,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    },
+    "$type": "shadow"
+  }
+}
