@@ -32,12 +32,15 @@ export default function ProjectCard({
         <Link
           href={href}
           aria-label={`Open case study: ${title}`}
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-10"
         />
       )}
 
-      <div className="relative z-10 h-[200px] w-full bg-elevated" aria-hidden />
-      <div className="relative z-10 px-1 pb-1 pt-2">
+      <div
+        className={`relative z-20 h-[200px] w-full bg-elevated ${href ? "pointer-events-none" : ""}`}
+        aria-hidden
+      />
+      <div className={`relative z-20 px-1 pb-1 pt-2 ${href ? "pointer-events-none" : ""}`}>
         <h3 className="mb-1 text-heading-xl text-text transition-colors group-hover:text-primary">
           {title}
         </h3>
@@ -64,7 +67,7 @@ export default function ProjectCard({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-20 text-sm font-medium text-primary hover:underline"
+              className="pointer-events-auto relative z-20 text-sm font-medium text-primary hover:underline"
             >
               View Live
             </Link>
@@ -74,7 +77,7 @@ export default function ProjectCard({
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-20 text-sm font-medium text-text-muted hover:underline"
+              className="pointer-events-auto relative z-20 text-sm font-medium text-text-muted hover:underline"
             >
               Source Code
             </Link>
