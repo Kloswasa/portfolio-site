@@ -82,7 +82,7 @@ npm run dev
 ### Styling
 
 - Global theme + utilities live in `app/globals.css`
-- Tokens are generated into `src/styles/tokens.css` (light) and `src/styles/tokens-dark.css` (dark overrides)
+- Tokens are generated into `src/styles/theme.css` (`@theme { ... }` + `.dark { ... }`)
 
 ### Adding Projects
 
@@ -108,8 +108,7 @@ To add new projects, edit `src/lib/projects.ts`:
 - `design-tokens/tokens.dark.json`: dark theme overrides (only tokens that change)
 
 ### Generated outputs (do not edit by hand)
-- `src/styles/tokens.css`: `:root { ... }` CSS variables (light)
-- `src/styles/tokens-dark.css`: `.dark { ... }` CSS variable overrides (dark)
+- `src/styles/theme.css`: `@theme { ... }` tokens + `.dark { ... }` overrides
 - `src/design-tokens/tokens.ts`: flattened token map used by the `/tokens` page
 
 ### Token reference page

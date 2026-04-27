@@ -24,9 +24,9 @@ This document compares the **Portfolio-2026** `CLAUDE.md` (on Desktop) with the 
 |--------|-------------|-----------|-------------------|
 | Source files | `tokens/` tree (`$metadata`, `core/`, `semantic/`, `components/`) | `design-tokens/tokens.light.json`, `design-tokens/tokens.dark.json` | **This repo** — edit JSON here; run `npm run tokens:gen`. |
 | Figma | Tokens Studio sync → GitHub | `npm run tokens:pull` (light only per `AGENTS.md`) | **This repo’s commands**; document that **dark** is maintained separately. |
-| Generated outputs | “All in `app/globals.css`” (do not hand-edit) | **Generated:** `src/styles/tokens.css`, `src/styles/tokens-dark.css`, `src/design-tokens/tokens.ts`, DTCG under `design-tokens/dtcg/`. | **Do not hand-edit those four outputs.** |
-| `app/globals.css` | Described as fully generated | **Hand-maintained** Tailwind v4 entry (`@import "tailwindcss"`, `@import` of `tokens.css`, `@theme`, utilities, base styles). | **This repo** — `globals.css` is the Tailwind v4 + layout layer, **not** a Style Dictionary output. Update any external `CLAUDE.md` to say that. |
-| Duplication risk | N/A (single generated file) | Same colour values can appear in **both** `tokens.css` (from JSON) and `@theme` in `globals.css`. | **Better long term:** map `@theme` to `var(--...)` from imported tokens only, so one edit path. Until then, **treat `design-tokens/*.json` as authoritative** and regenerate; if you change `@theme` hex, sync back to JSON or you will drift. |
+| Generated outputs | “All in `app/globals.css`” (do not hand-edit) | **Generated:** `src/styles/theme.css`, `src/design-tokens/tokens.ts`, DTCG under `design-tokens/dtcg/`. | **Do not hand-edit those outputs.** |
+| `app/globals.css` | Described as fully generated | **Hand-maintained** Tailwind v4 entry (`@import "tailwindcss"`, `@import` of `theme.css`, utilities, base styles). | **This repo** — `globals.css` is the Tailwind v4 + layout layer, **not** a Style Dictionary output. Update any external `CLAUDE.md` to say that. |
+| Duplication risk | N/A (single generated file) | Values can drift if tokens are hand-maintained in multiple places. | **This repo:** treat `design-tokens/*.json` as authoritative and regenerate outputs; do not hand-edit `@theme` values in `globals.css`. |
 
 ---
 
@@ -86,8 +86,8 @@ This document compares the **Portfolio-2026** `CLAUDE.md` (on Desktop) with the 
 |------|----------------------------|
 | Context files | `AGENTS.md`, `.cursor/rules/project.mdc`, `README.md`, **this file** |
 | Token inputs | `design-tokens/tokens.light.json`, `design-tokens/tokens.dark.json` |
-| Token outputs (generated) | `src/styles/tokens.css`, `src/styles/tokens-dark.css`, `src/design-tokens/tokens.ts`, `design-tokens/dtcg/*` |
-| App styling entry | `app/globals.css` (Tailwind v4; edit here for `@theme` / utilities; avoid duplicating values already owned by JSON → `tokens:gen`) |
+| Token outputs (generated) | `src/styles/theme.css`, `src/design-tokens/tokens.ts`, `design-tokens/dtcg/*` |
+| App styling entry | `app/globals.css` (Tailwind v4; edit here for utilities/base styles; avoid duplicating values already owned by JSON → `tokens:gen`) |
 | Components | `src/components/`, `components/ui/` |
 | Data | `src/lib/*.ts` (until a dedicated `content/` exists) |
 | Motion | `framer-motion` + `animation/` (variants); respect `useReducedMotion` in components |

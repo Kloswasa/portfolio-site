@@ -1,65 +1,93 @@
+import Link from "next/link";
+import { Badge, type BadgeTone } from "@/src/components/ui/Badge";
+
+const toneOffset: Record<BadgeTone, number> = {
+  primary: 0,
+  secondary: 1,
+  tertiary: 2,
+};
+
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  gradientFrom: string;
-  gradientTo: string;
+  tone?: BadgeTone;
   liveUrl?: string;
   sourceUrl?: string;
+  href?: string;
 }
 
 export default function ProjectCard({
   title,
   description,
   technologies,
-  gradientFrom,
-  gradientTo,
+  tone = "primary",
   liveUrl,
-  sourceUrl
+  sourceUrl,
+  href,
 }: ProjectCardProps) {
-  return (
-    <div className="bg-white dark:bg-slate-900 rounded-none shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className={`h-48 bg-gradient-to-br ${gradientFrom} ${gradientTo}`}></div>
-      <div className="p-6">
-        <h3 className="text-heading-xl font-semibold text-slate-900 dark:text-white mb-2">
+  const Title = (
+    <h3 className="mb-1 text-heading-xl text-text">
+      {href ? (
+        <Link href={href} className="transition-colors hover:text-primary">
           {title}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-300 mb-4">
+        </Link>
+      ) : (
+        title
+      )}
+    </h3>
+  );
+
+  return (
+    <div className="card flex flex-col gap-1 overflow-hidden p-2">
+      <div className="h-[200px] w-full bg-elevated" aria-hidden />
+      <div className="px-1 pb-1 pt-2">
+        {Title}
+        <p className="clamp-2 h-10 text-sm font-medium leading-5 text-text-muted">
           {description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm rounded-none"
-            >
-              {tech}
-            </span>
-          ))}
+
+        <div className="mt-1 flex flex-wrap gap-1">
+          {technologies.map((tech, index) => {
+            const palette = ["primary", "secondary", "tertiary"] as const;
+            const offset = toneOffset[tone];
+            const t: BadgeTone = palette[(index + offset) % palette.length]!;
+            return (
+              <Badge key={tech} tone={t}>
+                {tech}
+              </Badge>
+            );
+          })}
         </div>
-        <div className="flex gap-4">
+
+        <div className="mt-2 flex gap-4">
+          {href && (
+            <Link href={href} className="text-sm font-medium text-primary hover:underline">
+              Case study
+            </Link>
+          )}
           {liveUrl && (
-            <a
+            <Link
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+              className="text-sm font-medium text-primary hover:underline"
             >
               View Live
-            </a>
+            </Link>
           )}
           {sourceUrl && (
-            <a
+            <Link
               href={sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:underline text-sm font-medium"
+              className="text-sm font-medium text-text-muted hover:underline"
             >
               Source Code
-            </a>
+            </Link>
           )}
         </div>
       </div>
     </div>
   );
-} 
+}

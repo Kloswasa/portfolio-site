@@ -10,7 +10,7 @@ Phased plan aligned with the old Portfolio-2026 phases, **updated to match this 
 
 - [x] **Phase 0** — Pre-flight (tooling, Next 15, TypeScript, Tailwind v4)
 - [x] **Phase 1** — Routing and global layout (`app/layout.tsx`, `app/page.tsx`, theme script, CSS load order)
-- [x] **Phase 2** — Core components present (`src/components/*`, `components/ui/*`) — ongoing parity with Figma as design evolves
+- [ ] **Phase 2** — Core components present (`src/components/*`, `components/ui/*`) — ongoing parity with Figma as design evolves
 - [x] **Phase 2.5** — Design tokens: `design-tokens/tokens.*.json` + `npm run tokens:gen` + `/tokens` reference page
 - [x] **Phase 2.6** — AI context: `AGENTS.md`, `.cursor/rules/project.mdc`, `.cursor/rules/CLAUDE.md`, this roadmap
 - [x] **Phase 3** — Home page (static shell and sections)

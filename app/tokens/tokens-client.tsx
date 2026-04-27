@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CopyButton } from "@/components/ui/CopyButton";
+import { CopyButton } from "@/src/components/ui/CopyButton";
 
 type TokenRow = {
   key: string;

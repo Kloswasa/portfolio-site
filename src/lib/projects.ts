@@ -1,10 +1,12 @@
+import type { BadgeTone } from "@/src/components/ui/Badge";
+
 export interface Project {
   id: number;
+  slug: string;
   title: string;
   description: string;
   technologies: string[];
-  gradientFrom: string;
-  gradientTo: string;
+  tone: BadgeTone;
   liveUrl?: string;
   sourceUrl?: string;
 }
@@ -12,32 +14,32 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    slug: "quiz-game",
     title: "E-Commerce Platform",
     description: "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL.",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    gradientFrom: "from-blue-400",
-    gradientTo: "to-purple-500",
+    tone: "primary",
     liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/yourusername/project"
+    sourceUrl: "https://github.com/yourusername/project",
   },
   {
     id: 2,
+    slug: "project-2",
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates.",
     technologies: ["React", "Firebase", "Tailwind CSS"],
-    gradientFrom: "from-green-400",
-    gradientTo: "to-blue-500",
+    tone: "secondary",
     liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/yourusername/project"
+    sourceUrl: "https://github.com/yourusername/project",
   },
   {
     id: 3,
+    slug: "project-3",
     title: "Portfolio Website",
     description: "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
-    gradientFrom: "from-purple-400",
-    gradientTo: "to-pink-500",
+    tone: "tertiary",
     liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/yourusername/project"
-  }
-]; 
+    sourceUrl: "https://github.com/yourusername/project",
+  },
+];

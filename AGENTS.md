@@ -29,15 +29,14 @@ Tokens are semantic and nested (e.g. `color.bg`, `text.heading.xl`, `shadow.defa
 
 ### Generated outputs (never edit by hand)
 
-- `src/styles/tokens.css` (`:root { ... }`)
-- `src/styles/tokens-dark.css` (`.dark { ... }`)
+- `src/styles/theme.css` (`@theme { ... }` + `.dark { ... }`)
 - `src/design-tokens/tokens.ts` (flattened token map; includes `darkValue` where applicable)
 - `design-tokens/dtcg/tokens.light.json` and `design-tokens/dtcg/tokens.dark.json` (W3C DTCG exports)
 
 ### Commands
 
 ```bash
-npm run tokens:gen   # regenerate tokens.css, tokens-dark.css, tokens.ts
+npm run tokens:gen   # regenerate theme.css + tokens.ts
 npm run tokens:dtcg  # regenerate DTCG exports
 npm run typecheck    # tsc --noEmit
 ```
@@ -53,9 +52,8 @@ npm run typecheck    # tsc --noEmit
 ## Dark mode
 
 - Dark mode toggles via `.dark` on `<html>`.
-- Dark values come **only** from the generated `src/styles/tokens-dark.css`.
+- Dark values come **only** from the generated `src/styles/theme.css` `.dark { ... }` block.
 - Do **not** add/maintain a hand-written `.dark { ... }` block in `app/globals.css`.
-- `app/layout.tsx` imports `tokens-dark.css` after `globals.css` so `.dark` overrides `:root`.
 
 ---
 
@@ -76,6 +74,25 @@ npm run typecheck    # tsc --noEmit
 - Always respect `prefers-reduced-motion` (use `useReducedMotion` + conditional variants).
 - Prefer animating `transform` + `opacity` (avoid layout/size animations).
 - Don’t add GSAP/react-spring/etc. unless explicitly requested.
+
+---
+
+## Repository structure
+
+```
+app/                   # Next.js App Router routes + favicon.ico
+src/
+  components/          # All React components
+    ui/                # Primitive components (CopyButton, etc.)
+  lib/                 # Data and utilities (projects.ts, config.ts)
+  design-tokens/       # Generated tokens.ts (do not hand-edit)
+  styles/              # Generated theme.css (do not hand-edit)
+animation/             # Framer Motion variants and transitions
+design-tokens/         # Token source JSON files + dtcg/ exports
+scripts/tokens/        # generate.ts, export-dtcg.ts
+scripts/figma/         # export-tokens.ts (Figma pull)
+public/                # Static assets
+```
 
 ---
 

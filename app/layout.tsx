@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, JetBrains_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
-import "@/src/styles/tokens-dark.css";
+import Header from "@/src/components/Header";
 
 const headingFont = Cinzel({
   subsets: ["latin"],
@@ -56,7 +56,10 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-dvh bg-bg text-text antialiased">{children}</body>
+      <body className="min-h-dvh bg-bg text-text antialiased">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

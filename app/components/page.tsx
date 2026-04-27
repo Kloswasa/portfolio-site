@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CopyButton } from "@/components/ui/CopyButton";
-import Header from "@/src/components/Header";
+import { CopyButton } from "@/src/components/ui/CopyButton";
+import { Badge } from "@/src/components/ui/Badge";
 import AnimatedSection from "@/src/components/AnimatedSection";
 import ProjectCard from "@/src/components/ProjectCard";
 import ContactForm from "@/src/components/ContactForm";
@@ -38,7 +38,7 @@ export default function ComponentsPage() {
 
   return (
     <>
-      <Header />
+     
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-20">
         <header id="about" className="max-w-3xl scroll-mt-24">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
@@ -73,9 +73,89 @@ export default function ComponentsPage() {
           </SectionShell>
 
           <SectionShell
+            id="utilities"
+            title="CSS utilities (@utility)"
+            filePath="app/globals.css"
+          >
+            <div className="grid gap-10">
+              <section>
+                <h3 className="text-heading-xl text-text">Buttons</h3>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <button type="button" className="btn btn-primary">
+                    Primary
+                  </button>
+                  <button type="button" className="btn btn-navy">
+                    Navy
+                  </button>
+                  <button type="button" className="btn btn-outline">
+                    Outline
+                  </button>
+                  <button type="button" className="btn btn-ghost">
+                    Ghost
+                  </button>
+                  <button type="button" className="btn-text">
+                      Button <span aria-hidden>›</span>
+                    </button>
+                </div>
+
+                
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Card</h3>
+                <div className="mt-4 max-w-md">
+                  <div className="card p-6">
+                    <p className="font-body text-text">
+                      Card utility: surface, border, and hover shadow.
+                    </p>
+                    <p className="mt-2 font-body text-text-muted">
+                      Uses token-driven colors and shadows.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Input</h3>
+                <div className="mt-4 grid max-w-md gap-4">
+                  <input className="input" placeholder="Input utility" />
+                  <textarea className="input resize-y" rows={4} placeholder="Textarea utility" />
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Badges</h3>
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <Badge tone="primary">Primary</Badge>
+                  <Badge tone="secondary">Secondary</Badge>
+                  <Badge tone="tertiary">Tertiary</Badge>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Section label + divider</h3>
+                <div className="mt-4 max-w-xl">
+                  <span className="section-label">Section label</span>
+                  <hr className="divider" />
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Clamp-2</h3>
+                <div className="mt-4 max-w-md rounded-none border border-border-subtle bg-bg p-5">
+                  <p className="clamp-2 h-10 text-sm font-medium leading-5 text-text-muted">
+                    This is a long example sentence intended to demonstrate the clamp-2 utility
+                    which limits text to two lines and truncates overflow cleanly.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </SectionShell>
+
+          <SectionShell
             id="copy-button"
             title="CopyButton"
-            filePath="components/ui/CopyButton.tsx"
+            filePath="src/components/ui/CopyButton.tsx"
           >
             <div className="flex flex-wrap items-center gap-4 rounded-none border border-border-subtle bg-bg p-5">
               <p className="font-mono text-sm text-text">Sample token value to copy</p>
@@ -115,8 +195,7 @@ export default function ComponentsPage() {
                 title={sample.title}
                 description={sample.description}
                 technologies={sample.technologies}
-                gradientFrom={sample.gradientFrom}
-                gradientTo={sample.gradientTo}
+                tone={sample.tone}
                 liveUrl={sample.liveUrl}
                 sourceUrl={sample.sourceUrl}
               />

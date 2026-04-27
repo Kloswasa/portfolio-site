@@ -80,9 +80,9 @@ async function main() {
 
   const flat: Record<string, TokenEntry> = {};
 
-  const cssRoot: string[] = [];
-  cssRoot.push("/* Auto-generated. Do not edit directly. */");
-  cssRoot.push(":root {");
+  const themeCss: string[] = [];
+  themeCss.push("/* Auto-generated. Do not edit directly. */");
+  themeCss.push("@theme {");
 
   walk(lightTree, [], (parts, leaf) => {
     const cssVar = cssVarName(parts);
@@ -94,31 +94,28 @@ async function main() {
       cssVar,
       ...(darkLeaf !== undefined ? { darkValue: darkLeaf.value } : {}),
     };
-    cssRoot.push(`  ${cssVar}: ${String(leaf.value)};`);
+    themeCss.push(`  ${cssVar}: ${String(leaf.value)};`);
   });
 
-  cssRoot.push("}");
-  cssRoot.push("");
+  themeCss.push("}");
+  themeCss.push("");
 
-  const cssDark: string[] = [];
-  cssDark.push("/* Auto-generated. Do not edit directly. */");
-  cssDark.push(".dark {");
+  themeCss.push("/* Dark mode overrides */");
+  themeCss.push(".dark {");
   walk(darkTree, [], (parts, leaf) => {
     const cssVar = cssVarName(parts);
-    cssDark.push(`  ${cssVar}: ${String(leaf.value)};`);
+    themeCss.push(`  ${cssVar}: ${String(leaf.value)};`);
   });
-  cssDark.push("}");
-  cssDark.push("");
+  themeCss.push("}");
+  themeCss.push("");
 
-  const cssOutPath = resolve(repoRoot, "src/styles/tokens.css");
-  const cssDarkOutPath = resolve(repoRoot, "src/styles/tokens-dark.css");
+  const themeOutPath = resolve(repoRoot, "src/styles/theme.css");
   const tsOutPath = resolve(repoRoot, "src/design-tokens/tokens.ts");
 
-  await mkdir(dirname(cssOutPath), { recursive: true });
+  await mkdir(dirname(themeOutPath), { recursive: true });
   await mkdir(dirname(tsOutPath), { recursive: true });
 
-  await writeFile(cssOutPath, cssRoot.join("\n"), "utf8");
-  await writeFile(cssDarkOutPath, cssDark.join("\n"), "utf8");
+  await writeFile(themeOutPath, themeCss.join("\n"), "utf8");
 
   const ts = `/* Auto-generated. Do not edit directly. */
 export type TokenEntry = {
