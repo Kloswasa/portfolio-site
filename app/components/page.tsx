@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CopyButton } from "@/src/components/ui/CopyButton";
 import { Badge } from "@/src/components/ui/Badge";
+import { TabBarDemo } from "@/src/components/ui/TabBarDemo";
 import AnimatedSection from "@/src/components/AnimatedSection";
 import ProjectCard from "@/src/components/ProjectCard";
 import ContactForm from "@/src/components/ContactForm";
@@ -23,7 +24,7 @@ function SectionShell({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="card scroll-mt-24 p-8">
+    <section id={id} className="panel scroll-mt-24 p-8">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
         <h2 className="text-heading-2xl">{title}</h2>
         <span className="font-mono text-xs text-text-muted">{filePath}</span>
@@ -84,9 +85,13 @@ export default function ComponentsPage() {
                   <button type="button" className="btn btn-primary">
                     Primary
                   </button>
-                  <button type="button" className="btn btn-navy">
-                    Navy
+                  <button type="button" className="btn btn-gold">
+                    Gold
                   </button>
+                  <button type="button" className="btn btn-secondary">
+                    Secondary
+                  </button>
+           
                   <button type="button" className="btn btn-outline">
                     Outline
                   </button>
@@ -94,8 +99,8 @@ export default function ComponentsPage() {
                     Ghost
                   </button>
                   <button type="button" className="btn-text">
-                      Button <span aria-hidden>›</span>
-                    </button>
+                    Text <span aria-hidden>›</span>
+                  </button>
                 </div>
 
                 
@@ -110,6 +115,21 @@ export default function ComponentsPage() {
                     </p>
                     <p className="mt-2 font-body text-text-muted">
                       Uses token-driven colors and shadows.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Panel</h3>
+                <div className="mt-4 max-w-md">
+                  <div className="panel p-6">
+                    <p className="font-body text-text">
+                      Panel utility: page-background surface, secondary border, static shadow.
+                    </p>
+                    <p className="mt-2 font-body text-text-muted">
+                      No hover — use for chrome and long-form blocks; use{" "}
+                      <span className="font-mono text-text">card</span> when hover depth helps.
                     </p>
                   </div>
                 </div>
@@ -150,6 +170,22 @@ export default function ComponentsPage() {
                 </div>
               </section>
             </div>
+          </SectionShell>
+
+          <SectionShell
+            id="tab-bar"
+            title="TabBar"
+            filePath="src/components/ui/TabBar.tsx"
+          >
+            <p className="mb-6 font-body text-text-muted">
+              Indigo & Gold style tab list: full-width bottom rule, muted labels, active tab
+              uses body text color with a gold bottom border. Pair with{" "}
+              <span className="font-mono text-text">tab-bar</span> and{" "}
+              <span className="font-mono text-text">tab</span> /{" "}
+              <span className="font-mono text-text">tab-active</span> utilities in{" "}
+              <span className="font-mono text-text">app/globals.css</span>.
+            </p>
+            <TabBarDemo />
           </SectionShell>
 
           <SectionShell

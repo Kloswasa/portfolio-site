@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Cinzel, JetBrains_Mono, Montserrat } from "next/font/google";
+import { Crimson_Pro, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/src/components/Header";
 
-const headingFont = Cinzel({
+const headingFont = Crimson_Pro({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
+  weight: ["400", "500", "600"],
 });
 
-const bodyFont = Montserrat({
+const bodyFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
+  weight: ["400", "500"],
 });
 
 const monoFont = JetBrains_Mono({
