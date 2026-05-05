@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/src/lib/projects";
 import { Badge } from "@/src/components/ui/Badge";
+import { CaseStudySectionTabs } from "@/src/components/CaseStudySectionTabs";
 
 export default async function WorkDetailPage({
   params,
@@ -32,34 +33,9 @@ export default async function WorkDetailPage({
           </div>
         </div>
 
-        <nav className="sticky top-16 z-10 -mx-6 border-y border-border-subtle bg-bg/90 px-6 py-3 backdrop-blur">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span className="font-mono text-xs text-text-muted">Case study</span>
-            <span className="text-text-muted" aria-hidden>
-              —
-            </span>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#hook">
-              01 Hook
-            </Link>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#context">
-              02 Context
-            </Link>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#process">
-              03 Process
-            </Link>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#solution">
-              04 Solution
-            </Link>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#outcome">
-              05 Outcome
-            </Link>
-            <Link className="text-sm font-medium text-text-muted hover:text-text" href="#next">
-              Next
-            </Link>
-          </div>
-        </nav>
+        <CaseStudySectionTabs />
 
-        <section id="hook" className="card scroll-mt-28 p-10">
+        <section id="hook" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             01 Hook
           </span>
@@ -73,7 +49,7 @@ export default async function WorkDetailPage({
           <div className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
             <div className="h-[280px] w-full rounded-none border border-border-subtle bg-elevated" aria-hidden />
             <div className="flex flex-col gap-3">
-              <div className="card p-6">
+              <div className="panel p-6">
                 <h2 className="text-heading-xl">Quick facts</h2>
                 <dl className="mt-4 grid gap-3 text-sm">
                   <div className="grid gap-1">

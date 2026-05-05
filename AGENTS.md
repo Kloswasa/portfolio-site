@@ -59,8 +59,8 @@ npm run typecheck    # tsc --noEmit
 
 ## Typography rules
 
-- `font-heading` (Cinzel): headings only
-- `font-body` (Montserrat): everything else
+- `font-heading` (Crimson Pro): headings only
+- `font-body` (DM Sans): everything else
 - Heading scale uses semantic utilities derived from tokens:
   - `text-heading-xl`, `text-heading-2xl`, `text-heading-3xl`, `text-heading-4xl`, `text-heading-5xl`
 - `font-heading` is applied automatically to `h1–h6` and `.text-heading-*` via base styles; don’t manually add it.

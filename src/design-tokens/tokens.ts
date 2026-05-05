@@ -10,207 +10,216 @@ export type TokenRecord = Record<string, TokenEntry>;
 
 export const tokens: TokenRecord = {
   "color.bg": {
-    "value": "#faf7f0",
+    "value": "#F7F1E6",
     "type": "color",
     "cssVar": "--color-bg",
-    "darkValue": "#0a0e18"
+    "darkValue": "#0D1B3E"
   },
   "color.surface": {
-    "value": "#f2ede4",
+    "value": "#F2EADC",
     "type": "color",
     "cssVar": "--color-surface",
-    "darkValue": "#151828"
+    "darkValue": "#152952"
   },
   "color.elevated": {
-    "value": "#e8e2d8",
+    "value": "#EDE3D0",
     "type": "color",
     "cssVar": "--color-elevated",
-    "darkValue": "#1e2235"
+    "darkValue": "#1E3A6B"
   },
   "color.text": {
-    "value": "#0c0e1a",
+    "value": "#0D1B3E",
     "type": "color",
     "cssVar": "--color-text",
-    "darkValue": "#eeeaf2"
+    "darkValue": "#F7F1E6"
   },
   "color.textMuted": {
-    "value": "#6b6560",
+    "value": "#7A6B50",
     "type": "color",
     "cssVar": "--color-text-muted",
-    "darkValue": "#8a8fa8"
+    "darkValue": "#C4B393"
   },
   "color.textSubtle": {
-    "value": "#a09890",
+    "value": "#A89674",
     "type": "color",
     "cssVar": "--color-text-subtle",
-    "darkValue": "#4a5070"
+    "darkValue": "#7A6B50"
   },
   "color.textInverse": {
-    "value": "#faf7f0",
+    "value": "#F7F1E6",
     "type": "color",
     "cssVar": "--color-text-inverse",
-    "darkValue": "#0d0f1a"
+    "darkValue": "#0D1B3E"
   },
   "color.textOnAccent": {
-    "value": "#0c0e1a",
+    "value": "#3D2E08",
     "type": "color",
-    "cssVar": "--color-text-on-accent"
+    "cssVar": "--color-text-on-accent",
+    "darkValue": "#3D2E08"
   },
   "color.borderSubtle": {
-    "value": "#e8e2d8",
+    "value": "#EDE3D0",
     "type": "color",
     "cssVar": "--color-border-subtle",
-    "darkValue": "#1e2235"
+    "darkValue": "#1E3A6B"
   },
   "color.border": {
-    "value": "#d4cdc0",
+    "value": "#E5DBC8",
     "type": "color",
     "cssVar": "--color-border",
-    "darkValue": "#2a2f48"
+    "darkValue": "#2A4F8A"
   },
   "color.borderStrong": {
-    "value": "#8fa3b8",
+    "value": "#B5D0EC",
     "type": "color",
     "cssVar": "--color-border-strong",
-    "darkValue": "#3d4a6a"
+    "darkValue": "#5B8CC8"
+  },
+  "color.headerBg": {
+    "value": "#0D1B3E",
+    "type": "color",
+    "cssVar": "--color-header-bg",
+    "darkValue": "#060E22"
   },
   "color.primary": {
-    "value": "#1a3a6e",
+    "value": "#152952",
     "type": "color",
     "cssVar": "--color-primary",
-    "darkValue": "#3a6fd8"
+    "darkValue": "#5B8CC8"
   },
   "color.primaryHover": {
-    "value": "#02285a",
+    "value": "#1E3A6B",
     "type": "color",
     "cssVar": "--color-primary-hover",
-    "darkValue": "#4a80e8"
+    "darkValue": "#8AB0DD"
   },
   "color.primaryMuted": {
-    "value": "#e8eef5",
+    "value": "#DCE9F5",
     "type": "color",
     "cssVar": "--color-primary-muted",
-    "darkValue": "#1a2540"
+    "darkValue": "#152952"
   },
   "color.secondary": {
-    "value": "#2a4470",
+    "value": "#1E3A6B",
     "type": "color",
     "cssVar": "--color-secondary",
-    "darkValue": "#4a6a9a"
+    "darkValue": "#8AB0DD"
   },
   "color.tertiary": {
-    "value": "#6888c4",
+    "value": "#3A6AAE",
     "type": "color",
     "cssVar": "--color-tertiary",
-    "darkValue": "#6888c0"
+    "darkValue": "#5B8CC8"
   },
   "color.accent": {
-    "value": "#e8a820",
+    "value": "#D4AC3C",
     "type": "color",
     "cssVar": "--color-accent",
-    "darkValue": "#ecb838"
+    "darkValue": "#E0C15E"
   },
   "color.accentHover": {
-    "value": "#b8963c",
+    "value": "#E0C15E",
     "type": "color",
     "cssVar": "--color-accent-hover",
-    "darkValue": "#e0c070"
+    "darkValue": "#EACF7E"
   },
   "color.accentMuted": {
-    "value": "#faf3e6",
+    "value": "#FBF4E6",
     "type": "color",
     "cssVar": "--color-accent-muted",
-    "darkValue": "#1e1a0a"
+    "darkValue": "#1A1208"
   },
   "color.accentLight": {
-    "value": "#e8c97a",
+    "value": "#EACF7E",
     "type": "color",
-    "cssVar": "--color-accent-light"
+    "cssVar": "--color-accent-light",
+    "darkValue": "#F0DCA4"
   },
   "color.accentDark": {
-    "value": "#b87808",
+    "value": "#B8912A",
     "type": "color",
-    "cssVar": "--color-accent-dark"
+    "cssVar": "--color-accent-dark",
+    "darkValue": "#D4AC3C"
   },
   "color.success": {
-    "value": "#2d6a4f",
+    "value": "#1E7E82",
     "type": "color",
     "cssVar": "--color-success",
-    "darkValue": "#4ade80"
+    "darkValue": "#5AAFAC"
   },
   "color.successBg": {
-    "value": "#edf5f1",
+    "value": "#D4F0EF",
     "type": "color",
     "cssVar": "--color-success-bg",
-    "darkValue": "#0d2818"
+    "darkValue": "#071A1B"
   },
   "color.successText": {
-    "value": "#1a4a34",
+    "value": "#14545A",
     "type": "color",
     "cssVar": "--color-success-text",
-    "darkValue": "#86efac"
+    "darkValue": "#5AAFAC"
   },
   "color.warning": {
-    "value": "#b87020",
+    "value": "#B8912A",
     "type": "color",
     "cssVar": "--color-warning",
-    "darkValue": "#fbbf24"
+    "darkValue": "#E0C15E"
   },
   "color.warningBg": {
-    "value": "#fdf4e8",
+    "value": "#FBF4E6",
     "type": "color",
     "cssVar": "--color-warning-bg",
-    "darkValue": "#1f1500"
+    "darkValue": "#1A1208"
   },
   "color.warningText": {
-    "value": "#7a4a10",
+    "value": "#6B5010",
     "type": "color",
     "cssVar": "--color-warning-text",
-    "darkValue": "#fcd34d"
+    "darkValue": "#EACF7E"
   },
   "color.error": {
-    "value": "#b83232",
+    "value": "#C43030",
     "type": "color",
     "cssVar": "--color-error",
-    "darkValue": "#f87171"
+    "darkValue": "#E06868"
   },
   "color.errorBg": {
-    "value": "#fdf0f0",
+    "value": "#F8D2D2",
     "type": "color",
     "cssVar": "--color-error-bg",
-    "darkValue": "#1f0808"
+    "darkValue": "#1A0808"
   },
   "color.errorText": {
-    "value": "#7a1f1f",
+    "value": "#8B2020",
     "type": "color",
     "cssVar": "--color-error-text",
-    "darkValue": "#fca5a5"
+    "darkValue": "#E06868"
   },
   "color.info": {
-    "value": "#2a4470",
+    "value": "#3A6AAE",
     "type": "color",
     "cssVar": "--color-info",
-    "darkValue": "#3a6fd8"
+    "darkValue": "#8AB0DD"
   },
   "color.infoBg": {
-    "value": "#edf1f6",
+    "value": "#DCE9F5",
     "type": "color",
     "cssVar": "--color-info-bg",
-    "darkValue": "#0d1a30"
+    "darkValue": "#152952"
   },
   "color.infoText": {
-    "value": "#1a3050",
+    "value": "#152952",
     "type": "color",
     "cssVar": "--color-info-text",
-    "darkValue": "#93c5fd"
+    "darkValue": "#B5D0EC"
   },
   "font.heading": {
-    "value": "'Cinzel', 'Georgia', serif",
+    "value": "'Crimson Pro', Georgia, serif",
     "type": "fontFamilies",
     "cssVar": "--font-heading"
   },
   "font.body": {
-    "value": "'Montserrat', 'system-ui', sans-serif",
+    "value": "'DM Sans', system-ui, sans-serif",
     "type": "fontFamilies",
     "cssVar": "--font-body"
   },
@@ -365,45 +374,45 @@ export const tokens: TokenRecord = {
     "cssVar": "--radius-full"
   },
   "shadow.default": {
-    "value": "0 2px 8px rgba(12, 14, 26, 0.08)",
+    "value": "0 4px 24px rgba(13, 27, 62, 0.04)",
     "type": "boxShadow",
     "cssVar": "--shadow",
-    "darkValue": "0 2px 8px rgba(0, 0, 0, 0.28)"
+    "darkValue": "0 4px 24px rgba(0, 0, 0, 0.28)"
   },
   "shadow.sm": {
-    "value": "0 1px 3px rgba(12, 14, 26, 0.06)",
+    "value": "0 1px 4px rgba(13, 27, 62, 0.05)",
     "type": "boxShadow",
     "cssVar": "--shadow-sm",
-    "darkValue": "0 1px 3px rgba(0, 0, 0, 0.20)"
+    "darkValue": "0 1px 4px rgba(0, 0, 0, 0.20)"
   },
   "shadow.md": {
-    "value": "0 4px 16px rgba(12, 14, 26, 0.10)",
+    "value": "0 4px 16px rgba(13, 27, 62, 0.08)",
     "type": "boxShadow",
     "cssVar": "--shadow-md",
     "darkValue": "0 4px 16px rgba(0, 0, 0, 0.35)"
   },
   "shadow.lg": {
-    "value": "0 8px 32px rgba(12, 14, 26, 0.12)",
+    "value": "0 8px 32px rgba(13, 27, 62, 0.07)",
     "type": "boxShadow",
     "cssVar": "--shadow-lg",
     "darkValue": "0 8px 32px rgba(0, 0, 0, 0.42)"
   },
   "shadow.xl": {
-    "value": "0 16px 48px rgba(12, 14, 26, 0.14)",
+    "value": "0 16px 48px rgba(13, 27, 62, 0.10)",
     "type": "boxShadow",
     "cssVar": "--shadow-xl",
     "darkValue": "0 16px 48px rgba(0, 0, 0, 0.50)"
   },
   "shadow.accent": {
-    "value": "0 4px 20px rgba(201, 168, 76, 0.30)",
+    "value": "0 4px 20px rgba(212, 172, 60, 0.25)",
     "type": "boxShadow",
     "cssVar": "--shadow-accent",
-    "darkValue": "0 4px 20px rgba(212, 176, 90, 0.20)"
+    "darkValue": "0 4px 20px rgba(224, 193, 94, 0.20)"
   },
   "shadow.primary": {
-    "value": "0 4px 20px rgba(2, 32, 90, 0.22)",
+    "value": "0 4px 20px rgba(21, 41, 82, 0.22)",
     "type": "boxShadow",
     "cssVar": "--shadow-primary",
-    "darkValue": "0 4px 20px rgba(58, 111, 216, 0.30)"
+    "darkValue": "0 4px 20px rgba(91, 140, 200, 0.30)"
   }
 } as const;

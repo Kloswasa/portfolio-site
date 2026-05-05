@@ -1,74 +1,157 @@
 import Link from "next/link";
-import Image from "next/image";
+import { projects } from "@/src/lib/projects";
+import ProjectCard from "@/src/components/ProjectCard";
 
 export const metadata = {
   title: "Home",
   description: "Portfolio home.",
 };
 
+function WavePattern() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 h-full w-full"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <g
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.8"
+        fill="none"
+        opacity="0.12"
+      >
+        <path d="M-40 50  Q160 10  360 50  Q560 90  760 50  Q960 10  1160 50  Q1360 90  1560 50" />
+        <path d="M-40 100 Q160 60  360 100 Q560 140 760 100 Q960 60  1160 100 Q1360 140 1560 100" />
+        <path d="M-40 150 Q160 110 360 150 Q560 190 760 150 Q960 110 1160 150 Q1360 190 1560 150" />
+        <path d="M-40 200 Q160 160 360 200 Q560 240 760 200 Q960 160 1160 200 Q1360 240 1560 200" />
+        <path d="M-40 250 Q160 210 360 250 Q560 290 760 250 Q960 210 1160 250 Q1360 290 1560 250" />
+        <path d="M-40 300 Q160 260 360 300 Q560 340 760 300 Q960 260 1160 300 Q1360 340 1560 300" />
+        <path d="M-40 350 Q160 310 360 350 Q560 390 760 350 Q960 310 1160 350 Q1360 390 1560 350" />
+        <path d="M-40 400 Q160 360 360 400 Q560 440 760 400 Q960 360 1160 400 Q1360 440 1560 400" />
+      </g>
+    </svg>
+  );
+}
+
 export default function HomePage() {
+  const featured = projects.slice(0, 3);
+
   return (
     <main>
-      <section className="relative overflow-hidden bg-primary">
-        <div className="pointer-events-none absolute inset-0">
-          
-          
-        </div>
+      {/* ── Hero: indigo.900 bg + gold accent bar + wave pattern ── */}
+      <section
+        className="relative overflow-hidden"
+        style={{
+          background: "var(--color-header-bg)",
+          borderBottom: "3px solid var(--color-accent)",
+        }}
+      >
+        <WavePattern />
 
-        <div className="mx-auto max-w-6xl px-6 py-24 sm:py-28 lg:py-32">
-          <div className="relative mx-auto max-w-5xl bg-bg px-6 py-16 text-center sm:px-10 sm:py-20">
-            <div className="mx-auto flex max-w-2xl flex-col items-center gap-5">
-              <div className="flex flex-col items-center gap-5">
-                <h1 className="max-w-[28ch] text-balance text-[clamp(2.75rem,8vw,4.75rem)] leading-[0.92] tracking-[0.16em] sm:max-w-[22ch]">
-                  Portfolio
-                </h1>
-                <p className="max-w-[28ch] text-balance text-primary text-[clamp(1.125rem,3.2vw,2rem)] leading-tight tracking-[0.08em] sm:max-w-none">
-                  Product Designer · Developer
-                </p>
-              </div>
 
-              <p className="max-w-prose font-body text-[clamp(1rem,1.2vw,1.125rem)] leading-snug text-text text-pretty">
-                I design thoughtful interfaces and build them with a token-driven
-                system—balancing craft, accessibility, and performance.
-              </p>
+        <div className="relative mx-auto max-w-[960px] px-10 py-12 sm:py-16">
+          <div className="card p-6 flex flex-col gap-2" >
+          <span className="section-label">Product Designer &amp; Developer</span>
 
-              <div className="mt-1 flex flex-wrap items-center justify-center gap-4">
-                <Link className="btn btn-primary" href="/work">
-                  Button
-                </Link>
-                <Link className="btn btn-outline" href="/about">
-                  Button
-                </Link>
-              </div>
-            </div>
+          <h1 className="mt-3 text-heading-4xl font-heading text-text leading-[1.15] tracking-[-0.5px]">
+            Portfolio
+          </h1>
+
+          <p
+            className="mt-4 max-w-prose font-body text-base leading-relaxed"
+            style={{ color: "var(--color-text-muted)" }}
+          >
+            I design thoughtful interfaces and build them with a token-driven
+            system — balancing craft, accessibility, and performance.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link className="btn btn-gold" href="/work">
+              View Work
+            </Link>
+            <Link
+              className="btn btn-outline"
+              href="/about"
+              
+            >
+              About Me
+            </Link>
+          </div>
           </div>
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <section className="grid gap-6 md:grid-cols-3">
-          <div className="card p-8">
-            <h2 className="text-heading-2xl">Design systems</h2>
-            <p className="mt-3 font-body text-text-muted">
-              Semantic tokens, accessibility, and consistency across Figma and
-              code.
+      {/* ── Featured (Indigo & Gold structure) ── */}
+      <div className="mx-auto max-w-[960px] px-10 py-16">
+        <header>
+          <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
+            ↳ Featured
+          </span>
+          <h2 className="text-heading-2xl text-text">Three things I made this year.</h2>
+        </header>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {featured.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              tone={project.tone}
+              liveUrl={project.liveUrl}
+              sourceUrl={project.sourceUrl}
+              href={`/work/${project.slug}`}
+            />
+          ))}
+        </div>
+
+        <div className="mt-16 flex items-center gap-4">
+          <hr className="divider flex-1" />
+          <span className="section-label m-0">About</span>
+          <hr className="divider flex-1" />
+        </div>
+
+        <section className="mt-10 grid items-center gap-8 md:grid-cols-2 md:gap-10">
+          <div>
+            <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
+              ↳ The short version
+            </span>
+            <h2 className="text-heading-2xl text-text">I make small, considered tools.</h2>
+            <p className="mt-4 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
+              Eight years designing for small studios and large platforms. Currently independent —
+              quietly available for product work, editorial, and the occasional creative-code
+              commission.
             </p>
+            <div className="mt-6">
+              <Link className="btn btn-secondary" href="/about">
+                Read more →
+              </Link>
+            </div>
           </div>
-          <div className="card p-8">
-            <h2 className="text-heading-2xl">Motion</h2>
-            <p className="mt-3 font-body text-text-muted">
-              Subtle, intentional interactions that respect reduced motion.
-            </p>
-          </div>
-          <div className="card p-8">
-            <h2 className="text-heading-2xl">Build quality</h2>
-            <p className="mt-3 font-body text-text-muted">
-              Fast loads, clean TypeScript, and maintainable structure.
-            </p>
+
+          <div
+            className="relative overflow-hidden border border-border-strong p-7 text-text-inverse"
+            style={{ background: "var(--color-header-bg)" }}
+          >
+            <WavePattern />
+            <div className="relative">
+              <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent-light">
+                ↳ Currently
+              </span>
+              <h3 className="text-heading-xl text-text-inverse">Open to product design contracts.</h3>
+              <p className="mt-3 max-w-prose font-body text-sm leading-relaxed text-text-muted">
+                Two-week minimums. Brooklyn / remote. Email is the best way.
+              </p>
+              <div className="mt-6">
+                <a className="btn btn-gold" href="mailto:hello@klaus.com">
+                  hello@klaus.com
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </div>
     </main>
   );
 }
-

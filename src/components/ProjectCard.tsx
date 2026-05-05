@@ -15,6 +15,8 @@ interface ProjectCardProps {
   liveUrl?: string;
   sourceUrl?: string;
   href?: string;
+  /** Wrap the card with `group/play` when a sibling covers it (e.g. lightbox trigger). */
+  overlayInteraction?: boolean;
 }
 
 export default function ProjectCard({
@@ -25,9 +27,23 @@ export default function ProjectCard({
   liveUrl,
   sourceUrl,
   href,
+  overlayInteraction = false,
 }: ProjectCardProps) {
+  const rootClassName = overlayInteraction
+    ? [
+        "relative flex flex-col gap-1 overflow-hidden p-2",
+        "bg-surface border border-border rounded-none shadow",
+        "transition-[box-shadow,border-color] [transition-duration:var(--duration)] [transition-timing-function:var(--ease)]",
+        "group-hover/play:shadow-md group-hover/play:border-border-strong",
+      ].join(" ")
+    : "card group/card relative flex flex-col gap-1 overflow-hidden p-2";
+
+  const titleHoverClass = overlayInteraction
+    ? "group-hover/play:text-primary"
+    : "group-hover/card:text-primary";
+
   return (
-    <div className="card group relative flex flex-col gap-1 overflow-hidden p-2">
+    <div className={rootClassName}>
       {href && (
         <Link
           href={href}
@@ -41,7 +57,7 @@ export default function ProjectCard({
         aria-hidden
       />
       <div className={`relative z-20 px-1 pb-1 pt-2 ${href ? "pointer-events-none" : ""}`}>
-        <h3 className="mb-1 text-heading-xl text-text transition-colors group-hover:text-primary">
+        <h3 className={`mb-1 text-heading-xl text-text transition-colors ${titleHoverClass}`}>
           {title}
         </h3>
         <p className="clamp-2 h-10 text-sm font-medium leading-5 text-text-muted">
