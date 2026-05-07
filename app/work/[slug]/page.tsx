@@ -89,7 +89,9 @@ export default async function WorkDetailPage({
           </div>
         </section>
 
-        <section id="context" className="card scroll-mt-28 p-10">
+        <hr className="divider" />
+
+        <section id="context" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             02 Context
           </span>
@@ -112,25 +114,27 @@ export default async function WorkDetailPage({
           </div>
         </section>
 
-        <section id="process" className="card scroll-mt-28 p-10">
+        <hr className="divider" />
+
+        <section id="process" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             03 Process
           </span>
           <h2 className="mt-4 text-heading-2xl">Research + decisions</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Research</h3>
               <p className="mt-3 font-body text-text-muted">
                 Inputs: interviews, analytics, competitive scan, constraints.
               </p>
             </div>
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Options</h3>
               <p className="mt-3 font-body text-text-muted">
                 What you explored and the trade-offs.
               </p>
             </div>
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Decision</h3>
               <p className="mt-3 font-body text-text-muted">
                 The chosen direction and why it won.
@@ -139,7 +143,9 @@ export default async function WorkDetailPage({
           </div>
         </section>
 
-        <section id="solution" className="card scroll-mt-28 p-10">
+        <hr className="divider" />
+
+        <section id="solution" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             04 Solution
           </span>
@@ -147,7 +153,7 @@ export default async function WorkDetailPage({
           <div className="mt-6 grid gap-6">
             <div className="h-[360px] w-full rounded-none border border-border-subtle bg-elevated" aria-hidden />
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="card p-6">
+              <div className="panel p-6">
                 <h3 className="text-heading-xl">What shipped</h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 font-body text-text-muted">
                   <li>Key UI patterns and flows</li>
@@ -155,7 +161,7 @@ export default async function WorkDetailPage({
                   <li>Design system alignment</li>
                 </ul>
               </div>
-              <div className="card p-6">
+              <div className="panel p-6">
                 <h3 className="text-heading-xl">How it works</h3>
                 <p className="mt-3 font-body text-text-muted">
                   Explain system behavior briefly (states, edge cases, content rules).
@@ -165,25 +171,27 @@ export default async function WorkDetailPage({
           </div>
         </section>
 
-        <section id="outcome" className="card scroll-mt-28 p-10">
+        <hr className="divider" />
+
+        <section id="outcome" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             05 Outcome
           </span>
           <h2 className="mt-4 text-heading-2xl">Result + reflect</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Results</h3>
               <p className="mt-3 font-body text-text-muted">
                 Metrics, qualitative feedback, or launch outcomes.
               </p>
             </div>
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Learnings</h3>
               <p className="mt-3 font-body text-text-muted">
                 What you’d repeat next time (and what you wouldn’t).
               </p>
             </div>
-            <div className="card p-6">
+            <div className="panel p-6">
               <h3 className="text-heading-xl">Next steps</h3>
               <p className="mt-3 font-body text-text-muted">
                 Follow-ups if you had more time.
@@ -192,7 +200,9 @@ export default async function WorkDetailPage({
           </div>
         </section>
 
-        <section id="next" className="card scroll-mt-28 p-10">
+        <hr className="divider" />
+
+        <section id="next" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             Next
           </span>

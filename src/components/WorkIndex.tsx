@@ -20,8 +20,8 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
   return (
     <>
       <header className="max-w-xl">
-        <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
-          ↳ Selected
+        <span className="eyebrow">
+          Selected
         </span>
         <h1 className="text-heading-4xl md:text-heading-5xl">Work</h1>
         <p className="mt-2 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">

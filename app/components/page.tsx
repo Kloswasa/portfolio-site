@@ -42,7 +42,7 @@ export default function ComponentsPage() {
      
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-20">
         <header id="about" className="max-w-3xl scroll-mt-24">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+          <span className="eyebrow">
             UI catalog
           </span>
           <h1 className="mt-4 text-heading-4xl md:text-heading-5xl">Components</h1>
@@ -157,6 +157,25 @@ export default function ComponentsPage() {
                 <div className="mt-4 max-w-xl">
                   <span className="section-label">Section label</span>
                   <hr className="divider" />
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-heading-xl text-text">Eyebrow</h3>
+                <p className="mt-1 max-w-xl font-body text-sm text-text-muted">
+                  Accent mono kicker with a leading asterisk (via{" "}
+                  <span className="font-mono text-text">&::before</span>). Uses class{" "}
+                  <span className="font-mono text-text">eyebrow</span>, not{" "}
+                  <span className="font-mono text-text">overline</span> — Tailwind’s{" "}
+                  <span className="font-mono text-text">overline</span> is underline-style decoration
+                  above text.
+                </p>
+                <div className="mt-4 max-w-xl">
+                  <span className="eyebrow mb-3">Eyebrow / kicker</span>
+                  <p className="font-body text-text">
+                    Stack above headings with spacing utilities (
+                    <span className="font-mono text-xs text-text-muted">mb-3</span>).
+                  </p>
                 </div>
               </section>
 

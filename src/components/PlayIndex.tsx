@@ -36,8 +36,8 @@ export default function PlayIndex({
       />
 
       <header className="max-w-xl">
-        <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
-          ↳ The other half
+        <span className="eyebrow">
+          The other half
         </span>
         <h1 className="text-heading-4xl md:text-heading-5xl">Play</h1>
         <p className="mt-2 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
