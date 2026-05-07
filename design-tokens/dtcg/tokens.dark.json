@@ -1,94 +1,106 @@
 {
   "color": {
     "bg": {
-      "$value": "#0a0e18"
+      "$value": "#0D1B3E"
     },
     "surface": {
-      "$value": "#151828"
+      "$value": "#152952"
     },
     "elevated": {
-      "$value": "#1e2235"
+      "$value": "#1E3A6B"
     },
     "text": {
-      "$value": "#eeeaf2"
+      "$value": "#F7F1E6"
     },
     "textMuted": {
-      "$value": "#8a8fa8"
+      "$value": "#C4B393"
     },
     "textSubtle": {
-      "$value": "#4a5070"
+      "$value": "#7A6B50"
     },
     "textInverse": {
-      "$value": "#0d0f1a"
+      "$value": "#0D1B3E"
+    },
+    "textOnAccent": {
+      "$value": "#3C2801"
     },
     "borderSubtle": {
-      "$value": "#1e2235"
+      "$value": "#1E3A6B"
     },
     "border": {
-      "$value": "#2a2f48"
+      "$value": "#2A4F8A"
     },
     "borderStrong": {
-      "$value": "#3d4a6a"
+      "$value": "#5B8CC8"
+    },
+    "headerBg": {
+      "$value": "#060E22"
     },
     "primary": {
-      "$value": "#3a6fd8"
+      "$value": "#5B8CC8"
     },
     "primaryHover": {
-      "$value": "#4a80e8"
+      "$value": "#8AB0DD"
     },
     "primaryMuted": {
-      "$value": "#1a2540"
+      "$value": "#152952"
     },
     "secondary": {
-      "$value": "#4a6a9a"
+      "$value": "#8AB0DD"
     },
     "tertiary": {
-      "$value": "#6888c0"
+      "$value": "#5B8CC8"
     },
     "accent": {
-      "$value": "#ecb838"
+      "$value": "#F1BE45"
     },
     "accentHover": {
-      "$value": "#e0c070"
+      "$value": "#F8CC68"
     },
     "accentMuted": {
-      "$value": "#1e1a0a"
+      "$value": "#1A1208"
+    },
+    "accentLight": {
+      "$value": "#FAD992"
+    },
+    "accentDark": {
+      "$value": "#E8A820"
     },
     "success": {
-      "$value": "#4ade80"
+      "$value": "#5AAFAC"
     },
     "successBg": {
-      "$value": "#0d2818"
+      "$value": "#071A1B"
     },
     "successText": {
-      "$value": "#86efac"
+      "$value": "#5AAFAC"
     },
     "warning": {
-      "$value": "#fbbf24"
+      "$value": "#F1BE45"
     },
     "warningBg": {
-      "$value": "#1f1500"
+      "$value": "#1A1208"
     },
     "warningText": {
-      "$value": "#fcd34d"
+      "$value": "#F8CC68"
     },
     "error": {
-      "$value": "#f87171"
+      "$value": "#E06868"
     },
     "errorBg": {
-      "$value": "#1f0808"
+      "$value": "#1A0808"
     },
     "errorText": {
-      "$value": "#fca5a5"
+      "$value": "#E06868"
     },
     "info": {
-      "$value": "#3a6fd8"
+      "$value": "#8AB0DD"
     },
     "infoBg": {
-      "$value": "#0d1a30"
+      "$value": "#152952"
     },
     "infoText": {
-      "$value": "#93c5fd"
+      "$value": "#B5D0EC"
     },
     "$type": "color"
   },
@@ -101,11 +113,11 @@
           "unit": "px"
         },
         "offsetY": {
-          "value": 2,
+          "value": 4,
           "unit": "px"
         },
         "blur": {
-          "value": 8,
+          "value": 24,
           "unit": "px"
         },
         "spread": {
@@ -126,7 +138,7 @@
           "unit": "px"
         },
         "blur": {
-          "value": 3,
+          "value": 4,
           "unit": "px"
         },
         "spread": {
@@ -200,7 +212,7 @@
     },
     "accent": {
       "$value": {
-        "color": "rgba(212, 176, 90, 0.20)",
+        "color": "rgba(232, 168, 32, 0.20)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -221,7 +233,7 @@
     },
     "primary": {
       "$value": {
-        "color": "rgba(58, 111, 216, 0.30)",
+        "color": "rgba(91, 140, 200, 0.30)",
         "offsetX": {
           "value": 0,
           "unit": "px"

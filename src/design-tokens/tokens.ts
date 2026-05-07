@@ -49,13 +49,13 @@ export const tokens: TokenRecord = {
     "value": "#F7F1E6",
     "type": "color",
     "cssVar": "--color-text-inverse",
-    "darkValue": "#0D1B3E"
+    "darkValue": "#F7F1E6"
   },
   "color.textOnAccent": {
-    "value": "#3D2E08",
+    "value": "#3C2801",
     "type": "color",
     "cssVar": "--color-text-on-accent",
-    "darkValue": "#3D2E08"
+    "darkValue": "#3C2801"
   },
   "color.borderSubtle": {
     "value": "#EDE3D0",
@@ -112,34 +112,34 @@ export const tokens: TokenRecord = {
     "darkValue": "#5B8CC8"
   },
   "color.accent": {
-    "value": "#D4AC3C",
+    "value": "#E8A820",
     "type": "color",
     "cssVar": "--color-accent",
-    "darkValue": "#E0C15E"
+    "darkValue": "#F1BE45"
   },
   "color.accentHover": {
-    "value": "#E0C15E",
+    "value": "#F1BE45",
     "type": "color",
     "cssVar": "--color-accent-hover",
-    "darkValue": "#EACF7E"
+    "darkValue": "#F8CC68"
   },
   "color.accentMuted": {
-    "value": "#FBF4E6",
+    "value": "#FEF0DB",
     "type": "color",
     "cssVar": "--color-accent-muted",
     "darkValue": "#1A1208"
   },
   "color.accentLight": {
-    "value": "#EACF7E",
+    "value": "#F8CC68",
     "type": "color",
     "cssVar": "--color-accent-light",
-    "darkValue": "#F0DCA4"
+    "darkValue": "#FAD992"
   },
   "color.accentDark": {
-    "value": "#B8912A",
+    "value": "#C48A16",
     "type": "color",
     "cssVar": "--color-accent-dark",
-    "darkValue": "#D4AC3C"
+    "darkValue": "#E8A820"
   },
   "color.success": {
     "value": "#1E7E82",
@@ -160,22 +160,22 @@ export const tokens: TokenRecord = {
     "darkValue": "#5AAFAC"
   },
   "color.warning": {
-    "value": "#B8912A",
+    "value": "#C48A16",
     "type": "color",
     "cssVar": "--color-warning",
-    "darkValue": "#E0C15E"
+    "darkValue": "#F1BE45"
   },
   "color.warningBg": {
-    "value": "#FBF4E6",
+    "value": "#FEF0DB",
     "type": "color",
     "cssVar": "--color-warning-bg",
     "darkValue": "#1A1208"
   },
   "color.warningText": {
-    "value": "#6B5010",
+    "value": "#704903",
     "type": "color",
     "cssVar": "--color-warning-text",
-    "darkValue": "#EACF7E"
+    "darkValue": "#F8CC68"
   },
   "color.error": {
     "value": "#C43030",
@@ -404,10 +404,10 @@ export const tokens: TokenRecord = {
     "darkValue": "0 16px 48px rgba(0, 0, 0, 0.50)"
   },
   "shadow.accent": {
-    "value": "0 4px 20px rgba(212, 172, 60, 0.25)",
+    "value": "0 4px 20px rgba(232, 168, 32, 0.25)",
     "type": "boxShadow",
     "cssVar": "--shadow-accent",
-    "darkValue": "0 4px 20px rgba(224, 193, 94, 0.20)"
+    "darkValue": "0 4px 20px rgba(232, 168, 32, 0.20)"
   },
   "shadow.primary": {
     "value": "0 4px 20px rgba(21, 41, 82, 0.22)",

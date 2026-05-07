@@ -52,7 +52,7 @@ export default function HomePage() {
 
         <div className="relative mx-auto max-w-[960px] px-10 py-12 sm:py-16">
           <div className="card p-6 flex flex-col gap-2" >
-          <span className="section-label">Product Designer &amp; Developer</span>
+          <span className="eyebrow">Product Designer &amp; Developer</span>
 
           <h1 className="mt-3 text-heading-4xl font-heading text-text leading-[1.15] tracking-[-0.5px]">
             Portfolio
@@ -85,10 +85,10 @@ export default function HomePage() {
       {/* ── Featured (Indigo & Gold structure) ── */}
       <div className="mx-auto max-w-[960px] px-10 py-16">
         <header>
-          <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
-            ↳ Featured
+          <span className="eyebrow">
+            Featured
           </span>
-          <h2 className="text-heading-2xl text-text">Three things I made this year.</h2>
+          <h2 className="text-heading-2xl text-text">Things I have been weaving.</h2>
         </header>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -114,8 +114,8 @@ export default function HomePage() {
 
         <section className="mt-10 grid items-center gap-8 md:grid-cols-2 md:gap-10">
           <div>
-            <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
-              ↳ The short version
+            <span className="eyebrow">
+              The short version
             </span>
             <h2 className="text-heading-2xl text-text">I make small, considered tools.</h2>
             <p className="mt-4 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
@@ -136,10 +136,10 @@ export default function HomePage() {
           >
             <WavePattern />
             <div className="relative">
-              <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent-light">
-                ↳ Currently
+              <span className="eyebrow">
+                Currently
               </span>
-              <h3 className="text-heading-xl text-text-inverse">Open to product design contracts.</h3>
+              <h3 className="text-heading-xl text-text-inverse ">Open to product design contracts.</h3>
               <p className="mt-3 max-w-prose font-body text-sm leading-relaxed text-text-muted">
                 Two-week minimums. Brooklyn / remote. Email is the best way.
               </p>

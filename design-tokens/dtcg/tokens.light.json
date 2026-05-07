@@ -1,117 +1,120 @@
 {
   "color": {
     "bg": {
-      "$value": "#faf7f0"
+      "$value": "#F7F1E6"
     },
     "surface": {
-      "$value": "#f2ede4"
+      "$value": "#F2EADC"
     },
     "elevated": {
-      "$value": "#e8e2d8"
+      "$value": "#EDE3D0"
     },
     "text": {
-      "$value": "#0c0e1a"
+      "$value": "#0D1B3E"
     },
     "textMuted": {
-      "$value": "#6b6560"
+      "$value": "#7A6B50"
     },
     "textSubtle": {
-      "$value": "#a09890"
+      "$value": "#A89674"
     },
     "textInverse": {
-      "$value": "#faf7f0"
+      "$value": "#F7F1E6"
     },
     "textOnAccent": {
-      "$value": "#0c0e1a"
+      "$value": "#3C2801"
     },
     "borderSubtle": {
-      "$value": "#e8e2d8"
+      "$value": "#EDE3D0"
     },
     "border": {
-      "$value": "#d4cdc0"
+      "$value": "#E5DBC8"
     },
     "borderStrong": {
-      "$value": "#8fa3b8"
+      "$value": "#B5D0EC"
+    },
+    "headerBg": {
+      "$value": "#0D1B3E"
     },
     "primary": {
-      "$value": "#1a3a6e"
+      "$value": "#152952"
     },
     "primaryHover": {
-      "$value": "#02285a"
+      "$value": "#1E3A6B"
     },
     "primaryMuted": {
-      "$value": "#e8eef5"
+      "$value": "#DCE9F5"
     },
     "secondary": {
-      "$value": "#2a4470"
+      "$value": "#1E3A6B"
     },
     "tertiary": {
-      "$value": "#6888c4"
+      "$value": "#3A6AAE"
     },
     "accent": {
-      "$value": "#e8a820"
+      "$value": "#E8A820"
     },
     "accentHover": {
-      "$value": "#b8963c"
+      "$value": "#F1BE45"
     },
     "accentMuted": {
-      "$value": "#faf3e6"
+      "$value": "#FEF0DB"
     },
     "accentLight": {
-      "$value": "#e8c97a"
+      "$value": "#F8CC68"
     },
     "accentDark": {
-      "$value": "#b87808"
+      "$value": "#C48A16"
     },
     "success": {
-      "$value": "#2d6a4f"
+      "$value": "#1E7E82"
     },
     "successBg": {
-      "$value": "#edf5f1"
+      "$value": "#D4F0EF"
     },
     "successText": {
-      "$value": "#1a4a34"
+      "$value": "#14545A"
     },
     "warning": {
-      "$value": "#b87020"
+      "$value": "#C48A16"
     },
     "warningBg": {
-      "$value": "#fdf4e8"
+      "$value": "#FEF0DB"
     },
     "warningText": {
-      "$value": "#7a4a10"
+      "$value": "#704903"
     },
     "error": {
-      "$value": "#b83232"
+      "$value": "#C43030"
     },
     "errorBg": {
-      "$value": "#fdf0f0"
+      "$value": "#F8D2D2"
     },
     "errorText": {
-      "$value": "#7a1f1f"
+      "$value": "#8B2020"
     },
     "info": {
-      "$value": "#2a4470"
+      "$value": "#3A6AAE"
     },
     "infoBg": {
-      "$value": "#edf1f6"
+      "$value": "#DCE9F5"
     },
     "infoText": {
-      "$value": "#1a3050"
+      "$value": "#152952"
     },
     "$type": "color"
   },
   "font": {
     "heading": {
       "$value": [
-        "Cinzel",
+        "Crimson Pro",
         "Georgia",
         "serif"
       ]
     },
     "body": {
       "$value": [
-        "Montserrat",
+        "DM Sans",
         "system-ui",
         "sans-serif"
       ]
@@ -314,17 +317,17 @@
   "shadow": {
     "default": {
       "$value": {
-        "color": "rgba(12, 14, 26, 0.08)",
+        "color": "rgba(13, 27, 62, 0.04)",
         "offsetX": {
           "value": 0,
           "unit": "px"
         },
         "offsetY": {
-          "value": 2,
+          "value": 4,
           "unit": "px"
         },
         "blur": {
-          "value": 8,
+          "value": 24,
           "unit": "px"
         },
         "spread": {
@@ -335,7 +338,7 @@
     },
     "sm": {
       "$value": {
-        "color": "rgba(12, 14, 26, 0.06)",
+        "color": "rgba(13, 27, 62, 0.05)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -345,7 +348,7 @@
           "unit": "px"
         },
         "blur": {
-          "value": 3,
+          "value": 4,
           "unit": "px"
         },
         "spread": {
@@ -356,7 +359,7 @@
     },
     "md": {
       "$value": {
-        "color": "rgba(12, 14, 26, 0.10)",
+        "color": "rgba(13, 27, 62, 0.08)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -377,7 +380,7 @@
     },
     "lg": {
       "$value": {
-        "color": "rgba(12, 14, 26, 0.12)",
+        "color": "rgba(13, 27, 62, 0.07)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -398,7 +401,7 @@
     },
     "xl": {
       "$value": {
-        "color": "rgba(12, 14, 26, 0.14)",
+        "color": "rgba(13, 27, 62, 0.10)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -419,7 +422,7 @@
     },
     "accent": {
       "$value": {
-        "color": "rgba(201, 168, 76, 0.30)",
+        "color": "rgba(232, 168, 32, 0.25)",
         "offsetX": {
           "value": 0,
           "unit": "px"
@@ -440,7 +443,7 @@
     },
     "primary": {
       "$value": {
-        "color": "rgba(2, 32, 90, 0.22)",
+        "color": "rgba(21, 41, 82, 0.22)",
         "offsetX": {
           "value": 0,
           "unit": "px"

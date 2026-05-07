@@ -11,8 +11,8 @@ export default function AboutPage() {
   return (
     <main className="mx-auto max-w-5xl px-6 pb-24 pt-14">
       <header className="max-w-xl">
-        <span className="mb-3 block font-body text-xs font-medium uppercase tracking-widest text-accent">
-          ↳ About
+        <span className="eyebrow">
+          About
         </span>
         <h1 className="text-heading-4xl md:text-heading-5xl">Story</h1>
         <p className="mt-3 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">

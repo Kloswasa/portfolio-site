@@ -10,6 +10,15 @@
 /* ── Dark mode: class-based (add/remove .dark on <html>) ── */
 @variant dark (&:is(.dark *));
 
+/* ── Motion / timing variables ── */
+@theme {
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration: 150ms;
+  --duration-slow: 300ms;
+}
+
 /* Design tokens are generated from `design-tokens/tokens.*.json` into `src/styles/theme.css`. */
 
 /* ============================================================
@@ -239,9 +248,70 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border-subtle);
+  overflow: hidden;
   transition:
     background var(--duration-slow) var(--ease),
     border-color var(--duration-slow) var(--ease);
+}
+
+@keyframes nav-ripple-from-bottom {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  15% {
+    opacity: 0.65;
+  }
+  55% {
+    opacity: 0.45;
+  }
+  100% {
+    width: 78px;
+    height: 78px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@utility nav-ripple {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow:visible;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 150%;              /* or whatever origin you want */
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 999px;
+    border: 1.5px solid color-mix(in srgb, var(--color-info) 55%, transparent);
+  
+    transform: translate(-50%, -50%); /* your start position */
+    opacity: 0;
+  }
+
+  &:hover::before {
+    animation: nav-ripple-from-bottom 600ms var(--ease-out, var(--ease)) both;
+  }
+
+  &:hover::after {
+    animation: nav-ripple-from-bottom 900ms var(--ease-out, var(--ease)) both;
+    animation-delay: 200ms; /* second ring follows the first */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-ripple:hover::after {
+    animation: none;
+  }
 }
 
 @utility section-label {
@@ -253,6 +323,27 @@
   color: var(--color-accent);
   display: block;
   margin-bottom: 12px;
+}
+
+/* Eyebrow / kicker — class `eyebrow`, NOT `overline`: Tailwind’s `overline` is text-decoration-line (a rule above glyphs). */
+@utility eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35em;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.25;
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  margin-bottom: 8px;
+  &::before {
+    content: "*";
+    flex-shrink: 0;
+    font-weight: 800;
+  }
 }
 
 @utility clamp-2 {
