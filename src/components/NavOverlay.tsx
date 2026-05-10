@@ -1,0 +1,245 @@
+'use client';
+
+import * as React from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useNav } from "@/src/context/NavContext";
+import ThemeToggle from "@/src/components/ThemeToggle";
+
+const links = [
+  { href: "/", label: "Home", num: "01" },
+  { href: "/work", label: "Work", num: "02" },
+  { href: "/play", label: "Play", num: "03" },
+  { href: "/about", label: "About", num: "04" },
+  { href: "/tokens", label: "Tokens", num: "05" },
+  { href: "/components", label: "Components", num: "06" },
+];
+
+const easeOutExpo = [0.22, 1, 0.36, 1] as const;
+const easeInExpo = [0.55, 0, 1, 0.45] as const;
+
+/** Panel open / fold durations (explicit sequencing — don't rely on exit `delay`). */
+const OPEN_PANEL_DURATION = 0.8;
+const FOLD_PANEL_DURATION = 0.45;
+
+/** Nav rows + footer fade out together before the sheet folds. */
+const EXIT_CONTENT_DURATION = 0.30;
+const EXIT_PAUSE_BEFORE_FOLD = 0.08;
+
+type ClosingPhase = null | "contentFade" | "panelFold";
+
+const linkVariants: Variants = {
+  closed: { opacity: 0, y: 24 },
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: easeOutExpo },
+  },
+};
+
+const containerVariants: Variants = {
+  closed: {},
+  open: { transition: { staggerChildren: 0.06, delayChildren: 0.3 } },
+};
+
+const reducedLinkVariants: Variants = {
+  closed: { opacity: 0 },
+  open: { opacity: 1, transition: { duration: 0 } },
+};
+
+const reducedContainerVariants: Variants = {
+  closed: {},
+  open: { transition: { staggerChildren: 0.06, delayChildren: 0.3 } },
+};
+
+export function NavOverlay() {
+  const { navOpen, setNavOpen } = useNav();
+  const router = useRouter();
+  const reduceMotion = useReducedMotion();
+
+  /** Overlay stays mounted through the staged close; `navOpen` can false before unmount. */
+  const [mounted, setMounted] = React.useState(false);
+  const [closingPhase, setClosingPhase] = React.useState<ClosingPhase>(null);
+
+  /** Bumps when menu opens — stale close timeouts must not unmount mid-reopen. */
+  const overlayEpoch = React.useRef(0);
+
+  React.useEffect(() => {
+    if (navOpen) {
+      overlayEpoch.current += 1;
+      setMounted(true);
+      setClosingPhase(null);
+    }
+  }, [navOpen]);
+
+  React.useLayoutEffect(() => {
+    if (!navOpen && mounted && !reduceMotion && closingPhase === null) {
+      setClosingPhase("contentFade");
+    }
+  }, [navOpen, mounted, reduceMotion, closingPhase]);
+
+  React.useEffect(() => {
+    if (!navOpen && mounted && reduceMotion) {
+      setMounted(false);
+      setClosingPhase(null);
+    }
+  }, [navOpen, mounted, reduceMotion]);
+
+  React.useEffect(() => {
+    if (closingPhase !== "contentFade" || reduceMotion) return undefined;
+    const epoch = overlayEpoch.current;
+    const ms = (EXIT_CONTENT_DURATION + EXIT_PAUSE_BEFORE_FOLD) * 1000;
+    const id = window.setTimeout(() => {
+      if (overlayEpoch.current === epoch) setClosingPhase("panelFold");
+    }, ms);
+    return () => window.clearTimeout(id);
+  }, [closingPhase, reduceMotion]);
+
+  React.useEffect(() => {
+    if (closingPhase !== "panelFold" || reduceMotion) return undefined;
+    const epoch = overlayEpoch.current;
+    const ms = FOLD_PANEL_DURATION * 1000;
+    const id = window.setTimeout(() => {
+      if (overlayEpoch.current !== epoch) return;
+      setMounted(false);
+      setClosingPhase(null);
+    }, ms);
+    return () => window.clearTimeout(id);
+  }, [closingPhase, reduceMotion]);
+
+  function navigate(href: string) {
+    setNavOpen(false);
+    router.push(href);
+  }
+
+  const contentInvisible = closingPhase === "contentFade" || closingPhase === "panelFold";
+
+  function scheduleContentTransition(): {
+    duration: number;
+    ease: typeof easeInExpo | "easeOut";
+  } {
+    if (closingPhase === "panelFold") return { duration: 0, ease: "easeOut" };
+    if (contentInvisible)
+      return { duration: EXIT_CONTENT_DURATION, ease: easeInExpo };
+    return { duration: 0, ease: "easeOut" };
+  }
+
+  function schedulePanelScaleTransition(): {
+    duration: number;
+    ease: typeof easeOutExpo | typeof easeInExpo;
+  } {
+    if (closingPhase === "panelFold") {
+      return { duration: FOLD_PANEL_DURATION, ease: easeInExpo };
+    }
+    if (closingPhase === "contentFade") {
+      return { duration: 0, ease: easeOutExpo };
+    }
+    return { duration: OPEN_PANEL_DURATION, ease: easeOutExpo };
+  }
+
+  /** Sheet stays expanded while links fade (`contentFade`). */
+  const panelExpanded = closingPhase !== "panelFold";
+
+  if (!mounted) return null;
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[300] flex flex-col justify-center bg-bg px-8 pb-8 pt-20 text-info-text"
+      initial={
+        reduceMotion ? { opacity: 0 } : { scaleY: 0, transformOrigin: "top center" }
+      }
+      animate={
+        reduceMotion
+          ? {
+              opacity: mounted && navOpen ? 1 : 0,
+            }
+          : {
+              scaleY: panelExpanded ? 1 : 0,
+              transformOrigin: "top center",
+            }
+      }
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : {
+              scaleY: schedulePanelScaleTransition(),
+            }
+      }
+    >
+      {/* Hidden prefetch hints so transitions stay instant */}
+      {links.map(({ href }) => (
+        <Link key={`prefetch:${href}`} href={href} prefetch className="hidden">
+          {href}
+        </Link>
+      ))}
+
+      <motion.div
+        initial={false}
+        animate={
+          reduceMotion
+            ? { opacity: 1 }
+            : {
+                opacity: contentInvisible ? 0 : 1,
+                y: contentInvisible ? 12 : 0,
+              }
+        }
+        transition={reduceMotion ? { duration: 0 } : scheduleContentTransition()}
+        className="flex min-h-0 flex-1 flex-col"
+      >
+        <motion.ul
+          className="flex flex-col"
+          variants={reduceMotion ? reducedContainerVariants : containerVariants}
+          initial="closed"
+          animate="open"
+        >
+          {links.map(({ href, label, num }) => (
+            <motion.li
+              key={href}
+              className="border-t border-info-text/10 last:border-b last:border-info-text/10"
+              variants={reduceMotion ? reducedLinkVariants : linkVariants}
+            >
+              <button
+                type="button"
+                onClick={() => navigate(href)}
+                disabled={closingPhase !== null}
+                className="group flex w-full items-center justify-between py-5 text-info/75 transition-colors duration-300 hover:text-info-text disabled:pointer-events-none"
+              >
+                <span className="text-heading-4xl leading-none tracking-tight">{label}</span>
+                <span className="flex items-center gap-3">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+                    {num}
+                  </span>
+                  <span className="text-lg text-info-text/50 transition-all duration-200 group-hover:translate-x-1.5 group-hover:text-info">
+                    →
+                  </span>
+                </span>
+              </button>
+            </motion.li>
+          ))}
+        </motion.ul>
+
+        <motion.div
+          className="mt-auto flex items-center justify-between pt-6"
+          initial={reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+          animate={
+            reduceMotion
+              ? { opacity: 1, y: 0 }
+              : {
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.6, duration: 0.4, ease: "easeOut" },
+                }
+          }
+        >
+          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+            Portfolio · 2026
+          </span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+            <ThemeToggle tone="default" />
+          </span>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}
