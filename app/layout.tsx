@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Crimson_Pro, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/src/components/Header";
+import Link from "next/link";
+import { NavProvider } from "@/src/context/NavContext";
+import { MenuButton } from "@/src/components/MenuButton";
+import { NavOverlay } from "@/src/components/NavOverlay";
+import { PageTransition } from "@/src/components/PageTransition";
 
 const headingFont = Crimson_Pro({
   subsets: ["latin"],
@@ -52,15 +56,34 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}
+      className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable} scroll-pt-16`}
       suppressHydrationWarning
     >
       <head>
         <ThemeScript />
       </head>
       <body className="min-h-dvh bg-bg text-text antialiased">
-        <Header />
-        {children}
+        <NavProvider>
+          <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">
+            <Link
+              href="/"
+              className="pointer-events-auto text-sm font-semibold uppercase tracking-[0.12em] text-text"
+            >
+              Your Name
+            </Link>
+            <div className="pointer-events-auto flex items-center gap-3">
+              
+              <MenuButton />
+            </div>
+          </header>
+
+          <NavOverlay />
+
+          <div className="pt-16">
+            <PageTransition>{children}</PageTransition>
+          </div>
+          
+        </NavProvider>
       </body>
     </html>
   );
