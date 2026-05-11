@@ -54,7 +54,7 @@ const reducedContainerVariants: Variants = {
 };
 
 export function NavOverlay() {
-  const { navOpen, setNavOpen } = useNav();
+  const { navOpen, setNavOpen, setLoading } = useNav();
   const router = useRouter();
   const reduceMotion = useReducedMotion();
 
@@ -62,8 +62,16 @@ export function NavOverlay() {
   const [mounted, setMounted] = React.useState(false);
   const [closingPhase, setClosingPhase] = React.useState<ClosingPhase>(null);
 
+  const timeouts = React.useRef<number[]>([]);
   /** Bumps when menu opens — stale close timeouts must not unmount mid-reopen. */
   const overlayEpoch = React.useRef(0);
+
+  React.useEffect(() => {
+    return () => {
+      timeouts.current.forEach((t) => window.clearTimeout(t));
+      timeouts.current = [];
+    };
+  }, []);
 
   React.useEffect(() => {
     if (navOpen) {
@@ -110,7 +118,18 @@ export function NavOverlay() {
 
   function navigate(href: string) {
     setNavOpen(false);
-    router.push(href);
+    setLoading(true);
+
+    if (reduceMotion) {
+      router.push(href);
+      // loading is cleared by NavContext when pathname changes
+      return;
+    }
+
+    // Push the route after the loader's fade-in completes (200 ms) so the
+    // page-transition animations are fully hidden beneath the loader.
+    timeouts.current.push(window.setTimeout(() => router.push(href), 280));
+    // loading is cleared by NavContext when pathname changes
   }
 
   const contentInvisible = closingPhase === "contentFade" || closingPhase === "panelFold";

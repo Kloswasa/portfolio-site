@@ -8,30 +8,29 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const reduceMotion = useReducedMotion();
 
-  const ease = [0.22, 1, 0.36, 1] as const;
-  const fadeDuration = reduceMotion ? 0 : 0.4;
+  const easeOutExpo = [0.22, 1, 0.36, 1] as const;
+  const easeInExpo = [0.55, 0, 1, 0.45] as const;
 
   const variants: Variants = {
-    initial: { opacity: 0 },
+    initial: { opacity: 0, y: reduceMotion ? 0 : 14 },
     animate: {
       opacity: 1,
-      transition: { duration: fadeDuration, ease },
+      y: 0,
+      transition: reduceMotion ? { duration: 0 } : { duration: 1.1, ease: easeOutExpo },
     },
     exit: {
       opacity: 0,
-      transition: { duration: reduceMotion ? 0 : 0.32, ease },
+      y: reduceMotion ? 0 : -16,
+      transition: reduceMotion ? { duration: 0 } : { duration: 0.3, ease: easeInExpo },
     },
   };
 
-  /** `mode="sync"` + grid stack: outgoing and incoming crossfade with no empty frame. */
   return (
-    <div className="isolate grid grid-cols-1 grid-rows-[auto] [&>*]:col-start-1 [&>*]:row-start-1">
-      <AnimatePresence mode="sync" initial={false}>
-        <motion.div key={pathname} variants={variants} initial="initial" animate="animate" exit="exit">
-          {children}
-        </motion.div>
-      </AnimatePresence>
-    </div>
+    <AnimatePresence initial={false} mode="wait">
+      <motion.div key={pathname} variants={variants} initial="initial" animate="animate" exit="exit">
+        {children}
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
