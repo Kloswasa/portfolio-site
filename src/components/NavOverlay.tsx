@@ -20,7 +20,7 @@ const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 const easeInExpo = [0.55, 0, 1, 0.45] as const;
 
 /** Panel open / fold durations (explicit sequencing — don't rely on exit `delay`). */
-const OPEN_PANEL_DURATION = 0.8;
+const OPEN_PANEL_DURATION = 0.6;
 const FOLD_PANEL_DURATION = 0.45;
 
 /** Nav rows + footer fade out together before the sheet folds. */
