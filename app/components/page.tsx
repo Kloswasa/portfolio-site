@@ -3,6 +3,7 @@ import { CopyButton } from "@/src/components/ui/CopyButton";
 import { Badge } from "@/src/components/ui/Badge";
 import { TabBarDemo } from "@/src/components/ui/TabBarDemo";
 import AnimatedSection from "@/src/components/AnimatedSection";
+import { ScrollReveal } from "@/src/components/ScrollReveal";
 import ProjectCard from "@/src/components/ProjectCard";
 import ContactForm from "@/src/components/ContactForm";
 import { projects } from "@/src/lib/projects";
@@ -24,13 +25,13 @@ function SectionShell({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="panel scroll-mt-24 p-8">
+    <ScrollReveal as="section" id={id} className="panel scroll-mt-24 p-8">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
         <h2 className="text-heading-2xl">{title}</h2>
         <span className="font-mono text-xs text-text-muted">{filePath}</span>
       </div>
       <div className="mt-8">{children}</div>
-    </section>
+    </ScrollReveal>
   );
 }
 
@@ -41,7 +42,12 @@ export default function ComponentsPage() {
     <>
      
       <main className="mx-auto max-w-6xl px-6 pb-16 pt-20">
-        <header id="about" className="max-w-3xl scroll-mt-24">
+        <ScrollReveal
+          as="header"
+          id="about"
+          className="max-w-3xl scroll-mt-24"
+          revealOnScroll={false}
+        >
           <span className="eyebrow">
             UI catalog
           </span>
@@ -59,7 +65,7 @@ export default function ComponentsPage() {
               Design tokens
             </Link>
           </div>
-        </header>
+        </ScrollReveal>
 
         <div className="mt-12 grid gap-10">
           <SectionShell
@@ -224,7 +230,9 @@ export default function ComponentsPage() {
             filePath="src/components/AnimatedSection.tsx"
           >
             <p className="mb-6 font-body text-text-muted">
-              Fades in when scrolled into view (intersection observer).
+              Fades in when scrolled into view — same behavior as{" "}
+              <span className="font-mono text-text">ScrollReveal</span> (Framer Motion{" "}
+              <span className="font-mono text-text">whileInView</span>).
             </p>
             <div className="rounded-none border border-dashed border-border-subtle p-2">
               <AnimatedSection>

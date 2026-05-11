@@ -9,7 +9,6 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   const reduceMotion = useReducedMotion();
 
   const easeOutExpo = [0.22, 1, 0.36, 1] as const;
-  const easeInExpo = [0.55, 0, 1, 0.45] as const;
 
   const variants: Variants = {
     initial: { opacity: 0, y: reduceMotion ? 0 : 14 },
@@ -18,10 +17,13 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       y: 0,
       transition: reduceMotion ? { duration: 0 } : { duration: 1.1, ease: easeOutExpo },
     },
+    // In-page `<Link>` navigations do not use the overlay loader, so a long exit + long enter
+    // reads as two eases in a row (`mode="wait"`). Keep exit effectively instant; the enter
+    // above is the single visible route transition (menu navigations stay loader-masked).
     exit: {
       opacity: 0,
-      y: reduceMotion ? 0 : -16,
-      transition: reduceMotion ? { duration: 0 } : { duration: 0.3, ease: easeInExpo },
+      y: 0,
+      transition: { duration: 0 },
     },
   };
 

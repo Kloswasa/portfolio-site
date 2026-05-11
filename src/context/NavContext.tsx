@@ -19,8 +19,7 @@ export function NavProvider({ children }: { children: React.ReactNode }) {
   const hasMounted = React.useRef(false);
 
   // Auto-clear loading when navigation completes (pathname changes).
-  // Delay 600 ms so the loader stays up long enough to cover the page-transition
-  // exit+enter animations (300 ms + 500 ms) before it fades away.
+  // Delay so the loader stays up through the route swap and the page enter animation.
   React.useEffect(() => {
     if (!hasMounted.current) {
       hasMounted.current = true;

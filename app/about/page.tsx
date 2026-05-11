@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ContactForm from "@/src/components/ContactForm";
+import { ScrollReveal } from "@/src/components/ScrollReveal";
 import { Badge } from "@/src/components/ui/Badge";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-5xl px-6 pb-24 pt-14">
-      <header className="max-w-xl">
+      <ScrollReveal as="header" className="max-w-xl" revealOnScroll={false}>
         <span className="eyebrow">
           About
         </span>
@@ -20,9 +21,9 @@ export default function AboutPage() {
           small studios and large platforms — currently independent, quietly available for product,
           editorial, and creative-code work.
         </p>
-      </header>
+      </ScrollReveal>
 
-      <section className="mt-12 grid gap-12 md:grid-cols-2 md:gap-12">
+      <ScrollReveal as="section" className="mt-12 grid gap-12 md:grid-cols-2 md:gap-12">
         <div>
           <h2 className="text-heading-xl text-text">Bio</h2>
           <p className="mt-4 font-body text-sm leading-relaxed text-text-muted">
@@ -64,9 +65,9 @@ export default function AboutPage() {
             )}
           </div>
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className="mt-14">
+      <ScrollReveal as="section" className="mt-14">
         <div className="flex items-center gap-4">
           <hr className="divider flex-1" />
           <span className="section-label m-0">Resume</span>
@@ -90,9 +91,9 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section id="contact" className="mt-14 scroll-mt-24">
+      <ScrollReveal as="section" id="contact" className="mt-14 scroll-mt-24">
         <h2 className="text-heading-2xl text-text">Get in touch</h2>
         <p className="mt-3 max-w-2xl font-body text-text-muted">
           A few sentences is plenty. I usually reply within a day or two.
@@ -100,7 +101,7 @@ export default function AboutPage() {
         <div className="mt-8 max-w-2xl">
           <ContactForm />
         </div>
-      </section>
+      </ScrollReveal>
     </main>
   );
 }

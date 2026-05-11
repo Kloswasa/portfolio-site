@@ -3,6 +3,7 @@
 import { useId, useMemo, useState } from "react";
 import { PlayImageLightbox } from "@/src/components/PlayImageLightbox";
 import ProjectCard from "@/src/components/ProjectCard";
+import { ScrollReveal } from "@/src/components/ScrollReveal";
 import { TabBar, TabBarTab } from "@/src/components/ui/TabBar";
 import type { PlayItem, PlayTab } from "@/src/lib/play";
 
@@ -35,31 +36,33 @@ export default function PlayIndex({
         onClose={() => setLightboxItem(null)}
       />
 
-      <header className="max-w-xl">
-        <span className="eyebrow">
-          The other half
-        </span>
-        <h1 className="text-heading-4xl md:text-heading-5xl">Play</h1>
-        <p className="mt-2 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
-          Drawings, prints, and creative-code sketches — the things I make when nobody asked for
-          them.
-        </p>
-      </header>
+      <ScrollReveal as="div" revealOnScroll={false}>
+        <header className="max-w-xl">
+          <span className="eyebrow">
+            The other half
+          </span>
+          <h1 className="text-heading-4xl md:text-heading-5xl">Play</h1>
+          <p className="mt-2 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
+            Drawings, prints, and creative-code sketches — the things I make when nobody asked for
+            them.
+          </p>
+        </header>
 
-      <TabBar aria-label="Play categories" className="mt-8 md:mt-10">
-        {TABS.map(({ key, label }) => (
-          <TabBarTab
-            key={key}
-            id={`${baseId}-tab-${key}`}
-            active={tab === key}
-            onClick={() => setTab(key)}
-          >
-            {label}
-          </TabBarTab>
-        ))}
-      </TabBar>
+        <TabBar aria-label="Play categories" className="mt-8 md:mt-10">
+          {TABS.map(({ key, label }) => (
+            <TabBarTab
+              key={key}
+              id={`${baseId}-tab-${key}`}
+              active={tab === key}
+              onClick={() => setTab(key)}
+            >
+              {label}
+            </TabBarTab>
+          ))}
+        </TabBar>
+      </ScrollReveal>
 
-      <div className="grid gap-4 md:grid-cols-3 md:gap-4" key={tab}>
+      <ScrollReveal as="div" className="grid gap-4 md:grid-cols-3 md:gap-4" key={tab}>
         {items.length === 0 ? (
           <p className="col-span-full font-body text-text-muted">
             Nothing here yet — I&apos;m still drawing.
@@ -83,7 +86,7 @@ export default function PlayIndex({
             </div>
           ))
         )}
-      </div>
+      </ScrollReveal>
     </>
   );
 }

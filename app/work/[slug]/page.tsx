@@ -3,6 +3,7 @@ import Link from "next/link";
 import { projects } from "@/src/lib/projects";
 import { Badge } from "@/src/components/ui/Badge";
 import { CaseStudySectionTabs } from "@/src/components/CaseStudySectionTabs";
+import { ScrollReveal } from "@/src/components/ScrollReveal";
 
 export default async function WorkDetailPage({
   params,
@@ -20,7 +21,11 @@ export default async function WorkDetailPage({
   return (
     <main className="mx-auto max-w-5xl px-6 pb-16 pt-20">
       <div className="flex flex-col gap-6">
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <ScrollReveal
+          as="div"
+          className="flex flex-wrap items-center justify-between gap-4"
+          revealOnScroll={false}
+        >
           <Link className="btn btn-ghost" href="/work">
             ← Back to work
           </Link>
@@ -31,11 +36,11 @@ export default async function WorkDetailPage({
               </Badge>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
         <CaseStudySectionTabs />
 
-        <section id="hook" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="hook" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             01 Hook
           </span>
@@ -87,11 +92,11 @@ export default async function WorkDetailPage({
               </div>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
 
         <hr className="divider" />
 
-        <section id="context" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="context" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             02 Context
           </span>
@@ -112,11 +117,11 @@ export default async function WorkDetailPage({
               </p>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
 
         <hr className="divider" />
 
-        <section id="process" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="process" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             03 Process
           </span>
@@ -141,11 +146,11 @@ export default async function WorkDetailPage({
               </p>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
 
         <hr className="divider" />
 
-        <section id="solution" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="solution" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             04 Solution
           </span>
@@ -169,11 +174,11 @@ export default async function WorkDetailPage({
               </div>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
 
         <hr className="divider" />
 
-        <section id="outcome" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="outcome" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             05 Outcome
           </span>
@@ -198,11 +203,11 @@ export default async function WorkDetailPage({
               </p>
             </div>
           </div>
-        </section>
+        </ScrollReveal>
 
         <hr className="divider" />
 
-        <section id="next" className="panel scroll-mt-28 p-10">
+        <ScrollReveal as="section" id="next" className="panel scroll-mt-28 p-10">
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
             Next
           </span>
@@ -217,7 +222,7 @@ export default async function WorkDetailPage({
               </Link>
             </div>
           )}
-        </section>
+        </ScrollReveal>
       </div>
     </main>
   );

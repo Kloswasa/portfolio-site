@@ -14,3 +14,9 @@ export const slideUp: Variants = {
     transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
   },
 }
+
+/** Instant end state for `prefers-reduced-motion` scroll reveals. */
+export const revealReduced: Variants = {
+  hidden: { opacity: 1, y: 0 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0 } },
+}
