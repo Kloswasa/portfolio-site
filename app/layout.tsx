@@ -8,6 +8,7 @@ import { NavOverlay } from "@/src/components/NavOverlay";
 import ThemeToggle from "@/src/components/ThemeToggle";
 import { PageLoader } from "@/src/components/PageLoader";
 import { PageTransition } from "@/src/components/PageTransition";
+import { SmoothScroll } from "@/src/components/SmoothScroll";
 
 
 const headingFont = Crimson_Pro({
@@ -66,6 +67,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="min-h-dvh bg-bg text-text antialiased">
+        <SmoothScroll>
         <NavProvider>
           <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">
             <Link
@@ -88,6 +90,7 @@ export default function RootLayout({
           </div>
           
         </NavProvider>
+        </SmoothScroll>
       </body>
     </html>
   );

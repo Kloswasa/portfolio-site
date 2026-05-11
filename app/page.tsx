@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { projects } from "@/src/lib/projects";
-import ProjectCard from "@/src/components/ProjectCard";
+import { FeaturedProjectStagger } from "@/src/components/FeaturedProjectStagger";
 import { ScrollReveal } from "@/src/components/ScrollReveal";
 
 export const metadata = {
@@ -89,22 +89,9 @@ export default function HomePage() {
             </span>
             <h2 className="text-heading-2xl text-text">Things I have been weaving.</h2>
           </header>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {featured.map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies}
-                tone={project.tone}
-                liveUrl={project.liveUrl}
-                sourceUrl={project.sourceUrl}
-                href={`/work/${project.slug}`}
-              />
-            ))}
-          </div>
         </ScrollReveal>
+
+        <FeaturedProjectStagger projects={featured} />
 
         <ScrollReveal as="div" className="mt-16">
           <div className="flex items-center gap-4">
@@ -112,8 +99,10 @@ export default function HomePage() {
             <span className="section-label m-0">About</span>
             <hr className="divider flex-1" />
           </div>
+        </ScrollReveal>
 
-          <section className="mt-10 grid items-center gap-8 md:grid-cols-2 md:gap-10">
+        <section className="mt-10 grid items-center gap-8 md:grid-cols-2 md:gap-10">
+          <ScrollReveal as="div">
             <div>
               <span className="eyebrow">
                 The short version
@@ -130,7 +119,9 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+          </ScrollReveal>
 
+          <ScrollReveal as="div">
             <div
               className="relative overflow-hidden border border-border-strong p-7 text-text-inverse"
               style={{ background: "var(--color-header-bg)" }}
@@ -151,8 +142,8 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </section>
-        </ScrollReveal>
+          </ScrollReveal>
+        </section>
       </div>
     </main>
   );
