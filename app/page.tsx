@@ -52,8 +52,8 @@ export default function HomePage() {
       >
         <WavePattern />
 
-        <div className="relative mx-auto flex w-full max-w-[960px] flex-1 flex-col justify-center px-10 py-12 sm:py-16">
-          <div className="card flex flex-col gap-2 p-6">
+        <div className="relative mx-auto flex w-full max-w-[960px] flex-1 flex-col justify-center px-16 py-12 sm:py-16">
+          <div className="card flex flex-col gap-2 p-12">
             <span className="eyebrow">Product Designer &amp; Developer</span>
 
             <h1 className="mt-3 text-heading-4xl font-heading text-text leading-[1.15] tracking-[-0.5px]">
