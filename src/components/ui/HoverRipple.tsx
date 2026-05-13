@@ -10,7 +10,8 @@ type Ripple = {
   size: number;
 };
 
-const RIPPLE_DURATION = 10;
+/** Default ripple length (seconds). Used by `useHoverRipple()` and `HoverRippleLayer` unless a `duration` override is passed. */
+export const RIPPLE_DURATION = 10;
 const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
 type UseHoverRippleOptions = {
