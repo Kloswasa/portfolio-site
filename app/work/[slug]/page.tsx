@@ -243,7 +243,7 @@ export default async function WorkDetailPage({
             <div className="panel p-6">
               <h3 className="text-heading-xl">Learnings</h3>
               <p className="mt-3 font-body text-text-muted">
-                What you'd repeat next time (and what you wouldn't).
+                {"What you'd repeat next time (and what you wouldn't)."}
               </p>
             </div>
             <div className="panel p-6">

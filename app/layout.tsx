@@ -5,7 +5,6 @@ import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
 import { MenuButton } from "@/src/components/MenuButton";
 import { NavOverlay } from "@/src/components/NavOverlay";
-import ThemeToggle from "@/src/components/ThemeToggle";
 import { PageLoader } from "@/src/components/PageLoader";
 import { PageTransition } from "@/src/components/PageTransition";
 import { SmoothScroll } from "@/src/components/SmoothScroll";
