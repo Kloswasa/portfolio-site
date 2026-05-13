@@ -107,7 +107,7 @@ export function HoverRippleLayer({
               width: ripple.size,
               height: ripple.size,
               borderRadius: '9999px',
-              border: `1px solid ${color}`,
+              border: `2px solid ${color}`,
               background: 'transparent',
               boxSizing: 'border-box',
               transition: 'none',
