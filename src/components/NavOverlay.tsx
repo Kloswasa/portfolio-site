@@ -271,7 +271,7 @@ type NavRippleRowProps = {
 
 function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
   const { onMouseEnter, ripples, duration, startOpacity } =
-    useHoverRipple<HTMLButtonElement>({ startOpacity: 0.55 });
+    useHoverRipple<HTMLButtonElement>({ duration: 0.9, startOpacity: 0.55 });
 
   return (
     <button
