@@ -1,6 +1,6 @@
 export const siteConfig = {
   // Personal Information
-  name: "Your Name",
+  name: "Klaus W",
   title: "Full-Stack Developer",
   description: "A passionate full-stack developer who loves creating beautiful, functional, and user-centered digital experiences.",
   email: "your.email@example.com",

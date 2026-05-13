@@ -2,10 +2,11 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNav } from "@/src/context/NavContext";
 import ThemeToggle from "@/src/components/ThemeToggle";
+import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
 
 const links = [
   { href: "/", label: "Home", num: "01" },
@@ -56,6 +57,7 @@ const reducedContainerVariants: Variants = {
 export function NavOverlay() {
   const { navOpen, setNavOpen, setLoading } = useNav();
   const router = useRouter();
+  const pathname = usePathname();
   const reduceMotion = useReducedMotion();
 
   /** Overlay stays mounted through the staged close; `navOpen` can false before unmount. */
@@ -117,6 +119,13 @@ export function NavOverlay() {
   }, [closingPhase, reduceMotion]);
 
   function navigate(href: string) {
+    // Same-route click: just close the overlay. Skipping the loader avoids a
+    // hang since the pathname-watching effect in NavContext won't fire.
+    if (href === pathname) {
+      setNavOpen(false);
+      return;
+    }
+
     setNavOpen(false);
     setLoading(true);
 
@@ -218,22 +227,12 @@ export function NavOverlay() {
               className="border-t border-info-text/10 last:border-b last:border-info-text/10"
               variants={reduceMotion ? reducedLinkVariants : linkVariants}
             >
-              <button
-                type="button"
-                onClick={() => navigate(href)}
+              <NavRippleRow
+                label={label}
+                num={num}
                 disabled={closingPhase !== null}
-                className="group flex w-full items-center justify-between py-5 text-info/75 transition-colors duration-300 hover:text-info-text disabled:pointer-events-none"
-              >
-                <span className="text-heading-4xl leading-none tracking-tight">{label}</span>
-                <span className="flex items-center gap-3">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
-                    {num}
-                  </span>
-                  <span className="text-lg text-info-text/50 transition-all duration-200 group-hover:translate-x-1.5 group-hover:text-info">
-                    →
-                  </span>
-                </span>
-              </button>
+                onSelect={() => navigate(href)}
+              />
             </motion.li>
           ))}
         </motion.ul>
@@ -260,5 +259,45 @@ export function NavOverlay() {
         </motion.div>
       </motion.div>
     </motion.div>
+  );
+}
+
+type NavRippleRowProps = {
+  label: string;
+  num: string;
+  disabled: boolean;
+  onSelect: () => void;
+};
+
+function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
+  const { onMouseEnter, ripples, duration, startOpacity } =
+    useHoverRipple<HTMLButtonElement>({ duration: 0.9, startOpacity: 0.55 });
+
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      onMouseEnter={onMouseEnter}
+      disabled={disabled}
+      className="group relative flex w-full items-center justify-between overflow-hidden py-5 text-info/75 transition-colors duration-300 hover:text-info-text disabled:pointer-events-none"
+    >
+      <HoverRippleLayer
+        ripples={ripples}
+        duration={duration}
+        startOpacity={startOpacity}
+        color="var(--color-info-text)"
+      />
+      <span className="relative text-heading-4xl leading-none tracking-tight">
+        {label}
+      </span>
+      <span className="relative flex shrink-0 items-center gap-4 pl-2 pr-4">
+        <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+          {num}
+        </span>
+        <span className="inline-flex min-w-[1.25em] items-center justify-center  text-lg text-info-text/50 transition-all duration-200 group-hover:translate-x-1.5 group-hover:text-info">
+          →
+        </span>
+      </span>
+    </button>
   );
 }

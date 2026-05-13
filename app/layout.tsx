@@ -8,6 +8,7 @@ import { NavOverlay } from "@/src/components/NavOverlay";
 import { PageLoader } from "@/src/components/PageLoader";
 import { PageTransition } from "@/src/components/PageTransition";
 import { SmoothScroll } from "@/src/components/SmoothScroll";
+import { siteConfig } from "@/src/lib/config";
 
 
 const headingFont = Crimson_Pro({
@@ -73,7 +74,7 @@ export default function RootLayout({
               href="/"
               className="pointer-events-auto text-sm font-semibold uppercase tracking-[0.12em] text-text"
             >
-              Your Name
+              {siteConfig.name}
             </Link>
             <div className="pointer-events-auto flex items-center gap-3">
               

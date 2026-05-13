@@ -254,66 +254,6 @@
     border-color var(--duration-slow) var(--ease);
 }
 
-@keyframes nav-ripple-from-bottom {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-  15% {
-    opacity: 0.65;
-  }
-  55% {
-    opacity: 0.45;
-  }
-  100% {
-    width: 78px;
-    height: 78px;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@utility nav-ripple {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  overflow:visible;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 150%;              /* or whatever origin you want */
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    z-index: -1;
-    border-radius: 999px;
-    border: 1.5px solid color-mix(in srgb, var(--color-info) 55%, transparent);
-  
-    transform: translate(-50%, -50%); /* your start position */
-    opacity: 0;
-  }
-
-  &:hover::before {
-    animation: nav-ripple-from-bottom 600ms var(--ease-out, var(--ease)) both;
-  }
-
-  &:hover::after {
-    animation: nav-ripple-from-bottom 900ms var(--ease-out, var(--ease)) both;
-    animation-delay: 200ms; /* second ring follows the first */
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nav-ripple:hover::after {
-    animation: none;
-  }
-}
-
 @utility section-label {
   font-family: var(--font-body);
   font-size: 0.6875rem;
