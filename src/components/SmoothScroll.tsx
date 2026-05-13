@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { ReactLenis } from 'lenis/react';
 import type { LenisOptions } from 'lenis';
+import { ScrollSnap } from '@/src/components/ScrollSnap';
 
 /** Slightly lower lerp = longer ease-out (more “coast” / inertia). */
 const lenisOptions: LenisOptions = {
@@ -26,13 +27,20 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     return () => mq.removeEventListener('change', sync);
   }, []);
 
+  const wrapped = (
+    <>
+      {children}
+      <ScrollSnap />
+    </>
+  );
+
   if (!allowSmooth) {
-    return children;
+    return wrapped;
   }
 
   return (
     <ReactLenis root options={lenisOptions}>
-      {children}
+      {wrapped}
     </ReactLenis>
   );
 }

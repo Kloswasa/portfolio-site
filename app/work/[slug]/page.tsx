@@ -3,7 +3,14 @@ import Link from "next/link";
 import { projects } from "@/src/lib/projects";
 import { Badge } from "@/src/components/ui/Badge";
 import { CaseStudySectionTabs } from "@/src/components/CaseStudySectionTabs";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import {
+  SnapSectionReveal,
+  SnapItem,
+} from "@/src/components/SnapSectionReveal";
+
+/** Shared inner layout for every snap section's content area. */
+const inner =
+  "mx-auto max-w-5xl px-6 pt-16 pb-12";
 
 export default async function WorkDetailPage({
   params,
@@ -19,40 +26,53 @@ export default async function WorkDetailPage({
   const nextProject = projects[(projectIndex + 1) % projects.length];
 
   return (
-    <main className="mx-auto max-w-5xl px-6 pb-16 pt-20">
-      <div className="flex flex-col gap-6">
-        <ScrollReveal
-          as="div"
-          className="flex flex-wrap items-center justify-between gap-4"
-          revealOnScroll={false}
-        >
-          <Link className="btn btn-ghost" href="/work">
-            ← Back to work
-          </Link>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
-              <Badge key={tech} tone={project.tone}>
-                {tech}
-              </Badge>
-            ))}
-          </div>
-        </ScrollReveal>
+    /*
+     * data-scroll-snap-root  → ScrollSnap reads snap type from here
+     * data-snap-type="proximity"  → Lenis proximity mode (panels can exceed vh)
+     * No padding on <main> — layout already applies pt-16; sections own their spacing.
+     */
+    <main data-scroll-snap-root data-snap-type="proximity" className="w-full">
+      {/* Sticky section nav — always visible below the global header */}
+      <CaseStudySectionTabs />
 
-        <CaseStudySectionTabs />
+      {/* ── 01 Hook ── */}
+      <section
+        id="hook"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.2}>
+          {/* Back link + tech badges live here so there's no pre-snap floating element */}
+          <SnapItem className="flex flex-wrap items-center justify-between gap-4">
+            <Link className="btn btn-ghost" href="/work">
+              ← Back to work
+            </Link>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <Badge key={tech} tone={project.tone}>
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </SnapItem>
 
-        <ScrollReveal as="section" id="hook" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            01 Hook
-          </span>
-          <h1 className="mt-4 text-heading-4xl md:text-heading-5xl text-balance">
-            {project.title}
-          </h1>
-          <p className="mt-4 max-w-2xl font-body text-lg font-light text-text-muted">
-            {project.description}
-          </p>
+          <SnapItem className="mt-8">
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              01 Hook
+            </span>
+            <h1 className="mt-4 text-heading-4xl md:text-heading-5xl text-balance">
+              {project.title}
+            </h1>
+            <p className="mt-4 max-w-2xl font-body text-lg font-light text-text-muted">
+              {project.description}
+            </p>
+          </SnapItem>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
-            <div className="h-[280px] w-full rounded-none border border-border-subtle bg-elevated" aria-hidden />
+          <SnapItem className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+            <div
+              className="h-[280px] w-full rounded-none border border-border-subtle bg-elevated"
+              aria-hidden
+            />
             <div className="flex flex-col gap-3">
               <div className="panel p-6">
                 <h2 className="text-heading-xl">Quick facts</h2>
@@ -67,7 +87,6 @@ export default async function WorkDetailPage({
                   </div>
                 </dl>
               </div>
-
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 {project.liveUrl && (
                   <Link
@@ -91,17 +110,24 @@ export default async function WorkDetailPage({
                 )}
               </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
 
-        <hr className="divider" />
-
-        <ScrollReveal as="section" id="context" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            02 Context
-          </span>
-          <h2 className="mt-4 text-heading-2xl">Problem + role</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
+      {/* ── 02 Context ── */}
+      <section
+        id="context"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.3}>
+          <SnapItem>
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              02 Context
+            </span>
+            <h2 className="mt-4 text-heading-2xl">Problem + role</h2>
+          </SnapItem>
+          <SnapItem className="mt-6 grid gap-6 md:grid-cols-2">
             <div>
               <span className="section-label">Problem</span>
               <hr className="divider" />
@@ -116,17 +142,24 @@ export default async function WorkDetailPage({
                 Your responsibilities, partners, and constraints (time, tech, team).
               </p>
             </div>
-          </div>
-        </ScrollReveal>
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
 
-        <hr className="divider" />
-
-        <ScrollReveal as="section" id="process" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            03 Process
-          </span>
-          <h2 className="mt-4 text-heading-2xl">Research + decisions</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
+      {/* ── 03 Process ── */}
+      <section
+        id="process"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.3}>
+          <SnapItem>
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              03 Process
+            </span>
+            <h2 className="mt-4 text-heading-2xl">Research + decisions</h2>
+          </SnapItem>
+          <SnapItem className="mt-6 grid gap-6 md:grid-cols-3">
             <div className="panel p-6">
               <h3 className="text-heading-xl">Research</h3>
               <p className="mt-3 font-body text-text-muted">
@@ -145,18 +178,28 @@ export default async function WorkDetailPage({
                 The chosen direction and why it won.
               </p>
             </div>
-          </div>
-        </ScrollReveal>
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
 
-        <hr className="divider" />
-
-        <ScrollReveal as="section" id="solution" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            04 Solution
-          </span>
-          <h2 className="mt-4 text-heading-2xl">Final design</h2>
-          <div className="mt-6 grid gap-6">
-            <div className="h-[360px] w-full rounded-none border border-border-subtle bg-elevated" aria-hidden />
+      {/* ── 04 Solution ── */}
+      <section
+        id="solution"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.2}>
+          <SnapItem>
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              04 Solution
+            </span>
+            <h2 className="mt-4 text-heading-2xl">Final design</h2>
+          </SnapItem>
+          <SnapItem className="mt-6 grid gap-6">
+            <div
+              className="h-[360px] w-full rounded-none border border-border-subtle bg-elevated"
+              aria-hidden
+            />
             <div className="grid gap-6 md:grid-cols-2">
               <div className="panel p-6">
                 <h3 className="text-heading-xl">What shipped</h3>
@@ -173,17 +216,24 @@ export default async function WorkDetailPage({
                 </p>
               </div>
             </div>
-          </div>
-        </ScrollReveal>
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
 
-        <hr className="divider" />
-
-        <ScrollReveal as="section" id="outcome" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            05 Outcome
-          </span>
-          <h2 className="mt-4 text-heading-2xl">Result + reflect</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
+      {/* ── 05 Outcome ── */}
+      <section
+        id="outcome"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.3}>
+          <SnapItem>
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              05 Outcome
+            </span>
+            <h2 className="mt-4 text-heading-2xl">Result + reflect</h2>
+          </SnapItem>
+          <SnapItem className="mt-6 grid gap-6 md:grid-cols-3">
             <div className="panel p-6">
               <h3 className="text-heading-xl">Results</h3>
               <p className="mt-3 font-body text-text-muted">
@@ -193,7 +243,7 @@ export default async function WorkDetailPage({
             <div className="panel p-6">
               <h3 className="text-heading-xl">Learnings</h3>
               <p className="mt-3 font-body text-text-muted">
-                What you’d repeat next time (and what you wouldn’t).
+                What you'd repeat next time (and what you wouldn't).
               </p>
             </div>
             <div className="panel p-6">
@@ -202,29 +252,37 @@ export default async function WorkDetailPage({
                 Follow-ups if you had more time.
               </p>
             </div>
-          </div>
-        </ScrollReveal>
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
 
-        <hr className="divider" />
-
-        <ScrollReveal as="section" id="next" className="panel scroll-mt-28 p-10">
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
-            Next
-          </span>
-          <h2 className="mt-4 text-heading-2xl">→ next project</h2>
-          <p className="mt-4 font-body text-text-muted">
-            Up next: <span className="text-text">{nextProject?.title}</span>
-          </p>
-          {nextProject && (
-            <div className="mt-6">
-              <Link className="btn btn-navy" href={`/work/${nextProject.slug}`}>
-                Read next case study
-              </Link>
-            </div>
-          )}
-        </ScrollReveal>
-      </div>
+      {/* ── Next ── */}
+      <section
+        id="next"
+        data-scroll-snap-section
+        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
+      >
+        <SnapSectionReveal className={inner} amount={0.3}>
+          <SnapItem>
+            <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+              Next
+            </span>
+            <h2 className="mt-4 text-heading-2xl">→ next project</h2>
+          </SnapItem>
+          <SnapItem>
+            <p className="mt-4 font-body text-text-muted">
+              Up next: <span className="text-text">{nextProject?.title}</span>
+            </p>
+            {nextProject && (
+              <div className="mt-6">
+                <Link className="btn btn-navy" href={`/work/${nextProject.slug}`}>
+                  Read next case study
+                </Link>
+              </div>
+            )}
+          </SnapItem>
+        </SnapSectionReveal>
+      </section>
     </main>
   );
 }
-

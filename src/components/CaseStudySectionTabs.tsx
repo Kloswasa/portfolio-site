@@ -74,7 +74,7 @@ export function CaseStudySectionTabs() {
               id={`${baseId}-tab-${id}`}
               active={active === id}
               onClick={() => scrollToSection(id)}
-              aria-controls={id}
+              ariaControls={id}
             >
               {label}
             </TabBarTab>
