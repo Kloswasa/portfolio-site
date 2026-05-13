@@ -17,6 +17,8 @@ const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 type UseHoverRippleOptions = {
   /** Override the default animation duration (seconds). */
   duration?: number;
+  /** Seconds to wait after hover before the ripple animates. */
+  delay?: number;
   /** Starting opacity of the ripple. */
   startOpacity?: number;
 };
@@ -25,6 +27,7 @@ type UseHoverRippleResult<T extends HTMLElement> = {
   onMouseEnter: (event: React.MouseEvent<T>) => void;
   ripples: Ripple[];
   duration: number;
+  delay: number;
   startOpacity: number;
 };
 
@@ -32,6 +35,7 @@ export function useHoverRipple<T extends HTMLElement>(
   options: UseHoverRippleOptions = {},
 ): UseHoverRippleResult<T> {
   const duration = options.duration ?? RIPPLE_DURATION;
+  const delay = options.delay ?? 0;
   const startOpacity = options.startOpacity ?? 0.6;
 
   const reduceMotion = useReducedMotion();
@@ -65,18 +69,19 @@ export function useHoverRipple<T extends HTMLElement>(
       const timerId = window.setTimeout(() => {
         setRipples((prev) => prev.filter((r) => r.id !== id));
         timers.current = timers.current.filter((t) => t !== timerId);
-      }, duration * 1000 + 60);
+      }, (duration + delay) * 1000 + 60);
       timers.current.push(timerId);
     },
-    [reduceMotion, duration],
+    [reduceMotion, duration, delay],
   );
 
-  return { onMouseEnter, ripples, duration, startOpacity };
+  return { onMouseEnter, ripples, duration, delay, startOpacity };
 }
 
 type HoverRippleLayerProps = {
   ripples: Ripple[];
   duration?: number;
+  delay?: number;
   startOpacity?: number;
   /** Optional CSS color for the ripple (defaults to `currentColor`). */
   color?: string;
@@ -85,6 +90,7 @@ type HoverRippleLayerProps = {
 export function HoverRippleLayer({
   ripples,
   duration = RIPPLE_DURATION,
+  delay = 0,
   startOpacity = 0.6,
   color = 'currentColor',
 }: HoverRippleLayerProps) {
@@ -100,7 +106,7 @@ export function HoverRippleLayer({
             initial={{ scale: 0, opacity: startOpacity }}
             animate={{ scale: 1, opacity: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration, ease: EASE }}
+            transition={{ duration, delay, ease: EASE }}
             style={{
               position: 'absolute',
               top: ripple.y - ripple.size / 2,
