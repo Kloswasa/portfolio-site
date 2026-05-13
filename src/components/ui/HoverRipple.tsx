@@ -10,7 +10,7 @@ type Ripple = {
   size: number;
 };
 
-const RIPPLE_DURATION = 4.5;
+const RIPPLE_DURATION = 10;
 const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
 type UseHoverRippleOptions = {
