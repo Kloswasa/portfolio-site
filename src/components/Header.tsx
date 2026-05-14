@@ -1,50 +1,27 @@
 import Link from "next/link";
 import ThemeToggle from "@/src/components/ThemeToggle";
+import NavRippleLink from "@/src/components/ui/NavRippleLink";
+import { siteConfig } from "@/src/lib/config";
 
 export default function Header() {
   return (
-    <header className="nav">
+    <header className="nav">  
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
             className="text-heading-xl text-text transition-colors hover:text-primary"
           >
-            Your Name
+            {siteConfig.name}
           </Link>
 
           <div className="hidden items-center gap-4 md:flex">
             <nav className="flex items-baseline gap-1">
-              <Link
-                href="/work"
-                className="nav-ripple px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
-              >
-                Work
-              </Link>
-              <Link
-                href="/play"
-                className="nav-ripple px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
-              >
-                Play
-              </Link>
-              <Link
-                href="/about"
-                className="nav-ripple px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
-              >
-                About
-              </Link>
-              <Link
-                href="/tokens"
-                className="nav-ripple px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
-              >
-                Design Tokens
-              </Link>
-              <Link
-                href="/components"
-                className="nav-ripple px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text"
-              >
-                Components
-              </Link>
+              <NavRippleLink href="/work">Work</NavRippleLink>
+              <NavRippleLink href="/play">Play</NavRippleLink>
+              <NavRippleLink href="/about">About</NavRippleLink>
+              <NavRippleLink href="/tokens">Design Tokens</NavRippleLink>
+              <NavRippleLink href="/components">Components</NavRippleLink>
             </nav>
             <ThemeToggle />
           </div>
