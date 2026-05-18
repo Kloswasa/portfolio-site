@@ -8,7 +8,7 @@ import {
   SnapItem,
 } from "@/src/components/SnapSectionReveal";
 
-/** Shared inner layout for every snap section's content area. */
+/** Shared inner layout for each case study section. */
 const inner =
   "mx-auto max-w-5xl px-6 pt-16 pb-12";
 
@@ -26,23 +26,13 @@ export default async function WorkDetailPage({
   const nextProject = projects[(projectIndex + 1) % projects.length];
 
   return (
-    /*
-     * data-scroll-snap-root  → ScrollSnap reads snap type from here
-     * data-snap-type="proximity"  → Lenis proximity mode (panels can exceed vh)
-     * No padding on <main> — layout already applies pt-16; sections own their spacing.
-     */
-    <main data-scroll-snap-root data-snap-type="proximity" className="w-full">
+    <main className="w-full">
       {/* Sticky section nav — always visible below the global header */}
       <CaseStudySectionTabs />
 
       {/* ── 01 Hook ── */}
-      <section
-        id="hook"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="hook">
         <SnapSectionReveal className={inner} amount={0.2}>
-          {/* Back link + tech badges live here so there's no pre-snap floating element */}
           <SnapItem className="flex flex-wrap items-center justify-between gap-4">
             <Link className="btn btn-ghost" href="/work">
               ← Back to work
@@ -115,11 +105,7 @@ export default async function WorkDetailPage({
       </section>
 
       {/* ── 02 Context ── */}
-      <section
-        id="context"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="context">
         <SnapSectionReveal className={inner} amount={0.3}>
           <SnapItem>
             <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
@@ -147,11 +133,7 @@ export default async function WorkDetailPage({
       </section>
 
       {/* ── 03 Process ── */}
-      <section
-        id="process"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="process">
         <SnapSectionReveal className={inner} amount={0.3}>
           <SnapItem>
             <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
@@ -183,11 +165,7 @@ export default async function WorkDetailPage({
       </section>
 
       {/* ── 04 Solution ── */}
-      <section
-        id="solution"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="solution">
         <SnapSectionReveal className={inner} amount={0.2}>
           <SnapItem>
             <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
@@ -221,11 +199,7 @@ export default async function WorkDetailPage({
       </section>
 
       {/* ── 05 Outcome ── */}
-      <section
-        id="outcome"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="outcome">
         <SnapSectionReveal className={inner} amount={0.3}>
           <SnapItem>
             <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
@@ -257,11 +231,7 @@ export default async function WorkDetailPage({
       </section>
 
       {/* ── Next ── */}
-      <section
-        id="next"
-        data-scroll-snap-section
-        className="snap-start snap-always min-h-[calc(100dvh-4rem)]"
-      >
+      <section id="next">
         <SnapSectionReveal className={inner} amount={0.3}>
           <SnapItem>
             <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">

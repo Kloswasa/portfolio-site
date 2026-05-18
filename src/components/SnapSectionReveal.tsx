@@ -64,12 +64,9 @@ type SnapSectionRevealProps = {
 };
 
 /**
- * Section-level reveal coordinator for snapped sections on the home page.
+ * Section-level reveal coordinator.
  *
- * Fires **once** per section when the section snaps into view (uses
- * `IntersectionObserver` via `useInView`, so it works equally well with
- * Lenis snap and the reduced-motion CSS-snap fallback).
- *
+ * Fires **once** when enough of the wrapper enters the viewport (`useInView`).
  * Wrap individual blocks inside with `<SnapItem>` to get a staggered cascade.
  */
 export function SnapSectionReveal({

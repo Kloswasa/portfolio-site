@@ -6,7 +6,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNav } from "@/src/context/NavContext";
 import ThemeToggle from "@/src/components/ThemeToggle";
-import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
+import {
+  HoverRippleLayer,
+  NAV_RIPPLE_DURATION,
+  useHoverRipple,
+} from "@/src/components/ui/HoverRipple";
 
 const links = [
   { href: "/", label: "Home", num: "01" },
@@ -270,13 +274,44 @@ type NavRippleRowProps = {
 };
 
 function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
-  const { onMouseEnter, ripples, duration, startOpacity } =
-    useHoverRipple<HTMLButtonElement>({ duration: 4, startOpacity: 0.55 });
+  const reduceMotion = useReducedMotion();
+  const pendingClose = React.useRef(false);
+  const closeTimer = React.useRef<number | undefined>(undefined);
+
+  const { onMouseEnter, onClick, ripples, duration, startOpacity, closeDelayMs } =
+    useHoverRipple<HTMLButtonElement>({
+      duration: NAV_RIPPLE_DURATION,
+      startOpacity: 0.55,
+      hoverRingCount: 2,
+      clickRingCount: 1,
+      clickOrigin: "pointer",
+      hoverOrigin: "pointer",
+    });
+
+  React.useEffect(() => {
+    return () => {
+      if (closeTimer.current !== undefined) {
+        window.clearTimeout(closeTimer.current);
+      }
+    };
+  }, []);
 
   return (
     <button
       type="button"
-      onClick={onSelect}
+      onClick={(event) => {
+        if (disabled || pendingClose.current) return;
+        onClick(event);
+        if (reduceMotion) {
+          onSelect();
+          return;
+        }
+        pendingClose.current = true;
+        closeTimer.current = window.setTimeout(() => {
+          pendingClose.current = false;
+          onSelect();
+        }, closeDelayMs);
+      }}
       onMouseEnter={onMouseEnter}
       disabled={disabled}
       className="group relative flex w-full items-center justify-between overflow-hidden py-5 text-info/75 transition-colors duration-300 hover:text-info-text disabled:pointer-events-none"
