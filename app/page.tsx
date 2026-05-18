@@ -49,7 +49,7 @@ export default function HomePage() {
    
 
       {/* ── Hero ── */}
-      <section id="hero" data-scroll-snap-section className="snap-start snap-always min-h-[calc(100dvh-4rem)]">
+      <section id="hero">
         <div
           className="relative flex min-h-[calc(100dvh-4rem)] flex-col overflow-hidden"
           style={{
@@ -98,7 +98,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured ── */}
-      <section id="featured" data-scroll-snap-section className="snap-start snap-always min-h-[calc(100dvh-4rem)]">
+      <section id="featured">
         <SnapSectionReveal className="mx-auto max-w-[960px] px-10 py-16">
           <SnapItem as="header">
             <span className="eyebrow">Featured</span>
@@ -114,7 +114,7 @@ export default function HomePage() {
       </section>
 
       {/* ── About ── */}
-      <section id="about" data-scroll-snap-section className="snap-start snap-always min-h-[calc(100dvh-4rem)]">
+      <section id="about">
         <SnapSectionReveal className="mx-auto max-w-[960px] px-10 py-16">
           <SnapItem>
             <div className="flex items-center gap-4">

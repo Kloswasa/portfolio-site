@@ -15,13 +15,14 @@ export default function NavRippleLink({
   children,
   className = '',
 }: NavRippleLinkProps) {
-  const { onMouseEnter, ripples, duration, startOpacity } =
+  const { onMouseEnter, onClick, ripples, duration, startOpacity } =
     useHoverRipple<HTMLAnchorElement>();
 
   return (
     <Link
       href={href}
       onMouseEnter={onMouseEnter}
+      onClick={onClick}
       className={`relative inline-flex items-center overflow-hidden px-3 py-2 text-sm text-text-muted transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${className}`}
     >
       <HoverRippleLayer
