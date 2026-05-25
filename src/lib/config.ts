@@ -1,42 +1,58 @@
 export const siteConfig = {
-  // Personal Information
   name: "Klaus W",
-  title: "Full-Stack Developer",
-  description: "A passionate full-stack developer who loves creating beautiful, functional, and user-centered digital experiences.",
-  email: "your.email@example.com",
-  location: "Your City, Country",
-  
-  // Social Links
+  title: "Product Designer & Developer",
+  tagline:
+    "I design thoughtful interfaces and build them with a token-driven system — balancing craft, accessibility, and performance.",
+  email: "klos.w@gmail.com",
+  location: "Melbourne, Australia",
+
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    instagram: "https://instagram.com/yourusername"
+    github: "",
+    linkedin: "",
+    twitter: "",
+    instagram: "",
   },
-  
-  // About Section
+
   about: {
-    experience: "X years",
-    description: "With over X years of experience in web development, I specialize in building modern web applications using React, Next.js, and Node.js. I love solving complex problems and turning ideas into reality.",
-    personalDescription: "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community."
+    experience: "8 years",
+    storyIntro:
+      "I'm a designer and creative technologist working out of Melbourne. Eight years across small studios and large platforms — currently independent, quietly available for product, editorial, and creative-code work.",
+    bio: [
+      "Multidisciplinary Product Designer focused on the intersection of intuitive UX and refined aesthetics. Drawing on agency and independent experience, I deliver high-impact work with a focus on efficiency and technical feasibility.",
+      " I am a dedicated investigator of user behaviour, using research to drive design decisions, and a flexible collaborator who bridges the languages of design and engineering to ensure every product remains high-quality and user-focused.",
+    ],
+    shortHeading: "I make small, considered tools.",
+    shortDescription:
+      "Eight years designing for small studios and large platforms. Currently independent — quietly available for product work, editorial, and the occasional creative-code commission.",
+    availabilityHeading: "Open to product design contracts.",
+    availabilityDescription:
+      "Two-week minimums. Melbourne / remote. Email is the best way.",
+    skills: [
+      "Product design",
+      "Identity",
+      "Type",
+      "Creative code",
+      "WebGL",
+      "Print",
+      "Branding",
+    ],
+    tools: ["Figma", "React", "Three.js", "p5.js", "InDesign",],
+    hobby: ["Woodworking", "Gardening", "Hiking", "Photography", "Traveling", "Reading", "Writing",],
+    contactBlurb: "A few sentences is plenty. I usually reply within a day or two.",
+    metaDescription: "Bio, skills, and resume.",
   },
-  
-  // Skills
-  skills: {
-    frontend: ["React & Next.js", "TypeScript", "Tailwind CSS", "HTML & CSS"],
-    backend: ["Node.js", "Express.js", "PostgreSQL", "MongoDB"],
-    tools: ["Git", "Docker", "AWS", "Figma"]
+
+  resume: {
+    filename: "resume.pdf",
+    year: "2024",
+    note: "One page. Updated October 2024.",
+    downloadHref: "#",
   },
-  
-  // Contact
-  contact: {
-    message: "I'm always interested in hearing about new opportunities and exciting projects. Let's work together to bring your ideas to life!"
-  },
-  
-  // Site Settings
+
   site: {
-    title: "Your Name - Portfolio",
-    description: "Personal portfolio website showcasing my work and skills",
-    url: "https://yourdomain.com"
-  }
-}; 
+    title: "Klaus W — Portfolio",
+    description:
+      "Product designer and developer crafting thoughtful interfaces with a token-driven system.",
+    url: "https://klausw.dev",
+  },
+} as const;

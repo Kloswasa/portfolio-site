@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/src/lib/config";
 import { projects } from "@/src/lib/projects";
 import { FeaturedProjectStagger } from "@/src/components/FeaturedProjectStagger";
 import {
@@ -9,7 +10,7 @@ import {
 
 export const metadata = {
   title: "Home",
-  description: "Portfolio home.",
+  description: siteConfig.tagline,
 };
 
 function WavePattern() {
@@ -65,7 +66,7 @@ export default function HomePage() {
           >
             <SnapItem className="card flex flex-col gap-2 p-12">
               <SnapItem as="div">
-                <span className="eyebrow">Product Designer &amp; Developer</span>
+                <span className="eyebrow">{siteConfig.title}</span>
               </SnapItem>
 
               <SnapItem as="div">
@@ -79,8 +80,7 @@ export default function HomePage() {
                   className="mt-4 max-w-prose font-body text-base leading-relaxed"
                   style={{ color: "var(--color-text-muted)" }}
                 >
-                  I design thoughtful interfaces and build them with a token-driven
-                  system — balancing craft, accessibility, and performance.
+                  {siteConfig.tagline}
                 </p>
               </SnapItem>
 
@@ -127,13 +127,9 @@ export default function HomePage() {
           <section className="mt-10 grid items-center gap-8 md:grid-cols-2 md:gap-10">
             <SnapItem>
               <span className="eyebrow">The short version</span>
-              <h2 className="text-heading-2xl text-text">
-                I make small, considered tools.
-              </h2>
+              <h2 className="text-heading-2xl text-text">{siteConfig.about.shortHeading}</h2>
               <p className="mt-4 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
-                Eight years designing for small studios and large platforms.
-                Currently independent — quietly available for product work,
-                editorial, and the occasional creative-code commission.
+                {siteConfig.about.shortDescription}
               </p>
               <div className="mt-6">
                 <Link className="btn btn-secondary" href="/about">
@@ -151,14 +147,14 @@ export default function HomePage() {
                 <div className="relative">
                   <span className="eyebrow">Currently</span>
                   <h3 className="text-heading-xl text-text-inverse">
-                    Open to product design contracts.
+                    {siteConfig.about.availabilityHeading}
                   </h3>
                   <p className="mt-3 max-w-prose font-body text-sm leading-relaxed text-text-muted">
-                    Two-week minimums. Brooklyn / remote. Email is the best way.
+                    {siteConfig.about.availabilityDescription}
                   </p>
                   <div className="mt-6">
-                    <a className="btn btn-gold" href="mailto:hello@klaus.com">
-                      hello@klaus.com
+                    <a className="btn btn-gold" href={`mailto:${siteConfig.email}`}>
+                      {siteConfig.email}
                     </a>
                   </div>
                 </div>

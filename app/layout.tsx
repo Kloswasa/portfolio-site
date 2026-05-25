@@ -32,8 +32,12 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Product designer who codes.",
+  title: {
+    default: siteConfig.site.title,
+    template: `%s · ${siteConfig.name}`,
+  },
+  description: siteConfig.site.description,
+  metadataBase: siteConfig.site.url ? new URL(siteConfig.site.url) : undefined,
 };
 
 function ThemeScript() {
