@@ -1,8 +1,8 @@
 {
   "$schema": "https://unpkg.com/@tokens-studio/schema@latest",
   "color": {
-    "bg":             { "value": "#F7F1E6", "type": "color" },
-    "surface":        { "value": "#F2EADC", "type": "color" },
+    "bg":             { "value": "#faf8f3", "type": "color" },
+    "surface":        { "value": "#f0ece1", "type": "color" },
     "elevated":       { "value": "#EDE3D0", "type": "color" },
     "text":           { "value": "#0D1B3E", "type": "color" },
     "textMuted":      { "value": "#7A6B50", "type": "color" },
@@ -37,9 +37,9 @@
     "infoText":       { "value": "#152952", "type": "color" }
   },
   "font": {
-    "heading": { "value": "'Crimson Pro', Georgia, serif", "type": "fontFamilies" },
+    "heading": { "value": "'Fraunces', Georgia, serif", "type": "fontFamilies" },
     "body":    { "value": "'DM Sans', system-ui, sans-serif", "type": "fontFamilies" },
-    "mono":    { "value": "'JetBrains Mono', 'Fira Code', monospace", "type": "fontFamilies" }
+    "mono":    { "value": "'Syne', 'Fira Code', monospace", "type": "fontFamilies" }
   },
   "text": {
     "xs":  { "value": "0.563rem", "type": "fontSizes" },

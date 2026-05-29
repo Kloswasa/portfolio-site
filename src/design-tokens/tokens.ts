@@ -10,13 +10,13 @@ export type TokenRecord = Record<string, TokenEntry>;
 
 export const tokens: TokenRecord = {
   "color.bg": {
-    "value": "#F7F1E6",
+    "value": "#faf8f3",
     "type": "color",
     "cssVar": "--color-bg",
     "darkValue": "#0D1B3E"
   },
   "color.surface": {
-    "value": "#F2EADC",
+    "value": "#f0ece1",
     "type": "color",
     "cssVar": "--color-surface",
     "darkValue": "#152952"
@@ -214,7 +214,7 @@ export const tokens: TokenRecord = {
     "darkValue": "#B5D0EC"
   },
   "font.heading": {
-    "value": "'Crimson Pro', Georgia, serif",
+    "value": "'Fraunces', Georgia, serif",
     "type": "fontFamilies",
     "cssVar": "--font-heading"
   },
@@ -224,7 +224,7 @@ export const tokens: TokenRecord = {
     "cssVar": "--font-body"
   },
   "font.mono": {
-    "value": "'JetBrains Mono', 'Fira Code', monospace",
+    "value": "'Syne', 'Fira Code', monospace",
     "type": "fontFamilies",
     "cssVar": "--font-mono"
   },
