@@ -10,13 +10,13 @@ export type TokenRecord = Record<string, TokenEntry>;
 
 export const tokens: TokenRecord = {
   "color.bg": {
-    "value": "#faf8f3",
+    "value": "#FAF8F3",
     "type": "color",
     "cssVar": "--color-bg",
     "darkValue": "#0D1B3E"
   },
   "color.surface": {
-    "value": "#f0ece1",
+    "value": "#F0ECE1",
     "type": "color",
     "cssVar": "--color-surface",
     "darkValue": "#152952"

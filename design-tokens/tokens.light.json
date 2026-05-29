@@ -1,8 +1,8 @@
 {
   "$schema": "https://unpkg.com/@tokens-studio/schema@latest",
   "color": {
-    "bg":             { "value": "#faf8f3", "type": "color" },
-    "surface":        { "value": "#f0ece1", "type": "color" },
+    "bg":             { "value": "#FAF8F3", "type": "color" },
+    "surface":        { "value": "#F0ECE1", "type": "color" },
     "elevated":       { "value": "#EDE3D0", "type": "color" },
     "text":           { "value": "#0D1B3E", "type": "color" },
     "textMuted":      { "value": "#7A6B50", "type": "color" },
