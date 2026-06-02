@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Crimson_Pro, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -11,14 +11,14 @@ import { SmoothScroll } from "@/src/components/SmoothScroll";
 import { siteConfig } from "@/src/lib/config";
 
 
-const headingFont = Crimson_Pro({
+const headingFont = Fraunces({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
   weight: ["400", "500", "600"],
 });
 
-const bodyFont = DM_Sans({
+const bodyFont = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -32,8 +32,12 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Product designer who codes.",
+  title: {
+    default: siteConfig.site.title,
+    template: `%s · ${siteConfig.name}`,
+  },
+  description: siteConfig.site.description,
+  metadataBase: siteConfig.site.url ? new URL(siteConfig.site.url) : undefined,
 };
 
 function ThemeScript() {

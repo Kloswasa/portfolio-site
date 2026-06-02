@@ -1,7 +1,7 @@
 /* Auto-generated. Do not edit directly. */
 @theme {
-  --color-bg: #F7F1E6;
-  --color-surface: #F2EADC;
+  --color-bg: #FAF8F3;
+  --color-surface: #F0ECE1;
   --color-elevated: #EDE3D0;
   --color-text: #0D1B3E;
   --color-text-muted: #7A6B50;
@@ -34,9 +34,9 @@
   --color-info: #3A6AAE;
   --color-info-bg: #DCE9F5;
   --color-info-text: #152952;
-  --font-heading: 'Crimson Pro', Georgia, serif;
+  --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-mono: 'Syne', 'Fira Code', monospace;
   --text-xs: 0.563rem;
   --text-sm: 0.750rem;
   --text-base: 1rem;

@@ -15,10 +15,10 @@ type Ripple = {
 type RippleOrigin = 'pointer' | 'center';
 
 /** Default ripple length (seconds). Used by `useHoverRipple()` and `HoverRippleLayer` unless a `duration` override is passed. */
-export const RIPPLE_DURATION = 10;
+export const RIPPLE_DURATION = 20;
 
 /** Nav overlay: long enough to read, short enough that the menu can close after a visible beat. */
-export const NAV_RIPPLE_DURATION = 1.6;
+export const NAV_RIPPLE_DURATION = 2.2;
 
 const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
@@ -212,7 +212,7 @@ export function HoverRippleLayer({
               width: ripple.size,
               height: ripple.size,
               borderRadius: '9999px',
-              border: `2px solid ${color}`,
+              border: `3px solid ${color}`,
               background: 'transparent',
               boxSizing: 'border-box',
               transition: 'none',

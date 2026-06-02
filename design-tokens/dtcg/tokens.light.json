@@ -1,10 +1,10 @@
 {
   "color": {
     "bg": {
-      "$value": "#F7F1E6"
+      "$value": "#FAF8F3"
     },
     "surface": {
-      "$value": "#F2EADC"
+      "$value": "#F0ECE1"
     },
     "elevated": {
       "$value": "#EDE3D0"
@@ -107,7 +107,7 @@
   "font": {
     "heading": {
       "$value": [
-        "Crimson Pro",
+        "Fraunces",
         "Georgia",
         "serif"
       ]
@@ -121,7 +121,7 @@
     },
     "mono": {
       "$value": [
-        "JetBrains Mono",
+        "Syne",
         "Fira Code",
         "monospace"
       ]
