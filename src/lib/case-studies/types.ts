@@ -1,4 +1,4 @@
-export type CaseStudyKind = "major" | "minor";
+export type CaseStudyKind = "major" | "minor" | "designer";
 
 export type ContentBlock =
   | { type: "prose"; paragraphs: string[] }
@@ -69,9 +69,96 @@ export interface MinorCaseStudy {
   sections: MinorCaseStudySections;
 }
 
-export type CaseStudy = MajorCaseStudy | MinorCaseStudy;
+export type CaseStudy = MajorCaseStudy | MinorCaseStudy | DesignerCaseStudy;
 
 export interface CaseStudyNavItem {
   id: string;
   label: string;
+}
+
+/* ── Designer case study (rich editorial layout) ── */
+
+export type DesignerSectionId =
+  | "context"
+  | "problem"
+  | "research"
+  | "process"
+  | "foundations"
+  | "components"
+  | "outcomes"
+  | "reflections";
+
+export type DesignerContentBlock =
+  | { type: "prose"; paragraphs: string[] }
+  | {
+      type: "stats";
+      items: {
+        value: string;
+        label: string;
+        variant: "dark" | "mid" | "light";
+      }[];
+    }
+  | { type: "pullquote"; text: string; source: string }
+  | {
+      type: "findings";
+      items: {
+        num: string;
+        label: string;
+        title: string;
+        body: string;
+      }[];
+    }
+  | { type: "annotation"; text: string }
+  | { type: "twoCol"; items: { label: string; body: string }[] }
+  | {
+      type: "artifact";
+      variant: "audit-map" | "token-hierarchy";
+      label: string;
+      caption: string;
+      captionMeta?: string;
+    }
+  | {
+      type: "process";
+      items: { num: string; title: string; body: string }[];
+    }
+  | { type: "callout"; label: string; title: string; body: string }
+  | { type: "colorSpecimen" }
+  | { type: "typeSpecimen" }
+  | { type: "ornament" }
+  | {
+      type: "componentGrid";
+      items: {
+        label: string;
+        title: string;
+        count: string;
+        variant: "primary" | "dark" | "mid" | "deepest";
+      }[];
+    }
+  | {
+      type: "outcomes";
+      items: { value: string; label: string; body: string }[];
+    }
+  | { type: "reflections"; items: string[] };
+
+export interface DesignerSectionContent {
+  eyebrow: string;
+  title: string;
+  titleEm?: string;
+  blocks: DesignerContentBlock[];
+}
+
+export interface DesignerCaseStudyHero {
+  breadcrumb: string;
+  eyebrow: string;
+  titleLine1: string;
+  titleLine2: string;
+  summary: string;
+  meta: { label: string; value: string }[];
+}
+
+export interface DesignerCaseStudy {
+  kind: "designer";
+  slug: string;
+  hero: DesignerCaseStudyHero;
+  sections: Record<DesignerSectionId, DesignerSectionContent>;
 }

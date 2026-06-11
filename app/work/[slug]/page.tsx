@@ -27,6 +27,21 @@ export default async function WorkDetailPage({
 
   const projectIndex = projects.findIndex((p) => p.slug === slug);
   const nextProject = projects[(projectIndex + 1) % projects.length]!;
+  const nextIndex = String(
+    ((projectIndex + 1) % projects.length) + 1,
+  ).padStart(3, "0");
+
+  if (caseStudy.kind === "designer") {
+    return (
+      <main className="w-full px-8">
+        <CaseStudyRenderer
+          caseStudy={caseStudy}
+          nextProject={nextProject}
+          nextIndex={nextIndex}
+        />
+      </main>
+    );
+  }
 
   return (
     <main className="w-full">

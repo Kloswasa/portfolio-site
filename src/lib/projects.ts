@@ -22,6 +22,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  
   {
     id: 1,
     slug: "quiz-game",
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     tone: "primary",
     workTab: "product",
-    caseStudyKind: "major",
+    caseStudyKind: "designer",
     liveUrl: "https://quiz-game.com",
     sourceUrl: "https://github.com/yourusername/quiz-game",
   },

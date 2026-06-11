@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import ProjectCard from '@/src/components/ProjectCard';
-import type { Project } from '@/src/lib/projects';
+import { WorkCard } from '@/src/components/WorkCard';
+import type { WorkCardProject } from '@/src/lib/work/types';
 
 const easeDefault = [0.25, 0.1, 0.25, 1] as const;
 
@@ -32,23 +32,28 @@ const itemVariants = {
   },
 };
 
-export function FeaturedProjectStagger({ projects }: { projects: Project[] }) {
+const mosaicGridClass = 'featured-mosaic h-full min-h-0 flex-1';
+
+interface FeaturedProjectStaggerProps {
+  projects: WorkCardProject[];
+}
+
+export function FeaturedProjectStagger({ projects }: FeaturedProjectStaggerProps) {
   const reduceMotion = useReducedMotion();
+  const [featured, ...rest] = projects;
+
+  if (!featured) return null;
 
   if (reduceMotion) {
     return (
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            tone={project.tone}
-            liveUrl={project.liveUrl}
-            sourceUrl={project.sourceUrl}
-            href={`/work/${project.slug}`}
-          />
+      <div className={mosaicGridClass}>
+        <div className="md:row-span-2">
+          <WorkCard project={featured} layout="featured" />
+        </div>
+        {rest.map((project) => (
+          <div key={project.id}>
+            <WorkCard project={project} layout="featured" />
+          </div>
         ))}
       </div>
     );
@@ -56,23 +61,18 @@ export function FeaturedProjectStagger({ projects }: { projects: Project[] }) {
 
   return (
     <motion.div
-      className="mt-8 grid gap-4 md:grid-cols-3"
+      className={mosaicGridClass}
       initial="hidden"
       whileInView="visible"
       viewport={viewport}
       variants={containerVariants}
     >
-      {projects.map((project) => (
-        <motion.div key={project.id} variants={itemVariants} className="min-w-0">
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            tone={project.tone}
-            liveUrl={project.liveUrl}
-            sourceUrl={project.sourceUrl}
-            href={`/work/${project.slug}`}
-          />
+      <motion.div variants={itemVariants} className="md:row-span-2">
+        <WorkCard project={featured} layout="featured" />
+      </motion.div>
+      {rest.map((project) => (
+        <motion.div key={project.id} variants={itemVariants}>
+          <WorkCard project={project} layout="featured" />
         </motion.div>
       ))}
     </motion.div>

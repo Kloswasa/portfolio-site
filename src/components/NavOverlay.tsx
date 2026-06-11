@@ -15,10 +15,11 @@ import {
 const links = [
   { href: "/", label: "Home", num: "01" },
   { href: "/work", label: "Work", num: "02" },
-  { href: "/play", label: "Play", num: "03" },
-  { href: "/about", label: "About", num: "04" },
-  { href: "/tokens", label: "Tokens", num: "05" },
-  { href: "/components", label: "Components", num: "06" },
+  { href: "/gallery", label: "Gallery", num: "03" },
+  { href: "/play", label: "Play", num: "04" },
+  { href: "/about", label: "About", num: "05" },
+  { href: "/tokens", label: "Tokens", num: "06" },
+  { href: "/components", label: "Components", num: "07" },
 ];
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;

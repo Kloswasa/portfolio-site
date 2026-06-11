@@ -1,6 +1,7 @@
 import type {
   CaseStudyKind,
   CaseStudyNavItem,
+  DesignerSectionId,
   MajorSectionId,
   MinorSectionId,
 } from "@/src/lib/case-studies/types";
@@ -43,7 +44,21 @@ export const MINOR_SECTION_DEFAULT_TITLES: Record<MinorSectionId, string> = {
   reflection: "Reflection",
 };
 
+const DESIGNER_CONTENT_SECTIONS: { id: DesignerSectionId; label: string }[] = [
+  { id: "context", label: "01 · Context" },
+  { id: "problem", label: "02 · The problem" },
+  { id: "research", label: "03 · Research" },
+  { id: "process", label: "04 · Process" },
+  { id: "foundations", label: "05 · Foundations" },
+  { id: "components", label: "06 · Components" },
+  { id: "outcomes", label: "07 · Outcomes" },
+  { id: "reflections", label: "08 · Reflections" },
+];
+
 export function getCaseStudyNav(kind: CaseStudyKind): CaseStudyNavItem[] {
+  if (kind === "designer") {
+    return [...DESIGNER_CONTENT_SECTIONS, NEXT_NAV];
+  }
   const content =
     kind === "major" ? MAJOR_CONTENT_SECTIONS : MINOR_CONTENT_SECTIONS;
   return [HOOK_NAV, ...content, NEXT_NAV];
