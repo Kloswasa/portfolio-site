@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { GalleryFilterBar } from "@/src/components/gallery/GalleryFilterBar";
+import { FilterBar } from "@/src/components/ui/FilterBar";
 import { GalleryFooter } from "@/src/components/gallery/GalleryFooter";
 import { GalleryGrid } from "@/src/components/gallery/GalleryGrid";
 import { GalleryHero } from "@/src/components/gallery/GalleryHero";
@@ -46,11 +46,14 @@ export function GalleryView({
   return (
     <div className="gallery-page">
       <GalleryHero meta={heroMeta} />
-      <GalleryFilterBar
+      <FilterBar
         options={filterOptions}
         active={activeFilter}
         count={filteredProjects.length}
         onFilter={setActiveFilter}
+        containerClassName="gallery-container"
+        ariaLabel="Filter gallery entries"
+        tabAriaLabel="Gallery filters"
       />
       <div className="gallery-body">
         <GalleryGrid projects={filteredProjects} />

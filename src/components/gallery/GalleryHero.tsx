@@ -3,13 +3,17 @@ import type { GalleryHeroMeta } from "@/src/lib/gallery/types";
 
 interface GalleryHeroProps {
   meta: GalleryHeroMeta;
+  watermark?: string;
 }
 
-export function GalleryHero({ meta }: GalleryHeroProps) {
+export function GalleryHero({
+  meta,
+  watermark = "\u201C Works \u201D",
+}: GalleryHeroProps) {
   return (
     <header className="gallery-hero">
       <p className="gallery-hero__watermark" aria-hidden="true">
-        &ldquo; Works &rdquo;
+        {watermark}
       </p>
 
       <div className="gallery-hero__scroll" aria-hidden="true">

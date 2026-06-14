@@ -1,15 +1,28 @@
-import PlayIndex from "@/src/components/PlayIndex";
-import { playExperiments, playIllustration } from "@/src/lib/play";
+import { PlayView } from "@/src/components/play/PlayView";
+import {
+  PLAY_END_COPY,
+  PLAY_FILTER_OPTIONS,
+  PLAY_HERO_META,
+  PLAY_MEDIUM_SECTIONS,
+  PLAY_WORKS,
+} from "@/src/lib/play";
 
 export const metadata = {
   title: "Play",
-  description: "Illustration and creative-code experiments.",
+  description:
+    "Off-hours experiments — hand-drawn cyanotype illustration and live generative sketches.",
 };
 
 export default function PlayPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 pb-24 pt-14">
-      <PlayIndex illustration={playIllustration} experiments={playExperiments} />
+    <main>
+      <PlayView
+        works={PLAY_WORKS}
+        filterOptions={PLAY_FILTER_OPTIONS}
+        heroMeta={PLAY_HERO_META}
+        mediumSections={PLAY_MEDIUM_SECTIONS}
+        endCopy={PLAY_END_COPY}
+      />
     </main>
   );
 }
