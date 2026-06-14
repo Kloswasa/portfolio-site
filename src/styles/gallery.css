@@ -291,28 +291,3 @@
   font-family: var(--font-body);
   color: var(--color-text-muted);
 }
-
-/* ── Footer ── */
-.gallery-footer {
-  border-top: 1px solid var(--color-border-subtle);
-}
-
-.gallery-footer__inner {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2);
-  padding-block: var(--spacing-8) var(--spacing-20);
-}
-
-.gallery-footer__name {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-}
-
-.gallery-footer__note {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}

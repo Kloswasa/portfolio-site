@@ -1,5 +1,4 @@
 import { projects } from "@/src/lib/projects";
-import { siteConfig } from "@/src/lib/config";
 import { toWorkCardProject } from "@/src/lib/work/data";
 import type {
   GalleryFilterOption,
@@ -60,9 +59,4 @@ export const GALLERY_HERO_META: GalleryHeroMeta = {
     { label: "Years active", value: String(maxYear - minYear + 1) },
     { label: "Collaborators", value: "12+" },
   ],
-};
-
-export const GALLERY_FOOTER_COPY = {
-  name: siteConfig.name,
-  note: "Melbourne · Independent product design",
 };

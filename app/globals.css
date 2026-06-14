@@ -12,6 +12,8 @@
 @import "../src/styles/filter-bar.css";
 @import "../src/styles/gallery.css";
 @import "../src/styles/play.css";
+@import "../src/styles/about.css";
+@import "../src/styles/footer.css";
 
 /* ── Dark mode: class-based (add/remove .dark on <html>) ── */
 @variant dark (&:is(.dark *));

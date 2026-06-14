@@ -1,7 +1,6 @@
 import { GalleryView } from "@/src/components/gallery/GalleryView";
 import {
   GALLERY_FILTER_OPTIONS,
-  GALLERY_FOOTER_COPY,
   GALLERY_HERO_META,
   GALLERY_PROJECTS,
 } from "@/src/lib/gallery/data";
@@ -19,7 +18,6 @@ export default function GalleryPage() {
         projects={GALLERY_PROJECTS}
         filterOptions={GALLERY_FILTER_OPTIONS}
         heroMeta={GALLERY_HERO_META}
-        footer={GALLERY_FOOTER_COPY}
       />
     </main>
   );

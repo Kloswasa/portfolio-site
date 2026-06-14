@@ -8,6 +8,7 @@ import { NavOverlay } from "@/src/components/NavOverlay";
 import { PageLoader } from "@/src/components/PageLoader";
 import { PageTransition } from "@/src/components/PageTransition";
 import { SmoothScroll } from "@/src/components/SmoothScroll";
+import { Footer } from "@/src/components/Footer";
 import { siteConfig } from "@/src/lib/config";
 
 
@@ -94,7 +95,8 @@ export default function RootLayout({
           <div className="pt-16">
             <PageTransition>{children}</PageTransition>
           </div>
-          
+
+          <Footer />
         </NavProvider>
         </SmoothScroll>
       </body>

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { FilterBar } from "@/src/components/ui/FilterBar";
-import { GalleryFooter } from "@/src/components/gallery/GalleryFooter";
 import { GalleryGrid } from "@/src/components/gallery/GalleryGrid";
 import { GalleryHero } from "@/src/components/gallery/GalleryHero";
 import type {
@@ -24,17 +23,12 @@ interface GalleryViewProps {
   projects: GalleryProject[];
   filterOptions: GalleryFilterOption[];
   heroMeta: GalleryHeroMeta;
-  footer: {
-    name: string;
-    note: string;
-  };
 }
 
 export function GalleryView({
   projects,
   filterOptions,
   heroMeta,
-  footer,
 }: GalleryViewProps) {
   const [activeFilter, setActiveFilter] = useState<GalleryFilterKey>("all");
 
@@ -58,7 +52,6 @@ export function GalleryView({
       <div className="gallery-body">
         <GalleryGrid projects={filteredProjects} />
       </div>
-      <GalleryFooter name={footer.name} note={footer.note} />
     </div>
   );
 }
