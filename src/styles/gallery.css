@@ -91,7 +91,7 @@
   width: var(--spacing-1);
   height: var(--spacing-1);
   margin: calc(var(--spacing-px) * -2) 0 0 calc(var(--spacing-px) * -2);
-  border-radius: var(--radius-full);
+  border-radius: 0;
   background: var(--color-accent);
 }
 
