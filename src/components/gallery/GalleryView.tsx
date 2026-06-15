@@ -46,8 +46,8 @@ export function GalleryView({
         count={filteredProjects.length}
         onFilter={setActiveFilter}
         containerClassName="gallery-container"
-        ariaLabel="Filter gallery entries"
-        tabAriaLabel="Gallery filters"
+        ariaLabel="Filter work entries"
+        tabAriaLabel="Work filters"
       />
       <div className="gallery-body">
         <GalleryGrid projects={filteredProjects} />

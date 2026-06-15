@@ -1,7 +1,7 @@
-import type { DesignerCaseStudy } from "@/src/lib/case-studies/types";
+import type { MajorCaseStudy } from "@/src/lib/case-studies/types";
 
 const quizGameCaseStudy = {
-  kind: "designer",
+  kind: "major",
   slug: "quiz-game",
   hero: {
     breadcrumb: "Australia Calls",
@@ -18,8 +18,8 @@ const quizGameCaseStudy = {
     ],
   },
   sections: {
-    context: {
-      eyebrow: "01 — Context",
+    brief: {
+      eyebrow: "01 — Brief",
       title: "New arrivals. New country.",
       titleEm: "Same small-talk gap.",
       blocks: [
@@ -45,13 +45,6 @@ const quizGameCaseStudy = {
             "I scoped the project as end-to-end product design plus React implementation, working with a small volunteer content team to draft question packs across history, geography, slang, and everyday culture.",
           ],
         },
-      ],
-    },
-    problem: {
-      eyebrow: "02 — The problem",
-      title: "What exactly",
-      titleEm: "felt broken?",
-      blocks: [
         {
           type: "prose",
           paragraphs: [
@@ -105,7 +98,7 @@ const quizGameCaseStudy = {
       ],
     },
     research: {
-      eyebrow: "03 — Research",
+      eyebrow: "02 — Research",
       title: "Understanding learners",
       titleEm: "in the wild",
       blocks: [
@@ -153,8 +146,8 @@ const quizGameCaseStudy = {
         },
       ],
     },
-    process: {
-      eyebrow: "04 — Process",
+    concept: {
+      eyebrow: "03 — Concept",
       title: "From calls to",
       titleEm: "components",
       blocks: [
@@ -205,8 +198,8 @@ const quizGameCaseStudy = {
         },
       ],
     },
-    foundations: {
-      eyebrow: "05 — Foundations",
+    craft: {
+      eyebrow: "04 — Craft",
       title: "Warmth without",
       titleEm: "losing clarity",
       blocks: [
@@ -230,8 +223,8 @@ const quizGameCaseStudy = {
         },
       ],
     },
-    components: {
-      eyebrow: "06 — Components",
+    build: {
+      eyebrow: "05 — Build",
       title: "Eight patterns.",
       titleEm: "One voice.",
       blocks: [
@@ -253,8 +246,8 @@ const quizGameCaseStudy = {
         },
       ],
     },
-    outcomes: {
-      eyebrow: "07 — Outcomes",
+    outcome: {
+      eyebrow: "06 — Outcome",
       title: "What actually",
       titleEm: "changed",
       blocks: [
@@ -295,13 +288,6 @@ const quizGameCaseStudy = {
             "Shipped a responsive web app with offline-friendly question packs and shareable result cards. The biggest qualitative win: users describing the app as \"friendly\" unprompted — the tone goal landing in their words, not mine.",
           ],
         },
-      ],
-    },
-    reflections: {
-      eyebrow: "08 — Reflections",
-      title: "What I'd do",
-      titleEm: "differently",
-      blocks: [
         {
           type: "prose",
           paragraphs: [
@@ -326,6 +312,6 @@ const quizGameCaseStudy = {
       ],
     },
   },
-} satisfies DesignerCaseStudy;
+} satisfies MajorCaseStudy;
 
 export default quizGameCaseStudy;

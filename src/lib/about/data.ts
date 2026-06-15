@@ -46,8 +46,8 @@ export const ABOUT_STORY: AboutStory = {
     " \u2014 slowly, with attention, trying to keep the living thing legible once it\u2019s flattened onto a page.",
   ],
   paragraphs: [
-    "Before design there was a long apprenticeship in looking closely \u2014 at type, at grid, at the structure beneath surfaces. I spent years learning to name what I saw precisely, and to notice the architecture hiding in plain sight. That training never really left.",
-    "It shows up now in a fascination with how digital products are structured beneath their interfaces, and in a habit of studying the people who use them as carefully as I once studied a specimen. Eight years in \u2014 across health, finance, analytics, education and creative tools \u2014 the throughline has never been an industry. It\u2019s a sensibility.",
+    "Before design there was a long apprenticeship in looking closely at type, at grid, at the structure beneath surfaces. I spent years learning to name what I saw precisely, and to notice the architecture hiding in plain sight. That training never really left.",
+    "It shows up now in a fascination with how digital products are structured beneath their interfaces, and in a habit of studying the people who use them as carefully as I once studied a specimen. Eight years in across health, finance, analytics, education and creative tools \u2014 the throughline has never been an industry. It\u2019s a sensibility.",
     "I believe the most considered work holds two things in tension at once: the cool precision of a system that\u2019s genuinely well-built, and the warmth of something made by a person who cares about whoever is on the other side of the screen.",
   ],
   signature: "\u2014 Klaus",
@@ -260,7 +260,7 @@ export const ABOUT_END_COPY: AboutEndCopy = {
   titleAccent: "let\u2019s make something.",
   actions: [
     { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "solid" },
-    { label: "See the work", href: "/gallery", variant: "ghost" },
+    { label: "See the work", href: "/work", variant: "ghost" },
     {
       label: "Download CV \u2193",
       href: siteConfig.resume.downloadHref,

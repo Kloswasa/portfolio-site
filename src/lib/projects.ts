@@ -15,7 +15,7 @@ export interface Project {
   tone: BadgeTone;
   /** Which tab on `/work` lists this project */
   workTab: WorkTab;
-  /** Full case study (major) vs visual snapshot (minor) */
+  /** Full major case study vs compact three-section minor format */
   caseStudyKind: CaseStudyKind;
   liveUrl?: string;
   sourceUrl?: string;
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     tone: "primary",
     workTab: "product",
-    caseStudyKind: "designer",
+    caseStudyKind: "major",
     liveUrl: "https://quiz-game.com",
     sourceUrl: "https://github.com/yourusername/quiz-game",
   },

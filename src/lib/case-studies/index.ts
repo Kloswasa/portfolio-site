@@ -1,22 +1,25 @@
 export type {
   CaseStudy,
-  CaseStudyHook,
   CaseStudyKind,
   CaseStudyNavItem,
-  CaseStudyQuickFacts,
-  CaseStudySectionContent,
   ChromeSectionId,
-  ContentBlock,
   MajorCaseStudy,
+  MajorCaseStudyHero,
+  MajorContentBlock,
+  MajorSectionContent,
   MajorSectionId,
   MinorCaseStudy,
   MinorSectionId,
+  MinorSections,
 } from "@/src/lib/case-studies/types";
 
 export {
   getCaseStudyNav,
-  MAJOR_SECTION_DEFAULT_TITLES,
-  MINOR_SECTION_DEFAULT_TITLES,
+  getMinorSectionEyebrows,
+  getMinorSectionLabel,
+  getMinorSectionOrder,
+  MAJOR_SECTION_ORDER,
+  MINOR_SECTION_ORDER,
 } from "@/src/lib/case-studies/sections";
 
 export {

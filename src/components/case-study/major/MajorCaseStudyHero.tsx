@@ -3,7 +3,7 @@ import {
   SnapItem,
   SnapSectionReveal,
 } from "@/src/components/SnapSectionReveal";
-import type { DesignerCaseStudyHero as HeroData } from "@/src/lib/case-studies/types";
+import type { MajorCaseStudyHero as HeroData } from "@/src/lib/case-studies/types";
 
 function HeroBotanicalSvg() {
   return (
@@ -36,18 +36,18 @@ function HeroBotanicalSvg() {
   );
 }
 
-export function DesignerCaseStudyHero({ hero }: { hero: HeroData }) {
+export function MajorCaseStudyHero({ hero }: { hero: HeroData }) {
   return (
-    <section className="cs-designer__hero" id="hook">
-      <div className="cs-designer__hero-dots" aria-hidden />
-      <div className="cs-designer__hero-bg" aria-hidden>
+    <section className="cs-major__hero" id="hook">
+      <div className="cs-major__hero-dots" aria-hidden />
+      <div className="cs-major__hero-bg" aria-hidden>
         <HeroBotanicalSvg />
       </div>
-      <div className="cs-designer__hero-gradient" aria-hidden />
+      <div className="cs-major__hero-gradient" aria-hidden />
 
-      <SnapSectionReveal className="cs-designer__hero-content" amount={0.15}>
+      <SnapSectionReveal className="cs-major__hero-content" amount={0.15}>
         <SnapItem>
-          <div className="cs-designer__breadcrumb">
+          <div className="cs-major__breadcrumb">
             <Link href="/work">Work</Link>
             <span aria-hidden>/</span>
             <span>{hero.breadcrumb}</span>
@@ -55,11 +55,11 @@ export function DesignerCaseStudyHero({ hero }: { hero: HeroData }) {
         </SnapItem>
 
         <SnapItem>
-          <div className="cs-designer__hero-eyebrow">{hero.eyebrow}</div>
+          <div className="cs-major__hero-eyebrow">{hero.eyebrow}</div>
         </SnapItem>
 
         <SnapItem>
-          <h1 className="cs-designer__hero-title">
+          <h1 className="cs-major__hero-title">
             {hero.titleLine1}
             <br />
             <em>{hero.titleLine2}</em>
@@ -67,15 +67,15 @@ export function DesignerCaseStudyHero({ hero }: { hero: HeroData }) {
         </SnapItem>
 
         <SnapItem>
-          <p className="cs-designer__hero-summary">{hero.summary}</p>
+          <p className="cs-major__hero-summary">{hero.summary}</p>
         </SnapItem>
 
         <SnapItem>
-          <div className="cs-designer__meta-strip">
+          <div className="cs-major__meta-strip">
             {hero.meta.map(({ label, value }) => (
-              <div key={label} className="cs-designer__meta-item">
-                <div className="cs-designer__meta-label">{label}</div>
-                <div className="cs-designer__meta-val">{value}</div>
+              <div key={label} className="cs-major__meta-item">
+                <div className="cs-major__meta-label">{label}</div>
+                <div className="cs-major__meta-val">{value}</div>
               </div>
             ))}
           </div>

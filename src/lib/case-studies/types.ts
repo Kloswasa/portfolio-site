@@ -1,94 +1,27 @@
-export type CaseStudyKind = "major" | "minor" | "designer";
+export type CaseStudyKind = "major" | "minor";
 
-export type ContentBlock =
-  | { type: "prose"; paragraphs: string[] }
-  | {
-      type: "image";
-      src: string;
-      alt: string;
-      caption?: string;
-      aspect?: "hero" | "wide" | "square";
-    }
-  | {
-      type: "gallery";
-      items: { src: string; alt: string }[];
-      columns?: 2 | 3;
-    }
-  | { type: "callout"; title: string; body: string }
-  | { type: "metrics"; items: { label: string; value: string }[] };
+export type ChromeSectionId = "next";
 
-export interface CaseStudySectionContent {
-  title?: string;
-  blocks: ContentBlock[];
-}
-
-export interface CaseStudyQuickFacts {
-  role: string;
-  scope: string;
-  timeline?: string;
-}
-
-export interface CaseStudyHook {
-  heroSrc?: string;
-  heroAlt?: string;
-  quickFacts: CaseStudyQuickFacts;
-}
-
-export type MajorSectionId =
-  | "overview"
-  | "context"
-  | "iterations"
-  | "decisions"
-  | "outcome"
-  | "reflection";
-
-export type MinorSectionId =
-  | "brief"
-  | "iterations"
-  | "outcome"
-  | "tradeoffs"
-  | "reflection";
-
-export type ChromeSectionId = "hook" | "next";
-
-export type MajorCaseStudySections = Record<MajorSectionId, CaseStudySectionContent>;
-
-export type MinorCaseStudySections = Record<MinorSectionId, CaseStudySectionContent>;
-
-export interface MajorCaseStudy {
-  kind: "major";
-  slug: string;
-  hook: CaseStudyHook;
-  sections: MajorCaseStudySections;
-}
-
-export interface MinorCaseStudy {
-  kind: "minor";
-  slug: string;
-  hook: CaseStudyHook;
-  sections: MinorCaseStudySections;
-}
-
-export type CaseStudy = MajorCaseStudy | MinorCaseStudy | DesignerCaseStudy;
+export type CaseStudy = MajorCaseStudy | MinorCaseStudy;
 
 export interface CaseStudyNavItem {
   id: string;
   label: string;
 }
 
-/* ── Designer case study (rich editorial layout) ── */
+/* ── Major case study (full editorial layout) ── */
 
-export type DesignerSectionId =
-  | "context"
-  | "problem"
+export type MajorSectionId =
+  | "brief"
   | "research"
-  | "process"
-  | "foundations"
-  | "components"
-  | "outcomes"
-  | "reflections";
+  | "concept"
+  | "craft"
+  | "build"
+  | "outcome";
 
-export type DesignerContentBlock =
+export type MinorSectionId = "context" | "approach" | "work" | "outcome";
+
+export type MajorContentBlock =
   | { type: "prose"; paragraphs: string[] }
   | {
       type: "stats";
@@ -140,14 +73,14 @@ export type DesignerContentBlock =
     }
   | { type: "reflections"; items: string[] };
 
-export interface DesignerSectionContent {
+export interface MajorSectionContent {
   eyebrow: string;
   title: string;
   titleEm?: string;
-  blocks: DesignerContentBlock[];
+  blocks: MajorContentBlock[];
 }
 
-export interface DesignerCaseStudyHero {
+export interface MajorCaseStudyHero {
   breadcrumb: string;
   eyebrow: string;
   titleLine1: string;
@@ -156,9 +89,29 @@ export interface DesignerCaseStudyHero {
   meta: { label: string; value: string }[];
 }
 
-export interface DesignerCaseStudy {
-  kind: "designer";
+export interface MajorCaseStudy {
+  kind: "major";
   slug: string;
-  hero: DesignerCaseStudyHero;
-  sections: Record<DesignerSectionId, DesignerSectionContent>;
+  hero: MajorCaseStudyHero;
+  sections: Record<MajorSectionId, MajorSectionContent>;
+}
+
+export interface MinorSections {
+  context: MajorSectionContent;
+  work: MajorSectionContent;
+  outcome: MajorSectionContent;
+  /** Omit for a three-section flow: Context → Work → Outcome. */
+  approach?: MajorSectionContent;
+}
+
+export interface MinorCaseStudy {
+  kind: "minor";
+  slug: string;
+  hero: MajorCaseStudyHero;
+  /**
+   * Nav + eyebrow label when `sections.approach` is present (default: "Approach").
+   * e.g. "The Decision" for graphic minors, "Process" for a build-heavy piece.
+   */
+  approachLabel?: string;
+  sections: MinorSections;
 }

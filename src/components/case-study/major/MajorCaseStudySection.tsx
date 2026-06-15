@@ -1,25 +1,25 @@
-import { DesignerContentBlocks } from "@/src/components/case-study/designer/DesignerContentBlocks";
+import { MajorContentBlocks } from "@/src/components/case-study/major/MajorContentBlocks";
 import {
   SnapItem,
   SnapSectionReveal,
 } from "@/src/components/SnapSectionReveal";
-import type { DesignerSectionContent } from "@/src/lib/case-studies/types";
+import type { MajorSectionContent } from "@/src/lib/case-studies/types";
 
-export function DesignerCaseStudySection({
+export function MajorCaseStudySection({
   id,
   section,
 }: {
   id: string;
-  section: DesignerSectionContent;
+  section: MajorSectionContent;
 }) {
   return (
-    <section className="cs-designer__section" id={id}>
+    <section className="cs-major__section" id={id}>
       <SnapSectionReveal amount={0.1}>
         <SnapItem>
-          <div className="cs-designer__section-eyebrow">{section.eyebrow}</div>
+          <div className="cs-major__section-eyebrow">{section.eyebrow}</div>
         </SnapItem>
         <SnapItem>
-          <h2 className="cs-designer__section-title">
+          <h2 className="cs-major__section-title">
             {section.title}
             {section.titleEm && (
               <>
@@ -31,7 +31,7 @@ export function DesignerCaseStudySection({
         </SnapItem>
       </SnapSectionReveal>
 
-      <DesignerContentBlocks blocks={section.blocks} />
+      <MajorContentBlocks blocks={section.blocks} />
     </section>
   );
 }

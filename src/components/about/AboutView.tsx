@@ -1,5 +1,4 @@
 import { GalleryHero } from "@/src/components/gallery/GalleryHero";
-import { AboutCurrently } from "@/src/components/about/AboutCurrently";
 import { AboutEnd } from "@/src/components/about/AboutEnd";
 import { AboutInstruments } from "@/src/components/about/AboutInstruments";
 import { AboutQuote } from "@/src/components/about/AboutQuote";
@@ -45,8 +44,6 @@ export function AboutView({
   instrumentsBlock,
   instruments,
   quote,
-  currentlyBlock,
-  currently,
   endCopy,
 }: AboutViewProps) {
   return (
@@ -56,9 +53,8 @@ export function AboutView({
       <div className="about-body about-container">
         <AboutStory block={storyBlock} story={story} />
         <AboutInstruments block={instrumentsBlock} groups={instruments} />
-        <AboutTimeline block={timelineBlock} entries={timeline} />
         <AboutQuote quote={quote} />
-        <AboutCurrently block={currentlyBlock} columns={currently} />
+        <AboutTimeline block={timelineBlock} entries={timeline} />
       </div>
 
       <AboutEnd copy={endCopy} />

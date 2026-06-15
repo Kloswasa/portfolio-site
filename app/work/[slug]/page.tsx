@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
-import { CaseStudyHook } from "@/src/components/case-study/CaseStudyHook";
-import { CaseStudyNext } from "@/src/components/case-study/CaseStudyNext";
 import { CaseStudyRenderer } from "@/src/components/case-study/CaseStudyRenderer";
-import { CaseStudySectionTabs } from "@/src/components/CaseStudySectionTabs";
 import {
   getCaseStudy,
-  getCaseStudyNav,
   getCaseStudySlugs,
 } from "@/src/lib/case-studies";
 import { getProject, projects } from "@/src/lib/projects";
@@ -31,24 +27,13 @@ export default async function WorkDetailPage({
     ((projectIndex + 1) % projects.length) + 1,
   ).padStart(3, "0");
 
-  if (caseStudy.kind === "designer") {
-    return (
-      <main className="w-full px-8">
-        <CaseStudyRenderer
-          caseStudy={caseStudy}
-          nextProject={nextProject}
-          nextIndex={nextIndex}
-        />
-      </main>
-    );
-  }
-
   return (
-    <main className="w-full">
-      <CaseStudySectionTabs sections={getCaseStudyNav(caseStudy.kind)} />
-      <CaseStudyHook project={project} hook={caseStudy.hook} />
-      <CaseStudyRenderer caseStudy={caseStudy} />
-      <CaseStudyNext nextProject={nextProject} />
+    <main className="w-full px-8">
+      <CaseStudyRenderer
+        caseStudy={caseStudy}
+        nextProject={nextProject}
+        nextIndex={nextIndex}
+      />
     </main>
   );
 }

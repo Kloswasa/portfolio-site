@@ -5,16 +5,16 @@ import type { CaseStudyNavItem } from "@/src/lib/case-studies/types";
 
 const ACTIVATION_LINE_PX = 120;
 
-export function DesignerChapterNav({
+export function MajorChapterNav({
   sections,
 }: {
   sections: readonly CaseStudyNavItem[];
 }) {
   const contentSections = sections.filter((s) => s.id !== "next");
-  const [active, setActive] = useState(contentSections[0]?.id ?? "context");
+  const [active, setActive] = useState(contentSections[0]?.id ?? "brief");
 
   const pickActive = useCallback(() => {
-    let current = contentSections[0]?.id ?? "context";
+    let current = contentSections[0]?.id ?? "brief";
     for (const { id } of contentSections) {
       const el = document.getElementById(id);
       if (!el) continue;
@@ -40,19 +40,26 @@ export function DesignerChapterNav({
   };
 
   return (
-    <nav className="cs-designer__chapter-nav" aria-label="Chapter navigation">
-      <div className="cs-designer__chapter-label">Contents</div>
-      {contentSections.map(({ id, label }) => (
-        <button
-          key={id}
-          type="button"
-          className="cs-designer__chapter-link"
-          data-active={active === id}
-          onClick={() => scrollTo(id)}
-        >
-          {label}
-        </button>
-      ))}
-    </nav>
+    <div className="cs-major__chapter-nav-shell">
+      <nav className="cs-major__chapter-nav" aria-label="Chapter navigation">
+        <p className="cs-major__chapter-label">Contents</p>
+        <div className="cs-major__chapter-list">
+          {contentSections.map(({ id, label }) => {
+            const selected = active === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                className="cs-major__chapter-link"
+                data-active={selected ? "true" : undefined}
+                onClick={() => scrollTo(id)}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+    </div>
   );
 }

@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  async redirects() {
+    return [
+      {
+        source: "/gallery",
+        destination: "/work",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

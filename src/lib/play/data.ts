@@ -259,5 +259,5 @@ line(p.prev, p)   // faint ink trail`,
 
 export const PLAY_END_COPY = {
   label: "End of play · 12 experiments · ongoing",
-  cta: { label: "See the client work →", href: "/gallery" },
+  cta: { label: "See the client work →", href: "/work" },
 };

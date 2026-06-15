@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export function DesignerReadingBar() {
+export function MajorReadingBar() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -22,9 +22,9 @@ export function DesignerReadingBar() {
   }, []);
 
   return (
-    <div className="cs-designer__reading-bar" aria-hidden>
+    <div className="cs-major__reading-bar" aria-hidden>
       <div
-        className="cs-designer__reading-fill"
+        className="cs-major__reading-fill"
         style={{ width: `${progress}%` }}
       />
     </div>

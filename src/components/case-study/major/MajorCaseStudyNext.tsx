@@ -19,7 +19,7 @@ function NextPreviewSvg() {
   );
 }
 
-export function DesignerCaseStudyNext({
+export function MajorCaseStudyNext({
   nextProject,
   index,
 }: {
@@ -27,20 +27,20 @@ export function DesignerCaseStudyNext({
   index: string;
 }) {
   return (
-    <section className="cs-designer__next" id="next">
+    <section className="cs-major__next" id="next">
       <SnapSectionReveal amount={0.2}>
         <SnapItem>
-          <div className="cs-designer__next-label">Next project</div>
-          <h2 className="cs-designer__next-title">{nextProject.title}</h2>
-          <p className="cs-designer__next-meta">
+          <div className="cs-major__next-label">Next project</div>
+          <h2 className="cs-major__next-title">{nextProject.title}</h2>
+          <p className="cs-major__next-meta">
             {index} · {nextProject.technologies.slice(0, 2).join(" · ")}
           </p>
-          <Link className="cs-designer__btn-next" href={`/work/${nextProject.slug}`}>
+          <Link className="cs-major__btn-next" href={`/work/${nextProject.slug}`}>
             View case study →
           </Link>
         </SnapItem>
         <SnapItem>
-          <div className="cs-designer__next-preview">
+          <div className="cs-major__next-preview">
             <NextPreviewSvg />
           </div>
         </SnapItem>
