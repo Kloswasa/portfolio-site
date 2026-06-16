@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, Fraunces, Syne } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -8,6 +8,7 @@ import { NavOverlay } from "@/src/components/NavOverlay";
 import { PageLoader } from "@/src/components/PageLoader";
 import { PageTransition } from "@/src/components/PageTransition";
 import { SmoothScroll } from "@/src/components/SmoothScroll";
+import { Footer } from "@/src/components/Footer";
 import { siteConfig } from "@/src/lib/config";
 
 
@@ -16,19 +17,21 @@ const headingFont = Fraunces({
   variable: "--font-heading",
   display: "swap",
   weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const bodyFont = Cormorant_Garamond({
+const bodyFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
 });
 
-const monoFont = JetBrains_Mono({
+const monoFont = Syne({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -92,7 +95,8 @@ export default function RootLayout({
           <div className="pt-16">
             <PageTransition>{children}</PageTransition>
           </div>
-          
+
+          <Footer />
         </NavProvider>
         </SmoothScroll>
       </body>

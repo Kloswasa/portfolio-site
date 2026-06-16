@@ -1,0 +1,98 @@
+import Link from "next/link";
+import { HeroBotanical } from "@/src/components/HeroBotanical";
+import {
+  SnapItem,
+  SnapSectionReveal,
+} from "@/src/components/SnapSectionReveal";
+import { siteConfig } from "@/src/lib/config";
+
+type HeroCta = {
+  label: string;
+  href: string;
+};
+
+type HeroSectionProps = {
+  primaryCta?: HeroCta;
+  secondaryCta?: HeroCta;
+};
+
+export function HeroSection({
+  primaryCta = siteConfig.hero.primaryCta,
+  secondaryCta = siteConfig.hero.secondaryCta,
+}: HeroSectionProps = {}) {
+  const { hero } = siteConfig;
+
+  return (
+    <section
+      id="hero"
+      className="hero relative grid overflow-hidden md:grid-cols-2"
+    >
+      <div className="hero-left relative z-10 flex flex-col justify-end bg-bg px-8 pb-12 pt-24 md:px-12 md:pb-20 md:pt-32">
+        <SnapSectionReveal immediate className="flex flex-col">
+          <SnapItem>
+            <span className="hero-eyebrow font-mono text-xs uppercase tracking-[0.16em] text-text-subtle">
+              {hero.eyebrow}
+            </span>
+          </SnapItem>
+
+          <SnapItem>
+            <h1 className="mb-3 font-heading text-heading-4xl leading-none text-text md:text-heading-5xl">
+              {hero.nameLine1}
+              <br />
+              <em className="italic text-primary">{hero.nameLine2}</em>
+            </h1>
+          </SnapItem>
+
+          <SnapItem>
+            <p className="mb-8 pl-1 font-body text-lg font-medium text-text-muted md:mb-12 md:text-xl">
+              {hero.role}
+            </p>
+          </SnapItem>
+
+          <SnapItem>
+            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm">
+              {hero.description}
+            </p>
+          </SnapItem>
+
+          <SnapItem className="flex flex-wrap items-center gap-4">
+            <Link className="btn btn-primary" href={primaryCta.href}>
+              {primaryCta.label}
+            </Link>
+            <Link className="btn btn-text" href={secondaryCta.href}>
+              {secondaryCta.label} <span aria-hidden>→</span>
+            </Link>
+          </SnapItem>
+        </SnapSectionReveal>
+      </div>
+
+      <div className="hero-right relative order-first md:order-none">
+        <div
+          className="hero-number font-heading text-heading-4xl font-semibold leading-none md:text-heading-5xl"
+          aria-hidden
+        >
+          {hero.sectionNumber}
+        </div>
+
+        <div className="hero-scroll-indicator" aria-hidden>
+          <div className="hero-scroll-line" />
+          <div className="hero-scroll-text font-mono text-xs uppercase tracking-[0.18em]">
+            Scroll
+          </div>
+        </div>
+
+        <div className="hero-botanical">
+          <HeroBotanical />
+        </div>
+
+        <div className="hero-stamp font-mono text-xs leading-loose tracking-[0.14em]">
+          {hero.stampLines.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
