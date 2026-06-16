@@ -1,4 +1,4 @@
-import { projects } from "@/src/lib/projects";
+import { projects, WORK_TABS } from "@/src/lib/projects";
 import { toWorkCardProject } from "@/src/lib/work/data";
 import type {
   GalleryFilterOption,
@@ -31,15 +31,12 @@ export const GALLERY_PROJECTS: GalleryProject[] = projects.map(toGalleryProject)
 
 export const GALLERY_FILTER_OPTIONS: GalleryFilterOption[] = [
   { key: "all", label: "All" },
-  { key: "product", label: "Product" },
-  { key: "industrial", label: "Industrial" },
-  { key: "pack", label: "Packaging" },
-  { key: "graphic", label: "Graphic" },
+  ...WORK_TABS.map(({ key, filterLabel }) => ({ key, label: filterLabel })),
   { key: "major", label: "Cases" },
 ];
 
 const archiveYears = projects.map((project) => {
-  const match = toWorkCardProject(project, 0).yearLabel.match(/^(\d{4})/);
+  const match = project.yearLabel.match(/^(\d{4})/);
   return match ? Number(match[1]) : 2024;
 });
 const minYear = Math.min(...archiveYears);
