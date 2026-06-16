@@ -15,7 +15,9 @@ interface WorkCardProps {
 export function WorkCard({ project, layout = "default" }: WorkCardProps) {
   const reduceMotion = useReducedMotion();
   const cardRef = useTilt<HTMLAnchorElement>(!reduceMotion);
-  const [yearValue, yearLabel] = project.yearLabel.split(" · ");
+  const [yearValue, yearLabel = ""] = (project.yearLabel ?? "2024 · Studio").split(
+    " · ",
+  );
 
   return (
     <Link

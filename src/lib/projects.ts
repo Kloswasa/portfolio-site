@@ -3,8 +3,8 @@ import type { CaseStudyKind } from "@/src/lib/case-studies/types";
 
 export type { CaseStudyKind };
 
-/** Work index tabs — matches Indigo & Gold IA (Product · Pack · Graphic). */
-export type WorkTab = "product" | "pack" | "graphic";
+/** Work index tabs — Product · Industrial · Pack · Graphic. */
+export type WorkTab = "product" | "industrial" | "pack" | "graphic";
 
 export interface Project {
   id: number;
@@ -17,12 +17,13 @@ export interface Project {
   workTab: WorkTab;
   /** Full major case study vs compact three-section minor format */
   caseStudyKind: CaseStudyKind;
+  /** Card stamp, e.g. "2024 · Capstone" */
+  yearLabel: string;
   liveUrl?: string;
   sourceUrl?: string;
 }
 
 export const projects: Project[] = [
-  
   {
     id: 1,
     slug: "quiz-game",
@@ -33,6 +34,7 @@ export const projects: Project[] = [
     tone: "primary",
     workTab: "product",
     caseStudyKind: "major",
+    yearLabel: "2025 · Product",
     liveUrl: "https://quiz-game.com",
     sourceUrl: "https://github.com/yourusername/quiz-game",
   },
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     tone: "secondary",
     workTab: "product",
     caseStudyKind: "major",
+    yearLabel: "2024 · Research",
     liveUrl: "https://dementia-app.com",
     sourceUrl: "https://github.com/yourusername/dementia-app",
   },
@@ -59,48 +62,105 @@ export const projects: Project[] = [
     tone: "tertiary",
     workTab: "product",
     caseStudyKind: "major",
+    yearLabel: "2024 · Product",
     liveUrl: "https://family-recipes.app",
     sourceUrl: "https://github.com/yourusername/recipe",
   },
   {
     id: 4,
-    slug: "tea-gift-box",
-    title: "Tea Gift Box",
-    description: "Limited-edition packaging for a single-origin tea trio.",
-    technologies: ["Packaging", "Print", "Foil stamp"],
+    slug: "homhuan",
+    title: "HomHuan",
+    description:
+      "Thai heritage translated into a modern home fragrance set — solo capstone industrial design project.",
+    technologies: ["Industrial design", "CMF", "Prototyping"],
     tone: "primary",
-    workTab: "pack",
-    caseStudyKind: "minor",
+    workTab: "industrial",
+    caseStudyKind: "major",
+    yearLabel: "2024 · Capstone",
   },
   {
     id: 5,
-    slug: "spice-tin",
-    title: "Spice Tin Rebrand",
-    description: "Shelf-forward tins for a small-batch spice line.",
-    technologies: ["Packaging", "Label", "3D mockup"],
+    slug: "bsb",
+    title: "BSB Dessert Bar",
+    description:
+      "Signature dessert shape and matching fork for a fine dessert bar in a Thai tourist city.",
+    technologies: ["Industrial design", "Form design", "CAD"],
     tone: "secondary",
-    workTab: "pack",
+    workTab: "industrial",
     caseStudyKind: "minor",
+    yearLabel: "2023 · Industrial",
   },
   {
     id: 6,
-    slug: "festival-poster",
-    title: "Lantern Festival Poster",
-    description: "Event poster series for a night market cultural program.",
-    technologies: ["Poster", "Illustration", "Print"],
-    tone: "primary",
-    workTab: "graphic",
+    slug: "kuendee",
+    title: "Kuendee Booth",
+    description:
+      "Modular retail booth that reconfigures for product rotations and different mall branch plans.",
+    technologies: ["Booth design", "Modular system", "Retail"],
+    tone: "tertiary",
+    workTab: "industrial",
     caseStudyKind: "minor",
+    yearLabel: "2023 · Retail",
   },
   {
     id: 7,
-    slug: "editorial-zine",
-    title: "Migration Stories Zine",
-    description: "Editorial layout for a 24-page risograph zine.",
-    technologies: ["Editorial", "Typography", "Risograph"],
+    slug: "flom",
+    title: "FloM Packaging",
+    description:
+      "Alternative graphic style for a secondary product packaging line under an established brand.",
+    technologies: ["Graphic design", "Packaging", "Brand extension"],
+    tone: "primary",
+    workTab: "graphic",
+    caseStudyKind: "minor",
+    yearLabel: "2022 · Packaging",
+  },
+  {
+    id: 8,
+    slug: "bhae",
+    title: "Bhae Skincare",
+    description:
+      "Packaging direction and design for a century-old traditional skincare brand.",
+    technologies: ["Packaging design", "Print", "Heritage brand"],
+    tone: "secondary",
+    workTab: "pack",
+    caseStudyKind: "minor",
+    yearLabel: "2022 · Packaging",
+  },
+  {
+    id: 9,
+    slug: "bhup",
+    title: "Bhup Product Line",
+    description:
+      "Friendly graphic design and illustration for a local business sub-brand.",
+    technologies: ["Illustration", "Label design", "Brand"],
     tone: "tertiary",
     workTab: "graphic",
     caseStudyKind: "minor",
+    yearLabel: "2022 · Illustration",
+  },
+  {
+    id: 10,
+    slug: "timber",
+    title: "Timber Catalog",
+    description:
+      "Multimedia catalog for a wood styling company — layout, 3D renders, retouching, and print.",
+    technologies: ["Catalog", "3D rendering", "Print production"],
+    tone: "primary",
+    workTab: "graphic",
+    caseStudyKind: "minor",
+    yearLabel: "2021 · Catalog",
+  },
+  {
+    id: 11,
+    slug: "thai-h",
+    title: "Thai H",
+    description:
+      "Infographic book on Thai aroma ingredients — all illustration and graphics authored by hand.",
+    technologies: ["Illustration", "Editorial", "Infographic"],
+    tone: "secondary",
+    workTab: "graphic",
+    caseStudyKind: "minor",
+    yearLabel: "2021 · Editorial",
   },
 ];
 

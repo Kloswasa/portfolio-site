@@ -7,6 +7,7 @@ import type { Project, WorkTab } from "@/src/lib/projects";
 
 const TABS: { key: WorkTab; label: string }[] = [
   { key: "product", label: "Product" },
+  { key: "industrial", label: "Industrial design" },
   { key: "pack", label: "Pack" },
   { key: "graphic", label: "Graphic" },
 ];
@@ -24,7 +25,7 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
       tabAriaLabel="Work categories"
       eyebrow="Selected"
       title="Work"
-      description="Product, packaging, and graphic work — sorted by how I think about them, not when they shipped."
+      description="Product, industrial, packaging, and graphic work — sorted by how I think about them, not when they shipped."
       getItems={getItems}
       getItemKey={(project) => project.id}
       renderItem={(project) => (

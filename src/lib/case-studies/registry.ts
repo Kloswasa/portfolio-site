@@ -1,21 +1,29 @@
+import bhae from "@/src/content/case-studies/bhae";
+import bhup from "@/src/content/case-studies/bhup";
+import bsb from "@/src/content/case-studies/bsb";
 import dementiaApp from "@/src/content/case-studies/dementia-app";
-import editorialZine from "@/src/content/case-studies/editorial-zine";
-import festivalPoster from "@/src/content/case-studies/festival-poster";
+import flom from "@/src/content/case-studies/flom";
+import homhuan from "@/src/content/case-studies/homhuan";
+import kuendee from "@/src/content/case-studies/kuendee";
 import quizGame from "@/src/content/case-studies/quiz-game";
 import recipe from "@/src/content/case-studies/recipe";
-import spiceTin from "@/src/content/case-studies/spice-tin";
-import teaGiftBox from "@/src/content/case-studies/tea-gift-box";
+import thaiH from "@/src/content/case-studies/thai-h";
+import timber from "@/src/content/case-studies/timber";
 import { getProject } from "@/src/lib/projects";
 import type { CaseStudy, CaseStudyKind } from "@/src/lib/case-studies/types";
 
 export const caseStudiesBySlug = {
+  homhuan,
+  bsb,
+  kuendee,
+  flom,
+  bhae,
+  bhup,
+  timber,
+  "thai-h": thaiH,
   "quiz-game": quizGame,
   "dementia-app": dementiaApp,
   recipe,
-  "tea-gift-box": teaGiftBox,
-  "spice-tin": spiceTin,
-  "festival-poster": festivalPoster,
-  "editorial-zine": editorialZine,
 } as const satisfies Record<string, CaseStudy>;
 
 export type CaseStudySlug = keyof typeof caseStudiesBySlug;

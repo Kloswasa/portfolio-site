@@ -1,6 +1,12 @@
 import type { WorkCardProject } from "@/src/lib/work/types";
 
-export type GalleryFilterKey = "all" | "product" | "pack" | "graphic" | "major";
+export type GalleryFilterKey =
+  | "all"
+  | "product"
+  | "industrial"
+  | "pack"
+  | "graphic"
+  | "major";
 
 export interface GalleryProject extends WorkCardProject {
   filters: Exclude<GalleryFilterKey, "all">[];

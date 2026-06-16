@@ -14,6 +14,7 @@ import type {
 const FILTER_MAP: Record<GalleryFilterKey, (filters: string[]) => boolean> = {
   all: () => true,
   product: (filters) => filters.includes("product"),
+  industrial: (filters) => filters.includes("industrial"),
   pack: (filters) => filters.includes("pack"),
   graphic: (filters) => filters.includes("graphic"),
   major: (filters) => filters.includes("major"),

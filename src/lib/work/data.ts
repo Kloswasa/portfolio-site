@@ -4,7 +4,8 @@ import type { WorkCardProject, WorkCardSvgVariant } from "@/src/lib/work/types";
 
 const CLASSIFICATION: Record<string, string> = {
   product: "Product Design",
-  pack: "Packaging",
+  industrial: "Industrial Design",
+  pack: "Packaging Design",
   graphic: "Graphic Design",
 };
 
@@ -16,18 +17,9 @@ const THEMES = [
   "linear-gradient(145deg, var(--color-primary-muted) 0%, var(--color-tertiary) 100%)",
 ];
 
-const YEAR_META: Record<string, { yearLabel: string }> = {
-  "quiz-game": { yearLabel: "2025 · Product" },
-  "dementia-app": { yearLabel: "2024 · Research" },
-  recipe: { yearLabel: "2024 · Product" },
-  "tea-gift-box": { yearLabel: "2023 · Packaging" },
-  "spice-tin": { yearLabel: "2023 · Packaging" },
-  "festival-poster": { yearLabel: "2022 · Print" },
-  "editorial-zine": { yearLabel: "2022 · Editorial" },
-};
+const DEFAULT_YEAR_LABEL = "2024 · Studio";
 
 export function toWorkCardProject(project: Project, index: number): WorkCardProject {
-  const meta = YEAR_META[project.slug] ?? { yearLabel: "2024 · Studio" };
   const svgVariant = ((index % 5) + 1) as WorkCardSvgVariant;
 
   return {
@@ -36,7 +28,7 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     href: `/work/${project.slug}`,
     tags: project.technologies.slice(0, 3),
     classification: CLASSIFICATION[project.workTab] ?? "Design",
-    yearLabel: meta.yearLabel,
+    yearLabel: project.yearLabel ?? DEFAULT_YEAR_LABEL,
     frame: String(index + 1).padStart(2, "0"),
     svgVariant,
     theme: THEMES[index % THEMES.length],

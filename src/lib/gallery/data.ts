@@ -32,7 +32,8 @@ export const GALLERY_PROJECTS: GalleryProject[] = projects.map(toGalleryProject)
 export const GALLERY_FILTER_OPTIONS: GalleryFilterOption[] = [
   { key: "all", label: "All" },
   { key: "product", label: "Product" },
-  { key: "pack", label: "Pack" },
+  { key: "industrial", label: "Industrial" },
+  { key: "pack", label: "Packaging" },
   { key: "graphic", label: "Graphic" },
   { key: "major", label: "Cases" },
 ];
