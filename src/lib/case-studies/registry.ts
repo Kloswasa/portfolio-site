@@ -1,6 +1,7 @@
 import bhae from "@/src/content/case-studies/bhae";
 import bhup from "@/src/content/case-studies/bhup";
 import bsb from "@/src/content/case-studies/bsb";
+import cio from "@/src/content/case-studies/cio";
 import dementiaApp from "@/src/content/case-studies/dementia-app";
 import flom from "@/src/content/case-studies/flom";
 import homhuan from "@/src/content/case-studies/homhuan";
@@ -18,6 +19,7 @@ export const caseStudiesBySlug = {
   kuendee,
   flom,
   bhae,
+  cio,
   bhup,
   timber,
   "thai-h": thaiH,

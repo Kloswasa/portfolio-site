@@ -6,6 +6,31 @@ export type { CaseStudyKind };
 /** Work index tabs — Product · Industrial · Pack · Graphic. */
 export type WorkTab = "product" | "industrial" | "pack" | "graphic";
 
+/** Single source for filter bar labels + card classification copy. */
+export const WORK_TABS = [
+  { key: "product", 
+    filterLabel: "Product", 
+    classification: "Product Design" ,
+  },
+  {
+    key: "industrial",
+    filterLabel: "Industrial",
+    classification: "Industrial Design",
+  },
+  { key: "pack", 
+    filterLabel: "Packaging", 
+    classification: "Packaging Design" 
+  },
+  { key: "graphic", 
+    filterLabel: "Graphic", 
+    classification: "Graphic Design" 
+  },
+] as const satisfies ReadonlyArray<{
+  key: WorkTab;
+  filterLabel: string;
+  classification: string;
+}>;
+
 export interface Project {
   id: number;
   slug: string;
@@ -161,6 +186,18 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2021 · Editorial",
+  },
+  {
+    id: 12,
+    slug: "cio",
+    title: "Cio",
+    description:
+      "Self-locking packaging structure that holds open at the perfect angle for picking product inside.",
+    technologies: ["Packaging design", "Structural design", "Dieline"],
+    tone: "tertiary",
+    workTab: "pack",
+    caseStudyKind: "minor",
+    yearLabel: "2023 · Structure",
   },
 ];
 

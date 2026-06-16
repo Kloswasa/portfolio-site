@@ -1,13 +1,10 @@
-import { projects } from "@/src/lib/projects";
+import { projects, WORK_TABS } from "@/src/lib/projects";
 import type { Project } from "@/src/lib/projects";
 import type { WorkCardProject, WorkCardSvgVariant } from "@/src/lib/work/types";
 
-const CLASSIFICATION: Record<string, string> = {
-  product: "Product Design",
-  industrial: "Industrial Design",
-  pack: "Packaging Design",
-  graphic: "Graphic Design",
-};
+const CLASSIFICATION = Object.fromEntries(
+  WORK_TABS.map((tab) => [tab.key, tab.classification]),
+) as Record<string, string>;
 
 const THEMES = [
   "linear-gradient(145deg, var(--color-primary) 0%, var(--color-secondary) 100%)",
@@ -16,8 +13,6 @@ const THEMES = [
   "linear-gradient(145deg, var(--color-secondary) 0%, var(--color-elevated) 100%)",
   "linear-gradient(145deg, var(--color-primary-muted) 0%, var(--color-tertiary) 100%)",
 ];
-
-const DEFAULT_YEAR_LABEL = "2024 · Studio";
 
 export function toWorkCardProject(project: Project, index: number): WorkCardProject {
   const svgVariant = ((index % 5) + 1) as WorkCardSvgVariant;
@@ -28,7 +23,7 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     href: `/work/${project.slug}`,
     tags: project.technologies.slice(0, 3),
     classification: CLASSIFICATION[project.workTab] ?? "Design",
-    yearLabel: project.yearLabel ?? DEFAULT_YEAR_LABEL,
+    yearLabel: project.yearLabel,
     frame: String(index + 1).padStart(2, "0"),
     svgVariant,
     theme: THEMES[index % THEMES.length],
