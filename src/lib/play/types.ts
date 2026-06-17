@@ -22,6 +22,13 @@ export interface PlayMediumSection {
   infoDetail: string;
 }
 
+export interface PlayImage {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}
+
 export interface PlayWork {
   id: string;
   medium: PlayMedium;
@@ -38,5 +45,15 @@ export interface PlayWork {
   sketch?: string;
   /** Illustration component id */
   illustration?: string;
+  /** Cover/thumbnail raster artwork — shown on the card and as the single plate image */
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  /**
+   * Full image set for the viewer. When present with more than one entry, the
+   * plate becomes a vertical scroll-stack. Falls back to `imageSrc` when omitted.
+   */
+  images?: PlayImage[];
   code?: string;
 }

@@ -31,6 +31,16 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
       <div className="play-card__media">
         {isCode && work.sketch ? (
           <PlayCanvas sketch={work.sketch} paused={motionPaused} />
+        ) : work.imageSrc ? (
+          <img
+            src={work.imageSrc}
+            alt={work.imageAlt ?? work.title}
+            width={work.imageWidth}
+            height={work.imageHeight}
+            className="play-card__image"
+            loading="lazy"
+            decoding="async"
+          />
         ) : work.illustration ? (
           <PlayIllustration name={work.illustration} />
         ) : null}

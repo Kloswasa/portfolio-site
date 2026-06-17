@@ -2,8 +2,8 @@
 
 import { PlayCanvas, type PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
-import type { PlayWork } from "@/src/lib/play/types";
-import { useEffect, useRef, useState } from "react";
+import type { PlayImage, PlayWork } from "@/src/lib/play/types";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useReducedMotion } from "framer-motion";
 
@@ -29,10 +29,33 @@ export function PlayViewer({
   const [developing, setDeveloping] = useState(false);
   const [mounted, setMounted] = useState(false);
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
+  const stackRef = useRef<HTMLDivElement | null>(null);
 
   const work = works[currentIndex];
 
+  const images: PlayImage[] = useMemo(() => {
+    if (!work) return [];
+    if (work.images && work.images.length > 0) return work.images;
+    if (work.imageSrc) {
+      return [
+        {
+          src: work.imageSrc,
+          alt: work.imageAlt,
+          width: work.imageWidth,
+          height: work.imageHeight,
+        },
+      ];
+    }
+    return [];
+  }, [work]);
+
+  const isStack = images.length > 1;
+
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    if (stackRef.current) stackRef.current.scrollTop = 0;
+  }, [currentIndex]);
 
   useEffect(() => {
     if (!open) {
@@ -139,11 +162,35 @@ export function PlayViewer({
                     canvasHandleRef.current = handle;
                   }}
                 />
+              ) : images.length > 0 ? (
+                <div
+                  ref={stackRef}
+                  className="play-viewer__stack"
+                  data-single={isStack ? undefined : "true"}
+                >
+                  {images.map((image, i) => (
+                    <img
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt ?? `${work.title} — ${i + 1} of ${images.length}`}
+                      width={image.width}
+                      height={image.height}
+                      className="play-viewer__stack-img"
+                      decoding="async"
+                      loading={i === 0 ? "eager" : "lazy"}
+                    />
+                  ))}
+                </div>
               ) : work.illustration ? (
                 <PlayIllustration name={work.illustration} />
               ) : null}
             </div>
-            <div className="play-viewer__mat" aria-hidden="true" />
+            {isStack ? (
+              <span className="play-viewer__stack-cue" aria-hidden="true">
+                ↓ {images.length} images
+              </span>
+            ) : null}
+            {/* <div className="play-viewer__mat" aria-hidden="true" /> */}
           </div>
         </div>
 

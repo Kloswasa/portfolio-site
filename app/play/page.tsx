@@ -10,7 +10,7 @@ import {
 export const metadata = {
   title: "Play",
   description:
-    "Off-hours experiments — hand-drawn cyanotype illustration and live generative sketches.",
+    "Off-hours illustration and live generative sketches.",
 };
 
 export default function PlayPage() {
