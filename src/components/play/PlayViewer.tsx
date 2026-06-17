@@ -33,7 +33,6 @@ export function PlayViewer({
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [developing, setDeveloping] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(100);
   const [stackZoomed, setStackZoomed] = useState(false);
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
   const stackRef = useRef<HTMLDivElement | null>(null);
@@ -65,9 +64,6 @@ export function PlayViewer({
   const handleZoomChange = useCallback((index: number, _zoomed: boolean, scale: number) => {
     scalesRef.current[index] = scale;
     setStackZoomed(scalesRef.current.some((s) => s > 1));
-    if (activeZoomRef.current === zoomRefs.current[index]) {
-      setZoomLevel(Math.round(scale * 100));
-    }
   }, []);
 
   const handleZoomIn = useCallback(() => {
@@ -89,7 +85,6 @@ export function PlayViewer({
     if (!stack) return;
     stack.scrollTop = 0;
     stack.scrollLeft = 0;
-    setZoomLevel(100);
     setStackZoomed(false);
     scalesRef.current = [];
     activeZoomRef.current = zoomRefs.current[0] ?? null;
@@ -244,8 +239,6 @@ export function PlayViewer({
                       onZoomChange={(zoomed, scale) => handleZoomChange(i, zoomed, scale)}
                       onActivate={() => {
                         activeZoomRef.current = zoomRefs.current[i] ?? null;
-                        const scale = activeZoomRef.current?.getScale() ?? 1;
-                        setZoomLevel(Math.round(scale * 100));
                       }}
                       wheelZoom={!isStack}
                     />
@@ -255,38 +248,6 @@ export function PlayViewer({
                 <PlayIllustration name={work.illustration} />
               ) : null}
             </div>
-            {hasRasterImages ? (
-              <div className="play-viewer__zoom" role="toolbar" aria-label="Image zoom controls">
-                <button
-                  type="button"
-                  className="play-viewer__zoom-btn"
-                  aria-label="Zoom out"
-                  onClick={handleZoomOut}
-                >
-                  −
-                </button>
-                <span className="play-viewer__zoom-level" aria-live="polite">
-                  {zoomLevel}%
-                </span>
-                <button
-                  type="button"
-                  className="play-viewer__zoom-btn"
-                  aria-label="Zoom in"
-                  onClick={handleZoomIn}
-                >
-                  +
-                </button>
-                <button
-                  type="button"
-                  className="play-viewer__zoom-reset"
-                  aria-label="Reset zoom"
-                  onClick={handleZoomReset}
-                  disabled={zoomLevel === 100}
-                >
-                  Reset
-                </button>
-              </div>
-            ) : null}
             {isStack ? (
               <>
                 <span className="play-viewer__stack-cue play-viewer__stack-cue--desktop" aria-hidden="true">
@@ -345,6 +306,26 @@ export function PlayViewer({
       </div>
 
       <div className="play-viewer__hint">
+      {hasRasterImages ? (
+          <div className="play-viewer__zoom" role="toolbar" aria-label="Image zoom controls">
+            <button
+              type="button"
+              className="play-viewer__zoom-btn"
+              aria-label="Zoom out"
+              onClick={handleZoomOut}
+            >
+              −
+            </button>
+            <button
+              type="button"
+              className="play-viewer__zoom-btn"
+              aria-label="Zoom in"
+              onClick={handleZoomIn}
+            >
+              +
+            </button>
+          </div>
+        ) : null}
         <span className="play-viewer__hint-frame">{work.index}</span>
         <span className="play-viewer__hint-sep" aria-hidden="true">
           ·
@@ -353,6 +334,7 @@ export function PlayViewer({
         <span className="play-viewer__hint-sep" aria-hidden="true">
           ·
         </span>
+       
         <button
           type="button"
           className="play-viewer__details-btn"
