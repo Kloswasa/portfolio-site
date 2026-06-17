@@ -3,6 +3,7 @@
 import { PlayCanvas } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import type { PlayWork } from "@/src/lib/play/types";
+import { playImageSrc } from "@/src/lib/play/utils";
 
 interface PlayCardProps {
   work: PlayWork;
@@ -33,7 +34,7 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
           <PlayCanvas sketch={work.sketch} paused={motionPaused} />
         ) : work.imageSrc ? (
           <img
-            src={work.imageSrc}
+            src={playImageSrc(work.imageSrc)}
             alt={work.imageAlt ?? work.title}
             width={work.imageWidth}
             height={work.imageHeight}

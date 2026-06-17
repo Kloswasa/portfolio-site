@@ -155,15 +155,15 @@
   background: linear-gradient(
     to top,
     var(--color-header-bg) 0%,
-    transparent 55%,
-    var(--color-primary) 100%
+    transparent 50%,
+    var(--color-primary) 80%
   );
   opacity: 0.0;
   transition: opacity var(--duration-slow) var(--ease);
 }
 
 .play-card:hover .play-card__grad {
-  opacity: 0.88;
+  opacity: 0.78;
 }
 
 .play-card__mat {
@@ -177,14 +177,14 @@
     box-shadow var(--duration-slow) var(--ease);
 }
 
-.play-card:hover .play-card__mat {
+/* .play-card:hover .play-card__mat {
   border-color: var(--color-accent);
   box-shadow: inset 0 0 40px var(--color-accent-muted);
-}
+} */
 
 .play-card__frame {
   position: absolute;
-  top: var(--spacing-8);
+  top: var(--spacing-6);
   left: var(--spacing-8);
   z-index: 6;
   display: flex;
@@ -198,11 +198,10 @@
 }
 
 .play-card__frame::before {
-  content: "▶";
-  font-size: 6px;
+  content: "*";
+  font-size: 24px;
   color: var(--color-accent);
   opacity: 0;
-  transform: translateX(-4px);
   transition:
     opacity var(--duration-slow) var(--ease),
     transform var(--duration-slow) var(--ease);
@@ -583,8 +582,9 @@
 .play-viewer__plate {
   position: relative;
   height: min(86vh, 860px);
-  width: min(90vw, 900px);
-  aspect-ratio: 3/4;
+  width: auto;
+  max-width: min(90vw, 900px);
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 0;
   background: var(--color-bg);
@@ -622,6 +622,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .play-viewer__media svg,
@@ -638,17 +640,26 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Multi-image: vertical scroll on desktop */
+.play-viewer__stack[data-stack="true"] {
+  overflow-x: hidden;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--play-viewer-mat-border) transparent;
 }
 
-.play-viewer__stack::-webkit-scrollbar {
+.play-viewer__stack[data-stack="true"]::-webkit-scrollbar {
   width: 6px;
 }
 
-.play-viewer__stack::-webkit-scrollbar-thumb {
+.play-viewer__stack[data-stack="true"]::-webkit-scrollbar-thumb {
   background: var(--play-viewer-mat-border);
   border-radius: 0;
 }
@@ -688,10 +699,18 @@
   background: var(--play-viewer-hint-bg);
   backdrop-filter: blur(14px);
   pointer-events: none;
-  animation: play-stack-cue 2.4s var(--ease) infinite;
 }
 
-@keyframes play-stack-cue {
+.play-viewer__stack-cue--desktop {
+  animation: play-stack-cue-y 2.4s var(--ease) infinite;
+}
+
+.play-viewer__stack-cue--mobile {
+  display: none;
+  animation: play-stack-cue-x 2.4s var(--ease) infinite;
+}
+
+@keyframes play-stack-cue-y {
   0%,
   100% {
     transform: translateY(0);
@@ -703,8 +722,21 @@
   }
 }
 
+@keyframes play-stack-cue-x {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .play-viewer__stack-cue {
+  .play-viewer__stack-cue--desktop,
+  .play-viewer__stack-cue--mobile {
     animation: none;
   }
 }
@@ -995,9 +1027,42 @@
 
   .play-viewer__plate {
     width: 100%;
-    max-width: 840px;
-    height: auto !important;
-    aspect-ratio: 9 / 10;
+    max-width: 420px;
+    height: min(62vh, 520px) !important;
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+
+  /* Multi-image: horizontal slide on mobile */
+  .play-viewer__stack[data-stack="true"] {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    touch-action: pan-x;
+    scrollbar-width: none;
+  }
+
+  .play-viewer__stack[data-stack="true"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  .play-viewer__stack[data-stack="true"] .play-viewer__stack-img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .play-viewer__stack-cue--desktop {
+    display: none;
+  }
+
+  .play-viewer__stack-cue--mobile {
+    display: flex;
   }
 
   /* Bottom sheet — fully hidden until details open */

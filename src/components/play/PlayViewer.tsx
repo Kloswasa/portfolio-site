@@ -3,6 +3,7 @@
 import { PlayCanvas, type PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import type { PlayImage, PlayWork } from "@/src/lib/play/types";
+import { playImageSrc } from "@/src/lib/play/utils";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useReducedMotion } from "framer-motion";
@@ -54,7 +55,10 @@ export function PlayViewer({
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    if (stackRef.current) stackRef.current.scrollTop = 0;
+    const stack = stackRef.current;
+    if (!stack) return;
+    stack.scrollTop = 0;
+    stack.scrollLeft = 0;
   }, [currentIndex]);
 
   useEffect(() => {
@@ -167,11 +171,20 @@ export function PlayViewer({
                   ref={stackRef}
                   className="play-viewer__stack"
                   data-single={isStack ? undefined : "true"}
+                  data-stack={isStack ? "true" : undefined}
+                  tabIndex={isStack ? 0 : undefined}
+                  onWheel={
+                    isStack
+                      ? (e) => {
+                          e.stopPropagation();
+                        }
+                      : undefined
+                  }
                 >
                   {images.map((image, i) => (
                     <img
                       key={image.src}
-                      src={image.src}
+                      src={playImageSrc(image.src)}
                       alt={image.alt ?? `${work.title} — ${i + 1} of ${images.length}`}
                       width={image.width}
                       height={image.height}
@@ -186,9 +199,14 @@ export function PlayViewer({
               ) : null}
             </div>
             {isStack ? (
-              <span className="play-viewer__stack-cue" aria-hidden="true">
-                ↓ {images.length} images
-              </span>
+              <>
+                <span className="play-viewer__stack-cue play-viewer__stack-cue--desktop" aria-hidden="true">
+                  ↓ {images.length} images
+                </span>
+                <span className="play-viewer__stack-cue play-viewer__stack-cue--mobile" aria-hidden="true">
+                  ‹ › swipe · {images.length}
+                </span>
+              </>
             ) : null}
             {/* <div className="play-viewer__mat" aria-hidden="true" /> */}
           </div>
