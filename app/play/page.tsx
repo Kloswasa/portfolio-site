@@ -4,13 +4,13 @@ import {
   PLAY_FILTER_OPTIONS,
   PLAY_HERO_META,
   PLAY_MEDIUM_SECTIONS,
+  PLAY_PAGE_DESCRIPTION,
   PLAY_WORKS,
 } from "@/src/lib/play";
 
 export const metadata = {
   title: "Play",
-  description:
-    "Off-hours illustration and live generative sketches.",
+  description: PLAY_PAGE_DESCRIPTION,
 };
 
 export default function PlayPage() {

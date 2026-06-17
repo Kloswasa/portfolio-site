@@ -41,7 +41,16 @@ export function MajorCaseStudyHero({ hero }: { hero: HeroData }) {
     <section className="cs-major__hero" id="hook">
       <div className="cs-major__hero-dots" aria-hidden />
       <div className="cs-major__hero-bg" aria-hidden>
-        <HeroBotanicalSvg />
+        {hero.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={hero.image.src}
+            alt={hero.image.alt}
+            className="cs-major__hero-img"
+          />
+        ) : (
+          <HeroBotanicalSvg />
+        )}
       </div>
       <div className="cs-major__hero-gradient" aria-hidden />
 

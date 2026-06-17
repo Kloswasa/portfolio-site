@@ -15,6 +15,7 @@ interface ProjectCardProps {
   liveUrl?: string;
   sourceUrl?: string;
   href?: string;
+  coverImage?: { src: string; alt: string };
   /** Wrap the card with `group/play` when a sibling covers it (e.g. lightbox trigger). */
   overlayInteraction?: boolean;
 }
@@ -27,6 +28,7 @@ export default function ProjectCard({
   liveUrl,
   sourceUrl,
   href,
+  coverImage,
   overlayInteraction = false,
 }: ProjectCardProps) {
   const rootClassName = overlayInteraction
@@ -53,9 +55,19 @@ export default function ProjectCard({
       )}
 
       <div
-        className={`relative z-20 h-[200px] w-full bg-elevated ${href ? "pointer-events-none" : ""}`}
-        aria-hidden
-      />
+        className={`relative z-20 h-[200px] w-full overflow-hidden bg-elevated ${href ? "pointer-events-none" : ""}`}
+        {...(coverImage ? {} : { "aria-hidden": true })}
+      >
+        {coverImage ? (
+          <img
+            src={coverImage.src}
+            alt={coverImage.alt}
+            className="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : null}
+      </div>
       <div className={`relative z-20 px-1 pb-1 pt-2 ${href ? "pointer-events-none" : ""}`}>
         <h3 className={`mb-1 text-heading-xl text-text transition-colors ${titleHoverClass}`}>
           {title}

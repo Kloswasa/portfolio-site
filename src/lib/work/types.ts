@@ -10,4 +10,5 @@ export interface WorkCardProject {
   frame: string;
   svgVariant: WorkCardSvgVariant;
   theme: string;
+  coverImage?: { src: string; alt: string };
 }

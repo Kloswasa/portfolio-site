@@ -66,6 +66,14 @@
   transition: transform 280ms ease;
 }
 
+.work-card__cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .work-card__svg {
   width: 72%;
   height: auto;

@@ -46,22 +46,22 @@ export interface Project {
   yearLabel: string;
   liveUrl?: string;
   sourceUrl?: string;
+  coverImage?: { src: string; alt: string }
 }
 
 export const projects: Project[] = [
   {
     id: 1,
     slug: "quiz-game",
-    title: "Australia Calls",
+    title: "Australia Call",
     description:
-      "A quiz game that helps new Australians learn about the country and its culture.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+      "A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.",
+    technologies: ["Next.js", "Tailwind", "Prisma", "Figma", "Procreate"],
     tone: "primary",
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2025 · Product",
-    liveUrl: "https://quiz-game.com",
-    sourceUrl: "https://github.com/yourusername/quiz-game",
+    coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Call cover image" },
   },
   {
     id: 2,

@@ -261,6 +261,7 @@ export default function ComponentsPage() {
                 tone={sample.tone}
                 liveUrl={sample.liveUrl}
                 sourceUrl={sample.sourceUrl}
+                coverImage={sample.coverImage}
               />
             </div>
           </SectionShell>

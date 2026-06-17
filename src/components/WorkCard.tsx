@@ -24,8 +24,23 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
       ref={cardRef}
       data-tilt={reduceMotion ? undefined : ""}
     >
-      <div className="work-card__photo" data-photo style={{ background: project.theme }}>
-        <WorkCardSvg variant={project.svgVariant} />
+      <div
+        className="work-card__photo"
+        data-photo
+        data-has-cover={project.coverImage ? "" : undefined}
+        style={project.coverImage ? undefined : { background: project.theme }}
+      >
+        {project.coverImage ? (
+          <img
+            src={project.coverImage.src}
+            alt={project.coverImage.alt}
+            className="work-card__cover"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <WorkCardSvg variant={project.svgVariant} />
+        )}
       </div>
 
       <div className="work-card__dots" aria-hidden="true" />

@@ -27,6 +27,7 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     frame: String(index + 1).padStart(2, "0"),
     svgVariant,
     theme: THEMES[index % THEMES.length],
+    coverImage: project.coverImage,
   };
 }
 

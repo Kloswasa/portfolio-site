@@ -5,13 +5,31 @@ import type {
   PlayWork,
 } from "@/src/lib/play/types";
 
-export const PLAY_FILTER_OPTIONS: PlayFilterOption[] = [
+/** Toggle creative-coding section, filter, and works on the play page. */
+export const PLAY_SHOW_CODE = false;
+
+const ALL_PLAY_FILTER_OPTIONS: PlayFilterOption[] = [
   { key: "all", label: "All play" },
   { key: "illustration", label: "Illustration" },
   { key: "code", label: "Creative coding" },
 ];
 
-export const PLAY_HERO_META: PlayHeroMeta = {
+const ALL_PLAY_MEDIUM_SECTIONS: PlayMediumSection[] = [
+  {
+    medium: "illustration",
+    title: "Illustration",
+    infoStrong: "Digital",
+    infoDetail: "6 plates · mixed media",
+  },
+  {
+    medium: "code",
+    title: "Creative Coding",
+    infoStrong: "Generative · Live",
+    infoDetail: "6 sketches · HTML Canvas",
+  },
+];
+
+const ALL_PLAY_HERO_META: PlayHeroMeta = {
   eyebrow: "The Laboratory · Studies & Experiments",
   titleLine1: "Made for its",
   titleLine2: "own sake",
@@ -25,22 +43,35 @@ export const PLAY_HERO_META: PlayHeroMeta = {
   ],
 };
 
-export const PLAY_MEDIUM_SECTIONS: PlayMediumSection[] = [
-  {
-    medium: "illustration",
-    title: "Illustration",
-    infoStrong: "Digital · Ink",
-    infoDetail: "6 plates · mixed media",
-  },
-  {
-    medium: "code",
-    title: "Creative Coding",
-    infoStrong: "Generative · Live",
-    infoDetail: "6 sketches · HTML Canvas",
-  },
-];
+const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
+  ...ALL_PLAY_HERO_META,
+  description:
+    "Off-hours illustration. No brief, no client, no deadline — just the pleasure of making the thing.",
+  stats: [
+    { label: "Illustrations", value: "6" },
+    { label: "Media", value: "Digital" },
+    { label: "Tools", value: "Procreate" },
+    { label: "Since", value: "2021" },
+  ],
+};
 
-export const PLAY_WORKS: PlayWork[] = [
+export const PLAY_FILTER_OPTIONS = PLAY_SHOW_CODE
+  ? ALL_PLAY_FILTER_OPTIONS
+  : ALL_PLAY_FILTER_OPTIONS.filter((option) => option.key !== "code");
+
+export const PLAY_HERO_META = PLAY_SHOW_CODE
+  ? ALL_PLAY_HERO_META
+  : PLAY_HERO_META_ILLUSTRATION_ONLY;
+
+export const PLAY_MEDIUM_SECTIONS = PLAY_SHOW_CODE
+  ? ALL_PLAY_MEDIUM_SECTIONS
+  : ALL_PLAY_MEDIUM_SECTIONS.filter((section) => section.medium !== "code");
+
+export const PLAY_PAGE_DESCRIPTION = PLAY_SHOW_CODE
+  ? "Off-hours illustration and live generative sketches."
+  : "Off-hours illustration studies and experiments.";
+
+const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "au-call",
     medium: "illustration",
@@ -311,7 +342,13 @@ line(p.prev, p)   // faint ink trail`,
   },
 ];
 
+export const PLAY_WORKS = PLAY_SHOW_CODE
+  ? ALL_PLAY_WORKS
+  : ALL_PLAY_WORKS.filter((work) => work.medium !== "code");
+
 export const PLAY_END_COPY = {
-  label: "End of play · 12 experiments · ongoing",
+  label: PLAY_SHOW_CODE
+    ? "End of play · 12 experiments · ongoing"
+    : "End of play · 6 illustrations · ongoing",
   cta: { label: "See the client work →", href: "/work" },
 };

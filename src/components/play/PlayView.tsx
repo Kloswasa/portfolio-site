@@ -69,14 +69,8 @@ export function PlayView({
         containerClassName="play-container"
         ariaLabel="Filter play entries"
         tabAriaLabel="Play filters"
-        trailing={
-          <FilterBarAction
-            pressed={motionPaused}
-            onClick={() => setMotionPaused((v) => !v)}
-            icon={motionPaused ? "▶" : "⏸"}
-            label={motionPaused ? "Resume motion" : "Pause motion"}
-          />
-        }
+
+        
       />
 
       <div className="play-gallery play-container">

@@ -71,7 +71,22 @@ export type MajorContentBlock =
       type: "outcomes";
       items: { value: string; label: string; body: string }[];
     }
-  | { type: "reflections"; items: string[] };
+  | { type: "reflections"; items: string[] }
+  | {
+      type: "imagePair";
+      items: {
+        src: string;
+        alt: string;
+        caption: string;
+      }[];
+    }
+  | {
+      type: "video";
+      src: string;
+      poster: string;
+      alt: string;
+      caption: string;
+    };
 
 export interface MajorSectionContent {
   eyebrow: string;
@@ -87,6 +102,8 @@ export interface MajorCaseStudyHero {
   titleLine2: string;
   summary: string;
   meta: { label: string; value: string }[];
+  /** Optional hero background image (path from /public, e.g. /projects/quiz-game/hero.png). */
+  image?: { src: string; alt: string };
 }
 
 export interface MajorCaseStudy {

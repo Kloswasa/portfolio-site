@@ -182,6 +182,44 @@ function Block({ block }: { block: MajorContentBlock }) {
         </ol>
       );
 
+    case "imagePair":
+      return (
+        <figure className="cs-major__image-pair">
+          <div className="cs-major__image-pair-grid">
+            {block.items.map((item) => (
+              <div key={item.src} className="cs-major__image-pair-item">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="cs-major__image-pair-img"
+                  loading="lazy"
+                />
+                <figcaption className="cs-major__image-pair-caption">
+                  {item.caption}
+                </figcaption>
+              </div>
+            ))}
+          </div>
+        </figure>
+      );
+
+    case "video":
+      return (
+        <figure className="cs-major__video">
+          <video
+            className="cs-major__video-player"
+            src={block.src}
+            poster={block.poster}
+            controls
+            playsInline
+            preload="metadata"
+            aria-label={block.alt}
+          />
+          <figcaption className="cs-major__video-caption">{block.caption}</figcaption>
+        </figure>
+      );
+
     default:
       return null;
   }

@@ -4,310 +4,151 @@ const quizGameCaseStudy = {
   kind: "major",
   slug: "quiz-game",
   hero: {
-    breadcrumb: "Australia Calls",
-    eyebrow: "001 · Product design · Education",
+    breadcrumb: "Australia Call",
+    eyebrow: "001 · Product Design · Illustration",
     titleLine1: "Australia",
-    titleLine2: "Calls",
+    titleLine2: "Call",
     summary:
-      "A quiz game that helps new Australians learn about the country and its culture — designed to feel welcoming on a five-minute train ride, not like a citizenship exam.",
+      "A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.",
+    image: {
+      src: "/projects/quiz-game/quiz-game-cover.png",
+      alt: "Wildlife illustrations representing Australia Call personality types, painted in a soft palette",
+    },
     meta: [
-      { label: "Client", value: "Personal project" },
-      { label: "Role", value: "Product design + frontend" },
-      { label: "Timeline", value: "8 weeks · 2025" },
-      { label: "Platform", value: "Responsive web" },
+      { label: "Role", value: "Designer, illustrator, developer" },
+      { label: "Team", value: "Solo · weekly supervisor review" },
+      { label: "Duration", value: "3 months · 2025 internship" },
+      { label: "Status", value: "Shipped and live" },
     ],
   },
   sections: {
     brief: {
       eyebrow: "01 — Brief",
-      title: "New arrivals. New country.",
-      titleEm: "Same small-talk gap.",
+      title: "The brief",
       blocks: [
         {
           type: "prose",
           paragraphs: [
-            "Australia Calls started from conversations with friends who had recently moved to Melbourne. They could navigate visa paperwork and rental listings — but felt behind on the cultural layer: slang in the break room, references in the news, landmarks people assumed everyone knew.",
-            "Existing resources skewed toward citizenship test prep — accurate, but heavy. Learners wanted something they could open for five minutes on the tram and still walk away with a usable fact or phrase.",
+            "Design a quiz that helps newcomers to Australia (Melbourne and Sydney) find their travel style, using Holland's personality model as the framework.",
+            "Two things in that brief made it harder than a normal quiz. First, Holland's model is a vocational interest framework. It was built to match people to careers, not to trips. Bridging it to travel was a translation problem, not a styling problem. Even the type names had to be recast for the context (Holland's \"Investigative\" became \"the Curious Explorer\"). Second, the audience hadn't been to Australia, so being told you are \"the Curious Explorer\" is useless on its own. The differentiator had to live on the output side: turn the result page into something that helps a stranger know where to go and what to expect.",
           ],
         },
-        {
-          type: "stats",
-          items: [
-            { value: "12", label: "Learner interviews", variant: "dark" },
-            { value: "3", label: "Competitor audits", variant: "mid" },
-            { value: "5", label: "Content themes", variant: "mid" },
-            { value: "8", label: "Week build", variant: "light" },
-          ],
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "I scoped the project as end-to-end product design plus React implementation, working with a small volunteer content team to draft question packs across history, geography, slang, and everyday culture.",
-          ],
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Before sketching screens, I mapped how people actually studied — and where they dropped off. The pattern was consistent: formal quiz UIs created performance anxiety, while flashcard apps felt too thin to stick.",
-          ],
-        },
-        {
-          type: "pullquote",
-          text: "I don't need another test. I need something that makes me feel like I belong in the conversation.",
-          source: "Learner interview · Week 1",
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Four friction points emerged. High-stakes framing made wrong answers feel punitive. Timers punished careful reading — especially for ESL learners. Score screens emphasised failure over learning. And nothing was built for sharing wins back to community groups on WhatsApp.",
-          ],
-        },
-        {
-          type: "findings",
-          items: [
-            {
-              num: "A",
-              label: "Friction 01",
-              title: "Exam-style framing",
-              body: "Users associated progress bars with pass/fail gates. Abandon rate spiked on the first wrong answer in test-style prototypes.",
-            },
-            {
-              num: "B",
-              label: "Friction 02",
-              title: "Timer pressure",
-              body: "Countdown clocks helped arcade modes but hurt comprehension. ESL participants requested 40% more time on average.",
-            },
-            {
-              num: "C",
-              label: "Friction 03",
-              title: "Punitive feedback",
-              body: "Red error states and harsh copy reduced retry rate. Users wanted encouragement with optional depth on misses.",
-            },
-            {
-              num: "D",
-              label: "Friction 04",
-              title: "No social loop",
-              body: "Community organisers wanted shareable result cards — a lightweight way to celebrate progress in group chats.",
-            },
-          ],
-        },
-        {
-          type: "annotation",
-          text: "The citizenship-prep apps weren't wrong for their audience — but they optimised for accuracy under pressure. Australia Calls needed to optimise for confidence and return visits.",
-        },
+        
       ],
     },
     research: {
       eyebrow: "02 — Research",
-      title: "Understanding learners",
-      titleEm: "in the wild",
+      title: "What the research",
+      titleEm: "changed",
       blocks: [
         {
-          type: "prose",
-          paragraphs: [
-            "I ran a two-week research sprint: contextual interviews with new arrivals, a competitive audit of study apps, and three rounds of moderated playtests on paper prototypes and coded builds.",
-          ],
-        },
-        {
-          type: "artifact",
-          variant: "audit-map",
-          label: "Artifact · Experience audit map",
-          caption:
-            "Journey map across onboarding, rounds, feedback, results, and sharing. Amber = friction requiring a design response.",
-          captionMeta: "Figma · Jan 2025",
+          type: "pullquote",
+          text: "I do not know, maybe a big spider.",
+          source:
+            "Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos",
         },
         {
           type: "prose",
           paragraphs: [
-            "Playtests surfaced a language shift that stuck: reframing quiz rounds as \"calls\" — short challenges you pick up and put down — lowered perceived stakes without reducing learning intent.",
-          ],
-        },
-        {
-          type: "twoCol",
-          items: [
-            {
-              label: "Learner research · n=12",
-              body: "9 of 12 participants said they would use a cultural quiz weekly if sessions stayed under seven minutes and wrong answers included a one-line explanation.",
-            },
-            {
-              label: "Playtesting · n=8",
-              body: "Progress-strip UI without a timer improved completion rate by 28% versus countdown variants. Celebratory micro-copy on correct answers increased replay taps.",
-            },
-          ],
-        },
-        {
-          type: "ornament",
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Content volunteers flagged that question tone mattered as much as difficulty — phrasing like \"Which city…\" felt school-like; \"You hear someone say 'arvo' — what do they mean?\" felt conversational.",
+            "The pause before that answer lasted several seconds. Wildlife was named as Australia's signature in every interview (five people, all planning a trip to Australia from overseas), but recognition stopped at two animals. The same interviews surfaced three further demands: hidden destinations over famous ones (\"a destination that is unique and quiet\"), tips that read as practical rather than generic, and trivia that explained without exaggerating.",
+            "What I took out of it: a one-word personality type wasn't going to do the work. The result page needed four pieces of content per type (animal, destination, tips, trivia), all researched from the angles people had actually asked for. The differentiator was no longer in the quiz. It was in the curation.",
           ],
         },
       ],
     },
     concept: {
       eyebrow: "03 — Concept",
-      title: "From calls to",
-      titleEm: "components",
+      title: "Wildlife as identity,",
+      titleEm: "scene as backdrop",
       blocks: [
         {
           type: "prose",
           paragraphs: [
-            "I resisted jumping straight to visual polish. The sequence was: define round structure, validate tone in copy, then build a token-backed UI that could scale as question packs grew.",
+            "In a personality quiz, the result is the moment the user came for. It can't be abstract; it has to feel like a representation of the person, not a word labelling them. The interviews named two things as Australian identity, wildlife and natural scenes, so I split them by job: scenes became the ambient backdrop of the quiz, and the animal became the identity carrier on the result page, where the personal weight had to live.",
           ],
         },
         {
-          type: "process",
+          type: "prose",
+          paragraphs: [
+            "Each personality type was matched to a native Australian animal using two lenses: the animal's natural behaviour, and the meaning the animal carries in Aboriginal belief. The pairings had to hold under both. Six animals were used, one per type: Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, Dingo.",
+            "The research process was AI-assisted (ChatGPT and Gemini surfaced candidate stories and symbolism), then cross-referenced against Indigenous-affiliated online sources (Mooditj Boodja, Kullilla Art, Kinyalerrk), institutional cultural sources (WWF Australia, ABC Science), and peer-reviewed academic work (University of Melbourne, ScienceDirect). Where the AI surfaced a claim about traditional symbolism, I kept it only when I could trace it to one of those sources.",
+            "What was outside scope: direct community consultation, paid cultural advisor review, and identification of the specific traditional Country each animal is connected to. A mature version of this work would require those. With a budget, the version I'd want to ship would involve a cultural advisor or collaborator co-authoring the matching, not just verifying it after the fact.",
+          ],
+        },
+        {
+          type: "imagePair",
           items: [
             {
-              num: "01",
-              title: "Round architecture",
-              body: "Single-question screens, optional hint layer, immediate feedback, and a soft landing on results — no hard stop on wrong answers.",
+              src: "/projects/quiz-game/platypus.png",
+              alt: "Illustration of a platypus, representing the Curious Explorer personality type",
+              caption:
+                "Platypus → the Curious Explorer. Symbol of individuality and being at peace alone.",
             },
             {
-              num: "02",
-              title: "Voice & content",
-              body: "Conversational prompts, plain-language explanations, and celebratory micro-states tested with writers before visual design locked.",
-            },
-            {
-              num: "03",
-              title: "Token-backed UI",
-              body: "Colour, type, and spacing tokens mirrored in Tailwind so design and code stayed aligned as components multiplied.",
-            },
-            {
-              num: "04",
-              title: "Ship & iterate",
-              body: "Responsive web build with offline-friendly packs, share cards, and analytics hooks for return-rate tracking.",
+              src: "/projects/quiz-game/quiz-game-identical-brolga.png",
+              alt: "Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type",
+              caption:
+                "Brolga → the Inspiration Seeker. Linked to ceremonial dance, beauty, creativity, resilience.",
             },
           ],
-        },
-        {
-          type: "callout",
-          label: "Design principle",
-          title: "Feel like a conversation, not an exam",
-          body: "Every screen was evaluated against this line. If a state felt like being graded, we reworked copy, colour, or motion until it felt like encouragement with optional depth.",
-        },
-        {
-          type: "artifact",
-          variant: "token-hierarchy",
-          label: "Artifact · Token hierarchy",
-          caption:
-            "Primitive → semantic → component tokens for cards, buttons, and round shells. Changes at the primitive level cascade automatically.",
-          captionMeta: "Tokens Studio · Feb 2025",
         },
       ],
     },
     craft: {
       eyebrow: "04 — Craft",
-      title: "Warmth without",
-      titleEm: "losing clarity",
+      title: "Beyond",
+      titleEm: "the animal",
       blocks: [
         {
           type: "prose",
           paragraphs: [
-            "The visual system borrowed from the portfolio's indigo-and-gold language — trustworthy navy surfaces, ivory backgrounds, and saffron accents reserved for celebration and progress, not body text.",
-          ],
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Typography paired Fraunces for display moments (round titles, results) with DM Sans for UI chrome and question body copy. Syne handled labels and metadata at small sizes.",
-          ],
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Motion stayed subtle: progress strip fills, card entrances on correct answers, and reduced-motion fallbacks everywhere. No countdown tick animations — they read as stress cues in testing.",
+            "Three other pieces of content sat on each result page: a destination, a tip, and a trivia line. Each was curated for the type, not generic. For the Curious Explorer (Platypus), the destination was the Sydney Opera House Architectural Tour, which trades the postcard view for insider access: off-limits areas, vantage points the public doesn't reach, and the kind of architectural depth an investigative type would actually want. The tip was a behavioural nudge for the way this type travels (\"Zoom out regularly, don't get stuck in details that slow you down\"), not generic travel advice. The trivia grounded the trip in something bigger (\"Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years\").",
           ],
         },
       ],
     },
     build: {
       eyebrow: "05 — Build",
-      title: "Eight patterns.",
-      titleEm: "One voice.",
+      title: "Two render strategies",
+      titleEm: "for two moments",
       blocks: [
         {
-          type: "prose",
-          paragraphs: [
-            "The UI distilled into a small set of composable patterns — each specified with default, hover, focus, disabled, and celebration states before content packs expanded.",
-          ],
+          type: "video",
+          src: "/projects/quiz-game/result-page.mp4",
+          poster: "/projects/quiz-game/result-page-poster.png",
+          alt: "A 10-15 second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia",
+          caption:
+            "A 10-15 second zoom across one result page, showing the animal, destination, tip, and trivia as a unified output.",
         },
         {
           type: "prose",
           paragraphs: [
-            "Round card (question shell), answer chip row, progress strip, hint drawer, feedback banner, results summary, share card, and pack selector cover the full session loop from open to share.",
+            "The quiz and the result page do different jobs, so they got different render strategies.",
+            "The quiz is a client component: it fetches the questions via API, and in parallel runs a preload pass to warm the browser cache with every background, answer GIF, and result image the user might encounter. A loading screen covers the wait. The point wasn't to hide loading, it was that nothing flickered or popped in once the quiz began.",
+            "The result page is a React Server Component, so Prisma queries run on the server and the page arrives at the browser already populated. No spinner on the moment that matters most. Per-type content (animal, destinations, tips, trivia) lives in the database, not in code, so the company's team can update copy and add types without a redeploy after I leave.",
           ],
-        },
-        {
-          type: "annotation",
-          text: "The hint drawer was the most debated component — opening hints too easily reduced challenge, hiding them entirely frustrated ESL learners. We settled on one optional hint per round with transparent copy about trade-offs.",
         },
       ],
     },
     outcome: {
       eyebrow: "06 — Outcome",
-      title: "What actually",
-      titleEm: "changed",
+      title: "Shipped and",
+      titleEm: "learned",
       blocks: [
         {
           type: "prose",
           paragraphs: [
-            "Six weeks post-launch, I reviewed session analytics and ran a short follow-up survey with early community groups. Numbers are modest — this is a personal project — but directionally encouraging.",
-          ],
-        },
-        {
-          type: "outcomes",
-          items: [
-            {
-              value: "~6m",
-              label: "Avg. session length",
-              body: "Sessions clustered around five to seven minutes — matching the original \"tram ride\" design target.",
-            },
-            {
-              value: "42%",
-              label: "Week-2 return rate",
-              body: "Nearly half of first-week users opened a second pack within fourteen days. Share cards drove a noticeable bump from community organisers.",
-            },
-            {
-              value: "AA",
-              label: "Accessibility target",
-              body: "Large tap targets, focus-visible states, and reduced-motion paths. Colour contrast checked against WCAG AA for core flows.",
-            },
-          ],
-        },
-        {
-          type: "pullquote",
-          text: "For the first time I felt like I was learning Australia for living here — not for a test I'll forget after.",
-          source: "Beta participant · Post-launch survey",
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Shipped a responsive web app with offline-friendly question packs and shareable result cards. The biggest qualitative win: users describing the app as \"friendly\" unprompted — the tone goal landing in their words, not mine.",
-          ],
-        },
-        {
-          type: "prose",
-          paragraphs: [
-            "Eight weeks was enough to ship, but tight for content depth. A longer runway would have let us test more regional packs beyond Victoria-first questions.",
+            "Shipped to ~10+ users. The wildlife-and-destination pairing was the strongest signal (one user who doubted her personality match changed her mind reading the destinations: \"that was where I wanna go\"); tips and trivia got less attention, likely because they were text-only. With more time and resourcing, I'd bring in a cultural advisor to scale the matching responsibly, and revise the premade quiz questions (not mine to write the first time) that some users found inconsistent.",
           ],
         },
         {
           type: "reflections",
           items: [
-            "I'd prototype the content authoring flow earlier so writers could test voice in situ — too much copy was rewritten after visual states were already built.",
-            "I'd involve community organisers in week one, not week four. Their sharing workflows shaped the result card more than any UI polish pass.",
-            "I'd ship a public beta sooner. Waiting for \"complete\" packs delayed feedback that would have trimmed scope faster.",
-            "I'd document hint-drawer behaviour in the content guidelines — engineers and writers both made different assumptions about when hints unlock.",
+            "The differentiator lived in curation, not quiz mechanics. Personality labels alone weren't enough; destinations, tips, and trivia had to answer what travellers actually asked for in research.",
+            "Wildlife carried identity; scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.",
+            "Cultural symbolism required traceable sources and honest scope limits. AI helped surface candidates, but shipping claims needed Indigenous-affiliated, institutional, or academic backing.",
+            "Two render strategies matched two moments. Preloading for the quiz; server-rendered results for the payoff page.",
           ],
-        },
-        {
-          type: "callout",
-          label: "The one thing",
-          title: "Tone is infrastructure",
-          body: "Warm copy and celebratory micro-states weren't decoration — they were the mechanism that made learners return. Treating tone with the same rigour as layout or performance is the lesson I'd carry to the next project.",
         },
       ],
     },
