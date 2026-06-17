@@ -2,9 +2,13 @@
 
 import { PlayCanvas, type PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
+import {
+  PlayZoomableImage,
+  type PlayZoomableImageHandle,
+} from "@/src/components/play/PlayZoomableImage";
 import type { PlayImage, PlayWork } from "@/src/lib/play/types";
 import { playImageSrc } from "@/src/lib/play/utils";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useReducedMotion } from "framer-motion";
 
@@ -29,8 +33,13 @@ export function PlayViewer({
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [developing, setDeveloping] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(100);
+  const [stackZoomed, setStackZoomed] = useState(false);
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
   const stackRef = useRef<HTMLDivElement | null>(null);
+  const activeZoomRef = useRef<PlayZoomableImageHandle | null>(null);
+  const zoomRefs = useRef<(PlayZoomableImageHandle | null)[]>([]);
+  const scalesRef = useRef<number[]>([]);
 
   const work = works[currentIndex];
 
@@ -51,6 +60,27 @@ export function PlayViewer({
   }, [work]);
 
   const isStack = images.length > 1;
+  const hasRasterImages = images.length > 0;
+
+  const handleZoomChange = useCallback((index: number, _zoomed: boolean, scale: number) => {
+    scalesRef.current[index] = scale;
+    setStackZoomed(scalesRef.current.some((s) => s > 1));
+    if (activeZoomRef.current === zoomRefs.current[index]) {
+      setZoomLevel(Math.round(scale * 100));
+    }
+  }, []);
+
+  const handleZoomIn = useCallback(() => {
+    activeZoomRef.current?.zoomIn();
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    activeZoomRef.current?.zoomOut();
+  }, []);
+
+  const handleZoomReset = useCallback(() => {
+    activeZoomRef.current?.reset();
+  }, []);
 
   useEffect(() => setMounted(true), []);
 
@@ -59,6 +89,10 @@ export function PlayViewer({
     if (!stack) return;
     stack.scrollTop = 0;
     stack.scrollLeft = 0;
+    setZoomLevel(100);
+    setStackZoomed(false);
+    scalesRef.current = [];
+    activeZoomRef.current = zoomRefs.current[0] ?? null;
   }, [currentIndex]);
 
   useEffect(() => {
@@ -90,10 +124,22 @@ export function PlayViewer({
       if (e.key === "ArrowLeft") onNavigate((currentIndex - 1 + works.length) % works.length);
       if (e.key === "ArrowRight") onNavigate((currentIndex + 1) % works.length);
       if (e.key === "i" || e.key === "I") setDetailsOpen((v) => !v);
+      if (hasRasterImages && (e.key === "+" || e.key === "=")) {
+        e.preventDefault();
+        handleZoomIn();
+      }
+      if (hasRasterImages && e.key === "-") {
+        e.preventDefault();
+        handleZoomOut();
+      }
+      if (hasRasterImages && e.key === "0") {
+        e.preventDefault();
+        handleZoomReset();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, detailsOpen, currentIndex, works.length, onClose, onNavigate]);
+  }, [open, detailsOpen, currentIndex, works.length, onClose, onNavigate, hasRasterImages, handleZoomIn, handleZoomOut, handleZoomReset]);
 
   if (!mounted || !work) return null;
 
@@ -172,9 +218,10 @@ export function PlayViewer({
                   className="play-viewer__stack"
                   data-single={isStack ? undefined : "true"}
                   data-stack={isStack ? "true" : undefined}
+                  data-has-zoom={stackZoomed ? "true" : undefined}
                   tabIndex={isStack ? 0 : undefined}
                   onWheel={
-                    isStack
+                    isStack && !stackZoomed
                       ? (e) => {
                           e.stopPropagation();
                         }
@@ -182,15 +229,25 @@ export function PlayViewer({
                   }
                 >
                   {images.map((image, i) => (
-                    <img
+                    <PlayZoomableImage
                       key={image.src}
+                      ref={(handle) => {
+                        zoomRefs.current[i] = handle;
+                        if (i === 0 && handle) activeZoomRef.current = handle;
+                      }}
                       src={playImageSrc(image.src)}
                       alt={image.alt ?? `${work.title} — ${i + 1} of ${images.length}`}
                       width={image.width}
                       height={image.height}
                       className="play-viewer__stack-img"
-                      decoding="async"
                       loading={i === 0 ? "eager" : "lazy"}
+                      onZoomChange={(zoomed, scale) => handleZoomChange(i, zoomed, scale)}
+                      onActivate={() => {
+                        activeZoomRef.current = zoomRefs.current[i] ?? null;
+                        const scale = activeZoomRef.current?.getScale() ?? 1;
+                        setZoomLevel(Math.round(scale * 100));
+                      }}
+                      wheelZoom={!isStack}
                     />
                   ))}
                 </div>
@@ -198,6 +255,38 @@ export function PlayViewer({
                 <PlayIllustration name={work.illustration} />
               ) : null}
             </div>
+            {hasRasterImages ? (
+              <div className="play-viewer__zoom" role="toolbar" aria-label="Image zoom controls">
+                <button
+                  type="button"
+                  className="play-viewer__zoom-btn"
+                  aria-label="Zoom out"
+                  onClick={handleZoomOut}
+                >
+                  −
+                </button>
+                <span className="play-viewer__zoom-level" aria-live="polite">
+                  {zoomLevel}%
+                </span>
+                <button
+                  type="button"
+                  className="play-viewer__zoom-btn"
+                  aria-label="Zoom in"
+                  onClick={handleZoomIn}
+                >
+                  +
+                </button>
+                <button
+                  type="button"
+                  className="play-viewer__zoom-reset"
+                  aria-label="Reset zoom"
+                  onClick={handleZoomReset}
+                  disabled={zoomLevel === 100}
+                >
+                  Reset
+                </button>
+              </div>
+            ) : null}
             {isStack ? (
               <>
                 <span className="play-viewer__stack-cue play-viewer__stack-cue--desktop" aria-hidden="true">
