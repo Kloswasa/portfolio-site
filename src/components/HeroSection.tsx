@@ -30,9 +30,7 @@ export function HeroSection({
       <div className="hero-left relative z-10 flex flex-col justify-end bg-bg px-8 pb-12 pt-24 md:px-12 md:pb-20 md:pt-32">
         <SnapSectionReveal immediate className="flex flex-col">
           <SnapItem>
-            <span className="hero-eyebrow font-mono text-xs uppercase tracking-[0.16em] text-text-subtle">
-              {hero.eyebrow}
-            </span>
+            <p className="eyebrow font-bold text-accent">{hero.eyebrow}</p>
           </SnapItem>
 
           <SnapItem>

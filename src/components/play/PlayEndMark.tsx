@@ -42,7 +42,7 @@ export function PlayEndMark({ label, cta }: PlayEndMarkProps) {
           strokeWidth="1"
         />
       </svg>
-      <p className="play-end__label">{label}</p>
+      <p className="eyebrow mb-0">{label}</p>
       <Link className="play-end__cta" href={cta.href}>
         {cta.label}
       </Link>

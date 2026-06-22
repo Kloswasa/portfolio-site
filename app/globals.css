@@ -277,21 +277,21 @@
 /* Eyebrow / kicker — class `eyebrow`, NOT `overline`: Tailwind’s `overline` is text-decoration-line (a rule above glyphs). */
 @utility eyebrow {
   display: flex;
-  align-items: baseline;
-  gap: 0.35em;
-  width: fit-content;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   line-height: 1.25;
-  color: var(--color-accent);
-  text-decoration-line: underline;
-  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
   &::before {
-    content: "*";
+    content: "";
+    width: var(--spacing-8);
+    height: var(--spacing-px);
     flex-shrink: 0;
-    font-weight: 800;
+    background: var(--color-accent);
   }
 }
 

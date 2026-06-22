@@ -353,14 +353,6 @@
   opacity: 0.35;
 }
 
-.play-end__label {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-text-subtle);
-}
-
 .play-end__cta {
   display: inline-flex;
   align-items: center;

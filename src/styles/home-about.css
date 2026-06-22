@@ -1,9 +1,6 @@
 /* Home — About section (editorial field record) */
 
-.home-about {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border-subtle);
-}
+
 
 .home-about__inner {
   position: relative;
@@ -60,27 +57,6 @@
   .home-about__header {
     margin-bottom: var(--spacing-12);
   }
-}
-
-.home-about__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  margin-bottom: var(--spacing-4);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
-.home-about__eyebrow::before {
-  content: "";
-  width: var(--spacing-8);
-  height: var(--spacing-px);
-  flex-shrink: 0;
-  background: var(--color-accent);
 }
 
 .home-about__grid {

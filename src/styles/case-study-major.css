@@ -118,26 +118,6 @@
   color: var(--color-text-inverse);
 }
 
-.cs-major__hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3);
-  margin-bottom: var(--spacing-6);
-}
-
-.cs-major__hero-eyebrow::before {
-  content: "";
-  width: 1.5rem;
-  height: 1px;
-  background: var(--color-accent);
-  flex-shrink: 0;
-}
-
 .cs-major__hero-title {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 7vw, 5.75rem);
@@ -296,26 +276,6 @@
 
 .cs-major__section:last-of-type {
   border-bottom: none;
-}
-
-.cs-major__section-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-text-subtle);
-  margin-bottom: var(--spacing-3);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-3);
-}
-
-.cs-major__section-eyebrow::before {
-  content: "";
-  width: 1.25rem;
-  height: 1px;
-  background: var(--color-border);
-  flex-shrink: 0;
 }
 
 .cs-major__section-title {

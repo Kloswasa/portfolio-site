@@ -7,21 +7,6 @@
   position: relative;
 }
 
-.hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  margin-bottom: var(--spacing-8);
-}
-
-.hero-eyebrow::before {
-  content: "";
-  width: var(--spacing-8);
-  height: var(--spacing-px);
-  flex-shrink: 0;
-  background: var(--color-accent);
-}
-
 .hero-right {
   background: var(--color-primary);
   overflow: hidden;

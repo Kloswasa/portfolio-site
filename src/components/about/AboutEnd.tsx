@@ -9,7 +9,7 @@ interface AboutEndProps {
 export function AboutEnd({ copy }: AboutEndProps) {
   return (
     <ScrollReveal as="section" className="about-end">
-      <p className="about-end__kicker">{copy.kicker}</p>
+      <p className="eyebrow mb-0">{copy.kicker}</p>
       <h2 className="about-end__title">
         {copy.titleLead}
         <br />

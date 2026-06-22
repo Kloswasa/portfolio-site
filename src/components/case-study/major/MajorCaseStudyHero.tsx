@@ -64,7 +64,7 @@ export function MajorCaseStudyHero({ hero }: { hero: HeroData }) {
         </SnapItem>
 
         <SnapItem>
-          <div className="cs-major__hero-eyebrow">{hero.eyebrow}</div>
+          <div className="eyebrow text-accent">{hero.eyebrow}</div>
         </SnapItem>
 
         <SnapItem>

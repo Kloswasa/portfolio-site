@@ -90,7 +90,7 @@ export function HomeAboutSection() {
         </p>
 
         <SnapItem as="header" className="home-about__header">
-          <p className="home-about__eyebrow">About</p>
+          <p className="eyebrow font-bold text-accent">About</p>
         </SnapItem>
 
         <div className="home-about__grid">

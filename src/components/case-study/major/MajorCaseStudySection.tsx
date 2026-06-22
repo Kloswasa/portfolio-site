@@ -16,7 +16,7 @@ export function MajorCaseStudySection({
     <section className="cs-major__section" id={id}>
       <SnapSectionReveal amount={0.1}>
         <SnapItem>
-          <div className="cs-major__section-eyebrow">{section.eyebrow}</div>
+          <div className="eyebrow mb-3">{section.eyebrow}</div>
         </SnapItem>
         <SnapItem>
           <h2 className="cs-major__section-title">

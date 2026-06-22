@@ -8,7 +8,7 @@ export function AboutBlockHead({ block }: AboutBlockHeadProps) {
   return (
     <div className="about-block__head">
       <div>
-        <p className="about-block__kicker">{block.kicker}</p>
+        <p className="eyebrow mb-2 text-accent">{block.kicker}</p>
         <h2 className="about-block__title">{block.title}</h2>
       </div>
       <p className="about-block__info">

@@ -23,10 +23,7 @@ export function GalleryHero({
 
       <div className="gallery-hero__inner gallery-container">
         <div className="gallery-hero__copy">
-          <p className="gallery-hero__eyebrow">
-            <span className="gallery-hero__eyebrow-dash" aria-hidden="true" />
-            {meta.eyebrow}
-          </p>
+          <p className="eyebrow mb-0 text-text-muted">{meta.eyebrow}</p>
 
           <h1 className="gallery-hero__title">
             <span className="gallery-hero__title-line">{meta.titleLine1}</span>

@@ -142,14 +142,6 @@
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.about-block__kicker {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.16em;
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-2);
-}
-
 .about-block__title {
   margin: 0;
   font-family: var(--font-heading);
@@ -791,15 +783,6 @@
   padding: var(--spacing-24) var(--about-pad-x);
   text-align: center;
   border-top: 2px solid var(--color-primary);
-}
-
-.about-end__kicker {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-text-subtle);
 }
 
 .about-end__title {
