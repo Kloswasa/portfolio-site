@@ -79,7 +79,7 @@ const quizGameCaseStudy = {
           type: "imagePair",
           items: [
             {
-              src: "/projects/quiz-game/platypus.png",
+              src: "/projects/quiz-game/quiz-game-identical-platypus.png",
               alt: "Illustration of a platypus, representing the Curious Explorer personality type",
               caption:
                 "Platypus → the Curious Explorer. Symbol of individuality and being at peace alone.",
@@ -114,7 +114,7 @@ const quizGameCaseStudy = {
       blocks: [
         {
           type: "video",
-          src: "/projects/quiz-game/result-page.mp4",
+          src: "/projects/quiz-game/quiz-game-video-resultpage.mp4",
           poster: "/projects/quiz-game/result-page-poster.png",
           alt: "A 10-15 second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia",
           caption:
