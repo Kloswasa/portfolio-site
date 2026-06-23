@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
+import { SpecimenCard } from "@/src/components/ui/SpecimenCard";
 import { WorkCardSvg } from "@/src/components/WorkCardSvg";
 import { useTilt } from "@/src/hooks/useTilt";
 import type { WorkCardProject } from "@/src/lib/work/types";
@@ -16,64 +17,44 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
   const reduceMotion = useReducedMotion();
   const cardRef = useTilt<HTMLAnchorElement>(!reduceMotion);
   const [yearValue, yearLabel = ""] = project.yearLabel.split(" · ");
+  const cardClassName =
+    layout === "featured"
+      ? "specimen-card specimen-card--link specimen-card--featured"
+      : "specimen-card specimen-card--link";
 
   return (
     <Link
       href={project.href}
-      className={layout === "featured" ? "work-card work-card--featured" : "work-card"}
+      className={cardClassName}
       ref={cardRef}
       data-tilt={reduceMotion ? undefined : ""}
     >
-      <div
-        className="work-card__photo"
-        data-photo
-        data-has-cover={project.coverImage ? "" : undefined}
-        style={project.coverImage ? undefined : { background: project.theme }}
-      >
-        {project.coverImage ? (
-          <img
-            src={project.coverImage.src}
-            alt={project.coverImage.alt}
-            className="work-card__cover"
-            loading="lazy"
-            decoding="async"
-          />
-        ) : (
-          <WorkCardSvg variant={project.svgVariant} />
-        )}
-      </div>
-
-      <div className="work-card__dots" aria-hidden="true" />
-      <div className="work-card__gradient" aria-hidden="true" />
-      <div className="work-card__mat" aria-hidden="true" />
-
-      <div className="work-card__frame" aria-hidden="true">
-        {project.frame}
-      </div>
-
-      <div className="work-card__year-stamp" aria-hidden="true">
-        <div className="work-card__year-val">{yearValue}</div>
-        <div className="work-card__year-lbl">{yearLabel ?? ""}</div>
-      </div>
-
-      <div className="work-card__arrow" aria-hidden="true">
-        ↗
-      </div>
-
-      <div className="work-card__info">
-        <div className="work-card__classification">
-          <div className="work-card__class-line" aria-hidden="true" />
-          {project.classification}
-        </div>
-        <h3 className="work-card__title">{project.title}</h3>
-        <div className="work-card__tags">
-          {project.tags.map((tag) => (
-            <span key={tag} className="work-card__tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+      <SpecimenCard
+        media={
+          project.coverImage ? (
+            <img
+              src={project.coverImage.src}
+              alt={project.coverImage.alt}
+              className="specimen-card__cover"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <WorkCardSvg variant={project.svgVariant} />
+          )
+        }
+        mediaProps={{
+          "data-photo": "",
+          "data-has-cover": project.coverImage ? "" : undefined,
+          style: project.coverImage ? undefined : { background: project.theme },
+        }}
+        frame={project.frame}
+        stampValue={yearValue}
+        stampLabel={yearLabel}
+        classification={project.classification}
+        title={project.title}
+        tags={project.tags}
+      />
     </Link>
   );
 }

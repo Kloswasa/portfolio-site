@@ -1,4 +1,5 @@
 import { PlayCard } from "@/src/components/play/PlayCard";
+import { SectionBlockHead } from "@/src/components/ui/SectionBlockHead";
 import type { PlayMediumSection, PlayWork } from "@/src/lib/play/types";
 
 interface PlayMediumBlockProps {
@@ -20,13 +21,12 @@ export function PlayMediumBlock({
 
   return (
     <section className="play-block" data-medium={section.medium} hidden={hidden || undefined}>
-      <div className="play-block__head">
-        <h2 className="play-block__title">{section.title}</h2>
-        <p className="play-block__info">
-          <strong>{section.infoStrong}</strong>
-          {section.infoDetail}
-        </p>
-      </div>
+      <SectionBlockHead
+        title={section.title}
+        infoStrong={section.infoStrong}
+        infoDetail={section.infoDetail}
+        hideInfoOnMobile
+      />
 
       <div className="play-grid">
         {works.map((work) => (

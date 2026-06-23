@@ -1,4 +1,4 @@
-import { GalleryHero } from "@/src/components/gallery/GalleryHero";
+import { WorkHero } from "@/src/components/work/WorkHero";
 import type { PlayHeroMeta } from "@/src/lib/play/types";
 
 interface PlayHeroProps {
@@ -6,5 +6,5 @@ interface PlayHeroProps {
 }
 
 export function PlayHero({ meta }: PlayHeroProps) {
-  return <GalleryHero meta={meta} watermark=" 'Play' " />;
+  return <WorkHero meta={meta} watermark=" 'Play' " />;
 }

@@ -1,9 +1,10 @@
-import { GalleryView } from "@/src/components/gallery/GalleryView";
+import { WorkView } from "@/src/components/work/WorkView";
 import {
-  GALLERY_FILTER_OPTIONS,
-  GALLERY_HERO_META,
-  GALLERY_PROJECTS,
-} from "@/src/lib/gallery/data";
+  WORK_ARCHIVE_PROJECTS,
+  WORK_END_COPY,
+  WORK_FILTER_OPTIONS,
+  WORK_HERO_META,
+} from "@/src/lib/work/archive";
 
 export const metadata = {
   title: "Work",
@@ -14,10 +15,11 @@ export const metadata = {
 export default function WorkPage() {
   return (
     <main>
-      <GalleryView
-        projects={GALLERY_PROJECTS}
-        filterOptions={GALLERY_FILTER_OPTIONS}
-        heroMeta={GALLERY_HERO_META}
+      <WorkView
+        projects={WORK_ARCHIVE_PROJECTS}
+        filterOptions={WORK_FILTER_OPTIONS}
+        heroMeta={WORK_HERO_META}
+        endCopy={WORK_END_COPY}
       />
     </main>
   );

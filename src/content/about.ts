@@ -1,13 +1,13 @@
+/** Editorial page copy — types live in `src/lib/about/types.ts`. */
 import { siteConfig } from "@/src/lib/config";
 import type {
   AboutBlock,
-  AboutCurrentlyColumn,
+
   AboutEndCopy,
   AboutHeroMeta,
+  AboutHomeTeaser,
   AboutInstrumentGroup,
-  AboutPrinciple,
   AboutQuote,
-  AboutSpecimen,
   AboutStory,
   AboutTimelineEntry,
 } from "@/src/lib/about/types";
@@ -53,35 +53,6 @@ export const ABOUT_STORY: AboutStory = {
   signature: "\u2014 Klaus",
 };
 
-export const ABOUT_PRINCIPLES_BLOCK: AboutBlock = {
-  kicker: "\u00a7 02",
-  title: "What I believe",
-  infoStrong: "Four principles",
-  infoDetail: "The practice, distilled",
-};
-
-export const ABOUT_PRINCIPLES: AboutPrinciple[] = [
-  {
-    num: "1.",
-    term: ["Observe before solving"],
-    body: "Research is a posture, not a phase. I stay close to people, attend to the edge cases, and resist the urge to reach for an answer before I actually understand the question.",
-  },
-  {
-    num: "2.",
-    term: ["Structure ", { em: "and" }, " feeling"],
-    body: "A system can be rigorous and still be kind. The architecture should be sound; the surface should feel like it was made by a human who cared. Neither alone is enough.",
-  },
-  {
-    num: "3.",
-    term: ["Restraint is a decision"],
-    body: "The urge to add is powerful; the discipline to remove is rare. Most of my best work is what I chose to leave out \u2014 and learning to tell what\u2019s missing from what\u2019s simply quiet.",
-  },
-  {
-    num: "4.",
-    term: ["Ship, then steward"],
-    body: "Launch is the beginning, not the end. I stay involved through implementation and care about what happens to a thing after it\u2019s out in the world as much as before.",
-  },
-];
 
 export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
   kicker: "\u00a7 03",
@@ -129,7 +100,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
 ];
 
 export const ABOUT_INSTRUMENTS_BLOCK: AboutBlock = {
-  kicker: "\u00a7 04",
+  kicker: "\u00a7 02",
   title: "Instruments",
   infoStrong: "Curated, not exhaustive",
   infoDetail: "How the work gets made",
@@ -170,51 +141,25 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   },
 ];
 
-export const ABOUT_SPECIMENS_BLOCK: AboutBlock = {
-  kicker: "\u00a7 05",
-  title: "Specimens collected",
-  infoStrong: "Influences",
-  infoDetail: "Where the eye was trained",
+const practiceSkills =
+  ABOUT_INSTRUMENTS.find((group) => group.label === "Practice")?.tags.map(
+    (tag) => tag.label,
+  ) ?? [];
+
+/** Home `#about` section — derived from the full about record where possible. */
+export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
+  shortHeading: "I make small, considered tools.",
+  storyIntro:
+    "I'm a designer and creative technologist working out of Melbourne. Eight years across small studios and large platforms — currently independent, quietly available for product, editorial, and creative-code work.",
+  skills: practiceSkills,
+  statusLabel: "Open to work",
+  availabilityHeading: "Open to product design contracts.",
+  availabilityDescription:
+    "Two-week minimums. Melbourne / remote. Email is the best way.",
+  experience: "8 years",
 };
 
-export const ABOUT_SPECIMENS: AboutSpecimen[] = [
-  {
-    no: "\u2116 01",
-    name: "Anna Atkins",
-    desc: "The cyanotype mother. Where this whole palette begins.",
-    art: "cyanotype",
-  },
-  {
-    no: "\u2116 02",
-    name: "Botanical engraving",
-    desc: "Haeckel & Redout\u00e9 \u2014 warmth and precision at once.",
-    art: "engraving",
-  },
-  {
-    no: "\u2116 03",
-    name: "Risograph",
-    desc: "Grain, misregistration, the hand left visible.",
-    art: "riso",
-  },
-  {
-    no: "\u2116 04",
-    name: "Celestial atlases",
-    desc: "Old star maps. Wonder, drawn precisely.",
-    art: "celestial",
-  },
-  {
-    no: "\u2116 05",
-    name: "Japanese indigo",
-    desc: "Aizome \u2014 blue as craft, not just colour.",
-    art: "indigo",
-  },
-  {
-    no: "\u2116 06",
-    name: "New editorial serifs",
-    desc: "Garamond\u2019s living descendants. The voice of the type.",
-    art: "ampersand",
-  },
-];
+
 
 export const ABOUT_QUOTE: AboutQuote = {
   watermark: "Look twice",
@@ -223,43 +168,14 @@ export const ABOUT_QUOTE: AboutQuote = {
   source: "On the practice \u00b7 2024",
 };
 
-export const ABOUT_CURRENTLY_BLOCK: AboutBlock = {
-  kicker: "\u00a7 06",
-  title: "Currently",
-  infoStrong: "Field notes",
-  infoDetail: "What\u2019s in rotation",
-};
 
-export const ABOUT_CURRENTLY: AboutCurrentlyColumn[] = [
-  {
-    label: "Reading",
-    items: [
-      [{ em: "The Nature of Order" }, " \u2014 Christopher Alexander"],
-      ["Back issues of herbarium field guides"],
-    ],
-  },
-  {
-    label: "Listening",
-    items: [
-      ["Ambient & modern classical, mostly"],
-      [{ em: "Hania Rani" }, " on repeat in the studio"],
-    ],
-  },
-  {
-    label: "Looking at",
-    items: [
-      ["Digitised cyanotype archives"],
-      ["Risograph zines & specimen plates"],
-    ],
-  },
-];
 
 export const ABOUT_END_COPY: AboutEndCopy = {
   kicker: "The end of the record",
   titleLead: "If any of this resonates,",
   titleAccent: "let\u2019s make something.",
   actions: [
-    { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "solid" },
+    { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "primary" },
     { label: "See the work", href: "/work", variant: "ghost" },
     {
       label: "Download CV \u2193",

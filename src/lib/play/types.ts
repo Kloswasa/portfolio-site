@@ -7,13 +7,9 @@ export interface PlayFilterOption {
   label: string;
 }
 
-export interface PlayHeroMeta {
-  eyebrow: string;
-  titleLine1: string;
-  titleLine2: string;
-  description: string;
-  stats: { label: string; value: string }[];
-}
+import type { WorkHeroMeta } from "@/src/lib/work/types";
+
+export type PlayHeroMeta = WorkHeroMeta;
 
 export interface PlayMediumSection {
   medium: PlayMedium;
@@ -21,6 +17,11 @@ export interface PlayMediumSection {
   infoStrong: string;
   infoDetail: string;
 }
+
+import type { PageEndCopy } from "@/src/lib/page-end/types";
+
+export type PlayEndAction = PageEndCopy["actions"][number];
+export type PlayEndCopy = PageEndCopy;
 
 export interface PlayImage {
   src: string;

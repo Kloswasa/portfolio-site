@@ -1,11 +1,11 @@
-import type { GalleryHeroMeta } from "@/src/lib/gallery/types";
+import type { WorkHeroMeta } from "@/src/lib/work/types";
 
 /** Inline rich text: plain strings with optional emphasised segments. */
 export type RichSegment = string | { em: string };
 export type RichText = RichSegment[];
 
-/** Hero reuses the shared gallery hero shape. */
-export type AboutHeroMeta = GalleryHeroMeta & { watermark: string };
+/** Hero reuses the shared work page hero shape. */
+export type AboutHeroMeta = WorkHeroMeta & { watermark: string };
 
 /** Section header used across the about page (matches the play block-head pattern). */
 export interface AboutBlock {
@@ -26,11 +26,6 @@ export interface AboutStory {
   signature: string;
 }
 
-export interface AboutPrinciple {
-  num: string;
-  term: RichText;
-  body: string;
-}
 
 export interface AboutTimelineEntry {
   year: string;
@@ -50,20 +45,7 @@ export interface AboutInstrumentGroup {
   tags: AboutInstrumentTag[];
 }
 
-export type AboutSpecimenArt =
-  | "cyanotype"
-  | "engraving"
-  | "riso"
-  | "celestial"
-  | "indigo"
-  | "ampersand";
 
-export interface AboutSpecimen {
-  no: string;
-  name: string;
-  desc: string;
-  art: AboutSpecimenArt;
-}
 
 export interface AboutQuote {
   watermark: string;
@@ -71,20 +53,19 @@ export interface AboutQuote {
   source: string;
 }
 
-export interface AboutCurrentlyColumn {
-  label: string;
-  items: RichText[];
-}
 
-export interface AboutEndAction {
-  label: string;
-  href: string;
-  variant: "solid" | "ghost";
-}
+import type { PageEndCopy } from "@/src/lib/page-end/types";
 
-export interface AboutEndCopy {
-  kicker: string;
-  titleLead: string;
-  titleAccent: string;
-  actions: AboutEndAction[];
+export type AboutEndAction = PageEndCopy["actions"][number];
+export type AboutEndCopy = PageEndCopy;
+
+/** Home page about teaser — short slice of the full about record. */
+export interface AboutHomeTeaser {
+  shortHeading: string;
+  storyIntro: string;
+  skills: string[];
+  statusLabel: string;
+  availabilityHeading: string;
+  availabilityDescription: string;
+  experience: string;
 }

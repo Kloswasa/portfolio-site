@@ -7,14 +7,15 @@
 @import "tailwindcss";
 @import "../src/styles/theme.css";
 @import "../src/styles/hero.css";
-@import "../src/styles/work-card.css";
+@import "../src/styles/specimen-card.css";
 @import "../src/styles/case-study-major.css";
 @import "../src/styles/filter-bar.css";
-@import "../src/styles/gallery.css";
+@import "../src/styles/section-block.css";
+@import "../src/styles/page-end.css";
+@import "../src/styles/work-page.css";
 @import "../src/styles/play.css";
 @import "../src/styles/about.css";
-@import "../src/styles/home-about.css";
-@import "../src/styles/footer.css";
+@import "../src/styles/home.css";
 
 /* ── Dark mode: class-based (add/remove .dark on <html>) ── */
 @variant dark (&:is(.dark *));
@@ -293,6 +294,23 @@
     flex-shrink: 0;
     background: var(--color-accent);
   }
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    align-self: center;
+    width: 1em;
+    height: 1em;
+    margin-left: (var(--spacing-8));
+    background-color: var(--color-accent);
+    mask-image: url("/images/home/material-symbols_asterisk.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url("/images/home/material-symbols_asterisk.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+  }
 }
 
 @utility clamp-2 {
@@ -370,5 +388,59 @@
     color: var(--color-text);
     border-bottom-color: var(--color-accent);
   }
+}
+
+/* ============================================================
+   SITE FOOTER
+   ============================================================ */
+
+.site-footer {
+  background: var(--color-header-bg);
+  border-top: 1px solid color-mix(in srgb, var(--color-text-inverse) 6%, transparent);
+}
+
+.site-footer__inner {
+  width: 100%;
+  max-width: 128rem;
+  margin-inline: auto;
+  padding-inline: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding-block: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    padding-inline: var(--spacing-10);
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer__inner {
+    padding-inline: var(--spacing-16);
+  }
+}
+
+@media (min-width: 640px) {
+  .site-footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.site-footer__left {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-subtle);
+}
+
+.site-footer__right {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--color-tertiary);
 }
 

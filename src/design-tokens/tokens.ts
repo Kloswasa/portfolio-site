@@ -28,7 +28,7 @@ export const tokens: TokenRecord = {
     "darkValue": "#1E3A6B"
   },
   "color.text": {
-    "value": "#0D1B3E",
+    "value": "#152952",
     "type": "color",
     "cssVar": "--color-text",
     "darkValue": "#F7F1E6"
@@ -76,7 +76,7 @@ export const tokens: TokenRecord = {
     "darkValue": "#5B8CC8"
   },
   "color.headerBg": {
-    "value": "#0D1B3E",
+    "value": "#041F62",
     "type": "color",
     "cssVar": "--color-header-bg",
     "darkValue": "#060E22"

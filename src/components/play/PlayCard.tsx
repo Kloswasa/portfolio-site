@@ -1,7 +1,10 @@
 "use client";
 
+import { useReducedMotion } from "framer-motion";
 import { PlayCanvas } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
+import { SpecimenCard } from "@/src/components/ui/SpecimenCard";
+import { useTilt } from "@/src/hooks/useTilt";
 import type { PlayWork } from "@/src/lib/play/types";
 import { playImageSrc } from "@/src/lib/play/utils";
 
@@ -12,12 +15,17 @@ interface PlayCardProps {
 }
 
 export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
+  const reduceMotion = useReducedMotion();
+  const cardRef = useTilt<HTMLElement>(!reduceMotion);
   const isCode = work.medium === "code";
+  const [stampValue, stampLabel = ""] = work.cardTools.split(" · ");
 
   return (
     <article
-      className="play-card"
+      className="specimen-card specimen-card--button"
       data-medium={work.medium}
+      ref={cardRef}
+      data-tilt={reduceMotion ? undefined : ""}
       onClick={() => onOpen(work)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -29,48 +37,43 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
       tabIndex={0}
       aria-label={`View ${work.title}`}
     >
-      <div className="play-card__media">
-        {isCode && work.sketch ? (
-          <PlayCanvas sketch={work.sketch} paused={motionPaused} />
-        ) : work.imageSrc ? (
-          <img
-            src={playImageSrc(work.imageSrc)}
-            alt={work.imageAlt ?? work.title}
-            width={work.imageWidth}
-            height={work.imageHeight}
-            className="play-card__image"
-            loading="lazy"
-            decoding="async"
-          />
-        ) : work.illustration ? (
-          <PlayIllustration name={work.illustration} />
-        ) : null}
-      </div>
-
-      <div className="play-card__grad" aria-hidden="true" />
-      <div className="play-card__mat" aria-hidden="true" />
-
-      <span className="play-card__frame">{work.index}</span>
-
-      {isCode ? (
-        <span
-          className={`play-card__badge${motionPaused ? " play-card__badge--paused" : ""}`}
-        >
-          <span className="play-card__live-dot" aria-hidden="true" />
-          Live
-        </span>
-      ) : (
-        <span className="play-card__badge play-card__badge--medium">{work.tag}</span>
-      )}
-
-      <div className="play-card__info">
-        <p className="play-card__tools">
-          <span className="play-card__tools-line" aria-hidden="true" />
-          {work.cardTools}
-        </p>
-        <h3 className="play-card__title">{work.title}</h3>
-        <p className="play-card__desc">{work.cardDescription}</p>
-      </div>
+      <SpecimenCard
+        media={
+          isCode && work.sketch ? (
+            <PlayCanvas sketch={work.sketch} paused={motionPaused} />
+          ) : work.imageSrc ? (
+            <img
+              src={playImageSrc(work.imageSrc)}
+              alt={work.imageAlt ?? work.title}
+              width={work.imageWidth}
+              height={work.imageHeight}
+              className="specimen-card__cover"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : work.illustration ? (
+            <PlayIllustration name={work.illustration} />
+          ) : null
+        }
+        mediaProps={{ "data-photo": "" }}
+        frame={work.index}
+        stampValue={stampValue}
+        stampLabel={stampLabel}
+        classification={
+          isCode ? (
+            <span className="specimen-card__live-label">
+              {motionPaused ? "Paused" : "Live"}
+              {!motionPaused ? (
+                <span className="specimen-card__live-dot" aria-hidden="true" />
+              ) : null}
+            </span>
+          ) : (
+            work.tag
+          )
+        }
+        title={work.title}
+        tags={work.tools}
+      />
     </article>
   );
 }

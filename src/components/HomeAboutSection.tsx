@@ -3,6 +3,7 @@ import {
   SnapItem,
   SnapSectionReveal,
 } from "@/src/components/SnapSectionReveal";
+import { ABOUT_HOME_TEASER } from "@/src/lib/about";
 import { siteConfig } from "@/src/lib/config";
 
 const SECTION_NUMBER = "03";
@@ -78,28 +79,29 @@ function HomeAboutBotanical() {
 }
 
 export function HomeAboutSection() {
-  const { about, email, location } = siteConfig;
-  const skills = about.skills.slice(0, VISIBLE_SKILLS);
-  const remainingSkills = about.skills.length - VISIBLE_SKILLS;
+  const { email, location } = siteConfig;
+  const teaser = ABOUT_HOME_TEASER;
+  const skills = teaser.skills.slice(0, VISIBLE_SKILLS);
+  const remainingSkills = teaser.skills.length - VISIBLE_SKILLS;
 
   return (
     <section id="about" className="home-about">
-      <SnapSectionReveal className="home-about__inner">
-        <p className="home-about__watermark" aria-hidden="true">
+      <SnapSectionReveal className="home-section__inner">
+        <p className="home-section__watermark" aria-hidden="true">
           {SECTION_NUMBER}
         </p>
 
-        <SnapItem as="header" className="home-about__header">
-          <p className="eyebrow font-bold text-accent">About</p>
+        <SnapItem as="header" className="home-section__header">
+          <p className="eyebrow mb-0">About</p>
         </SnapItem>
 
         <div className="home-about__grid">
           <SnapItem className="home-about__main">
-            <h2 className="home-about__heading">
-              <AboutHeading text={about.shortHeading} />
+            <h2 className="home-section__heading">
+              <AboutHeading text={teaser.shortHeading} />
             </h2>
 
-            <p className="home-about__lead">{about.storyIntro}</p>
+            <p className="home-about__lead">{teaser.storyIntro}</p>
 
             <div className="home-about__skills" aria-label="Focus areas">
               {skills.map((skill) => (
@@ -126,21 +128,21 @@ export function HomeAboutSection() {
             <div className="home-about__panel-inner">
               <p className="home-about__status">
                 <span className="home-about__status-dot" aria-hidden="true" />
-                Open for work
+                {teaser.statusLabel}
               </p>
 
               <h3 className="home-about__panel-heading">
-                {about.availabilityHeading}
+                {teaser.availabilityHeading}
               </h3>
 
               <p className="home-about__panel-copy">
-                {about.availabilityDescription}
+                {teaser.availabilityDescription}
               </p>
 
               <dl className="home-about__stats">
                 <div>
                   <dt className="home-about__stat-label">Experience</dt>
-                  <dd className="home-about__stat-value">{about.experience}</dd>
+                  <dd className="home-about__stat-value">{teaser.experience}</dd>
                 </div>
                 <div>
                   <dt className="home-about__stat-label">Based in</dt>
@@ -156,7 +158,7 @@ export function HomeAboutSection() {
             </div>
 
             <div className="home-about__stamp" aria-hidden="true">
-              <strong>{about.experience}</strong>
+              <strong>{teaser.experience}</strong>
               <span>Field record · {SECTION_NUMBER}</span>
             </div>
           </SnapItem>

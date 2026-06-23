@@ -1,4 +1,4 @@
-export function GalleryHeroBotanical() {
+export function WorkHeroBotanical() {
   return (
     <svg
       viewBox="0 0 280 420"

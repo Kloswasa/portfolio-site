@@ -1,4 +1,6 @@
+/** Editorial page copy — types live in `src/lib/play/types.ts`. Runtime sketches in `src/lib/play/sketches.ts`. */
 import type {
+  PlayEndCopy,
   PlayFilterOption,
   PlayHeroMeta,
   PlayMediumSection,
@@ -82,7 +84,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     description:
       "Spot illustration for Australia Calls — a friendly guide character that makes cultural trivia feel like a conversation, not a test.",
     cardDescription: "A guide character for the Australia Calls quiz.",
-    tools: ["Digital", "Character", "Editorial"],
+    tools: ["Procreate", "Digital", "Character" ],
     tag: "Character",
     cardTools: "Digital · 2024",
     imageSrc: "play/illustration/illustration-AUcall-cover.png",
@@ -111,12 +113,12 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     medium: "illustration",
     index: "I·02",
     title: "Ganesha",
-    meta: "Ink · 2024",
+    meta: "Digital · 2024",
     dim: "Deity study · 2024",
     description:
       "A hand-rendered Ganesha study — ornamental line work balanced against open negative space.",
     cardDescription: "Ornamental line work around a Ganesha figure.",
-    tools: ["Ink", "Line art", "Cultural"],
+    tools: ["Illustrator", "Photoshop", "Cultural"],
     tag: "Cultural",
     cardTools: "Ink · 2024",
     imageSrc: "play/illustration/illustration-ganesha.png",
@@ -132,7 +134,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     description:
       "Illustration exploring Thai home fragrance rituals — incense, herbal compress, and floral garland motifs in a warm domestic palette.",
     cardDescription: "Thai home fragrance motifs in a warm palette.",
-    tools: ["Digital", "Heritage", "Product"],
+    tools: ["Digital", "Heritage", "Illustrator", "Photoshop"],
     tag: "Heritage",
     cardTools: "Digital · 2024",
     imageSrc: "play/illustration/illustration-thhom.png",
@@ -154,12 +156,12 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     index: "I·04",
     title: "Compose Zone",
     meta: "Digital · 2023",
-    dim: "Layout study · 2023",
+    dim: "Booth design · 2023",
     description:
       "A composition exercise in type and image zones — testing how headline, body, and illustration share a single page without crowding.",
     cardDescription: "Type and image zones sharing one page.",
-    tools: ["Digital", "Layout", "Typography"],
-    tag: "Editorial",
+    tools: [ "Photoshop", "Printing"],
+    tag: "Booth design",
     cardTools: "Digital · 2023",
     imageSrc: "play/illustration/illustration-kuendee-backdrop.png",
     imageAlt: "Compose Zone illustration",
@@ -185,7 +187,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
       "A quiet garden scene — layered foliage, dappled light, and small moments of growth observed at walking pace.",
     cardDescription: "Layered foliage and dappled light in the garden.",
     tools: ["Watercolor", "Botanical", "Scene"],
-    tag: "Botanical",
+    tag: "Packaging",
     cardTools: "Watercolor · 2023",
     imageSrc: "play/illustration/illustration-bupha.png",
     imageAlt: "In the Garden illustration",
@@ -346,9 +348,12 @@ export const PLAY_WORKS = PLAY_SHOW_CODE
   ? ALL_PLAY_WORKS
   : ALL_PLAY_WORKS.filter((work) => work.medium !== "code");
 
-export const PLAY_END_COPY = {
-  label: PLAY_SHOW_CODE
-    ? "End of play · 12 experiments · ongoing"
-    : "End of play · 6 illustrations · ongoing",
-  cta: { label: "See the client work →", href: "/work" },
+
+export const PLAY_END_COPY: PlayEndCopy = {
+  kicker: "The end of the record",
+  titleLead: "If this is not enough,",
+  titleAccent: "let\u2019s see my curated projects.",
+  actions: [
+    { label: "See the works →", href: "/work", variant: "primary" },
+  ],
 };

@@ -8,7 +8,7 @@ export type CatalogCategory =
   | "about"
   | "play"
   | "case-study"
-  | "gallery";
+  | "work";
 
 export type CatalogEntry = {
   id: string;
@@ -29,7 +29,7 @@ export const CATALOG_CATEGORIES: { key: CatalogCategory; label: string }[] = [
   { key: "about", label: "About page" },
   { key: "play", label: "Play page" },
   { key: "case-study", label: "Case studies" },
-  { key: "gallery", label: "Gallery" },
+  { key: "work", label: "Work" },
 ];
 
 export const COMPONENT_CATALOG: CatalogEntry[] = [
@@ -156,13 +156,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     description: "Polaroid-style project card with tilt and classification stamp.",
     usedOn: "/ · /work",
   },
-  {
-    id: "project-card",
-    name: "ProjectCard",
-    path: "src/components/ProjectCard.tsx",
-    category: "cards",
-    description: "Compact card with cover, tech badges, and external links.",
-  },
+  
   {
     id: "play-card",
     name: "PlayCard",
@@ -249,20 +243,12 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     usedOn: "/about",
   },
   {
-    id: "about-end",
-    name: "AboutEnd",
-    path: "src/components/about/AboutEnd.tsx",
-    category: "about",
-    description: "Closing CTA block with primary and ghost actions.",
-    usedOn: "/about",
-  },
-  {
-    id: "play-end-mark",
-    name: "PlayEndMark",
-    path: "src/components/play/PlayEndMark.tsx",
-    category: "play",
-    description: "Play page closing ornament and link.",
-    usedOn: "/play",
+    id: "page-end-section",
+    name: "PageEndSection",
+    path: "src/components/ui/PageEndSection.tsx",
+    category: "sections",
+    description: "Shared end-of-page CTA with kicker, title, and actions.",
+    usedOn: "/play, /work, /about",
   },
   {
     id: "major-hero",
@@ -289,17 +275,19 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     usedOn: "/work/[slug]",
   },
   {
-    id: "gallery-hero",
-    name: "GalleryHero",
-    path: "src/components/gallery/GalleryHero.tsx",
-    category: "gallery",
-    description: "Gallery page hero with botanical accent.",
+    id: "work-hero",
+    name: "WorkHero",
+    path: "src/components/work/WorkHero.tsx",
+    category: "work",
+    description: "Work page hero with botanical accent.",
+    usedOn: "/work · /about · /play",
   },
   {
-    id: "gallery-grid",
-    name: "GalleryGrid",
-    path: "src/components/gallery/GalleryGrid.tsx",
-    category: "gallery",
-    description: "Responsive masonry-style image grid.",
+    id: "work-grid",
+    name: "WorkGrid",
+    path: "src/components/work/WorkGrid.tsx",
+    category: "work",
+    description: "Responsive archive grid for work entries.",
+    usedOn: "/work",
   },
 ];

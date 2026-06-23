@@ -16,6 +16,23 @@ type HeroSectionProps = {
   secondaryCta?: HeroCta;
 };
 
+function AboutHeading({ text }: { text: string }) {
+  const emphasis = "intention & care";
+  const index = text.indexOf(emphasis);
+
+  if (index === -1) {
+    return <>{text}</>;
+  }
+
+  return (
+    <>
+      {text.slice(0, index)}
+      <em>{emphasis}</em>
+      {text.slice(index + emphasis.length)}
+    </>
+  );
+}
+
 export function HeroSection({
   primaryCta = siteConfig.hero.primaryCta,
   secondaryCta = siteConfig.hero.secondaryCta,
@@ -30,7 +47,7 @@ export function HeroSection({
       <div className="hero-left relative z-10 flex flex-col justify-end bg-bg px-8 pb-12 pt-24 md:px-12 md:pb-20 md:pt-32">
         <SnapSectionReveal immediate className="flex flex-col">
           <SnapItem>
-            <p className="eyebrow font-bold text-accent">{hero.eyebrow}</p>
+            <p className="eyebrow">{hero.eyebrow}</p>
           </SnapItem>
 
           <SnapItem>
@@ -42,18 +59,18 @@ export function HeroSection({
           </SnapItem>
 
           <SnapItem>
-            <p className="mb-8 pl-1 font-body text-lg font-medium text-text-muted md:mb-12 md:text-xl">
-              {hero.role}
+            <p className="hero-role mb-8 pl-1 font-heading text-lrg font-medium text-text-muted md:mb-12 md:text-xl">
+              <AboutHeading text={hero.role} />
             </p>
           </SnapItem>
 
           <SnapItem>
-            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm">
+            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm text-justify">
               {hero.description}
             </p>
           </SnapItem>
 
-          <SnapItem className="flex flex-wrap items-center gap-4">
+          <SnapItem className="flex flex-wrap items-center gap-6">
             <Link className="btn btn-primary" href={primaryCta.href}>
               {primaryCta.label}
             </Link>

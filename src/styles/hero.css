@@ -91,6 +91,11 @@
   color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
 }
 
+.hero-role em {
+  font-style: italic;
+  color: var(--color-tertiary);
+}
+
 @keyframes hero-scroll-pulse {
   0% {
     top: -100%;

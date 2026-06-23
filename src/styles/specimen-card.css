@@ -1,24 +1,34 @@
-/* Shared work card — site-wide specimen card */
+/* Shared specimen card — WorkCard + PlayCard */
 
-.work-card {
-  --work-card-surface: var(--color-surface);
-  --work-card-border: var(--color-border-subtle);
-  --work-card-accent: var(--color-accent);
-  --work-card-primary: var(--color-primary);
+.specimen-card {
+  --specimen-card-surface: var(--color-surface);
+  --specimen-card-border: var(--color-border-subtle);
+  --specimen-card-accent: var(--color-accent);
+  --specimen-card-primary: var(--color-primary);
 
   position: relative;
   display: block;
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  border: 1px solid var(--work-card-border);
-  background: var(--work-card-surface);
-  text-decoration: none;
+  border: 1px solid var(--specimen-card-border);
+  background: var(--specimen-card-surface);
   color: inherit;
+}
+
+.specimen-card--link {
+  text-decoration: none;
+}
+
+.specimen-card[data-tilt] {
   transform-style: preserve-3d;
   will-change: transform;
 }
-/* Featured mosaic — one tall card beside two standard cards */
-.work-card--featured {
+
+.specimen-card--button {
+  cursor: pointer;
+}
+
+.specimen-card--featured {
   aspect-ratio: auto;
   height: 100%;
   min-height: 18rem;
@@ -45,19 +55,19 @@
   min-height: 0;
 }
 
-.featured-mosaic .work-card {
+.featured-mosaic .specimen-card {
   aspect-ratio: auto;
   height: 100%;
   min-height: 14rem;
 }
 
 @media (min-width: 768px) {
-  .featured-mosaic .work-card {
+  .featured-mosaic .specimen-card {
     min-height: 0;
   }
 }
 
-.work-card__photo {
+.specimen-card__media {
   position: absolute;
   inset: 0;
   display: grid;
@@ -66,7 +76,15 @@
   transition: transform 280ms ease;
 }
 
-.work-card__cover {
+.specimen-card__media svg,
+.specimen-card__media canvas,
+.specimen-card__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.specimen-card__cover {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -74,12 +92,12 @@
   object-fit: cover;
 }
 
-.work-card__svg {
+.specimen-card__svg {
   width: 72%;
   height: auto;
 }
 
-.work-card__dots {
+.specimen-card__dots {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -91,19 +109,19 @@
   transition: opacity 280ms ease;
 }
 
-.work-card__gradient {
+.specimen-card__gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
     transparent 35%,
-    color-mix(in srgb, var(--work-card-primary) 72%, transparent) 100%
+    color-mix(in srgb, var(--specimen-card-primary) 72%, transparent) 100%
   );
   opacity: 0.72;
   transition: opacity 280ms ease;
 }
 
-.work-card__mat {
+.specimen-card__mat {
   position: absolute;
   inset: 0.85rem;
   border: 1px solid color-mix(in srgb, var(--color-text-inverse) 18%, transparent);
@@ -111,37 +129,39 @@
   transition: border-color 280ms ease, opacity 280ms ease;
 }
 
-.work-card__frame {
+.specimen-card__frame {
   position: absolute;
   top: 1rem;
   left: 1rem;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 1rem;
   letter-spacing: 0.14em;
-  color: color-mix(in srgb, var(--color-text-inverse) 72%, transparent);
+  color: var(--specimen-card-accent);
+  opacity: 0.32;
+  transition: opacity 280ms ease;
 }
 
-.work-card__year-stamp,
-.work-card__arrow {
+.specimen-card__year-stamp,
+.specimen-card__asterisk {
   position: absolute;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 240ms ease, transform 240ms ease;
 }
 
-.work-card__year-stamp {
-  top: 1rem;
+.specimen-card__year-stamp {
   right: 1rem;
+  bottom: 3rem;
   text-align: right;
 }
 
-.work-card__year-val {
+.specimen-card__year-val {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   color: var(--color-text-inverse);
 }
 
-.work-card__year-lbl {
+.specimen-card__year-lbl {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   letter-spacing: 0.12em;
@@ -149,14 +169,14 @@
   color: color-mix(in srgb, var(--color-text-inverse) 70%, transparent);
 }
 
-.work-card__arrow {
-  top: 3.25rem;
+.specimen-card__asterisk {
   right: 1rem;
-  font-size: 1.25rem;
-  color: var(--work-card-accent);
+  bottom: -0.25rem;
+  font-size: 2.5rem;
+  color: var(--specimen-card-accent);
 }
 
-.work-card__info {
+.specimen-card__info {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -166,7 +186,7 @@
   transition: transform 280ms ease;
 }
 
-.work-card__classification {
+.specimen-card__classification {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -177,27 +197,40 @@
   color: color-mix(in srgb, var(--color-text-inverse) 72%, transparent);
 }
 
-.work-card__class-line {
+.specimen-card__class-line {
   width: 1.25rem;
   height: 1px;
-  background: var(--work-card-accent);
+  background: var(--specimen-card-accent);
 }
 
-.work-card__title {
+.specimen-card__live-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.specimen-card__live-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--specimen-card-accent);
+  animation: specimen-card-pulse 1.6s ease-in-out infinite;
+}
+
+.specimen-card__title {
   margin-top: 0.45rem;
   font-size: 1.2rem;
   line-height: 1.2;
   color: var(--color-text-inverse);
 }
 
-.work-card__tags {
+.specimen-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: 0.55rem;
 }
 
-.work-card__tag {
+.specimen-card__tag {
   font-family: var(--font-mono);
   font-size: 0.58rem;
   letter-spacing: 0.08em;
@@ -207,44 +240,63 @@
   padding: 0.2rem 0.4rem;
 }
 
-.work-card:hover .work-card__dots,
-.work-card:focus-visible .work-card__dots {
+.specimen-card:hover .specimen-card__dots,
+.specimen-card:focus-visible .specimen-card__dots {
   opacity: 0.35;
 }
 
-.work-card:hover .work-card__gradient,
-.work-card:focus-visible .work-card__gradient {
+.specimen-card:hover .specimen-card__gradient,
+.specimen-card:focus-visible .specimen-card__gradient {
   opacity: 0.92;
 }
 
-.work-card:hover .work-card__mat,
-.work-card:focus-visible .work-card__mat {
+.specimen-card:hover .specimen-card__mat,
+.specimen-card:focus-visible .specimen-card__mat {
   opacity: 0.9;
-  border-color: color-mix(in srgb, var(--work-card-accent) 55%, var(--color-text-inverse));
+  border-color: color-mix(in srgb, var(--specimen-card-accent) 55%, var(--color-text-inverse));
 }
 
-.work-card:hover .work-card__year-stamp,
-.work-card:hover .work-card__arrow,
-.work-card:focus-visible .work-card__year-stamp,
-.work-card:focus-visible .work-card__arrow {
+.specimen-card:hover .specimen-card__frame,
+.specimen-card:focus-visible .specimen-card__frame {
+  opacity: 1;
+}
+
+.specimen-card:hover .specimen-card__year-stamp,
+.specimen-card:hover .specimen-card__asterisk,
+.specimen-card:focus-visible .specimen-card__year-stamp,
+.specimen-card:focus-visible .specimen-card__asterisk {
   opacity: 1;
   transform: translateY(0);
 }
 
-.work-card:hover .work-card__info,
-.work-card:focus-visible .work-card__info {
+.specimen-card:hover .specimen-card__info,
+.specimen-card:focus-visible .specimen-card__info {
   transform: translateY(0);
 }
 
+@keyframes specimen-card-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .work-card,
-  .work-card__photo,
-  .work-card__dots,
-  .work-card__gradient,
-  .work-card__mat,
-  .work-card__year-stamp,
-  .work-card__arrow,
-  .work-card__info {
+  .specimen-card,
+  .specimen-card__media,
+  .specimen-card__dots,
+  .specimen-card__gradient,
+  .specimen-card__mat,
+  .specimen-card__frame,
+  .specimen-card__year-stamp,
+  .specimen-card__asterisk,
+  .specimen-card__info,
+  .specimen-card__live-dot {
     transition: none;
+    animation: none;
   }
 }

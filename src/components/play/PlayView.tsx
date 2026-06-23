@@ -1,10 +1,11 @@
 "use client";
 
 import { FilterBar, FilterBarAction } from "@/src/components/ui/FilterBar";
-import { PlayEndMark } from "@/src/components/play/PlayEndMark";
+import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { PlayHero } from "@/src/components/play/PlayHero";
 import { PlayMediumBlock } from "@/src/components/play/PlayMediumBlock";
 import { PlayViewer } from "@/src/components/play/PlayViewer";
+import { PlayEndCopy } from "@/src/lib/play/types";
 import type {
   PlayFilterKey,
   PlayFilterOption,
@@ -20,11 +21,9 @@ interface PlayViewProps {
   filterOptions: PlayFilterOption[];
   heroMeta: PlayHeroMeta;
   mediumSections: PlayMediumSection[];
-  endCopy: {
-    label: string;
-    cta: { label: string; href: string };
-  };
+  endCopy: PlayEndCopy;
 }
+
 
 export function PlayView({
   works,
@@ -73,7 +72,7 @@ export function PlayView({
         
       />
 
-      <div className="play-gallery play-container">
+      <div className="play-body play-container">
         {mediumSections.map((section) => (
           <PlayMediumBlock
             key={section.medium}
@@ -85,7 +84,7 @@ export function PlayView({
           />
         ))}
 
-        <PlayEndMark label={endCopy.label} cta={endCopy.cta} />
+        <PageEndSection copy={endCopy} showOrnament />
       </div>
 
       <PlayViewer

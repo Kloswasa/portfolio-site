@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { PlayCard } from "@/src/components/play/PlayCard";
-import { PlayEndMark } from "@/src/components/play/PlayEndMark";
+import { PLAY_END_COPY } from "@/src/content/play";
+import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { FilterBar } from "@/src/components/ui/FilterBar";
 import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
 import NavRippleLink from "@/src/components/ui/NavRippleLink";
@@ -15,7 +16,7 @@ import {
 import { FeaturedProjectStagger } from "@/src/components/FeaturedProjectStagger";
 import { MenuButton } from "@/src/components/MenuButton";
 import { NavProvider } from "@/src/context/NavContext";
-import { PLAY_WORKS } from "@/src/lib/play/data";
+import { PLAY_WORKS } from "@/src/lib/play";
 import type { WorkCardProject } from "@/src/lib/work/types";
 
 const FILTER_OPTIONS = [
@@ -36,7 +37,7 @@ export function FilterBarDemo() {
       active={active}
       count={count}
       onFilter={setActive}
-      containerClassName="gallery-container"
+      containerClassName="work-container"
     />
   );
 }
@@ -162,13 +163,8 @@ export function MenuButtonDemo() {
   );
 }
 
-export function PlayEndMarkDemo() {
-  return (
-    <PlayEndMark
-      label="End of the play index"
-      cta={{ label: "Back to home", href: "/" }}
-    />
-  );
+export function PageEndSectionDemo() {
+  return <PageEndSection copy={PLAY_END_COPY} showOrnament />;
 }
 
 export function CatalogNav({ sections }: { sections: { id: string; label: string }[] }) {

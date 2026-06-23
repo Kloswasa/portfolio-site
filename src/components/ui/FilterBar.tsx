@@ -12,7 +12,7 @@ export interface FilterBarProps<T extends string> {
   active: T;
   count: number;
   onFilter: (key: T) => void;
-  /** Page layout container class (e.g. `gallery-container`, `play-container`). */
+  /** Page layout container class (e.g. `work-container`, `play-container`). */
   containerClassName: string;
   ariaLabel?: string;
   tabAriaLabel?: string;

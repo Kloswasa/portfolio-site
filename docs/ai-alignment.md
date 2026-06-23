@@ -34,7 +34,7 @@ This document compares the **Portfolio-2026** `CLAUDE.md` (on Desktop) with the 
 
 | `CLAUDE.md` | This repo | **Better option** |
 |-------------|-----------|-------------------|
-| `components/` with Button, Badge, Nav, **etc. (7 fixed names)** | `src/components/` (e.g. Header, ProjectCard, ContactForm, AnimatedSection), `components/ui/CopyButton` | **This repo** — actual imports and paths. |
+| `components/` with Button, Badge, Nav, **etc. (7 fixed names)** | `src/components/` (e.g. Header, ContactForm, AnimatedSection), `components/ui/CopyButton` | **This repo** — actual imports and paths. |
 | `lib/projects.ts` at root | `src/lib/projects.ts`, `src/lib/config.ts` | **This repo** (`src/lib/`). |
 | `content/projects/*.ts` | Not present yet; data in `src/lib/projects.ts` | **This repo** until case studies get their own content modules; then add `content/` or `src/content/` deliberately. |
 | `.context/components.json` | Not in tree | **Optional:** useful for a **registry**; not required. Prefer **one** canonical doc: `AGENTS.md` + rules, or a registry—not three conflicting stories. |

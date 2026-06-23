@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProjectCard from "@/src/components/ProjectCard";
+
 import { CopyButton } from "@/src/components/ui/CopyButton";
 import { Badge } from "@/src/components/ui/Badge";
 import { TabBarDemo } from "@/src/components/ui/TabBarDemo";
@@ -10,7 +10,7 @@ import { Footer } from "@/src/components/Footer";
 import ContactForm from "@/src/components/ContactForm";
 import { AboutBlockHead } from "@/src/components/about/AboutBlockHead";
 import { AboutQuote } from "@/src/components/about/AboutQuote";
-import { AboutEnd } from "@/src/components/about/AboutEnd";
+import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import {
   ABOUT_END_COPY,
   ABOUT_QUOTE,
@@ -30,7 +30,7 @@ import {
   MenuButtonDemo,
   NavRippleLinkDemo,
   PlayCardDemo,
-  PlayEndMarkDemo,
+  PageEndSectionDemo,
   SnapSectionRevealDemo,
   TabbedGridSectionDemo,
 } from "./demos";
@@ -52,14 +52,13 @@ const DEMO_SECTIONS = [
   { id: "scroll-reveal", label: "ScrollReveal" },
   { id: "snap-section", label: "SnapSectionReveal" },
   { id: "work-card", label: "WorkCard" },
-  { id: "project-card", label: "ProjectCard" },
   { id: "featured-stagger", label: "FeaturedProjectStagger" },
   { id: "play-card", label: "PlayCard" },
   { id: "site-chrome", label: "Site chrome" },
   { id: "contact-form", label: "ContactForm" },
   { id: "tabbed-grid", label: "TabbedGridSection" },
   { id: "about-blocks", label: "About blocks" },
-  { id: "play-end-mark", label: "PlayEndMark" },
+  { id: "page-end-section", label: "PageEndSection" },
   { id: "page-sections", label: "Page sections" },
 ] as const;
 
@@ -407,7 +406,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="work-card"
               title="WorkCard"
-              filePath="src/components/WorkCard.tsx · WorkCardSvg.tsx · src/styles/work-card.css"
+              filePath="src/components/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
                 Polaroid project card with tilt, year stamp, and classification.
@@ -420,26 +419,7 @@ export default function ComponentsPage() {
               ) : null}
             </SectionShell>
 
-            <SectionShell
-              id="project-card"
-              title="ProjectCard"
-              filePath="src/components/ProjectCard.tsx"
-            >
-              <p className="mb-6 font-body text-text-muted">
-                Compact card with optional cover, tech badges, and external
-                links. Supports overlay interaction when wrapped by a lightbox
-                trigger.
-              </p>
-              <div className="max-w-sm">
-                <ProjectCard
-                  title="Australia Call"
-                  description="A personality quiz that helps newcomers find a travel style suited to them."
-                  technologies={["Next.js", "Figma", "Prisma"]}
-                  tone="primary"
-                  href="/work/quiz-game"
-                />
-              </div>
-            </SectionShell>
+           
 
             <SectionShell
               id="featured-stagger"
@@ -456,7 +436,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="play-card"
               title="PlayCard"
-              filePath="src/components/play/PlayCard.tsx · src/styles/play.css"
+              filePath="src/components/play/PlayCard.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
                 Play index card with medium badge, frame index, and gradient mat.
@@ -544,25 +524,25 @@ export default function ComponentsPage() {
                 </div>
                 <div>
                   <p className="mb-4 font-body text-sm font-medium text-text">
-                    AboutEnd
+                    PageEndSection
                   </p>
-                  <AboutEnd copy={ABOUT_END_COPY} />
+                  <PageEndSection copy={ABOUT_END_COPY} />
                 </div>
               </div>
             </SectionShell>
 
             <SectionShell
-              id="play-end-mark"
-              title="PlayEndMark"
-              filePath="src/components/play/PlayEndMark.tsx"
+              id="page-end-section"
+              title="PageEndSection"
+              filePath="src/components/ui/PageEndSection.tsx"
             >
-              <PlayEndMarkDemo />
+              <PageEndSectionDemo />
             </SectionShell>
 
             <SectionShell
               id="page-sections"
               title="Full-page sections"
-              filePath="src/components/HeroSection.tsx · HomeAboutSection.tsx · case-study/ · gallery/"
+              filePath="src/components/HeroSection.tsx · HomeAboutSection.tsx · case-study/ · work/"
             >
               <div className="grid gap-6 font-body text-text-muted">
                 <p>
@@ -606,7 +586,7 @@ export default function ComponentsPage() {
                     </Link>
                   </li>
                   <li className="card p-4">
-                    <p className="font-medium text-text">GalleryView</p>
+                    <p className="font-medium text-text">WorkView</p>
                     <p className="mt-1 text-sm">Filter bar, hero, and image grid.</p>
                     <Link href="/work" className="btn-text mt-3">
                       Open work index <span aria-hidden>→</span>

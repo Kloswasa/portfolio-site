@@ -1,35 +1,37 @@
 import { projects, WORK_TABS } from "@/src/lib/projects";
 import { toWorkCardProject } from "@/src/lib/work/data";
+import type { PageEndCopy } from "@/src/lib/page-end/types";
 import type {
-  GalleryFilterOption,
-  GalleryHeroMeta,
-  GalleryProject,
-} from "@/src/lib/gallery/types";
+  WorkArchiveProject,
+  WorkFilterOption,
+  WorkHeroMeta,
+} from "@/src/lib/work/types";
 
 function buildFilters(
   workTab: string,
   caseStudyKind: string,
-): GalleryProject["filters"] {
-  const filters: GalleryProject["filters"] = [
-    workTab as GalleryProject["filters"][number],
+): WorkArchiveProject["filters"] {
+  const filters: WorkArchiveProject["filters"] = [
+    workTab as WorkArchiveProject["filters"][number],
   ];
   if (caseStudyKind === "major") filters.push("major");
   return filters;
 }
 
-function toGalleryProject(
+function toWorkArchiveProject(
   project: (typeof projects)[number],
   index: number,
-): GalleryProject {
+): WorkArchiveProject {
   return {
     ...toWorkCardProject(project, index),
     filters: buildFilters(project.workTab, project.caseStudyKind),
   };
 }
 
-export const GALLERY_PROJECTS: GalleryProject[] = projects.map(toGalleryProject);
+export const WORK_ARCHIVE_PROJECTS: WorkArchiveProject[] =
+  projects.map(toWorkArchiveProject);
 
-export const GALLERY_FILTER_OPTIONS: GalleryFilterOption[] = [
+export const WORK_FILTER_OPTIONS: WorkFilterOption[] = [
   { key: "all", label: "All" },
   ...WORK_TABS.map(({ key, filterLabel }) => ({ key, label: filterLabel })),
   { key: "major", label: "Cases" },
@@ -45,9 +47,9 @@ const disciplineCount = new Set(projects.map((project) => project.workTab)).size
 const industryCount = new Set(projects.flatMap((project) => project.technologies))
   .size;
 
-export const GALLERY_HERO_META: GalleryHeroMeta = {
+export const WORK_HERO_META: WorkHeroMeta = {
   eyebrow: `THE WORK ARCHIVE · ${minYear} — ${maxYear}`,
-  titleLine1: String(GALLERY_PROJECTS.length),
+  titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
   titleLine2: "specimens",
   description:
     "Each project is a pressed thing — studied, deliberate, committed to paper. Hover to develop the image. Click to read the full record.",
@@ -57,4 +59,11 @@ export const GALLERY_HERO_META: GalleryHeroMeta = {
     { label: "Years active", value: String(maxYear - minYear + 1) },
     { label: "Collaborators", value: "12+" },
   ],
+};
+
+export const WORK_END_COPY: PageEndCopy = {
+  kicker: "The end of the record",
+  titleLead: "If you like something more amuse,",
+  titleAccent: "Let's see my playground",
+  actions: [{ label: "Browse play →", href: "/play", variant: "primary" }],
 };

@@ -1,3 +1,4 @@
+import { SectionBlockHead } from "@/src/components/ui/SectionBlockHead";
 import type { AboutBlock } from "@/src/lib/about/types";
 
 interface AboutBlockHeadProps {
@@ -6,15 +7,11 @@ interface AboutBlockHeadProps {
 
 export function AboutBlockHead({ block }: AboutBlockHeadProps) {
   return (
-    <div className="about-block__head">
-      <div>
-        <p className="eyebrow mb-2 text-accent">{block.kicker}</p>
-        <h2 className="about-block__title">{block.title}</h2>
-      </div>
-      <p className="about-block__info">
-        <strong>{block.infoStrong}</strong>
-        <span className="about-block__info-detail">{block.infoDetail}</span>
-      </p>
-    </div>
+    <SectionBlockHead
+      kicker={block.kicker}
+      title={block.title}
+      infoStrong={block.infoStrong}
+      infoDetail={block.infoDetail}
+    />
   );
 }
