@@ -9,6 +9,7 @@
 @import "../src/styles/hero.css";
 @import "../src/styles/specimen-card.css";
 @import "../src/styles/case-study-major.css";
+@import "../src/styles/locked-case-study.css";
 @import "../src/styles/filter-bar.css";
 @import "../src/styles/section-block.css";
 @import "../src/styles/page-end.css";
@@ -284,23 +285,26 @@
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.16em;
-  line-height: 1.25;
+  line-height: 1;
   text-transform: uppercase;
+  font-weight: 700;
   color: var(--color-text-subtle);
   &::before {
     content: "";
+    display: block;
+    flex-shrink: 0;
+    align-self: center;
     width: var(--spacing-8);
     height: var(--spacing-px);
-    flex-shrink: 0;
     background: var(--color-accent);
   }
   &::after {
     content: "";
+    display: block;
     flex-shrink: 0;
     align-self: center;
     width: 1em;
     height: 1em;
-    margin-left: (var(--spacing-8));
     background-color: var(--color-accent);
     mask-image: url("/images/home/material-symbols_asterisk.svg");
     mask-repeat: no-repeat;

@@ -11,6 +11,7 @@ export interface WorkCardProject {
   svgVariant: WorkCardSvgVariant;
   theme: string;
   coverImage?: { src: string; alt: string };
+  confidential?: boolean;
 }
 
 export type WorkFilterKey =

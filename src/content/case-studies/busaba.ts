@@ -1,11 +1,11 @@
 import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
-const bsbCaseStudy = {
+const busabaCaseStudy = {
   kind: "minor",
-  slug: "bsb",
+  slug: "busaba",
   approachLabel: "The Decision",
   hero: {
-    breadcrumb: "BSB Dessert Bar",
+    breadcrumb: "Busaba Dessert Bar",
     eyebrow: "002 · Industrial design · Food service",
     titleLine1: "Signature",
     titleLine2: "Dessert",
@@ -128,4 +128,4 @@ const bsbCaseStudy = {
   },
 } satisfies MinorCaseStudy;
 
-export default bsbCaseStudy;
+export default busabaCaseStudy;

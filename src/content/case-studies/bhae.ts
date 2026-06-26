@@ -2,7 +2,7 @@ import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
 const bhaeCaseStudy = {
   kind: "minor",
-  slug: "bhae",
+  slug: "bhaesaj",
   approachLabel: "The Direction",
   hero: {
     breadcrumb: "Bhae Skincare",

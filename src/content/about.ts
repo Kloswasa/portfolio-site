@@ -18,10 +18,10 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-    "A product designer and creative technologist in Melbourne who came to software the long way round \u2014 and never quite shed the habits of close looking, careful naming, and pressing things flat to understand them.",
+    "A product designer in Melbourne who designs and builds — drawn to the structure beneath an interface, and to the person on the other side of the screen.",
   stats: [
     { label: "Based in", value: "Melbourne" },
-    { label: "Practising since", value: "2017" },
+    { label: "Practising since", value: "2019" },
     { label: "Works in", value: "Design \u00b7 Code" },
     { label: "Status", value: "Open to work" },
   ],
@@ -38,17 +38,16 @@ export const ABOUT_STORY: AboutStory = {
   portrait: {
     label: "SPECIMEN \u2014 K.W.\nCyanotype \u00b7 2024\nPressed, Melbourne",
     stampValue: "Est.",
-    stampLabel: "2017",
+    stampLabel: "2019",
   },
   lead: [
-    "I design the way I once ",
-    { em: "pressed flowers" },
-    " \u2014 slowly, with attention, trying to keep the living thing legible once it\u2019s flattened onto a page.",
+    "I design with", 
+    { em: " attention" }, 
+    ", then build what created, so the care have been weaved from Figma to code.",
   ],
   paragraphs: [
-    "Before design there was a long apprenticeship in looking closely at type, at grid, at the structure beneath surfaces. I spent years learning to name what I saw precisely, and to notice the architecture hiding in plain sight. That training never really left.",
-    "It shows up now in a fascination with how digital products are structured beneath their interfaces, and in a habit of studying the people who use them as carefully as I once studied a specimen. Eight years in across health, finance, analytics, education and creative tools \u2014 the throughline has never been an industry. It\u2019s a sensibility.",
-    "I believe the most considered work holds two things in tension at once: the cool precision of a system that\u2019s genuinely well-built, and the warmth of something made by a person who cares about whoever is on the other side of the screen.",
+    "I came to product design through visual craft including type, grid, the structure beneath surfaces, and a habit of looking closely. That training never really left.",
+    "I work across design and code, what I created in Figma, can be built in a development environment. I amm after both the precision of a well-built system and the warmth of something made by someone who cares who's on the other side of the screen.",
   ],
   signature: "\u2014 Klaus",
 };
@@ -63,39 +62,57 @@ export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
 
 export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
   {
-    year: "2024",
-    role: "Independent Product Designer",
-    place: "Studio practice \u00b7 Melbourne",
-    note: "Leading design-systems and complex product work across health, finance, and creative tools. Mentoring, governance, and the quiet infrastructure that lets teams move fast without fracturing.",
+    year: "2025-2026",
+    role: "Product Designer",
+    place: "Company Verse · Remote (Sydney)",
+    note: "Took a quiz game from research to production — illustration, interface, and front-end code working as one. Shipped to a custom domain within two weeks.",
     tag: "Present",
   },
   {
-    year: "2021",
-    role: "Senior Product Designer",
-    place: "Platform team \u00b7 Remote",
-    note: "Built the design system that unified several merged codebases, and shaped sensitive flows for a product used by millions.",
-    tag: "3 yrs",
+    year: "2025",
+    role: "Industry Hackathon — Winner",
+    place: "Swinburne University x Practera x VirtualCC · Melbourne",
+    note: "16 hours to reframe a brief: an underemployed workforce and an underserved patient group, paired by shared experience rather than shared roof. First place among 8 teams.",
+    tag: "Award",
   },
   {
-    year: "2019",
-    role: "Product Designer",
-    place: "Analytics & finance \u00b7 Melbourne",
-    note: "Cut my teeth on dense, high-stakes tools \u2014 learning to make complex information feel calm and navigable.",
+    year: "2022-2023",
+    role: "Freelance Designer",
+    place: "Self-employed",
+    note:  "2D and 3D work across packaging, products, booths, and social media — research-led design that found the line between what a brand wanted to say and what its market actually needed to hear."
+    ,
+    tag: "2.5 yrs",
+  },
+  {
+    year: "2019-2022",
+    role: "Multidisciplinary Designer",
+    place: "Yindee Design Co. · Bangkok",
+    note: "Sketched, prototyped, and shipped — packaging, booths, products. Learned to read a client's hesitation and answer it with material, not just opinion.",
+    tag: "2.5 yrs",
+  },
+];
+
+export const ABOUT_EDUCATION_BLOCK: AboutBlock = {
+  kicker: "\u00a7 04",
+  title: "Formal study",
+  infoStrong: "Education",
+  infoDetail: "Degrees and specialisations",
+};
+
+export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
+  {
+    year: "2024-2025",
+    role: "Master of Information Technology",
+    place: "Swinburne University · Melbourne",
+    note: "Specialised in software development — the deliberate decision to learn the other half of the craft, so design ideas would never have to wait for someone else to build them.",
     tag: "2 yrs",
   },
   {
-    year: "2017",
-    role: "Crossed over into design",
-    place: "Self-directed \u00b7 Melbourne",
-    note: "Traded one craft for another, but kept the magnifying glass and the habit of looking twice.",
-    tag: "Pivot",
-  },
-  {
-    year: "2016",
-    role: "Visual communication",
-    place: "University studies \u00b7 Melbourne",
-    note: "Typography, grid systems, and scientific illustration \u2014 where I first fell for cyanotypes and the discipline of precise observation.",
-    tag: "Roots",
+    year: "2015",
+    role: "Bachelor of Decorative Art (Design)",
+    place: "Silpakorn University · Bangkok",
+    note: "Where the eye for form and the instinct for storytelling first met — the roots of everything that came after.",
+    tag: "4 yrs",
   },
 ];
 
@@ -133,10 +150,10 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   {
     label: "Off the clock",
     tags: [
-      { label: "Cyanotype printing" },
-      { label: "SVG illustration" },
-      { label: "Generative sketches" },
-      { label: "Woodworking" },
+      { label: "Hiking" },
+      { label: "Reading" },
+      { label: "Cooking" },
+      { label: "Meditation" },
     ],
   },
 ];

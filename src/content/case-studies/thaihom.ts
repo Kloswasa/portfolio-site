@@ -2,12 +2,12 @@ import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
 const thaiHCaseStudy = {
   kind: "minor",
-  slug: "thai-h",
+  slug: "thaihom",
   hero: {
-    breadcrumb: "Thai H Infographic Book",
+    breadcrumb: "Thai Hom Infographic Book",
     eyebrow: "008 · Graphic design · Editorial",
     titleLine1: "Thai",
-    titleLine2: "H",
+    titleLine2: "Hom",
     summary:
       "An infographic book showcasing ingredients that represent Thai aroma — every illustration and graphic element authored by hand for a cohesive sensory narrative.",
     meta: [

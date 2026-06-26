@@ -1,28 +1,28 @@
-import bhae from "@/src/content/case-studies/bhae";
-import bhup from "@/src/content/case-studies/bhup";
-import bsb from "@/src/content/case-studies/bsb";
+import bhaesaj from "@/src/content/case-studies/bhae";
+import bupha from "@/src/content/case-studies/bhup";
+import busaba from "@/src/content/case-studies/busaba";
 import cio from "@/src/content/case-studies/cio";
 import dementiaApp from "@/src/content/case-studies/dementia-app";
-import flom from "@/src/content/case-studies/flom";
+import flomax from "@/src/content/case-studies/flomax";
 import homhuan from "@/src/content/case-studies/homhuan";
+import jtimber from "@/src/content/case-studies/jtimber";
 import kuendee from "@/src/content/case-studies/kuendee";
 import quizGame from "@/src/content/case-studies/quiz-game";
 import recipe from "@/src/content/case-studies/recipe";
-import thaiH from "@/src/content/case-studies/thai-h";
-import timber from "@/src/content/case-studies/timber";
+import thaihom from "@/src/content/case-studies/thaihom";
 import { getProject } from "@/src/lib/projects";
 import type { CaseStudy, CaseStudyKind } from "@/src/lib/case-studies/types";
 
 export const caseStudiesBySlug = {
   homhuan,
-  bsb,
+  busaba,
   kuendee,
-  flom,
-  bhae,
+  flomax,
+  bhaesaj,
   cio,
-  bhup,
-  timber,
-  "thai-h": thaiH,
+  bupha,
+  jtimber,
+  thaihom,
   "quiz-game": quizGame,
   "dementia-app": dementiaApp,
   recipe,

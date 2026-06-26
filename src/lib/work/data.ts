@@ -28,6 +28,7 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     svgVariant,
     theme: THEMES[index % THEMES.length],
     coverImage: project.coverImage,
+    confidential: project.confidential,
   };
 }
 

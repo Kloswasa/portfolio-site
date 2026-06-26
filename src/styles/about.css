@@ -144,6 +144,7 @@
   .about-story {
     grid-template-columns: 0.85fr 1.15fr;
     gap: var(--spacing-16);
+    align-items: center;
   }
 }
 
@@ -241,10 +242,6 @@
   color: var(--color-text-on-accent);
 }
 
-.about-story__prose {
-  padding-top: var(--spacing-1);
-}
-
 .about-story__lead {
   margin: 0 0 var(--spacing-6);
   font-family: var(--font-heading);
@@ -252,6 +249,7 @@
   font-size: clamp(1.5rem, 3vw, 2.125rem);
   line-height: 1.25;
   color: var(--color-text);
+  text-align: justify;
 }
 
 .about-story__lead em {
@@ -264,6 +262,7 @@
   font-size: 1.0625rem;
   line-height: 1.85;
   color: var(--color-text-muted);
+  text-align: justify;
 }
 
 .about-story__p--first::first-letter {

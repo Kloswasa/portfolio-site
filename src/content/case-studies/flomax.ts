@@ -2,13 +2,13 @@ import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
 const flomCaseStudy = {
   kind: "minor",
-  slug: "flom",
+  slug: "flomax",
   approachLabel: "The Decision",
   hero: {
-    breadcrumb: "FloM Packaging",
+    breadcrumb: "Flomax Kid's Packaging",
     eyebrow: "004 · Graphic design · Packaging",
-    titleLine1: "FloM",
-    titleLine2: "Line",
+    titleLine1: "Flomax",
+    titleLine2: "Kid's Packaging",
     summary:
       "An alternative graphic style for a secondary product packaging line — fresh energy under an established brand identity without breaking recognition.",
     meta: [

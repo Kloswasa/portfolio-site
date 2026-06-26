@@ -17,6 +17,8 @@ export interface SpecimenCardProps {
   classification: ReactNode;
   title: string;
   tags: readonly string[];
+  /** Confidential / NDA specimen: overlays an "Under NDA" stamp on the media */
+  locked?: boolean;
 }
 
 export function SpecimenCard({
@@ -28,11 +30,18 @@ export function SpecimenCard({
   classification,
   title,
   tags,
+  locked = false,
 }: SpecimenCardProps) {
   return (
     <>
       <div className="specimen-card__media" {...mediaProps}>
         {media}
+        {locked ? (
+          <div className="specimen-card__nda" aria-hidden="true">
+            <span className="specimen-card__nda-lock">&#128274;</span>
+            <span className="specimen-card__nda-label">Under NDA</span>
+          </div>
+        ) : null}
       </div>
 
       <div className="specimen-card__dots" aria-hidden="true" />

@@ -32,6 +32,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
+  --hero-plant-stroke: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
+  --hero-plant-stroke-muted: color-mix(in srgb, var(--color-text-inverse) 42%, transparent);
+  --hero-plant-accent: color-mix(in srgb, var(--color-text-inverse) 72%, transparent);
+}
+
+.hero-botanical[data-play-plant] {
+  --color-primary-muted: var(--hero-plant-stroke-muted);
+  --color-border-strong: var(--hero-plant-stroke);
+  --color-accent: var(--hero-plant-accent);
+  --color-secondary: color-mix(in srgb, var(--color-text-inverse) 32%, transparent);
+}
+
+.hero-botanical[data-play-plant] text {
+  display: none;
+}
+
+.hero-botanical[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .hero-botanical svg {
@@ -145,5 +165,9 @@
   .hero-scroll-line::after {
     animation: none;
     top: 0;
+  }
+
+  .hero-botanical[data-tilt] {
+    will-change: auto;
   }
 }
