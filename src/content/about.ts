@@ -36,6 +36,10 @@ export const ABOUT_STORY_BLOCK: AboutBlock = {
 
 export const ABOUT_STORY: AboutStory = {
   portrait: {
+    image: {
+      src: "/images/about/portrait-resize.webp",
+      alt: "Portrait of Klaus W.",
+    },
     label: "SPECIMEN \u2014 K.W.\nCyanotype \u00b7 2024\nPressed, Melbourne",
     stampValue: "Est.",
     stampLabel: "2019",
@@ -167,13 +171,13 @@ const practiceSkills =
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered tools.",
   storyIntro:
-    "I'm a designer and creative technologist working out of Melbourne. Eight years across small studios and large platforms — currently independent, quietly available for product, editorial, and creative-code work.",
+    "I'm a product designer and creative technologist in Melbourne who designs and builds \u2014 what I design in Figma can be ship in React. I work across product, editorial, and creative-code.",
   skills: practiceSkills,
   statusLabel: "Open to work",
-  availabilityHeading: "Open to product design contracts.",
+  availabilityHeading: "Open to product design roles.",
   availabilityDescription:
-    "Two-week minimums. Melbourne / remote. Email is the best way.",
-  experience: "8 years",
+    "Melbourne / remote. Email is the best way to reach me.",
+  experience: "Design + Build",
 };
 
 
