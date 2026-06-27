@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HeroBotanical } from "@/src/components/HeroBotanical";
+import { HeroHomePlant } from "@/src/components/HeroHomePlant";
 import {
   SnapItem,
   SnapSectionReveal,
@@ -96,17 +96,7 @@ export function HeroSection({
           </div>
         </div>
 
-        <div className="hero-botanical">
-          <HeroBotanical />
-        </div>
-
-        <div className="hero-stamp font-mono text-xs leading-loose tracking-[0.14em]">
-          {hero.stampLines.map((line) => (
-            <span key={line} className="block">
-              {line}
-            </span>
-          ))}
-        </div>
+        <HeroHomePlant />
       </div>
     </section>
   );

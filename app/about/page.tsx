@@ -8,6 +8,8 @@ import {
   ABOUT_QUOTE,
   ABOUT_STORY,
   ABOUT_STORY_BLOCK,
+  ABOUT_EDUCATION,
+  ABOUT_EDUCATION_BLOCK,
   ABOUT_TIMELINE,
   ABOUT_TIMELINE_BLOCK,
 } from "@/src/lib/about";
@@ -27,6 +29,8 @@ export default function AboutPage() {
         story={ABOUT_STORY}
         timelineBlock={ABOUT_TIMELINE_BLOCK}
         timeline={ABOUT_TIMELINE}
+        educationBlock={ABOUT_EDUCATION_BLOCK}
+        education={ABOUT_EDUCATION}
         instrumentsBlock={ABOUT_INSTRUMENTS_BLOCK}
         instruments={ABOUT_INSTRUMENTS}
         quote={ABOUT_QUOTE}

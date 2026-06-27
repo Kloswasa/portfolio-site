@@ -20,7 +20,7 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
   const cardClassName =
     layout === "featured"
       ? "specimen-card specimen-card--link specimen-card--featured"
-      : "specimen-card specimen-card--link";
+      : "specimen-card specimen-card--link specimen-card--landscape";
 
   return (
     <Link
@@ -54,6 +54,7 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
         classification={project.classification}
         title={project.title}
         tags={project.tags}
+        locked={project.confidential}
       />
     </Link>
   );

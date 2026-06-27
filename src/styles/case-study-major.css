@@ -585,7 +585,7 @@
 
 .cs-major__video-player {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: var(--radius-sm);
   background: var(--color-surface);

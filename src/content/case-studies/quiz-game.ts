@@ -114,8 +114,8 @@ const quizGameCaseStudy = {
       blocks: [
         {
           type: "video",
-          src: "/projects/quiz-game/quiz-game-video-resultpage.mp4",
-          poster: "/projects/quiz-game/result-page-poster.png",
+          src: "/projects/quiz-game/quiz-game-resultpage-video.mp4",
+          poster: "/projects/quiz-game/quiz-game-video-resultpage-cover.png",
           alt: "A 10-15 second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia",
           caption:
             "A 10-15 second zoom across one result page, showing the animal, destination, tip, and trivia as a unified output.",
@@ -136,11 +136,18 @@ const quizGameCaseStudy = {
       titleEm: "learned",
       blocks: [
         {
+          type: "pullquote",
+          text: "That was where I wanna go!",
+          source:
+            "One user who doubted her personality match changed her mind reading the destinations.",
+        },
+        {
           type: "prose",
           paragraphs: [
-            "Shipped to ~10+ users. The wildlife-and-destination pairing was the strongest signal (one user who doubted her personality match changed her mind reading the destinations: \"that was where I wanna go\"); tips and trivia got less attention, likely because they were text-only. With more time and resourcing, I'd bring in a cultural advisor to scale the matching responsibly, and revise the premade quiz questions (not mine to write the first time) that some users found inconsistent.",
+            "Shipped to ~10+ users. The wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only. With more time and resourcing, I'd bring in a cultural advisor to scale the matching responsibly, and revise the premade quiz questions (not mine to write the first time) that some users found inconsistent.",
           ],
         },
+        
         {
           type: "reflections",
           items: [

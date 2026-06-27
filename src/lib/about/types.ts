@@ -17,6 +17,10 @@ export interface AboutBlock {
 
 export interface AboutStory {
   portrait: {
+    image: {
+      src: string;
+      alt: string;
+    };
     label: string;
     stampValue: string;
     stampLabel: string;

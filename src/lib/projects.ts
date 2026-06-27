@@ -47,6 +47,10 @@ export interface Project {
   liveUrl?: string;
   sourceUrl?: string;
   coverImage?: { src: string; alt: string }
+  /** Confidential / NDA work: shows a locked specimen instead of a full case study */
+  confidential?: boolean;
+  /** Case study registry slug when it differs from the public project slug */
+  caseStudySlug?: string;
 }
 
 export const projects: Project[] = [
@@ -74,8 +78,8 @@ export const projects: Project[] = [
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2024 · Research",
-    liveUrl: "https://dementia-app.com",
-    sourceUrl: "https://github.com/yourusername/dementia-app",
+    coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
+
   },
   {
     id: 3,
@@ -102,11 +106,12 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "major",
     yearLabel: "2024 · Capstone",
+    coverImage: { src: "/projects/homhuan/homhuan-cover.png", alt: "HomHuan cover image" },
   },
   {
     id: 5,
-    slug: "bsb",
-    title: "BSB Dessert Bar",
+    slug: "busaba",
+    title: "Busaba Dessert Bar",
     description:
       "Signature dessert shape and matching fork for a fine dessert bar in a Thai tourist city.",
     technologies: ["Industrial design", "Form design", "CAD"],
@@ -114,6 +119,7 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "minor",
     yearLabel: "2023 · Industrial",
+    coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
   },
   {
     id: 6,
@@ -126,11 +132,12 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "minor",
     yearLabel: "2023 · Retail",
+    coverImage: { src: "/projects/kuendee/kuendee-cover.png", alt: "Kuendee Booth cover image" },
   },
   {
     id: 7,
-    slug: "flom",
-    title: "FloM Packaging",
+    slug: "flomax",
+    title: "Flomax kid's Packaging",
     description:
       "Alternative graphic style for a secondary product packaging line under an established brand.",
     technologies: ["Graphic design", "Packaging", "Brand extension"],
@@ -138,11 +145,12 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2022 · Packaging",
+    coverImage: { src: "/projects/flomax/flomax-cover.png", alt: "Flomax Packaging cover image" },
   },
   {
     id: 8,
-    slug: "bhae",
-    title: "Bhae Skincare",
+    slug: "bhaesaj",
+    title: "Bhaesaj Skincare",
     description:
       "Packaging direction and design for a century-old traditional skincare brand.",
     technologies: ["Packaging design", "Print", "Heritage brand"],
@@ -150,11 +158,13 @@ export const projects: Project[] = [
     workTab: "pack",
     caseStudyKind: "minor",
     yearLabel: "2022 · Packaging",
+    // confidential: true,
+    // caseStudySlug: "bhaesaj",
   },
   {
     id: 9,
-    slug: "bhup",
-    title: "Bhup Product Line",
+    slug: "bupha",
+    title: "Bupha",
     description:
       "Friendly graphic design and illustration for a local business sub-brand.",
     technologies: ["Illustration", "Label design", "Brand"],
@@ -162,11 +172,14 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2022 · Illustration",
+    coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bhup Product Line cover image" },
+    // confidential: true,
+    // caseStudySlug: "bupha",
   },
   {
     id: 10,
-    slug: "timber",
-    title: "Timber Catalog",
+    slug: "jtimber",
+    title: "JTimber Catalog",
     description:
       "Multimedia catalog for a wood styling company — layout, 3D renders, retouching, and print.",
     technologies: ["Catalog", "3D rendering", "Print production"],
@@ -174,11 +187,13 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2021 · Catalog",
+    coverImage: { src: "/projects/jtimber/Jtimber-cover.png", alt: "JTimber Catalog cover image" },
+    caseStudySlug: "jtimber",
   },
   {
     id: 11,
-    slug: "thai-h",
-    title: "Thai H",
+    slug: "thai-hom",
+    title: "Thai Hom",
     description:
       "Infographic book on Thai aroma ingredients — all illustration and graphics authored by hand.",
     technologies: ["Illustration", "Editorial", "Infographic"],
@@ -186,6 +201,8 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2021 · Editorial",
+    coverImage: { src: "/projects/thai-hom/thai-hom-cover.png", alt: "Thai Hom cover image" },
+    caseStudySlug: "thaihom",
   },
   {
     id: 12,
@@ -203,4 +220,9 @@ export const projects: Project[] = [
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
+}
+
+/** Registry slug for case study content (public URL slug may differ). */
+export function getCaseStudySlugForProject(project: Project): string {
+  return project.caseStudySlug ?? project.slug;
 }

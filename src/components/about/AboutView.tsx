@@ -20,6 +20,8 @@ interface AboutViewProps {
   story: AboutStoryData;
   timelineBlock: AboutBlock;
   timeline: AboutTimelineEntry[];
+  educationBlock: AboutBlock;
+  education: AboutTimelineEntry[];
   instrumentsBlock: AboutBlock;
   instruments: AboutInstrumentGroup[];
   quote: AboutQuoteData;
@@ -32,6 +34,8 @@ export function AboutView({
   story,
   timelineBlock,
   timeline,
+  educationBlock,
+  education,
   instrumentsBlock,
   instruments,
   quote,
@@ -46,6 +50,7 @@ export function AboutView({
         <AboutInstruments block={instrumentsBlock} groups={instruments} />
         <AboutQuote quote={quote} />
         <AboutTimeline block={timelineBlock} entries={timeline} />
+        <AboutTimeline block={educationBlock} entries={education} />
       </div>
 
       <PageEndSection copy={endCopy} />
