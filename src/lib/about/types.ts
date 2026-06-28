@@ -34,7 +34,9 @@ export interface AboutStory {
 export interface AboutTimelineEntry {
   year: string;
   role: string;
-  place: string;
+  specialisation?: string;
+  place?: string;
+  university?: string;
   note: string;
   tag: string;
 }

@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "Dementia App",
     description:
       "A dementia app that helps people with dementia stay connected with their loved ones.",
-    technologies: ["React", "Firebase", "Tailwind CSS"],
+    technologies: ["Figma", "User-centered design", "Research"],
     tone: "secondary",
     workTab: "product",
     caseStudyKind: "major",
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     tone: "tertiary",
     workTab: "product",
     caseStudyKind: "major",
-    yearLabel: "2024 · Product",
+    yearLabel: "2026 · Product",
     liveUrl: "https://family-recipes.app",
     sourceUrl: "https://github.com/yourusername/recipe",
   },
@@ -101,11 +101,11 @@ export const projects: Project[] = [
     title: "HomHuan",
     description:
       "Thai heritage translated into a modern home fragrance set — solo capstone industrial design project.",
-    technologies: ["Industrial design", "CMF", "Prototyping"],
+    technologies: ["Industrial design", "Craftsmanship", "Branding"],
     tone: "primary",
     workTab: "industrial",
     caseStudyKind: "major",
-    yearLabel: "2024 · Capstone",
+    yearLabel: "2019 · Capstone",
     coverImage: { src: "/projects/homhuan/homhuan-cover.png", alt: "HomHuan cover image" },
   },
   {
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     tone: "secondary",
     workTab: "industrial",
     caseStudyKind: "minor",
-    yearLabel: "2023 · Industrial",
+    yearLabel: "2021 · Industrial",
     coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     tone: "tertiary",
     workTab: "industrial",
     caseStudyKind: "minor",
-    yearLabel: "2023 · Retail",
+    yearLabel: "2021 · Industrial",
     coverImage: { src: "/projects/kuendee/kuendee-cover.png", alt: "Kuendee Booth cover image" },
   },
   {
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     tone: "primary",
     workTab: "graphic",
     caseStudyKind: "minor",
-    yearLabel: "2022 · Packaging",
+    yearLabel: "2021 · Graphic",
     coverImage: { src: "/projects/flomax/flomax-cover.png", alt: "Flomax Packaging cover image" },
   },
   {
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     title: "Bhaesaj Skincare",
     description:
       "Packaging direction and design for a century-old traditional skincare brand.",
-    technologies: ["Packaging design", "Print", "Heritage brand"],
+    technologies: ["Packaging design", "Design direction", "Heritage brand"],
     tone: "secondary",
     workTab: "pack",
     caseStudyKind: "minor",
@@ -167,11 +167,11 @@ export const projects: Project[] = [
     title: "Bupha",
     description:
       "Friendly graphic design and illustration for a local business sub-brand.",
-    technologies: ["Illustration", "Label design", "Brand"],
+    technologies: ["Illustration", "Packaging design"],
     tone: "tertiary",
     workTab: "graphic",
     caseStudyKind: "minor",
-    yearLabel: "2022 · Illustration",
+    yearLabel: "2021 · Graphic",
     coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bhup Product Line cover image" },
     // confidential: true,
     // caseStudySlug: "bupha",
@@ -182,11 +182,11 @@ export const projects: Project[] = [
     title: "JTimber Catalog",
     description:
       "Multimedia catalog for a wood styling company — layout, 3D renders, retouching, and print.",
-    technologies: ["Catalog", "3D rendering", "Print production"],
+    technologies: ["Editorial", "3D rendering", "Printing production"],
     tone: "primary",
     workTab: "graphic",
     caseStudyKind: "minor",
-    yearLabel: "2021 · Catalog",
+    yearLabel: "2023 · Catalog",
     coverImage: { src: "/projects/jtimber/Jtimber-cover.png", alt: "JTimber Catalog cover image" },
     caseStudySlug: "jtimber",
   },
@@ -200,7 +200,7 @@ export const projects: Project[] = [
     tone: "secondary",
     workTab: "graphic",
     caseStudyKind: "minor",
-    yearLabel: "2021 · Editorial",
+    yearLabel: "2017 · Editorial",
     coverImage: { src: "/projects/thai-hom/thai-hom-cover.png", alt: "Thai Hom cover image" },
     caseStudySlug: "thaihom",
   },
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     tone: "tertiary",
     workTab: "pack",
     caseStudyKind: "minor",
-    yearLabel: "2023 · Structure",
+    yearLabel: "2022 · Structure",
   },
 ];
 

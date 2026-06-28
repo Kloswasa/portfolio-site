@@ -86,17 +86,14 @@ export function HomeAboutSection() {
 
   return (
     <section id="about" className="home-about">
-      <SnapSectionReveal className="home-section__inner">
+      <SnapSectionReveal className="home-about__inner">
         <p className="home-section__watermark" aria-hidden="true">
           {SECTION_NUMBER}
         </p>
 
-        <SnapItem as="header" className="home-section__header">
-          <p className="eyebrow mb-0">About</p>
-        </SnapItem>
-
         <div className="home-about__grid">
           <SnapItem className="home-about__main">
+            <p className="eyebrow home-about__eyebrow">About</p>
             <h2 className="home-section__heading">
               <AboutHeading text={teaser.shortHeading} />
             </h2>

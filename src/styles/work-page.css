@@ -153,6 +153,7 @@
   font-size: 0.95rem;
   line-height: 1.75;
   color: var(--color-text-muted);
+  white-space: pre-line;
 }
 
 .work-hero__stats {

@@ -65,7 +65,7 @@ export function HeroSection({
           </SnapItem>
 
           <SnapItem>
-            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm text-justify">
+            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm ">
               {hero.description}
             </p>
           </SnapItem>

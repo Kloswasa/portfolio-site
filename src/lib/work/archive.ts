@@ -52,12 +52,12 @@ export const WORK_HERO_META: WorkHeroMeta = {
   titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
   titleLine2: "specimens",
   description:
-    "Each project is a pressed thing — studied, deliberate, committed to paper. Hover to develop the image. Click to read the full record.",
+    "Each project is logged like a specimen. Studied, deliberate, committed to the page. Hover to develop the image.\nClick to read the full record.",
   stats: [
     { label: "Disciplines", value: String(disciplineCount) },
     { label: "Industries", value: String(industryCount) },
     { label: "Years active", value: String(maxYear - minYear + 1) },
-    { label: "Collaborators", value: "12+" },
+    { label: "Collaborators", value: "10+" },
   ],
 };
 

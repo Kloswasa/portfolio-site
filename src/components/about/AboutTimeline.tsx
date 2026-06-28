@@ -18,7 +18,10 @@ export function AboutTimeline({ block, entries }: AboutTimelineProps) {
             <span className="about-record__year">{entry.year}</span>
             <div className="about-record__body">
               <h3 className="about-record__role">{entry.role}</h3>
-              <p className="about-record__place">{entry.place}</p>
+              {entry.specialisation ? (
+                <p className="about-record__specialisation">{entry.specialisation}</p>
+              ) : null}
+              <p className="about-record__place">{entry.university ?? entry.place}</p>
               <p className="about-record__note">{entry.note}</p>
             </div>
             <span className="about-record__tag">{entry.tag}</span>

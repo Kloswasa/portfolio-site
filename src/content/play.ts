@@ -48,8 +48,8 @@ const ALL_PLAY_HERO_META: PlayHeroMeta = {
 const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
   ...ALL_PLAY_HERO_META,
   description:
-    "Off-hours illustration. No brief, no client, no deadline — just the pleasure of making the thing.",
-  stats: [
+  "On and off the clock illustrations .\n Some from client work, some made simply for the pleasure of it.",
+   stats: [
     { label: "Illustrations", value: "6" },
     { label: "Media", value: "Digital" },
     { label: "Tools", value: "Procreate" },

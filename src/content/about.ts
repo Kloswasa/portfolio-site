@@ -68,7 +68,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
   {
     year: "2025-2026",
     role: "Product Designer",
-    place: "Company Verse · Remote (Sydney)",
+    place: "Vision Verse · Remote (Sydney)",
     note: "Took a quiz game from research to production — illustration, interface, and front-end code working as one. Shipped to a custom domain within two weeks.",
     tag: "Present",
   },
@@ -80,7 +80,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
     tag: "Award",
   },
   {
-    year: "2022-2023",
+    year: "2022-2024",
     role: "Freelance Designer",
     place: "Self-employed",
     note:  "2D and 3D work across packaging, products, booths, and social media — research-led design that found the line between what a brand wanted to say and what its market actually needed to hear."
@@ -107,14 +107,16 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
   {
     year: "2024-2025",
     role: "Master of Information Technology",
-    place: "Swinburne University · Melbourne",
+    specialisation: "Software Development specialisation",
+    university: "Swinburne University · Melbourne",
     note: "Specialised in software development — the deliberate decision to learn the other half of the craft, so design ideas would never have to wait for someone else to build them.",
     tag: "2 yrs",
   },
   {
-    year: "2015",
+    year: "2015-2019",
     role: "Bachelor of Decorative Art (Design)",
-    place: "Silpakorn University · Bangkok",
+    specialisation: "Product Design specialisation",
+    university: "Silpakorn University · Bangkok",
     note: "Where the eye for form and the instinct for storytelling first met — the roots of everything that came after.",
     tag: "4 yrs",
   },
@@ -171,7 +173,7 @@ const practiceSkills =
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered tools.",
   storyIntro:
-    "I'm a product designer and creative technologist in Melbourne who designs and builds \u2014 what I design in Figma can be ship in React. I work across product, editorial, and creative-code.",
+    "I'm a product designer in Melbourne who designs and builds, also work across multiple design fields as a multidisciplinarian. What I design in Figma can be shipped in a development environment.",
   skills: practiceSkills,
   statusLabel: "Open to work",
   availabilityHeading: "Open to product design roles.",
@@ -199,7 +201,7 @@ export const ABOUT_END_COPY: AboutEndCopy = {
     { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "primary" },
     { label: "See the work", href: "/work", variant: "ghost" },
     {
-      label: "Download CV \u2193",
+      label: "Download Resume \u2193",
       href: siteConfig.resume.downloadHref,
       variant: "ghost",
     },
