@@ -18,7 +18,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-    "A product designer in Melbourne who designs and builds — drawn to the structure beneath an interface, and to the person on the other side of the screen.",
+  "A product designer in Melbourne who designs and builds,\ndrawn to the structure beneath an interface,\nand to the person on the other side of the screen.",
   stats: [
     { label: "Based in", value: "Melbourne" },
     { label: "Practising since", value: "2019" },
@@ -45,13 +45,14 @@ export const ABOUT_STORY: AboutStory = {
     stampLabel: "2019",
   },
   lead: [
-    "I design with", 
-    { em: " attention" }, 
-    ", then build what created, so the care have been weaved from Figma to code.",
+    "I design with",
+    { em: " attention" },
+    ", then build what I create — so the care carries from Figma to code.",
   ],
+  
   paragraphs: [
-    "I came to product design through visual craft including type, grid, the structure beneath surfaces, and a habit of looking closely. That training never really left.",
-    "I work across design and code, what I created in Figma, can be built in a development environment. I amm after both the precision of a well-built system and the warmth of something made by someone who cares who's on the other side of the screen.",
+    "I came to product design through visual craft: type, grid, the structure beneath surfaces, and a habit of looking closely. That training never really left.",
+    "I work across design and code. What I shape in Figma, I can ship in a development environment. I'm after both the precision of a well-built system and the warmth of something made by someone who cares who's on the other side of the screen.",
   ],
   signature: "\u2014 Klaus",
 };
@@ -69,21 +70,21 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
     year: "2025-2026",
     role: "Product Designer",
     place: "Vision Verse · Remote (Sydney)",
-    note: "Took a quiz game from research to production — illustration, interface, and front-end code working as one. Shipped to a custom domain within two weeks.",
+    note: "Took a quiz game from research to production including illustration, interface, and front-end code working as one. Shipped to a custom domain within two weeks.",
     tag: "Present",
   },
   {
     year: "2025",
     role: "Industry Hackathon — Winner",
     place: "Swinburne University x Practera x VirtualCC · Melbourne",
-    note: "16 hours to reframe a brief: an underemployed workforce and an underserved patient group, paired by shared experience rather than shared roof. First place among 8 teams.",
+    note: "16 hours to reframe a brief: a 50+ year olds workforce and an underserved patient group, paired by shared experience rather than shared roof. First place among 8 teams.",
     tag: "Award",
   },
   {
     year: "2022-2024",
     role: "Freelance Designer",
     place: "Self-employed",
-    note:  "2D and 3D work across packaging, products, booths, and social media — research-led design that found the line between what a brand wanted to say and what its market actually needed to hear."
+    note:  "2D and 3D work across multiple design fields as a multidisciplinarian. Research-led design that found the line between what a brand wanted to say and what its market actually needed to hear."
     ,
     tag: "2.5 yrs",
   },
@@ -91,7 +92,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
     year: "2019-2022",
     role: "Multidisciplinary Designer",
     place: "Yindee Design Co. · Bangkok",
-    note: "Sketched, prototyped, and shipped — packaging, booths, products. Learned to read a client's hesitation and answer it with material, not just opinion.",
+    note: "Sketched, prototyped, and shipped including graphic, packaging, booths, products. Learned to read a client's hesitation and answer it with material, not just opinion.",
     tag: "2.5 yrs",
   },
 ];
@@ -109,7 +110,7 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
     role: "Master of Information Technology",
     specialisation: "Software Development specialisation",
     university: "Swinburne University · Melbourne",
-    note: "Specialised in software development — the deliberate decision to learn the other half of the craft, so design ideas would never have to wait for someone else to build them.",
+    note: "the deliberate decision to learn the other half of the craft, so design ideas would never have to wait for someone else to build them.",
     tag: "2 yrs",
   },
   {
@@ -117,7 +118,7 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
     role: "Bachelor of Decorative Art (Design)",
     specialisation: "Product Design specialisation",
     university: "Silpakorn University · Bangkok",
-    note: "Where the eye for form and the instinct for storytelling first met — the roots of everything that came after.",
+    note: "Where the eye for form and the instinct for storytelling first met. The roots of everything that came after.",
     tag: "4 yrs",
   },
 ];
@@ -140,6 +141,7 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
       { label: "Information architecture" },
       { label: "Prototyping" },
       { label: "Accessibility" },
+      { label: "User-centered design" },
     ],
   },
   {
@@ -147,10 +149,16 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
     tags: [
       { label: "Figma", key: true },
       { label: "Figma Variables" },
+      { label: "Tokens Studio" },
+      { label: "Procreate" },
       { label: "HTML / CSS / JS" },
       { label: "React" },
-      { label: "Three.js" },
-      { label: "Tokens Studio" },
+      { label: "Next.js" },
+      { label: "Tailwind CSS" },
+      { label: "TypeScript" },
+      { label: "Prisma" },
+      { label: "GitHub" },
+
     ],
   },
   {
@@ -173,7 +181,7 @@ const practiceSkills =
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered tools.",
   storyIntro:
-    "I'm a product designer in Melbourne who designs and builds, also work across multiple design fields as a multidisciplinarian. What I design in Figma can be shipped in a development environment.",
+    "I'm a product designer in Melbourne who designs and builds. \nI care about the structure beneath the surface, and the person on the other side of the screen.",
   skills: practiceSkills,
   statusLabel: "Open to work",
   availabilityHeading: "Open to product design roles.",

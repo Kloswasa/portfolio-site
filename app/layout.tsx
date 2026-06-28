@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Fraunces, Syne } from "next/font/google";
+import { DM_Sans, Fraunces, Syne, Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -20,11 +20,12 @@ const headingFont = Fraunces({
   style: ["normal", "italic"],
 });
 
-const bodyFont = DM_Sans({
+const bodyFont = Poppins({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const monoFont = Syne({

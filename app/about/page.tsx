@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "About",
   description:
-    "Klaus W — a product designer and creative technologist in Melbourne. The practice, the path, and the influences behind the archive.",
+  "Klaus W — product designer in Melbourne. The practice, the path, and the work behind the archive.",
 };
 
 export default function AboutPage() {

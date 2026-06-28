@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Klaus W",
   title: "Product Designer & Developer",
   tagline:
-    "I design thoughtful interfaces and build them with a token-driven system — balancing craft, accessibility, and performance.",
+  "Product designer in Melbourne who designs and builds interfaces with intention from research and Figma through to production code.",
   email: "klos.wasa@gmail.com",
   location: "Melbourne, Australia",
 
@@ -21,7 +21,7 @@ export const siteConfig = {
   site: {
     title: "Klaus W. — Portfolio",
     description:
-      "Product designer and developer crafting thoughtful interfaces with a token-driven system.",
+    "Klaus W — product designer in Melbourne. Thoughtful interfaces, and built with care.",
     url: "https://klausw.dev",
   },
 

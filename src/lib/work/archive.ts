@@ -44,15 +44,14 @@ const archiveYears = projects.map((project) => {
 const minYear = Math.min(...archiveYears);
 const maxYear = Math.max(...archiveYears);
 const disciplineCount = new Set(projects.map((project) => project.workTab)).size;
-const industryCount = new Set(projects.flatMap((project) => project.technologies))
-  .size;
+const industryCount = new Set(projects.map((project) => project.industry)).size;
 
 export const WORK_HERO_META: WorkHeroMeta = {
   eyebrow: `THE WORK ARCHIVE · ${minYear} — ${maxYear}`,
   titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
   titleLine2: "specimens",
   description:
-    "Each project is logged like a specimen. Studied, deliberate, committed to the page. Hover to develop the image.\nClick to read the full record.",
+    "Each project is logged like a specimen. \nStudied, deliberate, committed to the page. \nHover to develop the image. Click to read the full record.",
   stats: [
     { label: "Disciplines", value: String(disciplineCount) },
     { label: "Industries", value: String(industryCount) },

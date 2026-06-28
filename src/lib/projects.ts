@@ -44,6 +44,8 @@ export interface Project {
   caseStudyKind: CaseStudyKind;
   /** Card stamp, e.g. "2024 · Capstone" */
   yearLabel: string;
+  /** Client sector / domain — used for work archive hero stats */
+  industry: string;
   liveUrl?: string;
   sourceUrl?: string;
   coverImage?: { src: string; alt: string }
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2025 · Product",
+    industry: "Travel",
     coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Call cover image" },
   },
   {
@@ -78,6 +81,7 @@ export const projects: Project[] = [
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2024 · Research",
+    industry: "Healthcare",
     coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
 
   },
@@ -92,6 +96,7 @@ export const projects: Project[] = [
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2026 · Product",
+    industry: "Food & beverage",
     liveUrl: "https://family-recipes.app",
     sourceUrl: "https://github.com/yourusername/recipe",
   },
@@ -106,6 +111,7 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "major",
     yearLabel: "2019 · Capstone",
+    industry: "Home & lifestyle",
     coverImage: { src: "/projects/homhuan/homhuan-cover.png", alt: "HomHuan cover image" },
   },
   {
@@ -119,6 +125,7 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "minor",
     yearLabel: "2021 · Industrial",
+    industry: "Food & beverage",
     coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
   },
   {
@@ -132,6 +139,7 @@ export const projects: Project[] = [
     workTab: "industrial",
     caseStudyKind: "minor",
     yearLabel: "2021 · Industrial",
+    industry: "Retail",
     coverImage: { src: "/projects/kuendee/kuendee-cover.png", alt: "Kuendee Booth cover image" },
   },
   {
@@ -145,6 +153,7 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2021 · Graphic",
+    industry: "Consumer health",
     coverImage: { src: "/projects/flomax/flomax-cover.png", alt: "Flomax Packaging cover image" },
   },
   {
@@ -158,6 +167,7 @@ export const projects: Project[] = [
     workTab: "pack",
     caseStudyKind: "minor",
     yearLabel: "2022 · Packaging",
+    industry: "Beauty",
     // confidential: true,
     // caseStudySlug: "bhaesaj",
   },
@@ -172,6 +182,7 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2021 · Graphic",
+    industry: "Food & beverage",
     coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bhup Product Line cover image" },
     // confidential: true,
     // caseStudySlug: "bupha",
@@ -187,6 +198,7 @@ export const projects: Project[] = [
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2023 · Catalog",
+    industry: "Building materials",
     coverImage: { src: "/projects/jtimber/Jtimber-cover.png", alt: "JTimber Catalog cover image" },
     caseStudySlug: "jtimber",
   },
@@ -200,7 +212,8 @@ export const projects: Project[] = [
     tone: "secondary",
     workTab: "graphic",
     caseStudyKind: "minor",
-    yearLabel: "2017 · Editorial",
+    yearLabel: "2019 · Editorial",
+    industry: "Publishing",
     coverImage: { src: "/projects/thai-hom/thai-hom-cover.png", alt: "Thai Hom cover image" },
     caseStudySlug: "thaihom",
   },
@@ -215,6 +228,7 @@ export const projects: Project[] = [
     workTab: "pack",
     caseStudyKind: "minor",
     yearLabel: "2022 · Structure",
+    industry: "Consumer goods",
   },
 ];
 
