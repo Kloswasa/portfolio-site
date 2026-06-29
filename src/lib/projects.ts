@@ -192,14 +192,14 @@ export const projects: Project[] = [
     slug: "jtimber",
     title: "JTimber Catalog",
     description:
-      "Multimedia catalog for a wood styling company — layout, 3D renders, retouching, and print.",
+      "Catalog for a wood styling company, including multimedia assets making, layout, 3D renders, retouching, and print.",
     technologies: ["Editorial", "3D rendering", "Printing production"],
     tone: "primary",
     workTab: "graphic",
     caseStudyKind: "minor",
     yearLabel: "2023 · Catalog",
     industry: "Building materials",
-    coverImage: { src: "/projects/jtimber/Jtimber-cover.png", alt: "JTimber Catalog cover image" },
+    coverImage: { src: "/projects/jtimber/jtimber-cover.png", alt: "JTimber Catalog cover image" },
     caseStudySlug: "jtimber",
   },
   {

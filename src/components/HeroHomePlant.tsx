@@ -50,6 +50,12 @@ const HERO_PLANTS: HeroPlant[] = [
     stampLines: HERO_PLANT_STAMPS.dandelion,
     render: () => <PlayIllustration name="dandelion" />,
   },
+  {
+    id: "clover",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.clover,
+    render: () => <PlayIllustration name="clover" />,
+  },
 ];
 
 const DEFAULT_PLANT =

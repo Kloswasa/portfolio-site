@@ -29,6 +29,7 @@ interface PlayZoomableImageProps {
   loading?: "lazy" | "eager";
   onZoomChange?: (zoomed: boolean, scale: number) => void;
   onActivate?: () => void;
+  onNaturalSize?: (width: number, height: number) => void;
   /** Allow wheel zoom without ctrl/meta (single-image mode). */
   wheelZoom?: boolean;
 }
@@ -57,7 +58,18 @@ function clampTranslate(
 
 export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomableImageProps>(
   function PlayZoomableImage(
-    { src, alt, width, height, className, loading = "lazy", onZoomChange, onActivate, wheelZoom = false },
+    {
+      src,
+      alt,
+      width,
+      height,
+      className,
+      loading = "lazy",
+      onZoomChange,
+      onActivate,
+      onNaturalSize,
+      wheelZoom = false,
+    },
     ref,
   ) {
     const frameRef = useRef<HTMLDivElement | null>(null);
@@ -260,6 +272,12 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
             decoding="async"
             loading={loading}
             draggable={false}
+            onLoad={(e) => {
+              const img = e.currentTarget;
+              if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+                onNaturalSize?.(img.naturalWidth, img.naturalHeight);
+              }
+            }}
           />
         </div>
       </div>

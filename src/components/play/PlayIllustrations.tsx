@@ -24,6 +24,8 @@ export function PlayIllustration({
       return <MagnoliaIllustration className={className} />;
     case "dandelion":
       return <DandelionIllustration className={className} />;
+    case "clover":
+      return <CloverIllustration className={className} />;
     default:
       return null;
   }
@@ -251,6 +253,94 @@ function MagnoliaIllustration({ className }: { className?: string }) {
         letterSpacing="2"
       >
         MAGNOLIA · STUDY V
+      </text>
+    </svg>
+  );
+}
+
+function CloverIllustration({ className }: { className?: string }) {
+  const cx = 200;
+  const cy = 218;
+
+  const leafFill = "rgba(181,206,233,0.1)";
+  const leafStroke = "var(--color-border-strong)";
+  const veinStroke = "var(--color-primary-muted)";
+  const chevronFill = "rgba(255,255,255,0.14)";
+
+  const leafPath =
+    "M0 8 C-30 6,-52 -16,-56 -50 C-54 -74,-36 -92,-16 -98 C-6 -100,-2 -96,0 -88 C2 -96,6 -100,16 -98 C36 -92,54 -74,56 -50 C52 -16,30 6,0 8Z";
+
+  const chevronPath = "M0 -52 L-16 -68 L-7 -70 L0 -60 L7 -70 L16 -68Z";
+
+  const rotations = [0, 90, 180, 270] as const;
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <g transform={`translate(${cx} ${cy})`}>
+        <g opacity="0.18" fill="rgba(0,0,0,0.35)">
+          {rotations.map((angle) => (
+            <path
+              key={`shadow-${angle}`}
+              d={leafPath}
+              transform={`rotate(${angle + 4}) translate(2 2)`}
+            />
+          ))}
+        </g>
+
+        {rotations.map((angle) => (
+          <g key={`leaf-${angle}`} transform={`rotate(${angle})`}>
+            <path
+              d={leafPath}
+              fill={leafFill}
+              stroke={leafStroke}
+              strokeWidth="1"
+              strokeLinejoin="round"
+              opacity="0.72"
+            />
+            <path d={chevronPath} fill={chevronFill} stroke="none" />
+            <path
+              d="M0 10 L0 -84"
+              stroke={veinStroke}
+              strokeWidth="0.9"
+              fill="none"
+              opacity="0.65"
+              strokeLinecap="round"
+            />
+            <g stroke={veinStroke} strokeWidth="0.45" fill="none" opacity="0.42" strokeLinecap="round">
+              <path d="M0 -22 C-14 -18,-22 -12,-28 -4" />
+              <path d="M0 -22 C14 -18,22 -12,28 -4" />
+              <path d="M0 -44 C-18 -38,-26 -28,-32 -16" />
+              <path d="M0 -44 C18 -38,26 -28,32 -16" />
+              <path d="M0 -66 C-16 -60,-22 -52,-26 -42" />
+              <path d="M0 -66 C16 -60,22 -52,26 -42" />
+              <path d="M0 -82 C-12 -78,-16 -72,-18 -66" />
+              <path d="M0 -82 C12 -78,16 -72,18 -66" />
+            </g>
+          </g>
+        ))}
+
+        <circle cx="0" cy="0" r="4.5" fill="rgba(255,255,255,0.22)" />
+        <circle cx="0" cy="0" r="2.2" fill="var(--color-accent)" opacity="0.85" />
+      </g>
+
+      <path
+        d={`M${cx} ${cy + 8} C${cx - 2} ${cy + 90}, ${cx + 1} ${cy + 170}, ${cx} 470`}
+        stroke={veinStroke}
+        strokeWidth="1.2"
+        fill="none"
+        opacity="0.45"
+        strokeLinecap="round"
+      />
+
+      <text
+        x="100"
+        y="490"
+        fontFamily={MONO}
+        fontSize="8"
+        fill="rgba(255,255,255,0.3)"
+        letterSpacing="2"
+      >
+        TRIFOLIUM · FORTUNATUM
       </text>
     </svg>
   );

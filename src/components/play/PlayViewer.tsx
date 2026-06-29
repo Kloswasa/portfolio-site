@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { PlayCanvas, type PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import {
@@ -7,8 +8,8 @@ import {
   type PlayZoomableImageHandle,
 } from "@/src/components/play/PlayZoomableImage";
 import type { PlayImage, PlayWork } from "@/src/lib/play/types";
-import { playImageSrc } from "@/src/lib/play/utils";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { plateAspectRatio, playImageSrc } from "@/src/lib/play/utils";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import { useReducedMotion } from "framer-motion";
 
@@ -34,6 +35,8 @@ export function PlayViewer({
   const [developing, setDeveloping] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [stackZoomed, setStackZoomed] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [imageDimensions, setImageDimensions] = useState<Record<number, { width: number; height: number }>>({});
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
   const stackRef = useRef<HTMLDivElement | null>(null);
   const activeZoomRef = useRef<PlayZoomableImageHandle | null>(null);
@@ -61,6 +64,33 @@ export function PlayViewer({
   const isStack = images.length > 1;
   const hasRasterImages = images.length > 0;
 
+  const plateAspect = useMemo(() => {
+    const dims = imageDimensions[activeImageIndex];
+    if (dims) return plateAspectRatio(dims.width, dims.height);
+
+    const image = images[activeImageIndex];
+    if (image?.width && image?.height) {
+      return plateAspectRatio(image.width, image.height);
+    }
+
+    return 1;
+  }, [activeImageIndex, imageDimensions, images]);
+
+  const plateStyle = useMemo(
+    (): CSSProperties & Record<"--play-plate-aspect", string> => ({
+      "--play-plate-aspect": String(plateAspect),
+    }),
+    [plateAspect],
+  );
+
+  const handleImageNaturalSize = useCallback((index: number, width: number, height: number) => {
+    setImageDimensions((prev) => {
+      const existing = prev[index];
+      if (existing?.width === width && existing?.height === height) return prev;
+      return { ...prev, [index]: { width, height } };
+    });
+  }, []);
+
   const handleZoomChange = useCallback((index: number, _zoomed: boolean, scale: number) => {
     scalesRef.current[index] = scale;
     setStackZoomed(scalesRef.current.some((s) => s > 1));
@@ -86,9 +116,52 @@ export function PlayViewer({
     stack.scrollTop = 0;
     stack.scrollLeft = 0;
     setStackZoomed(false);
+    setActiveImageIndex(0);
     scalesRef.current = [];
     activeZoomRef.current = zoomRefs.current[0] ?? null;
   }, [currentIndex]);
+
+  useEffect(() => {
+    setImageDimensions(() => {
+      const seeded: Record<number, { width: number; height: number }> = {};
+      images.forEach((image, index) => {
+        if (image.width && image.height) {
+          seeded[index] = { width: image.width, height: image.height };
+        }
+      });
+      return seeded;
+    });
+  }, [images]);
+
+  useEffect(() => {
+    const stack = stackRef.current;
+    if (!stack || !isStack || stackZoomed) return;
+
+    const items = stack.querySelectorAll<HTMLElement>(".play-viewer__stack-img");
+    if (items.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let bestIndex = 0;
+        let bestRatio = 0;
+
+        for (const entry of entries) {
+          const index = Array.from(items).indexOf(entry.target as HTMLElement);
+          if (index < 0) continue;
+          if (entry.intersectionRatio > bestRatio) {
+            bestRatio = entry.intersectionRatio;
+            bestIndex = index;
+          }
+        }
+
+        if (bestRatio > 0) setActiveImageIndex(bestIndex);
+      },
+      { root: stack, threshold: [0, 0.35, 0.55, 0.75, 1] },
+    );
+
+    items.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, [isStack, stackZoomed, images, currentIndex]);
 
   useEffect(() => {
     if (!open) {
@@ -195,7 +268,9 @@ export function PlayViewer({
         <div className="play-viewer__plate-wrap">
           <div
             className="play-viewer__plate"
+            data-adaptive={hasRasterImages ? "true" : undefined}
             data-developing={developing && !reduceMotion ? "true" : undefined}
+            style={hasRasterImages ? plateStyle : undefined}
           >
             <div className="play-viewer__media">
               {work.medium === "code" && work.sketch ? (
@@ -236,9 +311,11 @@ export function PlayViewer({
                       height={image.height}
                       className="play-viewer__stack-img"
                       loading={i === 0 ? "eager" : "lazy"}
+                      onNaturalSize={(width, height) => handleImageNaturalSize(i, width, height)}
                       onZoomChange={(zoomed, scale) => handleZoomChange(i, zoomed, scale)}
                       onActivate={() => {
                         activeZoomRef.current = zoomRefs.current[i] ?? null;
+                        setActiveImageIndex(i);
                       }}
                       wheelZoom={!isStack}
                     />
@@ -279,6 +356,15 @@ export function PlayViewer({
             <p className="play-viewer__dim">{work.dim}</p>
             <div className="play-viewer__rule" aria-hidden="true" />
             <p className="play-viewer__note">{work.description}</p>
+
+            {work.projectSlug ? (
+              <Link
+                href={`/work/${work.projectSlug}`}
+                className="btn btn-secondary play-viewer__project-cta"
+              >
+                Check the project <span aria-hidden="true">→</span>
+              </Link>
+            ) : null}
 
             {work.medium === "code" && work.code ? (
               <>

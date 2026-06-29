@@ -184,7 +184,7 @@ export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
     "I'm a product designer in Melbourne who designs and builds. \nI care about the structure beneath the surface, and the person on the other side of the screen.",
   skills: practiceSkills,
   statusLabel: "Open to work",
-  availabilityHeading: "Open to product design roles.",
+  availabilityHeading: "Open to product related roles.",
   availabilityDescription:
     "Melbourne / remote. Email is the best way to reach me.",
   experience: "Design + Build",

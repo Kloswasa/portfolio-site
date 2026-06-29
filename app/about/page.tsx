@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "About",
   description:
-  "Klaus W — product designer in Melbourne. The practice, the path, and the work behind the archive.",
+  "Klaus W — product designer in Melbourne. The practice, the path, and the work behind the portfolio.",
 };
 
 export default function AboutPage() {

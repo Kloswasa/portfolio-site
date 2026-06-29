@@ -57,4 +57,6 @@ export interface PlayWork {
    */
   images?: PlayImage[];
   code?: string;
+  /** Portfolio case study slug — shows a link in the viewer when set */
+  projectSlug?: string;
 }
