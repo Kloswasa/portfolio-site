@@ -26,6 +26,14 @@ export function PlayIllustration({
       return <DandelionIllustration className={className} />;
     case "clover":
       return <CloverIllustration className={className} />;
+    case "lotus":
+      return <LotusIllustration className={className} />;
+    case "wax-flower":
+      return <WaxFlowerIllustration className={className} />;
+    case "chrysanthemum":
+      return <ChrysanthemumIllustration className={className} />;
+    case "forget-me-not":
+      return <ForgetMeNotIllustration className={className} />;
     default:
       return null;
   }
@@ -423,6 +431,323 @@ function DandelionIllustration({ className }: { className?: string }) {
       >
         TARAXACUM · DISPERSAL
       </text>
+    </svg>
+  );
+}
+
+function LotusIllustration({ className }: { className?: string }) {
+  const cx = 200;
+  const cy = 210;
+  const outerPetalCount = 12;
+  const innerPetalCount = 8;
+  const seedCount = 10;
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 250 C198 330 202 400 200 470"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.4"
+        fill="none"
+        opacity="0.55"
+      />
+      <ellipse
+        cx="130"
+        cy="340"
+        rx="48"
+        ry="18"
+        transform="rotate(-12 130 340)"
+        fill="rgba(181,206,233,0.08)"
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.9"
+        opacity="0.55"
+      />
+      <path
+        d="M82 340 Q130 330 178 340"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="0.6"
+        fill="none"
+        opacity="0.4"
+      />
+      <g
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.9"
+        fill="rgba(181,206,233,0.06)"
+        opacity="0.65"
+      >
+        {Array.from({ length: outerPetalCount }).map((_, i) => {
+          const angle = (i / outerPetalCount) * 360;
+          return (
+            <path
+              key={`outer-${i}`}
+              d="M0 0 C-14 -42 -10 -78 0 -92 C10 -78 14 -42 0 0"
+              transform={`rotate(${angle} ${cx} ${cy}) translate(${cx} ${cy - 46})`}
+            />
+          );
+        })}
+      </g>
+      <g
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.8"
+        fill="rgba(181,206,233,0.1)"
+        opacity="0.7"
+      >
+        {Array.from({ length: innerPetalCount }).map((_, i) => {
+          const angle = (i / innerPetalCount) * 360 + 22;
+          return (
+            <path
+              key={`inner-${i}`}
+              d="M0 0 C-8 -24 -6 -44 0 -52 C6 -44 8 -24 0 0"
+              transform={`rotate(${angle} ${cx} ${cy}) translate(${cx} ${cy - 28})`}
+            />
+          );
+        })}
+      </g>
+      <circle
+        cx={cx}
+        cy={cy}
+        r="14"
+        fill="none"
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.8"
+        opacity="0.5"
+      />
+      <g fill="var(--color-accent)" opacity="0.75">
+        {Array.from({ length: seedCount }).map((_, i) => {
+          const a = (i / seedCount) * Math.PI * 2;
+          return (
+            <circle
+              key={`seed-${i}`}
+              cx={cx + Math.cos(a) * 9}
+              cy={cy + Math.sin(a) * 9}
+              r="1.8"
+            />
+          );
+        })}
+        <circle cx={cx} cy={cy} r="3" />
+      </g>
+      <text
+        x="110"
+        y="490"
+        fontFamily={MONO}
+        fontSize="8"
+        fill="rgba(255,255,255,0.3)"
+        letterSpacing="2"
+      >
+        NELUMBO · NUCIFERA
+      </text>
+    </svg>
+  );
+}
+
+function WaxFlowerBloom({ x, y, scale = 1 }: { x: number; y: number; scale?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${scale})`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <ellipse
+          key={i}
+          cx="0"
+          cy="-7"
+          rx="4.5"
+          ry="7"
+          transform={`rotate(${i * 72})`}
+          fill="rgba(181,206,233,0.1)"
+          stroke="var(--color-border-strong)"
+          strokeWidth="0.7"
+          opacity="0.7"
+        />
+      ))}
+      <circle cx="0" cy="0" r="2.2" fill="var(--color-accent)" opacity="0.8" />
+    </g>
+  );
+}
+
+function WaxFlowerIllustration({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 470 C205 400 198 340 185 280 C175 230 160 180 140 130"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.55"
+      />
+      <path
+        d="M185 280 C220 260 260 240 300 220"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.1"
+        fill="none"
+        opacity="0.45"
+      />
+      <path
+        d="M175 220 C145 210 115 205 90 210"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1"
+        fill="none"
+        opacity="0.4"
+      />
+      <g stroke="var(--color-border-strong)" strokeWidth="0.7" fill="none" opacity="0.5">
+        <path d="M170 300 L158 318 M172 298 L160 316" />
+        <path d="M195 250 L183 268 M197 248 L185 266" />
+        <path d="M230 235 L218 252 M232 233 L220 250" />
+        <path d="M265 225 L253 240 M267 223 L255 238" />
+        <path d="M150 190 L138 205 M152 188 L140 203" />
+        <path d="M120 175 L108 188 M122 173 L110 186" />
+      </g>
+      <WaxFlowerBloom x={300} y={218} scale={1.1} />
+      <WaxFlowerBloom x={265} y={228} scale={0.95} />
+      <WaxFlowerBloom x={230} y={238} scale={1} />
+      <WaxFlowerBloom x={195} y={248} scale={0.9} />
+      <WaxFlowerBloom x={155} y={195} scale={0.85} />
+      <WaxFlowerBloom x={118} y={178} scale={0.8} />
+      <WaxFlowerBloom x={88} y={212} scale={0.75} />
+      <text
+        x="95"
+        y="490"
+        fontFamily={MONO}
+        fontSize="8"
+        fill="rgba(255,255,255,0.3)"
+        letterSpacing="2"
+      >
+        CHAMELAUCIUM · UNCINATUM
+      </text>
+    </svg>
+  );
+}
+
+function ChrysanthemumIllustration({ className }: { className?: string }) {
+  const cx = 200;
+  const cy = 215;
+  const layers = [
+    { count: 24, len: 72, width: 3.2, opacity: 0.45 },
+    { count: 20, len: 58, width: 3.6, opacity: 0.55 },
+    { count: 16, len: 42, width: 4, opacity: 0.65 },
+    { count: 12, len: 28, width: 4.2, opacity: 0.75 },
+  ] as const;
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 250 C198 330 202 400 200 470"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.3"
+        fill="none"
+        opacity="0.5"
+      />
+      {layers.flatMap((layer, li) =>
+        Array.from({ length: layer.count }).map((_, i) => {
+          const angle = (i / layer.count) * 360 + li * 7;
+          return (
+            <ellipse
+              key={`${li}-${i}`}
+              cx={cx}
+              cy={cy - layer.len / 2}
+              rx={layer.width}
+              ry={layer.len / 2}
+              transform={`rotate(${angle} ${cx} ${cy})`}
+              fill="rgba(181,206,233,0.06)"
+              stroke="var(--color-border-strong)"
+              strokeWidth="0.7"
+              opacity={layer.opacity}
+            />
+          );
+        })
+      )}
+      <circle
+        cx={cx}
+        cy={cy}
+        r="8"
+        fill="rgba(181,206,233,0.12)"
+        stroke="var(--color-border-strong)"
+        strokeWidth="0.8"
+        opacity="0.6"
+      />
+      <circle cx={cx} cy={cy} r="3.5" fill="var(--color-accent)" opacity="0.85" />
+      <text
+        x="95"
+        y="490"
+        fontFamily={MONO}
+        fontSize="8"
+        fill="rgba(255,255,255,0.3)"
+        letterSpacing="2"
+      >
+        CHRYSANTHEMUM · MORIFOLIUM
+      </text>
+    </svg>
+  );
+}
+
+function ForgetMeNotFlower({ x, y, scale = 1 }: { x: number; y: number; scale?: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${scale})`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <circle
+          key={i}
+          cx={Math.cos((i / 5) * Math.PI * 2 - Math.PI / 2) * 5}
+          cy={Math.sin((i / 5) * Math.PI * 2 - Math.PI / 2) * 5}
+          r="4.2"
+          fill="rgba(181,206,233,0.22)"
+          stroke="var(--color-border-strong)"
+          strokeWidth="0.85"
+          opacity="0.9"
+        />
+      ))}
+      <circle cx="0" cy="0" r="2.2" fill="var(--color-accent)" opacity="1" />
+    </g>
+  );
+}
+
+function ForgetMeNotLeaf({ x, y, rot }: { x: number; y: number; rot: number }) {
+  return (
+    <path
+      d="M0 0 C-8 -10 -14 -4 -10 4 C-6 10 0 14 0 14 C0 14 6 10 10 4 C14 -4 8 -10 0 0"
+      transform={`translate(${x} ${y}) rotate(${rot}) scale(1)`}
+      fill="rgba(181,206,233,0.14)"
+      stroke="var(--color-border-strong)"
+      strokeWidth="0.85"
+      opacity="0.78"
+    />
+  );
+}
+
+function ForgetMeNotIllustration({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 470 C198 390 202 320 210 260"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.4"
+        fill="none"
+        opacity="0.65"
+      />
+      <path
+        d="M210 320 C175 305 145 290 120 275"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.1"
+        fill="none"
+        opacity="0.55"
+      />
+      <path
+        d="M210 280 C240 268 270 255 295 245"
+        stroke="var(--color-primary-muted)"
+        strokeWidth="1.1"
+        fill="none"
+        opacity="0.55"
+      />
+      <ForgetMeNotLeaf x={145} y={318} rot={-25} />
+      <ForgetMeNotLeaf x={175} y={335} rot={15} />
+      <ForgetMeNotLeaf x={235} y={300} rot={30} />
+      <ForgetMeNotLeaf x={268} y={288} rot={-10} />
+      <ForgetMeNotLeaf x={118} y={282} rot={-40} />
+      <ForgetMeNotFlower x={295} y={245} scale={1.15} />
+      <ForgetMeNotFlower x={268} y={255} scale={1.05} />
+      <ForgetMeNotFlower x={240} y={265} scale={1} />
+      <ForgetMeNotFlower x={215} y={255} scale={1.15} />
+      <ForgetMeNotFlower x={190} y={270} scale={0.95} />
+      <ForgetMeNotFlower x={165} y={285} scale={0.9} />
+      <ForgetMeNotFlower x={135} y={278} scale={0.85} />
+      <ForgetMeNotFlower x={120} y={260} scale={0.8} />
+      <ForgetMeNotFlower x={248} y={238} scale={0.75} />
     </svg>
   );
 }

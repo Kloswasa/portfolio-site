@@ -1,27 +1,33 @@
 export type HeroPlantId =
-  | "stem-bloom"
+  | "wax-flower"
   | "branch"
   | "fern"
   | "magnolia"
   | "dandelion"
-  | "clover";
+  | "clover"
+  | "lotus"
+  | "chrysanthemum"
+  | "forget-me-not";
 
 export const HERO_PLANT_IDS: HeroPlantId[] = [
-  "stem-bloom",
+  "wax-flower",
   "branch",
   "fern",
   "magnolia",
   "dandelion",
   "clover",
+  "lotus",
+  "chrysanthemum",
+  "forget-me-not",
 ];
 
-export const DEFAULT_HERO_PLANT_ID: HeroPlantId = "stem-bloom";
+export const DEFAULT_HERO_PLANT_ID: HeroPlantId = "wax-flower";
 
 export const HERO_PLANT_STAMPS: Record<
   HeroPlantId,
   readonly [string, string, string]
 > = {
-  "stem-bloom": [
+  "wax-flower": [
     "Chamelaucium uncinatum",
     "Specimen No. 042",
     "Digital · 2026",
@@ -31,4 +37,15 @@ export const HERO_PLANT_STAMPS: Record<
   magnolia: ["Magnolia grandiflora", "Specimen No. 005", "Digital · 2026"],
   dandelion: ["Taraxacum officinale", "Specimen No. 018", "Digital · 2026"],
   clover: ["Trifolium repens", "Specimen No. 044", "Digital · 2026"],
+  lotus: ["Nelumbo nucifera", "Specimen No. 007", "Digital · 2026"],
+  chrysanthemum: [
+    "Chrysanthemum morifolium",
+    "Specimen No. 023",
+    "Digital · 2026",
+  ],
+  "forget-me-not": [
+    "Myosotis sylvatica",
+    "Specimen No. 031",
+    "Think of me · 2026",
+  ],
 };

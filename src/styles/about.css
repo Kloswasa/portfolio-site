@@ -63,6 +63,29 @@
   max-width: none;
 }
 
+@media (min-width: 821px) {
+  .about-page .work-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, min(32vw, 20rem));
+    gap: var(--spacing-10);
+    align-items: start;
+  }
+
+  .about-page .work-hero__copy {
+    max-width: 40rem;
+  }
+
+  .about-page .work-hero__illustration {
+    position: static;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 20rem;
+    justify-self: end;
+    margin-top: var(--spacing-1);
+  }
+}
+
 .about-page .work-hero__description {
   max-width: 36rem;
 }
@@ -89,16 +112,25 @@
 
 .about-page .work-hero__illustration {
   position: absolute;
-  top: var(--spacing-10);
+  top: var(--spacing-4);
   right: var(--about-pad-x);
   z-index: 1;
   display: flex;
   justify-content: flex-end;
-  width: min(42%, 17.5rem);
+  width: min(55%, 28rem);
   transform: none;
   padding: 0;
   pointer-events: none;
-  opacity: 0.16;
+  opacity: 0.44;
+  --color-primary-muted: color-mix(in srgb, var(--color-text) 42%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-text) 52%, transparent);
+  --color-accent: color-mix(in srgb, var(--color-tertiary) 72%, var(--color-text) 38%);
+  --color-secondary: color-mix(in srgb, var(--color-text) 36%, transparent);
+}
+
+.about-page .work-hero__illustration text {
+  display: block;
+  opacity: 0.85;
 }
 
 .about-page .work-hero__illustration svg {

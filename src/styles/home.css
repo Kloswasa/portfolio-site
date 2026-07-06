@@ -386,13 +386,21 @@
 
 .home-about__botanical {
   position: absolute;
-  right: -12%;
-  bottom: -8%;
-  z-index: 1;
-  width: 42%;
-  max-width: 11rem;
-  color: color-mix(in srgb, var(--color-text-inverse) 18%, transparent);
+  right: -14%;
+  bottom: -10%;
+  z-index: 0;
+  width: 38%;
+  max-width: 10.5rem;
+  color: color-mix(in srgb, var(--color-text-inverse) 32%, transparent);
+  --color-primary-muted: color-mix(in srgb, var(--color-text-inverse) 48%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-text-inverse) 62%, transparent);
+  --color-accent: color-mix(in srgb, var(--color-text-inverse) 82%, transparent);
+  --color-secondary: color-mix(in srgb, var(--color-text-inverse) 38%, transparent);
   pointer-events: none;
+}
+
+.home-about__botanical text {
+  display: none;
 }
 
 .home-about__botanical svg {

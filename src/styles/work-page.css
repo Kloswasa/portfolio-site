@@ -44,6 +44,14 @@
   padding-block: var(--spacing-24) var(--spacing-12);
 }
 
+/* Archive heroes — fixed top breathing room (work content is taller than play/about) */
+.play-page .work-hero,
+.work-page .work-hero {
+  justify-content: flex-start;
+  padding-block: var(--spacing-24) var(--spacing-12);
+  min-height: clamp(28rem, 84vh, 42rem);
+}
+
 .work-hero__watermark {
   position: absolute;
   right: var(--work-pad-x);
@@ -195,16 +203,24 @@
 
 .work-hero__illustration {
   position: absolute;
-  top: 42%;
+  top: 36%;
   right: 0;
   z-index: 2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: min(48%, 11.5rem);
+  width: min(65%, 15rem);
   transform: translateY(-50%);
   color: color-mix(in srgb, var(--color-text) 28%, transparent);
+  --color-primary-muted: color-mix(in srgb, var(--color-text) 20%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-text) 28%, transparent);
+  --color-accent: color-mix(in srgb, var(--color-tertiary) 50%, var(--color-text) 22%);
+  --color-secondary: color-mix(in srgb, var(--color-text) 16%, transparent);
   pointer-events: none;
+}
+
+.work-hero__illustration text {
+  display: none;
 }
 
 .work-hero__illustration svg {
@@ -219,14 +235,14 @@
     right: auto;
     z-index: auto;
     width: auto;
-    transform: none;
+    transform: translateY(calc(-1 * var(--spacing-8)));
     justify-content: flex-end;
     padding-right: var(--spacing-2);
     pointer-events: auto;
   }
 
   .work-hero__illustration svg {
-    width: min(100%, 15.5rem);
+    width: min(100%, 24rem);
   }
 }
 

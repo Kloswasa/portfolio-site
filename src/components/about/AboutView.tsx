@@ -43,7 +43,11 @@ export function AboutView({
 }: AboutViewProps) {
   return (
     <div className="about-page">
-      <WorkHero meta={heroMeta} watermark={heroMeta.watermark} />
+      <WorkHero
+        meta={heroMeta}
+        watermark={heroMeta.watermark}
+        illustration="forget-me-not"
+      />
 
       <div className="about-body about-container">
         <AboutStory block={storyBlock} story={story} />

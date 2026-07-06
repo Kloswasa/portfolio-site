@@ -1,14 +1,21 @@
-import { WorkHeroBotanical } from "@/src/components/work/WorkHeroBotanical";
+import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import type { WorkHeroMeta } from "@/src/lib/work/types";
+
+export type WorkHeroIllustration =
+  | "wax-flower"
+  | "chrysanthemum"
+  | "forget-me-not";
 
 interface WorkHeroProps {
   meta: WorkHeroMeta;
   watermark?: string;
+  illustration?: WorkHeroIllustration;
 }
 
 export function WorkHero({
   meta,
   watermark = "\u201C Works \u201D",
+  illustration = "wax-flower",
 }: WorkHeroProps) {
   return (
     <header className="work-hero">
@@ -45,7 +52,7 @@ export function WorkHero({
         </div>
 
         <div className="work-hero__illustration" aria-hidden="true">
-          <WorkHeroBotanical />
+          <PlayIllustration name={illustration} />
         </div>
       </div>
     </header>

@@ -6,5 +6,7 @@ interface PlayHeroProps {
 }
 
 export function PlayHero({ meta }: PlayHeroProps) {
-  return <WorkHero meta={meta} watermark=" 'Play' " />;
+  return (
+    <WorkHero meta={meta} watermark=" 'Play' " illustration="chrysanthemum" />
+  );
 }

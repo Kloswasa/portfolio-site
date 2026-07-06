@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeAboutBotanical } from "@/src/components/HomeAboutBotanical";
 import {
   SnapItem,
   SnapSectionReveal,
@@ -23,58 +24,6 @@ function AboutHeading({ text }: { text: string }) {
       <em>{emphasis}</em>
       {text.slice(index + emphasis.length)}
     </>
-  );
-}
-
-function HomeAboutBotanical() {
-  return (
-    <div className="home-about__botanical" aria-hidden="true">
-      <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M60 170 C58 130, 60 90, 60 50 C60 30, 58 14, 56 6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-        />
-        <path
-          d="M60 120 C44 108, 28 98, 14 90"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="0.8"
-          opacity="0.8"
-        />
-        <path
-          d="M60 120 C76 108, 92 98, 106 90"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="0.8"
-          opacity="0.8"
-        />
-        <ellipse
-          cx="38"
-          cy="72"
-          rx="14"
-          ry="8"
-          transform="rotate(-24 38 72)"
-          fill="currentColor"
-          opacity="0.12"
-          stroke="currentColor"
-          strokeWidth="0.6"
-        />
-        <ellipse
-          cx="78"
-          cy="58"
-          rx="12"
-          ry="7"
-          transform="rotate(18 78 58)"
-          fill="currentColor"
-          opacity="0.1"
-          stroke="currentColor"
-          strokeWidth="0.6"
-        />
-        <circle cx="56" cy="8" r="4" fill="currentColor" opacity="0.2" />
-      </svg>
-    </div>
   );
 }
 

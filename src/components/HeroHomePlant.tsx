@@ -3,7 +3,6 @@
 import { useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
-import { HeroBotanical } from "@/src/components/HeroBotanical";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import { WorkHeroBotanical } from "@/src/components/work/WorkHeroBotanical";
 import { useHeroPlantTilt } from "@/src/hooks/useHeroPlantTilt";
@@ -23,9 +22,10 @@ type HeroPlant = {
 
 const HERO_PLANTS: HeroPlant[] = [
   {
-    id: "stem-bloom",
-    stampLines: HERO_PLANT_STAMPS["stem-bloom"],
-    render: () => <HeroBotanical />,
+    id: "wax-flower",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS["wax-flower"],
+    render: () => <PlayIllustration name="wax-flower" />,
   },
   {
     id: "branch",
@@ -55,6 +55,24 @@ const HERO_PLANTS: HeroPlant[] = [
     play: true,
     stampLines: HERO_PLANT_STAMPS.clover,
     render: () => <PlayIllustration name="clover" />,
+  },
+  {
+    id: "lotus",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.lotus,
+    render: () => <PlayIllustration name="lotus" />,
+  },
+  {
+    id: "chrysanthemum",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.chrysanthemum,
+    render: () => <PlayIllustration name="chrysanthemum" />,
+  },
+  {
+    id: "forget-me-not",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS["forget-me-not"],
+    render: () => <PlayIllustration name="forget-me-not" />,
   },
 ];
 
