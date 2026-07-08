@@ -43,20 +43,20 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "    Design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework. Two things in that brief made it harder than a normal quiz."
+            "    Design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.\nTwo things in that brief made it harder than a normal quiz."
           ]
         },
         {
           "type": "findings",
           "items": [
             {
-              "num": 1,
+              "num": "1",
               "label": "Brief",
               "title": "Holland's model",
               "body": "Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's \"Investigative\" became \"the Curious Explorer\"."
             },
             {
-              "num": 2,
+              "num": "2",
               "label": "Brief",
               "title": "The audience",
               "body": "the audience hadn't been to Australia, so being told you are \"the Curious Explorer\" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect."

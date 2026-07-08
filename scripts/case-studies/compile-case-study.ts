@@ -197,11 +197,14 @@ function parseStatsBlock(text: string): MajorContentBlock {
 
 function parseFindingsBlock(text: string): MajorContentBlock {
   const items = parseYamlList<{
-    num: string;
+    num: string | number;
     label: string;
     title: string;
     body: string;
-  }>(text, "findings");
+  }>(text, "findings").map((item) => ({
+    ...item,
+    num: String(item.num),
+  }));
 
   for (const item of items) {
     if (!item.num || !item.label || !item.title || !item.body) {
@@ -226,10 +229,13 @@ function parseTwoColBlock(text: string): MajorContentBlock {
 
 function parseProcessBlock(text: string): MajorContentBlock {
   const items = parseYamlList<{
-    num: string;
+    num: string | number;
     title: string;
     body: string;
-  }>(text, "process");
+  }>(text, "process").map((item) => ({
+    ...item,
+    num: String(item.num),
+  }));
 
   for (const item of items) {
     if (!item.num || !item.title || !item.body) {
