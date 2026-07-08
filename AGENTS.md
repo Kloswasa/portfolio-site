@@ -59,8 +59,14 @@ npm run typecheck    # tsc --noEmit
 
 ## Typography rules
 
-- `font-heading` (Crimson Pro): headings only
-- `font-body` (DM Sans): everything else
+Fonts load in `app/layout.tsx` via `next/font/google` and bind to CSS variables on `<html>` (runtime source of truth):
+
+- `font-heading` (**Fraunces**): headings only
+- `font-body` (**Prompt**): everything else
+- `font-mono` (**Syne**): stamps, labels, and technical accents
+
+Keep `design-tokens/tokens.*.json` `font.*` values aligned, then run `npm run tokens:gen`.
+
 - Heading scale uses semantic utilities derived from tokens:
   - `text-heading-xl`, `text-heading-2xl`, `text-heading-3xl`, `text-heading-4xl`, `text-heading-5xl`
 - `font-heading` is applied automatically to `h1–h6` and `.text-heading-*` via base styles; don’t manually add it.
@@ -91,8 +97,28 @@ animation/             # Framer Motion variants and transitions
 design-tokens/         # Token source JSON files + dtcg/ exports
 scripts/tokens/        # generate.ts, export-dtcg.ts
 scripts/figma/         # export-tokens.ts (Figma pull)
+scripts/case-studies/  # compile-case-study.ts (MD → TS)
 public/                # Static assets
 ```
+
+---
+
+## Case study content (markdown)
+
+Major case studies can be authored as markdown and compiled to TypeScript:
+
+- **Edit:** `src/content/case-studies/<slug>.md` (YAML frontmatter for hero + metadata; `# section` headers; `## blockType` for content blocks)
+- **Generated (never edit by hand):** `src/content/case-studies/<slug>.ts`
+- **Commands:**
+  - `npm run content:quiz-game`
+  - `npm run content:block-showcase`
+
+**Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imagePair`, `video`
+
+- Key-value blocks (`pullquote`, `video`, `image`, `artifact`, `callout`, `annotation`): `key: value` lines under `## blockType`
+- List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`): YAML list under `## blockType`
+- Empty blocks (`ornament`, `colorSpecimen`, `typeSpecimen`): `## blockType` with no body
+- `reflections`: markdown `-` list items
 
 ---
 

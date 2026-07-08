@@ -277,6 +277,7 @@ function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
   const reduceMotion = useReducedMotion();
   const pendingClose = React.useRef(false);
   const closeTimer = React.useRef<number | undefined>(undefined);
+  const [selected, setSelected] = React.useState(false);
 
   const { onMouseEnter, onClick, ripples, duration, startOpacity, closeDelayMs } =
     useHoverRipple<HTMLButtonElement>({
@@ -301,6 +302,7 @@ function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
       type="button"
       onClick={(event) => {
         if (disabled || pendingClose.current) return;
+        setSelected(true);
         onClick(event);
         if (reduceMotion) {
           onSelect();
@@ -314,22 +316,40 @@ function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
       }}
       onMouseEnter={onMouseEnter}
       disabled={disabled}
-      className="group relative flex w-full items-center justify-between overflow-hidden py-5 text-info/75 transition-colors duration-300 hover:text-info-text disabled:pointer-events-none"
+      className={[
+        "group relative flex w-full items-center justify-between overflow-hidden py-5 transition-colors duration-300 disabled:pointer-events-none",
+        selected
+          ? "text-accent"
+          : "text-info/75 hover:text-info-text",
+      ].join(" ")}
     >
       <HoverRippleLayer
         ripples={ripples}
         duration={duration}
         startOpacity={startOpacity}
         color="var(--color-info-text)"
+        clickColor="var(--color-accent)"
       />
       <span className="relative text-heading-4xl leading-none tracking-tight">
         {label}
       </span>
       <span className="relative flex shrink-0 items-center gap-4 pl-2 pr-4">
-        <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+        <span
+          className={[
+            "font-mono text-[11px] uppercase tracking-[0.15em] transition-colors duration-300",
+            selected ? "text-accent/60" : "text-info-text/35",
+          ].join(" ")}
+        >
           {num}
         </span>
-        <span className="inline-flex min-w-[1.25em] items-center justify-center  text-lg text-info-text/50 transition-all duration-200 group-hover:translate-x-1.5 group-hover:text-info">
+        <span
+          className={[
+            "inline-flex min-w-[1.25em] items-center justify-center text-lg transition-all duration-200",
+            selected
+              ? "translate-x-1.5 text-accent"
+              : "text-info-text/50 group-hover:translate-x-1.5 group-hover:text-info",
+          ].join(" ")}
+        >
           →
         </span>
       </span>

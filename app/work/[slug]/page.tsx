@@ -38,6 +38,7 @@ export default async function WorkDetailPage({
           <main className="w-full px-8">
             <CaseStudyRenderer
               caseStudy={caseStudy}
+              project={project}
               nextProject={nextProject}
               nextIndex={nextIndex}
             />
@@ -67,6 +68,7 @@ export default async function WorkDetailPage({
     <main className="w-full px-8">
       <CaseStudyRenderer
         caseStudy={caseStudy}
+        project={project}
         nextProject={nextProject}
         nextIndex={nextIndex}
       />

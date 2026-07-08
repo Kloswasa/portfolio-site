@@ -4,10 +4,12 @@ import type { Project } from "@/src/lib/projects";
 
 export function CaseStudyRenderer({
   caseStudy,
+  project,
   nextProject,
   nextIndex,
 }: {
   caseStudy: CaseStudy;
+  project: Project;
   nextProject?: Project;
   nextIndex?: string;
 }) {
@@ -16,6 +18,7 @@ export function CaseStudyRenderer({
   return (
     <MajorCaseStudyView
       caseStudy={caseStudy}
+      project={project}
       nextProject={nextProject}
       nextIndex={nextIndex}
     />

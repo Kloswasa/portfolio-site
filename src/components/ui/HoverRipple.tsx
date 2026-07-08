@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
+type RippleKind = 'hover' | 'click';
+
 type Ripple = {
   id: number;
   x: number;
@@ -10,6 +12,7 @@ type Ripple = {
   size: number;
   /** Stagger before this ring animates (seconds). */
   delay: number;
+  kind: RippleKind;
 };
 
 type RippleOrigin = 'pointer' | 'center';
@@ -120,6 +123,7 @@ export function useHoverRipple<T extends HTMLElement>(
       count: number,
       origin: RippleOrigin,
       stagger: number,
+      kind: RippleKind,
     ) => {
       if (reduceMotion || count < 1) return;
       const { x, y, width, height } = ripplePoint(target, event, origin);
@@ -138,6 +142,7 @@ export function useHoverRipple<T extends HTMLElement>(
           y,
           size,
           delay,
+          kind,
         };
         batch.push(ripple);
         scheduleRemoval(ripple.id, delay);
@@ -156,6 +161,7 @@ export function useHoverRipple<T extends HTMLElement>(
         hoverRingCount,
         hoverOrigin,
         hoverRingStagger,
+        'hover',
       );
     },
     [spawnRipples, hoverRingCount, hoverOrigin, hoverRingStagger],
@@ -163,7 +169,7 @@ export function useHoverRipple<T extends HTMLElement>(
 
   const onClick = React.useCallback(
     (event: React.MouseEvent<T>) => {
-      spawnRipples(event.currentTarget, event, clickRingCount, clickOrigin, 0);
+      spawnRipples(event.currentTarget, event, clickRingCount, clickOrigin, 0, 'click');
     },
     [spawnRipples, clickRingCount, clickOrigin],
   );
@@ -182,8 +188,10 @@ type HoverRippleLayerProps = {
   ripples: Ripple[];
   duration?: number;
   startOpacity?: number;
-  /** Optional CSS color for the ripple (defaults to `currentColor`). */
+  /** Optional CSS color for hover ripples (defaults to `currentColor`). */
   color?: string;
+  /** Optional CSS color for click ripples (defaults to `color`). */
+  clickColor?: string;
 };
 
 export function HoverRippleLayer({
@@ -191,35 +199,42 @@ export function HoverRippleLayer({
   duration = RIPPLE_DURATION,
   startOpacity = 0.6,
   color = 'currentColor',
+  clickColor,
 }: HoverRippleLayerProps) {
+  const resolvedClickColor = clickColor ?? color;
+
   return (
     <span
       aria-hidden
       className="pointer-events-none absolute inset-0 overflow-hidden"
     >
       <AnimatePresence>
-        {ripples.map((ripple) => (
-          <motion.span
-            key={ripple.id}
-            initial={{ scale: 0, opacity: startOpacity }}
-            animate={{ scale: 1, opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration, ease: EASE, delay: ripple.delay }}
-            style={{
-              position: 'absolute',
-              top: ripple.y - ripple.size / 2,
-              left: ripple.x - ripple.size / 2,
-              width: ripple.size,
-              height: ripple.size,
-              borderRadius: '9999px',
-              border: `3px solid ${color}`,
-              background: 'transparent',
-              boxSizing: 'border-box',
-              transition: 'none',
-              willChange: 'transform, opacity',
-            }}
-          />
-        ))}
+        {ripples.map((ripple) => {
+          const rippleColor = ripple.kind === 'click' ? resolvedClickColor : color;
+
+          return (
+            <motion.span
+              key={ripple.id}
+              initial={{ scale: 0, opacity: startOpacity }}
+              animate={{ scale: 1, opacity: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration, ease: EASE, delay: ripple.delay }}
+              style={{
+                position: 'absolute',
+                top: ripple.y - ripple.size / 2,
+                left: ripple.x - ripple.size / 2,
+                width: ripple.size,
+                height: ripple.size,
+                borderRadius: '9999px',
+                border: `3px solid ${rippleColor}`,
+                background: 'transparent',
+                boxSizing: 'border-box',
+                transition: 'none',
+                willChange: 'transform, opacity',
+              }}
+            />
+          );
+        })}
       </AnimatePresence>
     </span>
   );

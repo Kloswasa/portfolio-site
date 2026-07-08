@@ -13,17 +13,23 @@ import type {
   MajorCaseStudy,
   MinorCaseStudy,
 } from "@/src/lib/case-studies/types";
-import type { Project } from "@/src/lib/projects";
+import {
+  getProjectExperienceLink,
+  type Project,
+} from "@/src/lib/projects";
 
 export function MajorCaseStudyView({
   caseStudy,
+  project,
   nextProject,
   nextIndex,
 }: {
   caseStudy: MajorCaseStudy | MinorCaseStudy;
+  project: Project;
   nextProject: Project;
   nextIndex: string;
 }) {
+  const experienceLink = getProjectExperienceLink(project);
   const nav = getCaseStudyNav(caseStudy);
   const minorSectionOrder =
     caseStudy.kind === "minor"
@@ -40,7 +46,10 @@ export function MajorCaseStudyView({
   return (
     <div className="cs-major -mx-8">
       <MajorReadingBar />
-      <MajorCaseStudyHero hero={caseStudy.hero} />
+      <MajorCaseStudyHero
+        hero={caseStudy.hero}
+        experienceLink={experienceLink}
+      />
 
       <div className="cs-major__layout">
         <MajorChapterNav sections={nav} />

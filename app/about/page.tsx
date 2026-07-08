@@ -1,4 +1,3 @@
-import "@/src/styles/about.css";
 import { AboutView } from "@/src/components/about/AboutView";
 import {
   ABOUT_END_COPY,

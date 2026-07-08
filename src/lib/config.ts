@@ -14,15 +14,15 @@ export const siteConfig = {
   resume: {
     filename: "CV.pdf",
     year: "2026",
-    note: "Two pages. Updated June 2026.",
-    downloadHref: "https://drive.google.com/file/d/1L7Ro64DsTAnOGDv3ybfvSW3KHyLWTOZO/view?usp=sharing",
+    note: "Two pages. Updated July 2026.",
+    downloadHref: "https://drive.google.com/file/d/1jXzsSsU5JO7jA08n28lSyAmXJIcVzVKu/view?usp=sharing",
   },
 
   site: {
     title: "Klaus W. — Portfolio",
     description:
     "Klaus W — product designer in Melbourne. Thoughtful interfaces, and built with care.",
-    url: "https://klausw.dev",
+    url: "https://klausw.com/",
   },
 
   hero: {

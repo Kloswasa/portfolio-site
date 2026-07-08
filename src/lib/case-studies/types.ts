@@ -73,6 +73,12 @@ export type MajorContentBlock =
     }
   | { type: "reflections"; items: string[] }
   | {
+      type: "image";
+      src: string;
+      alt: string;
+      caption?: string;
+    }
+  | {
       type: "imagePair";
       items: {
         src: string;

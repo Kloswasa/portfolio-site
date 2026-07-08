@@ -11,7 +11,9 @@
     "tokens:gen": "node --import tsx scripts/tokens/generate.ts",
     "tokens:dtcg": "node --import tsx scripts/tokens/export-dtcg.ts",
     "tokens:sync": "npm run tokens:pull && npm run tokens:gen",
-    "tokens:pull": "node --import tsx scripts/figma/export-tokens.ts"
+    "tokens:pull": "node --import tsx scripts/figma/export-tokens.ts",
+    "content:quiz-game": "node --import tsx scripts/case-studies/compile-case-study.ts quiz-game",
+    "content:block-showcase": "node --import tsx scripts/case-studies/compile-case-study.ts block-showcase"
   },
   "dependencies": {
     "framer-motion": "^12.23.0",
@@ -30,6 +32,7 @@
     "eslint-config-next": "15.5.15",
     "tailwindcss": "^4",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "yaml": "^2.9.0"
   }
 }

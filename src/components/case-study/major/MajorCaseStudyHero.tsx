@@ -4,6 +4,7 @@ import {
   SnapSectionReveal,
 } from "@/src/components/SnapSectionReveal";
 import type { MajorCaseStudyHero as HeroData } from "@/src/lib/case-studies/types";
+import type { ProjectExperienceLink } from "@/src/lib/projects";
 
 function HeroBotanicalSvg() {
   return (
@@ -36,7 +37,13 @@ function HeroBotanicalSvg() {
   );
 }
 
-export function MajorCaseStudyHero({ hero }: { hero: HeroData }) {
+export function MajorCaseStudyHero({
+  hero,
+  experienceLink,
+}: {
+  hero: HeroData;
+  experienceLink?: ProjectExperienceLink | null;
+}) {
   return (
     <section className="cs-major__hero" id="hook">
       <div className="cs-major__hero-dots" aria-hidden />
@@ -87,6 +94,21 @@ export function MajorCaseStudyHero({ hero }: { hero: HeroData }) {
                 <div className="cs-major__meta-val">{value}</div>
               </div>
             ))}
+            {experienceLink ? (
+              <div className="cs-major__meta-item cs-major__meta-cta">
+                <div className="cs-major__meta-label">
+                  {experienceLink.sectionLabel}
+                </div>
+                <a
+                  className="btn btn-gold cs-major__meta-btn"
+                  href={experienceLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {experienceLink.label}
+                </a>
+              </div>
+            ) : null}
           </div>
         </SnapItem>
       </SnapSectionReveal>

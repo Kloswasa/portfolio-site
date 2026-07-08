@@ -35,15 +35,47 @@ export function MajorContentBlocks({
   );
 }
 
+function parseProseLine(line: string): { content: string; indentLevel: number } {
+  const match = line.match(/^(\s+)(.*)$/);
+  if (!match) {
+    return { content: line, indentLevel: 0 };
+  }
+
+  const spaceCount = match[1].replace(/\t/g, "    ").length;
+  const indentLevel = Math.min(3, Math.ceil(spaceCount / 4));
+
+  return { content: match[2], indentLevel };
+}
+
+function ProseParagraph({ paragraph }: { paragraph: string }) {
+  const lines = paragraph.split("\n").filter((line) => line.trim().length > 0);
+
+  return (
+    <p className="cs-major__body">
+      {lines.map((line, lineIndex) => {
+        const { content, indentLevel } = parseProseLine(line);
+
+        return (
+          <span
+            key={lineIndex}
+            className="cs-major__body-line"
+            data-indent={indentLevel > 0 ? indentLevel : undefined}
+          >
+            {content}
+          </span>
+        );
+      })}
+    </p>
+  );
+}
+
 function Block({ block }: { block: MajorContentBlock }) {
   switch (block.type) {
     case "prose":
       return (
         <>
           {block.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 32)} className="cs-major__body">
-              {paragraph}
-            </p>
+            <ProseParagraph key={paragraph.slice(0, 32)} paragraph={paragraph} />
           ))}
         </>
       );
@@ -182,6 +214,22 @@ function Block({ block }: { block: MajorContentBlock }) {
         </ol>
       );
 
+    case "image":
+      return (
+        <figure className="cs-major__image">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={block.src}
+            alt={block.alt}
+            className="cs-major__image-img"
+            loading="lazy"
+          />
+          {block.caption ? (
+            <figcaption className="cs-major__image-caption">{block.caption}</figcaption>
+          ) : null}
+        </figure>
+      );
+
     case "imagePair":
       return (
         <figure className="cs-major__image-pair">
@@ -218,6 +266,66 @@ function Block({ block }: { block: MajorContentBlock }) {
           />
           <figcaption className="cs-major__video-caption">{block.caption}</figcaption>
         </figure>
+      );
+
+    case "colorSpecimen":
+      return (
+        <div className="cs-major__color-specimen" aria-label="Color token specimen">
+          {[
+            { token: "bg", label: "Background" },
+            { token: "surface", label: "Surface" },
+            { token: "primary", label: "Primary" },
+            { token: "accent", label: "Accent" },
+            { token: "header-bg", label: "Header" },
+            { token: "text-muted", label: "Muted text" },
+          ].map((swatch) => (
+            <div key={swatch.token} className="cs-major__color-swatch">
+              <div
+                className="cs-major__color-swatch-fill"
+                style={{ background: `var(--color-${swatch.token})` }}
+              />
+              <div className="cs-major__color-swatch-label">{swatch.label}</div>
+              <div className="cs-major__color-swatch-token">color.{swatch.token}</div>
+            </div>
+          ))}
+        </div>
+      );
+
+    case "typeSpecimen":
+      return (
+        <div className="cs-major__type-specimen" aria-label="Typography specimen">
+          <div className="cs-major__type-row">
+            <span className="cs-major__type-meta">Heading · Fraunces</span>
+            <p className="cs-major__type-heading text-heading-3xl">Editorial headline</p>
+          </div>
+          <div className="cs-major__type-row">
+            <span className="cs-major__type-meta">Body · Prompt</span>
+            <p className="cs-major__type-body">
+              Body copy at base size — used for narrative paragraphs, captions, and
+              supporting detail across case study sections.
+            </p>
+          </div>
+          <div className="cs-major__type-row">
+            <span className="cs-major__type-meta">Mono · Syne</span>
+            <p className="cs-major__type-mono">01 — BRIEF · ROLE · DURATION</p>
+          </div>
+        </div>
+      );
+
+    case "componentGrid":
+      return (
+        <div className="cs-major__component-grid">
+          {block.items.map((item) => (
+            <div
+              key={item.title}
+              className={`cs-major__component-card cs-major__component-card--${item.variant}`}
+            >
+              <div className="cs-major__component-count">{item.count}</div>
+              <div className="cs-major__component-label">{item.label}</div>
+              <div className="cs-major__component-title">{item.title}</div>
+            </div>
+          ))}
+        </div>
       );
 
     default:

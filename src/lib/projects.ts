@@ -47,6 +47,7 @@ export interface Project {
   /** Client sector / domain — used for work archive hero stats */
   industry: string;
   liveUrl?: string;
+  prototypeUrl?: string;
   sourceUrl?: string;
   coverImage?: { src: string; alt: string }
   /** Confidential / NDA work: shows a locked specimen instead of a full case study */
@@ -68,6 +69,7 @@ export const projects: Project[] = [
     caseStudyKind: "major",
     yearLabel: "2025 · Product",
     industry: "Travel",
+    liveUrl: "https://australia-call.vision-verse.com.au/",
     coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Call cover image" },
   },
   {
@@ -82,6 +84,7 @@ export const projects: Project[] = [
     caseStudyKind: "major",
     yearLabel: "2024 · Research",
     industry: "Healthcare",
+    liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
     coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
 
   },
@@ -230,10 +233,56 @@ export const projects: Project[] = [
     yearLabel: "2022 · Structure",
     industry: "Consumer goods",
   },
+  {
+    id: 13,
+    slug: "block-showcase",
+    title: "Block Showcase",
+    description:
+      "Living reference page that renders every major case study content block for layout and copy preview.",
+    technologies: ["Case study system", "Design tokens", "Reference"],
+    tone: "tertiary",
+    workTab: "product",
+    caseStudyKind: "major",
+    yearLabel: "2026 · Reference",
+    industry: "Internal",
+    coverImage: {
+      src: "/projects/quiz-game/quiz-game-cover.png",
+      alt: "Block showcase cover placeholder",
+    },
+  },
 ];
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
+}
+
+export type ProjectExperienceLink = {
+  href: string;
+  label: string;
+  sectionLabel: string;
+};
+
+/** Live site takes precedence over prototype for case study hero CTAs. */
+export function getProjectExperienceLink(
+  project: Project,
+): ProjectExperienceLink | null {
+  if (project.liveUrl) {
+    return {
+      href: project.liveUrl,
+      label: "View live site",
+      sectionLabel: "Live",
+    };
+  }
+
+  if (project.prototypeUrl) {
+    return {
+      href: project.prototypeUrl,
+      label: "View prototype",
+      sectionLabel: "Prototype",
+    };
+  }
+
+  return null;
 }
 
 /** Registry slug for case study content (public URL slug may differ). */

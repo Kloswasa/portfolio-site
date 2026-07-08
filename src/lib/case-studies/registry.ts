@@ -1,4 +1,5 @@
 import bhaesaj from "@/src/content/case-studies/bhae";
+import blockShowcase from "@/src/content/case-studies/block-showcase";
 import bupha from "@/src/content/case-studies/bhup";
 import busaba from "@/src/content/case-studies/busaba";
 import cio from "@/src/content/case-studies/cio";
@@ -26,6 +27,7 @@ export const caseStudiesBySlug = {
   "quiz-game": quizGame,
   "dementia-app": dementiaApp,
   recipe,
+  "block-showcase": blockShowcase,
 } as const satisfies Record<string, CaseStudy>;
 
 export type CaseStudySlug = keyof typeof caseStudiesBySlug;
