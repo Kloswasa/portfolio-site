@@ -87,6 +87,14 @@ export type MajorContentBlock =
       }[];
     }
   | {
+      type: "imageGrid";
+      items: {
+        src: string;
+        alt: string;
+        caption?: string;
+      }[];
+    }
+  | {
       type: "video";
       src: string;
       poster: string;

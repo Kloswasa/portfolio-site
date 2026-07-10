@@ -14,7 +14,7 @@ hero:
     - label: Purpose
       value: Component reference
     - label: Blocks
-      value: 18 content types
+      value: 19 content types
     - label: Format
       value: Major case study
     - label: Status
@@ -35,7 +35,7 @@ The prose block is the workhorse — one or more paragraphs of body copy. Blank 
 
 ## stats
 
-- value: "18"
+- value: "19"
   label: Block types
   variant: dark
 - value: "6"
@@ -147,6 +147,18 @@ caption: image block — full-width figure with optional caption.
   count: "2"
   variant: deepest
 
+## imageGrid
+
+- src: /projects/quiz-game/quiz-game-identical-platypus.png
+  alt: Platypus illustration sample
+  caption: imageGrid · item 1
+- src: /projects/quiz-game/quiz-game-identical-brolga.png
+  alt: Brolga illustration sample
+  caption: imageGrid · item 2
+- src: /projects/quiz-game/quiz-game-cover.png
+  alt: Australia Call cover
+  caption: imageGrid · item 3 (three or more images)
+
 ## imagePair
 
 - src: /projects/quiz-game/quiz-game-identical-platypus.png
@@ -209,7 +221,7 @@ titleEm: and reflections
 
 ## outcomes
 
-- value: "18"
+- value: "19"
   label: Blocks rendered
   body: Every MajorContentBlock variant appears at least once on this page.
 - value: "2"
@@ -227,7 +239,7 @@ The outcome section closes the narrative arc. Pair outcome metrics with reflecti
 
 - prose — body paragraphs with optional indentation.
 - stats · pullquote · findings · annotation · twoCol — research and context blocks.
-- artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair — visual blocks.
+- artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid — visual blocks.
 - process · callout · video — build and evidence blocks.
 - outcomes · reflections — closing blocks for results and learnings.
 

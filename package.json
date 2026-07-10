@@ -13,7 +13,8 @@
     "tokens:sync": "npm run tokens:pull && npm run tokens:gen",
     "tokens:pull": "node --import tsx scripts/figma/export-tokens.ts",
     "content:quiz-game": "node --import tsx scripts/case-studies/compile-case-study.ts quiz-game",
-    "content:block-showcase": "node --import tsx scripts/case-studies/compile-case-study.ts block-showcase"
+    "content:block-showcase": "node --import tsx scripts/case-studies/compile-case-study.ts block-showcase",
+    "content:homhuan": "node --import tsx scripts/case-studies/compile-case-study.ts homhuan"
   },
   "dependencies": {
     "framer-motion": "^12.23.0",

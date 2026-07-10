@@ -323,6 +323,33 @@ function parseImagePairBlock(text: string): MajorContentBlock {
   return { type: "imagePair", items };
 }
 
+function parseImageGridBlock(text: string): MajorContentBlock {
+  const items = parseYamlList<{
+    src: string;
+    alt: string;
+    caption?: string;
+  }>(text, "imageGrid");
+
+  if (items.length < 3) {
+    throw new Error("imageGrid blocks require at least three images");
+  }
+
+  for (const item of items) {
+    if (!item.src || !item.alt) {
+      throw new Error("imageGrid items require src and alt");
+    }
+  }
+
+  return {
+    type: "imageGrid",
+    items: items.map((item) => ({
+      src: item.src,
+      alt: item.alt,
+      ...(item.caption ? { caption: item.caption } : {}),
+    })),
+  };
+}
+
 function parseReflectionsBlock(text: string): MajorContentBlock {
   const items = text
     .trim()
@@ -379,6 +406,8 @@ function parseBlock(type: string, text: string): MajorContentBlock {
       return parseImageBlock(text);
     case "imagePair":
       return parseImagePairBlock(text);
+    case "imageGrid":
+      return parseImageGridBlock(text);
     case "video":
       return parseVideoBlock(text);
     default:

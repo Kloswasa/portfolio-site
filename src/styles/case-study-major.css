@@ -320,6 +320,19 @@
   display: block;
 }
 
+.cs-major__body strong,
+.cs-major__pull-quote-text strong,
+.cs-major__finding-body strong,
+.cs-major__annotation-text strong,
+.cs-major__two-col-body strong,
+.cs-major__process-body strong,
+.cs-major__callout-body strong,
+.cs-major__outcome-body strong,
+.cs-major__reflections strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .cs-major__body-line[data-indent="1"] {
   text-indent: 1.5em;
 }
@@ -630,6 +643,32 @@
   font-size: 0.875rem;
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+/* Image grid (3+ images) */
+.cs-major__image-grid {
+  margin: var(--spacing-12) 0;
+}
+
+.cs-major__image-grid-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-1);
+}
+
+.cs-major__image-grid-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.cs-major__image-grid-caption {
+  margin-top: var(--spacing-3);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
 }
 
 /* Video */
@@ -1162,6 +1201,11 @@
     gap: var(--spacing-6);
   }
 
+  .cs-major__image-grid-items {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-1);
+  }
+
   .cs-major__color-specimen {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1211,6 +1255,10 @@
   }
 
   .cs-major__component-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-major__image-grid-items {
     grid-template-columns: 1fr;
   }
 }

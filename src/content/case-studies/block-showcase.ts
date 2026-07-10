@@ -23,7 +23,7 @@ const blockShowcaseCaseStudy = {
       },
       {
         "label": "Blocks",
-        "value": "18 content types"
+        "value": "19 content types"
       },
       {
         "label": "Format",
@@ -52,7 +52,7 @@ const blockShowcaseCaseStudy = {
           "type": "stats",
           "items": [
             {
-              "value": "18",
+              "value": "19",
               "label": "Block types",
               "variant": "dark"
             },
@@ -209,6 +209,26 @@ const blockShowcaseCaseStudy = {
           ]
         },
         {
+          "type": "imageGrid",
+          "items": [
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
+              "alt": "Platypus illustration sample",
+              "caption": "imageGrid · item 1"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-brolga.png",
+              "alt": "Brolga illustration sample",
+              "caption": "imageGrid · item 2"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-cover.png",
+              "alt": "Australia Call cover",
+              "caption": "imageGrid · item 3 (three or more images)"
+            }
+          ]
+        },
+        {
           "type": "imagePair",
           "items": [
             {
@@ -292,7 +312,7 @@ const blockShowcaseCaseStudy = {
           "type": "outcomes",
           "items": [
             {
-              "value": "18",
+              "value": "19",
               "label": "Blocks rendered",
               "body": "Every MajorContentBlock variant appears at least once on this page."
             },
@@ -319,7 +339,7 @@ const blockShowcaseCaseStudy = {
           "items": [
             "prose — body paragraphs with optional indentation.",
             "stats · pullquote · findings · annotation · twoCol — research and context blocks.",
-            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair — visual blocks.",
+            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid — visual blocks.",
             "process · callout · video — build and evidence blocks.",
             "outcomes · reflections — closing blocks for results and learnings."
           ]

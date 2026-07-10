@@ -112,13 +112,17 @@ Major case studies can be authored as markdown and compiled to TypeScript:
 - **Commands:**
   - `npm run content:quiz-game`
   - `npm run content:block-showcase`
+  - `npm run content:homhuan`
 
-**Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imagePair`, `video`
+**Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imagePair`, `imageGrid`, `video`
+
+**Full shortlist + syntax:** [`docs/case-study-blocks.md`](docs/case-study-blocks.md)
 
 - Key-value blocks (`pullquote`, `video`, `image`, `artifact`, `callout`, `annotation`): `key: value` lines under `## blockType`
-- List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`): YAML list under `## blockType`
+- List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`, `imageGrid`): YAML list under `## blockType`
 - Empty blocks (`ornament`, `colorSpecimen`, `typeSpecimen`): `## blockType` with no body
 - `reflections`: markdown `-` list items
+- Inline `**bold**` is supported in prose and body-text fields
 
 ---
 

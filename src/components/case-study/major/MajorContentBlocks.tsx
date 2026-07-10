@@ -47,6 +47,23 @@ function parseProseLine(line: string): { content: string; indentLevel: number } 
   return { content: match[2], indentLevel };
 }
 
+/** Renders `**bold**` spans as `<strong>`; leaves unmatched text as-is. */
+function InlineText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.startsWith("**") && part.endsWith("**") && part.length > 4) {
+          return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
+}
+
 function ProseParagraph({ paragraph }: { paragraph: string }) {
   const lines = paragraph.split("\n").filter((line) => line.trim().length > 0);
 
@@ -61,7 +78,7 @@ function ProseParagraph({ paragraph }: { paragraph: string }) {
             className="cs-major__body-line"
             data-indent={indentLevel > 0 ? indentLevel : undefined}
           >
-            {content}
+            <InlineText text={content} />
           </span>
         );
       })}
@@ -101,7 +118,9 @@ function Block({ block }: { block: MajorContentBlock }) {
           <span className="cs-major__pull-quote-mark" aria-hidden>
             &ldquo;
           </span>
-          <p className="cs-major__pull-quote-text">{block.text}</p>
+          <p className="cs-major__pull-quote-text">
+            <InlineText text={block.text} />
+          </p>
           <cite className="cs-major__pull-quote-source not-italic">
             {block.source}
           </cite>
@@ -115,7 +134,9 @@ function Block({ block }: { block: MajorContentBlock }) {
             <div key={item.num} className="cs-major__finding" data-num={item.num}>
               <div className="cs-major__finding-label">{item.label}</div>
               <div className="cs-major__finding-title">{item.title}</div>
-              <div className="cs-major__finding-body">{item.body}</div>
+              <div className="cs-major__finding-body">
+                <InlineText text={item.body} />
+              </div>
             </div>
           ))}
         </div>
@@ -125,7 +146,9 @@ function Block({ block }: { block: MajorContentBlock }) {
       return (
         <div className="cs-major__annotation">
           <span className="cs-major__annotation-icon">↳ note</span>
-          <span className="cs-major__annotation-text">{block.text}</span>
+          <span className="cs-major__annotation-text">
+            <InlineText text={block.text} />
+          </span>
         </div>
       );
 
@@ -135,7 +158,9 @@ function Block({ block }: { block: MajorContentBlock }) {
           {block.items.map((item) => (
             <div key={item.label}>
               <div className="cs-major__two-col-label">{item.label}</div>
-              <div className="cs-major__two-col-body">{item.body}</div>
+              <div className="cs-major__two-col-body">
+                <InlineText text={item.body} />
+              </div>
             </div>
           ))}
         </div>
@@ -161,7 +186,9 @@ function Block({ block }: { block: MajorContentBlock }) {
               <div className="cs-major__process-num">{item.num}</div>
               <div className="cs-major__process-accent" aria-hidden />
               <div className="cs-major__process-title">{item.title}</div>
-              <div className="cs-major__process-body">{item.body}</div>
+              <div className="cs-major__process-body">
+                <InlineText text={item.body} />
+              </div>
             </div>
           ))}
         </div>
@@ -173,7 +200,9 @@ function Block({ block }: { block: MajorContentBlock }) {
           <div className="cs-major__callout-inner">
             <div className="cs-major__callout-label">{block.label}</div>
             <div className="cs-major__callout-title">{block.title}</div>
-            <div className="cs-major__callout-body">{block.body}</div>
+            <div className="cs-major__callout-body">
+              <InlineText text={block.body} />
+            </div>
           </div>
         </aside>
       );
@@ -194,7 +223,9 @@ function Block({ block }: { block: MajorContentBlock }) {
             <div key={item.label} className="cs-major__outcome">
               <div className="cs-major__outcome-val">{item.value}</div>
               <div className="cs-major__outcome-label">{item.label}</div>
-              <div className="cs-major__outcome-body">{item.body}</div>
+              <div className="cs-major__outcome-body">
+                <InlineText text={item.body} />
+              </div>
             </div>
           ))}
         </div>
@@ -208,7 +239,9 @@ function Block({ block }: { block: MajorContentBlock }) {
               <span className="cs-major__reflection-num">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span>{text}</span>
+              <span>
+                <InlineText text={text} />
+              </span>
             </li>
           ))}
         </ol>
@@ -246,6 +279,30 @@ function Block({ block }: { block: MajorContentBlock }) {
                 <figcaption className="cs-major__image-pair-caption">
                   {item.caption}
                 </figcaption>
+              </div>
+            ))}
+          </div>
+        </figure>
+      );
+
+    case "imageGrid":
+      return (
+        <figure className="cs-major__image-grid">
+          <div className="cs-major__image-grid-items">
+            {block.items.map((item) => (
+              <div key={item.src} className="cs-major__image-grid-item">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="cs-major__image-grid-img"
+                  loading="lazy"
+                />
+                {item.caption ? (
+                  <figcaption className="cs-major__image-grid-caption">
+                    {item.caption}
+                  </figcaption>
+                ) : null}
               </div>
             ))}
           </div>
