@@ -19,11 +19,11 @@ const homhuanCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "Solo. Research, concept, industrial design, ceramics and materials, fragrance development, branding and packaging."
+        "value": "Solo · Research · Industrial Design · Materials · Fragrance Development · Branding"
       },
       {
         "label": "Team",
-        "value": "Solo capstone (industrial design thesis)"
+        "value": "Industrial Design Capstone"
       },
       {
         "label": "Duration",
@@ -82,7 +82,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Homhuan started from a single object. In an earlier project I had taken one Thai heritage candle, *tian ob*, traditionally lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, and reworked it into a modern object. It worked so cleanly that it raised a bigger question: if one heritage fragrance practice translates this well, what would a whole collection look like?",
+            "Homhuan started from a single object. In an earlier project I had taken one Thai heritage candle, **tian ob**, traditionally lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, and reworked it into a modern object. It worked so cleanly that it raised a bigger question: if one heritage fragrance practice translates this well, what would a whole collection look like?",
             "For the capstone I went back to the source that candle came from, the golden age of Thai heritage fragrance, roughly a century ago. I worked from period publications rather than modern summaries. Most of what I found described a way of living, when and how people used scent in daily life, which is what later let me translate rituals, not just shapes.",
             "One find mattered more than the rest: a fragrance recipe made from fresh flower petals that I could not find online at the time, and still cannot today. That recovered method became the heart of one of the seven products."
           ]
@@ -115,12 +115,12 @@ const homhuanCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/homhuan/homhuan-aroma-brass.jpg",
+              "src": "/projects/homhuan/homhuan-product-brass.png",
               "alt": "Aroma stove configured with a brass pan warming solid incense",
               "caption": "Brass pan, dry heat, solid incense"
             },
             {
-              "src": "/projects/homhuan/homhuan-aroma-ceramic.jpg",
+              "src": "/projects/homhuan/homhuan-product-ceramic.png",
               "alt": "Aroma stove configured with a ceramic pot boiling an aroma bag",
               "caption": "Ceramic pot, wet heat, aroma bag"
             }
@@ -141,12 +141,12 @@ const homhuanCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/homhuan/mobile-traditional.jpg",
+              "src": "/projects/homhuan/homhuan-product-diffuser-inspiration.png",
               "alt": "Traditional Thai floral mobile woven from banana tree and garland",
               "caption": "The source, a woven floral mobile"
             },
             {
-              "src": "/projects/homhuan/homhuan-aroma-diffuser.jpg",
+              "src": "/projects/homhuan/homhuan-product-diffuser.jpg",
               "alt": "Homhuan flat reed diffuser with paper frame and piped fragrance beads",
               "caption": "The translation, frame in paper, flowers in scent"
             }
@@ -165,7 +165,7 @@ const homhuanCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/homhuan/rejected-candle-sketch.jpg",
+          "src": "/projects/homhuan/homhuan-dropped-idea.webp",
           "alt": "Concept sketch and render of the rejected upside-down hanging perfuming candle",
           "caption": "Cut at concept stage, on safety and redundancy"
         },
@@ -208,35 +208,35 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Personal perfume set, the miller and the locket.** The set translates two practices that belong together. The miller comes from the heritage habit of mashing fragrance powder beads with perfume and herbs to a personal taste. I replaced the medicinal-looking masher with the period's miller form, kept its patterned grinding surface, minimised the shape, and preserved the use, so a person can make their own solid perfume from raw beads and a chosen scent. That perfume goes into the seventh product: a solid-perfume holder drawn from the wax lip lockets people carried and used to express themselves. I paired them so the collection could tell the era's story in sequence, not as seven separate objects."
+            "**Personal perfume set, the miller and the locket.** The set translates two practices that belong together. \n The miller comes from the heritage habit of mashing fragrance powder beads with perfume and herbs to a personal taste. I replaced the medicinal-looking masher with the period's miller form, kept its patterned grinding surface, minimised the shape, and preserved the use, so a person can make their own solid perfume from raw beads and a chosen scent. \n That perfume goes into the seventh product: a solid-perfume holder drawn from the wax lip lockets people carried and used to express themselves. I paired them so the collection could tell the era's story in sequence, not as seven separate objects."
           ]
         },
         {
           "type": "imageGrid",
           "items": [
             {
-              "src": "/projects/homhuan/homhuan-aroma-candle.jpg",
+              "src": "/projects/homhuan/homhuan-product-candle.jpg",
               "alt": "Candle with Benjarong-inspired ceramic holder",
               "caption": "Candle, from tian ob"
             },
             {
-              "src": "/projects/homhuan/diffuser-3d.jpg",
+              "src": "/projects/homhuan/homhuan-product-hanging-diffuser.png",
               "alt": "Hanging three-dimensional reed diffuser in die-cut paper",
               "caption": "Diffuser, from the mobile silhouette"
             },
             {
-              "src": "/projects/homhuan/homhuan-aroma-container.jpg",
+              "src": "/projects/homhuan/homhuan-product-container.jpg",
               "alt": "Ceramic perfuming storage desk object",
               "caption": "Perfuming storage, from cabinet scenting"
             },
             {
-              "src": "/projects/homhuan/homhuan-aroma-miller-locket.jpg",
+              "src": "/projects/homhuan/homhuan-product-miller-locket.jpg",
               "alt": "Ceramic and brass miller for grinding fragrance beads",
               "caption": "Miller, from the powder-bead ritual and Locket, from the wax lip locket"
             },
            
             {
-              "src": "/projects/homhuan/homhuan-cover.png",
+              "src": "/projects/homhuan/homhuan-set.png",
               "alt": "The seven products shown together as a family",
               "caption": "Seven sources, one collection"
             }
@@ -250,10 +250,22 @@ const homhuanCaseStudy = {
       "titleEm": "in three months",
       "blocks": [
         {
+          "type": "image",
+          "src": "/projects/homhuan/homhuan-render-to-reality.png",
+          "alt": "From a render to reality",
+          "caption": "Shift from a render to a real collection"
+        },
+        {
           "type": "prose",
           "paragraphs": [
-            "Homhuan was designed and produced solo across three months, in six materials [CONFIRM: ceramic, brass, glass, paper, wax, wood]. One holder shape recurs across the collection, varied by colour and ceramic glaze, so seven different objects still read as one family."
+            "Homhuan was designed and produced solo across three months, in six materials including ceramic, brass, glass, paper, wax, wood. One holder shape recurs across the collection, varied by colour and ceramic glaze, so seven different objects still read as one family."
           ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/homhuan/homhuan-render-to-reality.png",
+          "alt": "From a render to reality",
+          "caption": "Shift from a render to a real collection"
         },
         {
           "type": "prose",
@@ -267,19 +279,6 @@ const homhuanCaseStudy = {
             "Each object is paired with its own consumable fragrance, seven in all, carrying five signature scents hand-blended for the collection. The small candle, sized for one or two uses, was designed for refills from the start, so the collection stays in use rather than sitting on a shelf."
           ]
         },
-        {
-          "type": "twoCol",
-          "items": [
-            {
-              "label": "Objects",
-              "body": "Seven vessels, one recurring holder shape, varied by colour and glaze."
-            },
-            {
-              "label": "Consumables",
-              "body": "Seven fragrance products across five signature scents, hand-blended."
-            }
-          ]
-        }
       ]
     },
     "outcome": {
@@ -287,6 +286,7 @@ const homhuanCaseStudy = {
       "title": "What it earned,",
       "titleEm": "and what it taught",
       "blocks": [
+        
         {
           "type": "prose",
           "paragraphs": [
