@@ -1,20 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import { PlayCard } from "@/src/components/play/PlayCard";
 import { PLAY_END_COPY } from "@/src/content/play";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { FilterBar } from "@/src/components/ui/FilterBar";
 import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
-import NavRippleLink from "@/src/components/ui/NavRippleLink";
-import { TabbedGridSection } from "@/src/components/TabbedGridSection";
+import { NavRippleLink } from "@/src/components/ui/NavRippleLink";
+import { TabBar, TabBarTab } from "@/src/components/ui/TabBar";
+import { TabbedGridSection } from "@/src/components/ui/TabbedGridSection";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
-import { FeaturedProjectStagger } from "@/src/components/FeaturedProjectStagger";
-import { MenuButton } from "@/src/components/MenuButton";
+} from "@/src/components/motion/SnapSectionReveal";
+import { FeaturedProjectStagger } from "@/src/components/home/FeaturedProjectStagger";
+import { MenuButton } from "@/src/components/chrome/MenuButton";
 import { NavProvider } from "@/src/context/NavContext";
 import { PLAY_WORKS } from "@/src/lib/play";
 import type { WorkCardProject } from "@/src/lib/work/types";
@@ -39,6 +40,50 @@ export function FilterBarDemo() {
       onFilter={setActive}
       containerClassName="work-container"
     />
+  );
+}
+
+const WORK_TABS = [
+  { key: "product" as const, label: "Product" },
+  { key: "pack" as const, label: "Pack" },
+  { key: "graphic" as const, label: "Graphic" },
+];
+
+export function TabBarDemo() {
+  const baseId = useId();
+  const [tab, setTab] = useState<(typeof WORK_TABS)[number]["key"]>("product");
+  const panelId = `${baseId}-panel`;
+
+  const copy: Record<(typeof WORK_TABS)[number]["key"], string> = {
+    product: "Hero case studies and flagship product work.",
+    pack: "Mid-tier packaging and brand extensions.",
+    graphic: "Graphic design, print, and accessories.",
+  };
+
+  return (
+    <div className="max-w-xl">
+      <TabBar aria-label="Work categories">
+        {WORK_TABS.map(({ key, label }) => (
+          <TabBarTab
+            key={key}
+            id={`${baseId}-tab-${key}`}
+            active={tab === key}
+            onClick={() => setTab(key)}
+            ariaControls={panelId}
+          >
+            {label}
+          </TabBarTab>
+        ))}
+      </TabBar>
+      <div
+        id={panelId}
+        role="tabpanel"
+        aria-labelledby={`${baseId}-tab-${tab}`}
+        className="rounded-none border border-border-subtle bg-surface px-5 py-4 font-body text-sm text-text-muted"
+      >
+        {copy[tab]}
+      </div>
+    </div>
   );
 }
 

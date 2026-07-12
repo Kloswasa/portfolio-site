@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import type { MajorCaseStudyHero as HeroData } from "@/src/lib/case-studies/types";
 import type { ProjectExperienceLink } from "@/src/lib/projects";
 

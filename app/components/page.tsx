@@ -2,12 +2,11 @@ import Link from "next/link";
 
 import { CopyButton } from "@/src/components/ui/CopyButton";
 import { Badge } from "@/src/components/ui/Badge";
-import { TabBarDemo } from "@/src/components/ui/TabBarDemo";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
-import { WorkCard } from "@/src/components/WorkCard";
-import ThemeToggle from "@/src/components/ThemeToggle";
-import { Footer } from "@/src/components/Footer";
-import ContactForm from "@/src/components/ContactForm";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
+import { WorkCard } from "@/src/components/work/WorkCard";
+import { ThemeToggle } from "@/src/components/chrome/ThemeToggle";
+import { Footer } from "@/src/components/chrome/Footer";
+import { ContactForm } from "@/src/components/home/ContactForm";
 import { AboutBlockHead } from "@/src/components/about/AboutBlockHead";
 import { AboutQuote } from "@/src/components/about/AboutQuote";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
@@ -32,6 +31,7 @@ import {
   PlayCardDemo,
   PageEndSectionDemo,
   SnapSectionRevealDemo,
+  TabBarDemo,
   TabbedGridSectionDemo,
 } from "./demos";
 
@@ -371,12 +371,10 @@ export default function ComponentsPage() {
             <SectionShell
               id="scroll-reveal"
               title="ScrollReveal"
-              filePath="src/components/ScrollReveal.tsx · AnimatedSection.tsx"
+              filePath="src/components/motion/ScrollReveal.tsx"
             >
               <p className="mb-6 font-body text-text-muted">
-                Framer Motion fade + lift on scroll.{" "}
-                <span className="font-mono text-text">AnimatedSection</span> is
-                a thin alias with optional delay. Respects{" "}
+                Framer Motion fade + lift on scroll. Respects{" "}
                 <span className="font-mono text-text">prefers-reduced-motion</span>.
               </p>
               <div className="rounded-none border border-dashed border-border-subtle p-2">
@@ -393,7 +391,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="snap-section"
               title="SnapSectionReveal"
-              filePath="src/components/SnapSectionReveal.tsx"
+              filePath="src/components/motion/SnapSectionReveal.tsx"
             >
               <p className="mb-6 font-body text-text-muted">
                 Section-level stagger coordinator. Wrap children in{" "}
@@ -406,7 +404,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="work-card"
               title="WorkCard"
-              filePath="src/components/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
+              filePath="src/components/work/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
                 Polaroid project card with tilt, year stamp, and classification.
@@ -424,7 +422,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="featured-stagger"
               title="FeaturedProjectStagger"
-              filePath="src/components/FeaturedProjectStagger.tsx"
+              filePath="src/components/home/FeaturedProjectStagger.tsx"
             >
               <p className="mb-6 font-body text-text-muted">
                 Home featured mosaic — first card spans two rows on desktop with
@@ -488,7 +486,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="contact-form"
               title="ContactForm"
-              filePath="src/components/ContactForm.tsx"
+              filePath="src/components/home/ContactForm.tsx"
             >
               <p className="mb-6 font-body text-text-muted">
                 Client form with input utilities and simulated submit feedback.
@@ -499,7 +497,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="tabbed-grid"
               title="TabbedGridSection"
-              filePath="src/components/TabbedGridSection.tsx"
+              filePath="src/components/ui/TabbedGridSection.tsx"
             >
               <TabbedGridSectionDemo />
             </SectionShell>
@@ -542,7 +540,7 @@ export default function ComponentsPage() {
             <SectionShell
               id="page-sections"
               title="Full-page sections"
-              filePath="src/components/HeroSection.tsx · HomeAboutSection.tsx · case-study/ · work/"
+              filePath="src/components/home/HeroSection.tsx · HomeAboutSection.tsx · case-study/ · work/"
             >
               <div className="grid gap-6 font-body text-text-muted">
                 <p>

@@ -2,7 +2,7 @@ import { MajorContentBlocks } from "@/src/components/case-study/major/MajorConte
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import type { MajorSectionContent } from "@/src/lib/case-studies/types";
 
 export function MajorCaseStudySection({

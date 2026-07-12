@@ -1,7 +1,6 @@
 import type { BadgeTone } from "@/src/components/ui/Badge";
 import type { CaseStudyKind } from "@/src/lib/case-studies/types";
-
-export type { CaseStudyKind };
+import type { ProjectLockStatus } from "@/src/lib/confidential/lock-status";
 
 /** Work index tabs — Product · Industrial · Pack · Graphic. */
 export type WorkTab = "product" | "industrial" | "pack" | "graphic";
@@ -50,10 +49,14 @@ export interface Project {
   prototypeUrl?: string;
   sourceUrl?: string;
   coverImage?: { src: string; alt: string }
-  /** Confidential / NDA work: shows a locked specimen instead of a full case study */
+  /** Password-gated: shows a locked specimen instead of a full case study */
   confidential?: boolean;
+  /** Locked UI status; defaults to "nda" when confidential */
+  lockStatus?: ProjectLockStatus;
   /** Case study registry slug when it differs from the public project slug */
   caseStudySlug?: string;
+  /** Omit from work archive, featured sections, and public routes */
+  hidden?: boolean;
 }
 
 export const projects: Project[] = [
@@ -74,37 +77,6 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    slug: "dementia-app",
-    title: "Dementia App",
-    description:
-      "A dementia app that helps people with dementia stay connected with their loved ones.",
-    technologies: ["Figma", "User-centered design", "Research"],
-    tone: "secondary",
-    workTab: "product",
-    caseStudyKind: "major",
-    yearLabel: "2024 · Research",
-    industry: "Healthcare",
-    liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
-    coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
-
-  },
-  {
-    id: 3,
-    slug: "recipe",
-    title: "Family Recipes",
-    description:
-      "A recipe app for saving, sharing, and cooking family dishes across generations.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
-    tone: "tertiary",
-    workTab: "product",
-    caseStudyKind: "major",
-    yearLabel: "2026 · Product",
-    industry: "Food & beverage",
-    liveUrl: "https://family-recipes.app",
-    sourceUrl: "https://github.com/yourusername/recipe",
-  },
-  {
-    id: 4,
     slug: "homhuan",
     title: "HomHuan",
     description:
@@ -118,6 +90,40 @@ export const projects: Project[] = [
     coverImage: { src: "/projects/homhuan/homhuan-cover.png", alt: "HomHuan cover image" },
   },
   {
+    id: 3,
+    slug: "dementia-app",
+    title: "Dementia App",
+    description:
+      "A dementia app that helps people with dementia stay connected with their loved ones.",
+    technologies: ["Figma", "User-centered design", "Research"],
+    tone: "secondary",
+    workTab: "product",
+    caseStudyKind: "major",
+    yearLabel: "2024 · Research",
+    industry: "Healthcare",
+    liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
+    coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
+    confidential: true,
+    lockStatus: "documentation",
+  },
+  {
+    id: 4,
+    slug: "recipe",
+    title: "Family Recipes",
+    description:
+      "A recipe app for saving, sharing, and cooking family dishes across generations.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+    tone: "tertiary",
+    workTab: "product",
+    caseStudyKind: "major",
+    yearLabel: "2026 · Researching",
+    industry: "Food & beverage",
+    liveUrl: "https://family-recipes.app",
+    confidential: true,
+    lockStatus: "researching",
+  },
+  
+  {
     id: 5,
     slug: "busaba",
     title: "Busaba Dessert Bar",
@@ -130,6 +136,8 @@ export const projects: Project[] = [
     yearLabel: "2021 · Industrial",
     industry: "Food & beverage",
     coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 6,
@@ -144,6 +152,8 @@ export const projects: Project[] = [
     yearLabel: "2021 · Industrial",
     industry: "Retail",
     coverImage: { src: "/projects/kuendee/kuendee-cover.png", alt: "Kuendee Booth cover image" },
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 7,
@@ -158,6 +168,8 @@ export const projects: Project[] = [
     yearLabel: "2021 · Graphic",
     industry: "Consumer health",
     coverImage: { src: "/projects/flomax/flomax-cover.png", alt: "Flomax Packaging cover image" },
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 8,
@@ -171,8 +183,8 @@ export const projects: Project[] = [
     caseStudyKind: "minor",
     yearLabel: "2022 · Packaging",
     industry: "Beauty",
-    // confidential: true,
-    // caseStudySlug: "bhaesaj",
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 9,
@@ -186,9 +198,9 @@ export const projects: Project[] = [
     caseStudyKind: "minor",
     yearLabel: "2021 · Graphic",
     industry: "Food & beverage",
-    coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bhup Product Line cover image" },
-    // confidential: true,
-    // caseStudySlug: "bupha",
+    coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bupha cover image" },
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 10,
@@ -204,6 +216,8 @@ export const projects: Project[] = [
     industry: "Building materials",
     coverImage: { src: "/projects/jtimber/jtimber-cover.png", alt: "JTimber Catalog cover image" },
     caseStudySlug: "jtimber",
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 11,
@@ -219,6 +233,8 @@ export const projects: Project[] = [
     industry: "Publishing",
     coverImage: { src: "/projects/thai-hom/thai-hom-cover.png", alt: "Thai Hom cover image" },
     caseStudySlug: "thaihom",
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 12,
@@ -232,6 +248,8 @@ export const projects: Project[] = [
     caseStudyKind: "minor",
     yearLabel: "2022 · Structure",
     industry: "Consumer goods",
+    confidential: true,
+    lockStatus: "documentation",
   },
   {
     id: 13,
@@ -249,8 +267,13 @@ export const projects: Project[] = [
       src: "/projects/quiz-game/quiz-game-cover.png",
       alt: "Block showcase cover placeholder",
     },
+    hidden: true,
   },
 ];
+
+export function getVisibleProjects(): Project[] {
+  return projects.filter((project) => !project.hidden);
+}
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
@@ -288,4 +311,11 @@ export function getProjectExperienceLink(
 /** Registry slug for case study content (public URL slug may differ). */
 export function getCaseStudySlugForProject(project: Project): string {
   return project.caseStudySlug ?? project.slug;
+}
+
+/** Project that owns a case study registry entry (respects `caseStudySlug` bridges). */
+export function getProjectForCaseStudy(caseStudySlug: string): Project | undefined {
+  return projects.find(
+    (project) => getCaseStudySlugForProject(project) === caseStudySlug,
+  );
 }

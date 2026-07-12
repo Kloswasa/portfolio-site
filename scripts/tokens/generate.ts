@@ -28,6 +28,12 @@ function cssVarName(parts: string[]) {
   if (group === "shadow" && rest.length === 1 && rest[0] === "default") {
     return "--shadow";
   }
+  if (group === "ease" && rest.length === 1 && rest[0] === "default") {
+    return "--ease";
+  }
+  if (group === "duration" && rest.length === 1 && rest[0] === "default") {
+    return "--duration";
+  }
   const normalized = rest.join("-").replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);
   return `--${group}-${normalized}`;
 }
@@ -46,13 +52,6 @@ function getLightTree(json: TokenNode & Record<string, unknown>): TokenNode {
     out[k] = v as TokenLeaf | TokenNode;
   }
   return out;
-}
-
-function getDarkTree(json: TokenNode & Record<string, unknown>): TokenNode {
-  if (json.dark && typeof json.dark === "object" && json.dark !== null && !("value" in json.dark)) {
-    return json.dark as TokenNode;
-  }
-  return {};
 }
 
 type TokenEntry = { value: unknown; type?: string; cssVar: string; darkValue?: unknown };

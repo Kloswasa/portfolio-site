@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { HomeAboutBotanical } from "@/src/components/HomeAboutBotanical";
+import { HomeAboutBotanical } from "@/src/components/home/HomeAboutBotanical";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import { ABOUT_HOME_TEASER } from "@/src/lib/about";
 import { siteConfig } from "@/src/lib/config";
 

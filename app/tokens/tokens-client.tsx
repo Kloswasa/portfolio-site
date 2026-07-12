@@ -93,7 +93,7 @@ function PaletteSwatch({
       />
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <div className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-text">
+          <div className="font-body text-xs font-semibold uppercase tracking-label-lg text-text">
             {step.label}
           </div>
           <div className="mt-1 truncate font-mono text-xs text-text-muted">
@@ -362,7 +362,7 @@ function RampSwatch({
       />
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <div className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-text">
+          <div className="font-body text-xs font-semibold uppercase tracking-label-lg text-text">
             {label}
           </div>
           <div className="mt-1 truncate font-mono text-xs text-text-muted">{value}</div>
@@ -515,7 +515,7 @@ function ModePill({
       type="button"
       onClick={onClick}
       className={[
-        "rounded-none border px-3 py-1 font-body text-xs font-semibold tracking-[0.08em] uppercase transition",
+        "rounded-none border px-3 py-1 font-body text-xs font-semibold tracking-caps uppercase transition",
         active
           ? "border-border-strong bg-surface text-text"
           : "border-border-subtle bg-bg text-text-muted hover:border-border hover:text-text",
@@ -545,7 +545,7 @@ function TokenSections({
     <div className="grid gap-10">
       <header className="flex items-end justify-between gap-6">
         <div>
-          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-[0.14em]">
+          <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-stamp">
             {title}
           </span>
         </div>

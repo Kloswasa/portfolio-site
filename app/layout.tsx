@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { DM_Sans, Fraunces, Syne, Poppins, Prompt } from "next/font/google";
+import { Fraunces, Syne, Prompt } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
-import { MenuButton } from "@/src/components/MenuButton";
-import { NavOverlay } from "@/src/components/NavOverlay";
-import { PageLoader } from "@/src/components/PageLoader";
-import { PageTransition } from "@/src/components/PageTransition";
-import { SmoothScroll } from "@/src/components/SmoothScroll";
-import { Footer } from "@/src/components/Footer";
+import { MenuButton } from "@/src/components/chrome/MenuButton";
+import { NavOverlay } from "@/src/components/chrome/NavOverlay";
+import { PageLoader } from "@/src/components/chrome/PageLoader";
+import { PageTransition } from "@/src/components/chrome/PageTransition";
+import { SmoothScroll } from "@/src/components/chrome/SmoothScroll";
+import { Footer } from "@/src/components/chrome/Footer";
 import { siteConfig } from "@/src/lib/config";
 
 
@@ -80,7 +80,7 @@ export default function RootLayout({
           <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">
             <Link
               href="/"
-              className="pointer-events-auto text-sm font-semibold uppercase tracking-[0.12em] text-text"
+              className="pointer-events-auto text-sm font-semibold uppercase tracking-label-lg text-text"
             >
               {siteConfig.name}
             </Link>

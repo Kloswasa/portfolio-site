@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ConfidentialUnlockForm } from "@/src/components/case-study/ConfidentialUnlockForm";
+import { getProjectLockCopy } from "@/src/lib/confidential/lock-status";
 import { siteConfig } from "@/src/lib/config";
 import { WORK_TABS } from "@/src/lib/projects";
 import type { Project } from "@/src/lib/projects";
@@ -11,15 +12,16 @@ const CLASSIFICATION = Object.fromEntries(
 export function LockedCaseStudy({ project }: { project: Project }) {
   const classification = CLASSIFICATION[project.workTab] ?? "Design";
   const [yearValue, yearLabel = ""] = project.yearLabel.split(" · ");
+  const lockCopy = getProjectLockCopy(project.lockStatus);
 
   return (
     <article className="locked-study">
       <div className="locked-study__frame">
-        <p className="locked-study__eyebrow">Confidential record</p>
+        <p className="locked-study__eyebrow">{lockCopy.eyebrow}</p>
 
         <div className="locked-study__stamp" aria-hidden="true">
           <span className="locked-study__stamp-lock">&#128274;</span>
-          <span>Under NDA</span>
+          <span>{lockCopy.stamp}</span>
         </div>
 
         <h1 className="locked-study__title">{project.title}</h1>
@@ -37,11 +39,7 @@ export function LockedCaseStudy({ project }: { project: Project }) {
 
         <p className="locked-study__summary">{project.description}</p>
 
-        <p className="locked-study__note">
-          The full record for this project is held under a non-disclosure
-          agreement. Imagery, process, and outcomes are available to review on
-          request.
-        </p>
+        <p className="locked-study__note">{lockCopy.note}</p>
 
         {project.technologies.length > 0 ? (
           <ul className="locked-study__tags">

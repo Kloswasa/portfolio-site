@@ -1,13 +1,13 @@
 import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
-const bhaeCaseStudy = {
+const bhaesajCaseStudy = {
   kind: "minor",
   slug: "bhaesaj",
   approachLabel: "The Direction",
   hero: {
-    breadcrumb: "Bhae Skincare",
-    eyebrow: "005 · Packaging design · Beauty",
-    titleLine1: "Bhae",
+    breadcrumb: "Bhaesaj Skincare",
+    eyebrow: "008 · Packaging design · Beauty",
+    titleLine1: "Bhaesaj",
     titleLine2: "Packaging",
     summary:
       "Packaging direction and design for a century-old traditional skincare brand — executed from a creative direction set by another team, within heritage constraints.",
@@ -128,4 +128,4 @@ const bhaeCaseStudy = {
   },
 } satisfies MinorCaseStudy;
 
-export default bhaeCaseStudy;
+export default bhaesajCaseStudy;

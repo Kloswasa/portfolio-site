@@ -20,7 +20,6 @@ export interface PlayMediumSection {
 
 import type { PageEndCopy } from "@/src/lib/page-end/types";
 
-export type PlayEndAction = PageEndCopy["actions"][number];
 export type PlayEndCopy = PageEndCopy;
 
 export interface PlayImage {

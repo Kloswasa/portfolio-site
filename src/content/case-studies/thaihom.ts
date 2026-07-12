@@ -5,7 +5,7 @@ const thaiHCaseStudy = {
   slug: "thaihom",
   hero: {
     breadcrumb: "Thai Hom Infographic Book",
-    eyebrow: "008 · Graphic design · Editorial",
+    eyebrow: "011 · Graphic design · Editorial",
     titleLine1: "Thai",
     titleLine2: "Hom",
     summary:

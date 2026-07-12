@@ -216,62 +216,236 @@ export const tokens: TokenRecord = {
   "font.heading": {
     "value": "'Fraunces', Georgia, serif",
     "type": "fontFamilies",
-    "cssVar": "--font-heading"
+    "cssVar": "--font-heading",
+    "darkValue": "'Fraunces', Georgia, serif"
   },
   "font.body": {
-    "value": "'DM Sans', system-ui, sans-serif",
+    "value": "'Prompt', system-ui, sans-serif",
     "type": "fontFamilies",
-    "cssVar": "--font-body"
+    "cssVar": "--font-body",
+    "darkValue": "'Prompt', system-ui, sans-serif"
   },
   "font.mono": {
     "value": "'Syne', 'Fira Code', monospace",
     "type": "fontFamilies",
-    "cssVar": "--font-mono"
+    "cssVar": "--font-mono",
+    "darkValue": "'Syne', 'Fira Code', monospace"
+  },
+  "text.2xs": {
+    "value": "0.5rem",
+    "type": "fontSizes",
+    "cssVar": "--text-2xs",
+    "darkValue": "0.5rem"
   },
   "text.xs": {
     "value": "0.563rem",
     "type": "fontSizes",
-    "cssVar": "--text-xs"
+    "cssVar": "--text-xs",
+    "darkValue": "0.563rem"
+  },
+  "text.label": {
+    "value": "0.625rem",
+    "type": "fontSizes",
+    "cssVar": "--text-label",
+    "darkValue": "0.625rem"
+  },
+  "text.labelLg": {
+    "value": "0.6875rem",
+    "type": "fontSizes",
+    "cssVar": "--text-label-lg",
+    "darkValue": "0.6875rem"
   },
   "text.sm": {
     "value": "0.750rem",
     "type": "fontSizes",
-    "cssVar": "--text-sm"
+    "cssVar": "--text-sm",
+    "darkValue": "0.750rem"
+  },
+  "text.bodySm": {
+    "value": "0.8125rem",
+    "type": "fontSizes",
+    "cssVar": "--text-body-sm",
+    "darkValue": "0.8125rem"
+  },
+  "text.body": {
+    "value": "0.875rem",
+    "type": "fontSizes",
+    "cssVar": "--text-body",
+    "darkValue": "0.875rem"
+  },
+  "text.bodyLg": {
+    "value": "0.9375rem",
+    "type": "fontSizes",
+    "cssVar": "--text-body-lg",
+    "darkValue": "0.9375rem"
+  },
+  "text.bodyXl": {
+    "value": "1.0625rem",
+    "type": "fontSizes",
+    "cssVar": "--text-body-xl",
+    "darkValue": "1.0625rem"
   },
   "text.base": {
     "value": "1rem",
     "type": "fontSizes",
-    "cssVar": "--text-base"
+    "cssVar": "--text-base",
+    "darkValue": "1rem"
   },
   "text.lg": {
     "value": "1.125rem",
     "type": "fontSizes",
-    "cssVar": "--text-lg"
+    "cssVar": "--text-lg",
+    "darkValue": "1.125rem"
   },
   "text.heading.xl": {
     "value": "1.333rem",
     "type": "fontSizes",
-    "cssVar": "--text-heading-xl"
+    "cssVar": "--text-heading-xl",
+    "darkValue": "1.333rem"
   },
   "text.heading.2xl": {
     "value": "1.777rem",
     "type": "fontSizes",
-    "cssVar": "--text-heading-2xl"
+    "cssVar": "--text-heading-2xl",
+    "darkValue": "1.777rem"
   },
   "text.heading.3xl": {
     "value": "2.369rem",
     "type": "fontSizes",
-    "cssVar": "--text-heading-3xl"
+    "cssVar": "--text-heading-3xl",
+    "darkValue": "2.369rem"
   },
   "text.heading.4xl": {
     "value": "3.158rem",
     "type": "fontSizes",
-    "cssVar": "--text-heading-4xl"
+    "cssVar": "--text-heading-4xl",
+    "darkValue": "3.158rem"
   },
   "text.heading.5xl": {
     "value": "4.210rem",
     "type": "fontSizes",
-    "cssVar": "--text-heading-5xl"
+    "cssVar": "--text-heading-5xl",
+    "darkValue": "4.210rem"
+  },
+  "text.display.sm": {
+    "value": "clamp(1.5rem, 3vw, 2rem)",
+    "type": "fontSizes",
+    "cssVar": "--text-display-sm",
+    "darkValue": "clamp(1.5rem, 3vw, 2rem)"
+  },
+  "text.display.md": {
+    "value": "clamp(1.85rem, 3.5vw, 2.75rem)",
+    "type": "fontSizes",
+    "cssVar": "--text-display-md",
+    "darkValue": "clamp(1.85rem, 3.5vw, 2.75rem)"
+  },
+  "text.display.lg": {
+    "value": "clamp(2.25rem, 6vw, 4rem)",
+    "type": "fontSizes",
+    "cssVar": "--text-display-lg",
+    "darkValue": "clamp(2.25rem, 6vw, 4rem)"
+  },
+  "text.display.xl": {
+    "value": "clamp(3.25rem, 8vw, 5.5rem)",
+    "type": "fontSizes",
+    "cssVar": "--text-display-xl",
+    "darkValue": "clamp(3.25rem, 8vw, 5.5rem)"
+  },
+  "text.display.2xl": {
+    "value": "clamp(6rem, 16vw, 13rem)",
+    "type": "fontSizes",
+    "cssVar": "--text-display-2xl",
+    "darkValue": "clamp(6rem, 16vw, 13rem)"
+  },
+  "tracking.tight": {
+    "value": "-0.03em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-tight",
+    "darkValue": "-0.03em"
+  },
+  "tracking.subtle": {
+    "value": "0.04em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-subtle",
+    "darkValue": "0.04em"
+  },
+  "tracking.caps": {
+    "value": "0.08em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-caps",
+    "darkValue": "0.08em"
+  },
+  "tracking.label": {
+    "value": "0.1em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-label",
+    "darkValue": "0.1em"
+  },
+  "tracking.labelLg": {
+    "value": "0.12em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-label-lg",
+    "darkValue": "0.12em"
+  },
+  "tracking.stamp": {
+    "value": "0.14em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-stamp",
+    "darkValue": "0.14em"
+  },
+  "tracking.stampLg": {
+    "value": "0.16em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-stamp-lg",
+    "darkValue": "0.16em"
+  },
+  "tracking.stampXl": {
+    "value": "0.22em",
+    "type": "letterSpacing",
+    "cssVar": "--tracking-stamp-xl",
+    "darkValue": "0.22em"
+  },
+  "ease.default": {
+    "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "type": "cubicBezier",
+    "cssVar": "--ease",
+    "darkValue": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  "ease.in": {
+    "value": "cubic-bezier(0.4, 0, 1, 1)",
+    "type": "cubicBezier",
+    "cssVar": "--ease-in",
+    "darkValue": "cubic-bezier(0.4, 0, 1, 1)"
+  },
+  "ease.out": {
+    "value": "cubic-bezier(0, 0, 0.2, 1)",
+    "type": "cubicBezier",
+    "cssVar": "--ease-out",
+    "darkValue": "cubic-bezier(0, 0, 0.2, 1)"
+  },
+  "ease.spring": {
+    "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "type": "cubicBezier",
+    "cssVar": "--ease-spring",
+    "darkValue": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+  },
+  "duration.default": {
+    "value": "150ms",
+    "type": "duration",
+    "cssVar": "--duration",
+    "darkValue": "150ms"
+  },
+  "duration.slow": {
+    "value": "300ms",
+    "type": "duration",
+    "cssVar": "--duration-slow",
+    "darkValue": "300ms"
+  },
+  "duration.slower": {
+    "value": "550ms",
+    "type": "duration",
+    "cssVar": "--duration-slower",
+    "darkValue": "550ms"
   },
   "spacing.0": {
     "value": "0",

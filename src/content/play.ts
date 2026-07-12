@@ -146,15 +146,15 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     medium: "illustration",
     index: "I·03",
     title: "Thai Hom",
-    meta: "Digital · 2024",
-    dim: "Home fragrance · 2024",
+    meta: "Digital · 2019",
+    dim: "Home fragrance · 2019",
     description:
       "Illustration exploring Thai home aroma ingredients from a wide range of scents, arrange in the inforgraphic booklet form.",
     projectSlug: "thai-hom",
     cardDescription: "Thai home aroma ingredients for the infographic booklet.",
     tools: ["Digital", "Heritage", "Illustrator", "Photoshop"],
     tag: "Heritage",
-    cardTools: "Digital · 2024",
+    cardTools: "Digital · 2019",
     imageSrc: "play/illustration/illustration-thhom.png",
     imageAlt: "Thai Hom infographic booklet illustration",
     images: [

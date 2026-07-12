@@ -94,9 +94,17 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     description: "Link wrapper that composes HoverRipple for nav rows.",
   },
   {
+    id: "tabbed-grid",
+    name: "TabbedGridSection",
+    path: "src/components/ui/TabbedGridSection.tsx",
+    category: "ui",
+    description: "Reusable tabbed page header + grid shell.",
+    usedOn: "/work · /play",
+  },
+  {
     id: "menu-button",
     name: "MenuButton",
-    path: "src/components/MenuButton.tsx",
+    path: "src/components/chrome/MenuButton.tsx",
     category: "chrome",
     description: "Animated hamburger / close icon tied to NavContext.",
     usedOn: "app/layout.tsx",
@@ -104,7 +112,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "nav-overlay",
     name: "NavOverlay",
-    path: "src/components/NavOverlay.tsx",
+    path: "src/components/chrome/NavOverlay.tsx",
     category: "chrome",
     description: "Full-screen nav sheet with staggered links and theme toggle.",
     usedOn: "app/layout.tsx",
@@ -112,14 +120,14 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "theme-toggle",
     name: "ThemeToggle",
-    path: "src/components/ThemeToggle.tsx",
+    path: "src/components/chrome/ThemeToggle.tsx",
     category: "chrome",
     description: "Light / dark mode switch persisted to localStorage.",
   },
   {
     id: "footer",
     name: "Footer",
-    path: "src/components/Footer.tsx",
+    path: "src/components/chrome/Footer.tsx",
     category: "chrome",
     description: "Site-wide footer bar with name and note.",
     usedOn: "app/layout.tsx",
@@ -127,7 +135,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "page-loader",
     name: "PageLoader",
-    path: "src/components/PageLoader.tsx",
+    path: "src/components/chrome/PageLoader.tsx",
     category: "chrome",
     description: "Initial route-load curtain animation.",
     usedOn: "app/layout.tsx",
@@ -135,7 +143,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "page-transition",
     name: "PageTransition",
-    path: "src/components/PageTransition.tsx",
+    path: "src/components/chrome/PageTransition.tsx",
     category: "chrome",
     description: "Route-level enter / exit fade wrapper.",
     usedOn: "app/layout.tsx",
@@ -143,7 +151,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "smooth-scroll",
     name: "SmoothScroll",
-    path: "src/components/SmoothScroll.tsx",
+    path: "src/components/chrome/SmoothScroll.tsx",
     category: "chrome",
     description: "Lenis smooth-scroll provider for the document.",
     usedOn: "app/layout.tsx",
@@ -151,12 +159,11 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "work-card",
     name: "WorkCard",
-    path: "src/components/WorkCard.tsx",
+    path: "src/components/work/WorkCard.tsx",
     category: "cards",
     description: "Polaroid-style project card with tilt and classification stamp.",
     usedOn: "/ · /work",
   },
-  
   {
     id: "play-card",
     name: "PlayCard",
@@ -168,7 +175,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "featured-stagger",
     name: "FeaturedProjectStagger",
-    path: "src/components/FeaturedProjectStagger.tsx",
+    path: "src/components/home/FeaturedProjectStagger.tsx",
     category: "cards",
     description: "Home featured mosaic with staggered WorkCard reveals.",
     usedOn: "/",
@@ -176,21 +183,14 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "scroll-reveal",
     name: "ScrollReveal",
-    path: "src/components/ScrollReveal.tsx",
+    path: "src/components/motion/ScrollReveal.tsx",
     category: "motion",
     description: "Framer Motion fade + lift on scroll; respects reduced motion.",
   },
   {
-    id: "animated-section",
-    name: "AnimatedSection",
-    path: "src/components/AnimatedSection.tsx",
-    category: "motion",
-    description: "Thin alias over ScrollReveal with optional delay.",
-  },
-  {
     id: "snap-section",
     name: "SnapSectionReveal",
-    path: "src/components/SnapSectionReveal.tsx",
+    path: "src/components/motion/SnapSectionReveal.tsx",
     category: "motion",
     description: "Section coordinator with staggered SnapItem children.",
     usedOn: "/",
@@ -198,7 +198,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "hero-section",
     name: "HeroSection",
-    path: "src/components/HeroSection.tsx",
+    path: "src/components/home/HeroSection.tsx",
     category: "sections",
     description: "Home hero split layout with botanical art and CTAs.",
     usedOn: "/",
@@ -206,23 +206,15 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
   {
     id: "home-about",
     name: "HomeAboutSection",
-    path: "src/components/HomeAboutSection.tsx",
+    path: "src/components/home/HomeAboutSection.tsx",
     category: "sections",
     description: "Home about teaser with portrait and principle list.",
     usedOn: "/",
   },
   {
-    id: "tabbed-grid",
-    name: "TabbedGridSection",
-    path: "src/components/TabbedGridSection.tsx",
-    category: "sections",
-    description: "Reusable tabbed page header + grid shell.",
-    usedOn: "/work · /play",
-  },
-  {
     id: "contact-form",
     name: "ContactForm",
-    path: "src/components/ContactForm.tsx",
+    path: "src/components/home/ContactForm.tsx",
     category: "sections",
     description: "Name / email / message form with submit states.",
   },

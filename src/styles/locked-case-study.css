@@ -17,8 +17,8 @@
 
 .locked-study__eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-stamp-lg);
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -32,8 +32,8 @@
   gap: 0.4rem;
   padding: 0.3rem 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-stamp-lg);
   text-transform: uppercase;
   color: var(--color-text-inverse);
   background: var(--color-primary);
@@ -41,7 +41,7 @@
 }
 
 .locked-study__stamp-lock {
-  font-size: 0.78rem;
+  font-size: var(--text-sm);
   line-height: 1;
 }
 
@@ -63,28 +63,28 @@
 
 .locked-study__meta-item dt {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-stamp);
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .locked-study__meta-item dd {
   margin-top: 0.25rem;
-  font-size: 0.95rem;
+  font-size: var(--text-body-lg);
   color: var(--color-text);
 }
 
 .locked-study__summary {
   margin-top: var(--spacing-6);
-  font-size: 1.05rem;
+  font-size: var(--text-body-xl);
   line-height: 1.6;
   color: var(--color-text);
 }
 
 .locked-study__note {
   margin-top: var(--spacing-4);
-  font-size: 0.9rem;
+  font-size: var(--text-body);
   line-height: 1.6;
   color: var(--color-text-muted);
 }
@@ -100,8 +100,8 @@
 
 .locked-study__tag {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--color-text-muted);
   border: 1px solid var(--color-border-subtle);
@@ -121,7 +121,7 @@
 
 .locked-study__unlock-note {
   margin-top: 0.35rem;
-  font-size: 0.88rem;
+  font-size: var(--text-body);
   line-height: 1.5;
   color: var(--color-text-muted);
 }
@@ -134,8 +134,8 @@
   display: block;
   margin-bottom: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-stamp);
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -151,7 +151,7 @@
   min-width: 0;
   padding: 0.6rem 0.75rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: var(--text-body-lg);
   color: var(--color-text);
   background: var(--color-bg);
   border: 1px solid var(--color-border-subtle);
@@ -164,7 +164,7 @@
 
 .locked-study__unlock-error {
   margin-top: 0.55rem;
-  font-size: 0.82rem;
+  font-size: var(--text-body-sm);
   color: var(--color-error);
 }
 
@@ -180,8 +180,8 @@
   align-items: center;
   padding: 0.6rem 1.1rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-label-lg);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-text);

@@ -8,18 +8,10 @@ import type {
   MajorContentBlock,
   MajorSectionId,
 } from "../../src/lib/case-studies/types";
+import { MAJOR_SECTION_ORDER } from "../../src/lib/case-studies/sections";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, "../../src/content/case-studies");
-
-const MAJOR_SECTION_ORDER: MajorSectionId[] = [
-  "brief",
-  "research",
-  "concept",
-  "craft",
-  "build",
-  "outcome",
-];
 
 interface SectionDraft {
   id: MajorSectionId;

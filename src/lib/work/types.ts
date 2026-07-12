@@ -1,3 +1,5 @@
+import type { ProjectLockStatus } from "@/src/lib/confidential/lock-status";
+
 export type WorkCardSvgVariant = 1 | 2 | 3 | 4 | 5;
 
 export interface WorkCardProject {
@@ -12,6 +14,7 @@ export interface WorkCardProject {
   theme: string;
   coverImage?: { src: string; alt: string };
   confidential?: boolean;
+  lockStatus?: ProjectLockStatus;
 }
 
 export type WorkFilterKey =

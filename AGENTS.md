@@ -45,7 +45,10 @@ npm run typecheck    # tsc --noEmit
 
 - Nested keys become kebab-cased CSS variables: `text.heading.xl` → `--text-heading-xl`
 - Special case: `shadow.default` emits `--shadow` (not `--shadow-default`)
+- Special case: `ease.default` emits `--ease`; `duration.default` emits `--duration`
 - Do **not** reintroduce flat/legacy names like `text.xl` (use `text.heading.xl`)
+
+Full token hygiene audit and usage guide: [`docs/token-hygiene.md`](docs/token-hygiene.md)
 
 ---
 
@@ -87,9 +90,17 @@ Keep `design-tokens/tokens.*.json` `font.*` values aligned, then run `npm run to
 
 ```
 app/                   # Next.js App Router routes + favicon.ico
+  components/          # Component gallery (/components) + catalog.ts
 src/
   components/          # All React components
-    ui/                # Primitive components (CopyButton, etc.)
+    ui/                # Reusable primitives (Badge, TabBar, TabbedGridSection)
+    chrome/            # Site shell (Nav, Footer, PageLoader, ThemeToggle)
+    motion/            # Reusable motion wrappers (ScrollReveal, SnapSectionReveal)
+    home/              # Home page sections
+    work/              # Work page + WorkCard
+    play/              # Play page
+    about/             # About page
+    case-study/        # Case study layouts and blocks
   lib/                 # Data and utilities (projects.ts, config.ts)
   design-tokens/       # Generated tokens.ts (do not hand-edit)
   styles/              # Generated theme.css (do not hand-edit)
@@ -100,6 +111,33 @@ scripts/figma/         # export-tokens.ts (Figma pull)
 scripts/case-studies/  # compile-case-study.ts (MD → TS)
 public/                # Static assets
 ```
+
+---
+
+## Components
+
+Components are organized in **layers** (generic → specific). A component may import from its own layer or layers above it — never from a sibling feature folder.
+
+| Layer | Folder | Examples |
+| --- | --- | --- |
+| Primitives | `src/components/ui/` | Badge, TabBar, FilterBar, TabbedGridSection |
+| Site chrome | `src/components/chrome/` | MenuButton, NavOverlay, Footer, ThemeToggle |
+| Motion | `src/components/motion/` | ScrollReveal, SnapSectionReveal |
+| Feature | `src/components/{home,work,play,about,case-study}/` | HeroSection, WorkGrid, PlayCard, AboutView |
+
+### Lifecycle (planning → production)
+
+1. **Plan** — decide the layer first. If a component is used by 2+ features, it belongs in `ui/`. Page-specific sections stay in the feature folder (`home/`, `work/`, etc.).
+2. **Build** — named export, typed props with union types, Server Component by default. Add `'use client'` only when hooks or browser APIs are required.
+3. **Document** — add a `CatalogEntry` in [`app/components/catalog.ts`](app/components/catalog.ts). Add a demo in [`app/components/demos.tsx`](app/components/demos.tsx) if the component is reusable. Demo code lives in `app/components/`, never in `src/components/`.
+4. **Verify** — run `npm run typecheck && npm run validate:data && npm run build` before considering the component done.
+
+### Conventions
+
+- **Named exports only** — no default exports in `src/components/`.
+- **No barrel files** — import directly from the component file (e.g. `@/src/components/ui/Badge`), not from an `index.ts`.
+- **No demo files in production tree** — gallery demos belong in `app/components/`.
+- **Catalog paths must exist** — `npm run validate:data` checks every `.tsx` path in the catalog.
 
 ---
 

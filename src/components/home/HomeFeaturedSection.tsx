@@ -1,8 +1,8 @@
-import { FeaturedProjectStagger } from "@/src/components/FeaturedProjectStagger";
+import { FeaturedProjectStagger } from "@/src/components/home/FeaturedProjectStagger";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import { getFeaturedWorkCards } from "@/src/lib/work/data";
 
 const SECTION_NUMBER = "02";

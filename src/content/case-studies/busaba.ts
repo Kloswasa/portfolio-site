@@ -6,7 +6,7 @@ const busabaCaseStudy = {
   approachLabel: "The Decision",
   hero: {
     breadcrumb: "Busaba Dessert Bar",
-    eyebrow: "002 · Industrial design · Food service",
+    eyebrow: "005 · Industrial design · Food service",
     titleLine1: "Signature",
     titleLine2: "Dessert",
     summary:

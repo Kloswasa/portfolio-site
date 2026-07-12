@@ -16,14 +16,8 @@ export type {
 export {
   getCaseStudyNav,
   getMinorSectionEyebrows,
-  getMinorSectionLabel,
   getMinorSectionOrder,
   MAJOR_SECTION_ORDER,
-  MINOR_SECTION_ORDER,
 } from "@/src/lib/case-studies/sections";
 
-export {
-  caseStudiesBySlug,
-  getCaseStudy,
-  getCaseStudySlugs,
-} from "@/src/lib/case-studies/registry";
+export { getCaseStudy } from "@/src/lib/case-studies/registry";

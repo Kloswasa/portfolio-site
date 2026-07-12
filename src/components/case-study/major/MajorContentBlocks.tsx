@@ -3,7 +3,7 @@ import { TokenHierarchyArtifact } from "@/src/components/case-study/major/artifa
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import type { MajorContentBlock } from "@/src/lib/case-studies/types";
 
 function OrnamentSvg() {

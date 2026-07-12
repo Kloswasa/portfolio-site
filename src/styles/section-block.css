@@ -14,7 +14,7 @@
   margin: 0;
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: clamp(1.85rem, 4vw, 3rem);
+  font-size: var(--text-display-md);
   line-height: 1;
   color: var(--color-text);
 }
@@ -23,7 +23,7 @@
   flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   line-height: 1.9;
   text-align: right;
@@ -32,7 +32,7 @@
 
 .section-block__info strong {
   display: block;
-  font-size: 0.625rem;
+  font-size: var(--text-label);
   color: var(--color-text-muted);
 }
 

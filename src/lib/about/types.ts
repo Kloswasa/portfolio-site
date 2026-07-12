@@ -62,7 +62,6 @@ export interface AboutQuote {
 
 import type { PageEndCopy } from "@/src/lib/page-end/types";
 
-export type AboutEndAction = PageEndCopy["actions"][number];
 export type AboutEndCopy = PageEndCopy;
 
 /** Home page about teaser — short slice of the full about record. */

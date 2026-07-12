@@ -16,7 +16,7 @@ function applyTheme(theme: Theme) {
   else root.classList.remove("dark");
 }
 
-export default function ThemeToggle({
+export function ThemeToggle({
   tone = "default",
   className,
 }: {
@@ -31,7 +31,7 @@ export default function ThemeToggle({
 
   const nextTheme: Theme = theme === "dark" ? "light" : "dark";
   const base =
-    "rounded-none px-3 py-2 font-body text-xs font-semibold uppercase tracking-[0.12em] transition";
+    "rounded-none px-3 py-2 font-body text-xs font-semibold uppercase tracking-label-lg transition";
   const defaultClasses =
     "border border-border-subtle bg-bg text-text-muted hover:border-border hover:text-text";
   const inverseClasses =

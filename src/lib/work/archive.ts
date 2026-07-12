@@ -1,4 +1,4 @@
-import { projects, WORK_TABS } from "@/src/lib/projects";
+import { getVisibleProjects, WORK_TABS } from "@/src/lib/projects";
 import { toWorkCardProject } from "@/src/lib/work/data";
 import type { PageEndCopy } from "@/src/lib/page-end/types";
 import type {
@@ -19,7 +19,7 @@ function buildFilters(
 }
 
 function toWorkArchiveProject(
-  project: (typeof projects)[number],
+  project: ReturnType<typeof getVisibleProjects>[number],
   index: number,
 ): WorkArchiveProject {
   return {
@@ -28,8 +28,10 @@ function toWorkArchiveProject(
   };
 }
 
+const visibleProjects = getVisibleProjects();
+
 export const WORK_ARCHIVE_PROJECTS: WorkArchiveProject[] =
-  projects.map(toWorkArchiveProject);
+  visibleProjects.map(toWorkArchiveProject);
 
 export const WORK_FILTER_OPTIONS: WorkFilterOption[] = [
   { key: "all", label: "All" },
@@ -37,14 +39,14 @@ export const WORK_FILTER_OPTIONS: WorkFilterOption[] = [
   { key: "major", label: "Cases" },
 ];
 
-const archiveYears = projects.map((project) => {
+const archiveYears = visibleProjects.map((project) => {
   const match = project.yearLabel.match(/^(\d{4})/);
   return match ? Number(match[1]) : 2024;
 });
 const minYear = Math.min(...archiveYears);
 const maxYear = Math.max(...archiveYears);
-const disciplineCount = new Set(projects.map((project) => project.workTab)).size;
-const industryCount = new Set(projects.map((project) => project.industry)).size;
+const disciplineCount = new Set(visibleProjects.map((project) => project.workTab)).size;
+const industryCount = new Set(visibleProjects.map((project) => project.industry)).size;
 
 export const WORK_HERO_META: WorkHeroMeta = {
   eyebrow: `THE WORK ARCHIVE · ${minYear} — ${maxYear}`,

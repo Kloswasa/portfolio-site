@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { HeroHomePlant } from "@/src/components/HeroHomePlant";
+import { HeroHomePlant } from "@/src/components/home/HeroHomePlant";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import { siteConfig } from "@/src/lib/config";
 
 type HeroCta = {
@@ -91,7 +91,7 @@ export function HeroSection({
 
         <div className="hero-scroll-indicator" aria-hidden>
           <div className="hero-scroll-line" />
-          <div className="hero-scroll-text font-mono text-xs uppercase tracking-[0.18em]">
+          <div className="hero-scroll-text font-mono text-xs uppercase tracking-stamp-lg">
             Scroll
           </div>
         </div>

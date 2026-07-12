@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
 import type { PageEndCopy } from "@/src/lib/page-end/types";
 
 interface PageEndSectionProps {

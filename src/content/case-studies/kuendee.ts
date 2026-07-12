@@ -6,7 +6,7 @@ const kuendeeCaseStudy = {
   approachLabel: "Process",
   hero: {
     breadcrumb: "Kuendee Booth",
-    eyebrow: "003 · Industrial design · Retail",
+    eyebrow: "006 · Industrial design · Retail",
     titleLine1: "Kuendee",
     titleLine2: "Booth",
     summary:

@@ -24,21 +24,28 @@ hero:
 # brief
 
 eyebrow: 01 — Brief
-title: The brief
+title: A career framework,
+titleEm: applied to travel
 
 ## prose
 
-    Design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.
+A personality quiz result is easy to make and easy to forget. If the output was a one-word label, the product would be played once and closed, and a newcomer to Australia would be no closer to knowing where to go. The result had to earn its usefulness or the whole thing was a horoscope.
+
+    The brief: design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.
+
 Two things in that brief made it harder than a normal quiz.
+
 ## findings
-- num: 1
-  label: Brief
+
+- num: "01"
+  label: Framework
   title: Holland's model
   body: Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's "Investigative" became "the Curious Explorer".
-- num: 2
-  label: Brief
-  title: The audience
-  body: the audience hadn't been to Australia, so being told you are "the Curious Explorer" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect. 
+- num: "02"
+  label: Audience
+  title: Strangers to Australia
+  body: The audience hadn't been to Australia, so being told you are "the Curious Explorer" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect.
+
 
 # research
 
@@ -70,21 +77,29 @@ titleEm: scene as backdrop
 ## prose
 
 This quiz's result had to represent the person, not label them.
-    The interviews named two things as Australian identity: wildlife and natural scenes. Therefore, scenery became ambient backdrop while a native animal, including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, Dingo, carried each personality type's identity. 
-    Pairings were tested against two lenses, which are natural animal behaviour and meaning in Aboriginal belief, and only kept if they held under both. 
+
+**Decision one: split the two symbols of Australia by job.** The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each personality type's identity on the result page, where the personal weight had to live.
+
+**Decision two: every pairing had to hold under two lenses.** Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both.
     
 ## imagePair
 
 - src: /projects/quiz-game/quiz-game-identical-platypus.png
   alt: Illustration of a platypus, representing the Curious Explorer personality type
-  caption: Platypus equals to the Curious Explorer. Symbol of individuality and being at peace alone.
+  caption: Platypus as the Curious Explorer. Both lenses agree — a solitary forager by behaviour, a symbol of individuality and being at peace alone in traditional belief.
 - src: /projects/quiz-game/quiz-game-identical-brolga.png
   alt: Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type
-  caption: Brolga equals to the Inspiration Seeker. Linked to ceremonial dance, beauty, creativity, resilience.
+  caption: Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour — beauty, creativity, resilience.
     
 ## prose
-    Research was AI-assisted but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion. Scope excluded direct community consultation, paid cultural advisor review, and Country-specific mapping, a fuller version would build those in, ideally with a cultural advisor co-authoring the matching from the outset.
 
+**Decision three: AI surfaced candidates, sources decided.** Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion.
+
+## callout
+
+label: Scope
+title: What this research was not
+body: Direct community consultation, paid cultural advisor review, and Country-specific mapping were outside a three-month internship's scope. A fuller version would build those in, ideally with a cultural advisor co-authoring the matching from the outset, not verifying it after the fact.
 
 
 
@@ -97,7 +112,7 @@ titleEm: the animal
 
 ## prose
 
-Three other pieces of content sat on each result page: a destination, a tip, and a trivia line. 
+**Every piece on the result page was curated for the type, not filled.** Three other pieces of content sat on each result page: a destination, a tip, and a trivia line.
 
 ## video
 
@@ -157,7 +172,7 @@ titleEm: learned
 ## pullquote
 
 text: That was where I wanna go!
-source: One user who doubted her personality match changed her mind reading the destinations.
+source: User who initially doubted her personality match, on reading her recommended destinations
 
 ## reflections
 

@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
 import { SpecimenCard } from "@/src/components/ui/SpecimenCard";
-import { WorkCardSvg } from "@/src/components/WorkCardSvg";
+import { WorkCardSvg } from "@/src/components/work/WorkCardSvg";
 import { useTilt } from "@/src/hooks/useTilt";
+import { getProjectLockCopy } from "@/src/lib/confidential/lock-status";
 import type { WorkCardProject } from "@/src/lib/work/types";
 
 interface WorkCardProps {
@@ -55,6 +56,11 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
         title={project.title}
         tags={project.tags}
         locked={project.confidential}
+        lockLabel={
+          project.confidential
+            ? getProjectLockCopy(project.lockStatus).stamp
+            : undefined
+        }
       />
     </Link>
   );

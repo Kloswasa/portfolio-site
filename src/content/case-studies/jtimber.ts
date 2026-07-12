@@ -6,7 +6,7 @@ const timberCaseStudy = {
   approachLabel: "Process",
   hero: {
     breadcrumb: "Timber Catalog",
-    eyebrow: "007 · Graphic design · Multimedia",
+    eyebrow: "010 · Graphic design · Multimedia",
     titleLine1: "Timber",
     titleLine2: "Catalog",
     summary:

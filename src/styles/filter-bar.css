@@ -31,7 +31,7 @@
   padding-inline: var(--spacing-5);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   line-height: 1;
   border: 0;
@@ -88,14 +88,14 @@
 
 .filter-bar__count-value {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: var(--text-body-xl);
   color: var(--color-accent);
 }
 
 .filter-bar__count-label {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -111,7 +111,7 @@
   gap: var(--spacing-2);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--color-text-muted);
   border: 0;

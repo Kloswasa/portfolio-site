@@ -10,7 +10,7 @@ type NavRippleLinkProps = {
   className?: string;
 };
 
-export default function NavRippleLink({
+export function NavRippleLink({
   href,
   children,
   className = '',

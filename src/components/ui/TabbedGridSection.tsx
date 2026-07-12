@@ -8,7 +8,7 @@ import {
   type Key,
   type ReactNode,
 } from "react";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
 import { TabBar, TabBarTab } from "@/src/components/ui/TabBar";
 
 export type TabbedGridTab<TTab extends string> = {

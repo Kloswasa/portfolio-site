@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
 import type { AboutQuote as AboutQuoteData } from "@/src/lib/about/types";
 
 interface AboutQuoteProps {

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNav } from "@/src/context/NavContext";
-import ThemeToggle from "@/src/components/ThemeToggle";
+import { ThemeToggle } from "@/src/components/chrome/ThemeToggle";
 import {
   HoverRippleLayer,
   NAV_RIPPLE_DURATION,
@@ -17,8 +17,6 @@ const links = [
   { href: "/work", label: "Work", num: "02" },
   { href: "/play", label: "Play", num: "03" },
   { href: "/about", label: "About", num: "04" },
-  { href: "/tokens", label: "Tokens", num: "05" },
-  { href: "/components", label: "Components", num: "06" },
 ];
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;
@@ -254,10 +252,10 @@ export function NavOverlay() {
                 }
           }
         >
-          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+          <span className="font-mono text-label-lg uppercase tracking-stamp text-info-text/35">
             Portfolio · 2026
           </span>
-          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-info-text/35">
+          <span className="font-mono text-label-lg uppercase tracking-stamp text-info-text/35">
             <ThemeToggle tone="default" />
           </span>
         </motion.div>
@@ -336,7 +334,7 @@ function NavRippleRow({ label, num, disabled, onSelect }: NavRippleRowProps) {
       <span className="relative flex shrink-0 items-center gap-4 pl-2 pr-4">
         <span
           className={[
-            "font-mono text-[11px] uppercase tracking-[0.15em] transition-colors duration-300",
+            "font-mono text-label-lg uppercase tracking-stamp transition-colors duration-300",
             selected ? "text-accent/60" : "text-info-text/35",
           ].join(" ")}
         >

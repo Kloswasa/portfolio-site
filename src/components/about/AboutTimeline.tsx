@@ -1,5 +1,5 @@
 import { AboutBlockHead } from "@/src/components/about/AboutBlockHead";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
 import type { AboutBlock, AboutTimelineEntry } from "@/src/lib/about/types";
 
 interface AboutTimelineProps {

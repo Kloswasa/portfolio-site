@@ -1,4 +1,4 @@
-import { projects, WORK_TABS } from "@/src/lib/projects";
+import { getVisibleProjects, WORK_TABS } from "@/src/lib/projects";
 import type { Project } from "@/src/lib/projects";
 import type { WorkCardProject, WorkCardSvgVariant } from "@/src/lib/work/types";
 
@@ -29,13 +29,10 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     theme: THEMES[index % THEMES.length],
     coverImage: project.coverImage,
     confidential: project.confidential,
+    lockStatus: project.lockStatus,
   };
 }
 
 export function getFeaturedWorkCards(count = 3): WorkCardProject[] {
-  return projects.slice(0, count).map(toWorkCardProject);
-}
-
-export function getAllWorkCards(): WorkCardProject[] {
-  return projects.map(toWorkCardProject);
+  return getVisibleProjects().slice(0, count).map(toWorkCardProject);
 }

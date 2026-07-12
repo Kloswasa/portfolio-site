@@ -19,7 +19,7 @@
   margin: 0;
   max-width: 42rem;
   font-family: var(--font-heading);
-  font-size: clamp(2.125rem, 5vw, 4rem);
+  font-size: var(--text-display-lg);
   line-height: 1.05;
   color: var(--color-text);
 }

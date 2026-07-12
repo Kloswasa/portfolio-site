@@ -3,12 +3,12 @@ kind: major
 slug: homhuan
 hero:
   breadcrumb: Homhuan
-  eyebrow: Industrial Design · Heritage Translation · 2019
+  eyebrow: "004 · Industrial Design · Heritage Translation · 2019"
   titleLine1: Hom
   titleLine2: Huan
   summary: A collection of seven home fragrance products that translate Thai heritage scent practices from a century ago into objects that sit in a modern home without apology.
   image:
-    src: /projects/homhuan/hero.jpg
+    src: /projects/homhuan/homhuan-cover.png
     alt: The full Homhuan collection of seven fragrance products arranged as a family
   meta:
     - label: Role
@@ -56,7 +56,7 @@ titleEm: then forward
 
 ## prose
 
-Homhuan started from a single object. In an earlier project I had reworked one Thai heritage candle, *tian ob*, lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, into a modern object. It translated so cleanly that it raised a bigger question: if one heritage practice works this well, what would a whole collection look like?
+Homhuan started from a single object. In an earlier project I had reworked one Thai heritage candle, **tian ob**, lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, into a modern object. It translated so cleanly that it raised a bigger question: if one heritage practice works this well, what would a whole collection look like?
 
 For the capstone I went back to its source, the golden age of Thai heritage fragrance a century ago, working from period publications rather than modern summaries. Most of what I found described a way of living, how people used scent day to day, which let me translate rituals, not just shapes. One find mattered most: a fresh-petal fragrance recipe I could not find online then and still cannot today. That recovered method became the heart of one of the seven products.
 
@@ -76,10 +76,10 @@ Every product followed the same move: take a heritage practice, find the mechani
 
 ## imagePair
 
-- src: /projects/homhuan/stove-brass.jpg
+- src: /projects/homhuan/homhuan-product-brass.png
   alt: Aroma stove configured with a brass pan warming solid incense
   caption: Brass pan, dry heat, solid incense
-- src: /projects/homhuan/stove-ceramic.jpg
+- src: /projects/homhuan/homhuan-product-ceramic.png
   alt: Aroma stove configured with a ceramic pot boiling an aroma bag
   caption: Ceramic pot, wet heat, aroma bag
 
@@ -89,10 +89,10 @@ Every product followed the same move: take a heritage practice, find the mechani
 
 ## imagePair
 
-- src: /projects/homhuan/mobile-traditional.jpg
+- src: /projects/homhuan/homhuan-product-diffuser-inspiration.png
   alt: Traditional Thai floral mobile woven from banana tree and garland
   caption: The source, a woven floral mobile
-- src: /projects/homhuan/diffuser-2d.jpg
+- src: /projects/homhuan/homhuan-product-diffuser.jpg
   alt: Homhuan flat reed diffuser with paper frame and piped fragrance beads
   caption: The translation, frame in paper, flowers in scent
 
@@ -107,7 +107,7 @@ source: Reed Diffuser
 
 ## image
 
-src: /projects/homhuan/rejected-candle-sketch.jpg
+src: /projects/homhuan/homhuan-dropped-idea.webp
 alt: Concept sketch and render of the rejected upside-down hanging perfuming candle
 caption: Cut at concept stage, on safety and redundancy
 
@@ -144,22 +144,19 @@ Each product translates a different practice from the same era. The method holds
 
 ## imageGrid
 
-- src: /projects/homhuan/candle.jpg
+- src: /projects/homhuan/homhuan-product-candle.jpg
   alt: Candle with Benjarong-inspired ceramic holder
   caption: Candle, from tian ob. Sized small because the spice-wax suits small batches, which made refills the model
-- src: /projects/homhuan/diffuser-3d.jpg
+- src: /projects/homhuan/homhuan-product-hanging-diffuser.png
   alt: Hanging three-dimensional reed diffuser in die-cut paper
   caption: Diffuser, from the mobile silhouette. Same source, second reading
-- src: /projects/homhuan/perfuming-storage.jpg
+- src: /projects/homhuan/homhuan-product-container.jpg
   alt: Ceramic perfuming storage desk object
   caption: Perfuming storage, from cabinet scenting. Carries the recovered fresh-petal recipe
-- src: /projects/homhuan/miller.jpg
-  alt: Ceramic and brass miller for grinding fragrance beads
-  caption: Miller, from the powder-bead ritual. Period miller form kept, medicinal masher dropped
-- src: /projects/homhuan/locket.jpg
-  alt: Locket-form solid perfume holder
-  caption: Locket, from the wax lip locket. Paired with the miller to tell the ritual in sequence
-- src: /projects/homhuan/collection-family.jpg
+- src: /projects/homhuan/homhuan-product-miller-locket.jpg
+  alt: Ceramic and brass miller for grinding fragrance beads and Locket-form solid perfume holder
+  caption: Miller, from the powder-bead ritual. Period miller form kept, medicinal masher dropped. Locket, from the wax lip locket. Paired with the miller to tell the ritual in sequence
+- src: /projects/homhuan/homhuan-set.png
   alt: The seven products shown together as a family
   caption: Seven sources, one collection, one recurring holder shape
 
@@ -169,9 +166,21 @@ eyebrow: 05 — Build
 title: Making it real,
 titleEm: in three months
 
+## image
+
+src: /projects/homhuan/homhuan-render-to-reality.png
+alt: Concept render and shifted collection comparison
+caption: Concept render and shifted collection comparison
+
 ## prose
 
-Homhuan was designed and produced solo in three months, across six materials [CONFIRM: ceramic, brass, glass, paper, wax, wood]. One holder shape recurs through the collection, varied by colour and glaze, so seven objects still read as one family.
+Homhuan was designed and produced solo in three months, across six materials, including ceramic, brass, glass, paper, wax, wood. One holder shape recurs through the collection, varied by colour and glaze, so seven objects still read as one family.
+
+## video
+src: /projects/homhuan/homhuan-design-transition-video.mp4
+poster: /projects/homhuan/homhuan-design-transition-poster.png
+alt: Transition from Benjarong porcelain to 3D surface, 2D and CI branding
+caption: Transition from Benjarong porcelain to 3D surface, 2D and CI branding
 
 ## prose
 

@@ -100,7 +100,7 @@
 .cs-major__breadcrumb {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.14em;
+  letter-spacing: var(--tracking-stamp);
   text-transform: uppercase;
   color: var(--color-border-strong);
   display: flex;
@@ -120,7 +120,7 @@
 
 .cs-major__hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 5.75rem);
+  font-size: var(--text-display-xl);
   font-weight: 400;
   line-height: 0.95;
   color: var(--color-text-inverse);
@@ -168,13 +168,13 @@
 .cs-major__meta-btn {
   margin-top: 0.125rem;
   padding: 0.5rem 1rem;
-  font-size: 0.8125rem;
+  font-size: var(--text-body-sm);
 }
 
 .cs-major__meta-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 0.375rem;
@@ -219,7 +219,7 @@
   padding: var(--spacing-12) var(--spacing-5) var(--spacing-4);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -239,7 +239,7 @@
   padding-inline: var(--spacing-5);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   line-height: 1;
   border: 0;
@@ -291,7 +291,7 @@
 
 .cs-major__section-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: var(--text-display-md);
   font-weight: 400;
   color: var(--color-text);
   line-height: 1.15;
@@ -366,7 +366,7 @@
 
 .cs-major__pull-quote-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: var(--text-display-sm);
   font-style: italic;
   color: var(--color-text);
   line-height: 1.3;
@@ -375,8 +375,8 @@
 
 .cs-major__pull-quote-source {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
@@ -411,8 +411,8 @@
 
 .cs-major__callout-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.14em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-stamp);
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: var(--spacing-3);
@@ -428,7 +428,7 @@
 }
 
 .cs-major__callout-body {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
   color: var(--color-border-strong);
   line-height: 1.75;
 }
@@ -477,8 +477,8 @@
 
 .cs-major__stat-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
@@ -521,8 +521,8 @@
 
 .cs-major__finding-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-accent-dark);
   margin-bottom: 0.625rem;
@@ -539,7 +539,7 @@
 }
 
 .cs-major__finding-body {
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.7;
 }
@@ -560,11 +560,11 @@
   color: var(--color-accent-dark);
   flex-shrink: 0;
   margin-top: 2px;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--tracking-caps);
 }
 
 .cs-major__annotation-text {
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-warning-text);
   line-height: 1.7;
 }
@@ -579,15 +579,15 @@
 
 .cs-major__two-col-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-subtle);
   margin-bottom: var(--spacing-2);
 }
 
 .cs-major__two-col-body {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
   color: var(--color-text-muted);
   line-height: 1.75;
 }
@@ -608,7 +608,7 @@
 
 .cs-major__image-caption {
   margin-top: var(--spacing-3);
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -641,7 +641,7 @@
 
 .cs-major__image-pair-caption {
   margin-top: var(--spacing-3);
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -667,7 +667,7 @@
 
 .cs-major__image-grid-caption {
   margin-top: var(--spacing-3);
-  font-size: 0.8125rem;
+  font-size: var(--text-body-sm);
   color: var(--color-text-muted);
   line-height: 1.55;
 }
@@ -687,7 +687,7 @@
 
 .cs-major__video-caption {
   margin-top: var(--spacing-3);
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -712,8 +712,8 @@
 
 .cs-major__process-num {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   color: var(--color-accent);
   margin-bottom: var(--spacing-3);
 }
@@ -740,7 +740,7 @@
 }
 
 .cs-major__process-body {
-  font-size: 0.8125rem;
+  font-size: var(--text-body-sm);
   color: var(--color-text-muted);
   line-height: 1.7;
 }
@@ -759,8 +759,8 @@
   left: var(--spacing-5);
   z-index: 2;
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-border-strong);
   background: color-mix(in srgb, var(--color-header-bg) 70%, transparent);
@@ -773,8 +773,8 @@
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   color: var(--color-text-muted);
   display: flex;
   align-items: center;
@@ -818,15 +818,15 @@
 
 .cs-major__outcome-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-subtle);
   margin-bottom: 0.625rem;
 }
 
 .cs-major__outcome-body {
-  font-size: 0.875rem;
+  font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.65;
 }
@@ -853,8 +853,8 @@
 
 .cs-major__reflection-num {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   color: var(--color-accent);
   flex-shrink: 0;
   min-width: 1.75rem;
@@ -876,15 +876,15 @@
 }
 
 .cs-major__color-swatch-label {
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
   color: var(--color-text);
   line-height: 1.3;
 }
 
 .cs-major__color-swatch-token {
   font-family: var(--font-mono);
-  font-size: 0.5rem;
-  letter-spacing: 0.06em;
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--color-text-subtle);
   margin-top: 0.125rem;
@@ -909,8 +909,8 @@
 
 .cs-major__type-meta {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
@@ -930,7 +930,7 @@
 .cs-major__type-mono {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text);
 }
@@ -982,15 +982,15 @@
 
 .cs-major__component-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   opacity: 0.7;
   margin-bottom: var(--spacing-2);
 }
 
 .cs-major__component-title {
-  font-size: 0.9375rem;
+  font-size: var(--text-body-lg);
   line-height: 1.35;
 }
 
@@ -1020,8 +1020,8 @@
 
 .cs-major__next-label {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.14em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-stamp);
   text-transform: uppercase;
   color: var(--color-tertiary);
   margin-bottom: var(--spacing-5);
@@ -1039,7 +1039,7 @@
 
 .cs-major__next-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-size: var(--text-display-md);
   font-style: italic;
   color: var(--color-text-inverse);
   line-height: 1.1;
@@ -1048,8 +1048,8 @@
 
 .cs-major__next-meta {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-tertiary);
   margin-bottom: var(--spacing-8);
@@ -1065,7 +1065,7 @@
   color: var(--color-text-inverse);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   transition: border-color var(--duration) var(--ease), background var(--duration) var(--ease), transform var(--duration) var(--ease);
 }
@@ -1105,11 +1105,11 @@
   }
 
   .cs-major__hero-title {
-    font-size: clamp(2.25rem, 10vw, 3.75rem);
+    font-size: var(--text-display-lg);
   }
 
   .cs-major__hero-summary {
-    font-size: 0.9375rem;
+    font-size: var(--text-body-lg);
     margin-bottom: var(--spacing-8);
   }
 
@@ -1152,7 +1152,7 @@
   }
 
   .cs-major__section-title {
-    font-size: clamp(1.375rem, 6vw, 2rem);
+    font-size: var(--text-display-sm);
   }
 
   .cs-major__body {

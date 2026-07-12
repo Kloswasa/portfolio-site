@@ -5,6 +5,5 @@ export {
   PLAY_HERO_META,
   PLAY_MEDIUM_SECTIONS,
   PLAY_PAGE_DESCRIPTION,
-  PLAY_SHOW_CODE,
   PLAY_WORKS,
 } from "@/src/content/play";

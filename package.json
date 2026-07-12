@@ -14,7 +14,8 @@
     "tokens:pull": "node --import tsx scripts/figma/export-tokens.ts",
     "content:quiz-game": "node --import tsx scripts/case-studies/compile-case-study.ts quiz-game",
     "content:block-showcase": "node --import tsx scripts/case-studies/compile-case-study.ts block-showcase",
-    "content:homhuan": "node --import tsx scripts/case-studies/compile-case-study.ts homhuan"
+    "content:homhuan": "node --import tsx scripts/case-studies/compile-case-study.ts homhuan",
+    "validate:data": "node --import tsx scripts/validate-data.ts"
   },
   "dependencies": {
     "framer-motion": "^12.23.0",

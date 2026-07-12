@@ -38,21 +38,56 @@
   },
   "font": {
     "heading": { "value": "'Fraunces', Georgia, serif", "type": "fontFamilies" },
-    "body":    { "value": "'DM Sans', system-ui, sans-serif", "type": "fontFamilies" },
+    "body":    { "value": "'Prompt', system-ui, sans-serif", "type": "fontFamilies" },
     "mono":    { "value": "'Syne', 'Fira Code', monospace", "type": "fontFamilies" }
   },
   "text": {
-    "xs":  { "value": "0.563rem", "type": "fontSizes" },
-    "sm":  { "value": "0.750rem", "type": "fontSizes" },
-    "base": { "value": "1rem",    "type": "fontSizes" },
-    "lg":  { "value": "1.125rem", "type": "fontSizes" },
+    "2xs":  { "value": "0.5rem",     "type": "fontSizes" },
+    "xs":   { "value": "0.563rem",   "type": "fontSizes" },
+    "label":    { "value": "0.625rem",  "type": "fontSizes" },
+    "labelLg":  { "value": "0.6875rem", "type": "fontSizes" },
+    "sm":   { "value": "0.750rem",   "type": "fontSizes" },
+    "bodySm": { "value": "0.8125rem", "type": "fontSizes" },
+    "body":   { "value": "0.875rem",  "type": "fontSizes" },
+    "bodyLg": { "value": "0.9375rem", "type": "fontSizes" },
+    "bodyXl": { "value": "1.0625rem", "type": "fontSizes" },
+    "base": { "value": "1rem",       "type": "fontSizes" },
+    "lg":   { "value": "1.125rem",   "type": "fontSizes" },
     "heading": {
       "xl":  { "value": "1.333rem", "type": "fontSizes" },
       "2xl": { "value": "1.777rem", "type": "fontSizes" },
       "3xl": { "value": "2.369rem", "type": "fontSizes" },
       "4xl": { "value": "3.158rem", "type": "fontSizes" },
       "5xl": { "value": "4.210rem", "type": "fontSizes" }
+    },
+    "display": {
+      "sm":  { "value": "clamp(1.5rem, 3vw, 2rem)",         "type": "fontSizes" },
+      "md":  { "value": "clamp(1.85rem, 3.5vw, 2.75rem)",    "type": "fontSizes" },
+      "lg":  { "value": "clamp(2.25rem, 6vw, 4rem)",        "type": "fontSizes" },
+      "xl":  { "value": "clamp(3.25rem, 8vw, 5.5rem)",      "type": "fontSizes" },
+      "2xl": { "value": "clamp(6rem, 16vw, 13rem)",         "type": "fontSizes" }
     }
+  },
+  "tracking": {
+    "tight":    { "value": "-0.03em", "type": "letterSpacing" },
+    "subtle":   { "value": "0.04em",  "type": "letterSpacing" },
+    "caps":     { "value": "0.08em",  "type": "letterSpacing" },
+    "label":    { "value": "0.1em",   "type": "letterSpacing" },
+    "labelLg":  { "value": "0.12em",  "type": "letterSpacing" },
+    "stamp":    { "value": "0.14em",  "type": "letterSpacing" },
+    "stampLg":  { "value": "0.16em",  "type": "letterSpacing" },
+    "stampXl":  { "value": "0.22em",  "type": "letterSpacing" }
+  },
+  "ease": {
+    "default": { "value": "cubic-bezier(0.4, 0, 0.2, 1)",         "type": "cubicBezier" },
+    "in":      { "value": "cubic-bezier(0.4, 0, 1, 1)",           "type": "cubicBezier" },
+    "out":     { "value": "cubic-bezier(0, 0, 0.2, 1)",           "type": "cubicBezier" },
+    "spring":  { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",    "type": "cubicBezier" }
+  },
+  "duration": {
+    "default": { "value": "150ms", "type": "duration" },
+    "slow":    { "value": "300ms", "type": "duration" },
+    "slower":  { "value": "550ms", "type": "duration" }
   },
   "spacing": {
     "px": { "value": "1px",   "type": "spacing" },

@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   SnapItem,
   SnapSectionReveal,
-} from "@/src/components/SnapSectionReveal";
+} from "@/src/components/motion/SnapSectionReveal";
 import type { Project } from "@/src/lib/projects";
 
 function NextPreviewSvg() {

@@ -26,14 +26,6 @@ export const MAJOR_SECTION_ORDER: MajorSectionId[] = [
   "outcome",
 ];
 
-/** Default four-section minor flow (includes approach). */
-export const MINOR_SECTION_ORDER: MinorSectionId[] = [
-  "context",
-  "approach",
-  "work",
-  "outcome",
-];
-
 /** Section order for a minor case study — omits approach when not in content. */
 export function getMinorSectionOrder(
   sections: MinorSections,
@@ -56,7 +48,7 @@ const MINOR_SECTION_LABELS: Record<
 };
 
 /** Nav + in-page eyebrow label for a minor section (approach is per-project). */
-export function getMinorSectionLabel(
+function getMinorSectionLabel(
   id: MinorSectionId,
   approachLabel?: string,
 ): string {

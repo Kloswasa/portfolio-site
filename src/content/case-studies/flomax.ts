@@ -6,7 +6,7 @@ const flomCaseStudy = {
   approachLabel: "The Decision",
   hero: {
     breadcrumb: "Flomax Kid's Packaging",
-    eyebrow: "004 · Graphic design · Packaging",
+    eyebrow: "007 · Graphic design · Packaging",
     titleLine1: "Flomax",
     titleLine2: "Kid's Packaging",
     summary:

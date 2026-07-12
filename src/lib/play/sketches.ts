@@ -6,8 +6,6 @@ export type SketchFactory = (
   h: number,
 ) => SketchFrame;
 
-export const SKETCH_BG = "var(--color-header-bg)";
-
 function resolveSketchBg(ctx: CanvasRenderingContext2D): string {
   const styles = getComputedStyle(document.documentElement);
   return styles.getPropertyValue("--color-header-bg").trim() || "#0d1b3e";

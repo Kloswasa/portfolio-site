@@ -5,10 +5,10 @@ import {
   getCaseStudy,
 } from "@/src/lib/case-studies";
 import { isConfidentialUnlocked } from "@/src/lib/confidential/auth";
-import { getProject, getCaseStudySlugForProject, projects } from "@/src/lib/projects";
+import { getProject, getCaseStudySlugForProject, getVisibleProjects } from "@/src/lib/projects";
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return getVisibleProjects().map((project) => ({ slug: project.slug }));
 }
 
 export default async function WorkDetailPage({
@@ -19,7 +19,9 @@ export default async function WorkDetailPage({
   const { slug } = await params;
   const project = getProject(slug);
 
-  if (!project) notFound();
+  if (!project || project.hidden) notFound();
+
+  const visibleProjects = getVisibleProjects();
 
   if (project.confidential) {
     const unlocked = await isConfidentialUnlocked();
@@ -28,10 +30,10 @@ export default async function WorkDetailPage({
       const caseStudy = getCaseStudy(getCaseStudySlugForProject(project));
 
       if (caseStudy) {
-        const projectIndex = projects.findIndex((p) => p.slug === slug);
-        const nextProject = projects[(projectIndex + 1) % projects.length]!;
+        const projectIndex = visibleProjects.findIndex((p) => p.slug === slug);
+        const nextProject = visibleProjects[(projectIndex + 1) % visibleProjects.length]!;
         const nextIndex = String(
-          ((projectIndex + 1) % projects.length) + 1,
+          ((projectIndex + 1) % visibleProjects.length) + 1,
         ).padStart(3, "0");
 
         return (
@@ -58,10 +60,10 @@ export default async function WorkDetailPage({
 
   if (!caseStudy) notFound();
 
-  const projectIndex = projects.findIndex((p) => p.slug === slug);
-  const nextProject = projects[(projectIndex + 1) % projects.length]!;
+  const projectIndex = visibleProjects.findIndex((p) => p.slug === slug);
+  const nextProject = visibleProjects[(projectIndex + 1) % visibleProjects.length]!;
   const nextIndex = String(
-    ((projectIndex + 1) % projects.length) + 1,
+    ((projectIndex + 1) % visibleProjects.length) + 1,
   ).padStart(3, "0");
 
   return (

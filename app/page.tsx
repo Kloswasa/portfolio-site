@@ -1,7 +1,7 @@
 import { siteConfig } from "@/src/lib/config";
-import { HeroSection } from "@/src/components/HeroSection";
-import { HomeAboutSection } from "@/src/components/HomeAboutSection";
-import { HomeFeaturedSection } from "@/src/components/HomeFeaturedSection";
+import { HeroSection } from "@/src/components/home/HeroSection";
+import { HomeAboutSection } from "@/src/components/home/HomeAboutSection";
+import { HomeFeaturedSection } from "@/src/components/home/HomeFeaturedSection";
 
 export const metadata = {
   title: "Home",

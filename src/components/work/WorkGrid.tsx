@@ -1,4 +1,4 @@
-import { WorkCard } from "@/src/components/WorkCard";
+import { WorkCard } from "@/src/components/work/WorkCard";
 import type { WorkArchiveProject } from "@/src/lib/work/types";
 
 interface WorkGridProps {

@@ -107,7 +107,7 @@ export function HeroHomePlant() {
         {plant.render()}
       </div>
 
-      <div className="hero-stamp font-mono text-xs leading-loose tracking-[0.14em]">
+      <div className="hero-stamp font-mono text-xs leading-loose tracking-stamp">
         {plant.stampLines.map((line) => (
           <span key={`${plant.id}-${line}`} className="block">
             {line}

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { WorkCard } from '@/src/components/WorkCard';
+import { WorkCard } from '@/src/components/work/WorkCard';
 import type { WorkCardProject } from '@/src/lib/work/types';
 
 const easeDefault = [0.25, 0.1, 0.25, 1] as const;

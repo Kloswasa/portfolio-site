@@ -1,19 +1,19 @@
 import type { MinorCaseStudy } from "@/src/lib/case-studies/types";
 
-const bhupCaseStudy = {
+const buphaCaseStudy = {
   kind: "minor",
   slug: "bupha",
   approachLabel: "The Decision",
   hero: {
-    breadcrumb: "Bhup Product Line",
-    eyebrow: "006 · Graphic design · Illustration",
-    titleLine1: "Bhup",
+    breadcrumb: "Bupha",
+    eyebrow: "009 · Graphic design · Illustration",
+    titleLine1: "Bupha",
     titleLine2: "Line",
     summary:
       "Graphic design and illustration for a local business's friendlier sub-brand — a separate product line that invites approachability without abandoning the parent shop's credibility.",
       image: {
         src: "/projects/bupha/bupha-cover.png",
-        alt: "Bupha product line cover image",
+        alt: "Bupha cover image",
       },
     meta: [
       { label: "Client", value: "Local business · Thailand" },
@@ -128,4 +128,4 @@ const bhupCaseStudy = {
   },
 } satisfies MinorCaseStudy;
 
-export default bhupCaseStudy;
+export default buphaCaseStudy;

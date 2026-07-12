@@ -1,6 +1,6 @@
 import { AboutBlockHead } from "@/src/components/about/AboutBlockHead";
 import { RichText } from "@/src/components/about/RichText";
-import { ScrollReveal } from "@/src/components/ScrollReveal";
+import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
 import type { AboutBlock, AboutStory as AboutStoryData } from "@/src/lib/about/types";
 
 interface AboutStoryProps {
