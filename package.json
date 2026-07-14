@@ -15,6 +15,7 @@
     "content:quiz-game": "node --import tsx scripts/case-studies/compile-case-study.ts quiz-game",
     "content:block-showcase": "node --import tsx scripts/case-studies/compile-case-study.ts block-showcase",
     "content:homhuan": "node --import tsx scripts/case-studies/compile-case-study.ts homhuan",
+    "content:dementia-app": "node --import tsx scripts/case-studies/compile-case-study.ts dementia-app",
     "validate:data": "node --import tsx scripts/validate-data.ts"
   },
   "dependencies": {

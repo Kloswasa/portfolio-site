@@ -103,8 +103,7 @@ export const projects: Project[] = [
     industry: "Healthcare",
     liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
     coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
-    confidential: true,
-    lockStatus: "documentation",
+   
   },
   {
     id: 4,
@@ -112,8 +111,8 @@ export const projects: Project[] = [
     title: "Family Recipes",
     description:
       "A recipe app for saving, sharing, and cooking family dishes across generations.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
-    tone: "tertiary",
+    technologies: ["AI product", "Product research", "TypeScript"],
+    tone: "primary",
     workTab: "product",
     caseStudyKind: "major",
     yearLabel: "2026 · Researching",
@@ -188,22 +187,6 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    slug: "bupha",
-    title: "Bupha",
-    description:
-      "Friendly graphic design and illustration for a local business sub-brand.",
-    technologies: ["Illustration", "Packaging design"],
-    tone: "tertiary",
-    workTab: "graphic",
-    caseStudyKind: "minor",
-    yearLabel: "2021 · Graphic",
-    industry: "Food & beverage",
-    coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bupha cover image" },
-    confidential: true,
-    lockStatus: "documentation",
-  },
-  {
-    id: 10,
     slug: "jtimber",
     title: "JTimber Catalog",
     description:
@@ -220,6 +203,24 @@ export const projects: Project[] = [
     lockStatus: "documentation",
   },
   {
+    id: 10,
+    slug: "bupha",
+    title: "Bupha",
+    description:
+      "Friendly graphic design and illustration for a local business sub-brand.",
+    technologies: ["Illustration", "Packaging design"],
+    tone: "tertiary",
+    workTab: "graphic",
+    caseStudyKind: "minor",
+    yearLabel: "2021 · Graphic",
+    industry: "Food & beverage",
+    coverImage: { src: "/projects/bupha/bupha-cover.png", alt: "Bupha cover image" },
+    confidential: true,
+    lockStatus: "documentation",
+    hidden: true,
+  },
+  
+  {
     id: 11,
     slug: "thai-hom",
     title: "Thai Hom",
@@ -235,6 +236,7 @@ export const projects: Project[] = [
     caseStudySlug: "thaihom",
     confidential: true,
     lockStatus: "documentation",
+    hidden: true,
   },
   {
     id: 12,
@@ -250,6 +252,7 @@ export const projects: Project[] = [
     industry: "Consumer goods",
     confidential: true,
     lockStatus: "documentation",
+    hidden: true,
   },
   {
     id: 13,

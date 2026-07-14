@@ -174,6 +174,57 @@ Major case studies can be authored as markdown and compiled to TypeScript:
 
 ---
 
+## Confidential access (password-gated case studies)
+
+Some projects in [`src/lib/projects.ts`](src/lib/projects.ts) are gated behind a shared password before the full case study renders.
+
+### Marking a project as locked
+
+In `projects.ts`:
+
+- `confidential: true` — shows the locked page and lock stamp on work cards until unlocked
+- `lockStatus` — controls copy on the locked page and card stamp:
+  - `"documentation"` — under documentation (draft case studies)
+  - `"researching"` — early research
+  - `"nda"` — under NDA (default when `lockStatus` is omitted)
+- `hidden: true` — omit from the work archive and public routes (404); content can stay in the repo
+
+### How unlock works
+
+1. Visitor opens a locked project (e.g. `/work/busaba`) and sees `LockedCaseStudy` with a password form.
+2. `unlockConfidentialCaseStudy` (server action in `src/lib/confidential/actions.ts`) compares the input to `CONFIDENTIAL_ACCESS_PASSWORD`.
+3. On success, an httpOnly cookie (`confidential-access=1`) is set for **7 days** and unlocks **all** locked projects in that browser.
+4. `app/work/[slug]/page.tsx` checks `isConfidentialUnlocked()` before rendering the full case study.
+
+If the env var is missing, the form returns **“Access is not configured.”**
+
+### Setup
+
+**Local** — create `.env.local` in the repo root (gitignored):
+
+```bash
+CONFIDENTIAL_ACCESS_PASSWORD=your-secret-password-here
+```
+
+Restart the dev server after adding or changing it.
+
+**Production** — set the same variable in the host environment (e.g. Vercel → Project → Settings → Environment Variables), then redeploy. The cookie uses `secure: true` in production (HTTPS only).
+
+### Key files
+
+| File | Role |
+| --- | --- |
+| `src/lib/projects.ts` | `confidential`, `lockStatus`, `hidden` flags |
+| `src/lib/confidential/actions.ts` | Password check + cookie |
+| `src/lib/confidential/auth.ts` | Read unlock cookie |
+| `src/lib/confidential/lock-status.ts` | Stamp / eyebrow / note copy per status |
+| `src/components/case-study/LockedCaseStudy.tsx` | Locked page UI |
+| `src/components/case-study/ConfidentialUnlockForm.tsx` | Client password form |
+
+Never commit the password — `.env.local` only.
+
+---
+
 ## General “don’ts”
 
 - No raw hex in `className` (use semantic token utilities).
