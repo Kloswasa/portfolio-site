@@ -8,13 +8,14 @@ hero:
   titleLine2: Caregiver
   summary: A usability evaluation of a caregiver monitoring app, and the re-analysis I ran a year later that reframed the findings as a trust and safety problem.
   image:
-    src: /projects/dementia-caregiver/hero.jpg
+    src: /projects/dementia-app/Dementia-head-cover.png
     alt: The prototype's home screen alongside a study of the eight tasks the evaluation tested
   meta:
     - label: Role
-      value: Solo re-analysis (2026) of a team usability evaluation (2024). In 2024, I designed and ran the evaluation. In 2026, I returned alone to synthesise the findings into a redesign brief.
+      value: 2024 Team evaluation, designed and ran the evaluation. 
+        2026 Solo re-analysis, resynthesise the findings into a redesign brief.
     - label: Team
-      value: Team of four for the 2024 evaluation. Solo for the 2026 re-analysis.
+      value: Team of four in the 2024 evaluation. Solo for the 2026 re-analysis.
     - label: Duration
       value: Evaluation across 6 weeks in 2024. Re-analysis in 2026.
     - label: Status
@@ -59,7 +60,7 @@ The prototype was a mobile app for caregivers. Looking back, I'd describe the co
 
 ## image
 
-src: /projects/dementia-caregiver/home-screen.png
+src: /projects/dementia-app/Dementia-screen-home.png
 alt: The prototype's home screen — David's status card at the top, four core feature tiles below
 caption: The home screen carried the five-second promise. In principle. The evaluation would test whether it delivered.
 
@@ -87,9 +88,9 @@ The methodology was mixed-methods, also a unit requirement: task performance mea
 
 ## image
 
-src: /projects/dementia-caregiver/session-in-progress.jpg
+src: /projects/dementia-app/Dementia-evaluation.png
 alt: A remote evaluation session, split screen with prototype on one side and task instructions on the other
-caption: Remote session in progress. Prototype on one side, task instructions on the other.
+caption: Remote session in progress. Prototype on one side, task instructions on the other. Participant appearance reducted in white.
 
 # craft
 

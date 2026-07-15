@@ -19,11 +19,11 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "Solo re-analysis (2026) of a team usability evaluation (2024). In 2024, I designed and ran the evaluation. In 2026, I returned alone to synthesise the findings into a redesign brief."
+        "value": "2024 Team evaluation, designed and ran the evaluation. 2026 Solo re-analysis, resynthesise the findings into a redesign brief."
       },
       {
         "label": "Team",
-        "value": "Team of four for the 2024 evaluation. Solo for the 2026 re-analysis."
+        "value": "Team of four in the 2024 evaluation. Solo for the 2026 re-analysis."
       },
       {
         "label": "Duration",
@@ -83,7 +83,7 @@ const dementiaAppCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/dementia-caregiver/home-screen.png",
+          "src": "/projects/dementia-app/Dementia-screen-home.png",
           "alt": "The prototype's home screen — David's status card at the top, four core feature tiles below",
           "caption": "The home screen carried the five-second promise. In principle. The evaluation would test whether it delivered."
         },
@@ -115,9 +115,9 @@ const dementiaAppCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/dementia-caregiver/session-in-progress.jpg",
+          "src": "/projects/dementia-app/Dementia-evaluation.png",
           "alt": "A remote evaluation session, split screen with prototype on one side and task instructions on the other",
-          "caption": "Remote session in progress. Prototype on one side, task instructions on the other."
+          "caption": "Remote session in progress. Prototype on one side, task instructions on the other. Participant appearance reducted in white."
         }
       ]
     },

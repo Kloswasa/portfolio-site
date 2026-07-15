@@ -94,7 +94,7 @@
   justify-content: flex-end;
   flex: 1;
   padding: var(--spacing-20) var(--spacing-12) var(--spacing-16);
-  max-width: 56.25rem;
+  max-width: 72rem;
 }
 
 .cs-major__breadcrumb {
@@ -149,8 +149,8 @@
 }
 
 .cs-major__meta-item {
-  padding-right: var(--spacing-10);
-  margin-right: var(--spacing-10);
+  padding-right: var(--spacing-4);
+  margin-right: var(--spacing-4);
   border-right: 1px solid color-mix(in srgb, var(--color-text-inverse) 10%, transparent);
 }
 
