@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Syne, Prompt } from "next/font/google";
+import { Fraunces, Syne, Lato } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -20,11 +20,11 @@ const headingFont = Fraunces({
   style: ["normal", "italic"],
 });
 
-const bodyFont = Prompt({
+const bodyFont = Lato({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "300", "400", "700"],
   style: ["normal", "italic"],
 });
 
