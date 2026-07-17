@@ -65,7 +65,7 @@ source: Prospective Australia traveller, asked to name wildlife beyond koalas an
     The same interviews surfaced three further demands, including hidden destinations over famous ones like a destination that is unique and quiet, tips that read as practical rather than generic, and trivia that explained without exaggerating.
 
 
-What I took out of it: a one-word personality type wasn't going to do the work. The result page needed four pieces of content per type, including animal, destination, tips, and trivia in order, all researched from the angles people had actually asked for. The differentiator was no longer in the quiz. It was in the curation.
+What I took out of it: a one-word type wasn't going to do the work. The differentiator was no longer in the quiz. It was in the curation.
 
 
 # concept
@@ -78,7 +78,7 @@ titleEm: scene as backdrop
 
 This quiz's result had to represent the person, not label them.
 
-**Decision one: split the two symbols of Australia by job.** The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each personality type's identity on the result page, where the personal weight had to live.
+**Decision one: split the two symbols of Australia by job.** The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live.
 
 **Decision two: every pairing had to hold under two lenses.** Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both.
     
@@ -122,8 +122,8 @@ alt: A 12 second zoom across the Curious Explorer result page, showing the platy
 caption: The result page showcase, showing the animal, destination, tip, and trivia as a unified output.
 
 ## prose
-    Each was curated for the type, not generic. For the Curious Explorer, which is Platypus, the destination was the Sydney Opera House Architectural Tour, which trades the postcard view for insider access: off-limits areas, vantage points the public doesn't reach, and the kind of architectural depth an investigative type would actually want. 
-    The tip was a behavioural nudge for the way this type travels: "Zoom out regularly, don't get stuck in details that slow you down", not generic travel advice. The trivia grounded the trip in something bigger: "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years".
+    Take the Curious Explorer (Platypus). The destination wasn't the postcard Opera House, it was the Architectural Tour: off-limits areas and vantage points the public doesn't reach, the kind of depth an investigative type actually wants.
+        The tip nudged how this type travels : "Zoom out regularly, don't get stuck in details that slow you down". The trivia grounded the trip: "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years". Every type got the same treatment.
 
 # build
 

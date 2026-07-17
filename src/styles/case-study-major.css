@@ -93,7 +93,7 @@
   flex-direction: column;
   justify-content: flex-end;
   flex: 1;
-  padding: var(--spacing-20) var(--spacing-12) var(--spacing-16);
+  padding: var(--spacing-20) var(--spacing-20) var(--spacing-16);
   max-width: 72rem;
 }
 
