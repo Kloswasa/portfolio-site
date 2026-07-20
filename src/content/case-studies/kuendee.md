@@ -12,7 +12,7 @@ hero:
     alt: Kuendee booth installed in a home improvement store, showing two-sided product display and illustrated backdrop
   meta:
     - label: Client
-      value: Kuendee — fertiliser & gardening materials distributor
+      value: Kuendee, fertiliser & gardening materials distributor
     - label: Role
       value: Booth design, graphic design, illustration
     - label: Timeline
@@ -21,17 +21,17 @@ hero:
       value: Modular booth system, backdrop illustration, product infographics
 ---
 # context
-eyebrow: 01 — Context
+eyebrow: 01 · Context
 title: Small footprint,
 titleEm: full range.
 ## prose
-Kuendee distributes fertiliser and growing materials — biochar, clay pebbles, and a range that keeps changing — into home improvement, hardware, and outdoor living retailers. The brief set two requirements that pulled against each other. The space was limited and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other. At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately.
+Kuendee distributes fertiliser and growing materials, biochar, clay pebbles, and a range that keeps changing, into home improvement, hardware, and outdoor living retailers. The brief set two requirements that pulled against each other. The space was limited and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other. At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately.
 # work
-eyebrow: 02 — Work
+eyebrow: 02 · Work
 title: A system, not
 titleEm: a structure.
 ## prose
-The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object — display units that recombine as the range rotates and the footprint changes from retailer to retailer. The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble. Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately. I then designed the graphic layer on top — an illustrated backdrop and a set of product infographics — so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration.
+The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object, display units that recombine as the range rotates and the footprint changes from retailer to retailer. The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble. Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately. I then designed the graphic layer on top, an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration.
 ## process
 - num: "01"
   title: Constraints
@@ -45,9 +45,9 @@ The two requirements only reconcile through density and modularity, so I designe
 ## image
 src: /projects/kuendee/final.png
 alt: The Kuendee booth configured for a retailer, showing both product zones and the illustrated backdrop
-caption: Two zones, one system — designed to reconfigure per branch while the graphic layer holds the identity constant.
+caption: Two zones, one system, designed to reconfigure per branch while the graphic layer holds the identity constant.
 # outcome
-eyebrow: 03 — Outcome
+eyebrow: 03 · Outcome
 title: Recognisable in
 titleEm: every store.
 ## outcomes
@@ -58,4 +58,4 @@ titleEm: every store.
   label: Structure to surface
   body: Booth, backdrop illustration, and product infographics designed as a single visual system.
 ## prose
-Designing one system flexible enough to survive every context it lands in — while keeping its identity intact — is exactly the thinking behind a digital design system, where components must hold up across screens and states nobody has drafted yet.
+Designing one system flexible enough to survive every context it lands in, while keeping its identity intact, is exactly the thinking behind a digital design system, where components must hold up across screens and states nobody has drafted yet.

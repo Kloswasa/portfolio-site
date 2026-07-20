@@ -34,27 +34,27 @@ const bhaesajCaseStudy = {
   "approachLabel": "The Direction",
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "A direction meant",
       "titleEm": "for something else.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Bhae is a traditional lip balm that has been made since 1989, with a product form customers already recognise. The brief I received was a visual direction board the team had developed for the brand's graphic work — a language of mood, not a packaging spec. It said nothing about what the object should be. Translating it into a physical product meant deciding for myself what that direction implied for shape, surface, and function, while keeping the familiar enough that thirty years of recognition survived the update."
+            "Bhae is a traditional lip balm that has been made since 1989, with a product form customers already recognise. The brief I received was a visual direction board the team had developed for the brand's graphic work, a language of mood, not a packaging spec. It said nothing about what the object should be. Translating it into a physical product meant deciding for myself what that direction implied for shape, surface, and function, while keeping the familiar enough that thirty years of recognition survived the update."
           ]
         }
       ]
     },
     "work": {
-      "eyebrow": "02 — Work",
+      "eyebrow": "02 · Work",
       "title": "A mood board into",
       "titleEm": "an object.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "A visual direction does not tell you how thick a wall should be, how a lid should feel closing, or which surface finish will read as traditional rather than cheap. Those decisions were mine to make, and I worked them out through a deliberate escalation of fidelity — pencil sketches first, exploring shape quickly and cheaply while the ideas were still disposable, then a surface and material board to fix the tactile language the graphic direction had only implied, then 3D renders to test the resolved forms as real volumes. Each stage answered a different question, and moving up in fidelity only once the previous question was settled kept the exploration honest rather than decorative."
+            "A visual direction does not tell you how thick a wall should be, how a lid should feel closing, or which surface finish will read as traditional rather than cheap. Those decisions were mine to make, and I worked them out through a deliberate escalation of fidelity, pencil sketches first, exploring shape quickly and cheaply while the ideas were still disposable, then a surface and material board to fix the tactile language the graphic direction had only implied, then 3D renders to test the resolved forms as real volumes. Each stage answered a different question, and moving up in fidelity only once the previous question was settled kept the exploration honest rather than decorative."
           ]
         },
         {
@@ -81,12 +81,12 @@ const bhaesajCaseStudy = {
           "type": "image",
           "src": "/projects/bhae/final.png",
           "alt": "3D renders of the resolved Bhae lip balm packaging concepts",
-          "caption": "From pencil to render — each stage resolving a different question."
+          "caption": "From pencil to render, each stage resolving a different question."
         }
       ]
     },
     "outcome": {
-      "eyebrow": "03 — Outcome",
+      "eyebrow": "03 · Outcome",
       "title": "A direction made",
       "titleEm": "physical.",
       "blocks": [
@@ -108,7 +108,7 @@ const bhaesajCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Working up from rough sketches to resolved renders — spending effort only when the cheaper question is settled — is the same discipline behind moving from wireframe to prototype in digital product design."
+            "Working up from rough sketches to resolved renders, spending effort only when the cheaper question is settled, is the same discipline behind moving from wireframe to prototype in digital product design."
           ]
         }
       ]

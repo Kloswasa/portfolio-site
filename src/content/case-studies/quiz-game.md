@@ -23,7 +23,7 @@ hero:
 
 # brief
 
-eyebrow: 01 — Brief
+eyebrow: 01 · Brief
 title: A career framework,
 titleEm: applied to travel
 
@@ -49,7 +49,7 @@ Two things in that brief made it harder than a normal quiz.
 
 # research
 
-eyebrow: 02 — Research
+eyebrow: 02 · Research
 title: What the research
 titleEm: changed
 
@@ -61,7 +61,7 @@ source: Prospective Australia traveller, asked to name wildlife beyond koalas an
 ## prose
 
     The pause before that answer lasted several seconds.
-    Wildlife was named as Australia's signature in every interview — five people, all planning a first trip from overseas — but recognition stopped at two animals.
+    Wildlife was named as Australia's signature in every interview, five people, all planning a first trip from overseas, but recognition stopped at two animals.
 
 ## findings
 
@@ -76,7 +76,7 @@ source: Prospective Australia traveller, asked to name wildlife beyond koalas an
 - num: "03"
   label: Trivia
   title: Explains, doesn't exaggerate
-  body: Facts that grounded the place rather than hyping it — credibility over spectacle.
+  body: Facts that grounded the place rather than hyping it, credibility over spectacle.
 
 ## prose
 
@@ -85,7 +85,7 @@ What I took out of it: a one-word type wasn't going to do the work. The differen
 
 # concept
 
-eyebrow: 03 — Concept
+eyebrow: 03 · Concept
 title: Wildlife as identity,
 titleEm: scene as backdrop
 
@@ -101,10 +101,10 @@ This quiz's result had to represent the person, not label them.
 
 - src: /projects/quiz-game/quiz-game-identical-platypus.png
   alt: Illustration of a platypus, representing the Curious Explorer personality type
-  caption: Platypus as the Curious Explorer. Both lenses agree — a solitary forager by behaviour, a symbol of individuality and being at peace alone in traditional belief.
+  caption: Platypus as the Curious Explorer. Both lenses agree, a solitary forager by behaviour, a symbol of individuality and being at peace alone in traditional belief.
 - src: /projects/quiz-game/quiz-game-identical-brolga.png
   alt: Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type
-  caption: Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour — beauty, creativity, resilience.
+  caption: Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour, beauty, creativity, resilience.
     
 ## prose
 
@@ -121,7 +121,7 @@ body: Direct community consultation, paid cultural advisor review, and Country-s
 
 # craft
 
-eyebrow: 04 — Craft
+eyebrow: 04 · Craft
 title: Beyond
 titleEm: the animal
 
@@ -139,15 +139,15 @@ caption: Everything arrives on one screen, so the result reads as a single recom
 ## twoCol
 
 - label: Destination
-  body: Not the postcard Opera House but the Architectural Tour — off-limits vantage points, the investigative depth this type actually travels for.
+  body: Not the postcard Opera House but the Architectural Tour, off-limits vantage points, the investigative depth this type actually travels for.
 - label: Tip
-  body: Written to how the type moves, not generic advice — "Zoom out regularly, don't get stuck in details that slow you down."
+  body: Written to how the type moves, not generic advice, "Zoom out regularly, don't get stuck in details that slow you down."
 - label: Trivia
-  body: Grounds the trip in place, not spectacle — "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years."
+  body: Grounds the trip in place, not spectacle, "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years."
 
 # build
 
-eyebrow: 05 — Build
+eyebrow: 05 · Build
 title: Two render strategies
 titleEm: for two moments
 
@@ -174,7 +174,7 @@ The quiz and the result page do different jobs, so they got different render str
 
 # outcome
 
-eyebrow: 06 — Outcome
+eyebrow: 06 · Outcome
 title: Shipped and
 titleEm: learned
 

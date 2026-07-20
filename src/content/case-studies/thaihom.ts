@@ -11,7 +11,7 @@ const thaihomCaseStudy = {
     "eyebrow": "011 · Graphic design · Editorial",
     "titleLine1": "Thai",
     "titleLine2": "Hom",
-    "summary": "An infographic book showcasing ingredients that represent Thai aroma — every illustration and graphic element authored by hand for a cohesive sensory narrative.",
+    "summary": "An infographic book showcasing ingredients that represent Thai aroma, every illustration and graphic element authored by hand for a cohesive sensory narrative.",
     "meta": [
       {
         "label": "Client",
@@ -33,14 +33,14 @@ const thaihomCaseStudy = {
   },
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "Smell is hard",
       "titleEm": "to show.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Thai H asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients — lemongrass, kaffir lime, galangal, jasmine, coconut, and others — that define Thai fragrance culture.",
+            "Thai H asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients, lemongrass, kaffir lime, galangal, jasmine, coconut, and others, that define Thai fragrance culture.",
             "Every spread is original: no stock illustration, no borrowed icons. The goal was a cohesive editorial object where graphic rhythm and hand-drawn detail carry the sensory story."
           ]
         },
@@ -67,7 +67,7 @@ const thaihomCaseStudy = {
       ]
     },
     "work": {
-      "eyebrow": "02 — Work",
+      "eyebrow": "02 · Work",
       "title": "Ingredient as",
       "titleEm": "visual character.",
       "blocks": [
@@ -83,7 +83,7 @@ const thaihomCaseStudy = {
             {
               "num": "01",
               "title": "Research + outline",
-              "body": "Eighteen ingredients selected for aroma significance — grouped by scent family."
+              "body": "Eighteen ingredients selected for aroma significance, grouped by scent family."
             },
             {
               "num": "02",
@@ -100,7 +100,7 @@ const thaihomCaseStudy = {
       ]
     },
     "outcome": {
-      "eyebrow": "03 — Outcome",
+      "eyebrow": "03 · Outcome",
       "title": "A book you",
       "titleEm": "can almost smell.",
       "blocks": [
@@ -110,19 +110,19 @@ const thaihomCaseStudy = {
             {
               "value": "32",
               "label": "Finished pages",
-              "body": "Print-ready PDF with bleed — bound proof produced for academic review."
+              "body": "Print-ready PDF with bleed, bound proof produced for academic review."
             },
             {
               "value": "18",
               "label": "Original profiles",
-              "body": "Full illustration and infographic treatment per ingredient — no stock assets."
+              "body": "Full illustration and infographic treatment per ingredient, no stock assets."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "Thai H is the most illustration-heavy piece in my graphic portfolio — proof that sensory topics reward slow, authored visuals over fast template assembly."
+            "Thai H is the most illustration-heavy piece in my graphic portfolio, proof that sensory topics reward slow, authored visuals over fast template assembly."
           ]
         }
       ]

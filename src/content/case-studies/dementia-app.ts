@@ -19,7 +19,7 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "2024 — designed and ran the team evaluation. 2026 — solo re-analysis into a redesign brief."
+        "value": "2024 · designed and ran the team evaluation. 2026 · solo re-analysis into a redesign brief."
       },
       {
         "label": "Team",
@@ -37,7 +37,7 @@ const dementiaAppCaseStudy = {
   },
   "sections": {
     "brief": {
-      "eyebrow": "01 — Brief",
+      "eyebrow": "01 · Brief",
       "title": "An evaluation,",
       "titleEm": "and a second look, a year later",
       "blocks": [
@@ -45,7 +45,7 @@ const dementiaAppCaseStudy = {
           "type": "prose",
           "paragraphs": [
             "Many caregivers don't live with the person they care for. The person with dementia is home; the caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.",
-            "In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone — and it reframed everything. This case study documents both passes."
+            "In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes."
           ]
         },
         {
@@ -71,14 +71,14 @@ const dementiaAppCaseStudy = {
       ]
     },
     "research": {
-      "eyebrow": "02 — Research",
+      "eyebrow": "02 · Research",
       "title": "A five-second promise,",
       "titleEm": "and my job in evaluating it",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "The prototype was a mobile app built on a single promise — call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it."
+            "The prototype was a mobile app built on a single promise, call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it."
           ]
         },
         {
@@ -109,13 +109,13 @@ const dementiaAppCaseStudy = {
         {
           "type": "image",
           "src": "/projects/dementia-app/Dementia-screen-home.png",
-          "alt": "The prototype's home screen — David's status card at the top, four core feature tiles below",
+          "alt": "The prototype's home screen, David's status card at the top, four core feature tiles below",
           "caption": "The status card sits above the fold, so the caregiver's first glance answers \"is everything okay\" before anything else loads."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "The project was a team of four; research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine — I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
+            "The project was a team of four; research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
           ]
         },
         {
@@ -127,7 +127,7 @@ const dementiaAppCaseStudy = {
       ]
     },
     "concept": {
-      "eyebrow": "03 — Concept",
+      "eyebrow": "03 · Concept",
       "title": "An evaluation with targets,",
       "titleEm": "not just observations",
       "blocks": [
@@ -167,25 +167,25 @@ const dementiaAppCaseStudy = {
           "type": "image",
           "src": "/projects/dementia-app/Dementia-evaluation.png",
           "alt": "A remote evaluation session, split screen with prototype on one side and task instructions on the other",
-          "caption": "Remote, split-screen sessions — prototype one side, task script the other — so participants worked naturally while their misses were captured live."
+          "caption": "Remote, split-screen sessions, prototype one side, task script the other, so participants worked naturally while their misses were captured live."
         }
       ]
     },
     "craft": {
-      "eyebrow": "04 — Craft",
+      "eyebrow": "04 · Craft",
       "title": "Three tasks worth watching",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "The SUS was 81.5; six of eight tasks passed target; three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching — one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study."
+            "The SUS was 81.5; six of eight tasks passed target; three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study."
           ]
         },
         {
           "type": "image",
           "src": "/projects/dementia-app/target-vs-actual.svg",
           "alt": "A comparison of tasks 1, 4 and 8 showing what the metric said against what the participant actually did",
-          "caption": "Against target, Task 1 clears and Task 4 fails outright — but Task 8 clears the metric while hiding a 1.27-minute search beneath it."
+          "caption": "Against target, Task 1 clears and Task 4 fails outright, but Task 8 clears the metric while hiding a 1.27-minute search beneath it."
         },
         {
           "type": "video",
@@ -197,26 +197,26 @@ const dementiaAppCaseStudy = {
         {
           "type": "image",
           "src": "/projects/dementia-caregiver/task-8-notification-centre.png",
-          "alt": "The notification centre with two tabs at the top — Notification on the left, Alert on the right",
+          "alt": "The notification centre with two tabs at the top, Notification on the left, Alert on the right",
           "caption": "The alert tab was obvious once found; the failure was expecting it here at all, so P4 searched the menu bar first."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "The other five tasks echoed these at smaller scale — two shared Task 4's discoverability problem, three passed as cleanly as Task 1."
+            "The other five tasks echoed these at smaller scale, two shared Task 4's discoverability problem, three passed as cleanly as Task 1."
           ]
         }
       ]
     },
     "build": {
-      "eyebrow": "05 — Build",
+      "eyebrow": "05 · Build",
       "title": "Eight problems,",
       "titleEm": "three underlying causes",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "The evaluation was finished; the data wasn't. Task 8 kept coming back to me. The metrics answer one question — can the user do the thing — and Task 8 passed it: three of four completed it unassisted, P4 rated it easy."
+            "The evaluation was finished; the data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy."
           ]
         },
         {
@@ -233,14 +233,14 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Once I had that lens, Task 8 stopped looking like a one-off. The same gap ran through the evaluation — and grouped by the kind of gap, eight scattered task problems collapsed into three root causes."
+            "Once I had that lens, Task 8 stopped looking like a one-off. The same gap ran through the evaluation, and grouped by the kind of gap, eight scattered task problems collapsed into three root causes."
           ]
         },
         {
           "type": "image",
           "src": "/projects/dementia-app/tasks-collapse.svg",
           "alt": "Eight evaluation tasks grouped into three root causes, with Task 8 spanning two of them",
-          "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes — Task 8, which started it, spans two."
+          "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes, Task 8, which started it, spans two."
         },
         {
           "type": "findings",
@@ -249,7 +249,7 @@ const dementiaAppCaseStudy = {
               "num": "01",
               "label": "Status trust",
               "title": "Silent failure of critical status",
-              "body": "Tasks 1, 6, and 8 all passed on the metrics, and all three let the caregiver form confidence about location, battery, or an alert without confirming it matched reality. The failure mode isn't a wrong answer — it's not knowing when to doubt a right-looking one."
+              "body": "Tasks 1, 6, and 8 all passed on the metrics, and all three let the caregiver form confidence about location, battery, or an alert without confirming it matched reality. The failure mode isn't a wrong answer, it's not knowing when to doubt a right-looking one."
             },
             {
               "num": "02",
@@ -268,14 +268,14 @@ const dementiaAppCaseStudy = {
       ]
     },
     "outcome": {
-      "eyebrow": "06 — Outcome",
+      "eyebrow": "06 · Outcome",
       "title": "A report, a brief,",
       "titleEm": "and a redesign in progress",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced what the report couldn't: a compact analytical brief — three root causes, each tied to specific tasks, each with a design implication clear enough to build from. Those three causes are the brief for the redesign I'm on now."
+            "The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced what the report couldn't: a compact analytical brief, three root causes, each tied to specific tasks, each with a design implication clear enough to build from. Those three causes are the brief for the redesign I'm on now."
           ]
         },
         {
@@ -298,7 +298,7 @@ const dementiaAppCaseStudy = {
           "items": [
             "The 2024 evaluation was rigorous in method but small in sample: four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise they need users who actually live the problem. Rigour of method is not rigour of sample.",
             "Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck; it was distance. In future evaluations I want to build the \"come back later with fresh questions\" step in on purpose, not by accident.",
-            "The distinction I ended up drawing — between whether the user can do the thing and whether their confidence matches reality — isn't specific to this app. Any interface with real-world stakes benefits from asking both. That's the lens I take forward."
+            "The distinction I ended up drawing, between whether the user can do the thing and whether their confidence matches reality, isn't specific to this app. Any interface with real-world stakes benefits from asking both. That's the lens I take forward."
           ]
         }
       ]

@@ -56,7 +56,7 @@ export function LockedCaseStudy({ project }: { project: Project }) {
         <div className="locked-study__actions">
           <a
             href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
-              `Access request — ${project.title}`,
+              `Access request, ${project.title}`,
             )}`}
             className="locked-study__cta locked-study__cta--primary"
           >

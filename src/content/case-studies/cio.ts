@@ -11,7 +11,7 @@ const cioCaseStudy = {
     "eyebrow": "012 · Packaging design · Structure",
     "titleLine1": "Cio",
     "titleLine2": "Packaging",
-    "summary": "A packaging structure that locks open at the ideal angle — so the product inside is easy to reach without the lid collapsing or flopping shut.",
+    "summary": "A packaging structure that locks open at the ideal angle, so the product inside is easy to reach without the lid collapsing or flopping shut.",
     "meta": [
       {
         "label": "Client",
@@ -34,14 +34,14 @@ const cioCaseStudy = {
   "approachLabel": "The Decision",
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "Open it once,",
       "titleEm": "hold the angle.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Cio started from a familiar frustration: hinged boxes that either snap fully open and lie flat — spilling contents — or refuse to stay at a useful angle for picking product out.",
+            "Cio started from a familiar frustration: hinged boxes that either snap fully open and lie flat, spilling contents, or refuse to stay at a useful angle for picking product out.",
             "The brief called for a self-locking open position: one motion to open, a structure that catches at a fixed angle, and a clean path to remove items without two-handed wrestling."
           ]
         },
@@ -68,30 +68,30 @@ const cioCaseStudy = {
       ]
     },
     "approach": {
-      "eyebrow": "02 — The Decision",
+      "eyebrow": "02 · The Decision",
       "title": "Score-and-catch",
       "titleEm": "over magnets.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Magnetic catches and separate inserts were early options — both added cost and assembly steps. The winning direction used scored carton panels and a tab-and-slot catch built into the dieline itself."
+            "Magnetic catches and separate inserts were early options, both added cost and assembly steps. The winning direction used scored carton panels and a tab-and-slot catch built into the dieline itself."
           ]
         },
         {
           "type": "callout",
           "label": "Tradeoff",
           "title": "Structure vs. thickness",
-          "body": "A double-wall score added caliper at the hinge line — enough to hold 110° without magnets, still within mailer thickness limits."
+          "body": "A double-wall score added caliper at the hinge line, enough to hold 110° without magnets, still within mailer thickness limits."
         },
         {
           "type": "annotation",
-          "text": "The lock angle was tuned in foam mock-ups before CAD — users could extract product one-handed when the lid held between 100° and 120°."
+          "text": "The lock angle was tuned in foam mock-ups before CAD, users could extract product one-handed when the lid held between 100° and 120°."
         }
       ]
     },
     "work": {
-      "eyebrow": "03 — Work",
+      "eyebrow": "03 · Work",
       "title": "Dieline as",
       "titleEm": "mechanism.",
       "blocks": [
@@ -107,12 +107,12 @@ const cioCaseStudy = {
             {
               "num": "01",
               "title": "Angle study",
-              "body": "Foam and paper models tested open positions — 110° selected for reach and stability."
+              "body": "Foam and paper models tested open positions, 110° selected for reach and stability."
             },
             {
               "num": "02",
               "title": "Catch geometry",
-              "body": "Tab-and-slot lock integrated into single-panel dieline — no secondary parts."
+              "body": "Tab-and-slot lock integrated into single-panel dieline, no secondary parts."
             },
             {
               "num": "03",
@@ -124,7 +124,7 @@ const cioCaseStudy = {
       ]
     },
     "outcome": {
-      "eyebrow": "04 — Outcome",
+      "eyebrow": "04 · Outcome",
       "title": "Locks open,",
       "titleEm": "stays useful.",
       "blocks": [
@@ -134,7 +134,7 @@ const cioCaseStudy = {
             {
               "value": "110°",
               "label": "Lock angle",
-              "body": "Lid holds at a fixed open angle without magnets or user adjustment — product reachable in one motion."
+              "body": "Lid holds at a fixed open angle without magnets or user adjustment, product reachable in one motion."
             },
             {
               "value": "✓",
@@ -146,7 +146,7 @@ const cioCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Cio is a structure-first packaging piece — the unboxing moment is the mechanism. Graphics can stay minimal when the fold does the work."
+            "Cio is a structure-first packaging piece, the unboxing moment is the mechanism. Graphics can stay minimal when the fold does the work."
           ]
         }
       ]

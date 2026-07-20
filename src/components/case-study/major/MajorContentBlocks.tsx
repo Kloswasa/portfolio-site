@@ -358,13 +358,13 @@ function Block({ block }: { block: MajorContentBlock }) {
           <div className="cs-major__type-row">
             <span className="cs-major__type-meta">Body · Prompt</span>
             <p className="cs-major__type-body">
-              Body copy at base size — used for narrative paragraphs, captions, and
+              Body copy at base size, used for narrative paragraphs, captions, and
               supporting detail across case study sections.
             </p>
           </div>
           <div className="cs-major__type-row">
             <span className="cs-major__type-meta">Mono · Syne</span>
-            <p className="cs-major__type-mono">01 — BRIEF · ROLE · DURATION</p>
+            <p className="cs-major__type-mono">01 · BRIEF · ROLE · DURATION</p>
           </div>
         </div>
       );

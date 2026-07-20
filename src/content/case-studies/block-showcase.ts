@@ -11,7 +11,7 @@ const blockShowcaseCaseStudy = {
     "eyebrow": "000 · Reference · Internal",
     "titleLine1": "Block",
     "titleLine2": "Showcase",
-    "summary": "A living reference page that renders every major case study content block — use it to preview layout, spacing, and typography before writing real copy.",
+    "summary": "A living reference page that renders every major case study content block, use it to preview layout, spacing, and typography before writing real copy.",
     "image": {
       "src": "/projects/quiz-game/quiz-game-cover.png",
       "alt": "Decorative cover used for the block showcase hero"
@@ -37,14 +37,14 @@ const blockShowcaseCaseStudy = {
   },
   "sections": {
     "brief": {
-      "eyebrow": "01 — Brief",
+      "eyebrow": "01 · Brief",
       "title": "Text blocks",
       "titleEm": "and metrics",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "The prose block is the workhorse — one or more paragraphs of body copy. Blank lines in the source create separate paragraphs.",
+            "The prose block is the workhorse, one or more paragraphs of body copy. Blank lines in the source create separate paragraphs.",
             "    Indented lines (four leading spaces) render as nested body lines, useful for lists or sub-points without breaking the editorial flow."
           ]
         },
@@ -75,13 +75,13 @@ const blockShowcaseCaseStudy = {
         },
         {
           "type": "pullquote",
-          "text": "Every block on this page maps to a typed content object — no one-off markup in the renderer.",
+          "text": "Every block on this page maps to a typed content object, no one-off markup in the renderer.",
           "source": "Block Showcase · Reference note"
         }
       ]
     },
     "research": {
-      "eyebrow": "02 — Research",
+      "eyebrow": "02 · Research",
       "title": "Structured",
       "titleEm": "findings",
       "blocks": [
@@ -104,13 +104,13 @@ const blockShowcaseCaseStudy = {
               "num": "B",
               "label": "Block · annotation",
               "title": "Inline notes",
-              "body": "See the annotation below — a lighter-weight aside for scope notes, caveats, or designer commentary."
+              "body": "See the annotation below, a lighter-weight aside for scope notes, caveats, or designer commentary."
             },
             {
               "num": "C",
               "label": "Block · twoCol",
               "title": "Side-by-side",
-              "body": "Pairs two labelled columns — useful for comparing methods, audiences, or before/after states."
+              "body": "Pairs two labelled columns, useful for comparing methods, audiences, or before/after states."
             }
           ]
         },
@@ -134,14 +134,14 @@ const blockShowcaseCaseStudy = {
       ]
     },
     "concept": {
-      "eyebrow": "03 — Concept",
+      "eyebrow": "03 · Concept",
       "title": "Artifacts",
       "titleEm": "and specimens",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Concept sections often pair narrative with visual evidence — built-in artifacts, color/type specimens, and decorative ornaments."
+            "Concept sections often pair narrative with visual evidence, built-in artifacts, color/type specimens, and decorative ornaments."
           ]
         },
         {
@@ -163,21 +163,21 @@ const blockShowcaseCaseStudy = {
       ]
     },
     "craft": {
-      "eyebrow": "04 — Craft",
+      "eyebrow": "04 · Craft",
       "title": "Media",
       "titleEm": "and grids",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Craft sections showcase visual output — image pairs, component inventories, and the second artifact variant."
+            "Craft sections showcase visual output, image pairs, component inventories, and the second artifact variant."
           ]
         },
         {
           "type": "image",
           "src": "/projects/quiz-game/quiz-game-quiz-diagram.png",
           "alt": "Sample single image block showing a quiz flow diagram",
-          "caption": "image block — full-width figure with optional caption."
+          "caption": "image block, full-width figure with optional caption."
         },
         {
           "type": "componentGrid",
@@ -253,14 +253,14 @@ const blockShowcaseCaseStudy = {
       ]
     },
     "build": {
-      "eyebrow": "05 — Build",
+      "eyebrow": "05 · Build",
       "title": "Process",
       "titleEm": "and media",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Build sections document how something was made — process steps, highlighted decisions, and screen recordings."
+            "Build sections document how something was made, process steps, highlighted decisions, and screen recordings."
           ]
         },
         {
@@ -269,7 +269,7 @@ const blockShowcaseCaseStudy = {
             {
               "num": "01",
               "title": "process block",
-              "body": "Numbered columns for phased work — discovery, design, build, handoff."
+              "body": "Numbered columns for phased work, discovery, design, build, handoff."
             },
             {
               "num": "02",
@@ -292,19 +292,19 @@ const blockShowcaseCaseStudy = {
           "type": "callout",
           "label": "Block · callout",
           "title": "Highlighted insight",
-          "body": "Callouts draw attention to a single idea — a design principle, a key decision, or a role summary. They sit apart from the body flow."
+          "body": "Callouts draw attention to a single idea, a design principle, a key decision, or a role summary. They sit apart from the body flow."
         },
         {
           "type": "video",
           "src": "/projects/quiz-game/quiz-game-resultpage-video.mp4",
           "poster": "/projects/quiz-game/quiz-game-video-resultpage-cover.png",
           "alt": "Sample video block showing a result page walkthrough",
-          "caption": "video block — src, poster, alt, and caption are all required."
+          "caption": "video block, src, poster, alt, and caption are all required."
         }
       ]
     },
     "outcome": {
-      "eyebrow": "06 — Outcome",
+      "eyebrow": "06 · Outcome",
       "title": "Results",
       "titleEm": "and reflections",
       "blocks": [
@@ -319,7 +319,7 @@ const blockShowcaseCaseStudy = {
             {
               "value": "2",
               "label": "Artifact variants",
-              "body": "audit-map and token-hierarchy — both built-in SVG diagrams."
+              "body": "audit-map and token-hierarchy, both built-in SVG diagrams."
             },
             {
               "value": "1",
@@ -337,11 +337,11 @@ const blockShowcaseCaseStudy = {
         {
           "type": "reflections",
           "items": [
-            "prose — body paragraphs with optional indentation.",
-            "stats · pullquote · findings · annotation · twoCol — research and context blocks.",
-            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid — visual blocks.",
-            "process · callout · video — build and evidence blocks.",
-            "outcomes · reflections — closing blocks for results and learnings."
+            "prose, body paragraphs with optional indentation.",
+            "stats · pullquote · findings · annotation · twoCol, research and context blocks.",
+            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid, visual blocks.",
+            "process · callout · video, build and evidence blocks.",
+            "outcomes · reflections, closing blocks for results and learnings."
           ]
         },
         {

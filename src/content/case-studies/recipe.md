@@ -7,7 +7,7 @@ hero:
   titleLine1: Family
   titleLine2: Recipes
   summary: A recipe app for saving, sharing, and cooking dishes passed down across
-    generations — with photos, stories, and measurements that match how people
+    generations, with photos, stories, and measurements that match how people
     actually cook.
   meta:
     - label: Client
@@ -22,7 +22,7 @@ hero:
 
 # brief
 
-eyebrow: 01 — Brief
+eyebrow: 01 · Brief
 title: Recipes are social
 titleEm: objects, not rows.
 
@@ -49,11 +49,11 @@ Interviewees stored recipes in Notes, WhatsApp, and handwritten cards. Search fa
 
 ## prose
 
-Before building screens, I mapped how families actually saved and cooked — and where meal-kit patterns broke down for heirloom recipes.
+Before building screens, I mapped how families actually saved and cooked, and where meal-kit patterns broke down for heirloom recipes.
 
 ## pullquote
 
-text: I don't just want the ingredients — I want to know who taught my mum, and who taught them.
+text: I don't just want the ingredients, I want to know who taught my mum, and who taught them.
 source: Beta family interview · Week 2
 
 ## findings
@@ -66,12 +66,12 @@ source: Beta family interview · Week 2
 - num: B
   label: Friction 02
   title: Cook-time friction
-  body: Scaling servings and imperial/metric conversion interrupted mid-recipe —
+  body: Scaling servings and imperial/metric conversion interrupted mid-recipe,
     especially with messy hands.
 - num: C
   label: Friction 03
   title: Browse-first IA
-  body: Meal-kit app patterns (browse → cart) ignored library behaviour — families
+  body: Meal-kit app patterns (browse → cart) ignored library behaviour, families
     wanted collections by branch, not discovery feeds.
 
 ## callout
@@ -82,7 +82,7 @@ body: End-to-end product design and Next.js implementation with a small beta gro
 
 # research
 
-eyebrow: 02 — Research
+eyebrow: 02 · Research
 title: Cooking in
 titleEm: real kitchens
 
@@ -100,7 +100,7 @@ captionMeta: Figma · Discovery phase
 ## twoCol
 
 - label: Family interviews · n=5
-  body: Participants wanted lineage (who taught whom) as much as ingredients —
+  body: Participants wanted lineage (who taught whom) as much as ingredients,
     social context was non-negotiable.
 - label: Cook-along tests
   body: Beta cooks completed recipes with fewer mid-session exits when steps were
@@ -110,7 +110,7 @@ captionMeta: Figma · Discovery phase
 
 # concept
 
-eyebrow: 03 — Concept
+eyebrow: 03 · Concept
 title: From browse feed
 titleEm: to family library
 
@@ -141,7 +141,7 @@ Early IA copied meal-kit apps (browse → cart). We pivoted to a library model: 
 
 label: Design principle
 title: Hands-first at cook time
-body: Every cook-mode decision was evaluated against messy hands, glances, and interruptions — not pristine desktop browsing.
+body: Every cook-mode decision was evaluated against messy hands, glances, and interruptions, not pristine desktop browsing.
 
 ## artifact
 
@@ -152,13 +152,13 @@ captionMeta: Design system · Build phase
 
 # craft
 
-eyebrow: 04 — Craft
+eyebrow: 04 · Craft
 title: Warm library,
 titleEm: focused cook mode
 
 ## prose
 
-The visual system paired editorial warmth in the library with high-contrast, large-type cook mode — two modes, one token-backed system.
+The visual system paired editorial warmth in the library with high-contrast, large-type cook mode, two modes, one token-backed system.
 
 ## prose
 
@@ -166,7 +166,7 @@ Structured steps with optional voice notes per step replaced single blob text fi
 
 # build
 
-eyebrow: 05 — Build
+eyebrow: 05 · Build
 title: Library, cook mode,
 titleEm: share.
 
@@ -176,7 +176,7 @@ Core patterns: collection cards, recipe detail with lineage, step-by-step cook v
 
 ## annotation
 
-text: Voice notes per step were optional — families who preferred written-only recipes could ignore them without losing structure.
+text: Voice notes per step were optional, families who preferred written-only recipes could ignore them without losing structure.
 
 ## callout
 
@@ -186,7 +186,7 @@ body: Beta cooks completed recipes with fewer mid-session exits when steps were 
 
 # outcome
 
-eyebrow: 06 — Outcome
+eyebrow: 06 · Outcome
 title: What shipped
 titleEm: in twelve weeks
 
@@ -194,7 +194,7 @@ titleEm: in twelve weeks
 
 - value: "5"
   label: Beta families
-  body: Five families imported and cooked recipes across the full loop — import,
+  body: Five families imported and cooked recipes across the full loop, import,
     browse, cook, share.
 - value: 120+
   label: Recipes imported
@@ -211,7 +211,7 @@ Shipped responsive web app with share links for relatives without accounts and p
 
 ## reflections
 
-- Investing in import flows (photo of handwritten card → draft) would be the next bet — manual entry slowed early adoption.
+- Investing in import flows (photo of handwritten card → draft) would be the next bet, manual entry slowed early adoption.
 - I'd prototype print layouts earlier; families asked for physical cards sooner than expected.
 - The designer format gave room to show both IA shifts and cook-mode rationale in one narrative arc.
 
@@ -219,4 +219,4 @@ Shipped responsive web app with share links for relatives without accounts and p
 
 label: The one thing
 title: Lineage is a feature
-body: Recipes are social objects. Who taught whom mattered as much as ingredients — designing for lineage kept the product feeling like family, not a database.
+body: Recipes are social objects. Who taught whom mattered as much as ingredients, designing for lineage kept the product feeling like family, not a database.

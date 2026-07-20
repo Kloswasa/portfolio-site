@@ -19,7 +19,7 @@ const flomaxCaseStudy = {
     "meta": [
       {
         "label": "Client",
-        "value": "FloM — air filter manufacturer"
+        "value": "FloM, air filter manufacturer"
       },
       {
         "label": "Role",
@@ -37,27 +37,27 @@ const flomaxCaseStudy = {
   },
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "A new audience,",
       "titleEm": "same brand.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "FloM manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down — the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
+            "FloM manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down, the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
           ]
         }
       ]
     },
     "work": {
-      "eyebrow": "02 — Work",
+      "eyebrow": "02 · Work",
       "title": "Playful inside",
       "titleEm": "fixed rules.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as FloM at a glance, while the flexible layer — illustration, colour handling, and the energy of the layout — carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart."
+            "I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as FloM at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart."
           ]
         },
         {
@@ -89,7 +89,7 @@ const flomaxCaseStudy = {
       ]
     },
     "outcome": {
-      "eyebrow": "03 — Outcome",
+      "eyebrow": "03 · Outcome",
       "title": "One pack, two",
       "titleEm": "people to convince.",
       "blocks": [
@@ -111,7 +111,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Designing for a user and a buyer who want different things from the same object — without fragmenting the product into two — is a judgement I make constantly in digital product work, where the person using an interface and the person deciding to adopt it are rarely the same."
+            "Designing for a user and a buyer who want different things from the same object, without fragmenting the product into two, is a judgement I make constantly in digital product work, where the person using an interface and the person deciding to adopt it are rarely the same."
           ]
         }
       ]

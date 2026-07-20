@@ -152,7 +152,7 @@ Each section starts with:
 ```markdown
 # brief
 
-eyebrow: 01 — Brief
+eyebrow: 01 · Brief
 title: Section title
 titleEm: optional italic line
 ```

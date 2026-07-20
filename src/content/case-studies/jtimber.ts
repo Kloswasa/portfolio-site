@@ -11,7 +11,7 @@ const jtimberCaseStudy = {
     "eyebrow": "005 · Graphic Design · Flooring catalogue & 3D assets",
     "titleLine1": "JTimber",
     "titleLine2": "Flooring Catalogue",
-    "summary": "A 48-page flooring catalogue for a wood styling company, covering products, patterns, and services — taken from 3D rendered assets and retouching through layout to coordinated print publication.",
+    "summary": "A 48-page flooring catalogue for a wood styling company, covering products, patterns, and services, taken from 3D rendered assets and retouching through layout to coordinated print publication.",
     "image": {
       "src": "/projects/jtimber/cover.png",
       "alt": "The Timber flooring catalogue open to a spread showing wood floor colour options"
@@ -19,7 +19,7 @@ const jtimberCaseStudy = {
     "meta": [
       {
         "label": "Client",
-        "value": "JTimber — wood flooring & styling company"
+        "value": "JTimber, wood flooring & styling company"
       },
       {
         "label": "Role",
@@ -37,27 +37,27 @@ const jtimberCaseStudy = {
   },
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "Selling a material",
       "titleEm": "on paper.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Timber needed a catalogue that worked as the company's complete reference document. It had to carry the flooring range — plank types and sizes, colour availability per wood type, laying patterns and samples of each — alongside the services around it, from consultation and CNC custom work to automotive flooring, plus a portfolio of completed projects. Five kinds of content, each behaving differently on a page. Underneath all of it sat one hard constraint: a customer chooses a floor colour from these pages, so a colour that prints wrong is not a design flaw, it is a customer receiving a floor they did not choose."
+            "Timber needed a catalogue that worked as the company's complete reference document. It had to carry the flooring range, plank types and sizes, colour availability per wood type, laying patterns and samples of each, alongside the services around it, from consultation and CNC custom work to automotive flooring, plus a portfolio of completed projects. Five kinds of content, each behaving differently on a page. Underneath all of it sat one hard constraint: a customer chooses a floor colour from these pages, so a colour that prints wrong is not a design flaw, it is a customer receiving a floor they did not choose."
           ]
         }
       ]
     },
     "work": {
-      "eyebrow": "02 — Work",
+      "eyebrow": "02 · Work",
       "title": "From render to",
       "titleEm": "printed page.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "I built the assets rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing — the only way a set of swatches is honestly comparable — and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed. The layout then had to hold all five content types together: specification tables, colour ranges, pattern samples, service pages, and portfolio work each want a different page logic, but the reader moves between them continuously, so the catalogue needed one visual system flexible enough to carry all of it without fragmenting. Coordinating with the external printer was its own discipline: colour, resolution, and bleed had to be right before the files left, because nothing is fixable afterwards."
+            "I built the assets rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing, the only way a set of swatches is honestly comparable, and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed. The layout then had to hold all five content types together: specification tables, colour ranges, pattern samples, service pages, and portfolio work each want a different page logic, but the reader moves between them continuously, so the catalogue needed one visual system flexible enough to carry all of it without fragmenting. Coordinating with the external printer was its own discipline: colour, resolution, and bleed had to be right before the files left, because nothing is fixable afterwards."
           ]
         },
         {
@@ -89,7 +89,7 @@ const jtimberCaseStudy = {
       ]
     },
     "outcome": {
-      "eyebrow": "03 — Outcome",
+      "eyebrow": "03 · Outcome",
       "title": "A range that",
       "titleEm": "sells itself.",
       "blocks": [
@@ -111,7 +111,7 @@ const jtimberCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Owning something all the way to print — where colour has to be right the first time and every decision is final once the file leaves — built a discipline about shipping that I carry into digital work, even where a fix is always possible."
+            "Owning something all the way to print, where colour has to be right the first time and every decision is final once the file leaves, built a discipline about shipping that I carry into digital work, even where a fix is always possible."
           ]
         }
       ]

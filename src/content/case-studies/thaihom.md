@@ -6,7 +6,7 @@ hero:
   eyebrow: 011 · Graphic design · Editorial
   titleLine1: Thai
   titleLine2: Hom
-  summary: An infographic book showcasing ingredients that represent Thai aroma —
+  summary: An infographic book showcasing ingredients that represent Thai aroma,
     every illustration and graphic element authored by hand for a cohesive
     sensory narrative.
   meta:
@@ -22,13 +22,13 @@ hero:
 
 # context
 
-eyebrow: 01 — Context
+eyebrow: 01 · Context
 title: Smell is hard
 titleEm: to show.
 
 ## prose
 
-Thai H asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients — lemongrass, kaffir lime, galangal, jasmine, coconut, and others — that define Thai fragrance culture.
+Thai H asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients, lemongrass, kaffir lime, galangal, jasmine, coconut, and others, that define Thai fragrance culture.
 
 Every spread is original: no stock illustration, no borrowed icons. The goal was a cohesive editorial object where graphic rhythm and hand-drawn detail carry the sensory story.
 
@@ -46,7 +46,7 @@ Every spread is original: no stock illustration, no borrowed icons. The goal was
 
 # work
 
-eyebrow: 02 — Work
+eyebrow: 02 · Work
 title: Ingredient as
 titleEm: visual character.
 
@@ -58,7 +58,7 @@ Each ingredient received a profile spread: botanical illustration, aroma note di
 
 - num: "01"
   title: Research + outline
-  body: Eighteen ingredients selected for aroma significance — grouped by scent
+  body: Eighteen ingredients selected for aroma significance, grouped by scent
     family.
 - num: "02"
   title: Illustration pass
@@ -71,7 +71,7 @@ Each ingredient received a profile spread: botanical illustration, aroma note di
 
 # outcome
 
-eyebrow: 03 — Outcome
+eyebrow: 03 · Outcome
 title: A book you
 titleEm: can almost smell.
 
@@ -79,11 +79,11 @@ titleEm: can almost smell.
 
 - value: "32"
   label: Finished pages
-  body: Print-ready PDF with bleed — bound proof produced for academic review.
+  body: Print-ready PDF with bleed, bound proof produced for academic review.
 - value: "18"
   label: Original profiles
-  body: Full illustration and infographic treatment per ingredient — no stock assets.
+  body: Full illustration and infographic treatment per ingredient, no stock assets.
 
 ## prose
 
-Thai H is the most illustration-heavy piece in my graphic portfolio — proof that sensory topics reward slow, authored visuals over fast template assembly.
+Thai H is the most illustration-heavy piece in my graphic portfolio, proof that sensory topics reward slow, authored visuals over fast template assembly.

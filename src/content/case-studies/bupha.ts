@@ -11,7 +11,7 @@ const buphaCaseStudy = {
     "eyebrow": "009 · Graphic design · Illustration",
     "titleLine1": "Bupha",
     "titleLine2": "Line",
-    "summary": "Graphic design and illustration for a local business's friendlier sub-brand — a separate product line that invites approachability without abandoning the parent shop's credibility.",
+    "summary": "Graphic design and illustration for a local business's friendlier sub-brand, a separate product line that invites approachability without abandoning the parent shop's credibility.",
     "image": {
       "src": "/projects/bupha/bupha-cover.png",
       "alt": "Bupha cover image"
@@ -38,15 +38,15 @@ const buphaCaseStudy = {
   "approachLabel": "The Decision",
   "sections": {
     "context": {
-      "eyebrow": "01 — Context",
+      "eyebrow": "01 · Context",
       "title": "Friendly enough",
       "titleEm": "to try.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "A established local business wanted a secondary product line aimed at younger customers and gift buyers — same quality, warmer personality. The parent brand reads formal; Bhup needed to feel approachable from three metres on a market stall.",
-            "Scope covered label graphics, a small illustration set for three products, and a simple brand mark extension — not a full rebrand."
+            "A established local business wanted a secondary product line aimed at younger customers and gift buyers, same quality, warmer personality. The parent brand reads formal; Bhup needed to feel approachable from three metres on a market stall.",
+            "Scope covered label graphics, a small illustration set for three products, and a simple brand mark extension, not a full rebrand."
           ]
         },
         {
@@ -72,33 +72,33 @@ const buphaCaseStudy = {
       ]
     },
     "approach": {
-      "eyebrow": "02 — The Decision",
+      "eyebrow": "02 · The Decision",
       "title": "Hand-drawn over",
       "titleEm": "geometric clean.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Geometric minimalism matched the parent brand too closely — Bhup would have disappeared. Loose hand-drawn illustration with rounded type won stall-side tests: warmer, more giftable, still legible at small label size."
+            "Geometric minimalism matched the parent brand too closely, Bhup would have disappeared. Loose hand-drawn illustration with rounded type won stall-side tests: warmer, more giftable, still legible at small label size."
           ]
         },
         {
           "type": "callout",
           "label": "Tradeoff",
           "title": "Warmth vs. clutter",
-          "body": "Illustration density capped at one hero motif per label — charm without losing product name and price at a glance."
+          "body": "Illustration density capped at one hero motif per label, charm without losing product name and price at a glance."
         }
       ]
     },
     "work": {
-      "eyebrow": "03 — Work",
+      "eyebrow": "03 · Work",
       "title": "Labels and",
       "titleEm": "motif library.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Six illustration motifs — ingredients, local landmarks, gift moments — mix across three product labels. Shared border treatment and rounded sans type unify the line without repeating the same hero image."
+            "Six illustration motifs, ingredients, local landmarks, gift moments, mix across three product labels. Shared border treatment and rounded sans type unify the line without repeating the same hero image."
           ]
         },
         {
@@ -117,14 +117,14 @@ const buphaCaseStudy = {
             {
               "num": "03",
               "title": "Stall mock",
-              "body": "Labels tested on product jars at arm's length — readability pass before print."
+              "body": "Labels tested on product jars at arm's length, readability pass before print."
             }
           ]
         }
       ]
     },
     "outcome": {
-      "eyebrow": "04 — Outcome",
+      "eyebrow": "04 · Outcome",
       "title": "Giftable",
       "titleEm": "sub-brand.",
       "blocks": [
@@ -139,14 +139,14 @@ const buphaCaseStudy = {
             {
               "value": "✓",
               "label": "Client launch",
-              "body": "Bhup line debuted at weekend market — illustration style cited as top purchase driver in informal feedback."
+              "body": "Bhup line debuted at weekend market, illustration style cited as top purchase driver in informal feedback."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "A small scope project that proved how much personality illustration adds when the parent brand can't flex — Bhup feels like a welcome, not a compromise."
+            "A small scope project that proved how much personality illustration adds when the parent brand can't flex, Bhup feels like a welcome, not a compromise."
           ]
         }
       ]

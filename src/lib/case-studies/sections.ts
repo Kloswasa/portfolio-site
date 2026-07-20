@@ -63,7 +63,7 @@ export function getMinorSectionEyebrows(
   return Object.fromEntries(
     sectionOrder.map((id, index) => [
       id,
-      `${String(index + 1).padStart(2, "0")} — ${getMinorSectionLabel(id, approachLabel)}`,
+      `${String(index + 1).padStart(2, "0")} · ${getMinorSectionLabel(id, approachLabel)}`,
     ]),
   ) as Record<MinorSectionId, string>;
 }

@@ -21,17 +21,17 @@ hero:
       value: Signature dessert form + bespoke fork
 ---
 # context
-eyebrow: 01 — Context
+eyebrow: 01 · Context
 title: One place, two
 titleEm: objects.
 ## prose
-A fine dessert bar opening in Korat wanted a signature dessert and its own fork — objects that felt native to where it stood, not generic fine-dining props. The constraint: both had to survive real service. The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place.
+A fine dessert bar opening in Korat wanted a signature dessert and its own fork, objects that felt native to where it stood, not generic fine-dining props. The constraint: both had to survive real service. The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place.
 # work
-eyebrow: 02 — Work
+eyebrow: 02 · Work
 title: Heritage, translated
 titleEm: into form.
 ## prose
-I worked from two fixed sources, one per object. The fork's form is drawn from the client's own traditional Thai architecture; the dessert's silhouette from Korat's old currency. The design decision that held the piece together was pairing them — brand heritage in the tool, civic heritage on the plate — so the two objects read as a matched set rather than a dessert with cutlery beside it. Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic.
+I worked from two fixed sources, one per object. The fork's form is drawn from the client's own traditional Thai architecture; the dessert's silhouette from Korat's old currency. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it. Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic.
 ## process
 - num: "01"
   title: Source
@@ -47,7 +47,7 @@ src: /projects/signature-dessert-fork/final.png
 alt: The bespoke fork resting beside the plated signature dessert
 caption: Fork drawn from Thai architecture; dessert drawn from Korat's old currency.
 # outcome
-eyebrow: 03 — Outcome
+eyebrow: 03 · Outcome
 title: The result
 titleEm: on the plate.
 ## outcomes
@@ -58,4 +58,4 @@ titleEm: on the plate.
   label: Signature tableware
   body: Both dessert and fork served as the bar's signature pairing after opening.
 ## prose
-Translating fixed heritage — architecture, Korat's currency — into new physical objects is the same move I make now, turning brand and context into a digital product interface.
+Translating fixed heritage, architecture, Korat's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface.

@@ -80,7 +80,7 @@ export const projects: Project[] = [
     slug: "homhuan",
     title: "HomHuan",
     description:
-      "Thai heritage translated into a modern home fragrance set — solo capstone industrial design project.",
+      "Thai heritage translated into a modern home fragrance set, solo capstone industrial design project.",
     technologies: ["Industrial design", "Craftsmanship", "Branding"],
     tone: "primary",
     workTab: "industrial",
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     slug: "thai-hom",
     title: "Thai Hom",
     description:
-      "Infographic book on Thai aroma ingredients — all illustration and graphics authored by hand.",
+      "Infographic book on Thai aroma ingredients, all illustration and graphics authored by hand.",
     technologies: ["Illustration", "Editorial", "Infographic"],
     tone: "secondary",
     workTab: "graphic",
