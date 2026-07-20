@@ -135,8 +135,6 @@ export const projects: Project[] = [
     yearLabel: "2021 · Industrial",
     industry: "Food & beverage",
     coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
-    confidential: true,
-    lockStatus: "documentation",
   },
   {
     id: 6,
@@ -151,8 +149,6 @@ export const projects: Project[] = [
     yearLabel: "2021 · Industrial",
     industry: "Retail",
     coverImage: { src: "/projects/kuendee/kuendee-cover.png", alt: "Kuendee Booth cover image" },
-    confidential: true,
-    lockStatus: "documentation",
   },
   {
     id: 7,
@@ -167,8 +163,6 @@ export const projects: Project[] = [
     yearLabel: "2021 · Graphic",
     industry: "Consumer health",
     coverImage: { src: "/projects/flomax/flomax-cover.png", alt: "Flomax Packaging cover image" },
-    confidential: true,
-    lockStatus: "documentation",
   },
   {
     id: 8,
@@ -183,9 +177,6 @@ export const projects: Project[] = [
     yearLabel: "2022 · Packaging",
     industry: "Beauty",
     coverImage: { src: "/projects/bhae/bhaesaj-cover.png", alt: "Bhaesaj Skincare cover image" },
-
-    confidential: false,
-    lockStatus: "documentation",
   },
   {
     id: 9,
@@ -201,8 +192,6 @@ export const projects: Project[] = [
     industry: "Building materials",
     coverImage: { src: "/projects/jtimber/jtimber-cover.png", alt: "JTimber Catalog cover image" },
     caseStudySlug: "jtimber",
-    confidential: true,
-    lockStatus: "documentation",
   },
   {
     id: 10,
