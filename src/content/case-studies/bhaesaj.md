@@ -1,0 +1,62 @@
+---
+kind: minor
+slug: bhaesaj
+approachLabel: The Direction
+hero:
+  breadcrumb: Bhaesaj Skincare
+  eyebrow: 008 · Packaging design · Beauty
+  titleLine1: Bhaesaj
+  titleLine2: Lip Balm Packaging
+  summary: A packaging design exploration for Bhae, a traditional lip balm made since 1989, translating an established art direction into decisions about shape, surface, and function.
+  meta:
+    - label: Client
+      value: Heritage skincare · Thailand
+    - label: Role
+      value: Packaging design
+    - label: Timeline
+      value: 5 weeks
+    - label: Deliverable
+      value: Packaging design + dieline
+---
+
+# context
+eyebrow: 01 — Context
+title: A direction meant
+titleEm: for something else.
+## prose
+Bhae is a traditional lip balm that has been made since 1989, with a product form customers already recognise. The brief I received was a visual direction board the team had developed for the brand's graphic work — a language of mood, not a packaging spec. It said nothing about what the object should be. Translating it into a physical product meant deciding for myself what that direction implied for shape, surface, and function, while keeping the familiar enough that thirty years of recognition survived the update.
+# work
+eyebrow: 02 — Work
+title: A mood board into
+titleEm: an object.
+## prose
+A visual direction does not tell you how thick a wall should be, how a lid should feel closing, or which surface finish will read as traditional rather than cheap. Those decisions were mine to make, and I worked them out through a deliberate escalation of fidelity — pencil sketches first, exploring shape quickly and cheaply while the ideas were still disposable, then a surface and material board to fix the tactile language the graphic direction had only implied, then 3D renders to test the resolved forms as real volumes. Each stage answered a different question, and moving up in fidelity only once the previous question was settled kept the exploration honest rather than decorative.
+## process
+- num: "01"
+  title: Interpret
+  body: Reading a 2D brand direction for what it implies about a physical object.
+- num: "02"
+  title: Sketch
+  body: Hand sketches exploring shape and proportion at low cost, before committing.
+- num: "03"
+  title: Resolve
+  body: Fixing surface and material, then rendering the strongest directions as real volumes.
+## image
+src: /projects/bhae/final.png
+alt: 3D renders of the resolved Bhae lip balm packaging concepts
+caption: From pencil to render — each stage resolving a different question.
+# outcome
+eyebrow: 03 — Outcome
+title: A direction made
+titleEm: physical.
+## outcomes
+- value: "2D to 3D"
+  label: Direction extended into object
+  body: A graphic brand language interpreted into shape, surface, and function with no packaging spec to work from.
+- value: "1989"
+  label: Heritage held onto
+  body: A recognisable traditional product explored anew without discarding what made it familiar.
+## prose
+Working up from rough sketches to resolved renders — spending effort only when the cheaper question is settled — is the same discipline behind moving from wireframe to prototype in digital product design.
+
+

@@ -1,0 +1,61 @@
+---
+kind: minor
+slug: flomax
+hero:
+  breadcrumb: FloM
+  eyebrow: "003 · Graphic Design · Kids mask packaging"
+  titleLine1: FloM
+  titleLine2: Kids Mask Packaging
+  summary: An alternative graphic style for FloM's kids face mask, designed to appeal to children without breaking the brand identity built for its adult range.
+  image:
+    src: /projects/flom/cover.png
+    alt: FloM kids face mask packaging showing the alternative graphic style
+  meta:
+    - label: Client
+      value: FloM — air filter manufacturer
+    - label: Role
+      value: Graphic design, packaging design
+    - label: Timeline
+      value: "2021"
+    - label: Deliverable
+      value: Packaging graphic style for the kids mask
+---
+# context
+eyebrow: 01 — Context
+title: A new audience,
+titleEm: same brand.
+## prose
+FloM manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down — the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust.
+# work
+eyebrow: 02 — Work
+title: Playful inside
+titleEm: fixed rules.
+## prose
+I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as FloM at a glance, while the flexible layer — illustration, colour handling, and the energy of the layout — carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart.
+## process
+- num: "01"
+  title: Audit
+  body: Separating the adult identity's non-negotiable elements from the flexible ones.
+- num: "02"
+  title: Shift
+  body: Developing a playful register that appeals to children while keeping parental trust.
+- num: "03"
+  title: Resolve
+  body: Holding the pack against the adult range so the two read as one family.
+## image
+src: /projects/flom/final.png
+alt: The FloM kids mask packaging shown alongside the adult range
+caption: A register built for children, still recognisably the same filtration brand.
+# outcome
+eyebrow: 03 — Outcome
+title: One pack, two
+titleEm: people to convince.
+## outcomes
+- value: "Two audiences"
+  label: Child appeal, parent trust
+  body: Packaging that speaks to the child wearing the mask and the parent buying it, in one design.
+- value: "Within identity"
+  label: No rules broken
+  body: Tone shifted through the flexible layer while the brand's fixed elements stayed intact.
+## prose
+Designing for a user and a buyer who want different things from the same object — without fragmenting the product into two — is a judgement I make constantly in digital product work, where the person using an interface and the person deciding to adopt it are rarely the same.

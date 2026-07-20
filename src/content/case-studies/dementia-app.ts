@@ -19,19 +19,19 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "2024 Team evaluation, designed and ran the evaluation. 2026 Solo re-analysis, resynthesise the findings into a redesign brief."
+        "value": "2024 — designed and ran the team evaluation. 2026 — solo re-analysis into a redesign brief."
       },
       {
         "label": "Team",
-        "value": "Team of four in the 2024 evaluation. Solo for the 2026 re-analysis."
+        "value": "Team of four in 2024. Solo for the 2026 re-analysis."
       },
       {
         "label": "Duration",
-        "value": "Evaluation across 6 weeks in 2024. Re-analysis in 2026."
+        "value": "6-week evaluation in 2024. Re-analysis in 2026."
       },
       {
         "label": "Status",
-        "value": "Evaluation complete. Re-analysis complete. Refined 2026 redesign in progress."
+        "value": "Evaluation complete. Re-analysis complete. 2026 redesign in progress."
       }
     ]
   },
@@ -44,8 +44,8 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Many caregivers don't live with the person they care for. The PwD is at home; the caregiver is at their own house, or at work. Background research provided for the project described a recurring pattern: caregivers leaving work mid-shift to check in when something felt wrong, and carrying a low background stress on the days nothing happened at all. The not-knowing was its own cost.",
-            "In 2024, my team ran a usability evaluation of a caregiver monitoring prototype. In 2026, I returned to the data alone and re-analysed it. This case study documents both passes."
+            "Many caregivers don't live with the person they care for. The person with dementia is home; the caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.",
+            "In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone — and it reframed everything. This case study documents both passes."
           ]
         },
         {
@@ -78,26 +78,51 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The prototype was a mobile app for caregivers. Looking back, I'd describe the core intent as a five-second promise: within seconds of opening the app, the caregiver should know where the PwD is. Everything else served that. GPS tracking pulled live location from a personal device carried by the PwD. Geofencing let the caregiver draw safe and dangerous zones on a map. Alerts fired when the PwD crossed into a dangerous zone. Emergency contacts and a home camera feed sat alongside as supporting features."
+            "The prototype was a mobile app built on a single promise — call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it."
+          ]
+        },
+        {
+          "type": "twoCol",
+          "items": [
+            {
+              "label": "GPS tracking",
+              "body": "Live location from a personal device carried by the PwD."
+            },
+            {
+              "label": "Geofencing",
+              "body": "The caregiver draws safe and dangerous zones on a map."
+            },
+            {
+              "label": "Alerts",
+              "body": "Fire the moment the PwD crosses into a dangerous zone."
+            },
+            {
+              "label": "Emergency contacts",
+              "body": "One tap to the people who can actually respond."
+            },
+            {
+              "label": "Home camera",
+              "body": "A live feed for a direct look when the status isn't enough."
+            }
           ]
         },
         {
           "type": "image",
           "src": "/projects/dementia-app/Dementia-screen-home.png",
           "alt": "The prototype's home screen — David's status card at the top, four core feature tiles below",
-          "caption": "The home screen carried the five-second promise. In principle. The evaluation would test whether it delivered."
+          "caption": "The status card sits above the fold, so the caregiver's first glance answers \"is everything okay\" before anything else loads."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "The project was a team of four. Research, low-fidelity concepts, and prototyping decisions were shared across the group. In the final week, I took on some of the alignment work to unify our high-fidelity screens under a single system, using iOS as the base. My primary contribution was the evaluation itself: I designed the eight tasks, wrote the pre- and post-evaluation questionnaires, ran the participant sessions and interviews, and authored the final report."
+            "The project was a team of four; research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine — I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
           ]
         },
         {
           "type": "image",
           "src": "/projects/dementia-caregiver/team-figma-cover.png",
           "alt": "The team's unified high-fidelity Figma prototype, cover frame",
-          "caption": "The team's unified high-fidelity prototype."
+          "caption": "One iOS-based system, unified in the final week, so the evaluation tested a coherent product rather than four people's separate screens."
         }
       ]
     },
@@ -109,15 +134,40 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The evaluation covered all eight primary features of the prototype, tested against target values set in advance. The unit required this, and the reason mattered: for a safety-critical application, \"success\" can't be defined after the fact. If the caregiver can't check the PwD's location in under fifteen seconds, or can't set a geofence without needing help, calling those tasks \"usable\" in retrospect is meaningless. The targets forced the evaluation to commit to a definition of success before the participants arrived.",
-            "The methodology was mixed-methods, also a unit requirement: task performance measures plus a System Usability Scale score plus semi-structured post-task interviews. The structure (which tasks to run, how to phrase the scenarios, what to ask in the interviews) was ours. We ran four participants remotely over video calls, with participants sharing their screen while working through the Figma prototype. Split-screen setup: prototype on one side, task instructions on the other."
+            "The evaluation tested all eight features against targets set in advance. For a safety-critical app, success can't be defined after the fact: if a caregiver can't check location in under fifteen seconds, or set a geofence without help, calling those tasks \"usable\" in hindsight means nothing. The targets forced a definition of success before a single participant arrived."
+          ]
+        },
+        {
+          "type": "process",
+          "items": [
+            {
+              "num": "01",
+              "title": "Task performance",
+              "body": "Eight tasks, each with a pre-set target for completion, time, and difficulty."
+            },
+            {
+              "num": "02",
+              "title": "SUS",
+              "body": "A System Usability Scale score for the prototype overall."
+            },
+            {
+              "num": "03",
+              "title": "Interviews",
+              "body": "Semi-structured and post-task, to explain what the numbers couldn't."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "Four participants worked the Figma prototype remotely, screen-shared. Eight tasks ran against the targets. Three are worth watching."
           ]
         },
         {
           "type": "image",
           "src": "/projects/dementia-app/Dementia-evaluation.png",
           "alt": "A remote evaluation session, split screen with prototype on one side and task instructions on the other",
-          "caption": "Remote session in progress. Prototype on one side, task instructions on the other. Participant appearance reducted in white."
+          "caption": "Remote, split-screen sessions — prototype one side, task script the other — so participants worked naturally while their misses were captured live."
         }
       ]
     },
@@ -128,36 +178,32 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The SUS was 81.5. Six of the eight tasks passed target on completion, most within their unassisted time budget. Three of four participants said they'd recommend the app to a friend. On the evaluation's own terms, the prototype did well. But three of the eight tasks are worth looking at closely: one that passed cleanly, one that failed on the numbers, and one that sits between them.",
-            "**Task 1 — check the PwD's current location.** Target: 90% unassisted completion in under 15 seconds, difficulty rating below 2. Actual: 100% unassisted, average 0.06 minutes, every participant rated it 1. On paper, the strongest result in the evaluation. All four participants found \"David's status: At Home\" on the home screen and read it in a glance. The task was designed as a warm-up. It behaved like one.",
-            "**Task 4 — set Queen's Park as a new dangerous zone at the maximum radius.** Target: over 90% unassisted completion in under two minutes, difficulty below 2. Actual: 50% unassisted, average 1.75 errors, difficulty ratings scattered from 1 to 4. Two problems accounted for most of the failure. Participants missed the Safe area / Dangerous area toggle at the top of the map screen. It read as a header, not a choice. And once they were on the right screen, they didn't understand that setting the radius required dragging the map. One participant spent over two minutes on the task and rated it 4/5."
+            "The SUS was 81.5; six of eight tasks passed target; three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching — one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study."
           ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/dementia-app/target-vs-actual.svg",
+          "alt": "A comparison of tasks 1, 4 and 8 showing what the metric said against what the participant actually did",
+          "caption": "Against target, Task 1 clears and Task 4 fails outright — but Task 8 clears the metric while hiding a 1.27-minute search beneath it."
         },
         {
           "type": "video",
           "src": "/projects/dementia-caregiver/task-4-danger-zone.mp4",
           "poster": "/projects/dementia-caregiver/task-4-danger-zone-poster.png",
           "alt": "A participant setting up the danger zone task, missing the Safe/Dangerous toggle at the top of the map",
-          "caption": "The Safe area / Dangerous area toggle read as a header, not a choice. Half the participants missed it. One spent over two minutes on the task."
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "**Task 8 — review a 2:56 PM alert about the PwD and take action.** Target: over 90% unassisted completion in under two minutes, difficulty below 2. Actual: 75% unassisted, three of four participants completing without help. Difficulty ratings averaged 1.75. The participants who succeeded largely called it easy. On the metrics, this was another pass.",
-            "But P4 is worth watching more closely. She rated the task 1 out of 5 for difficulty. She also spent 1.27 minutes on it. She browsed the bottom menu bar first, moved through several sections looking for the alert, and only then went to the notification centre, where she immediately noticed the alert tab sitting beside the notification toggle. She got there. She said it was easy. The stopwatch said something different."
-          ]
+          "caption": "The Safe / Dangerous toggle read as a header, not a choice, so half the participants built the wrong kind of zone before noticing."
         },
         {
           "type": "image",
           "src": "/projects/dementia-caregiver/task-8-notification-centre.png",
           "alt": "The notification centre with two tabs at the top — Notification on the left, Alert on the right",
-          "caption": "The alert tab, once P4 found the notification centre, was obvious. The problem was expecting to find it there in the first place."
+          "caption": "The alert tab was obvious once found; the failure was expecting it here at all, so P4 searched the menu bar first."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "The other five tasks were less revealing on their own. Task 2 (setting a safe zone) and Task 7 (checking activity history) had one participant each who needed help, the same discoverability patterns as Task 4 on a smaller scale. Tasks 3 (camera), 5 (emergency contact), and 6 (battery status) passed cleanly, with the same shape as Task 1.",
-            "The evaluation ran clean. The numbers held up. The team submitted the report and the unit closed. A year later I came back to the data with different questions."
+            "The other five tasks echoed these at smaller scale — two shared Task 4's discoverability problem, three passed as cleanly as Task 1."
           ]
         }
       ]
@@ -170,21 +216,31 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The evaluation was finished but the data wasn't. The numbers held up. SUS 81.5, six passes out of eight. But Task 8 kept coming back to me. A participant had rated it easy and taken 1.27 minutes to complete it. The metrics rewarded her for getting there. The behaviour told a different story. That gap was the thing I couldn't leave alone. When I started planning a redesign in 2026, the first thing I needed to know was whether Task 8 was an isolated case or the surface of something bigger. I came back to the raw data to find out."
+            "The evaluation was finished; the data wasn't. Task 8 kept coming back to me. The metrics answer one question — can the user do the thing — and Task 8 passed it: three of four completed it unassisted, P4 rated it easy."
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "But there's a second question the metrics never ask: does the user's confidence match reality. P4 said easy and spent 1.27 minutes finding the alert. In a low-stakes app that gap is minor friction. In an app whose whole promise is finding the person in seconds, it's the failure the numbers can't see."
           ]
         },
         {
           "type": "pullquote",
           "text": "One participant said the task was easy. She spent 1.27 minutes finding the alert.",
-          "source": "Observation from the 2024 evaluation"
+          "source": "Observation, 2024 evaluation"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "The 2024 evaluation measured what most usability evaluations measure: did the participant complete the task, how long did it take, how many errors along the way, how did they rate the difficulty. Those measures answer one question (can the user do the thing), and Task 8 passed that question. Three of four participants completed it unassisted. P4 rated it easy.",
-            "But there's a second question the metrics don't ask: does the user's confidence in the result match reality. P4 said the task was easy. She spent 1.27 minutes finding the alert. The gap between what she said and what she did is the whole problem. In a low-stakes app, that gap is a minor friction cost. In an app whose entire promise is find the PwD in seconds, that gap is the design failure the metrics couldn't see.",
-            "Once I had the reframe, the eight tasks started to look different. Task 8 wasn't a one-off. The same pattern repeated across the evaluation: a gap between what participants said or measured well on, and what actually happened. And when I grouped the tasks by the kind of gap, the eight scattered problems collapsed into three underlying causes."
+            "Once I had that lens, Task 8 stopped looking like a one-off. The same gap ran through the evaluation — and grouped by the kind of gap, eight scattered task problems collapsed into three root causes."
           ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/dementia-app/tasks-collapse.svg",
+          "alt": "Eight evaluation tasks grouped into three root causes, with Task 8 spanning two of them",
+          "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes — Task 8, which started it, spans two."
         },
         {
           "type": "findings",
@@ -193,19 +249,19 @@ const dementiaAppCaseStudy = {
               "num": "01",
               "label": "Status trust",
               "title": "Silent failure of critical status",
-              "body": "Tasks 1, 6, and 8 all passed on the metrics. All three had the same underlying risk. The interface let the caregiver form confidence about the PwD's location, the device's battery, or an alert's contents without confirming that confidence matched reality. A caregiver glances at \"At Home\" and moves on. The metric records success. The failure mode is that the caregiver doesn't know when to doubt what she sees."
+              "body": "Tasks 1, 6, and 8 all passed on the metrics, and all three let the caregiver form confidence about location, battery, or an alert without confirming it matched reality. The failure mode isn't a wrong answer — it's not knowing when to doubt a right-looking one."
             },
             {
               "num": "02",
               "label": "Geofencing",
               "title": "Dual-mode cognitive load in geofencing",
-              "body": "Tasks 2 and 4 both required participants to learn two unfamiliar things at once: the categorical distinction between safe and dangerous zones (a top-of-screen toggle that read as a header), and the spatial gesture of dragging to set radius (with no numeric confirmation). Stacking two new mental models onto a single flow was the shared failure."
+              "body": "Tasks 2 and 4 asked participants to learn two things at once: the safe / dangerous distinction (a toggle that read as a header) and the drag gesture to set radius (with no numeric confirmation). Two new mental models in one flow was the shared failure."
             },
             {
               "num": "03",
               "label": "Urgency",
               "title": "Urgency-mismatched flows",
-              "body": "Tasks 5 (emergency contact) and 8 (alert) were the two most time-critical flows in the app. Both were designed with the same visual weight and interaction pattern as ordinary settings screens. In a caregiver's actual use case (stressed, distracted, sometimes at work), friction that reads as minor on paper becomes the reason the app gets bypassed for a direct 000 call."
+              "body": "Tasks 5 and 8 were the most time-critical flows in the app, yet carried the visual weight of ordinary settings. For a stressed caregiver, that friction becomes the reason the app gets bypassed for a direct 000 call."
             }
           ]
         }
@@ -219,16 +275,30 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The 2024 phase produced a mixed-methods usability report: SUS 81.5, per-task target evaluations, severity-rated problem identification, and a written recommendation set. It was submitted, graded, and closed. The 2026 phase produced something the report didn't: a compact analytical brief. Three root causes, each grounded in specific tasks, each with a design implication clear enough to work from.",
-            "The three root causes have become the brief for the 2026 redesign I'm working on now."
+            "The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced what the report couldn't: a compact analytical brief — three root causes, each tied to specific tasks, each with a design implication clear enough to build from. Those three causes are the brief for the redesign I'm on now."
+          ]
+        },
+        {
+          "type": "outcomes",
+          "items": [
+            {
+              "value": "81.5",
+              "label": "SUS score",
+              "body": "The 2024 mixed-methods report was submitted, graded, and closed."
+            },
+            {
+              "value": "8 → 3",
+              "label": "Root causes",
+              "body": "Eight tasks were reframed into the three root causes that form the 2026 redesign brief."
+            }
           ]
         },
         {
           "type": "reflections",
           "items": [
-            "The 2024 evaluation was structurally rigorous but its sample was small. Four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise to real caregivers they need to be validated with users who actually live the problem. Rigour of method is not the same as rigour of sample.",
-            "Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck. It was the effect of distance. In future evaluations I want to build the \"come back later with different questions\" step into the process on purpose, not by accident.",
-            "The distinction I ended up drawing (between whether the user can do the thing and whether their confidence matches reality) isn't specific to this app. Any interface with real-world stakes benefits from asking both. This is the design lens I take forward from the project."
+            "The 2024 evaluation was rigorous in method but small in sample: four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise they need users who actually live the problem. Rigour of method is not rigour of sample.",
+            "Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck; it was distance. In future evaluations I want to build the \"come back later with fresh questions\" step in on purpose, not by accident.",
+            "The distinction I ended up drawing — between whether the user can do the thing and whether their confidence matches reality — isn't specific to this app. Any interface with real-world stakes benefits from asking both. That's the lens I take forward."
           ]
         }
       ]

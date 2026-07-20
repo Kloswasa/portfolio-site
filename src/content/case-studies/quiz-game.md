@@ -60,10 +60,25 @@ source: Prospective Australia traveller, asked to name wildlife beyond koalas an
 
 ## prose
 
-    The pause before that answer lasted several seconds. 
-    Wildlife was named as Australia's signature in every interview from five people who are all planning a trip to Australia from overseas, but recognition stopped at two animals. 
-    The same interviews surfaced three further demands, including hidden destinations over famous ones like a destination that is unique and quiet, tips that read as practical rather than generic, and trivia that explained without exaggerating.
+    The pause before that answer lasted several seconds.
+    Wildlife was named as Australia's signature in every interview — five people, all planning a first trip from overseas — but recognition stopped at two animals.
 
+## findings
+
+- num: "01"
+  label: Destination
+  title: Hidden over famous
+  body: Travellers wanted somewhere unique and quiet, not the postcard landmark everyone can already name.
+- num: "02"
+  label: Tip
+  title: Practical, not generic
+  body: Advice had to read as something you'd use on the trip, not filler.
+- num: "03"
+  label: Trivia
+  title: Explains, doesn't exaggerate
+  body: Facts that grounded the place rather than hyping it — credibility over spectacle.
+
+## prose
 
 What I took out of it: a one-word type wasn't going to do the work. The differentiator was no longer in the quiz. It was in the curation.
 
@@ -112,18 +127,23 @@ titleEm: the animal
 
 ## prose
 
-**Every piece on the result page was curated for the type, not filled.** Three other pieces of content sat on each result page: a destination, a tip, and a trivia line.
+**Every piece on the result page was curated for the type, not filled.** Take the Curious Explorer (Platypus): three pieces of content sit alongside the animal, each shaped to the type rather than dropped in.
 
 ## video
 
 src: /projects/quiz-game/quiz-game-resultpage-video.mp4
 poster: /projects/quiz-game/quiz-game-video-resultpage-cover.png
 alt: A 12 second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia
-caption: The result page showcase, showing the animal, destination, tip, and trivia as a unified output.
+caption: Everything arrives on one screen, so the result reads as a single recommendation rather than a label with a list appended.
 
-## prose
-    Take the Curious Explorer (Platypus). The destination wasn't the postcard Opera House, it was the Architectural Tour: off-limits areas and vantage points the public doesn't reach, the kind of depth an investigative type actually wants.
-        The tip nudged how this type travels : "Zoom out regularly, don't get stuck in details that slow you down". The trivia grounded the trip: "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years". Every type got the same treatment.
+## twoCol
+
+- label: Destination
+  body: Not the postcard Opera House but the Architectural Tour — off-limits vantage points, the investigative depth this type actually travels for.
+- label: Tip
+  body: Written to how the type moves, not generic advice — "Zoom out regularly, don't get stuck in details that slow you down."
+- label: Trivia
+  body: Grounds the trip in place, not spectacle — "Aboriginal culture is the oldest continuous culture on Earth, at least 65,000 years."
 
 # build
 
@@ -163,11 +183,10 @@ titleEm: learned
 ## outcomes
 - value: "~10+"
   label: Users shipped
-  body: With mainly positive and and some constructive feedbacks.
+  body: Mostly positive, with some constructive feedback.
   
 ## prose
-    The wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only. 
-    With more time and resourcing, I'd bring in a cultural advisor to scale the matching responsibly, and revise the premade quiz questions that some users found inconsistent.
+    The wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only.
 
 ## pullquote
 
@@ -180,3 +199,5 @@ source: User who initially doubted her personality match, on reading her recomme
 - Wildlife carried identity; scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.
 - Cultural symbolism required traceable sources and honest scope limits. AI helped surface candidates, but shipping claims needed Indigenous-affiliated, institutional, or academic backing.
 - Two render strategies matched two moments. Preloading for the quiz; server-rendered results for the payoff page.
+- A fuller version needs more than one internship. Scaling the matching responsibly wants a cultural advisor co-authoring from the outset, and the premade quiz questions some users found inconsistent need a revision pass.
+

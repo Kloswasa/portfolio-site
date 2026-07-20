@@ -143,14 +143,17 @@ Components are organized in **layers** (generic → specific). A component may i
 
 ## Case study content (markdown)
 
-Major case studies can be authored as markdown and compiled to TypeScript:
+All case studies are authored as markdown and compiled to TypeScript:
 
 - **Edit:** `src/content/case-studies/<slug>.md` (YAML frontmatter for hero + metadata; `# section` headers; `## blockType` for content blocks)
 - **Generated (never edit by hand):** `src/content/case-studies/<slug>.ts`
 - **Commands:**
-  - `npm run content:quiz-game`
-  - `npm run content:block-showcase`
-  - `npm run content:homhuan`
+  - `npm run content:<slug>` — compile one case study
+  - `npm run content:all` — compile every registered case study
+
+Major studies use `brief → research → concept → craft → build → outcome`.
+
+Minor studies use `context → work → outcome`, with an optional `approach` section between `context` and `work`. Set optional `approachLabel` in frontmatter to customize that section’s navigation label.
 
 **Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imagePair`, `imageGrid`, `video`
 

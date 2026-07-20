@@ -1,8 +1,8 @@
 # Case study content blocks
 
-Shortlist of every `MajorContentBlock` you can use in `src/content/case-studies/<slug>.md`.
+Shortlist of every content block you can use in `src/content/case-studies/<slug>.md`.
 
-**Author:** edit the `.md` · **Generate:** `npm run content:<slug>` · **Live preview:** `/work/block-showcase`
+**Author:** edit the `.md` · **Generate one:** `npm run content:<slug>` · **Generate all:** `npm run content:all` · **Live preview:** `/work/block-showcase`
 
 ---
 
@@ -126,6 +126,26 @@ caption: Caption under the player
 Every major case study needs these six `#` sections, in order:
 
 `brief` → `research` → `concept` → `craft` → `build` → `outcome`
+
+Every minor case study needs these three sections:
+
+`context` → `work` → `outcome`
+
+A minor study can add an optional `approach` section:
+
+`context` → `approach` → `work` → `outcome`
+
+Set `approachLabel` in frontmatter when that section needs a label other than “Approach”:
+
+```markdown
+---
+kind: minor
+slug: example
+approachLabel: The Decision
+hero:
+  # ...
+---
+```
 
 Each section starts with:
 

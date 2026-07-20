@@ -182,7 +182,9 @@ export const projects: Project[] = [
     caseStudyKind: "minor",
     yearLabel: "2022 · Packaging",
     industry: "Beauty",
-    confidential: true,
+    coverImage: { src: "/projects/bhae/bhaesaj-cover.png", alt: "Bhaesaj Skincare cover image" },
+
+    confidential: false,
     lockStatus: "documentation",
   },
   {
@@ -270,7 +272,7 @@ export const projects: Project[] = [
       src: "/projects/quiz-game/quiz-game-cover.png",
       alt: "Block showcase cover placeholder",
     },
-    hidden: true,
+    hidden: false,
   },
 ];
 
