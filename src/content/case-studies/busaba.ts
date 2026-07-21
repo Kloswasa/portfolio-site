@@ -13,7 +13,7 @@ const busabaCaseStudy = {
     "titleLine2": "& Fork",
     "summary": "A signature plated dessert and a bespoke fork for a fine dessert bar in Korat, each form translated from a piece of local heritage.",
     "image": {
-      "src": "/projects/signature-dessert-fork/cover.png",
+      "src": "/projects/busaba/busaba-cover.png",
       "alt": "Signature dessert and bespoke fork styled together on a plate"
     },
     "meta": [
