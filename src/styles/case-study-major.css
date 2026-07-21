@@ -654,7 +654,7 @@
 .cs-major__image-grid-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-1);
+  gap: var(--spacing-4);
 }
 
 .cs-major__image-grid-img {
