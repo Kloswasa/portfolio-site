@@ -832,6 +832,19 @@
 }
 
 /* Reflections */
+.cs-major__reflections-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-sm);
+  font-style: italic;
+  color: var(--color-secondary-text);
+  margin: var(--spacing-12) 0 0;
+  line-height: 1.2;
+}
+
+.cs-major__reflections-title + .cs-major__reflections {
+  margin-top: var(--spacing-4);
+}
+
 .cs-major__reflections {
   list-style: none;
   margin: var(--spacing-8) 0;

@@ -263,6 +263,7 @@ const quizGameCaseStudy = {
         },
         {
           "type": "reflections",
+          "title": "Reflection",
           "items": [
             "The differentiator lived in curation, not quiz mechanics. Personality labels alone weren't enough; destinations, tips, and trivia had to answer what travellers actually asked for in research.",
             "Wildlife carried identity; scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.",

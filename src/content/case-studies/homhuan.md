@@ -209,6 +209,8 @@ The translation logic held; the objects did not all resolve. Seven products in t
 
 ## reflections
 
+title: Reflection
+
 - A translation can be conceptually sound and the object still unresolved: concept and object fail in different ways, at different stages.
 - Killing a flawed idea early is one kind of rigour. Catching what only appears once the thing is real is another.
 - The standard does not switch off when the concept is approved.

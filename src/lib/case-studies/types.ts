@@ -71,7 +71,7 @@ export type MajorContentBlock =
       type: "outcomes";
       items: { value: string; label: string; body: string }[];
     }
-  | { type: "reflections"; items: string[] }
+  | { type: "reflections"; title?: string; items: string[] }
   | {
       type: "image";
       src: string;

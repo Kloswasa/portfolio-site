@@ -220,6 +220,8 @@ The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced 
 
 ## reflections
 
+title: Reflection
+
 - The 2024 evaluation was rigorous in method but small in sample: four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise they need users who actually live the problem. Rigour of method is not rigour of sample.
 
 - Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck; it was distance. In future evaluations I want to build the "come back later with fresh questions" step in on purpose, not by accident.

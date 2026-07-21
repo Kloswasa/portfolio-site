@@ -14,7 +14,7 @@ interface WorkHeroProps {
 
 export function WorkHero({
   meta,
-  watermark = "\u201C Works \u201D",
+  watermark = "\u2018 Works \u2019",
   illustration = "wax-flower",
 }: WorkHeroProps) {
   return (

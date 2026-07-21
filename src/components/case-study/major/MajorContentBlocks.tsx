@@ -233,8 +233,12 @@ function Block({ block }: { block: MajorContentBlock }) {
 
     case "reflections":
       return (
-        <ol className="cs-major__reflections">
-          {block.items.map((text, i) => (
+        <>
+          {block.title ? (
+            <h3 className="cs-major__reflections-title">{block.title}</h3>
+          ) : null}
+          <ol className="cs-major__reflections">
+            {block.items.map((text, i) => (
             <li key={text.slice(0, 24)}>
               <span className="cs-major__reflection-num">
                 {String(i + 1).padStart(2, "0")}
@@ -243,8 +247,9 @@ function Block({ block }: { block: MajorContentBlock }) {
                 <InlineText text={text} />
               </span>
             </li>
-          ))}
-        </ol>
+            ))}
+          </ol>
+        </>
       );
 
     case "image":

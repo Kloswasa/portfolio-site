@@ -193,7 +193,10 @@ titleEm: learned
 text: That was where I wanna go!
 source: User who initially doubted her personality match, on reading her recommended destinations
 
+
 ## reflections
+
+title: Reflection
 
 - The differentiator lived in curation, not quiz mechanics. Personality labels alone weren't enough; destinations, tips, and trivia had to answer what travellers actually asked for in research.
 - Wildlife carried identity; scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.

@@ -353,9 +353,16 @@ function parseImageGridBlock(text: string): MajorContentBlock {
 }
 
 function parseReflectionsBlock(text: string): MajorContentBlock {
-  const items = text
-    .trim()
-    .split("\n")
+  const lines = text.trim().split("\n");
+
+  let title: string | undefined;
+  const titleMatch = lines[0]?.match(/^\s*title:\s*(.+)$/);
+  if (titleMatch) {
+    title = titleMatch[1].trim();
+    lines.shift();
+  }
+
+  const items = lines
     .map((line) => line.replace(/^\s*-\s+/, "").trim())
     .filter(Boolean);
 
@@ -363,7 +370,7 @@ function parseReflectionsBlock(text: string): MajorContentBlock {
     throw new Error("reflections blocks require at least one list item");
   }
 
-  return { type: "reflections", items };
+  return title ? { type: "reflections", title, items } : { type: "reflections", items };
 }
 
 function parseEmptyBlock(

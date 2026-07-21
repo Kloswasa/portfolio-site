@@ -14,7 +14,7 @@ import {
 
 const links = [
   { href: "/", label: "Home", num: "01" },
-  { href: "/work", label: "Work", num: "02" },
+  { href: "/work", label: "Works", num: "02" },
   { href: "/play", label: "Play", num: "03" },
   { href: "/about", label: "About", num: "04" },
 ];
