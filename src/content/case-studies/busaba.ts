@@ -11,7 +11,7 @@ const busabaCaseStudy = {
     "eyebrow": "001 · Industrial Design · Signature dessert + bespoke fork",
     "titleLine1": "Signature Dessert",
     "titleLine2": "& Fork",
-    "summary": "A signature plated dessert and a bespoke fork for a fine dessert bar in Korat, each form translated from a piece of local heritage.",
+    "summary": "A signature plated dessert and a bespoke fork for a fine dessert bar in Ayutthaya, each form translated from a piece of local heritage.",
     "image": {
       "src": "/projects/busaba/busaba-cover.png",
       "alt": "Signature dessert and bespoke fork styled together on a plate"
@@ -19,7 +19,7 @@ const busabaCaseStudy = {
     "meta": [
       {
         "label": "Client",
-        "value": "Fine dessert bar, Korat, Thailand"
+        "value": "Fine dessert bar, Ayutthaya, Thailand"
       },
       {
         "label": "Role",
@@ -44,7 +44,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "A fine dessert bar opening in Korat wanted a signature dessert and its own fork, objects that felt native to where it stood, not generic fine-dining props. The constraint: both had to survive real service. The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place."
+            "A fine dessert bar opening in Ayutthaya wanted a signature dessert and its own fork, objects that felt native to where it stood, not generic fine-dining props. The constraint: both had to survive real service. The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place."
           ]
         }
       ]
@@ -57,7 +57,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "I worked from two fixed sources, one per object. The fork's form is drawn from the client's own traditional Thai architecture; the dessert's silhouette from Korat's old currency. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it. Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic."
+            "I worked from two fixed sources, one per object. The fork's form is drawn from the client's own traditional Thai architecture; the dessert's silhouette from Ayutthaya's old currency. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it. Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic."
           ]
         },
         {
@@ -66,7 +66,7 @@ const busabaCaseStudy = {
             {
               "num": "01",
               "title": "Source",
-              "body": "Client's traditional Thai architecture; Korat's historic coinage."
+              "body": "Client's traditional Thai architecture; Ayutthaya's historic coinage."
             },
             {
               "num": "02",
@@ -84,7 +84,7 @@ const busabaCaseStudy = {
           "type": "image",
           "src": "/projects/signature-dessert-fork/final.png",
           "alt": "The bespoke fork resting beside the plated signature dessert",
-          "caption": "Fork drawn from Thai architecture; dessert drawn from Korat's old currency."
+          "caption": "Fork drawn from Thai architecture; dessert drawn from Ayutthaya's old currency."
         }
       ]
     },
@@ -111,7 +111,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Translating fixed heritage, architecture, Korat's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface."
+            "Translating fixed heritage, architecture, Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface."
           ]
         }
       ]

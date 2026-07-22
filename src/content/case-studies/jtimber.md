@@ -9,7 +9,7 @@ hero:
   summary: A 48-page flooring catalogue for a wood styling company, covering products, patterns, and services, taken from 3D rendered assets and retouching through layout to coordinated print publication.
   image:
     src: /projects/jtimber/jtimber-header.png
-    alt: The Timber flooring catalogue open to a spread showing wood floor colour options
+    alt: The Jtimber flooring catalogue open to a spread showing wood floor colour options
   meta:
     - label: Client
       value: JTimber, wood flooring & styling company
@@ -25,26 +25,28 @@ eyebrow: 01 · Context
 title: Selling a material
 titleEm: on paper.
 ## prose
-Timber needed a catalogue that worked as the company's complete reference document. It had to carry the flooring range, plank types and sizes, colour availability per wood type, laying patterns and samples of each, alongside the services around it, from consultation and CNC custom work to automotive flooring, plus a portfolio of completed projects. Five kinds of content, each behaving differently on a page. Underneath all of it sat one hard constraint: a customer chooses a floor colour from these pages, so a colour that prints wrong is not a design flaw, it is a customer receiving a floor they did not choose.
+JTimber needed a catalogue that worked as the company's complete reference document. It had to carry the flooring range, plank types and sizes, colour availability per wood type, laying patterns and samples of each, alongside the services around it, from consultation and CNC custom work to automotive flooring, plus a portfolio of completed projects. Five kinds of content, each behaving differently on a page. Underneath all of it sat one hard constraint: a customer chooses a floor colour from these pages, so a colour that prints wrong is not a design flaw, it is a customer receiving a floor they did not choose.
 # work
 eyebrow: 02 · Work
 title: From render to
 titleEm: printed page.
 ## prose
-I built the assets rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing, the only way a set of swatches is honestly comparable, and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed. The layout then had to hold all five content types together: specification tables, colour ranges, pattern samples, service pages, and portfolio work each want a different page logic, but the reader moves between them continuously, so the catalogue needed one visual system flexible enough to carry all of it without fragmenting. Coordinating with the external printer was its own discipline: colour, resolution, and bleed had to be right before the files left, because nothing is fixable afterwards.
+  I built the assets rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing, the only way a set of swatches is honestly comparable, and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. 
+  Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed. The layout then had to hold all five content types together: specification tables, colour ranges, pattern samples, service pages, and portfolio work each want a different page logic, but the reader moves between them continuously, so the catalogue needed one visual system flexible enough to carry all of it without fragmenting. 
+  Coordinating with the external printer was its own discipline: colour, resolution, and bleed had to be right before the files left, because nothing is fixable afterwards.
 ## process
 - num: "01"
-  title: Render
-  body: Building colour options, plank cross-sections, and pattern samples as consistent 3D assets.
+  title: Structure
+  body: Planning an information architecture for the catalog, considering a user flow.
 - num: "02"
-  title: Retouch
-  body: Tuning grain, tone, and finish so each wood type reads truthfully in print.
+  title: Render and Retouch
+  body: Building colour options, plank cross-sections, and pattern samples as consistent 3D assets. Tuning grain, tone, and finish so each wood type reads truthfully in print.
 - num: "03"
   title: Publish
   body: Laying out forty-eight pages across product, pattern, service, and portfolio content, then coordinating files through an external printer.
 ## image
 src: /projects/timber/final.png
-alt: Spreads from the finished Timber catalogue showing colour options, laying patterns, and plank construction diagrams
+alt: Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams
 caption: Product, pattern, and service content unified across forty-eight pages.
 # outcome
 eyebrow: 03 · Outcome

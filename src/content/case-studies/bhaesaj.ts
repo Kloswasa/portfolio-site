@@ -12,22 +12,26 @@ const bhaesajCaseStudy = {
     "titleLine1": "Bhaesaj",
     "titleLine2": "Lip Balm Packaging",
     "summary": "A packaging design exploration for Bhae, a traditional lip balm made since 1989, translating an established art direction into decisions about shape, surface, and function.",
+    "image": {
+      "src": "/projects/bhae/bhaesaj-cover.png",
+      "alt": "3D render of the Bhaesaj lip balm packaging direction"
+    },
     "meta": [
       {
         "label": "Client",
-        "value": "Heritage skincare · Thailand"
+        "value": "Bhaesaj traditional lip balm, established 1989"
       },
       {
         "label": "Role",
-        "value": "Packaging design"
+        "value": "Packaging design, direction development, sketch to render"
       },
       {
         "label": "Timeline",
-        "value": "5 weeks"
+        "value": "2022"
       },
       {
         "label": "Deliverable",
-        "value": "Packaging design + dieline"
+        "value": "Design direction, hand sketches, shape and surface boards, 3D renders"
       }
     ]
   },
@@ -35,26 +39,59 @@ const bhaesajCaseStudy = {
   "sections": {
     "context": {
       "eyebrow": "01 · Context",
-      "title": "A direction meant",
-      "titleEm": "for something else.",
+      "title": "A mood board is",
+      "titleEm": "not a decision.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "Bhae is a traditional lip balm that has been made since 1989, with a product form customers already recognise. The brief I received was a visual direction board the team had developed for the brand's graphic work, a language of mood, not a packaging spec. It said nothing about what the object should be. Translating it into a physical product meant deciding for myself what that direction implied for shape, surface, and function, while keeping the familiar enough that thirty years of recognition survived the update."
+            "Bhaesaj is a traditional lip balm made since 1989. Another team had set an initial visual direction, modern classic, science, spacious, drawn from the language of classic medicine labels, and that board came to me as the brief. A board of that kind carries a feeling, not an object. It does not say how thick a wall should be, how a lid should close, or what surface finish makes something read as heritage rather than pastiche. The direction also carried its own trap: classic and modern balance on a narrow line, and a direction that leans too far either way misses on both counts at once."
           ]
         }
       ]
     },
     "work": {
       "eyebrow": "02 · Work",
-      "title": "A mood board into",
-      "titleEm": "an object.",
+      "title": "From words",
+      "titleEm": "to form.",
       "blocks": [
         {
           "type": "prose",
           "paragraphs": [
-            "A visual direction does not tell you how thick a wall should be, how a lid should feel closing, or which surface finish will read as traditional rather than cheap. Those decisions were mine to make, and I worked them out through a deliberate escalation of fidelity, pencil sketches first, exploring shape quickly and cheaply while the ideas were still disposable, then a surface and material board to fix the tactile language the graphic direction had only implied, then 3D renders to test the resolved forms as real volumes. Each stage answered a different question, and moving up in fidelity only once the previous question was settled kept the exploration honest rather than decorative."
+            "Rather than take the first plausible reading of the board and resolve it, I worked outward first, expanding what each term could physically mean before narrowing to a direction."
+          ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
+              "alt": "Illustration of a platypus, representing the Curious Explorer personality type",
+              "caption": "Platypus as the Curious Explorer. Both lenses agree, a solitary forager by behaviour, a symbol of individuality and being at peace alone in traditional belief."
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-brolga.png",
+              "alt": "Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type",
+              "caption": "Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour, beauty, creativity, resilience."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Spacious can be proportion, negative space on the label, or the way a lid sits away from the body. Science can be precision in the parting lines, a clinical surface, or restraint in the graphics."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/example/shot.png",
+          "alt": "Description",
+          "caption": "A lip balm packaging sketch design exploration"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "    Working from the words rather than the pictures produced a range of shape, surface, and functional options that the board itself did not imply. From there I resolved the strongest of them, hand sketches to explore proportion cheaply, shape and surface boards to fix the tactile language, then 3D renders to test the forms as real volumes and judge where the classic-to-modern line actually sat."
           ]
         },
         {
@@ -63,52 +100,52 @@ const bhaesajCaseStudy = {
             {
               "num": "01",
               "title": "Interpret",
-              "body": "Reading a 2D brand direction for what it implies about a physical object."
+              "body": "Reading the direction's terms as physical possibilities, not fixed images."
             },
             {
               "num": "02",
-              "title": "Sketch",
-              "body": "Hand sketches exploring shape and proportion at low cost, before committing."
+              "title": "Expand",
+              "body": "Hand sketches opening shape, surface, and functional options before narrowing."
             },
             {
               "num": "03",
               "title": "Resolve",
-              "body": "Fixing surface and material, then rendering the strongest directions as real volumes."
+              "body": "Surface and material boards, then 3D renders to test the balance as real volumes."
             }
           ]
-        },
-        {
-          "type": "image",
-          "src": "/projects/bhae/final.png",
-          "alt": "3D renders of the resolved Bhae lip balm packaging concepts",
-          "caption": "From pencil to render, each stage resolving a different question."
         }
       ]
     },
     "outcome": {
       "eyebrow": "03 · Outcome",
-      "title": "A direction made",
-      "titleEm": "physical.",
+      "title": "A direction,",
+      "titleEm": "resolved.",
       "blocks": [
+        {
+          "type": "image",
+          "src": "/projects/bhae/final.png",
+          "alt": "3D renders of the resolved Bhaesaj lip balm packaging direction alongside sketch development",
+          "caption": "From the board's language to resolved form sketches, surface direction, and renders."
+        },
         {
           "type": "outcomes",
           "items": [
             {
-              "value": "2D to 3D",
-              "label": "Direction extended into object",
-              "body": "A graphic brand language interpreted into shape, surface, and function with no packaging spec to work from."
+              "value": "Board to object",
+              "label": "Direction made physical",
+              "body": "A visual mood board interpreted into concrete decisions about shape, surface, and function."
             },
             {
               "value": "1989",
               "label": "Heritage held onto",
-              "body": "A recognisable traditional product explored anew without discarding what made it familiar."
+              "body": "A recognisable traditional product reworked without tipping into pastiche."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "Working up from rough sketches to resolved renders, spending effort only when the cheaper question is settled, is the same discipline behind moving from wireframe to prototype in digital product design."
+            "The work was held at parent-company level on budget, with the decision to stay with the classic packaging. Taking an ambiguous brief and widening it before narrowing, treating the words as a space of possibilities rather than a picture to reproduce, is the move I rely on most in digital product work, where the brief is almost always a direction rather than a definition."
           ]
         }
       ]

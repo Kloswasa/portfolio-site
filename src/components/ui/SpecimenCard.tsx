@@ -41,7 +41,7 @@ export function SpecimenCard({
         {media}
         {locked ? (
           <div className="specimen-card__nda" aria-hidden="true">
-            <span className="specimen-card__nda-lock">*</span>
+            <span className="specimen-card__nda-lock"> </span>
             <span className="specimen-card__nda-label">{lockLabel}</span>
           </div>
         ) : null}
