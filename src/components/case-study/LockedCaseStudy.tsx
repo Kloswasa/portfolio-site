@@ -20,7 +20,7 @@ export function LockedCaseStudy({ project }: { project: Project }) {
         <p className="locked-study__eyebrow">{lockCopy.eyebrow}</p>
 
         <div className="locked-study__stamp" aria-hidden="true">
-          <span className="locked-study__stamp-lock">&#128274;</span>
+          <span className="locked-study__stamp-lock">*</span>
           <span>{lockCopy.stamp}</span>
         </div>
 
