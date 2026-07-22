@@ -13,7 +13,7 @@ const jtimberCaseStudy = {
     "titleLine2": "Flooring Catalogue",
     "summary": "A 48-page flooring catalogue for a wood styling company, covering products, patterns, and services, taken from 3D rendered assets and retouching through layout to coordinated print publication.",
     "image": {
-      "src": "/projects/jtimber/cover.png",
+      "src": "/projects/jtimber/jtimber-header.png",
       "alt": "The Timber flooring catalogue open to a spread showing wood floor colour options"
     },
     "meta": [

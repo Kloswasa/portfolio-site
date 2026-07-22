@@ -28,24 +28,24 @@ export const HERO_PLANT_STAMPS: Record<
   readonly [string, string, string]
 > = {
   "wax-flower": [
-    "Chamelaucium uncinatum",
+    "Geraldton Wax",
     "Specimen No. 042",
-    "Digital · 2026",
+    "Chamelaucium uncinatum",
   ],
-  branch: ["Corylus avellana", "Specimen No. 017", "Digital · 2026"],
-  fern: ["Pteridium aquilinum", "Specimen No. 001", "Digital · 2026"],
-  magnolia: ["Magnolia grandiflora", "Specimen No. 005", "Digital · 2026"],
-  dandelion: ["Taraxacum officinale", "Specimen No. 018", "Digital · 2026"],
-  clover: ["Trifolium repens", "Specimen No. 044", "Digital · 2026"],
-  lotus: ["Nelumbo nucifera", "Specimen No. 007", "Digital · 2026"],
+  branch: ["Common Hazel", "Specimen No. 017", "Corylus avellana"],
+  fern: ["Bracken Fern", "Specimen No. 001", "Pteridium aquilinum"],
+  magnolia: ["Southern Magnolia", "Specimen No. 005", "Magnolia grandiflora"],
+  dandelion: ["Common Dandelion", "Specimen No. 018", "Taraxacum officinale"],
+  clover: ["White Clover", "Specimen No. 044", "Trifolium repens"],
+  lotus: ["Sacred Lotus", "Specimen No. 007", "Nelumbo nucifera"],
   chrysanthemum: [
-    "Chrysanthemum morifolium",
+    "Garden Chrysanthemum",
     "Specimen No. 023",
-    "Digital · 2026",
+    "Chrysanthemum morifolium",
   ],
   "forget-me-not": [
-    "Myosotis sylvatica",
+    "Forget-me-not",
     "Specimen No. 031",
-    "Think of me · 2026",
+    "Myosotis sylvatica",
   ],
 };

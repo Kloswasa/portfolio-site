@@ -2,12 +2,12 @@ export type ProjectLockStatus = "documentation" | "researching" | "nda";
 
 export const PROJECT_LOCK_COPY = {
   documentation: {
-    stamp: "Under documentation",
+    stamp: "Documentation",
     eyebrow: "Case study in progress",
     note: "This project is in the archive, but the full case study is still being written. Imagery, process, and outcomes are available with access.",
   },
   researching: {
-    stamp: "Under Researching",
+    stamp: "Researching",
     eyebrow: "Early research",
     note: "This project is still in research. Process and outcomes are not public yet. Enter the password if you have access, or request a walkthrough.",
   },

@@ -7,19 +7,19 @@ const flomaxCaseStudy = {
   "kind": "minor",
   "slug": "flomax",
   "hero": {
-    "breadcrumb": "FloM",
+    "breadcrumb": "Flomax",
     "eyebrow": "003 · Graphic Design · Kids mask packaging",
-    "titleLine1": "FloM",
+    "titleLine1": "Flomax",
     "titleLine2": "Kids Mask Packaging",
-    "summary": "An alternative graphic style for FloM's kids face mask, designed to appeal to children without breaking the brand identity built for its adult range.",
+    "summary": "An alternative graphic style for Flomax's kids face mask, designed to appeal to children without breaking the brand identity built for its adult range.",
     "image": {
-      "src": "/projects/flom/cover.png",
-      "alt": "FloM kids face mask packaging showing the alternative graphic style"
+      "src": "/projects/flomax/cover.png",
+      "alt": "Flomax kids face mask packaging showing the alternative graphic style"
     },
     "meta": [
       {
         "label": "Client",
-        "value": "FloM, air filter manufacturer"
+        "value": "Flomax, air filter manufacturer"
       },
       {
         "label": "Role",
@@ -44,7 +44,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "FloM manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down, the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
+            "Flomax manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down, the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
           ]
         }
       ]
@@ -57,7 +57,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as FloM at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart."
+            "I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as Flomax at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart."
           ]
         },
         {
@@ -83,7 +83,7 @@ const flomaxCaseStudy = {
         {
           "type": "image",
           "src": "/projects/flom/final.png",
-          "alt": "The FloM kids mask packaging shown alongside the adult range",
+          "alt": "The Flomax kids mask packaging shown alongside the adult range",
           "caption": "A register built for children, still recognisably the same filtration brand."
         }
       ]
