@@ -203,6 +203,8 @@ function parseFindingsBlock(text: string): MajorContentBlock {
     label: string;
     title: string;
     body: string;
+    image?: string;
+    imageAlt?: string;
   }>(text, "findings").map((item) => ({
     ...item,
     num: String(item.num),
@@ -212,9 +214,26 @@ function parseFindingsBlock(text: string): MajorContentBlock {
     if (!item.num || !item.label || !item.title || !item.body) {
       throw new Error("findings items require num, label, title, and body");
     }
+    if (item.image && !item.imageAlt) {
+      throw new Error("findings items with image require imageAlt");
+    }
+    if (item.imageAlt && !item.image) {
+      throw new Error("findings items with imageAlt require image");
+    }
   }
 
-  return { type: "findings", items };
+  return {
+    type: "findings",
+    items: items.map((item) => ({
+      num: item.num,
+      label: item.label,
+      title: item.title,
+      body: item.body,
+      ...(item.image && item.imageAlt
+        ? { image: item.image, imageAlt: item.imageAlt }
+        : {}),
+    })),
+  };
 }
 
 function parseTwoColBlock(text: string): MajorContentBlock {
@@ -294,6 +313,36 @@ function parseComponentGridBlock(text: string): MajorContentBlock {
   };
 }
 
+function parseImageSize(value: string | undefined): "sm" | "md" | undefined {
+  if (!value) return undefined;
+  if (value !== "sm" && value !== "md") {
+    throw new Error('image size must be "sm" or "md" (omit for full width)');
+  }
+  return value;
+}
+
+/** Pull leading `key: value` lines (e.g. size:) off a YAML list block. */
+function splitListBlockMeta(text: string): {
+  meta: Record<string, string>;
+  listText: string;
+} {
+  const lines = text.trim().split("\n");
+  const meta: Record<string, string> = {};
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i] ?? "";
+    if (line.trimStart().startsWith("-")) break;
+    const idx = line.indexOf(":");
+    if (idx !== -1) {
+      meta[line.slice(0, idx).trim()] = line.slice(idx + 1).trim();
+    }
+    i += 1;
+  }
+
+  return { meta, listText: lines.slice(i).join("\n") };
+}
+
 function parseImageBlock(text: string): MajorContentBlock {
   const fields = parseKeyValueBlock(text);
 
@@ -301,20 +350,25 @@ function parseImageBlock(text: string): MajorContentBlock {
     throw new Error("image blocks require src: and alt: fields");
   }
 
+  const size = parseImageSize(fields.size);
+
   return {
     type: "image",
     src: fields.src,
     alt: fields.alt,
     ...(fields.caption ? { caption: fields.caption } : {}),
+    ...(size ? { size } : {}),
   };
 }
 
 function parseImagePairBlock(text: string): MajorContentBlock {
+  const { meta, listText } = splitListBlockMeta(text);
+  const size = parseImageSize(meta.size);
   const items = parseYamlList<{
     src: string;
     alt: string;
     caption: string;
-  }>(text, "imagePair");
+  }>(listText, "imagePair");
 
   for (const item of items) {
     if (!item.src || !item.alt || !item.caption) {
@@ -322,7 +376,11 @@ function parseImagePairBlock(text: string): MajorContentBlock {
     }
   }
 
-  return { type: "imagePair", items };
+  return {
+    type: "imagePair",
+    items,
+    ...(size ? { size } : {}),
+  };
 }
 
 function parseImageGridBlock(text: string): MajorContentBlock {

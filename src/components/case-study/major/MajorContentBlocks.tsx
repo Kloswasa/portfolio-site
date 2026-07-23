@@ -133,6 +133,15 @@ function Block({ block }: { block: MajorContentBlock }) {
           {block.items.map((item) => (
             <div key={item.num} className="cs-major__finding" data-num={item.num}>
               <div className="cs-major__finding-label">{item.label}</div>
+              {item.image && item.imageAlt ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="cs-major__finding-image"
+                  loading="lazy"
+                />
+              ) : null}
               <div className="cs-major__finding-title">{item.title}</div>
               <div className="cs-major__finding-body">
                 <InlineText text={item.body} />
@@ -254,7 +263,14 @@ function Block({ block }: { block: MajorContentBlock }) {
 
     case "image":
       return (
-        <figure className="cs-major__image">
+        <figure
+          className={[
+            "cs-major__image",
+            block.size ? `cs-major__image--${block.size}` : null,
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={block.src}
@@ -270,7 +286,14 @@ function Block({ block }: { block: MajorContentBlock }) {
 
     case "imagePair":
       return (
-        <figure className="cs-major__image-pair">
+        <figure
+          className={[
+            "cs-major__image-pair",
+            block.size ? `cs-major__image-pair--${block.size}` : null,
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
           <div className="cs-major__image-pair-grid">
             {block.items.map((item) => (
               <div key={item.src} className="cs-major__image-pair-item">

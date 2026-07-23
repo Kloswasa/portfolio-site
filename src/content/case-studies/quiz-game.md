@@ -35,16 +35,24 @@ A personality quiz result is easy to make and easy to forget. If the output was 
 
 Two things in that brief made it harder than a normal quiz.
 
+
+
+
+
 ## findings
 
 - num: "01"
   label: Framework
   title: Holland's model
   body: Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's "Investigative" became "the Curious Explorer".
+  image: /projects/quiz-game/quiz-game-hexagon.png
+  imageAlt: Hexagon icon illustrating the Holland framework
 - num: "02"
   label: Audience
   title: Strangers to Australia
   body: The audience hadn't been to Australia, so being told you are "the Curious Explorer" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect.
+  image: /projects/quiz-game/quiz-game-question-mark.png
+  imageAlt: Question mark icon illustrating unfamiliarity with Australia
 
 
 # research
@@ -52,12 +60,6 @@ Two things in that brief made it harder than a normal quiz.
 eyebrow: 02 · Research
 title: What the research
 titleEm: changed
-
-## pullquote
-
-text: I do not know, maybe a big spider.
-source: Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos
-
 ## prose
 
     The pause before that answer lasted several seconds.
@@ -77,6 +79,12 @@ source: Prospective Australia traveller, asked to name wildlife beyond koalas an
   label: Trivia
   title: Explains, doesn't exaggerate
   body: Facts that grounded the place rather than hyping it, credibility over spectacle.
+
+## pullquote
+
+text: I do not know, maybe a big spider.
+source: Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos
+
 
 ## prose
 

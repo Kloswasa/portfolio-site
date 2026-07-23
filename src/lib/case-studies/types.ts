@@ -39,6 +39,9 @@ export type MajorContentBlock =
         label: string;
         title: string;
         body: string;
+        /** Optional illustration inside the card. Requires imageAlt. */
+        image?: string;
+        imageAlt?: string;
       }[];
     }
   | { type: "annotation"; text: string }
@@ -77,6 +80,8 @@ export type MajorContentBlock =
       src: string;
       alt: string;
       caption?: string;
+      /** Omit for full content width. */
+      size?: "sm" | "md";
     }
   | {
       type: "imagePair";
@@ -85,6 +90,8 @@ export type MajorContentBlock =
         alt: string;
         caption: string;
       }[];
+      /** Omit for full content width. */
+      size?: "sm" | "md";
     }
   | {
       type: "imageGrid";

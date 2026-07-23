@@ -13,7 +13,7 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `prose` | free text | Body paragraphs (blank line = new para; 4-space indent = nested line; `**bold**` supported) |
 | `stats` | YAML list | Metric row (`value`, `label`, `variant`: dark \| mid \| light) |
 | `pullquote` | key-value | Large quote (`text`, `source`) |
-| `findings` | YAML list | Research cards (`num`, `label`, `title`, `body`) |
+| `findings` | YAML list | Research cards (`num`, `label`, `title`, `body`; optional `image`, `imageAlt`) |
 | `annotation` | key-value | Small aside (`text`) |
 | `twoCol` | YAML list | Side-by-side points (`label`, `body`) |
 | `artifact` | key-value | Built-in diagram (`variant`: audit-map \| token-hierarchy, `label`, `caption`, optional `captionMeta`) |
@@ -25,8 +25,8 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `componentGrid` | YAML list | Component inventory cards (`label`, `title`, `count`, `variant`: primary \| dark \| mid \| deepest) |
 | `outcomes` | YAML list | Result metrics (`value`, `label`, `body`) |
 | `reflections` | `-` list | Numbered takeaways |
-| `image` | key-value | Single image (`src`, `alt`, optional `caption`) |
-| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`) |
+| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `size`: sm \| md) |
+| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional block `size`: sm \| md) |
 | `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`) |
 | `video` | key-value | Video embed (`src`, `poster`, `alt`, `caption`) |
 
@@ -61,6 +61,7 @@ source: Attribution
 src: /projects/example/shot.png
 alt: Description
 caption: Optional caption
+size: sm
 
 ## video
 
@@ -68,6 +69,20 @@ src: /projects/example/clip.mp4
 poster: /projects/example/poster.png
 alt: Accessible description
 caption: Caption under the player
+```
+
+`size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures.
+
+```markdown
+## imagePair
+
+size: sm
+- src: /projects/example/a.png
+  alt: Left
+  caption: Left caption
+- src: /projects/example/b.png
+  alt: Right
+  caption: Right caption
 ```
 
 ### YAML list — `stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`, `imageGrid`
@@ -79,6 +94,19 @@ caption: Caption under the player
   label: Interviews
   variant: dark
 
+## findings
+
+- num: "01"
+  label: Framework
+  title: Holland's model
+  body: Optional image fields sit on the same item.
+  image: /projects/example/icon.png
+  imageAlt: Icon description
+```
+
+Optional `image` + `imageAlt` render a small illustration inside the finding card. Both are required together.
+
+```markdown
 ## imageGrid
 
 - src: /projects/example/a.png
@@ -113,11 +141,11 @@ caption: Caption under the player
 
 ## Image blocks
 
-| Block | Count |
-|-------|-------|
-| `image` | 1 |
-| `imagePair` | 2 |
-| `imageGrid` | 3+ |
+| Block | Count | Size |
+|-------|-------|------|
+| `image` | 1 | optional `size: sm` \| `md` (default full width) |
+| `imagePair` | 2 | optional block-level `size: sm` \| `md` above the list |
+| `imageGrid` | 3+ | always full width |
 
 ---
 

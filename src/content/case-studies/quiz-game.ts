@@ -56,13 +56,17 @@ const quizGameCaseStudy = {
               "num": "01",
               "label": "Framework",
               "title": "Holland's model",
-              "body": "Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's \"Investigative\" became \"the Curious Explorer\"."
+              "body": "Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's \"Investigative\" became \"the Curious Explorer\".",
+              "image": "/projects/quiz-game/quiz-game-hexagon.png",
+              "imageAlt": "Hexagon icon illustrating the Holland framework"
             },
             {
               "num": "02",
               "label": "Audience",
               "title": "Strangers to Australia",
-              "body": "The audience hadn't been to Australia, so being told you are \"the Curious Explorer\" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect."
+              "body": "The audience hadn't been to Australia, so being told you are \"the Curious Explorer\" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect.",
+              "image": "/projects/quiz-game/quiz-game-question-mark.png",
+              "imageAlt": "Question mark icon illustrating unfamiliarity with Australia"
             }
           ]
         }
@@ -73,11 +77,6 @@ const quizGameCaseStudy = {
       "title": "What the research",
       "titleEm": "changed",
       "blocks": [
-        {
-          "type": "pullquote",
-          "text": "I do not know, maybe a big spider.",
-          "source": "Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos"
-        },
         {
           "type": "prose",
           "paragraphs": [
@@ -106,6 +105,11 @@ const quizGameCaseStudy = {
               "body": "Facts that grounded the place rather than hyping it, credibility over spectacle."
             }
           ]
+        },
+        {
+          "type": "pullquote",
+          "text": "I do not know, maybe a big spider.",
+          "source": "Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos"
         },
         {
           "type": "prose",

@@ -44,14 +44,15 @@ titleEm: printed page.
 - num: "03"
   title: Publish
   body: Laying out forty-eight pages across product, pattern, service, and portfolio content, then coordinating files through an external printer.
-## image
-src: /projects/timber/final.png
-alt: Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams
-caption: Product, pattern, and service content unified across forty-eight pages.
+
 # outcome
 eyebrow: 03 · Outcome
 title: A range that
 titleEm: sells itself.
+## image
+src: /projects/timber/final.png
+alt: Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams
+caption: Product, pattern, and service content unified across forty-eight pages.
 ## outcomes
 - value: "48 pages"
   label: Asset to press

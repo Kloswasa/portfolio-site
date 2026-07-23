@@ -98,7 +98,9 @@ const blockShowcaseCaseStudy = {
               "num": "A",
               "label": "Block · findings",
               "title": "Friction cards",
-              "body": "Numbered research insights with a label, title, and body. Best for interview themes or audit observations."
+              "body": "Numbered research insights with a label, title, and body. Best for interview themes or audit observations.",
+              "image": "/projects/quiz-game/quiz-game-hexagon.png",
+              "imageAlt": "Sample finding card illustration"
             },
             {
               "num": "B",
@@ -180,6 +182,13 @@ const blockShowcaseCaseStudy = {
           "caption": "image block, full-width figure with optional caption."
         },
         {
+          "type": "image",
+          "src": "/projects/quiz-game/quiz-game-hexagon.png",
+          "alt": "Sample small image block",
+          "caption": "image block with size: sm.",
+          "size": "sm"
+        },
+        {
           "type": "componentGrid",
           "items": [
             {
@@ -227,6 +236,22 @@ const blockShowcaseCaseStudy = {
               "caption": "imageGrid · item 3 (three or more images)"
             }
           ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/quiz-game/quiz-game-hexagon.png",
+              "alt": "Platypus illustration sample",
+              "caption": "imagePair · size sm · left"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-question-mark.png",
+              "alt": "Brolga illustration sample",
+              "caption": "imagePair · size sm · right"
+            }
+          ],
+          "size": "sm"
         },
         {
           "type": "imagePair",

@@ -79,12 +79,6 @@ const jtimberCaseStudy = {
               "body": "Laying out forty-eight pages across product, pattern, service, and portfolio content, then coordinating files through an external printer."
             }
           ]
-        },
-        {
-          "type": "image",
-          "src": "/projects/timber/final.png",
-          "alt": "Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams",
-          "caption": "Product, pattern, and service content unified across forty-eight pages."
         }
       ]
     },
@@ -93,6 +87,12 @@ const jtimberCaseStudy = {
       "title": "A range that",
       "titleEm": "sells itself.",
       "blocks": [
+        {
+          "type": "image",
+          "src": "/projects/timber/final.png",
+          "alt": "Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams",
+          "caption": "Product, pattern, and service content unified across forty-eight pages."
+        },
         {
           "type": "outcomes",
           "items": [
