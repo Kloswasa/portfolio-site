@@ -261,7 +261,7 @@ export const projects: Project[] = [
       src: "/projects/quiz-game/quiz-game-cover.png",
       alt: "Block showcase cover placeholder",
     },
-    hidden: true,
+    hidden: false,
   },
 ];
 

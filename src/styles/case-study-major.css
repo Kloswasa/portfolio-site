@@ -619,7 +619,6 @@
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
 }
 
 .cs-major__image--sm .cs-major__image-img,
@@ -663,7 +662,6 @@
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
 }
 
 .cs-major__image-pair--sm .cs-major__image-pair-img,
@@ -702,7 +700,6 @@
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
 }
 
 .cs-major__image-grid-caption {

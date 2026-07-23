@@ -61,9 +61,7 @@ eyebrow: 02 · Research
 title: What the research
 titleEm: changed
 ## prose
-
-    The pause before that answer lasted several seconds.
-    Wildlife was named as Australia's signature in every interview, five people, all planning a first trip from overseas, but recognition stopped at two animals.
+Five people, who potential to be a future Australia traveller, are interviewed and pattern of a expectation from result are found from them.
 
 ## findings
 
@@ -80,16 +78,19 @@ titleEm: changed
   title: Explains, doesn't exaggerate
   body: Facts that grounded the place rather than hyping it, credibility over spectacle.
 
+## prose  
+Moving to the Australia aesthetic recognisation, Wildlife and a natural scene were named as Australia's signature in every interview, but a wildlife recognisation stopped at two animals.
+
 ## pullquote
 
 text: I do not know, maybe a big spider.
 source: Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos
 
+## callout
 
-## prose
-
-What I took out of it: a one-word type wasn't going to do the work. The differentiator was no longer in the quiz. It was in the curation.
-
+label: What I took out of it
+title: A one-word type wasn't going to do the work
+body: The differentiator was no longer in the quiz. It was in the curation.
 
 # concept
 
@@ -101,9 +102,17 @@ titleEm: scene as backdrop
 
 This quiz's result had to represent the person, not label them.
 
-**Decision one: split the two symbols of Australia by job.** The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live.
+## prose
+**Decision one: split the two symbols of Australia by job.**
+  The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live.
 
-**Decision two: every pairing had to hold under two lenses.** Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both.
+## image
+src: /projects/quiz-game/quiz-game-natural-scene.gif
+alt: Description
+caption: A lip balm packaging sketch design exploration
+## prose
+**Decision two: every pairing had to hold under two lenses.**
+  Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both.
     
 ## imagePair
 
@@ -116,7 +125,8 @@ This quiz's result had to represent the person, not label them.
     
 ## prose
 
-**Decision three: AI surfaced candidates, sources decided.** Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion.
+**Decision three: AI surfaced candidates, sources decided.**
+  Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion.
 
 ## callout
 
@@ -135,7 +145,8 @@ titleEm: the animal
 
 ## prose
 
-**Every piece on the result page was curated for the type, not filled.** Take the Curious Explorer (Platypus): three pieces of content sit alongside the animal, each shaped to the type rather than dropped in.
+**Every piece on the result page was curated for the type, not filled.** 
+  Take the Curious Explorer (Platypus): three pieces of content sit alongside the animal, each shaped to the type rather than dropped in.
 
 ## video
 
@@ -163,7 +174,12 @@ titleEm: for two moments
 
 ## prose
 
-The quiz and the result page do different jobs, so they got different render strategies.
+The project design under the tech stack, including Next.JS, Typescript, Prisma, TailswindCSS. The quiz and the result page do different jobs, so they got different render strategies, which resonace with an assorted techstack.
+
+## image
+src: /projects/quiz-game/quiz-game-techstack.png
+alt: Description
+caption: Tech stack for this quiz game project, including Next.JS, Typescript, Prisma
 
 ## imagePair
 

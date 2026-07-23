@@ -80,7 +80,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "    The pause before that answer lasted several seconds.\n    Wildlife was named as Australia's signature in every interview, five people, all planning a first trip from overseas, but recognition stopped at two animals."
+            "Five people, who potential to be a future Australia traveller, are interviewed and pattern of a expectation from result are found from them."
           ]
         },
         {
@@ -107,15 +107,21 @@ const quizGameCaseStudy = {
           ]
         },
         {
+          "type": "prose",
+          "paragraphs": [
+            "Moving to the Australia aesthetic recognisation, Wildlife and a natural scene were named as Australia's signature in every interview, but a wildlife recognisation stopped at two animals."
+          ]
+        },
+        {
           "type": "pullquote",
           "text": "I do not know, maybe a big spider.",
           "source": "Prospective Australia traveller, asked to name wildlife beyond koalas and kangaroos"
         },
         {
-          "type": "prose",
-          "paragraphs": [
-            "What I took out of it: a one-word type wasn't going to do the work. The differentiator was no longer in the quiz. It was in the curation."
-          ]
+          "type": "callout",
+          "label": "What I took out of it",
+          "title": "A one-word type wasn't going to do the work",
+          "body": "The differentiator was no longer in the quiz. It was in the curation."
         }
       ]
     },
@@ -127,9 +133,25 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "This quiz's result had to represent the person, not label them.",
-            "**Decision one: split the two symbols of Australia by job.** The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live.",
-            "**Decision two: every pairing had to hold under two lenses.** Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both."
+            "This quiz's result had to represent the person, not label them."
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/quiz-game/quiz-game-natural-scene.gif",
+          "alt": "Description",
+          "caption": "A lip balm packaging sketch design exploration"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "**Decision two: every pairing had to hold under two lenses.**\n  Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both."
           ]
         },
         {
@@ -150,7 +172,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision three: AI surfaced candidates, sources decided.** Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion."
+            "**Decision three: AI surfaced candidates, sources decided.**\n  Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion."
           ]
         },
         {
@@ -169,7 +191,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Every piece on the result page was curated for the type, not filled.** Take the Curious Explorer (Platypus): three pieces of content sit alongside the animal, each shaped to the type rather than dropped in."
+            "**Every piece on the result page was curated for the type, not filled.** \n  Take the Curious Explorer (Platypus): three pieces of content sit alongside the animal, each shaped to the type rather than dropped in."
           ]
         },
         {
@@ -206,8 +228,14 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The quiz and the result page do different jobs, so they got different render strategies."
+            "The project design under the tech stack, including Next.JS, Typescript, Prisma, TailswindCSS. The quiz and the result page do different jobs, so they got different render strategies, which resonace with an assorted techstack."
           ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/quiz-game/quiz-game-techstack.png",
+          "alt": "Description",
+          "caption": "Tech stack for this quiz game project, including Next.JS, Typescript, Prisma"
         },
         {
           "type": "imagePair",
