@@ -19,6 +19,7 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `artifact` | key-value | Built-in diagram (`variant`: audit-map \| token-hierarchy, `label`, `caption`, optional `captionMeta`) |
 | `process` | YAML list | Step columns (`num`, `title`, `body`) |
 | `callout` | key-value | Highlight box (`label`, `title`, `body`) |
+| `button` | key-value | CTA link (`label`, `href`; optional `variant`: accent \| primary) |
 | `ornament` | empty | Decorative divider |
 | `colorSpecimen` | empty | Color token swatches |
 | `typeSpecimen` | empty | Typography specimen |
@@ -48,13 +49,19 @@ Second paragraph after a blank line.
 
 Inline `**bold**` also works in body fields on `pullquote`, `findings`, `annotation`, `twoCol`, `process`, `callout`, `outcomes`, and `reflections`.
 
-### Key-value — `pullquote`, `annotation`, `callout`, `artifact`, `image`, `video`
+### Key-value — `pullquote`, `annotation`, `callout`, `button`, `artifact`, `image`, `video`
 
 ```markdown
 ## pullquote
 
 text: Quote goes here
 source: Attribution
+
+## button
+
+label: View live site
+href: https://example.com
+variant: accent
 
 ## image
 

@@ -289,6 +289,12 @@ const quizGameCaseStudy = {
           ]
         },
         {
+          "type": "button",
+          "label": "View live site",
+          "href": "https://australia-call.vision-verse.com.au/",
+          "variant": "accent"
+        },
+        {
           "type": "pullquote",
           "text": "That was where I wanna go!",
           "source": "User who initially doubted her personality match, on reading her recommended destinations"

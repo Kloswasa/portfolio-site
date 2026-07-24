@@ -171,6 +171,10 @@
   font-size: var(--text-body-sm);
 }
 
+.cs-major__button {
+  margin-top: var(--spacing-2);
+}
+
 .cs-major__meta-label {
   font-family: var(--font-mono);
   font-size: var(--text-xs);

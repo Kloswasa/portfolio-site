@@ -135,6 +135,26 @@ function parseCalloutBlock(text: string): MajorContentBlock {
   };
 }
 
+function parseButtonBlock(text: string): MajorContentBlock {
+  const fields = parseKeyValueBlock(text);
+
+  if (!fields.label || !fields.href) {
+    throw new Error("button blocks require label: and href: fields");
+  }
+
+  const variant = fields.variant ?? "accent";
+  if (variant !== "accent" && variant !== "primary") {
+    throw new Error('button variant must be "accent" or "primary"');
+  }
+
+  return {
+    type: "button",
+    label: fields.label,
+    href: fields.href,
+    ...(fields.variant ? { variant } : {}),
+  };
+}
+
 function parseArtifactBlock(text: string): MajorContentBlock {
   const fields = parseKeyValueBlock(text);
 
@@ -457,6 +477,8 @@ function parseBlock(type: string, text: string): MajorContentBlock {
       return parseProcessBlock(text);
     case "callout":
       return parseCalloutBlock(text);
+    case "button":
+      return parseButtonBlock(text);
     case "ornament":
       return parseEmptyBlock("ornament");
     case "colorSpecimen":

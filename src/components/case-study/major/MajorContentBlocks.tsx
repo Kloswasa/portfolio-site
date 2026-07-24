@@ -216,6 +216,26 @@ function Block({ block }: { block: MajorContentBlock }) {
         </aside>
       );
 
+    case "button": {
+      const isExternal = /^https?:\/\//.test(block.href);
+      const variantClass =
+        block.variant === "primary" ? "btn-primary" : "btn-gold";
+
+      return (
+        <div className="cs-major__button">
+          <a
+            className={`btn ${variantClass}`}
+            href={block.href}
+            {...(isExternal
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
+          >
+            {block.label}
+          </a>
+        </div>
+      );
+    }
+
     case "ornament":
       return (
         <div className="cs-major__ornament" aria-hidden>

@@ -58,6 +58,13 @@ export type MajorContentBlock =
       items: { num: string; title: string; body: string }[];
     }
   | { type: "callout"; label: string; title: string; body: string }
+  | {
+      type: "button";
+      label: string;
+      href: string;
+      /** Defaults to accent (gold). */
+      variant?: "accent" | "primary";
+    }
   | { type: "colorSpecimen" }
   | { type: "typeSpecimen" }
   | { type: "ornament" }
