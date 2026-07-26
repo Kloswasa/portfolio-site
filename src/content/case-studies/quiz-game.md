@@ -202,7 +202,12 @@ eyebrow: 06 · Outcome
 title: Shipped and
 titleEm: learned
 
+## video
 
+src: /projects/quiz-game/quiz-game-teaser.mp4
+poster: /projects/quiz-game/quiz-game-teaser-cover.png
+alt: A 12 second project teaser.
+caption: The project teaser of the quiz game, showing some part of quiz journey and result page
 
 ## outcomes
 - value: "~10+"
@@ -210,7 +215,7 @@ titleEm: learned
   body: Mostly positive, with some constructive feedback.
   
 ## prose
-    The wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only.
+    The overall quiz performance is good both in visual and media, but on the results the wildlife-and-destination pairing was the strongest signal. However, tips and trivia got less attention, likely because they were text-only.
 
 ## button
 

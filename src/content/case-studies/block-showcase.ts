@@ -179,7 +179,9 @@ const blockShowcaseCaseStudy = {
           "type": "image",
           "src": "/projects/quiz-game/quiz-game-quiz-diagram.png",
           "alt": "Sample single image block showing a quiz flow diagram",
-          "caption": "image block, full-width figure with optional caption."
+          "caption": "image block, full-width figure with optional caption.",
+          "credit": "Sample credit link",
+          "creditHref": "https://example.com"
         },
         {
           "type": "image",
@@ -223,7 +225,9 @@ const blockShowcaseCaseStudy = {
             {
               "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
               "alt": "Platypus illustration sample",
-              "caption": "imageGrid · item 1"
+              "caption": "imageGrid · item 1",
+              "credit": "Credit on grid item",
+              "creditHref": "https://example.com"
             },
             {
               "src": "/projects/quiz-game/quiz-game-identical-brolga.png",
@@ -259,7 +263,9 @@ const blockShowcaseCaseStudy = {
             {
               "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
               "alt": "Platypus illustration sample",
-              "caption": "imagePair · left item with caption"
+              "caption": "imagePair · left item with caption",
+              "credit": "Credit on pair item",
+              "creditHref": "https://example.com"
             },
             {
               "src": "/projects/quiz-game/quiz-game-identical-brolga.png",

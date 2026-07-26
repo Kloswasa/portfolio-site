@@ -44,8 +44,8 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago survive mostly in period publications, disappearing from use: heritage stays in the museum, and the modern home smells like nowhere in particular.",
-            "Homhuan is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps its source's mechanism or form and updates its use, so a century-old practice can sit in a contemporary space without explaining where it came from."
+            "  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use, stays in the museum, and the modern home smells like nowhere in particular.",
+            "  Homhuan is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of heritage, culture, mechanism or form and modernise its, so it can sits in a contemporary space without explaining where it came from."
           ]
         },
         {
@@ -81,16 +81,35 @@ const homhuanCaseStudy = {
       "titleEm": "then forward",
       "blocks": [
         {
+          "type": "image",
+          "src": "/projects/homhuan/homhuan-tienob.png",
+          "alt": "Tienob sample",
+          "caption": "Tien ob the beginning of the project",
+          "size": "md"
+        },
+        {
           "type": "prose",
           "paragraphs": [
-            "Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob**, lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, into a modern piece. It translated so cleanly it raised a bigger question: if one heritage practice works this well, what would a whole collection look like?",
-            "For the capstone I went back to the source, the golden age of Thai fragrance a century ago, working from period publications rather than modern summaries. Most of what I found described a way of living: how people used scent day to day. That let me translate rituals, not just shapes."
+            "  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob**, lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, into a modern piece. It translated so cleanly it raised a bigger question."
           ]
         },
         {
           "type": "pullquote",
-          "text": "One find had no modern record, a fresh-petal recipe I could not source online then, and still cannot today.",
-          "source": "Research"
+          "text": "if one heritage practice works this well, what would a whole collection look like?",
+          "source": "Reflection"
+        },
+        {
+          "type": "image",
+          "src": "/projects/homhuan/homhuan-research-diagram.png",
+          "alt": "stage",
+          "caption": "The whole method in one view.",
+          "size": "md"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  For the capstone I deeply dive into the heritage sources, and the information from golden age of Thai fragrance a century ago. \n    From the research process the heritage fragrance can categorise into five and 18 types, combining those with most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes."
+          ]
         }
       ]
     },
@@ -102,7 +121,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Every product followed the same move: take a heritage practice, keep the mechanism or form that made it work, drop its original purpose, and update its use for a modern home. The method stays constant; the source changes seven times."
+            "  Every product followed the same move: take a heritage practice, keep the mechanism or form that made it work, drop part its original purpose, and update its use for a modern home. The method stays constant, the source changes seven times."
           ]
         },
         {
@@ -114,7 +133,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Aroma Stove, from the Anglo stove.** The period kitchen's workhorse, kept whole and emptied of its purpose: the heat-and-vessel principle stays, cooking goes, and two vessels split the job of scenting."
+            "**Aroma Stove, from the Anglo stove.** \n  The period kitchen's workhorse, kept whole and emptied of its purpose: the heat-and-vessel principle stays, cooking goes, and two vessels split the job of scenting."
           ]
         },
         {
@@ -123,19 +142,19 @@ const homhuanCaseStudy = {
             {
               "src": "/projects/homhuan/homhuan-product-brass.png",
               "alt": "Aroma stove configured with a brass pan warming solid incense",
-              "caption": "Brass pan over a tea light, dry heat warms solid incense, so scent releases slowly with no flame touching it."
+              "caption": "Brass pan over a tea light, dry heat warms solid incense, so scent releases faster and stronger with no flame touching it."
             },
             {
               "src": "/projects/homhuan/homhuan-product-ceramic.png",
               "alt": "Aroma stove configured with a ceramic pot boiling an aroma bag",
-              "caption": "Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove."
+              "caption": "Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove , mild and long."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "**Reed Diffuser, from the Thai floral mobile.** The woven garland was decorative, perishable, and hung. I kept the pattern's structure and swapped what it is made of, so the heritage form never compromises how well it diffuses."
+            "**Reed Diffuser, from the Thai floral mobile.** \n  The woven garland was decorative, perishable, and hung. the pattern structure is kept and swapped what it is made of, so the heritage form never compromises how well it diffuses."
           ]
         },
         {
@@ -155,13 +174,13 @@ const homhuanCaseStudy = {
         },
         {
           "type": "pullquote",
-          "text": "In the original the flowers were ornament. Here they carry scent.",
+          "text": "In the original the flowers were ornament. Here fragrance beads carry scent.",
           "source": "Reed Diffuser"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "**The one I cut, a hanging perfuming candle.** A favourite: rich source, clean translation. It came from scenting a cabinet with a candle, made compact to hang upside down. I cut it anyway. An inverted candle is a safety risk at home, and the collection already scented enclosed spaces elsewhere. It failed twice, as an object you could live with, and as one the set needed."
+            "**The one I cut, a hanging perfuming candle.** \n  A rich source, clean translation. It came from scenting a cabinet with a candle, made compact to hang upside down. However, it got cut anyway. An inverted candle is a safety risk at home, and the collection already scented enclosed spaces elsewhere. It failed twice, as an object you could live with, and as one the set needed."
           ]
         },
         {
@@ -185,7 +204,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Each product translates a different practice from the same era; the diagram above maps all seven at a glance. Two are shown in the concept, here is the full family, with the decision behind each carried in its caption."
+            "  Each product translates a different practice from the same era; the diagram above maps all seven at a glance. Two are shown in the concept, here is the full family, with the decision behind each carried in its caption."
           ]
         },
         {
@@ -234,7 +253,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Homhuan was designed and produced solo in three months across six materials, ceramic, brass, glass, paper, wax, and wood. One holder shape recurs throughout, varied only by colour and glaze, so seven objects still read as one family."
+            "  Homhuan was designed and produced solo in three months across six materials, ceramic, brass, glass, paper, wax, and wood. One holder shape recurs throughout, varied only by colour and glaze, so seven objects still read as one family."
           ]
         },
         {
@@ -247,7 +266,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The visual language comes from Benjarong porcelain: I flattened its raised botanical relief into a two-dimensional graphic, so the form that shapes the holder also runs through the branding. Each object pairs with its own consumable, seven in all, across five hand-blended signature scents, and the candle was built for refills from the start, so the collection stays in use rather than on a shelf."
+            "  The visual language comes from Benjarong porcelain: I flattened its raised botanical relief into a two-dimensional graphic, so the form that shapes the holder also runs through the branding. Each object pairs with its own consumable, seven in all, across five hand-blended signature scents, and the candle was built for refills from the start, so the collection stays in use rather than on a shelf."
           ]
         }
       ]
@@ -260,7 +279,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The panel singled out the five hand-blended scents for balancing Thai and modern character, where traditional Thai aroma is usually overwhelming."
+            "  The panel singled out the five hand-blended scents for balancing Thai and modern character, where traditional Thai aroma is usually overwhelming."
           ]
         },
         {
@@ -286,7 +305,7 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed."
+            "  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed."
           ]
         },
         {

@@ -87,6 +87,9 @@ export type MajorContentBlock =
       src: string;
       alt: string;
       caption?: string;
+      /** Attribution label. Pair with creditHref for a link. */
+      credit?: string;
+      creditHref?: string;
       /** Omit for full content width. */
       size?: "sm" | "md";
     }
@@ -96,6 +99,8 @@ export type MajorContentBlock =
         src: string;
         alt: string;
         caption: string;
+        credit?: string;
+        creditHref?: string;
       }[];
       /** Omit for full content width. */
       size?: "sm" | "md";
@@ -106,6 +111,8 @@ export type MajorContentBlock =
         src: string;
         alt: string;
         caption?: string;
+        credit?: string;
+        creditHref?: string;
       }[];
     }
   | {

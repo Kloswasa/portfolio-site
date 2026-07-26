@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1120 874" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+<defs>
+  <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+    <path d="M0,0 L9,4.5 L0,9 L2.6,4.5 Z" fill="#B0904E"/>
+  </marker>
+  <style>
+    .name    { font-size:18px; font-weight:600; fill:#201B16; }
+    .desc    { font-size:11.5px; fill:#7A6E5E; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .keep    { font-size:11.5px; fill:#9E3B4E; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .drop    { font-size:11.5px; fill:#9A9083; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .kd-lbl  { font-size:9px; fill:#B0904E; letter-spacing:1.5px; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .colhdr  { font-size:10px; fill:#9A9083; letter-spacing:2.5px; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .title   { font-size:23px; font-weight:600; fill:#201B16; }
+    .sub     { font-size:12.5px; fill:#7A6E5E; letter-spacing:.3px; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .cutname { font-size:17px; font-weight:600; fill:#B4ABA0; text-decoration:line-through; }
+    .cutdesc { font-size:11.5px; fill:#B4ABA0; font-family:'Helvetica Neue',Arial,sans-serif; }
+    .cuttag  { font-size:10px; fill:#9E3B4E; letter-spacing:1.5px; font-family:'Helvetica Neue',Arial,sans-serif; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1120" height="874" fill="#F6F2EA"/>
+<rect x="14" y="14" width="1092" height="846" fill="none" stroke="#B0904E" stroke-opacity="0.5" stroke-width="1"/>
+<text x="60" y="60" class="title">One method, applied seven times</text>
+<text x="60" y="90" class="sub">Keep the mechanism or form&#160;&#160;·&#160;&#160;drop the purpose&#160;&#160;·&#160;&#160;update the use for a modern home</text>
+<text x="60" y="138" class="colhdr">SOURCE PRACTICE&#160;&#160;·&#160;&#160;c.1920</text>
+<text x="560" y="138" class="colhdr" text-anchor="middle">THE TRANSLATION</text>
+<text x="712" y="138" class="colhdr">MODERN OBJECT</text>
+<line x1="60" y1="156" x2="1060" y2="156" stroke="#B0904E" stroke-opacity="0.55" stroke-width="1"/>
+<text x="60" y="198" class="name">Anglo stove</text>
+<text x="60" y="219" class="desc">fuel below, vessel above — the period workhorse</text>
+<text x="712" y="198" class="name">Aroma Stove</text>
+<text x="712" y="219" class="desc">tea light warms a brass pan or ceramic pot</text>
+<text x="560" y="188" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>the heat-and-vessel principle</text>
+<line x1="448" y1="204" x2="668" y2="204" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="226" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>cooking</text>
+<line x1="60" y1="246" x2="1060" y2="246" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="280" class="name">Floral mobile</text>
+<text x="60" y="301" class="desc">banana-tree frame woven with a fresh garland</text>
+<text x="712" y="280" class="name">Reed Diffuser · flat</text>
+<text x="712" y="301" class="desc">paper frame, one thread, piped fragrance beads</text>
+<text x="560" y="270" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>the woven pattern structure</text>
+<line x1="448" y1="286" x2="668" y2="286" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="308" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>the perishable flowers</text>
+<line x1="60" y1="328" x2="1060" y2="328" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="362" class="name">Tian ob candle</text>
+<text x="60" y="383" class="desc">smoke-scented desserts and cloth</text>
+<text x="712" y="362" class="name">Candle + holder</text>
+<text x="712" y="383" class="desc">Benjarong-form holder, built to refill</text>
+<text x="560" y="352" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>scenting by trapped smoke</text>
+<line x1="448" y1="368" x2="668" y2="368" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="390" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>food-only use</text>
+<line x1="60" y1="410" x2="1060" y2="410" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="444" class="name">Mobile silhouette</text>
+<text x="60" y="465" class="desc">the 360° hanging outline of the same mobile</text>
+<text x="712" y="444" class="name">Reed Diffuser · 3D</text>
+<text x="712" y="465" class="desc">die-cut paper around a central bottle</text>
+<text x="560" y="434" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>the hanging silhouette</text>
+<line x1="448" y1="450" x2="668" y2="450" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="472" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>the woven interior</text>
+<line x1="60" y1="492" x2="1060" y2="492" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="526" class="name">Cabinet perfuming</text>
+<text x="60" y="547" class="desc">potpourri and smoke candles scenting wardrobes</text>
+<text x="712" y="526" class="name">Perfuming storage</text>
+<text x="712" y="547" class="desc">desk ceramic; carries the fresh-petal recipe</text>
+<text x="560" y="516" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>scenting an enclosed space</text>
+<line x1="448" y1="532" x2="668" y2="532" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="554" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>hidden-in-the-cabinet use</text>
+<line x1="60" y1="574" x2="1060" y2="574" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="608" class="name">Powder-bead ritual</text>
+<text x="60" y="629" class="desc">beads ground with perfume to personal taste</text>
+<text x="712" y="608" class="name">Miller</text>
+<text x="712" y="629" class="desc">ceramic and brass, grinds a solid perfume</text>
+<text x="560" y="598" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>the miller form and make-your-own use</text>
+<line x1="448" y1="614" x2="668" y2="614" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="636" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>the medicinal masher</text>
+<line x1="60" y1="656" x2="1060" y2="656" stroke="#B0904E" stroke-opacity="0.18" stroke-width="1"/>
+<text x="60" y="690" class="name">Wax lip locket</text>
+<text x="60" y="711" class="desc">solid scent carried on the person</text>
+<text x="712" y="690" class="name">Locket</text>
+<text x="712" y="711" class="desc">solid perfume, paired with the miller</text>
+<text x="560" y="680" class="keep" text-anchor="middle"><tspan class="kd-lbl">KEEP&#160;&#160;</tspan>the locket form and personal carry</text>
+<line x1="448" y1="696" x2="668" y2="696" stroke="#B0904E" stroke-width="1.4" marker-end="url(#arw)"/>
+<text x="560" y="718" class="drop" text-anchor="middle"><tspan class="kd-lbl">DROP&#160;&#160;</tspan>—</text>
+<line x1="60" y1="764" x2="1060" y2="764" stroke="#B0904E" stroke-opacity="0.55" stroke-width="1"/>
+<text x="60" y="810" class="cutname">Cabinet candle</text>
+<text x="60" y="831" class="cutdesc">a candle inverted to hang and scent a cabinet</text>
+<text x="560" y="814" class="cuttag" text-anchor="middle">CUT AT CONCEPT</text>
+<text x="560" y="832" class="cutdesc" text-anchor="middle">safety risk + already covered by another product</text>
+<text x="712" y="810" class="cutname">not produced</text>
+<text x="712" y="831" class="cutdesc">the method has to be able to reject a favourite</text>
+</svg>

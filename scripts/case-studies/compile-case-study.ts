@@ -341,6 +341,21 @@ function parseImageSize(value: string | undefined): "sm" | "md" | undefined {
   return value;
 }
 
+/** Optional image attribution; creditHref requires credit. */
+function parseImageCredit(fields: {
+  credit?: string;
+  creditHref?: string;
+}): { credit?: string; creditHref?: string } {
+  if (fields.creditHref && !fields.credit) {
+    throw new Error("creditHref requires credit");
+  }
+
+  return {
+    ...(fields.credit ? { credit: fields.credit } : {}),
+    ...(fields.creditHref ? { creditHref: fields.creditHref } : {}),
+  };
+}
+
 /** Pull leading `key: value` lines (e.g. size:) off a YAML list block. */
 function splitListBlockMeta(text: string): {
   meta: Record<string, string>;
@@ -371,12 +386,14 @@ function parseImageBlock(text: string): MajorContentBlock {
   }
 
   const size = parseImageSize(fields.size);
+  const credit = parseImageCredit(fields);
 
   return {
     type: "image",
     src: fields.src,
     alt: fields.alt,
     ...(fields.caption ? { caption: fields.caption } : {}),
+    ...credit,
     ...(size ? { size } : {}),
   };
 }
@@ -388,6 +405,8 @@ function parseImagePairBlock(text: string): MajorContentBlock {
     src: string;
     alt: string;
     caption: string;
+    credit?: string;
+    creditHref?: string;
   }>(listText, "imagePair");
 
   for (const item of items) {
@@ -398,7 +417,12 @@ function parseImagePairBlock(text: string): MajorContentBlock {
 
   return {
     type: "imagePair",
-    items,
+    items: items.map((item) => ({
+      src: item.src,
+      alt: item.alt,
+      caption: item.caption,
+      ...parseImageCredit(item),
+    })),
     ...(size ? { size } : {}),
   };
 }
@@ -408,6 +432,8 @@ function parseImageGridBlock(text: string): MajorContentBlock {
     src: string;
     alt: string;
     caption?: string;
+    credit?: string;
+    creditHref?: string;
   }>(text, "imageGrid");
 
   if (items.length < 3) {
@@ -426,6 +452,7 @@ function parseImageGridBlock(text: string): MajorContentBlock {
       src: item.src,
       alt: item.alt,
       ...(item.caption ? { caption: item.caption } : {}),
+      ...parseImageCredit(item),
     })),
   };
 }

@@ -64,6 +64,54 @@ function InlineText({ text }: { text: string }) {
   );
 }
 
+function ImageCredit({
+  credit,
+  creditHref,
+}: {
+  credit?: string;
+  creditHref?: string;
+}) {
+  if (!credit) return null;
+
+  if (creditHref) {
+    return (
+      <a
+        className="cs-major__image-credit"
+        href={creditHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {credit}
+      </a>
+    );
+  }
+
+  return <span className="cs-major__image-credit">{credit}</span>;
+}
+
+function ImageFigcaption({
+  caption,
+  credit,
+  creditHref,
+  className,
+}: {
+  caption?: string;
+  credit?: string;
+  creditHref?: string;
+  className: string;
+}) {
+  if (!caption && !credit) return null;
+
+  return (
+    <figcaption className={className}>
+      {caption ? (
+        <span className="cs-major__image-caption-text">{caption}</span>
+      ) : null}
+      <ImageCredit credit={credit} creditHref={creditHref} />
+    </figcaption>
+  );
+}
+
 function ProseParagraph({ paragraph }: { paragraph: string }) {
   const lines = paragraph.split("\n").filter((line) => line.trim().length > 0);
 
@@ -298,9 +346,12 @@ function Block({ block }: { block: MajorContentBlock }) {
             className="cs-major__image-img"
             loading="lazy"
           />
-          {block.caption ? (
-            <figcaption className="cs-major__image-caption">{block.caption}</figcaption>
-          ) : null}
+          <ImageFigcaption
+            caption={block.caption}
+            credit={block.credit}
+            creditHref={block.creditHref}
+            className="cs-major__image-caption"
+          />
         </figure>
       );
 
@@ -324,9 +375,12 @@ function Block({ block }: { block: MajorContentBlock }) {
                   className="cs-major__image-pair-img"
                   loading="lazy"
                 />
-                <figcaption className="cs-major__image-pair-caption">
-                  {item.caption}
-                </figcaption>
+                <ImageFigcaption
+                  caption={item.caption}
+                  credit={item.credit}
+                  creditHref={item.creditHref}
+                  className="cs-major__image-pair-caption"
+                />
               </div>
             ))}
           </div>
@@ -346,11 +400,12 @@ function Block({ block }: { block: MajorContentBlock }) {
                   className="cs-major__image-grid-img"
                   loading="lazy"
                 />
-                {item.caption ? (
-                  <figcaption className="cs-major__image-grid-caption">
-                    {item.caption}
-                  </figcaption>
-                ) : null}
+                <ImageFigcaption
+                  caption={item.caption}
+                  credit={item.credit}
+                  creditHref={item.creditHref}
+                  className="cs-major__image-grid-caption"
+                />
               </div>
             ))}
           </div>

@@ -26,9 +26,9 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `componentGrid` | YAML list | Component inventory cards (`label`, `title`, `count`, `variant`: primary \| dark \| mid \| deepest) |
 | `outcomes` | YAML list | Result metrics (`value`, `label`, `body`) |
 | `reflections` | `-` list | Numbered takeaways |
-| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `size`: sm \| md) |
-| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional block `size`: sm \| md) |
-| `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`) |
+| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md) |
+| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md) |
+| `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`) |
 | `video` | key-value | Video embed (`src`, `poster`, `alt`, `caption`) |
 
 ---
@@ -68,6 +68,8 @@ variant: accent
 src: /projects/example/shot.png
 alt: Description
 caption: Optional caption
+credit: Photo by Jane Doe
+creditHref: https://example.com/photo
 size: sm
 
 ## video
@@ -80,6 +82,8 @@ caption: Caption under the player
 
 `size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures.
 
+Optional `credit` is an attribution line under the caption. Add `creditHref` to make it a link (opens in a new tab). `creditHref` requires `credit`.
+
 ```markdown
 ## imagePair
 
@@ -87,6 +91,8 @@ size: sm
 - src: /projects/example/a.png
   alt: Left
   caption: Left caption
+  credit: Source A
+  creditHref: https://example.com/a
 - src: /projects/example/b.png
   alt: Right
   caption: Right caption
@@ -119,6 +125,8 @@ Optional `image` + `imageAlt` render a small illustration inside the finding car
 - src: /projects/example/a.png
   alt: First
   caption: Optional
+  credit: Photo credit
+  creditHref: https://example.com
 - src: /projects/example/b.png
   alt: Second
 - src: /projects/example/c.png

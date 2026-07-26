@@ -129,6 +129,8 @@ Craft sections showcase visual output, image pairs, component inventories, and t
 src: /projects/quiz-game/quiz-game-quiz-diagram.png
 alt: Sample single image block showing a quiz flow diagram
 caption: image block, full-width figure with optional caption.
+credit: Sample credit link
+creditHref: https://example.com
 
 ## image
 
@@ -161,6 +163,8 @@ size: sm
 - src: /projects/quiz-game/quiz-game-identical-platypus.png
   alt: Platypus illustration sample
   caption: imageGrid · item 1
+  credit: Credit on grid item
+  creditHref: https://example.com
 - src: /projects/quiz-game/quiz-game-identical-brolga.png
   alt: Brolga illustration sample
   caption: imageGrid · item 2
@@ -183,6 +187,8 @@ size: sm
 - src: /projects/quiz-game/quiz-game-identical-platypus.png
   alt: Platypus illustration sample
   caption: imagePair · left item with caption
+  credit: Credit on pair item
+  creditHref: https://example.com
 - src: /projects/quiz-game/quiz-game-identical-brolga.png
   alt: Brolga illustration sample
   caption: imagePair · right item with caption
