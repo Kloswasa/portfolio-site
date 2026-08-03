@@ -1,4 +1,13 @@
 export function TokenHierarchyArtifact() {
+  const ink = (pct: number) =>
+    `color-mix(in srgb, var(--color-text-inverse) ${pct}%, transparent)`;
+  const accent = (pct: number) =>
+    `color-mix(in srgb, var(--color-accent) ${pct}%, transparent)`;
+  const mid = (pct: number) =>
+    `color-mix(in srgb, var(--color-tertiary) ${pct}%, transparent)`;
+  const soft = (pct: number) =>
+    `color-mix(in srgb, var(--color-border-strong) ${pct}%, transparent)`;
+
   const primitive = [
     "indigo-600",
     "ivory-50",
@@ -29,13 +38,13 @@ export function TokenHierarchyArtifact() {
         { x: 380, label: "SEMANTIC" },
         { x: 640, label: "COMPONENT" },
       ].map(({ x, label }) => (
-        <text key={label} x={x} y="28" fontFamily="var(--font-mono)" fontSize="9" fill="rgba(255,255,255,0.3)" textAnchor="middle" letterSpacing="1">
+        <text key={label} x={x} y="28" fontFamily="var(--font-mono)" fontSize="9" fill={ink(30)} textAnchor="middle" letterSpacing="1">
           {label}
         </text>
       ))}
       {primitive.map((token, i) => {
         const y = 40 + i * 42;
-        const accent = i < 3;
+        const isAccent = i < 3;
         return (
           <g key={token}>
             <rect
@@ -44,11 +53,18 @@ export function TokenHierarchyArtifact() {
               width="160"
               height="32"
               rx="1"
-              fill={accent ? "rgba(232,168,32,0.12)" : "rgba(255,255,255,0.06)"}
-              stroke={accent ? "rgba(232,168,32,0.35)" : "rgba(255,255,255,0.15)"}
+              fill={isAccent ? accent(12) : ink(6)}
+              stroke={isAccent ? accent(35) : ink(15)}
               strokeWidth="0.7"
             />
-            <text x="120" y={y + 20} fontFamily="var(--font-mono)" fontSize="9" fill={accent ? "rgba(232,168,32,0.8)" : "rgba(255,255,255,0.4)"} textAnchor="middle">
+            <text
+              x="120"
+              y={y + 20}
+              fontFamily="var(--font-mono)"
+              fontSize="9"
+              fill={isAccent ? accent(80) : ink(40)}
+              textAnchor="middle"
+            >
               {token}
             </text>
             <rect
@@ -57,11 +73,11 @@ export function TokenHierarchyArtifact() {
               width="160"
               height="32"
               rx="1"
-              fill="rgba(110,155,207,0.15)"
-              stroke="rgba(110,155,207,0.4)"
+              fill={mid(15)}
+              stroke={mid(40)}
               strokeWidth="0.7"
             />
-            <text x="380" y={y + 30} fontFamily="var(--font-mono)" fontSize="9" fill="rgba(181,206,233,0.85)" textAnchor="middle">
+            <text x="380" y={y + 30} fontFamily="var(--font-mono)" fontSize="9" fill={soft(85)} textAnchor="middle">
               {semantic[i]}
             </text>
             <rect
@@ -70,18 +86,18 @@ export function TokenHierarchyArtifact() {
               width="160"
               height="32"
               rx="1"
-              fill="rgba(255,255,255,0.06)"
-              stroke="rgba(255,255,255,0.2)"
+              fill={ink(6)}
+              stroke={ink(20)}
               strokeWidth="0.7"
             />
-            <text x="640" y={y + 40} fontFamily="var(--font-mono)" fontSize="9" fill="rgba(255,255,255,0.5)" textAnchor="middle">
+            <text x="640" y={y + 40} fontFamily="var(--font-mono)" fontSize="9" fill={ink(50)} textAnchor="middle">
               {component[i]}
             </text>
           </g>
         );
       })}
-      <line x1="260" y1="40" x2="260" y2="250" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="4,5" />
-      <line x1="520" y1="40" x2="520" y2="250" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="4,5" />
+      <line x1="260" y1="40" x2="260" y2="250" stroke={ink(7)} strokeWidth="1" strokeDasharray="4,5" />
+      <line x1="520" y1="40" x2="520" y2="250" stroke={ink(7)} strokeWidth="1" strokeDasharray="4,5" />
     </svg>
   );
 }

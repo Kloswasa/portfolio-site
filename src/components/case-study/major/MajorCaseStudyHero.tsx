@@ -16,23 +16,48 @@ function HeroBotanicalSvg() {
       className="max-w-full"
       aria-hidden
     >
-      <circle cx="450" cy="300" r="220" fill="none" stroke="white" strokeWidth="0.7" opacity="0.4" />
-      <circle cx="450" cy="300" r="160" fill="none" stroke="white" strokeWidth="0.5" opacity="0.3" />
-      <circle cx="450" cy="300" r="100" fill="none" stroke="white" strokeWidth="0.4" opacity="0.22" />
-      <circle cx="450" cy="300" r="50" fill="none" stroke="white" strokeWidth="0.4" opacity="0.15" />
-      <line x1="230" y1="300" x2="670" y2="300" stroke="white" strokeWidth="0.4" opacity="0.2" />
-      <line x1="450" y1="80" x2="450" y2="520" stroke="white" strokeWidth="0.4" opacity="0.2" />
-      <path d="M450 80 A220 220 0 0 1 670 300" stroke="white" strokeWidth="1.4" fill="none" opacity="0.55" />
-      <circle cx="670" cy="300" r="5" fill="white" opacity="0.5" />
+      <circle cx="450" cy="300" r="220" fill="none" stroke="var(--color-text-inverse)" strokeWidth="0.7" opacity="0.4" />
+      <circle cx="450" cy="300" r="160" fill="none" stroke="var(--color-text-inverse)" strokeWidth="0.5" opacity="0.3" />
+      <circle cx="450" cy="300" r="100" fill="none" stroke="var(--color-text-inverse)" strokeWidth="0.4" opacity="0.22" />
+      <circle cx="450" cy="300" r="50" fill="none" stroke="var(--color-text-inverse)" strokeWidth="0.4" opacity="0.15" />
+      <line x1="230" y1="300" x2="670" y2="300" stroke="var(--color-text-inverse)" strokeWidth="0.4" opacity="0.2" />
+      <line x1="450" y1="80" x2="450" y2="520" stroke="var(--color-text-inverse)" strokeWidth="0.4" opacity="0.2" />
+      <path d="M450 80 A220 220 0 0 1 670 300" stroke="var(--color-text-inverse)" strokeWidth="1.4" fill="none" opacity="0.55" />
+      <circle cx="670" cy="300" r="5" fill="var(--color-text-inverse)" opacity="0.5" />
       <path
         d="M700 580 C690 520, 680 460, 690 380 C700 300, 720 260, 710 180"
-        stroke="rgba(255,255,255,0.35)"
+        stroke="color-mix(in srgb, var(--color-text-inverse) 35%, transparent)"
         strokeWidth="1"
         fill="none"
       />
-      <ellipse cx="678" cy="320" rx="20" ry="13" transform="rotate(-25 678 320)" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" strokeWidth="0.7" />
-      <ellipse cx="660" cy="338" rx="16" ry="10" transform="rotate(-55 660 338)" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" strokeWidth="0.7" />
-      <circle cx="710" cy="182" r="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" strokeWidth="0.7" />
+      <ellipse
+        cx="678"
+        cy="320"
+        rx="20"
+        ry="13"
+        transform="rotate(-25 678 320)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 12%, transparent)"
+        stroke="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
+        strokeWidth="0.7"
+      />
+      <ellipse
+        cx="660"
+        cy="338"
+        rx="16"
+        ry="10"
+        transform="rotate(-55 660 338)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 10%, transparent)"
+        stroke="color-mix(in srgb, var(--color-text-inverse) 25%, transparent)"
+        strokeWidth="0.7"
+      />
+      <circle
+        cx="710"
+        cy="182"
+        r="12"
+        fill="color-mix(in srgb, var(--color-text-inverse) 10%, transparent)"
+        stroke="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
+        strokeWidth="0.7"
+      />
     </svg>
   );
 }

@@ -6,9 +6,80 @@ export type SketchFactory = (
   h: number,
 ) => SketchFrame;
 
-function resolveSketchBg(ctx: CanvasRenderingContext2D): string {
+type Rgb = readonly [number, number, number];
+
+type SketchColors = {
+  bg: string;
+  trail: (alpha: number) => string;
+  accent: (alpha: number) => string;
+  soft: (alpha: number) => string;
+  mid: (alpha: number) => string;
+  light: (alpha: number) => string;
+};
+
+function parseCssColor(raw: string): Rgb | null {
+  const value = raw.trim();
+  if (!value) return null;
+
+  const hex = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(value);
+  if (hex) {
+    const h = hex[1];
+    if (h.length === 3) {
+      return [
+        Number.parseInt(h[0] + h[0], 16),
+        Number.parseInt(h[1] + h[1], 16),
+        Number.parseInt(h[2] + h[2], 16),
+      ];
+    }
+    return [
+      Number.parseInt(h.slice(0, 2), 16),
+      Number.parseInt(h.slice(2, 4), 16),
+      Number.parseInt(h.slice(4, 6), 16),
+    ];
+  }
+
+  const rgb =
+    /^rgba?\(\s*([\d.]+)(?:\s*,\s*|\s+)([\d.]+)(?:\s*,\s*|\s+)([\d.]+)/i.exec(
+      value,
+    );
+  if (rgb) {
+    return [
+      Number.parseFloat(rgb[1]),
+      Number.parseFloat(rgb[2]),
+      Number.parseFloat(rgb[3]),
+    ];
+  }
+
+  return null;
+}
+
+function readCssColor(styles: CSSStyleDeclaration, varName: string): Rgb {
+  const parsed = parseCssColor(styles.getPropertyValue(varName));
+  if (parsed) return parsed;
+  // Fallback only if tokens failed to load — matches --color-header-bg light
+  return [4, 31, 98];
+}
+
+function rgba(rgb: Rgb, alpha: number): string {
+  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
+}
+
+function resolveSketchColors(): SketchColors {
   const styles = getComputedStyle(document.documentElement);
-  return styles.getPropertyValue("--color-header-bg").trim() || "#0d1b3e";
+  const bgRgb = readCssColor(styles, "--color-header-bg");
+  const accentRgb = readCssColor(styles, "--color-accent");
+  const softRgb = readCssColor(styles, "--color-border-strong");
+  const midRgb = readCssColor(styles, "--color-tertiary");
+  const lightRgb = readCssColor(styles, "--color-primary-muted");
+
+  return {
+    bg: `rgb(${bgRgb[0]}, ${bgRgb[1]}, ${bgRgb[2]})`,
+    trail: (alpha) => rgba(bgRgb, alpha),
+    accent: (alpha) => rgba(accentRgb, alpha),
+    soft: (alpha) => rgba(softRgb, alpha),
+    mid: (alpha) => rgba(midRgb, alpha),
+    light: (alpha) => rgba(lightRgb, alpha),
+  };
 }
 
 export const SKETCHES: Record<string, SketchFactory> = {
@@ -20,8 +91,8 @@ export const SKETCHES: Record<string, SketchFactory> = {
     const c = (Math.min(w, h) * 0.5) / Math.sqrt(max) * 1.05;
     let n = 0;
     return (t) => {
-      const bg = resolveSketchBg(ctx);
-      ctx.fillStyle = bg;
+      const colors = resolveSketchColors();
+      ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, w, h);
       if (n < max) n += 7;
       for (let i = 0; i < n; i++) {
@@ -34,8 +105,8 @@ export const SKETCHES: Record<string, SketchFactory> = {
         ctx.arc(x, y, rad, 0, 6.283);
         ctx.fillStyle =
           i % 29 === 0
-            ? "rgba(232, 168, 32, 0.9)"
-            : `rgba(181, 206, 233, ${0.25 + 0.55 * (i / n)})`;
+            ? colors.accent(0.9)
+            : colors.soft(0.25 + 0.55 * (i / n));
         ctx.fill();
       }
     };
@@ -52,11 +123,12 @@ export const SKETCHES: Record<string, SketchFactory> = {
     const fld = (x: number, y: number, t: number) =>
       Math.sin(x * 0.008 + Math.cos(y * 0.01 + t * 0.0003)) * Math.PI +
       Math.cos(y * 0.009 - t * 0.0002) * Math.PI;
-    const bg = resolveSketchBg(ctx);
-    ctx.fillStyle = bg;
+    const colors = resolveSketchColors();
+    ctx.fillStyle = colors.bg;
     ctx.fillRect(0, 0, w, h);
     return (t) => {
-      ctx.fillStyle = "rgba(13, 27, 62, 0.05)";
+      const frame = resolveSketchColors();
+      ctx.fillStyle = frame.trail(0.05);
       ctx.fillRect(0, 0, w, h);
       for (const p of ps) {
         const a = fld(p.x, p.y, t);
@@ -73,7 +145,7 @@ export const SKETCHES: Record<string, SketchFactory> = {
         ctx.beginPath();
         ctx.moveTo(p.px, p.py);
         ctx.lineTo(p.x, p.y);
-        ctx.strokeStyle = "rgba(181, 206, 233, 0.32)";
+        ctx.strokeStyle = frame.soft(0.32);
         ctx.lineWidth = 0.8;
         ctx.stroke();
       }
@@ -90,8 +162,8 @@ export const SKETCHES: Record<string, SketchFactory> = {
       s: Math.random(),
     }));
     return (t) => {
-      const bg = resolveSketchBg(ctx);
-      ctx.fillStyle = bg;
+      const colors = resolveSketchColors();
+      ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, w, h);
       for (const p of ps) {
         p.x += p.vx;
@@ -108,7 +180,7 @@ export const SKETCHES: Record<string, SketchFactory> = {
             ctx.beginPath();
             ctx.moveTo(ps[i].x, ps[i].y);
             ctx.lineTo(ps[j].x, ps[j].y);
-            ctx.strokeStyle = `rgba(110, 155, 207, ${0.25 * (1 - d / 92)})`;
+            ctx.strokeStyle = colors.mid(0.25 * (1 - d / 92));
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -118,11 +190,11 @@ export const SKETCHES: Record<string, SketchFactory> = {
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.3, 0, 6.283);
         ctx.fillStyle =
-          p.s > 0.9 ? "rgba(232, 168, 32, 0.95)" : "rgba(220, 232, 245, 0.7)";
+          p.s > 0.9 ? colors.accent(0.95) : colors.light(0.7);
         ctx.fill();
         if (p.s > 0.9) {
           const tw = 2 + Math.sin(t * 0.003 + p.x) * 1.4;
-          ctx.strokeStyle = "rgba(232, 168, 32, 0.55)";
+          ctx.strokeStyle = colors.accent(0.55);
           ctx.lineWidth = 0.6;
           ctx.beginPath();
           ctx.moveTo(p.x - tw - 3, p.y);
@@ -140,24 +212,25 @@ export const SKETCHES: Record<string, SketchFactory> = {
       { x: w * 0.32, y: h * 0.4 },
       { x: w * 0.7, y: h * 0.62 },
     ];
-    const bg = resolveSketchBg(ctx);
-    ctx.fillStyle = bg;
+    const colors = resolveSketchColors();
+    ctx.fillStyle = colors.bg;
     ctx.fillRect(0, 0, w, h);
     return (t) => {
-      ctx.fillStyle = "rgba(13, 27, 62, 0.08)";
+      const frame = resolveSketchColors();
+      ctx.fillStyle = frame.trail(0.08);
       ctx.fillRect(0, 0, w, h);
       for (const s of src) {
         for (let k = 0; k < 7; k++) {
           const r = (t * 0.04 + k * 26) % 170;
           ctx.beginPath();
           ctx.arc(s.x, s.y, r, 0, 6.283);
-          ctx.strokeStyle = `rgba(181, 206, 233, ${0.42 * (1 - r / 170)})`;
+          ctx.strokeStyle = frame.soft(0.42 * (1 - r / 170));
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
         ctx.beginPath();
         ctx.arc(s.x, s.y, 2, 0, 6.283);
-        ctx.fillStyle = "rgba(232, 168, 32, 0.7)";
+        ctx.fillStyle = frame.accent(0.7);
         ctx.fill();
       }
     };
@@ -166,10 +239,10 @@ export const SKETCHES: Record<string, SketchFactory> = {
   bloom(ctx, w, h) {
     const base = Math.min(w, h) * 0.22;
     return (t) => {
-      const bg = resolveSketchBg(ctx);
-      ctx.fillStyle = bg;
+      const colors = resolveSketchColors();
+      ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, w, h);
-      ctx.strokeStyle = "rgba(181, 206, 233, 0.5)";
+      ctx.strokeStyle = colors.soft(0.5);
 
       function branch(
         x: number,
@@ -190,7 +263,7 @@ export const SKETCHES: Record<string, SketchFactory> = {
         if (depth <= 2) {
           ctx.beginPath();
           ctx.arc(x2, y2, 2, 0, 6.283);
-          ctx.fillStyle = "rgba(232, 168, 32, 0.6)";
+          ctx.fillStyle = colors.accent(0.6);
           ctx.fill();
         }
         branch(x2, y2, len * 0.72, ang - 0.5 + sway, depth - 1);
@@ -212,19 +285,19 @@ export const SKETCHES: Record<string, SketchFactory> = {
       { r: R * 0.43, sp: 0.0003 },
     ];
     return (t) => {
-      const bg = resolveSketchBg(ctx);
-      ctx.fillStyle = bg;
+      const colors = resolveSketchColors();
+      ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, w, h);
       for (const o of orb) {
         ctx.beginPath();
         ctx.arc(cx, cy, o.r, 0, 6.283);
-        ctx.strokeStyle = "rgba(110, 155, 207, 0.22)";
+        ctx.strokeStyle = colors.mid(0.22);
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
       ctx.beginPath();
       ctx.arc(cx, cy, 4, 0, 6.283);
-      ctx.fillStyle = "rgba(232, 168, 32, 0.9)";
+      ctx.fillStyle = colors.accent(0.9);
       ctx.fill();
       orb.forEach((o, i) => {
         const a = t * o.sp + i * 1.7;
@@ -232,12 +305,12 @@ export const SKETCHES: Record<string, SketchFactory> = {
         const y = cy + Math.sin(a) * o.r;
         ctx.beginPath();
         ctx.arc(x, y, 2.6 + i * 0.5, 0, 6.283);
-        ctx.fillStyle = "rgba(220, 232, 245, 0.85)";
+        ctx.fillStyle = colors.light(0.85);
         ctx.fill();
         const ma = a * 3.4;
         ctx.beginPath();
         ctx.arc(x + Math.cos(ma) * 8, y + Math.sin(ma) * 8, 1.2, 0, 6.283);
-        ctx.fillStyle = "rgba(181, 206, 233, 0.6)";
+        ctx.fillStyle = colors.soft(0.6);
         ctx.fill();
       });
     };

@@ -72,7 +72,7 @@ function FernIllustration({ className }: { className?: string }) {
         y="496"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         PTERIDIUM · STUDY I
@@ -123,7 +123,7 @@ function StarChartIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         NOCTURNE · PLATE VII
@@ -138,19 +138,19 @@ function LunaMothIllustration({ className }: { className?: string }) {
       <g stroke="var(--color-border-strong)" strokeWidth="1" opacity="0.6">
         <path
           d="M200 200 C140 150 70 170 60 240 C52 300 120 320 200 280"
-          fill="rgba(181,206,233,0.08)"
+          fill="color-mix(in srgb, var(--color-border-strong) 8%, transparent)"
         />
         <path
           d="M200 200 C260 150 330 170 340 240 C348 300 280 320 200 280"
-          fill="rgba(181,206,233,0.08)"
+          fill="color-mix(in srgb, var(--color-border-strong) 8%, transparent)"
         />
         <path
           d="M200 285 C150 320 110 380 130 440 C150 470 195 430 200 360"
-          fill="rgba(181,206,233,0.06)"
+          fill="color-mix(in srgb, var(--color-border-strong) 6%, transparent)"
         />
         <path
           d="M200 285 C250 320 290 380 270 440 C250 470 205 430 200 360"
-          fill="rgba(181,206,233,0.06)"
+          fill="color-mix(in srgb, var(--color-border-strong) 6%, transparent)"
         />
       </g>
       <g stroke="var(--color-primary-muted)" strokeWidth="0.5" opacity="0.5" fill="none">
@@ -181,7 +181,7 @@ function LunaMothIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         ACTIAS · STUDY III
@@ -204,7 +204,7 @@ function NautilusIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         NAUTILUS · ϕ SPIRAL
@@ -220,7 +220,7 @@ function MagnoliaIllustration({ className }: { className?: string }) {
         stroke="var(--color-border-strong)"
         strokeWidth="1"
         opacity="0.6"
-        fill="rgba(181,206,233,0.06)"
+        fill="color-mix(in srgb, var(--color-border-strong) 6%, transparent)"
       >
         <path d="M200 250 C160 200 150 130 200 90 C250 130 240 200 200 250Z" />
         <path d="M200 250 C150 230 110 180 120 120 C180 140 210 200 200 250Z" />
@@ -241,7 +241,7 @@ function MagnoliaIllustration({ className }: { className?: string }) {
         rx="22"
         ry="13"
         transform="rotate(-25,160,360)"
-        fill="rgba(181,206,233,0.12)"
+        fill="color-mix(in srgb, var(--color-border-strong) 12%, transparent)"
         stroke="var(--color-border-strong)"
         strokeWidth="0.8"
         opacity="0.5"
@@ -257,7 +257,7 @@ function MagnoliaIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         MAGNOLIA · STUDY V
@@ -270,10 +270,10 @@ function CloverIllustration({ className }: { className?: string }) {
   const cx = 200;
   const cy = 218;
 
-  const leafFill = "rgba(181,206,233,0.1)";
+  const leafFill = "color-mix(in srgb, var(--color-border-strong) 10%, transparent)";
   const leafStroke = "var(--color-border-strong)";
   const veinStroke = "var(--color-primary-muted)";
-  const chevronFill = "rgba(255,255,255,0.14)";
+  const chevronFill = "color-mix(in srgb, var(--color-text-inverse) 14%, transparent)";
 
   const leafPath =
     "M0 8 C-30 6,-52 -16,-56 -50 C-54 -74,-36 -92,-16 -98 C-6 -100,-2 -96,0 -88 C2 -96,6 -100,16 -98 C36 -92,54 -74,56 -50 C52 -16,30 6,0 8Z";
@@ -285,7 +285,7 @@ function CloverIllustration({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
       <g transform={`translate(${cx} ${cy})`}>
-        <g opacity="0.18" fill="rgba(0,0,0,0.35)">
+        <g opacity="0.18" fill="color-mix(in srgb, var(--color-header-bg) 35%, transparent)">
           {rotations.map((angle) => (
             <path
               key={`shadow-${angle}`}
@@ -327,7 +327,7 @@ function CloverIllustration({ className }: { className?: string }) {
           </g>
         ))}
 
-        <circle cx="0" cy="0" r="4.5" fill="rgba(255,255,255,0.22)" />
+        <circle cx="0" cy="0" r="4.5" fill="color-mix(in srgb, var(--color-text-inverse) 22%, transparent)" />
         <circle cx="0" cy="0" r="2.2" fill="var(--color-accent)" opacity="0.85" />
       </g>
 
@@ -345,7 +345,7 @@ function CloverIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         TRIFOLIUM · FORTUNATUM
@@ -426,7 +426,7 @@ function DandelionIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         TARAXACUM · DISPERSAL
@@ -457,7 +457,7 @@ function LotusIllustration({ className }: { className?: string }) {
         rx="48"
         ry="18"
         transform="rotate(-12 130 340)"
-        fill="rgba(181,206,233,0.08)"
+        fill="color-mix(in srgb, var(--color-border-strong) 8%, transparent)"
         stroke="var(--color-border-strong)"
         strokeWidth="0.9"
         opacity="0.55"
@@ -472,7 +472,7 @@ function LotusIllustration({ className }: { className?: string }) {
       <g
         stroke="var(--color-border-strong)"
         strokeWidth="0.9"
-        fill="rgba(181,206,233,0.06)"
+        fill="color-mix(in srgb, var(--color-border-strong) 6%, transparent)"
         opacity="0.65"
       >
         {Array.from({ length: outerPetalCount }).map((_, i) => {
@@ -489,7 +489,7 @@ function LotusIllustration({ className }: { className?: string }) {
       <g
         stroke="var(--color-border-strong)"
         strokeWidth="0.8"
-        fill="rgba(181,206,233,0.1)"
+        fill="color-mix(in srgb, var(--color-border-strong) 10%, transparent)"
         opacity="0.7"
       >
         {Array.from({ length: innerPetalCount }).map((_, i) => {
@@ -531,7 +531,7 @@ function LotusIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         NELUMBO · NUCIFERA
@@ -551,7 +551,7 @@ function WaxFlowerBloom({ x, y, scale = 1 }: { x: number; y: number; scale?: num
           rx="4.5"
           ry="7"
           transform={`rotate(${i * 72})`}
-          fill="rgba(181,206,233,0.1)"
+          fill="color-mix(in srgb, var(--color-border-strong) 10%, transparent)"
           stroke="var(--color-border-strong)"
           strokeWidth="0.7"
           opacity="0.7"
@@ -606,7 +606,7 @@ function WaxFlowerIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         CHAMELAUCIUM · UNCINATUM
@@ -645,7 +645,7 @@ function ChrysanthemumIllustration({ className }: { className?: string }) {
               rx={layer.width}
               ry={layer.len / 2}
               transform={`rotate(${angle} ${cx} ${cy})`}
-              fill="rgba(181,206,233,0.06)"
+              fill="color-mix(in srgb, var(--color-border-strong) 6%, transparent)"
               stroke="var(--color-border-strong)"
               strokeWidth="0.7"
               opacity={layer.opacity}
@@ -657,7 +657,7 @@ function ChrysanthemumIllustration({ className }: { className?: string }) {
         cx={cx}
         cy={cy}
         r="8"
-        fill="rgba(181,206,233,0.12)"
+        fill="color-mix(in srgb, var(--color-border-strong) 12%, transparent)"
         stroke="var(--color-border-strong)"
         strokeWidth="0.8"
         opacity="0.6"
@@ -668,7 +668,7 @@ function ChrysanthemumIllustration({ className }: { className?: string }) {
         y="490"
         fontFamily={MONO}
         fontSize="8"
-        fill="rgba(255,255,255,0.3)"
+        fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
         letterSpacing="2"
       >
         CHRYSANTHEMUM · MORIFOLIUM
@@ -686,7 +686,7 @@ function ForgetMeNotFlower({ x, y, scale = 1 }: { x: number; y: number; scale?: 
           cx={Math.cos((i / 5) * Math.PI * 2 - Math.PI / 2) * 5}
           cy={Math.sin((i / 5) * Math.PI * 2 - Math.PI / 2) * 5}
           r="4.2"
-          fill="rgba(181,206,233,0.22)"
+          fill="color-mix(in srgb, var(--color-border-strong) 22%, transparent)"
           stroke="var(--color-border-strong)"
           strokeWidth="0.85"
           opacity="0.9"
@@ -702,7 +702,7 @@ function ForgetMeNotLeaf({ x, y, rot }: { x: number; y: number; rot: number }) {
     <path
       d="M0 0 C-8 -10 -14 -4 -10 4 C-6 10 0 14 0 14 C0 14 6 10 10 4 C14 -4 8 -10 0 0"
       transform={`translate(${x} ${y}) rotate(${rot}) scale(1)`}
-      fill="rgba(181,206,233,0.14)"
+      fill="color-mix(in srgb, var(--color-border-strong) 14%, transparent)"
       stroke="var(--color-border-strong)"
       strokeWidth="0.85"
       opacity="0.78"

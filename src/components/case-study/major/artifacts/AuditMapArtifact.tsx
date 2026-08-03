@@ -1,9 +1,14 @@
 export function AuditMapArtifact() {
+  const ink = (pct: number) =>
+    `color-mix(in srgb, var(--color-text-inverse) ${pct}%, transparent)`;
+  const accent = (pct: number) =>
+    `color-mix(in srgb, var(--color-accent) ${pct}%, transparent)`;
+
   return (
     <svg viewBox="0 0 800 360" height="360" xmlns="http://www.w3.org/2000/svg" className="block w-full" aria-hidden>
       <rect width="800" height="360" fill="var(--color-header-bg)" />
       {[60, 120, 180, 240, 300].map((y) => (
-        <line key={y} x1="0" y1={y} x2="800" y2={y} stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+        <line key={y} x1="0" y1={y} x2="800" y2={y} stroke={ink(6)} strokeWidth="1" />
       ))}
       {[
         { x: 90, label: "ONBOARDING" },
@@ -12,7 +17,7 @@ export function AuditMapArtifact() {
         { x: 510, label: "RESULTS" },
         { x: 650, label: "SHARING" },
       ].map(({ x, label }) => (
-        <text key={label} x={x} y="30" fontFamily="var(--font-mono)" fontSize="9" fill="rgba(255,255,255,0.3)" textAnchor="middle" letterSpacing="1">
+        <text key={label} x={x} y="30" fontFamily="var(--font-mono)" fontSize="9" fill={ink(30)} textAnchor="middle" letterSpacing="1">
           {label}
         </text>
       ))}
@@ -21,7 +26,7 @@ export function AuditMapArtifact() {
         { y: 155, label: "Playful" },
         { y: 215, label: "Community" },
       ].map(({ y, label }) => (
-        <text key={label} x="10" y={y} fontFamily="var(--font-mono)" fontSize="9" fill="rgba(255,255,255,0.25)" letterSpacing="0.5">
+        <text key={label} x="10" y={y} fontFamily="var(--font-mono)" fontSize="9" fill={ink(25)} letterSpacing="0.5">
           {label}
         </text>
       ))}
@@ -49,8 +54,8 @@ export function AuditMapArtifact() {
             width={w}
             height={h}
             rx="1"
-            fill={conflict ? "rgba(232,168,32,0.15)" : "rgba(255,255,255,0.06)"}
-            stroke={conflict ? "rgba(232,168,32,0.4)" : "rgba(255,255,255,0.15)"}
+            fill={conflict ? accent(15) : ink(6)}
+            stroke={conflict ? accent(40) : ink(15)}
             strokeWidth="0.7"
           />
           <text
@@ -58,19 +63,19 @@ export function AuditMapArtifact() {
             y={y + h / 2 + 4}
             fontFamily="var(--font-mono)"
             fontSize="8"
-            fill={conflict ? "rgba(232,168,32,0.8)" : "rgba(255,255,255,0.45)"}
+            fill={conflict ? accent(80) : ink(45)}
             textAnchor="middle"
           >
             {text}
           </text>
         </g>
       ))}
-      <rect x="50" y="315" width="12" height="12" rx="1" fill="rgba(232,168,32,0.15)" stroke="rgba(232,168,32,0.4)" strokeWidth="0.7" />
-      <text x="68" y="325" fontFamily="var(--font-mono)" fontSize="8" fill="rgba(255,255,255,0.3)" letterSpacing="0.5">
+      <rect x="50" y="315" width="12" height="12" rx="1" fill={accent(15)} stroke={accent(40)} strokeWidth="0.7" />
+      <text x="68" y="325" fontFamily="var(--font-mono)" fontSize="8" fill={ink(30)} letterSpacing="0.5">
         Friction / mismatch
       </text>
-      <rect x="220" y="315" width="12" height="12" rx="1" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" strokeWidth="0.7" />
-      <text x="238" y="325" fontFamily="var(--font-mono)" fontSize="8" fill="rgba(255,255,255,0.3)" letterSpacing="0.5">
+      <rect x="220" y="315" width="12" height="12" rx="1" fill={ink(6)} stroke={ink(15)} strokeWidth="0.7" />
+      <text x="238" y="325" fontFamily="var(--font-mono)" fontSize="8" fill={ink(30)} letterSpacing="0.5">
         Aligned pattern
       </text>
     </svg>
