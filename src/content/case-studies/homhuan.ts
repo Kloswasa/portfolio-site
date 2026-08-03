@@ -213,7 +213,7 @@ const homhuanCaseStudy = {
             {
               "src": "/projects/homhuan/homhuan-product-candle.jpg",
               "alt": "Candle with Benjarong-inspired ceramic holder",
-              "caption": "Candle, from tian ob. Sized small because the spice-and-wax mix suits tiny batches, which is exactly why refills, not volume, became the model."
+              "caption": "Candle, from tian ob. Sized small because the herbal-spice-and-wax mix suits tiny batches, which is exactly why refills, not volume, became the model."
             },
             {
               "src": "/projects/homhuan/homhuan-product-hanging-diffuser.png",
@@ -257,17 +257,46 @@ const homhuanCaseStudy = {
           ]
         },
         {
-          "type": "video",
-          "src": "/projects/homhuan/homhuan-design-transition-video.mp4",
-          "poster": "/projects/homhuan/homhuan-design-transition-poster.png",
-          "alt": "Transition from Benjarong porcelain to 3D surface, 2D and CI branding",
-          "caption": "Benjarong's raised botanical relief, flattened into a graphic that runs from the holder through the CI and packaging."
+          "type": "imageGrid",
+          "items": [
+            {
+              "src": "/projects/homhuan/homhuan-making-1.png",
+              "alt": "Candle with Benjarong-inspired ceramic holder"
+            },
+            {
+              "src": "/projects/homhuan/homhuan-making-2.png",
+              "alt": "Hanging three-dimensional reed diffuser in die-cut paper"
+            },
+            {
+              "src": "/projects/homhuan/homhuan-making-3.png",
+              "alt": "Ceramic perfuming storage desk object"
+            },
+            {
+              "src": "/projects/homhuan/homhuan-making-4.png",
+              "alt": "Ceramic and brass miller for grinding fragrance beads and locket-form solid perfume holder"
+            },
+            {
+              "src": "/projects/homhuan/homhuan-making-5.png",
+              "alt": "The seven products shown together as a family"
+            },
+            {
+              "src": "/projects/homhuan/homhuan-making-6.png",
+              "alt": "The seven products shown together as a family"
+            }
+          ]
         },
         {
           "type": "prose",
           "paragraphs": [
             "  The visual language comes from Benjarong porcelain: I flattened its raised botanical relief into a two-dimensional graphic, so the form that shapes the holder also runs through the branding. Each object pairs with its own consumable, seven in all, across five hand-blended signature scents, and the candle was built for refills from the start, so the collection stays in use rather than on a shelf."
           ]
+        },
+        {
+          "type": "video",
+          "src": "/projects/homhuan/homhuan-design-transition-video.mp4",
+          "poster": "/projects/homhuan/homhuan-design-transition-poster.png",
+          "alt": "Transition from Benjarong porcelain to 3D surface, 2D and CI branding",
+          "caption": "Benjarong's raised botanical relief, flattened into a graphic that runs from the holder through the CI and packaging."
         }
       ]
     },
@@ -303,9 +332,15 @@ const homhuanCaseStudy = {
           ]
         },
         {
+          "type": "image",
+          "src": "/projects/homhuan/homhuan-design-week.png",
+          "alt": "Homhuan displayed at Bangkok design week 2019",
+          "caption": "Homhuan project displayed at Bangkok design week 2019"
+        },
+        {
           "type": "prose",
           "paragraphs": [
-            "  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed."
+            "  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. \n  The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed."
           ]
         },
         {

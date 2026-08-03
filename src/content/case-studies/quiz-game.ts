@@ -145,8 +145,8 @@ const quizGameCaseStudy = {
         {
           "type": "image",
           "src": "/projects/quiz-game/quiz-game-natural-scene.gif",
-          "alt": "Description",
-          "caption": "A lip balm packaging sketch design exploration"
+          "alt": "The quiz background illustration developemnt",
+          "caption": "The quiz background illustration developemnt from sketch to final version."
         },
         {
           "type": "prose",

@@ -192,15 +192,36 @@ caption: Concept render beside the finished collection, the family held even as 
 
   Homhuan was designed and produced solo in three months across six materials, ceramic, brass, glass, paper, wax, and wood. One holder shape recurs throughout, varied only by colour and glaze, so seven objects still read as one family.
 
+## imageGrid
+
+- src: /projects/homhuan/homhuan-making-1.png
+  alt: Candle with Benjarong-inspired ceramic holder
+  caption:  
+- src: /projects/homhuan/homhuan-making-2.png
+  alt: Hanging three-dimensional reed diffuser in die-cut paper
+  caption:  
+- src: /projects/homhuan/homhuan-making-3.png
+  alt: Ceramic perfuming storage desk object
+  caption:  
+- src: /projects/homhuan/homhuan-making-4.png
+  alt: Ceramic and brass miller for grinding fragrance beads and locket-form solid perfume holder
+  caption:  
+- src: /projects/homhuan/homhuan-making-5.png
+  alt: The seven products shown together as a family
+  caption:  
+- src: /projects/homhuan/homhuan-making-6.png
+  alt: The seven products shown together as a family
+  caption:  
+
+## prose
+
+  The visual language comes from Benjarong porcelain: I flattened its raised botanical relief into a two-dimensional graphic, so the form that shapes the holder also runs through the branding. Each object pairs with its own consumable, seven in all, across five hand-blended signature scents, and the candle was built for refills from the start, so the collection stays in use rather than on a shelf.
+
 ## video
 src: /projects/homhuan/homhuan-design-transition-video.mp4
 poster: /projects/homhuan/homhuan-design-transition-poster.png
 alt: Transition from Benjarong porcelain to 3D surface, 2D and CI branding
 caption: Benjarong's raised botanical relief, flattened into a graphic that runs from the holder through the CI and packaging.
-
-## prose
-
-  The visual language comes from Benjarong porcelain: I flattened its raised botanical relief into a two-dimensional graphic, so the form that shapes the holder also runs through the branding. Each object pairs with its own consumable, seven in all, across five hand-blended signature scents, and the candle was built for refills from the start, so the collection stays in use rather than on a shelf.
 
 # outcome
 
@@ -224,9 +245,16 @@ titleEm: and what it taught
   label: Bangkok Design Week
   body: Selected for exhibition
 
+## image
+
+src: /projects/homhuan/homhuan-design-week.png
+alt: Homhuan displayed at Bangkok design week 2019
+caption: Homhuan project displayed at Bangkok design week 2019
+
 ## prose
 
-  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed.
+  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. 
+  The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed.
 
 ## reflections
 

@@ -108,8 +108,8 @@ This quiz's result had to represent the person, not label them.
 
 ## image
 src: /projects/quiz-game/quiz-game-natural-scene.gif
-alt: Description
-caption: A lip balm packaging sketch design exploration
+alt: The quiz background illustration developemnt
+caption: The quiz background illustration developemnt from sketch to final version.
 ## prose
 **Decision two: every pairing had to hold under two lenses.**
   Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both.
