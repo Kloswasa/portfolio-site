@@ -11,9 +11,9 @@ const kuendeeCaseStudy = {
     "eyebrow": "002 · Booth Design · Modular retail system + graphics",
     "titleLine1": "Kuendee",
     "titleLine2": "Retail Booth",
-    "summary": "A reconfigurable retail booth for a fertiliser and gardening materials distributor, splitting a tight footprint into two product zones while displaying as much of a rotating range as possible, with backdrop illustration and infographics designed to match.",
+    "summary": "A reconfigurable retail booth for a fertiliser and gardening materials distributor, splitting a tight footprint and displaying a rotating range, with backdrop illustration and infographics designed to match.",
     "image": {
-      "src": "/projects/kuendee/cover.png",
+      "src": "/projects/kuendee/kuendee-head-cover.png",
       "alt": "Kuendee booth installed in a home improvement store, showing two-sided product display and illustrated backdrop"
     },
     "meta": [
@@ -42,9 +42,35 @@ const kuendeeCaseStudy = {
       "titleEm": "full range.",
       "blocks": [
         {
+          "type": "image",
+          "src": "/projects/kuendee/kuendee-logo.png",
+          "alt": "Kuendee, an organic supply logo",
+          "caption": "Kuendee, an organic supply logo.",
+          "size": "md"
+        },
+        {
           "type": "prose",
           "paragraphs": [
-            "Kuendee distributes fertiliser and growing materials, biochar, clay pebbles, and a range that keeps changing, into home improvement, hardware, and outdoor living retailers. The brief set two requirements that pulled against each other. The space was limited and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other. At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately."
+            "  Kuendee is an organic supply, distributes fertiliser and growing materials, biochar, clay pebbles, and aimming to distribute their product in a home and hardware retailer."
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/kuendee/kuendee-constraint-size.png",
+          "alt": "Space constraint isomatric and dimension",
+          "caption": "Space constraint isomatric and dimension",
+          "size": "md"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately."
           ]
         }
       ]
@@ -57,7 +83,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object, display units that recombine as the range rotates and the footprint changes from retailer to retailer. The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble. Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately. I then designed the graphic layer on top, an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration."
+            "  The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object, display units that recombine as the range rotates and the footprint changes from retailer to retailer."
           ]
         },
         {
@@ -82,9 +108,39 @@ const kuendeeCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/kuendee/final.png",
-          "alt": "The Kuendee booth configured for a retailer, showing both product zones and the illustrated backdrop",
-          "caption": "Two zones, one system, designed to reconfigure per branch while the graphic layer holds the identity constant."
+          "src": "/projects/kuendee/kuendee-design-approaches.gif",
+          "alt": "Display approaches sample",
+          "caption": "Booth display approaches sample, using the customer variety of products."
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble. \n  Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/kuendee/kuendee-illustration.png",
+          "alt": "Illustration sample",
+          "caption": "Booth illustration sample, including, backdrop, inforgraphic signage, and product signs"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  I then designed the graphic layer on top, an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration."
+          ]
+        },
+        {
+          "type": "button",
+          "label": "See illustrations",
+          "href": "/play?work=compose-zone",
+          "variant": "primary"
+        },
+        {
+          "type": "image",
+          "src": "/projects/kuendee/kuendee-design-3d.gif",
+          "alt": "The Kuendee booth 3D render",
+          "caption": "The Kuendee booth 3D render with applied graphic."
         }
       ]
     },
@@ -93,6 +149,12 @@ const kuendeeCaseStudy = {
       "title": "Recognisable in",
       "titleEm": "every store.",
       "blocks": [
+        {
+          "type": "image",
+          "src": "/projects/kuendee/kuendee-final.png",
+          "alt": "The live Kuendee booth",
+          "caption": "Live Kuendee booth in retailer store."
+        },
         {
           "type": "outcomes",
           "items": [
@@ -111,7 +173,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Designing one system flexible enough to survive every context it lands in, while keeping its identity intact, is exactly the thinking behind a digital design system, where components must hold up across screens and states nobody has drafted yet."
+            "  Designing one system flexible enough to survive every context it lands in, while keeping its identity intact, is exactly the thinking behind a digital design system, where components must hold up across screens and states nobody has drafted yet."
           ]
         }
       ]

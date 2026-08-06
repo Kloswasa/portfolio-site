@@ -13,7 +13,13 @@ export const metadata = {
   description: PLAY_PAGE_DESCRIPTION,
 };
 
-export default function PlayPage() {
+export default async function PlayPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ work?: string }>;
+}) {
+  const { work } = await searchParams;
+
   return (
     <main>
       <PlayView
@@ -22,6 +28,7 @@ export default function PlayPage() {
         heroMeta={PLAY_HERO_META}
         mediumSections={PLAY_MEDIUM_SECTIONS}
         endCopy={PLAY_END_COPY}
+        initialWorkId={work}
       />
     </main>
   );

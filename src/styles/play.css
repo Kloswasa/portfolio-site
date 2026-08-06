@@ -265,22 +265,27 @@
 
 .play-viewer__plate {
   position: relative;
-  height: min(96vh, 960px);
-  width: auto;
-  max-width: min(100vw, 1048px);
+  /* Contain in the stage: width is limited by box width and by max-height × aspect */
+  width: min(
+    100%,
+    1048px,
+    calc(min(96vh, 960px) * var(--play-plate-aspect, 1))
+  );
+  height: auto;
+  max-height: min(96vh, 960px);
   aspect-ratio: var(--play-plate-aspect, 1 / 1);
   overflow: hidden;
   border-radius: 0;
   background: var(--color-bg);
   box-shadow: var(--play-viewer-plate-shadow);
   transition:
-    height var(--duration-slower) var(--ease-spring),
+    width var(--duration-slower) var(--ease-spring),
+    max-height var(--duration-slower) var(--ease-spring),
     aspect-ratio var(--duration-slower) var(--ease-spring),
     box-shadow var(--duration-slow) var(--ease);
 }
 
 .play-viewer[data-details="true"] .play-viewer__plate {
-  height: min(96vh, 960px);
   box-shadow: var(--play-viewer-plate-shadow-details);
 }
 
@@ -812,7 +817,11 @@
   }
 
   .play-viewer__plate {
-    width: 100%;
+    width: min(
+      100%,
+      420px,
+      calc(min(62vh, 520px) * var(--play-plate-aspect, 1))
+    );
     max-width: 420px;
     height: auto;
     max-height: min(62vh, 520px);

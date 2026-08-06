@@ -102,8 +102,8 @@ const ALL_PLAY_WORKS: PlayWork[] = [
       {
         src: "play/illustration/illustration-AUcall-characters.png",
         alt: "AU Call — characters",
-        width: 595,
-        height: 842,
+        width: 1458,
+        height: 2064,
       },
       {
         src: "play/illustration/illustration-AUcall-quizes.png",
@@ -120,8 +120,8 @@ const ALL_PLAY_WORKS: PlayWork[] = [
       {
         src: "play/illustration/illustration-AUcall-scenes.png",
         alt: "AU Call — scenes",
-        width: 1458,
-        height: 837,
+        width: 1200,
+        height: 670,
       },
     ],
   },
@@ -140,6 +140,8 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardTools: "Digital · 2020",
     imageSrc: "play/illustration/illustration-ganesha.png",
     imageAlt: "Ganesha illustration",
+    imageWidth: 595,
+    imageHeight: 842,
   },
   {
     id: "thai-hom",
@@ -157,14 +159,20 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardTools: "Digital · 2019",
     imageSrc: "play/illustration/illustration-thhom.png",
     imageAlt: "Thai Hom infographic booklet illustration",
+    imageWidth: 842,
+    imageHeight: 595,
     images: [
       {
         src: "play/illustration/illustration-thhom.png",
         alt: "Thai Hom — cover spread",
+        width: 842,
+        height: 595,
       },
       {
         src: "play/illustration/illustration-thhom-work.png",
         alt: "Thai Hom — infographic booklet",
+        width: 842,
+        height: 595,
       },
     ],
   },
@@ -184,14 +192,20 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardTools: "Digital · 2023",
     imageSrc: "play/illustration/illustration-kuendee-backdrop.png",
     imageAlt: "Compose Zone illustration",
+    imageWidth: 595,
+    imageHeight: 842,
     images: [
       {
         src: "play/illustration/illustration-kuendee-backdrop.png",
         alt: "Compose Zone — backdrop",
+        width: 595,
+        height: 842,
       },
       {
         src: "play/illustration/illustration-kuendee-infoboard.png",
         alt: "Compose Zone — infoboard",
+        width: 595,
+        height: 842,
       },
     ],
   },
@@ -211,6 +225,8 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardTools: "Digital · 2023",
     imageSrc: "play/illustration/illustration-bupha.png",
     imageAlt: "Bupha packaging illustration",
+    imageWidth: 595,
+    imageHeight: 842,
   },
   {
     id: "thai-agriculture",
@@ -227,14 +243,20 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardTools: "Digital · 2023",
     imageSrc: "play/illustration/illustration-thargriculture.png",
     imageAlt: "Thai Agriculture editorial calendar illustration",
+    imageWidth: 842,
+    imageHeight: 595,
     images: [
       {
         src: "play/illustration/illustration-thargriculture.png",
         alt: "Thai Agriculture — cover spread",
+        width: 842,
+        height: 595,
       },
       {
         src: "play/illustration/illustration-thargriculture-calendar.png",
         alt: "Thai Agriculture — crop cycle diagram",
+        width: 842,
+        height: 595,
       },
     ],
   },

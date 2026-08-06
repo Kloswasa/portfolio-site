@@ -42,18 +42,22 @@ const busabaCaseStudy = {
       "titleEm": "the table.",
       "blocks": [
         {
-          "type": "prose",
-          "paragraphs": [
-            "  Busaba, the hotel and cafe provider in Ayutthaya wanted a signature dessert and its own presentation in their new fine dessert bar , objects that felt native to where they stood, not generic fine-dining props.",
-            "  The constraint: both had to survive real service."
-          ]
-        },
-        {
           "type": "image",
           "src": "/projects/busaba/busaba-architecture.jpeg",
           "alt": "Busaba signature architecture scene",
           "caption": "Busaba signature white Thai architecture hotel.",
           "size": "md"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Busaba, the hotel and cafe provider in Ayutthaya wanted a signature dessert and its own presentation in their new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
+          ]
+        },
+        {
+          "type": "pullquote",
+          "text": "Both had to survive real service.",
+          "source": "The constraint"
         },
         {
           "type": "prose",
@@ -71,35 +75,8 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I worked from two fixed sources, one per object. The fork's form is drawn from the client's own traditional Thai architecture. Meanwhile, the dessert's silhouette from Ayutthaya's old currency. \n  The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it.\n  Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic."
+            "  I worked from two fixed sources as a reference, one per object. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it."
           ]
-        },
-        {
-          "type": "imagePair",
-          "items": [
-            {
-              "src": "/projects/busaba/busaba-podduand-ref.png",
-              "alt": "Left",
-              "caption": "Left caption"
-            },
-            {
-              "src": "/projects/busaba/busaba-podduand-design.png",
-              "alt": "Right",
-              "caption": "Right caption"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "/projects/busaba/busaba-fork-ref.png",
-          "alt": "Busaba signature architecture scene",
-          "caption": "Busaba signature white Thai architecture hotel."
-        },
-        {
-          "type": "image",
-          "src": "/projects/busaba/busaba-fork-design.png",
-          "alt": "Busaba signature architecture scene",
-          "caption": "Busaba signature white Thai architecture hotel."
         },
         {
           "type": "process",
@@ -122,10 +99,64 @@ const busabaCaseStudy = {
           ]
         },
         {
+          "type": "prose",
+          "paragraphs": [
+            "  The fork's form is drawn from the client's own iconic traditional Thai architecture, extracting a curve and line, applied into the cutlery form."
+          ]
+        },
+        {
           "type": "image",
-          "src": "/projects/busaba/busaba-thongboran.jpeg",
-          "alt": "The bespoke fork resting beside the plated signature dessert",
-          "caption": "Fork drawn from Thai architecture; dessert drawn from Ayutthaya's old currency."
+          "src": "/projects/busaba/busaba-fork-ref.png",
+          "alt": "Busaba signature architecture scene lines",
+          "caption": "Busaba signature white Thai architecture hotel and its extracted line and form."
+        },
+        {
+          "type": "image",
+          "src": "/projects/busaba/busaba-fork-design.png",
+          "alt": "Busaba signature architecture scene",
+          "caption": "3D render and applied line and form to the fork design"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Meanwhile, the dessert's \"Thong-Bolan\" silhouette is from Ayutthaya's old currency called \"Pod-Duang\", minimised the shape and details, while still be able to keep the form of the currency."
+          ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/busaba/busaba-podduand-ref.png",
+              "alt": "Left",
+              "caption": "Pod-Duang currency"
+            },
+            {
+              "src": "/projects/busaba/busaba-podduand-design.png",
+              "alt": "Right",
+              "caption": "3D render Thong-Bolan design following Pod-Duang shape and form"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Each source was reduced to a single clean silhouette that had to survive translation into a very different material: one edible and repeatable, one metal and ergonomic."
+          ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/busaba/busaba-fork-use.png",
+              "alt": "Real fork usage photo from customer",
+              "caption": "In service fork photo from customer"
+            },
+            {
+              "src": "/projects/busaba/busaba-thongboran.png",
+              "alt": "Left",
+              "caption": "Real housemade Thong-Bolan photo from customer"
+            }
+          ]
         }
       ]
     },
@@ -134,6 +165,12 @@ const busabaCaseStudy = {
       "title": "The result",
       "titleEm": "on the plate.",
       "blocks": [
+        {
+          "type": "image",
+          "src": "/projects/busaba/busaba-final.png",
+          "alt": "Busaba signature architecture scene",
+          "caption": "Live Busaba dessert bar"
+        },
         {
           "type": "outcomes",
           "items": [
@@ -154,6 +191,12 @@ const busabaCaseStudy = {
           "paragraphs": [
             "Translating fixed heritage, architecture, Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface."
           ]
+        },
+        {
+          "type": "button",
+          "label": "Visit the Customer",
+          "href": "https://www.facebook.com/DessertBarBusaba/?locale=th_TH",
+          "variant": "accent"
         }
       ]
     }

@@ -13,7 +13,7 @@ import type {
   PlayMediumSection,
   PlayWork,
 } from "@/src/lib/play/types";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
 interface PlayViewProps {
@@ -22,6 +22,8 @@ interface PlayViewProps {
   heroMeta: PlayHeroMeta;
   mediumSections: PlayMediumSection[];
   endCopy: PlayEndCopy;
+  /** Open this work in the viewer on load (e.g. from `/play?work=compose-zone`). */
+  initialWorkId?: string;
 }
 
 
@@ -31,12 +33,22 @@ export function PlayView({
   heroMeta,
   mediumSections,
   endCopy,
+  initialWorkId,
 }: PlayViewProps) {
   const reduceMotion = useReducedMotion();
   const [activeFilter, setActiveFilter] = useState<PlayFilterKey>("all");
   const [motionPaused, setMotionPaused] = useState(reduceMotion === true);
   const [viewerOpen, setViewerOpen] = useState(false);
   const [viewerIndex, setViewerIndex] = useState(0);
+
+  useEffect(() => {
+    if (!initialWorkId) return;
+    const index = works.findIndex((w) => w.id === initialWorkId);
+    if (index === -1) return;
+    setActiveFilter("all");
+    setViewerIndex(index);
+    setViewerOpen(true);
+  }, [initialWorkId, works]);
 
   const visibleWorks = useMemo(() => {
     if (activeFilter === "all") return works;
