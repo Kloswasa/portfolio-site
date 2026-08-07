@@ -6,9 +6,9 @@ hero:
   eyebrow: "003 · Graphic Design · Kids mask packaging"
   titleLine1: Flomax
   titleLine2: Kids Mask Packaging
-  summary: An alternative graphic style for Flomax's kids face mask, designed to appeal to children without breaking the brand identity built for its adult range.
+  summary: A youths graphic style for Flomax's filter face mask, designed for children while connect to the brand identity.
   image:
-    src: /projects/flomax/cover.png
+    src: /projects/flomax/flomax-head-cover.png
     alt: Flomax kids face mask packaging showing the alternative graphic style
   meta:
     - label: Client
@@ -24,14 +24,37 @@ hero:
 eyebrow: 01 · Context
 title: A new audience,
 titleEm: same brand.
+
+## image
+src: /projects/flomax/flomax-logo.png
+alt: Flomax , an air filters manufactures logo
+caption: Flomax , an air filters manufactures.
+size:md
+
 ## prose
-Flomax manufactures air filters and had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down, the adult graphics were built to signal filtration performance to an adult buyer, which is not what makes a child want to wear a mask. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust.
+  Flomax air filters manufactures had built a facial filter mask line for adults and plan to extend it to a kids product meant the packaging could not simply be scaled down. 
+
+## image
+src: /projects/flomax/flomax-original-pack.png
+alt: Flomax filter mask original package
+caption: Flomax filter mask original package.
+
+## prose
+  The original graphics were built to signal filtration performance to an adult buyer, not a child. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust.
+
 # work
 eyebrow: 02 · Work
 title: Playful inside
 titleEm: fixed rules.
+
+## image
+src: /projects/flomax/flomax-original-graphic.png
+alt: Flomax filter mask original packaging elements
+caption: Flomax filter mask original packaging elements.
+
 ## prose
-I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as Flomax at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience. The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart.
+  I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as Flomax at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience. 
+
 ## process
 - num: "01"
   title: Audit
@@ -42,14 +65,29 @@ I separated the identity's load-bearing elements from the parts open to interpre
 - num: "03"
   title: Resolve
   body: Holding the pack against the adult range so the two read as one family.
+
 ## image
-src: /projects/flom/final.png
-alt: The Flomax kids mask packaging shown alongside the adult range
-caption: A register built for children, still recognisably the same filtration brand.
+src: /projects/flomax/flomax-comparison-transition.gif
+alt: Graphic elements transition
+caption: Graphic elements transition
+
+## prose
+  The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart.
+
+## image
+src: /projects/flomax/flomax-kid-final.png
+alt: The Flomax kids mask packaging final
+caption: The Flomax kids mask packaging final design.
 # outcome
 eyebrow: 03 · Outcome
 title: One pack, two
 titleEm: people to convince.
+
+## image
+src: /projects/flomax/flomax-final.png
+alt: The Flomax kids mask packaging shown alongside the adult range
+caption: A register built for children, still recognisably the same filtration brand.
+
 ## outcomes
 - value: "Two audiences"
   label: Child appeal, parent trust
@@ -58,4 +96,4 @@ titleEm: people to convince.
   label: No rules broken
   body: Tone shifted through the flexible layer while the brand's fixed elements stayed intact.
 ## prose
-Designing for a user and a buyer who want different things from the same object, without fragmenting the product into two, is a judgement I make constantly in digital product work, where the person using an interface and the person deciding to adopt it are rarely the same.
+  Designing for a user and a buyer who want different things from the same object, without fragmenting the product into two, is a judgement I make constantly in digital product work, where the person using an interface and the person deciding to adopt it are rarely the same.
