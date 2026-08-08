@@ -123,9 +123,9 @@ const bhaesajCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/example/shot.png",
+          "src": "/projects/bhae/bhaesaj-2D-3D.gif",
           "alt": "Description",
-          "caption": "A lip balm packaging sketch design exploration"
+          "caption": "A lip balm packaging sketch design exploration from 2D, selected and turn into 3D"
         },
         {
           "type": "prose",
@@ -142,7 +142,7 @@ const bhaesajCaseStudy = {
       "blocks": [
         {
           "type": "image",
-          "src": "/projects/bhae/final.png",
+          "src": "/projects/bhae/bhaesaj-final.png",
           "alt": "3D renders of the resolved Bhaesaj lip balm packaging direction alongside sketch development",
           "caption": "From the board's language to resolved form sketches, surface direction, and renders."
         },
@@ -150,7 +150,7 @@ const bhaesajCaseStudy = {
           "type": "outcomes",
           "items": [
             {
-              "value": "Board to object",
+              "value": "Mood to object",
               "label": "Direction made physical",
               "body": "A visual mood board interpreted into concrete decisions about shape, surface, and function."
             },
@@ -164,7 +164,7 @@ const bhaesajCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  However, The work was held at parent-company level on budget, with the decision to stay with the classic packaging. \n  Taking a brief and widening it before narrowing, treating the words as a space of possibilities rather than a picture to reproduce, is the move I rely on most in digital product work, where the brief is almost always a direction rather than a definition."
+            "  The latest stage was going to be a production stage, however, The work was held at parent-company level on budget, with the decision to stay with the classic packaging. \n  Taking a brief and widening it before narrowing, treating the words as a space of possibilities rather than a picture to reproduce, is the move I rely on most in digital product work, where the brief is almost always a direction rather than a definition."
           ]
         }
       ]

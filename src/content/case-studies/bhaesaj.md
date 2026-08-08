@@ -78,9 +78,9 @@ titleEm: to form.
   Spacious can be proportion, negative space on the label, or the way a lid sits away from the body. Science can be precision in the parting lines, a clinical surface, or restraint in the graphics. 
 
 ## image
-src: /projects/example/shot.png
+src: /projects/bhae/bhaesaj-2D-3D.gif
 alt: Description
-caption: A lip balm packaging sketch design exploration
+caption: A lip balm packaging sketch design exploration from 2D, selected and turn into 3D
 
 ## prose 
     Working from the words rather than the pictures produced a range of shape, surface, and functional options that the board itself did not imply. 
@@ -94,12 +94,12 @@ title: A direction,
 titleEm: resolved.
 
 ## image
-src: /projects/bhae/final.png
+src: /projects/bhae/bhaesaj-final.png
 alt: 3D renders of the resolved Bhaesaj lip balm packaging direction alongside sketch development
 caption: From the board's language to resolved form sketches, surface direction, and renders.
 
 ## outcomes
-- value: "Board to object"
+- value: "Mood to object"
   label: Direction made physical
   body: A visual mood board interpreted into concrete decisions about shape, surface, and function.
 - value: "1989"
@@ -107,7 +107,7 @@ caption: From the board's language to resolved form sketches, surface direction,
   body: A recognisable traditional product reworked without tipping into pastiche.
 
 ## prose
-  However, The work was held at parent-company level on budget, with the decision to stay with the classic packaging. 
+  The latest stage was going to be a production stage, however, The work was held at parent-company level on budget, with the decision to stay with the classic packaging. 
   Taking a brief and widening it before narrowing, treating the words as a space of possibilities rather than a picture to reproduce, is the move I rely on most in digital product work, where the brief is almost always a direction rather than a definition.
 
 
