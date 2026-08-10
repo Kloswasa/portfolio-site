@@ -23,6 +23,10 @@ export const HERO_PLANT_IDS: HeroPlantId[] = [
 
 export const DEFAULT_HERO_PLANT_ID: HeroPlantId = "wax-flower";
 
+export function pickRandomHeroPlantId(): HeroPlantId {
+  return HERO_PLANT_IDS[Math.floor(Math.random() * HERO_PLANT_IDS.length)]!;
+}
+
 export const HERO_PLANT_STAMPS: Record<
   HeroPlantId,
   readonly [string, string, string]

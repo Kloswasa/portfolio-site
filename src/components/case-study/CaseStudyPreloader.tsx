@@ -2,11 +2,13 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState, type ReactNode } from "react";
-import { WorkHeroBotanical } from "@/src/components/work/WorkHeroBotanical";
+import { HeroPlantIllustration } from "@/src/components/ui/HeroPlantIllustration";
+import { pickRandomHeroPlantId, type HeroPlantId } from "@/src/lib/hero-plants";
 import { preloadImages } from "@/src/lib/case-studies/preload-images";
 
 function BotanicalLoader() {
   const reduceMotion = useReducedMotion();
+  const [plantId] = useState<HeroPlantId>(() => pickRandomHeroPlantId());
 
   return (
     <motion.div
@@ -41,7 +43,7 @@ function BotanicalLoader() {
               : { duration: 2.5, ease: "easeInOut", repeat: Infinity }
           }
         >
-          <WorkHeroBotanical />
+          <HeroPlantIllustration id={plantId} className="h-full w-full" />
         </motion.div>
       </div>
     </motion.div>
