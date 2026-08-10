@@ -80,7 +80,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Five people, who potential to be a future Australia traveller, are interviewed and pattern of a expectation from result are found from them."
+            "Five people who could become future Australia travellers were interviewed, and patterns in what they expected from a result emerged from those conversations."
           ]
         },
         {
@@ -109,7 +109,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Moving to the Australia aesthetic recognisation, Wildlife and a natural scene were named as Australia's signature in every interview, but a wildlife recognisation stopped at two animals."
+            "Moving to Australia aesthetic recognition: wildlife and natural scenes were named as Australia's signature in every interview, but wildlife recognition stopped at two animals."
           ]
         },
         {
@@ -139,14 +139,14 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal including Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live."
+            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal, Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live."
           ]
         },
         {
           "type": "image",
           "src": "/projects/quiz-game/quiz-game-natural-scene.gif",
-          "alt": "The quiz background illustration developemnt",
-          "caption": "The quiz background illustration developemnt from sketch to final version."
+          "alt": "The quiz background illustration development",
+          "caption": "The quiz background illustration development from sketch to final version."
         },
         {
           "type": "prose",
@@ -198,7 +198,7 @@ const quizGameCaseStudy = {
           "type": "video",
           "src": "/projects/quiz-game/quiz-game-resultpage-video.mp4",
           "poster": "/projects/quiz-game/quiz-game-video-resultpage-cover.png",
-          "alt": "A 12 second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia",
+          "alt": "A 12-second zoom across the Curious Explorer result page, showing the platypus illustration, recommended destination, tip, and trivia",
           "caption": "Everything arrives on one screen, so the result reads as a single recommendation rather than a label with a list appended."
         },
         {
@@ -228,14 +228,14 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The project design under the tech stack, including Next.JS, Typescript, Prisma, TailswindCSS. The quiz and the result page do different jobs, so they got different render strategies, which resonace with an assorted techstack."
+            "The project was designed under a tech stack of Next.js, TypeScript, Prisma, and Tailwind CSS. The quiz and the result page do different jobs, so they got different render strategies that fit that stack."
           ]
         },
         {
           "type": "image",
           "src": "/projects/quiz-game/quiz-game-techstack.png",
-          "alt": "Description",
-          "caption": "Tech stack for this quiz game project, including Next.JS, Typescript, Prisma"
+          "alt": "Diagram of the tech stack for the quiz game project",
+          "caption": "Tech stack for this quiz game project, including Next.js, TypeScript, and Prisma"
         },
         {
           "type": "imagePair",
@@ -276,8 +276,8 @@ const quizGameCaseStudy = {
           "type": "video",
           "src": "/projects/quiz-game/quiz-game-teaser.mp4",
           "poster": "/projects/quiz-game/quiz-game-teaser-cover.png",
-          "alt": "A 12 second project teaser.",
-          "caption": "The project teaser of the quiz game, showing some part of quiz journey and result page"
+          "alt": "A 12-second project teaser",
+          "caption": "Project teaser showing parts of the quiz journey and result page"
         },
         {
           "type": "outcomes",
@@ -292,7 +292,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "    The overall quiz performance is good both in visual and media, but on the results the wildlife-and-destination pairing was the strongest signal. However, tips and trivia got less attention, likely because they were text-only."
+            "    The overall quiz performed well visually and in media. On the results, the wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only."
           ]
         },
         {
@@ -310,10 +310,10 @@ const quizGameCaseStudy = {
           "type": "reflections",
           "title": "Reflection",
           "items": [
-            "The differentiator lived in curation, not quiz mechanics. Personality labels alone weren't enough; destinations, tips, and trivia had to answer what travellers actually asked for in research.",
-            "Wildlife carried identity; scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.",
+            "The differentiator lived in curation, not quiz mechanics. Personality labels alone weren't enough. Destinations, tips, and trivia had to answer what travellers actually asked for in research.",
+            "Wildlife carried identity. Scenes carried atmosphere. Splitting those jobs kept the quiz immersive without making the result feel abstract.",
             "Cultural symbolism required traceable sources and honest scope limits. AI helped surface candidates, but shipping claims needed Indigenous-affiliated, institutional, or academic backing.",
-            "Two render strategies matched two moments. Preloading for the quiz; server-rendered results for the payoff page.",
+            "Two render strategies matched two moments. Preloading for the quiz. Server-rendered results for the payoff page.",
             "A fuller version needs more than one internship. Scaling the matching responsibly wants a cultural advisor co-authoring from the outset, and the premade quiz questions some users found inconsistent need a revision pass."
           ]
         }

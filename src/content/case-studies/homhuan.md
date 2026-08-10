@@ -29,9 +29,9 @@ titleEm: made for a modern home
 
 ## prose
 
-  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use, stays in the museum, and the modern home smells like nowhere in particular.
+  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use, staying in the museum, and the modern home smells like nowhere in particular.
 
-  Homhuan is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of heritage, culture, mechanism or form and modernise its, so it can sits in a contemporary space without explaining where it came from.
+  Homhuan is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of the heritage, culture, mechanism, or form, and modernises it so it can sit in a contemporary space without explaining where it came from.
 
 ## stats
 
@@ -58,7 +58,7 @@ titleEm: then forward
 
 src: /projects/homhuan/homhuan-tienob.png
 alt: Tienob sample
-caption: Tien ob the beginning of the project
+caption: Tian ob, the beginning of the project
 size: md
 
 ## prose
@@ -67,7 +67,7 @@ size: md
 
 ## pullquote
 
-text: if one heritage practice works this well, what would a whole collection look like?
+text: If one heritage practice works this well, what would a whole collection look like?
 source: Reflection
 
 ## image
@@ -78,8 +78,8 @@ caption: The whole method in one view.
 size: md
 
 ## prose
-  For the capstone I deeply dive into the heritage sources, and the information from golden age of Thai fragrance a century ago. 
-    From the research process the heritage fragrance can categorise into five and 18 types, combining those with most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.
+  For the capstone I dove deeply into the heritage sources and the golden age of Thai fragrance a century ago.
+    From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.
 
 
 
@@ -91,7 +91,7 @@ titleEm: applied seven times
 
 ## prose
 
-  Every product followed the same move: take a heritage practice, keep the mechanism or form that made it work, drop part its original purpose, and update its use for a modern home. The method stays constant, the source changes seven times.
+  Every product followed the same move: take a heritage practice, keep the mechanism or form that made it work, drop part of its original purpose, and update its use for a modern home. The method stays constant. The source changes seven times.
 
 ## image
 
@@ -111,12 +111,12 @@ caption: The whole method in one view, seven heritage sources, each stripped to 
   caption: Brass pan over a tea light, dry heat warms solid incense, so scent releases faster and stronger with no flame touching it.
 - src: /projects/homhuan/homhuan-product-ceramic.png
   alt: Aroma stove configured with a ceramic pot boiling an aroma bag
-  caption: Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove , mild and long.
+  caption: Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove, mild and long.
 
 ## prose
 
 **Reed Diffuser, from the Thai floral mobile.** 
-  The woven garland was decorative, perishable, and hung. the pattern structure is kept and swapped what it is made of, so the heritage form never compromises how well it diffuses.
+  The woven garland was decorative, perishable, and hung. The pattern structure is kept and swapped for what it is made of, so the heritage form never compromises how well it diffuses.
 
 ## imagePair
 
@@ -125,7 +125,7 @@ caption: The whole method in one view, seven heritage sources, each stripped to 
   caption: The source, a flat frame cut from banana tree, woven with a fresh garland, beautiful but wilting within a day.
 - src: /projects/homhuan/homhuan-product-diffuser.jpg
   alt: Homhuan flat reed diffuser with paper frame and piped fragrance beads
-  caption: The translation, paper frame, one unbroken thread, fragrance beads piped where flowers were; a reed-and-oil bottle does the steady work.
+  caption: The translation, paper frame, one unbroken thread, fragrance beads piped where flowers were. A reed-and-oil bottle does the steady work.
 
 ## pullquote
 
@@ -156,7 +156,7 @@ titleEm: one period
 
 ## prose
 
-  Each product translates a different practice from the same era; the diagram above maps all seven at a glance. Two are shown in the concept, here is the full family, with the decision behind each carried in its caption.
+  Each product translates a different practice from the same era. The diagram above maps all seven at a glance. Two are shown in the concept. Here is the full family, with the decision behind each carried in its caption.
 
 ## imageGrid
 
@@ -171,7 +171,7 @@ titleEm: one period
   caption: Perfuming storage, from cabinet scenting. Moved out of the wardrobe onto the desk and given the recovered fresh-petal recipe as its consumable.
 - src: /projects/homhuan/homhuan-product-miller-locket.jpg
   alt: Ceramic and brass miller for grinding fragrance beads and locket-form solid perfume holder
-  caption: Miller keeps the period form but drops the medicinal masher; the locket is paired with it so the make-your-own ritual reads in sequence.
+  caption: Miller keeps the period form but drops the medicinal masher. The locket is paired with it so the make-your-own ritual reads in sequence.
 - src: /projects/homhuan/homhuan-set.png
   alt: The seven products shown together as a family
   caption: One recurring holder shape, varied only by colour and glaze, lets seven different sources still read as a single family.
@@ -248,12 +248,12 @@ titleEm: and what it taught
 ## image
 
 src: /projects/homhuan/homhuan-design-week.png
-alt: Homhuan displayed at Bangkok design week 2019
-caption: Homhuan project displayed at Bangkok design week 2019
+alt: Homhuan displayed at Bangkok Design Week 2019
+caption: Homhuan project displayed at Bangkok Design Week 2019
 
 ## prose
 
-  The translation logic held; the objects did not all resolve. Seven products in three months meant most were built once, not iterated. 
+  The translation logic held. The objects did not all resolve. Seven products in three months meant most were built once, not iterated. 
   The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed.
 
 ## reflections

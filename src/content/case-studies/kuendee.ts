@@ -44,14 +44,14 @@ const kuendeeCaseStudy = {
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-logo.png",
-          "alt": "Kuendee, an organic supply logo",
-          "caption": "Kuendee, an organic supply logo.",
+          "alt": "Kuendee organic supply logo",
+          "caption": "Kuendee, an organic supply brand.",
           "size": "md"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  Kuendee is an organic supply, distributes fertiliser and growing materials, biochar, clay pebbles, and aimming to distribute their product in a home and hardware retailer."
+            "  Kuendee is an organic supplier of fertiliser and growing materials, biochar, clay pebbles, and more, aiming to distribute through home and hardware retailers."
           ]
         },
         {
@@ -63,8 +63,8 @@ const kuendeeCaseStudy = {
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-constraint-size.png",
-          "alt": "Space constraint isomatric and dimension",
-          "caption": "Space constraint isomatric and dimension",
+          "alt": "Isometric diagram showing the booth's space constraints and dimensions",
+          "caption": "Space constraint isometric and dimensions.",
           "size": "md"
         },
         {
@@ -109,20 +109,20 @@ const kuendeeCaseStudy = {
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-design-approaches.gif",
-          "alt": "Display approaches sample",
-          "caption": "Booth display approaches sample, using the customer variety of products."
+          "alt": "Sample booth display approaches using a variety of Kuendee products",
+          "caption": "Booth display approaches sample, using the customer's variety of products."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble. \n  Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately."
+            "  The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble.\n  Because the products are sacks and loose media rather than clean boxed goods, the units had to carry real weight and present it deliberately."
           ]
         },
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-illustration.png",
-          "alt": "Illustration sample",
-          "caption": "Booth illustration sample, including, backdrop, inforgraphic signage, and product signs"
+          "alt": "Booth illustration samples including backdrop, infographic signage, and product signs",
+          "caption": "Booth illustration sample, including backdrop, infographic signage, and product signs."
         },
         {
           "type": "prose",
@@ -139,8 +139,8 @@ const kuendeeCaseStudy = {
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-design-3d.gif",
-          "alt": "The Kuendee booth 3D render",
-          "caption": "The Kuendee booth 3D render with applied graphic."
+          "alt": "3D render of the Kuendee booth with applied graphics",
+          "caption": "The Kuendee booth 3D render with applied graphics."
         }
       ]
     },
@@ -152,8 +152,8 @@ const kuendeeCaseStudy = {
         {
           "type": "image",
           "src": "/projects/kuendee/kuendee-final.png",
-          "alt": "The live Kuendee booth",
-          "caption": "Live Kuendee booth in retailer store."
+          "alt": "The live Kuendee booth installed in a retailer",
+          "caption": "Live Kuendee booth in a retailer store."
         },
         {
           "type": "outcomes",

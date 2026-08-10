@@ -29,7 +29,7 @@ titleEm: and a second look, a year later
 
 ## prose
 
-Many caregivers don't live with the person they care for. The person with dementia is home; the caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.
+Many caregivers don't live with the person they care for. The person with dementia is home. The caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.
 
 In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes.
 
@@ -78,7 +78,7 @@ caption: The status card sits above the fold, so the caregiver's first glance an
 
 ## prose
 
-The project was a team of four; research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report.
+The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report.
 
 ## image
 
@@ -125,7 +125,7 @@ title: Three tasks worth watching
 
 ## prose
 
-The SUS was 81.5; six of eight tasks passed target; three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study.
+The SUS was 81.5. Six of eight tasks passed target. Three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study.
 
 ## image
 
@@ -144,7 +144,7 @@ caption: The Safe / Dangerous toggle read as a header, not a choice, so half the
 
 src: /projects/dementia-caregiver/task-8-notification-centre.png
 alt: The notification centre with two tabs at the top, Notification on the left, Alert on the right
-caption: The alert tab was obvious once found; the failure was expecting it here at all, so P4 searched the menu bar first.
+caption: The alert tab was obvious once found. The failure was expecting it here at all, so P4 searched the menu bar first.
 
 ## prose
 
@@ -158,7 +158,7 @@ titleEm: three underlying causes
 
 ## prose
 
-The evaluation was finished; the data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy.
+The evaluation was finished. The data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy.
 
 ## prose
 
@@ -224,6 +224,6 @@ title: Reflection
 
 - The 2024 evaluation was rigorous in method but small in sample: four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise they need users who actually live the problem. Rigour of method is not rigour of sample.
 
-- Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck; it was distance. In future evaluations I want to build the "come back later with fresh questions" step in on purpose, not by accident.
+- Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck. It was distance. In future evaluations I want to build the "come back later with fresh questions" step in on purpose, not by accident.
 
 - The distinction I ended up drawing, between whether the user can do the thing and whether their confidence matches reality, isn't specific to this app. Any interface with real-world stakes benefits from asking both. That's the lens I take forward.

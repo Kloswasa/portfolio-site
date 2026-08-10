@@ -45,7 +45,7 @@ const buphaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "A established local business wanted a secondary product line aimed at younger customers and gift buyers, same quality, warmer personality. The parent brand reads formal; Bhup needed to feel approachable from three metres on a market stall.",
+            "An established local business wanted a secondary product line aimed at younger customers and gift buyers, same quality, warmer personality. The parent brand reads formal. Bupha needed to feel approachable from three metres on a market stall.",
             "Scope covered label graphics, a small illustration set for three products, and a simple brand mark extension, not a full rebrand."
           ]
         },
@@ -79,7 +79,7 @@ const buphaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Geometric minimalism matched the parent brand too closely, Bhup would have disappeared. Loose hand-drawn illustration with rounded type won stall-side tests: warmer, more giftable, still legible at small label size."
+            "Geometric minimalism matched the parent brand too closely. Bupha would have disappeared. Loose hand-drawn illustration with rounded type won stall-side tests: warmer, more giftable, still legible at small label size."
           ]
         },
         {
@@ -139,14 +139,14 @@ const buphaCaseStudy = {
             {
               "value": "✓",
               "label": "Client launch",
-              "body": "Bhup line debuted at weekend market, illustration style cited as top purchase driver in informal feedback."
+              "body": "Bupha line debuted at a weekend market. Illustration style cited as top purchase driver in informal feedback."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "A small scope project that proved how much personality illustration adds when the parent brand can't flex, Bhup feels like a welcome, not a compromise."
+            "A small-scope project that proved how much personality illustration adds when the parent brand can't flex. Bupha feels like a welcome, not a compromise."
           ]
         }
       ]

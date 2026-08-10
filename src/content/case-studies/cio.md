@@ -52,7 +52,7 @@ titleEm: over magnets.
 
 ## prose
 
-Magnetic catches and separate inserts were early options, both added cost and assembly steps. The winning direction used scored carton panels and a tab-and-slot catch built into the dieline itself.
+Magnetic catches and separate inserts were early options. Both added cost and assembly steps. The winning direction used scored carton panels and a tab-and-slot catch built into the dieline itself.
 
 ## callout
 
@@ -62,7 +62,7 @@ body: A double-wall score added caliper at the hinge line, enough to hold 110° 
 
 ## annotation
 
-text: The lock angle was tuned in foam mock-ups before CAD, users could extract product one-handed when the lid held between 100° and 120°.
+text: The lock angle was tuned in foam mock-ups before CAD. Users could extract product one-handed when the lid held between 100° and 120°.
 
 # work
 
@@ -85,7 +85,7 @@ Structural development focused on the hinge score depth, catch tab geometry, and
   body: Tab-and-slot lock integrated into single-panel dieline, no secondary parts.
 - num: "03"
   title: Prototype + spec
-  body: Chipboard prototype validated one-handed access; dieline handed off with
+  body: Chipboard prototype validated one-handed access. Dieline handed off with
     fold order.
 
 # outcome
@@ -107,4 +107,4 @@ titleEm: stays useful.
 
 ## prose
 
-Cio is a structure-first packaging piece, the unboxing moment is the mechanism. Graphics can stay minimal when the fold does the work.
+Cio is a structure-first packaging piece. The unboxing moment is the mechanism. Graphics can stay minimal when the fold does the work.

@@ -30,7 +30,7 @@ titleEm: objects, not rows.
 
 Unlike generic recipe aggregators, the experience centers the cook and the family context behind each dish.
 
-Interviewees stored recipes in Notes, WhatsApp, and handwritten cards. Search failed across formats; scaling servings and unit conversion caused friction at cook time.
+Interviewees stored recipes in Notes, WhatsApp, and handwritten cards. Search failed across formats. Scaling servings and unit conversion caused friction at cook time.
 
 ## stats
 
@@ -71,7 +71,7 @@ source: Beta family interview · Week 2
 - num: C
   label: Friction 03
   title: Browse-first IA
-  body: Meal-kit app patterns (browse → cart) ignored library behaviour, families
+  body: Meal-kit app patterns (browse → cart) ignored library behaviour. Families
     wanted collections by branch, not discovery feeds.
 
 ## callout
@@ -100,8 +100,8 @@ captionMeta: Figma · Discovery phase
 ## twoCol
 
 - label: Family interviews · n=5
-  body: Participants wanted lineage (who taught whom) as much as ingredients,
-    social context was non-negotiable.
+  body: Participants wanted lineage (who taught whom) as much as ingredients.
+    Social context was non-negotiable.
 - label: Cook-along tests
   body: Beta cooks completed recipes with fewer mid-session exits when steps were
     one per screen and timers were one tap away.
@@ -176,7 +176,7 @@ Core patterns: collection cards, recipe detail with lineage, step-by-step cook v
 
 ## annotation
 
-text: Voice notes per step were optional, families who preferred written-only recipes could ignore them without losing structure.
+text: Voice notes per step were optional. Families who preferred written-only recipes could ignore them without losing structure.
 
 ## callout
 
@@ -212,11 +212,11 @@ Shipped responsive web app with share links for relatives without accounts and p
 ## reflections
 
 - Investing in import flows (photo of handwritten card → draft) would be the next bet, manual entry slowed early adoption.
-- I'd prototype print layouts earlier; families asked for physical cards sooner than expected.
+- I'd prototype print layouts earlier. Families asked for physical cards sooner than expected.
 - The designer format gave room to show both IA shifts and cook-mode rationale in one narrative arc.
 
 ## callout
 
 label: The one thing
 title: Lineage is a feature
-body: Recipes are social objects. Who taught whom mattered as much as ingredients, designing for lineage kept the product feeling like family, not a database.
+body: Recipes are social objects. Who taught whom mattered as much as ingredients. Designing for lineage kept the product feeling like family, not a database.

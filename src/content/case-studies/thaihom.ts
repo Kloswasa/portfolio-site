@@ -40,7 +40,7 @@ const thaihomCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Thai H asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients, lemongrass, kaffir lime, galangal, jasmine, coconut, and others, that define Thai fragrance culture.",
+            "Thai Hom asks a visual question: how do you communicate aroma without sound or scent? The book maps ingredients, lemongrass, kaffir lime, galangal, jasmine, coconut, and others, that define Thai fragrance culture.",
             "Every spread is original: no stock illustration, no borrowed icons. The goal was a cohesive editorial object where graphic rhythm and hand-drawn detail carry the sensory story."
           ]
         },
@@ -122,7 +122,7 @@ const thaihomCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Thai H is the most illustration-heavy piece in my graphic portfolio, proof that sensory topics reward slow, authored visuals over fast template assembly."
+            "Thai Hom is the most illustration-heavy piece in my graphic portfolio. Proof that sensory topics reward slow, authored visuals over fast template assembly."
           ]
         }
       ]

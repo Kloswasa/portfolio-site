@@ -44,14 +44,14 @@ const busabaCaseStudy = {
         {
           "type": "image",
           "src": "/projects/busaba/busaba-architecture.jpeg",
-          "alt": "Busaba signature architecture scene",
+          "alt": "Busaba's signature white Thai architecture hotel facade",
           "caption": "Busaba signature white Thai architecture hotel.",
           "size": "md"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  Busaba, the hotel and cafe provider in Ayutthaya wanted a signature dessert and its own presentation in their new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
+            "  Busaba, a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for their new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
           ]
         },
         {
@@ -84,7 +84,7 @@ const busabaCaseStudy = {
             {
               "num": "01",
               "title": "Source",
-              "body": "Client's traditional Thai architecture; Ayutthaya's historic coinage."
+              "body": "Client's traditional Thai architecture. Ayutthaya's historic coinage."
             },
             {
               "num": "02",
@@ -94,32 +94,32 @@ const busabaCaseStudy = {
             {
               "num": "03",
               "title": "Produce",
-              "body": "Prototyping the fork for the hand; setting the dessert form for repeatable service."
+              "body": "Prototyping the fork for the hand. Setting the dessert form for repeatable service."
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  The fork's form is drawn from the client's own iconic traditional Thai architecture, extracting a curve and line, applied into the cutlery form."
+            "  The fork's form is drawn from the client's own iconic traditional Thai architecture, extracting a curve and line applied into the cutlery form."
           ]
         },
         {
           "type": "image",
           "src": "/projects/busaba/busaba-fork-ref.png",
-          "alt": "Busaba signature architecture scene lines",
+          "alt": "Busaba architecture with extracted line and form used for the fork",
           "caption": "Busaba signature white Thai architecture hotel and its extracted line and form."
         },
         {
           "type": "image",
           "src": "/projects/busaba/busaba-fork-design.png",
-          "alt": "Busaba signature architecture scene",
-          "caption": "3D render and applied line and form to the fork design"
+          "alt": "3D render of the bespoke fork with the extracted architectural line applied",
+          "caption": "3D render with the extracted line and form applied to the fork design."
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  Meanwhile, the dessert's \"Thong-Bolan\" silhouette is from Ayutthaya's old currency called \"Pod-Duang\", minimised the shape and details, while still be able to keep the form of the currency."
+            "  Meanwhile, the dessert's Thong-Bolan silhouette comes from Ayutthaya's old currency, Pod-Duang, the shape and details minimised while still keeping the form of the currency."
           ]
         },
         {
@@ -127,13 +127,13 @@ const busabaCaseStudy = {
           "items": [
             {
               "src": "/projects/busaba/busaba-podduand-ref.png",
-              "alt": "Left",
+              "alt": "Historic Pod-Duang currency from Ayutthaya",
               "caption": "Pod-Duang currency"
             },
             {
               "src": "/projects/busaba/busaba-podduand-design.png",
-              "alt": "Right",
-              "caption": "3D render Thong-Bolan design following Pod-Duang shape and form"
+              "alt": "3D render of the Thong-Bolan dessert following the Pod-Duang form",
+              "caption": "3D render of Thong-Bolan design following Pod-Duang shape and form"
             }
           ]
         },
@@ -148,13 +148,13 @@ const busabaCaseStudy = {
           "items": [
             {
               "src": "/projects/busaba/busaba-fork-use.png",
-              "alt": "Real fork usage photo from customer",
-              "caption": "In service fork photo from customer"
+              "alt": "Customer photo of the bespoke fork in service",
+              "caption": "In-service fork photo from a customer"
             },
             {
               "src": "/projects/busaba/busaba-thongboran.png",
-              "alt": "Left",
-              "caption": "Real housemade Thong-Bolan photo from customer"
+              "alt": "Customer photo of the house-made Thong-Bolan dessert",
+              "caption": "Real house-made Thong-Bolan photo from a customer"
             }
           ]
         }
@@ -168,7 +168,7 @@ const busabaCaseStudy = {
         {
           "type": "image",
           "src": "/projects/busaba/busaba-final.png",
-          "alt": "Busaba signature architecture scene",
+          "alt": "Live Busaba dessert bar with the signature dessert and fork",
           "caption": "Live Busaba dessert bar"
         },
         {

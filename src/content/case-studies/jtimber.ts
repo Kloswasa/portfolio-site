@@ -11,10 +11,10 @@ const jtimberCaseStudy = {
     "eyebrow": "005 · Graphic Design · Flooring catalogue & 3D assets",
     "titleLine1": "JTimber",
     "titleLine2": "Flooring Catalogue",
-    "summary": "A 48-page flooring catalogue for a wood styling company, covering products, patterns, and services, taken from 3D rendered assets and retouching through layout to coordinated print publication.",
+    "summary": "A 48-page flooring catalogue for a wood styling company, covering all products and services, managing from the assets to coordinated print publication.",
     "image": {
       "src": "/projects/jtimber/jtimber-header.png",
-      "alt": "The Jtimber flooring catalogue open to a spread showing wood floor colour options"
+      "alt": "The JTimber flooring catalogue open to a spread showing wood floor colour options"
     },
     "meta": [
       {
@@ -38,13 +38,20 @@ const jtimberCaseStudy = {
   "sections": {
     "context": {
       "eyebrow": "01 · Context",
-      "title": "Selling a material",
+      "title": "Presenting a brand",
       "titleEm": "on paper.",
       "blocks": [
         {
+          "type": "image",
+          "src": "/projects/bhae/bhaesaj-original.png",
+          "alt": "Bhaesaj traditional lip balm brand logo",
+          "caption": "Bhaesaj logo",
+          "size": "sm"
+        },
+        {
           "type": "prose",
           "paragraphs": [
-            "JTimber needed a catalogue that worked as the company's complete reference document. It had to carry the flooring range, plank types and sizes, colour availability per wood type, laying patterns and samples of each, alongside the services around it, from consultation and CNC custom work to automotive flooring, plus a portfolio of completed projects. Five kinds of content, each behaving differently on a page. Underneath all of it sat one hard constraint: a customer chooses a floor colour from these pages, so a colour that prints wrong is not a design flaw, it is a customer receiving a floor they did not choose."
+            "  JTimber, a wood flooring company, needed a catalogue to serve as its complete reference document—covering the brand range, plank types and sizes, colour availability per wood, laying patterns and samples, plus services from consultation and CNC custom work to automotive flooring, and a project portfolio. \n  Five content types, each behaving differently on the page. Underneath it all sat one hard constraint: customers choose their floor colour from these pages, so a colour that prints wrong isn't a design flaw—it's a customer receiving a floor they didn't choose."
           ]
         }
       ]
@@ -55,29 +62,59 @@ const jtimberCaseStudy = {
       "titleEm": "printed page.",
       "blocks": [
         {
-          "type": "prose",
-          "paragraphs": [
-            "  I built the assets rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing, the only way a set of swatches is honestly comparable, and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. \n  Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed. The layout then had to hold all five content types together: specification tables, colour ranges, pattern samples, service pages, and portfolio work each want a different page logic, but the reader moves between them continuously, so the catalogue needed one visual system flexible enough to carry all of it without fragmenting. \n  Coordinating with the external printer was its own discipline: colour, resolution, and bleed had to be right before the files left, because nothing is fixable afterwards."
-          ]
-        },
-        {
           "type": "process",
           "items": [
             {
               "num": "01",
               "title": "Structure",
-              "body": "Planning an information architecture for the catalog, considering a user flow."
+              "body": "Planning an information architecture for the catalogue, considering a user flow."
             },
             {
               "num": "02",
               "title": "Render and Retouch",
-              "body": "Building colour options, plank cross-sections, and pattern samples as consistent 3D assets. Tuning grain, tone, and finish so each wood type reads truthfully in print."
+              "body": "Generated uniform 3D assets for product variants and calibrated material textures to guarantee print reproduction."
             },
             {
               "num": "03",
               "title": "Publish",
-              "body": "Laying out forty-eight pages across product, pattern, service, and portfolio content, then coordinating files through an external printer."
+              "body": "Laying out 48 pages across all contents, then coordinating files through an external printer."
             }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/bhae/bhaesaj-direction-branding.png",
+          "alt": "Mood board for the Bhaesaj modern classic packaging direction",
+          "caption": "IA"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  The design necessitated a cohesive and adaptable visual framework to synthesize five distinct content formats into a unified reading experience."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/bhae/bhaesaj-direction-branding.png",
+          "alt": "Mood board for the Bhaesaj modern classic packaging direction",
+          "caption": "Assets creation"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  The assets are built rather than sourcing them, rendering the range in 3D so every colour could be shown in identical lighting and framing, the only way a set of swatches is honestly comparable, and rendering plank cross-sections to turn the engineered build-up into something a customer could grasp at a glance. \n  Retouching resolved what rendering could not, tuning grain and tone so each material read truthfully once printed."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/bhae/bhaesaj-direction-branding.png",
+          "alt": "Mood board for the Bhaesaj modern classic packaging direction",
+          "caption": "Assembly"
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Furthermore, coordination with the external printer required rigorous prepress calibration—specifically regarding colour accuracy, image resolution, and bleed parameters—as post-production modifications are impossible."
           ]
         }
       ]
@@ -90,7 +127,7 @@ const jtimberCaseStudy = {
         {
           "type": "image",
           "src": "/projects/timber/final.png",
-          "alt": "Spreads from the finished Jtimber catalogue showing colour options, laying patterns, and plank construction diagrams",
+          "alt": "Spreads from the finished JTimber catalogue showing colour options, laying patterns, and plank construction diagrams",
           "caption": "Product, pattern, and service content unified across forty-eight pages."
         },
         {
@@ -102,8 +139,8 @@ const jtimberCaseStudy = {
               "body": "Rendering, retouching, layout, and print coordination handled as a single pipeline."
             },
             {
-              "value": "5 content types",
-              "label": "One document, many jobs",
+              "value": "5 contents",
+              "label": "One document, covering all jobs",
               "body": "Specifications, colour, patterns, services, and portfolio held together in one visual system."
             }
           ]

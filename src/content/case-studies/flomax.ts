@@ -11,7 +11,7 @@ const flomaxCaseStudy = {
     "eyebrow": "003 · Graphic Design · Kids mask packaging",
     "titleLine1": "Flomax",
     "titleLine2": "Kids Mask Packaging",
-    "summary": "A youths graphic style for Flomax's filter face mask, designed for children while connect to the brand identity.",
+    "summary": "A youth-facing graphic style for Flomax's filter face mask, designed for children while staying connected to the brand identity.",
     "image": {
       "src": "/projects/flomax/flomax-head-cover.png",
       "alt": "Flomax kids face mask packaging showing the alternative graphic style"
@@ -44,14 +44,14 @@ const flomaxCaseStudy = {
         {
           "type": "image",
           "src": "/projects/flomax/flomax-logo.png",
-          "alt": "Flomax , an air filters manufactures logo",
-          "caption": "Flomax , an air filters manufactures.",
+          "alt": "Flomax logo for an air filter manufacturer",
+          "caption": "Flomax, an air filter manufacturer.",
           "size": "md"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  Flomax air filters manufactures had built a facial filter mask line for adults and plan to extend it to a kids product meant the packaging could not simply be scaled down."
+            "  Flomax, an air filter manufacturer, had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down."
           ]
         },
         {
@@ -63,7 +63,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The original graphics were built to signal filtration performance to an adult buyer, not a child. The constraint was that the new style still had to sit under the same brand identity and shelve beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
+            "  The original graphics were built to signal filtration performance to an adult buyer, not a child. The constraint was that the new style still had to sit under the same brand identity and shelf beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
           ]
         }
       ]
@@ -108,8 +108,8 @@ const flomaxCaseStudy = {
         {
           "type": "image",
           "src": "/projects/flomax/flomax-comparison-transition.gif",
-          "alt": "Graphic elements transition",
-          "caption": "Graphic elements transition"
+          "alt": "Graphic elements transitioning from the adult pack language to the kids register",
+          "caption": "Graphic elements transition."
         },
         {
           "type": "prose",
@@ -120,7 +120,7 @@ const flomaxCaseStudy = {
         {
           "type": "image",
           "src": "/projects/flomax/flomax-kid-final.png",
-          "alt": "The Flomax kids mask packaging final",
+          "alt": "The Flomax kids mask packaging final design",
           "caption": "The Flomax kids mask packaging final design."
         }
       ]
