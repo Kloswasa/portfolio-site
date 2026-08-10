@@ -28,7 +28,7 @@ function BotanicalLoader() {
         },
       }}
     >
-      <div className="h-48 w-32" style={{ perspective: 900 }}>
+      <div className="h-96 w-64" style={{ perspective: 900 }}>
         <motion.div
           className="h-full w-full"
           style={{ transformStyle: "preserve-3d" }}
