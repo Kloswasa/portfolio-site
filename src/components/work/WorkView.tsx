@@ -2,9 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { FilterBar } from "@/src/components/ui/FilterBar";
+import { ImagePreloader } from "@/src/components/ui/ImagePreloader";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { WorkGrid } from "@/src/components/work/WorkGrid";
 import { WorkHero } from "@/src/components/work/WorkHero";
+import { collectWorkCardImages } from "@/src/lib/collect-card-images";
 import type {
   WorkArchiveProject,
   WorkEndCopy,
@@ -42,8 +44,14 @@ export function WorkView({
     return projects.filter((project) => predicate(project.filters));
   }, [activeFilter, projects]);
 
+  const imageUrls = useMemo(
+    () => collectWorkCardImages(projects),
+    [projects],
+  );
+
   return (
-    <div className="work-page">
+    <ImagePreloader imageUrls={imageUrls}>
+      <div className="work-page">
       <WorkHero meta={heroMeta} />
       <FilterBar
         options={filterOptions}
@@ -60,6 +68,7 @@ export function WorkView({
           <PageEndSection copy={endCopy} />
         </div>
       </div>
-    </div>
+      </div>
+    </ImagePreloader>
   );
 }

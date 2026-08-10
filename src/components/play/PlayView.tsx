@@ -1,10 +1,12 @@
 "use client";
 
 import { FilterBar, FilterBarAction } from "@/src/components/ui/FilterBar";
+import { ImagePreloader } from "@/src/components/ui/ImagePreloader";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { PlayHero } from "@/src/components/play/PlayHero";
 import { PlayMediumBlock } from "@/src/components/play/PlayMediumBlock";
 import { PlayViewer } from "@/src/components/play/PlayViewer";
+import { collectPlayCardImages } from "@/src/lib/collect-card-images";
 import { PlayEndCopy } from "@/src/lib/play/types";
 import type {
   PlayFilterKey,
@@ -61,6 +63,8 @@ export function PlayView({
     return { illustration, code };
   }, [visibleWorks]);
 
+  const imageUrls = useMemo(() => collectPlayCardImages(works), [works]);
+
   const openWork = (work: PlayWork) => {
     const index = visibleWorks.findIndex((w) => w.id === work.id);
     if (index === -1) return;
@@ -69,7 +73,8 @@ export function PlayView({
   };
 
   return (
-    <div className="play-page">
+    <ImagePreloader imageUrls={imageUrls}>
+      <div className="play-page">
       <PlayHero meta={heroMeta} />
 
       <FilterBar
@@ -107,6 +112,7 @@ export function PlayView({
         onClose={() => setViewerOpen(false)}
         onNavigate={setViewerIndex}
       />
-    </div>
+      </div>
+    </ImagePreloader>
   );
 }
