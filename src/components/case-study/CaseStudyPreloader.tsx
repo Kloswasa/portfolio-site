@@ -26,22 +26,24 @@ function BotanicalLoader() {
         },
       }}
     >
-      <motion.div
-        className="h-48 w-32"
-        style={{ perspective: 900 }}
-        animate={
-          reduceMotion
-            ? undefined
-            : { rotateY: [-6, 6, -6] }
-        }
-        transition={
-          reduceMotion
-            ? undefined
-            : { duration: 3, ease: "easeInOut", repeat: Infinity }
-        }
-      >
-        <WorkHeroBotanical />
-      </motion.div>
+      <div className="h-48 w-32" style={{ perspective: 900 }}>
+        <motion.div
+          className="h-full w-full"
+          style={{ transformStyle: "preserve-3d" }}
+          animate={
+            reduceMotion
+              ? undefined
+              : { rotateY: [-18, 18, -18], rotateX: [4, -4, 4] }
+          }
+          transition={
+            reduceMotion
+              ? undefined
+              : { duration: 2.5, ease: "easeInOut", repeat: Infinity }
+          }
+        >
+          <WorkHeroBotanical />
+        </motion.div>
+      </div>
     </motion.div>
   );
 }
