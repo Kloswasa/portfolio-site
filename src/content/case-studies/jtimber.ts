@@ -43,15 +43,15 @@ const jtimberCaseStudy = {
       "blocks": [
         {
           "type": "image",
-          "src": "/projects/bhae/bhaesaj-original.png",
-          "alt": "Bhaesaj traditional lip balm brand logo",
-          "caption": "Bhaesaj logo",
-          "size": "sm"
+          "src": "/projects/jtimber/JTimber-logo.png",
+          "alt": "JTimber logo",
+          "caption": "JTimber, a wood flooring company logo",
+          "size": "md"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  JTimber, a wood flooring company, needed a catalogue to serve as its complete reference document—covering the brand range, plank types and sizes, colour availability per wood, laying patterns and samples, plus services from consultation and CNC custom work to automotive flooring, and a project portfolio. \n  Five content types, each behaving differently on the page. Underneath it all sat one hard constraint: customers choose their floor colour from these pages, so a colour that prints wrong isn't a design flaw—it's a customer receiving a floor they didn't choose."
+            "  JTimber, a wood flooring company, needed a catalogue to serve as its complete reference document that covering the brand service range, with five content types, each behaving differently on the page. \n  Underneath it all sat one hard constraint: customers choose their floor colour from these pages, so a colour that prints wrong isn't a design flaw—it's a customer receiving a floor they didn't choose."
           ]
         }
       ]
@@ -129,6 +129,45 @@ const jtimberCaseStudy = {
           "src": "/projects/timber/final.png",
           "alt": "Spreads from the finished JTimber catalogue showing colour options, laying patterns, and plank construction diagrams",
           "caption": "Product, pattern, and service content unified across forty-eight pages."
+        },
+        {
+          "type": "imageGrid",
+          "items": [
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
+              "alt": "Platypus illustration sample",
+              "caption": "imageGrid · item 1",
+              "credit": "Credit on grid item",
+              "creditHref": "https://example.com"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-brolga.png",
+              "alt": "Brolga illustration sample",
+              "caption": "imageGrid · item 2"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-cover.png",
+              "alt": "Australia Call cover",
+              "caption": "imageGrid · item 3"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-platypus.png",
+              "alt": "Platypus illustration sample",
+              "caption": "imageGrid · item 4",
+              "credit": "Credit on grid item",
+              "creditHref": "https://example.com"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-identical-brolga.png",
+              "alt": "Brolga illustration sample",
+              "caption": "imageGrid · item 5"
+            },
+            {
+              "src": "/projects/quiz-game/quiz-game-cover.png",
+              "alt": "Australia Call cover",
+              "caption": "imageGrid · item 5"
+            }
+          ]
         },
         {
           "type": "outcomes",

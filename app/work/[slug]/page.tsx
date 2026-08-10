@@ -5,10 +5,22 @@ import {
   getCaseStudy,
 } from "@/src/lib/case-studies";
 import { isConfidentialUnlocked } from "@/src/lib/confidential/auth";
-import { getProject, getCaseStudySlugForProject, getVisibleProjects } from "@/src/lib/projects";
+import {
+  getProject,
+  getCaseStudySlugForProject,
+  getNextProject,
+  getVisibleProjects,
+} from "@/src/lib/projects";
 
 export function generateStaticParams() {
   return getVisibleProjects().map((project) => ({ slug: project.slug }));
+}
+
+function nextProjectIndexLabel(next: ReturnType<typeof getNextProject>): string {
+  if (!next) return "001";
+  const visible = getVisibleProjects();
+  const index = visible.findIndex((project) => project.slug === next.slug);
+  return String(Math.max(index, 0) + 1).padStart(3, "0");
 }
 
 export default async function WorkDetailPage({
@@ -21,8 +33,6 @@ export default async function WorkDetailPage({
 
   if (!project || project.hidden) notFound();
 
-  const visibleProjects = getVisibleProjects();
-
   if (project.confidential) {
     const unlocked = await isConfidentialUnlocked();
 
@@ -30,11 +40,8 @@ export default async function WorkDetailPage({
       const caseStudy = getCaseStudy(getCaseStudySlugForProject(project));
 
       if (caseStudy) {
-        const projectIndex = visibleProjects.findIndex((p) => p.slug === slug);
-        const nextProject = visibleProjects[(projectIndex + 1) % visibleProjects.length]!;
-        const nextIndex = String(
-          ((projectIndex + 1) % visibleProjects.length) + 1,
-        ).padStart(3, "0");
+        const nextProject = getNextProject(slug);
+        if (!nextProject) notFound();
 
         return (
           <main className="w-full px-8">
@@ -42,7 +49,7 @@ export default async function WorkDetailPage({
               caseStudy={caseStudy}
               project={project}
               nextProject={nextProject}
-              nextIndex={nextIndex}
+              nextIndex={nextProjectIndexLabel(nextProject)}
             />
           </main>
         );
@@ -60,11 +67,8 @@ export default async function WorkDetailPage({
 
   if (!caseStudy) notFound();
 
-  const projectIndex = visibleProjects.findIndex((p) => p.slug === slug);
-  const nextProject = visibleProjects[(projectIndex + 1) % visibleProjects.length]!;
-  const nextIndex = String(
-    ((projectIndex + 1) % visibleProjects.length) + 1,
-  ).padStart(3, "0");
+  const nextProject = getNextProject(slug);
+  if (!nextProject) notFound();
 
   return (
     <main className="w-full px-8">
@@ -72,7 +76,7 @@ export default async function WorkDetailPage({
         caseStudy={caseStudy}
         project={project}
         nextProject={nextProject}
-        nextIndex={nextIndex}
+        nextIndex={nextProjectIndexLabel(nextProject)}
       />
     </main>
   );

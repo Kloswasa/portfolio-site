@@ -44,8 +44,8 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "A personality quiz result is easy to make and easy to forget. If the output was a one-word label, the product would be played once and closed, and a newcomer to Australia would be no closer to knowing where to go. The result had to earn its usefulness or the whole thing was a horoscope.",
-            "    The brief: design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.",
+            "  A personality quiz result is easy to make and easy to forget. If the output was a one-word label, the product would be played once and closed, and a newcomer to Australia would be no closer to knowing where to go. The result had to earn its usefulness or the whole thing was a horoscope.",
+            "    **The brief**: design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.",
             "Two things in that brief made it harder than a normal quiz."
           ]
         },
@@ -80,7 +80,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Five people who could become future Australia travellers were interviewed, and patterns in what they expected from a result emerged from those conversations."
+            "  Five peoples who could become future Australia travellers were interviewed, and patterns in what they expected from a result emerged from those conversations."
           ]
         },
         {
@@ -109,7 +109,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Moving to Australia aesthetic recognition: wildlife and natural scenes were named as Australia's signature in every interview, but wildlife recognition stopped at two animals."
+            "  Moving to Australia aesthetic recognition: wildlife and natural scenes were named as Australia's signature in every interview, but wildlife recognition stopped at two animals."
           ]
         },
         {
@@ -131,15 +131,14 @@ const quizGameCaseStudy = {
       "titleEm": "scene as backdrop",
       "blocks": [
         {
-          "type": "prose",
-          "paragraphs": [
-            "This quiz's result had to represent the person, not label them."
-          ]
+          "type": "pullquote",
+          "text": "This quiz's result had to represent the person, not label them.",
+          "source": "Differentiate approach"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. Scenery became the ambient backdrop of the quiz, while a native animal, Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live."
+            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. \n  Scenery became the ambient backdrop of the quiz, while a native animal, Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo, carried each personality type's identity on the result page, where the personal weight had to live."
           ]
         },
         {
@@ -228,7 +227,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "The project was designed under a tech stack of Next.js, TypeScript, Prisma, and Tailwind CSS. The quiz and the result page do different jobs, so they got different render strategies that fit that stack."
+            "  The project was designed under a tech stack of Next.js, TypeScript, Prisma, and Tailwind CSS. The quiz and the result page do different jobs, so they got different render strategies that fit that stack."
           ]
         },
         {
@@ -257,11 +256,11 @@ const quizGameCaseStudy = {
           "items": [
             {
               "label": "The quiz",
-              "body": "It fetches the questions via API, and in parallel runs a preload pass to warm the browser cache with every background, answer GIF, and result image the user might encounter. A loading screen covers the wait. The point wasn't to hide loading, it was that nothing flickered or popped in once the quiz began."
+              "body": "Questions are fetched via API concurrently with a comprehensive media preload pass. This cache-warming strategy, masked by an initial loading screen, eliminates visual flickering and ensures a seamless user experience once the quiz begins."
             },
             {
               "label": "The result page",
-              "body": "Prisma queries run on the server and the page arrives at the browser already populated. No spinner at the moment that matters most. Per-type content, including animal, destinations, tips, and trivia, lives in the database, not in code, so the company's team can update copy and add types without a redeploy after the project is handed over."
+              "body": "Server-side Prisma queries ensure pages arrive fully populated, eliminating client-side loading latency. Additionally, utilizing a database-driven content architecture empowers the client to autonomously update copy and introduce new categories without requiring code redeployments."
             }
           ]
         }

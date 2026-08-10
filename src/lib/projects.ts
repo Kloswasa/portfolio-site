@@ -261,12 +261,29 @@ export const projects: Project[] = [
       src: "/projects/quiz-game/quiz-game-cover.png",
       alt: "Block showcase cover placeholder",
     },
-    hidden: false,
+    hidden: true,
   },
 ];
 
 export function getVisibleProjects(): Project[] {
   return projects.filter((project) => !project.hidden);
+}
+
+/**
+ * Next case-study footer target after `slug`.
+ * Skips confidential projects so "Next" doesn't land on a lock screen.
+ */
+export function getNextProject(slug: string): Project | undefined {
+  const visible = getVisibleProjects();
+  const start = visible.findIndex((project) => project.slug === slug);
+  if (start < 0 || visible.length === 0) return undefined;
+
+  for (let offset = 1; offset <= visible.length; offset += 1) {
+    const candidate = visible[(start + offset) % visible.length]!;
+    if (!candidate.confidential) return candidate;
+  }
+
+  return visible[(start + 1) % visible.length]!;
 }
 
 export function getProject(slug: string): Project | undefined {

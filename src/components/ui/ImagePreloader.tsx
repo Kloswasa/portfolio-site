@@ -3,12 +3,20 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState, type ReactNode } from "react";
 import { HeroPlantIllustration } from "@/src/components/ui/HeroPlantIllustration";
-import { pickRandomHeroPlantId, type HeroPlantId } from "@/src/lib/hero-plants";
+import {
+  DEFAULT_HERO_PLANT_ID,
+  pickRandomHeroPlantId,
+  type HeroPlantId,
+} from "@/src/lib/hero-plants";
 import { preloadImages } from "@/src/lib/preload-images";
 
 function BotanicalLoader() {
   const reduceMotion = useReducedMotion();
-  const [plantId] = useState<HeroPlantId>(() => pickRandomHeroPlantId());
+  const [plantId, setPlantId] = useState<HeroPlantId>(DEFAULT_HERO_PLANT_ID);
+
+  useEffect(() => {
+    setPlantId(pickRandomHeroPlantId());
+  }, []);
 
   return (
     <motion.div
