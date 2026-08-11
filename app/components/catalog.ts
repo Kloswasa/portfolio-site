@@ -267,6 +267,14 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     usedOn: "/work/[slug]",
   },
   {
+    id: "case-skeleton",
+    name: "CaseStudySkeleton",
+    path: "src/components/case-study/CaseStudySkeleton.tsx",
+    category: "case-study",
+    description: "Layout-matched skeleton shown while case study images preload.",
+    usedOn: "/work/[slug]",
+  },
+  {
     id: "work-hero",
     name: "WorkHero",
     path: "src/components/work/WorkHero.tsx",
