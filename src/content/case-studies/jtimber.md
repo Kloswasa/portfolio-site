@@ -33,7 +33,7 @@ size: md
 
 ## prose
   JTimber, a wood flooring company, needed a catalogue to serve as its complete reference document that covering the brand service range, with five content types, each behaving differently on the page. 
-  Underneath it all sat one hard constraint: customers choose their floor colour from these pages, so a colour that prints wrong isn't a design flaw—it's a customer receiving a floor they didn't choose.
+  Underneath it all sat one hard constraint: customers choose their floor colour from these pages, so a colour that prints wrong isn't a design flaw, it's a customer receiving a floor they didn't choose.
 
 # work
 eyebrow: 02 · Work
@@ -43,7 +43,7 @@ titleEm: printed page.
 ## process
 - num: "01"
   title: Structure
-  body: Planning an information architecture for the catalogue, considering a user flow.
+  body: Planning an information architecture for the catalogue, considering a catalogue journey map.
 - num: "02"
   title: Render and Retouch
   body: Generated uniform 3D assets for product variants and calibrated material textures to guarantee print reproduction.
@@ -52,12 +52,12 @@ titleEm: printed page.
   body: Laying out 48 pages across all contents, then coordinating files through an external printer.
 
 ## image
-src: /projects/bhae/bhaesaj-direction-branding.png
-alt: Mood board for the Bhaesaj modern classic packaging direction
-caption: IA
+src: /projects/jtimber/jtimber-diagram.png
+alt: Catalogue journey map
+caption: Catalogue journey map design.
 
 ## prose
-  The design necessitated a cohesive and adaptable visual framework to synthesize five distinct content formats into a unified reading experience. 
+  The design necessitated a cohesive and adaptable visual framework to synthesize five distinct content formats into a unified reading experience. Moreover, to make an experience become seamless, a reading order need to consider what user after from catalouge from building a trust to an evidence.
 
 ## image
 src: /projects/bhae/bhaesaj-direction-branding.png
@@ -88,29 +88,51 @@ alt: Spreads from the finished JTimber catalogue showing colour options, laying 
 caption: Product, pattern, and service content unified across forty-eight pages.
 
 ## imageGrid
+- src: /projects/jtimber/jtimber-services.jpg
+  alt: Brolga illustration sample
+  caption: 1
+- src: /projects/jtimber/jtimber-woods.jpg
+  alt: Australia Call cover
+  caption: 2
+- src: /projects/jtimber/jtimber-colours.png
+  alt: Platypus illustration sample
+  caption: 3
+  credit: Credit on grid item
+  creditHref: https://example.com
 
-- src: /projects/quiz-game/quiz-game-identical-platypus.png
+## imageGrid
+- src: /projects/jtimber/jtimber-services.jpg
+  alt: Brolga illustration sample
+  caption: 1
+- src: /projects/jtimber/jtimber-woods.jpg
+  alt: Australia Call cover
+  caption: 2
+- src: /projects/jtimber/jtimber-colours.png
   alt: Platypus illustration sample
-  caption: imageGrid · item 1
+  caption: 3
   credit: Credit on grid item
   creditHref: https://example.com
-- src: /projects/quiz-game/quiz-game-identical-brolga.png
+- src: /projects/jtimber/jtimber-portfolio.jpg
   alt: Brolga illustration sample
-  caption: imageGrid · item 2
-- src: /projects/quiz-game/quiz-game-cover.png
-  alt: Australia Call cover
-  caption: imageGrid · item 3
-- src: /projects/quiz-game/quiz-game-identical-platypus.png
-  alt: Platypus illustration sample
-  caption: imageGrid · item 4
-  credit: Credit on grid item
-  creditHref: https://example.com
-- src: /projects/quiz-game/quiz-game-identical-brolga.png
-  alt: Brolga illustration sample
-  caption: imageGrid · item 5
-- src: /projects/quiz-game/quiz-game-cover.png
-  alt: Australia Call cover
-  caption: imageGrid · item 5
+  caption: 4
+
+## imagePair
+
+- src: /projects/jtimber/jtimber-colours.png
+  alt: Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz
+  caption: The quiz is a client component
+- src: /projects/jtimber/jtimber-woods.jpg
+  alt: Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page
+  caption: The result page is a React Server Component
+
+## imagePair
+
+- src: /projects/jtimber/jtimber-colours.png
+  alt: Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz
+  caption: The quiz is a client component
+- src: /projects/jtimber/jtimber-woods.jpg
+  alt: Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page
+  caption: The result page is a React Server Component
 
 ## outcomes
 - value: "48 pages"
