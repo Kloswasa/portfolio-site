@@ -136,17 +136,17 @@ const jtimberCaseStudy = {
             {
               "src": "/projects/jtimber/jtimber-services.jpg",
               "alt": "Brolga illustration sample",
-              "caption": 1
+              "caption": "1"
             },
             {
               "src": "/projects/jtimber/jtimber-woods.jpg",
               "alt": "Australia Call cover",
-              "caption": 2
+              "caption": "2"
             },
             {
               "src": "/projects/jtimber/jtimber-colours.png",
               "alt": "Platypus illustration sample",
-              "caption": 3,
+              "caption": "3",
               "credit": "Credit on grid item",
               "creditHref": "https://example.com"
             }
@@ -158,24 +158,24 @@ const jtimberCaseStudy = {
             {
               "src": "/projects/jtimber/jtimber-services.jpg",
               "alt": "Brolga illustration sample",
-              "caption": 1
+              "caption": "1"
             },
             {
               "src": "/projects/jtimber/jtimber-woods.jpg",
               "alt": "Australia Call cover",
-              "caption": 2
+              "caption": "2"
             },
             {
               "src": "/projects/jtimber/jtimber-colours.png",
               "alt": "Platypus illustration sample",
-              "caption": 3,
+              "caption": "3",
               "credit": "Credit on grid item",
               "creditHref": "https://example.com"
             },
             {
               "src": "/projects/jtimber/jtimber-portfolio.jpg",
               "alt": "Brolga illustration sample",
-              "caption": 4
+              "caption": "4"
             }
           ]
         },
