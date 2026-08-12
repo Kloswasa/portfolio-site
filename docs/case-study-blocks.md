@@ -26,9 +26,9 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `componentGrid` | YAML list | Component inventory cards (`label`, `title`, `count`, `variant`: primary \| dark \| mid \| deepest) |
 | `outcomes` | YAML list | Result metrics (`value`, `label`, `body`) |
 | `reflections` | `-` list | Numbered takeaways |
-| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md) |
-| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md) |
-| `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`) |
+| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
+| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
+| `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `video` | key-value | Video embed (`src`, `poster`, `alt`, `caption`) |
 
 ---
@@ -155,6 +155,8 @@ Optional `image` + `imageAlt` render a small illustration inside the finding car
 ---
 
 ## Image blocks
+
+Recommended pixel dimensions for each `size` token: [`docs/image-sizes.md`](image-sizes.md).
 
 | Block | Count | Size |
 |-------|-------|------|

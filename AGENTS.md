@@ -159,6 +159,8 @@ Minor studies use `context → work → outcome`, with an optional `approach` se
 
 **Full shortlist + syntax:** [`docs/case-study-blocks.md`](docs/case-study-blocks.md)
 
+**Image export sizes** (covers, heroes, blocks, play, about): [`docs/image-sizes.md`](docs/image-sizes.md)
+
 - Key-value blocks (`pullquote`, `video`, `image`, `artifact`, `callout`, `annotation`): `key: value` lines under `## blockType`
 - List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`, `imageGrid`): YAML list under `## blockType`
 - Empty blocks (`ornament`, `colorSpecimen`, `typeSpecimen`): `## blockType` with no body
