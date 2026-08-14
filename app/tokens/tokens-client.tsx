@@ -14,6 +14,45 @@ type TokenRow = {
 
 type Mode = "split" | "light" | "dark" | "ramps";
 
+/**
+ * `min-w-0` lets the panel shrink to its grid track — without it the default
+ * `min-width: auto` sizes each column to its content and overflows the page.
+ * `@container` makes the inner grids respond to the panel, not the viewport.
+ */
+const PANEL_CLASS =
+  "@container w-full min-w-0 [contain:inline-size] overflow-x-hidden rounded-none border border-border-subtle bg-bg p-6";
+
+const SECTION_CLASS = "card min-w-0 overflow-hidden p-8";
+
+const SPLIT_GRID_CLASS =
+  "mt-12 grid min-w-0 grid-cols-1 gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]";
+
+function innerGridClass(compact: boolean) {
+  return compact
+    ? "mt-6 grid grid-cols-1 gap-4"
+    : "mt-6 grid grid-cols-1 gap-4 @2xl:grid-cols-2";
+}
+
+function rampGridClass(compact: boolean) {
+  return compact
+    ? "mt-5 grid grid-cols-1 gap-4"
+    : "mt-5 grid grid-cols-1 gap-4 @md:grid-cols-2 @3xl:grid-cols-3";
+}
+
+/** Display tokens use vw in clamp(); cap against panel width in split view. */
+function specimenFontSize(
+  cssVar: string,
+  key: string,
+  type: string | undefined,
+  compact: boolean,
+): string | undefined {
+  if (type !== "fontSizes") return undefined;
+  if (compact && key.startsWith("text.display.")) {
+    return `min(var(${cssVar}), 28cqw)`;
+  }
+  return `var(${cssVar})`;
+}
+
 type PaletteStep = {
   label: string;
   value: `#${string}`;
@@ -124,8 +163,10 @@ function PaletteSwatch({
 
 function PaletteRampsReference({
   resolved,
+  compact = false,
 }: {
   resolved: Record<string, string>;
+  compact?: boolean;
 }) {
   const ramps: PaletteRamp[] = [
     {
@@ -266,7 +307,7 @@ function PaletteRampsReference({
   ];
 
   return (
-    <section className="card p-8">
+    <section className={SECTION_CLASS}>
       <h2 className="text-heading-2xl">Color ramps (palette reference)</h2>
       <p className="mt-3 max-w-3xl font-body text-base text-text-muted">
         This is the underlying palette ramp reference (grouped by color family) with intended usage.
@@ -276,11 +317,11 @@ function PaletteRampsReference({
 
       <div className="mt-8 grid gap-6">
         {ramps.map((ramp) => (
-          <div key={ramp.id} className="rounded-none border border-border-subtle bg-bg p-6">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-              <div>
+          <div key={ramp.id} className="min-w-0 rounded-none border border-border-subtle bg-bg p-6">
+            <div className="flex flex-col gap-2">
+              <div className="min-w-0">
                 <h3 className="text-heading-xl">{ramp.title}</h3>
-                <p className="mt-2 max-w-3xl font-body text-sm text-text-muted">
+                <p className="mt-2 font-body text-sm text-text-muted">
                   {ramp.description}
                 </p>
                 <p className="mt-2 font-body text-sm text-text-muted">
@@ -289,7 +330,7 @@ function PaletteRampsReference({
               </div>
             </div>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className={rampGridClass(compact)}>
               {ramp.steps.map((step) => {
                 const usedBy = findTokenKeysByValue(resolved, step.value);
                 const actual = step.tokenKey ? resolved[step.tokenKey] : undefined;
@@ -376,9 +417,11 @@ function RampSwatch({
 function ColorRamps({
   rows,
   resolved,
+  compact = false,
 }: {
   rows: TokenRow[];
   resolved: Record<string, string>;
+  compact?: boolean;
 }) {
   const ramps: ColorRamp[] = [
     {
@@ -448,7 +491,7 @@ function ColorRamps({
   ];
 
   return (
-    <section className="card p-8">
+    <section className={SECTION_CLASS}>
       <h2 className="text-heading-2xl">Color ramps</h2>
       <p className="mt-3 max-w-3xl font-body text-base text-text-muted">
         These are the “families” of related semantic tokens. Ramps are how you keep hover/pressed,
@@ -472,18 +515,18 @@ function ColorRamps({
           return (
             <div
               key={ramp.id}
-              className="rounded-none border border-border-subtle bg-bg p-6"
+              className="min-w-0 rounded-none border border-border-subtle bg-bg p-6"
             >
-              <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-                <div>
+              <div className="flex flex-col gap-2">
+                <div className="min-w-0">
                   <h3 className="text-heading-xl">{ramp.title}</h3>
-                  <p className="mt-2 max-w-3xl font-body text-sm text-text-muted">
+                  <p className="mt-2 font-body text-sm text-text-muted">
                     {ramp.description}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className={rampGridClass(compact)}>
                 {present.map((item) => (
                   <RampSwatch
                     key={item.key}
@@ -530,10 +573,12 @@ function TokenSections({
   title,
   rows,
   resolved,
+  compact = false,
 }: {
   title: string;
   rows: TokenRow[];
   resolved: Record<string, string>;
+  compact?: boolean;
 }) {
   const colors = rows.filter((r) => r.group === "color");
   const typography = rows.filter((r) => r.group === "font" || r.group === "text");
@@ -542,7 +587,7 @@ function TokenSections({
   const shadow = rows.filter((r) => r.group === "shadow");
 
   return (
-    <div className="grid gap-10">
+    <div className="grid min-w-0 gap-10">
       <header className="flex items-end justify-between gap-6">
         <div>
           <span className="text-accent-dark font-body text-xs font-bold uppercase tracking-stamp">
@@ -551,26 +596,26 @@ function TokenSections({
         </div>
       </header>
 
-      <ColorRamps rows={rows} resolved={resolved} />
+      <ColorRamps rows={rows} resolved={resolved} compact={compact} />
 
-      <section className="card p-8">
+      <section className={SECTION_CLASS}>
         <h2 className="text-heading-2xl">Colors</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className={innerGridClass(compact)}>
           {colors.map((t) => (
             <div
               key={t.key}
-              className="flex items-center justify-between gap-4 rounded-none border border-border-subtle bg-bg p-4"
+              className="flex min-w-0 items-center justify-between gap-4 rounded-none border border-border-subtle bg-bg p-4"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex min-w-0 items-center gap-4">
                 <ColorSwatch cssVar={t.cssVar} />
                 <div className="min-w-0">
                   <div className="font-mono text-sm text-text">{t.key}</div>
-                  <div className="mt-1 font-mono text-xs text-text-muted">
+                  <div className="mt-1 break-all font-mono text-xs text-text-muted">
                     var({t.cssVar})
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex min-w-0 items-center gap-3">
                 <div className="font-mono text-xs text-text-muted">
                   {resolved[t.key] ?? ""}
                 </div>
@@ -581,19 +626,19 @@ function TokenSections({
         </div>
       </section>
 
-      <section className="card p-8">
+      <section className={SECTION_CLASS}>
         <h2 className="text-heading-2xl">Typography</h2>
-        <div className="mt-6 grid gap-4">
+        <div className={innerGridClass(compact)}>
           {typography.map((t) => (
-            <div key={t.key} className="rounded-none border border-border-subtle bg-bg p-5">
-              <div className="flex items-center justify-between gap-4">
+            <div key={t.key} className="min-w-0 overflow-hidden rounded-none border border-border-subtle bg-bg p-5">
+              <div className="flex min-w-0 items-center justify-between gap-4">
                 <div className="min-w-0">
                   <div className="font-mono text-sm text-text">{t.key}</div>
-                  <div className="mt-1 font-mono text-xs text-text-muted">
+                  <div className="mt-1 break-all font-mono text-xs text-text-muted">
                     var({t.cssVar})
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="font-mono text-xs text-text-muted">
                     {resolved[t.key] ?? ""}
                   </div>
@@ -601,11 +646,13 @@ function TokenSections({
                 </div>
               </div>
 
+              {/* Display sizes reach 13rem, so the specimen must be allowed to
+                  break and clip rather than widen the panel. */}
               <p
-                className={`mt-4 text-text ${t.key.startsWith("text.heading.") ? "font-heading" : "font-body"}`}
+                className={`mt-4 min-w-0 max-w-full overflow-hidden break-words text-text ${t.key.startsWith("text.heading.") ? "font-heading" : "font-body"}`}
                 style={{
                   fontFamily: t.type === "fontFamilies" ? `var(${t.cssVar})` : undefined,
-                  fontSize: t.type === "fontSizes" ? `var(${t.cssVar})` : undefined,
+                  fontSize: specimenFontSize(t.cssVar, t.key, t.type, compact),
                 }}
               >
                 The quick brown fox jumps over the lazy dog.
@@ -615,19 +662,19 @@ function TokenSections({
         </div>
       </section>
 
-      <section className="card p-8">
+      <section className={SECTION_CLASS}>
         <h2 className="text-heading-2xl">Spacing</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className={innerGridClass(compact)}>
           {spacing.map((t) => (
-            <div key={t.key} className="rounded-none border border-border-subtle bg-bg p-5">
-              <div className="flex items-center justify-between gap-4">
+            <div key={t.key} className="min-w-0 rounded-none border border-border-subtle bg-bg p-5">
+              <div className="flex min-w-0 items-center justify-between gap-4">
                 <div className="min-w-0">
                   <div className="font-mono text-sm text-text">{t.key}</div>
-                  <div className="mt-1 font-mono text-xs text-text-muted">
+                  <div className="mt-1 break-all font-mono text-xs text-text-muted">
                     var({t.cssVar})
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="font-mono text-xs text-text-muted">
                     {resolved[t.key] ?? ""}
                   </div>
@@ -647,19 +694,19 @@ function TokenSections({
         </div>
       </section>
 
-      <section className="card p-8">
+      <section className={SECTION_CLASS}>
         <h2 className="text-heading-2xl">Radius</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className={innerGridClass(compact)}>
           {radius.map((t) => (
-            <div key={t.key} className="rounded-none border border-border-subtle bg-bg p-5">
-              <div className="flex items-center justify-between gap-4">
+            <div key={t.key} className="min-w-0 rounded-none border border-border-subtle bg-bg p-5">
+              <div className="flex min-w-0 items-center justify-between gap-4">
                 <div className="min-w-0">
                   <div className="font-mono text-sm text-text">{t.key}</div>
-                  <div className="mt-1 font-mono text-xs text-text-muted">
+                  <div className="mt-1 break-all font-mono text-xs text-text-muted">
                     var({t.cssVar})
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="font-mono text-xs text-text-muted">
                     {resolved[t.key] ?? ""}
                   </div>
@@ -677,19 +724,19 @@ function TokenSections({
         </div>
       </section>
 
-      <section className="card p-8">
+      <section className={SECTION_CLASS}>
         <h2 className="text-heading-2xl">Shadows</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className={innerGridClass(compact)}>
           {shadow.map((t) => (
-            <div key={t.key} className="rounded-none border border-border-subtle bg-bg p-5">
-              <div className="flex items-center justify-between gap-4">
+            <div key={t.key} className="min-w-0 overflow-hidden rounded-none border border-border-subtle bg-bg p-5">
+              <div className="flex min-w-0 items-center justify-between gap-4">
                 <div className="min-w-0">
                   <div className="font-mono text-sm text-text">{t.key}</div>
-                  <div className="mt-1 font-mono text-xs text-text-muted">
+                  <div className="mt-1 break-all font-mono text-xs text-text-muted">
                     var({t.cssVar})
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="font-mono text-xs text-text-muted">
                     {resolved[t.key] ?? ""}
                   </div>
@@ -722,7 +769,7 @@ export default function TokensClient({ rows }: { rows: TokenRow[] }) {
   const lightVars = React.useMemo(() => buildLightInlineVars(rows), [rows]);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16">
+    <main className="mx-auto min-w-0 max-w-6xl overflow-x-hidden px-6 py-16">
       <header className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <span className="eyebrow">
@@ -744,42 +791,34 @@ export default function TokensClient({ rows }: { rows: TokenRow[] }) {
 
       {mode === "ramps" ? (
         <div className="mt-12">
-          <div
-            ref={lightRef}
-            className="rounded-none border border-border-subtle bg-bg p-6"
-            style={lightVars}
-          >
+          <div ref={lightRef} className={PANEL_CLASS} style={lightVars}>
             <PaletteRampsReference resolved={lightResolved} />
           </div>
 
-          <div ref={darkRef} className="dark mt-10 rounded-none border border-border-subtle bg-bg p-6">
+          <div ref={darkRef} className={`dark mt-10 ${PANEL_CLASS}`}>
             <PaletteRampsReference resolved={darkResolved} />
           </div>
         </div>
       ) : mode === "split" ? (
-        <div className="mt-12 grid gap-10 lg:grid-cols-2">
+        <div className={SPLIT_GRID_CLASS}>
           <div
             ref={lightRef}
-            className="rounded-none border border-border-subtle bg-bg p-6"
+            className={PANEL_CLASS}
             style={lightVars}
           >
-            <TokenSections title="Light mode" rows={rows} resolved={lightResolved} />
+            <TokenSections title="Light mode" rows={rows} resolved={lightResolved} compact />
           </div>
 
-          <div ref={darkRef} className="dark rounded-none border border-border-subtle bg-bg p-6">
-            <TokenSections title="Dark mode" rows={rows} resolved={darkResolved} />
+          <div ref={darkRef} className={`dark ${PANEL_CLASS}`}>
+            <TokenSections title="Dark mode" rows={rows} resolved={darkResolved} compact />
           </div>
         </div>
       ) : mode === "light" ? (
-        <div
-          ref={lightRef}
-          className="mt-12 rounded-none border border-border-subtle bg-bg p-6"
-          style={lightVars}
-        >
+        <div ref={lightRef} className={`mt-12 ${PANEL_CLASS}`} style={lightVars}>
           <TokenSections title="Light mode" rows={rows} resolved={lightResolved} />
         </div>
       ) : (
-        <div ref={darkRef} className="dark mt-12 rounded-none border border-border-subtle bg-bg p-6">
+        <div ref={darkRef} className={`dark mt-12 ${PANEL_CLASS}`}>
           <TokenSections title="Dark mode" rows={rows} resolved={darkResolved} />
         </div>
       )}
