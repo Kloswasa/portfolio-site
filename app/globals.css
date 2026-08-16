@@ -16,6 +16,7 @@
 @import "../src/styles/work-page.css";
 @import "../src/styles/play.css";
 @import "../src/styles/about.css";
+@import "../src/styles/colophon.css";
 @import "../src/styles/home.css";
 
 /* ── Dark mode: class-based (add/remove .dark on <html>) ── */

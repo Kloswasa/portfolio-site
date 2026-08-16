@@ -1,0 +1,376 @@
+/* Colophon — system record. Shares about-page hero/container; sections are distinct. */
+
+.colophon-page {
+  --colophon-pad-section: var(--about-pad-section);
+}
+
+.colophon-block {
+  padding-top: var(--colophon-pad-section);
+}
+
+/* ── Brief ── */
+.colophon-brief__lead {
+  margin: 0 0 var(--spacing-8);
+  max-width: 42rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-display-sm);
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.colophon-brief__lead em {
+  color: var(--color-tertiary);
+}
+
+.colophon-brief__copy {
+  display: grid;
+  gap: var(--spacing-4);
+  max-width: 38rem;
+  margin-bottom: var(--spacing-12);
+}
+
+.colophon-brief__p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body-xl);
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+/* ── Token bar ── */
+.colophon-specimen {
+  margin: 0;
+}
+
+.colophon-specimen__bar {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--spacing-px);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-border);
+}
+
+.colophon-specimen__swatch {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+}
+
+.colophon-specimen__chip {
+  display: block;
+  min-height: 4.5rem;
+}
+
+.colophon-specimen__name {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-label-lg);
+  text-transform: lowercase;
+  color: var(--color-text-subtle);
+}
+
+.colophon-specimen__caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-2) var(--spacing-6);
+  margin-top: var(--spacing-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-label-lg);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.colophon-specimen__stamp {
+  color: var(--color-tertiary);
+}
+
+@media (max-width: 639px) {
+  .colophon-specimen__bar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .colophon-specimen__chip {
+    min-height: 3.5rem;
+  }
+}
+
+/* ── Inventory rows ── */
+.colophon-stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.colophon-stack__row {
+  display: grid;
+  gap: var(--spacing-3);
+  padding-block: var(--spacing-6);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+@media (min-width: 768px) {
+  .colophon-stack__row {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: var(--spacing-8);
+    align-items: baseline;
+  }
+}
+
+.colophon-stack__label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-stamp);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.colophon-stack__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1) var(--spacing-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colophon-stack__item {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.colophon-stack__item::after {
+  content: " ·";
+  color: var(--color-border-strong);
+}
+
+.colophon-stack__items li:last-child .colophon-stack__item::after {
+  content: none;
+}
+
+.colophon-stack__item--key {
+  color: var(--color-text);
+}
+
+a.colophon-stack__item {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+a.colophon-stack__item:hover {
+  color: var(--color-accent);
+}
+
+/* ── Pipeline cards ── */
+.colophon-pipelines {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  .colophon-pipelines {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-6);
+  }
+}
+
+.colophon-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.colophon-pipeline__num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-stamp);
+  color: var(--color-accent);
+}
+
+.colophon-pipeline__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-display-sm);
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.colophon-pipeline__command {
+  margin: var(--spacing-2) 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-warning-text);
+  background: var(--color-accent-muted);
+  padding: var(--spacing-1) var(--spacing-2);
+  width: fit-content;
+}
+
+.colophon-pipeline__source {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-label-lg);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.colophon-pipeline__body {
+  margin: var(--spacing-3) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ── Pullquote ── */
+.colophon-pullquote {
+  margin: var(--colophon-pad-section) 0 0;
+  padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-6);
+  border-left: 2px solid var(--color-accent);
+  max-width: 40rem;
+}
+
+.colophon-pullquote blockquote {
+  margin: 0;
+}
+
+.colophon-pullquote__text {
+  margin: 0 0 var(--spacing-3);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-heading-2xl);
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.colophon-pullquote__source {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label-lg);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+/* ── Layer bands ── */
+.colophon-layers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.colophon-layer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-4);
+  align-items: start;
+  padding: var(--spacing-5) var(--spacing-6);
+  border: 1px solid var(--color-border-subtle);
+}
+
+@media (min-width: 768px) {
+  .colophon-layer {
+    grid-template-columns: 3rem 1fr auto;
+    gap: var(--spacing-8);
+    align-items: center;
+  }
+}
+
+.colophon-layer__num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-stamp);
+  color: var(--color-accent);
+}
+
+.colophon-layer__title {
+  margin: 0 0 var(--spacing-1);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-heading-xl);
+  color: var(--color-text);
+}
+
+.colophon-layer__path {
+  margin: 0 0 var(--spacing-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-label-lg);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.colophon-layer__body {
+  margin: 0;
+  max-width: 36rem;
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.colophon-layer__count {
+  display: none;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-display-md);
+  line-height: 1;
+  color: var(--color-border-strong);
+}
+
+@media (min-width: 768px) {
+  .colophon-layer__count {
+    display: block;
+  }
+}
+
+.colophon-layer--01 {
+  background: var(--color-bg);
+}
+
+.colophon-layer--02 {
+  background: var(--color-surface);
+}
+
+.colophon-layer--03 {
+  background: var(--color-elevated);
+}
+
+.colophon-layer--04 {
+  background: var(--color-header-bg);
+  border-color: transparent;
+}
+
+.colophon-layer--04 .colophon-layer__num,
+.colophon-layer--04 .colophon-layer__path,
+.colophon-layer--04 .colophon-layer__count {
+  color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
+}
+
+.colophon-layer--04 .colophon-layer__title {
+  color: var(--color-text-inverse);
+}
+
+.colophon-layer--04 .colophon-layer__body {
+  color: color-mix(in srgb, var(--color-text-inverse) 72%, transparent);
+}

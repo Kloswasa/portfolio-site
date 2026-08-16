@@ -29,9 +29,9 @@ titleEm: and a second look, a year later
 
 ## prose
 
-Many caregivers don't live with the person they care for. The person with dementia is home. The caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.
+  Many caregivers don't live with the person they care for. The person with dementia is home. The caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.
 
-In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes.
+  In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes.
 
 ## stats
 
@@ -55,7 +55,7 @@ titleEm: and my job in evaluating it
 
 ## prose
 
-The prototype was a mobile app built on a single promise, call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it.
+  The prototype was a mobile app built on a single promise, call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it.
 
 ## twoCol
 
@@ -78,11 +78,17 @@ caption: The status card sits above the fold, so the caregiver's first glance an
 
 ## prose
 
-The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report.
+  The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report.
+
+## button
+
+label: Visit the Figma prototype
+href: https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=LDX20meEATYoacDR-1
+variant: accent
 
 ## image
 
-src: /projects/dementia-caregiver/team-figma-cover.png
+src: /projects/dementia-app/dementia-app-hifed.webp
 alt: The team's unified high-fidelity Figma prototype, cover frame
 caption: One iOS-based system, unified in the final week, so the evaluation tested a coherent product rather than four people's separate screens.
 
@@ -94,7 +100,7 @@ titleEm: not just observations
 
 ## prose
 
-The evaluation tested all eight features against targets set in advance. For a safety-critical app, success can't be defined after the fact: if a caregiver can't check location in under fifteen seconds, or set a geofence without help, calling those tasks "usable" in hindsight means nothing. The targets forced a definition of success before a single participant arrived.
+  The evaluation tested all eight features against targets set in advance. For a safety-critical app, success can't be defined after the fact: if a caregiver can't check location in under fifteen seconds, or set a geofence without help, calling those tasks "usable" in hindsight means nothing. The targets forced a definition of success before a single participant arrived.
 
 ## process
 
@@ -110,7 +116,7 @@ The evaluation tested all eight features against targets set in advance. For a s
 
 ## prose
 
-Four participants worked the Figma prototype remotely, screen-shared. Eight tasks ran against the targets. Three are worth watching.
+  Four participants worked the Figma prototype remotely, screen-shared. Eight tasks ran against the targets. Three are worth watching.
 
 ## image
 
@@ -125,7 +131,7 @@ title: Three tasks worth watching
 
 ## prose
 
-The SUS was 81.5. Six of eight tasks passed target. Three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study.
+  The SUS was 81.5. Six of eight tasks passed target. Three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study.
 
 ## image
 
@@ -135,20 +141,21 @@ caption: Against target, Task 1 clears and Task 4 fails outright, but Task 8 cle
 
 ## video
 
-src: /projects/dementia-caregiver/task-4-danger-zone.mp4
-poster: /projects/dementia-caregiver/task-4-danger-zone-poster.png
+src: /projects/dementia-app/dementia-task-4.mp4
+poster: /projects/dementia-app/dementia-cover-task4.webp
 alt: A participant setting up the danger zone task, missing the Safe/Dangerous toggle at the top of the map
 caption: The Safe / Dangerous toggle read as a header, not a choice, so half the participants built the wrong kind of zone before noticing.
 
-## image
+## video
 
-src: /projects/dementia-caregiver/task-8-notification-centre.png
+src: /projects/dementia-app/dementia-task-8.mp4
+poster: /projects/dementia-app/dementia-cover-task8.webp
 alt: The notification centre with two tabs at the top, Notification on the left, Alert on the right
 caption: The alert tab was obvious once found. The failure was expecting it here at all, so P4 searched the menu bar first.
 
 ## prose
 
-The other five tasks echoed these at smaller scale, two shared Task 4's discoverability problem, three passed as cleanly as Task 1.
+  The other five tasks echoed these at smaller scale, two shared Task 4's discoverability problem, three passed as cleanly as Task 1.
 
 # build
 
@@ -158,11 +165,11 @@ titleEm: three underlying causes
 
 ## prose
 
-The evaluation was finished. The data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy.
+  The evaluation was finished. The data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy.
 
 ## prose
 
-But there's a second question the metrics never ask: does the user's confidence match reality. P4 said easy and spent 1.27 minutes finding the alert. In a low-stakes app that gap is minor friction. In an app whose whole promise is finding the person in seconds, it's the failure the numbers can't see.
+  But there's a second question the metrics never ask: does the user's confidence match reality. P4 said easy and spent 1.27 minutes finding the alert. In a low-stakes app that gap is minor friction. In an app whose whole promise is finding the person in seconds, it's the failure the numbers can't see.
 
 ## pullquote
 
@@ -171,7 +178,7 @@ source: Observation, 2024 evaluation
 
 ## prose
 
-Once I had that lens, Task 8 stopped looking like a one-off. The same gap ran through the evaluation, and grouped by the kind of gap, eight scattered task problems collapsed into three root causes.
+  Once I had that lens, Task 8 stopped looking like a one-off. The same gap ran through the evaluation, and grouped by the kind of gap, eight scattered task problems collapsed into three root causes.
 
 ## image
 
@@ -207,7 +214,7 @@ titleEm: and a redesign in progress
 
 ## prose
 
-The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced what the report couldn't: a compact analytical brief, three root causes, each tied to specific tasks, each with a design implication clear enough to build from. Those three causes are the brief for the redesign I'm on now.
+  The 2024 phase produced a graded, mixed-methods report. The 2026 phase produced what the report couldn't: a compact analytical brief, three root causes, each tied to specific tasks, each with a design implication clear enough to build from. Those three causes are the brief for the redesign I'm on now.
 
 ## outcomes
 

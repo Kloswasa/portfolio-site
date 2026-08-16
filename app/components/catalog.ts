@@ -235,12 +235,28 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     usedOn: "/about",
   },
   {
+    id: "colophon-view",
+    name: "ColophonView",
+    path: "src/components/about/ColophonView.tsx",
+    category: "about",
+    description: "About-this-site page: brief, inventory, pipelines, and layer bands.",
+    usedOn: "/colophon",
+  },
+  {
+    id: "colophon-specimen",
+    name: "ColophonSpecimen",
+    path: "src/components/about/ColophonSpecimen.tsx",
+    category: "about",
+    description: "Live token colour bar for the colophon brief.",
+    usedOn: "/colophon",
+  },
+  {
     id: "page-end-section",
     name: "PageEndSection",
     path: "src/components/ui/PageEndSection.tsx",
     category: "sections",
     description: "Shared end-of-page CTA with kicker, title, and actions.",
-    usedOn: "/play, /work, /about",
+    usedOn: "/play, /work, /about, /colophon",
   },
   {
     id: "major-hero",
@@ -280,7 +296,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     path: "src/components/work/WorkHero.tsx",
     category: "work",
     description: "Work page hero with botanical accent.",
-    usedOn: "/work · /about · /play",
+    usedOn: "/work · /about · /play · /colophon",
   },
   {
     id: "work-grid",
