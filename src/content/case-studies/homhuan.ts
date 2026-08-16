@@ -140,12 +140,12 @@ const homhuanCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/homhuan/homhuan-product-brass.png",
+              "src": "/projects/homhuan/homhuan-product-brass.webp",
               "alt": "Aroma stove configured with a brass pan warming solid incense",
               "caption": "Brass pan over a tea light, dry heat warms solid incense, so scent releases faster and stronger with no flame touching it."
             },
             {
-              "src": "/projects/homhuan/homhuan-product-ceramic.png",
+              "src": "/projects/homhuan/homhuan-product-ceramic.webp",
               "alt": "Aroma stove configured with a ceramic pot boiling an aroma bag",
               "caption": "Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove, mild and long."
             }
@@ -161,7 +161,7 @@ const homhuanCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/homhuan/homhuan-product-diffuser-inspiration.png",
+              "src": "/projects/homhuan/homhuan-product-diffuser-inspiration.webp",
               "alt": "Traditional Thai floral mobile woven from banana tree and garland",
               "caption": "The source, a flat frame cut from banana tree, woven with a fresh garland, beautiful but wilting within a day."
             },
@@ -260,27 +260,27 @@ const homhuanCaseStudy = {
           "type": "imageGrid",
           "items": [
             {
-              "src": "/projects/homhuan/homhuan-making-1.png",
+              "src": "/projects/homhuan/homhuan_making_1.webp",
               "alt": "Candle with Benjarong-inspired ceramic holder"
             },
             {
-              "src": "/projects/homhuan/homhuan-making-2.png",
+              "src": "/projects/homhuan/homhuan_making_2.webp",
               "alt": "Hanging three-dimensional reed diffuser in die-cut paper"
             },
             {
-              "src": "/projects/homhuan/homhuan-making-3.png",
+              "src": "/projects/homhuan/homhuan_making_3.webp",
               "alt": "Ceramic perfuming storage desk object"
             },
             {
-              "src": "/projects/homhuan/homhuan-making-4.png",
+              "src": "/projects/homhuan/homhuan_making_4.webp",
               "alt": "Ceramic and brass miller for grinding fragrance beads and locket-form solid perfume holder"
             },
             {
-              "src": "/projects/homhuan/homhuan-making-5.png",
+              "src": "/projects/homhuan/homhuan_making_5.webp",
               "alt": "The seven products shown together as a family"
             },
             {
-              "src": "/projects/homhuan/homhuan-making-6.png",
+              "src": "/projects/homhuan/homhuan_making_6.webp",
               "alt": "The seven products shown together as a family"
             }
           ]
@@ -333,7 +333,7 @@ const homhuanCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/homhuan/homhuan-design-week.png",
+          "src": "/projects/homhuan/homhuan-design-week.webp",
           "alt": "Homhuan displayed at Bangkok Design Week 2019",
           "caption": "Homhuan project displayed at Bangkok Design Week 2019"
         },

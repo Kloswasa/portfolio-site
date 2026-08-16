@@ -13,7 +13,7 @@ const jtimberCaseStudy = {
     "titleLine2": "Flooring Catalogue",
     "summary": "A 48-page flooring catalogue for a wood styling company, covering all products and services, managing from the assets to coordinated print publication.",
     "image": {
-      "src": "/projects/jtimber/jtimber-header.png",
+      "src": "/projects/jtimber/jtimber-header.webp",
       "alt": "The JTimber flooring catalogue open to a spread showing wood floor colour options"
     },
     "meta": [
@@ -125,91 +125,6 @@ const jtimberCaseStudy = {
       "titleEm": "sells itself.",
       "blocks": [
         {
-          "type": "image",
-          "src": "/projects/timber/final.png",
-          "alt": "Spreads from the finished JTimber catalogue showing colour options, laying patterns, and plank construction diagrams",
-          "caption": "Product, pattern, and service content unified across forty-eight pages."
-        },
-        {
-          "type": "imageGrid",
-          "items": [
-            {
-              "src": "/projects/jtimber/jtimber-services.jpg",
-              "alt": "Brolga illustration sample",
-              "caption": "1"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-woods.jpg",
-              "alt": "Australia Call cover",
-              "caption": "2"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-colours.png",
-              "alt": "Platypus illustration sample",
-              "caption": "3",
-              "credit": "Credit on grid item",
-              "creditHref": "https://example.com"
-            }
-          ]
-        },
-        {
-          "type": "imageGrid",
-          "items": [
-            {
-              "src": "/projects/jtimber/jtimber-services.jpg",
-              "alt": "Brolga illustration sample",
-              "caption": "1"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-woods.jpg",
-              "alt": "Australia Call cover",
-              "caption": "2"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-colours.png",
-              "alt": "Platypus illustration sample",
-              "caption": "3",
-              "credit": "Credit on grid item",
-              "creditHref": "https://example.com"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-portfolio.jpg",
-              "alt": "Brolga illustration sample",
-              "caption": "4"
-            }
-          ]
-        },
-        {
-          "type": "imagePair",
-          "items": [
-            {
-              "src": "/projects/jtimber/jtimber-colours.png",
-              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
-              "caption": "The quiz is a client component"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-woods.jpg",
-              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
-              "caption": "The result page is a React Server Component"
-            }
-          ]
-        },
-        {
-          "type": "imagePair",
-          "items": [
-            {
-              "src": "/projects/jtimber/jtimber-colours.png",
-              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
-              "caption": "The quiz is a client component"
-            },
-            {
-              "src": "/projects/jtimber/jtimber-woods.jpg",
-              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
-              "caption": "The result page is a React Server Component"
-            }
-          ]
-        },
-        {
           "type": "outcomes",
           "items": [
             {
@@ -221,6 +136,57 @@ const jtimberCaseStudy = {
               "value": "5 contents",
               "label": "One document, covering all jobs",
               "body": "Specifications, colour, patterns, services, and portfolio held together in one visual system."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/timber/final.png",
+          "alt": "Spreads from the finished JTimber catalogue showing colour options, laying patterns, and plank construction diagrams",
+          "caption": "Product, pattern, and service content unified across forty-eight pages."
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/jtimber/jtimber-final-1.webp",
+              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
+              "caption": "The quiz is a client component"
+            },
+            {
+              "src": "/projects/jtimber/jtimber-final-2.webp",
+              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
+              "caption": "The result page is a React Server Component"
+            }
+          ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/jtimber/jtimber-final-3.webp",
+              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
+              "caption": "The quiz is a client component"
+            },
+            {
+              "src": "/projects/jtimber/jtimber-final-4.webp",
+              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
+              "caption": "The result page is a React Server Component"
+            }
+          ]
+        },
+        {
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/jtimber/jtimber-final-5.webp",
+              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
+              "caption": "The quiz is a client component"
+            },
+            {
+              "src": "/projects/jtimber/jtimber-final-6.webp",
+              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
+              "caption": "The result page is a React Server Component"
             }
           ]
         },
