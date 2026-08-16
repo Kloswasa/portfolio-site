@@ -156,11 +156,11 @@ Optional `image` + `imageAlt` render a small illustration inside the finding car
 
 ## Image blocks
 
-Recommended pixel dimensions for each `size` token: [`docs/image-sizes.md`](image-sizes.md).
+Recommended pixel dimensions for each `size` token, including GIFs: [`docs/image-sizes.md`](image-sizes.md).
 
 | Block | Count | Size |
 |-------|-------|------|
-| `image` | 1 | optional `size: sm` \| `md` (default full width) |
+| `image` | 1 | optional `size: sm` \| `md` (default full width). GIF: 680px wide / ≤ 1.5 MB |
 | `imagePair` | 2 | optional block-level `size: sm` \| `md` above the list |
 | `imageGrid` | 3+ | always full width |
 

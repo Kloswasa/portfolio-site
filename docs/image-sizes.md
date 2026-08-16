@@ -1,6 +1,8 @@
 # Image sizes
 
-Recommended export dimensions for every image-bearing area of the site. Display size is CSS-driven; the site uses native `<img>` tags (no `next/image`, no `srcset`). Browsers fetch the full file, so export at **2× the max CSS display width** for retina — not full camera resolution.
+Recommended export dimensions for every image-bearing area of the site. Display size is CSS-driven; the site uses native `<img>` tags (no `next/image`, no `srcset`). Browsers fetch the full file, so export stills at **2× the max CSS display width** for retina — not full camera resolution.
+
+**GIFs are the exception:** export at **1× display width** and cap the file size. Palette-limited animation does not benefit from 2× the way a PNG does, and byte cost scales with pixels × frames.
 
 **Author assets in** `public/` · **Wire them in** `src/lib/projects.ts`, case study markdown, `src/content/play.ts`, or `src/content/about.ts`.
 
@@ -27,6 +29,9 @@ Pixel conversions below assume a 16px root (`1rem` = 16px).
 | Case study `imageGrid` | any (square crops well) | **1360px** per cell | 3-col → 2-col → 1-col | Full main column |
 | Case study `findings` inline | any | **160×160** max | 5rem (~80px) | Optional `image` + `imageAlt` |
 | Case study `video` poster | **16:9** | **1088×612** | player is 80% of parent (~544px in the content column) | Paired with `.mp4` |
+| Case study **GIF** (default `image`) | any | **680px** wide, **≤ 1.5 MB** (3 MB hard max) | 42.5rem (~680px) | 1× display, not 2×. See [GIFs](#gifs) |
+| Case study **GIF** `size: md` | any | **320px** wide, **≤ 800 KB** | 20rem (~320px) | |
+| Case study **GIF** `size: sm` | any | **160px** wide, **≤ 400 KB** | 10rem (~160px) | |
 | Play card thumbnail | mixed | **595×842** (portrait) or **842×595** (landscape) | specimen card **4:5** crop | [`play.ts`](../src/content/play.ts) `imageWidth` / `imageHeight` |
 | Play viewer plate | mixed | up to **2100px** on the long edge | max 1048×960 | `play.ts` `images[]`; aspect clamped 0.65–1.8 |
 | About portrait | **4:5** | **800×1000** WebP | 22rem (~352px) | [`about.ts`](../src/content/about.ts) |
@@ -50,7 +55,7 @@ CSS layout caps come from:
 | `.about-portrait` | [`src/styles/about.css`](../src/styles/about.css) | max 22rem (~352px), **4:5** |
 | `.play-viewer__plate` | [`src/styles/play.css`](../src/styles/play.css) | max 1048×960 |
 
-Prefer **WebP** for photos, **PNG** for UI/screenshots with transparency, **SVG** for diagrams (no pixel limit). GIFs are allowed in case study `image` blocks — keep width ≤ 1360px and trim the frame count.
+Prefer **WebP** for photos, **PNG** for UI/screenshots with transparency, **SVG** for diagrams (no pixel limit), **GIF** only for short loops in case study `image` blocks (see [GIFs](#gifs)). Longer or heavier motion belongs in a `video` block (`.mp4`).
 
 ---
 
@@ -84,6 +89,8 @@ Prefer **WebP** for photos, **PNG** for UI/screenshots with transparency, **SVG*
 - Reuse `<slug>-cover.png` when the card crop also works as a hero.
 - Use a separate `<slug>-head-cover.png` (or `<slug>-header.png`) only when the hero needs a different crop than the work card.
 
+Do not use a GIF as a hero image.
+
 ---
 
 ## Case study content blocks
@@ -94,7 +101,7 @@ Block syntax lives in [`docs/case-study-blocks.md`](case-study-blocks.md). `size
 ## image
 size: sm   → export ≤ 320px wide
 size: md   → export ≤ 640px wide
-(default)  → export ≤ 1360px wide
+(default)  → export ≤ 1360px wide   (GIF: ≤ 680px wide)
 
 ## imagePair
 size: sm   → export ≤ 640px wide (pair total)
@@ -104,21 +111,44 @@ size: md   → export ≤ 1024px wide (pair total)
 
 | Block | CSS cap | Recommended export |
 |-------|---------|-------------------|
-| `image` default | `max-width: 42.5rem` (~680px) | 1360px wide |
-| `image` `size: sm` | 10rem (~160px) | 320px wide |
-| `image` `size: md` | 20rem (~320px) | 640px wide |
-| `imagePair` default | 2-col, no max-width (main column) | 1360px wide total |
+| `image` default | `max-width: 42.5rem` (~680px) | 1360px wide (stills) / **680px wide (GIF)** |
+| `image` `size: sm` | 10rem (~160px) | 320px wide (stills) / **160px wide (GIF)** |
+| `image` `size: md` | 20rem (~320px) | 640px wide (stills) / **320px wide (GIF)** |
+| `imagePair` default | 2-col, no max-width (main column) | 1360px wide total — stills only |
 | `imagePair` `size: sm` | 20rem (~320px) | 640px wide total |
 | `imagePair` `size: md` | 32rem (~512px) | 1024px wide total |
-| `imageGrid` | 3-col → 2-col (≤768px) → 1-col (≤480px) | 1360px per cell |
+| `imageGrid` | 3-col → 2-col (≤768px) → 1-col (≤480px) | 1360px per cell — stills only |
 | `findings` inline | 5rem (~80px) | 160×160 |
 | `video` poster | player `width: 80%` | 1088×612 (16:9) |
 
 Optional `credit` / `creditHref` on `image`, `imagePair`, and `imageGrid` render an attribution line — they do not change size.
 
-**SVG** is preferred for diagrams and UI wireframes (no pixel limit). **GIF** width should stay ≤ 1360px.
+**SVG** is preferred for diagrams and UI wireframes (no pixel limit).
 
 After changing markdown image paths, run `npm run content:<slug>` (or `npm run content:all`).
+
+---
+
+## GIFs
+
+GIFs belong in a case study `image` block as a short loop (process, morph, before/after). They are not for heroes, covers, play plates, or `imagePair` / `imageGrid`.
+
+Display width is the same as any `image` block. Export at **1× that width**, not 2×.
+
+| `size` | Display | Export width | Target file | Hard max |
+|--------|---------|--------------|-------------|----------|
+| default | ~680px | **680px** | **≤ 1.5 MB** | 3 MB |
+| `md` | ~320px | **320px** | **≤ 800 KB** | 1.5 MB |
+| `sm` | ~160px | **160px** | **≤ 400 KB** | 800 KB |
+
+Also:
+
+- **12–15 fps**, looping, 128–256 colour palette
+- Trim to the shortest loop that reads (2–4 seconds is plenty)
+- Dither lightly; avoid photographic full-colour footage
+- If it needs audio, a long timeline, or will not fit the byte cap, use a `video` block (`.mp4` + poster) instead
+
+**Do not** drop a 1080p or 4K screen recording in as a GIF. Scale to the export width first, then reduce frames and colours (ezgif, Squoosh, or Photoshop Save for Web).
 
 ---
 
@@ -177,15 +207,15 @@ Naming:
 
 - Lowercase, hyphenated, no spaces
 - Prefix block content with the project slug (`homhuan-making-01.png`)
-- `.webp` for photos, `.png` for UI/screenshots with transparency, `.svg` for diagrams
+- `.webp` for photos, `.png` for UI/screenshots with transparency, `.svg` for diagrams, `.gif` for short loops
 
 ---
 
 ## Export checklist
 
-1. Export at **2× the display cap**, not full camera resolution.
+1. Stills: export at **2× the display cap**. GIFs: export at **1×** and stay under the byte cap.
 2. Match the crop: cards and heroes use `object-fit: cover` — expect edge crop; keep the subject centred.
-3. Compress (Squoosh, ImageOptim) before committing.
+3. Compress (Squoosh, ImageOptim; ezgif for GIFs) before committing.
 4. After adding or changing markdown image paths, run `npm run content:<slug>`.
 5. Check the page at 1× and 2× zoom.
 
@@ -199,3 +229,4 @@ Informational — not a fix list.
 - Cover dimensions are mixed in the repo today: most cards are 1500×1200; quiz-game is 2400×1350; several heroes are 1800×1013.
 - `public/images/home/portrait.png` (2731×4096) is unused; About uses `images/about/portrait-resize.webp`.
 - No Open Graph / Twitter card images are configured.
+- Several GIFs exceed the spec: `quiz-game-natural-scene.gif` is 1270×844 / ~29 MB; `bhaesaj-2D-3D.gif` is 1794×2160 / ~8 MB; `kuendee-design-3d.gif` is 1352×760 / ~3.3 MB.

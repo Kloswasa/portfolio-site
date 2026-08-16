@@ -95,9 +95,9 @@ const jtimberCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/bhae/bhaesaj-direction-branding.png",
-          "alt": "Mood board for the Bhaesaj modern classic packaging direction",
-          "caption": "Assets creation"
+          "src": "/projects/jtimber/jtimber-assets.gif",
+          "alt": "JTimber assets creation for catalogue",
+          "caption": "The assets creation for catalogue"
         },
         {
           "type": "prose",
@@ -107,9 +107,9 @@ const jtimberCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/bhae/bhaesaj-direction-branding.png",
-          "alt": "Mood board for the Bhaesaj modern classic packaging direction",
-          "caption": "Assembly"
+          "src": "/projects/jtimber/jtimber-asset-assembly.webp",
+          "alt": "ssembly an asset into catalogue layout",
+          "caption": "Assembly an asset into layout sample."
         },
         {
           "type": "prose",
@@ -140,23 +140,17 @@ const jtimberCaseStudy = {
           ]
         },
         {
-          "type": "image",
-          "src": "/projects/timber/final.png",
-          "alt": "Spreads from the finished JTimber catalogue showing colour options, laying patterns, and plank construction diagrams",
-          "caption": "Product, pattern, and service content unified across forty-eight pages."
-        },
-        {
           "type": "imagePair",
           "items": [
             {
               "src": "/projects/jtimber/jtimber-final-1.webp",
-              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
-              "caption": "The quiz is a client component"
+              "alt": "Brand services page pair.",
+              "caption": "Brand services page pair."
             },
             {
               "src": "/projects/jtimber/jtimber-final-2.webp",
-              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
-              "caption": "The result page is a React Server Component"
+              "alt": "Flooring types and wood plank page pair.",
+              "caption": "Flooring types and wood plank page pair."
             }
           ]
         },
@@ -165,13 +159,13 @@ const jtimberCaseStudy = {
           "items": [
             {
               "src": "/projects/jtimber/jtimber-final-3.webp",
-              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
-              "caption": "The quiz is a client component"
+              "alt": "Wood colours and types varients page pair",
+              "caption": "Wood colours and types varients page pair."
             },
             {
               "src": "/projects/jtimber/jtimber-final-4.webp",
-              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
-              "caption": "The result page is a React Server Component"
+              "alt": "Wood pattern catalogue and its portfolio page pair.",
+              "caption": "Wood pattern catalogue and its portfolio page pair."
             }
           ]
         },
@@ -180,20 +174,20 @@ const jtimberCaseStudy = {
           "items": [
             {
               "src": "/projects/jtimber/jtimber-final-5.webp",
-              "alt": "Flow diagram showing parallel API fetch and asset preload on the client, converging into a flicker-free quiz",
-              "caption": "The quiz is a client component"
+              "alt": "Brand customisation service page pair",
+              "caption": "Brand customisation services page pair."
             },
             {
               "src": "/projects/jtimber/jtimber-final-6.webp",
-              "alt": "Flow diagram showing Prisma querying per-type content on the server and delivering a fully populated result page",
-              "caption": "The result page is a React Server Component"
+              "alt": "JTimber brand flooring portfolio",
+              "caption": "Brand flooring portfolio"
             }
           ]
         },
         {
           "type": "prose",
           "paragraphs": [
-            "Owning something all the way to print, where colour has to be right the first time and every decision is final once the file leaves, built a discipline about shipping that I carry into digital work, even where a fix is always possible."
+            "  Owning something all the way to print, where colour has to be right the first time and every decision is final once the file leaves, built a discipline about shipping that I carry into digital work, even where a fix is always possible."
           ]
         }
       ]
