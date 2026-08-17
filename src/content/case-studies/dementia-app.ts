@@ -13,7 +13,7 @@ const dementiaAppCaseStudy = {
     "titleLine2": "Caregiver",
     "summary": "A usability evaluation of a caregiver monitoring app, and the re-analysis I ran a year later that reframed the findings as a trust and safety problem.",
     "image": {
-      "src": "/projects/dementia-app/Dementia-head-cover.png",
+      "src": "/projects/dementia-app/dementia_head_cover.webp",
       "alt": "The prototype's home screen alongside a study of the eight tasks the evaluation tested"
     },
     "meta": [
@@ -138,10 +138,10 @@ const dementiaAppCaseStudy = {
       "titleEm": "not just observations",
       "blocks": [
         {
-          "type": "prose",
-          "paragraphs": [
-            "  The evaluation tested all eight features against targets set in advance. For a safety-critical app, success can't be defined after the fact: if a caregiver can't check location in under fifteen seconds, or set a geofence without help, calling those tasks \"usable\" in hindsight means nothing. The targets forced a definition of success before a single participant arrived."
-          ]
+          "type": "image",
+          "src": "/projects/dementia-app/dementia_evaluation_tasks.webp",
+          "alt": "Dementia care giver evaluation tasks overview",
+          "caption": "Dementia care giver evaluation tasks overview."
         },
         {
           "type": "process",
@@ -166,7 +166,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Four participants worked the Figma prototype remotely, screen-shared. Eight tasks ran against the targets. Three are worth watching."
+            "  The evaluation tested all eight features against targets set in advance. For a safety-critical app, success can't be defined after the fact: if a caregiver can't check location in under fifteen seconds, or set a geofence without help, calling those tasks \"usable\" in hindsight means nothing. The targets forced a definition of success before a single participant arrived."
           ]
         },
         {
@@ -174,6 +174,12 @@ const dementiaAppCaseStudy = {
           "src": "/projects/dementia-app/Dementia-evaluation.png",
           "alt": "A remote evaluation session, split screen with prototype on one side and task instructions on the other",
           "caption": "Remote, split-screen sessions, prototype one side, task script the other, so participants worked naturally while their misses were captured live."
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Four participants worked the Figma prototype remotely, screen-shared. Eight tasks ran against the targets. Three are worth watching."
+          ]
         }
       ]
     },
@@ -189,7 +195,7 @@ const dementiaAppCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/dementia-app/target-vs-actual.svg",
+          "src": "/projects/dementia-app/dementia-usability-results.webp",
           "alt": "A comparison of tasks 1, 4 and 8 showing what the metric said against what the participant actually did",
           "caption": "Against target, Task 1 clears and Task 4 fails outright, but Task 8 clears the metric while hiding a 1.27-minute search beneath it."
         },
@@ -245,7 +251,7 @@ const dementiaAppCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/dementia-app/tasks-collapse.svg",
+          "src": "/projects/dementia-app/dementia_tasks_collapse.webp",
           "alt": "Eight evaluation tasks grouped into three root causes, with Task 8 spanning two of them",
           "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes, Task 8, which started it, spans two."
         },

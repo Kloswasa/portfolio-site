@@ -102,7 +102,7 @@ export const projects: Project[] = [
     yearLabel: "2024 · Research",
     industry: "Healthcare",
     liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
-    coverImage: { src: "/projects/dementia-app/dementia-app-cover.png", alt: "Dementia App cover image" },
+    coverImage: { src: "/projects/dementia-app/dementia_app_cover.webp", alt: "Dementia App cover image" },
    
   },
   {
