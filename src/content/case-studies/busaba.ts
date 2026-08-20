@@ -13,7 +13,7 @@ const busabaCaseStudy = {
     "titleLine2": "& Fork",
     "summary": "A signature plated dessert and a bespoke fork for a fine dessert bar in Ayutthaya, each form translated from a piece of local heritage.",
     "image": {
-      "src": "/projects/busaba/busaba-cover.png",
+      "src": "/projects/busaba/busaba-cover.webp",
       "alt": "Signature dessert and bespoke fork styled together on a plate"
     },
     "meta": [
@@ -43,7 +43,7 @@ const busabaCaseStudy = {
       "blocks": [
         {
           "type": "image",
-          "src": "/projects/busaba/busaba-architecture.jpeg",
+          "src": "/projects/busaba/busaba-architecture.webp",
           "alt": "Busaba's signature white Thai architecture hotel facade",
           "caption": "Busaba signature white Thai architecture hotel.",
           "size": "md"
@@ -106,13 +106,13 @@ const busabaCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/busaba/busaba-fork-ref.png",
+          "src": "/projects/busaba/busaba-fork-ref.webp",
           "alt": "Busaba architecture with extracted line and form used for the fork",
           "caption": "Busaba signature white Thai architecture hotel and its extracted line and form."
         },
         {
           "type": "image",
-          "src": "/projects/busaba/busaba-fork-design.png",
+          "src": "/projects/busaba/busaba-fork-design.webp",
           "alt": "3D render of the bespoke fork with the extracted architectural line applied",
           "caption": "3D render with the extracted line and form applied to the fork design."
         },
@@ -126,12 +126,12 @@ const busabaCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/busaba/busaba-podduand-ref.png",
+              "src": "/projects/busaba/busaba-podduand-ref.webp",
               "alt": "Historic Pod-Duang currency from Ayutthaya",
               "caption": "Pod-Duang currency"
             },
             {
-              "src": "/projects/busaba/busaba-podduand-design.png",
+              "src": "/projects/busaba/busaba-podduand-design.webp",
               "alt": "3D render of the Thong-Bolan dessert following the Pod-Duang form",
               "caption": "3D render of Thong-Bolan design following Pod-Duang shape and form"
             }
@@ -147,12 +147,12 @@ const busabaCaseStudy = {
           "type": "imagePair",
           "items": [
             {
-              "src": "/projects/busaba/busaba-fork-use.png",
+              "src": "/projects/busaba/busaba-fork-use.webp",
               "alt": "Customer photo of the bespoke fork in service",
               "caption": "In-service fork photo from a customer"
             },
             {
-              "src": "/projects/busaba/busaba-thongboran.png",
+              "src": "/projects/busaba/busaba-thongboran.webp",
               "alt": "Customer photo of the house-made Thong-Bolan dessert",
               "caption": "Real house-made Thong-Bolan photo from a customer"
             }
@@ -167,7 +167,7 @@ const busabaCaseStudy = {
       "blocks": [
         {
           "type": "image",
-          "src": "/projects/busaba/busaba-final.png",
+          "src": "/projects/busaba/busaba-final.webp",
           "alt": "Live Busaba dessert bar with the signature dessert and fork",
           "caption": "Live Busaba dessert bar"
         },
