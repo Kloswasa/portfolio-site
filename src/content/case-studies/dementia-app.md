@@ -12,13 +12,13 @@ hero:
     alt: The prototype's home screen alongside a study of the eight tasks the evaluation tested
   meta:
     - label: Role
-      value: 2024 · designed and ran the team evaluation. 2026 · solo re-analysis into a redesign brief.
+      value: 2024 · designed and ran as team. 2026 · solo re-analysis into a redesign.
     - label: Team
       value: Team of four in 2024. Solo for the 2026 re-analysis.
     - label: Duration
       value: 6-week evaluation in 2024. Re-analysis in 2026.
     - label: Status
-      value: Evaluation complete. Re-analysis complete. 2026 redesign in progress.
+      value: Evaluation, re-analysis complete. Redesign in progress.
 ---
 
 # brief

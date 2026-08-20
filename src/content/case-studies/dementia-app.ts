@@ -19,7 +19,7 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "2024 · designed and ran the team evaluation. 2026 · solo re-analysis into a redesign brief."
+        "value": "2024 · designed and ran as team. 2026 · solo re-analysis into a redesign."
       },
       {
         "label": "Team",
@@ -31,7 +31,7 @@ const dementiaAppCaseStudy = {
       },
       {
         "label": "Status",
-        "value": "Evaluation complete. Re-analysis complete. 2026 redesign in progress."
+        "value": "Evaluation, re-analysis complete. Redesign in progress."
       }
     ]
   },
