@@ -8,7 +8,7 @@ hero:
   titleLine2: Huan
   summary: A collection of seven home fragrance products that translate Thai heritage scent practices from a century ago into objects that sit in a modern home without apology.
   image:
-    src: /projects/homhuan/homhuan-cover.png
+    src: /projects/homhuan/homhuan-cover.webp
     alt: The full Homhuan collection of seven fragrance products arranged as a family
   meta:
     - label: Role
@@ -56,7 +56,7 @@ titleEm: then forward
 
 ## image
 
-src: /projects/homhuan/homhuan-tienob.png
+src: /projects/homhuan/homhuan-tienob.webp
 alt: Tienob sample
 caption: Tian ob, the beginning of the project
 size: md
@@ -123,7 +123,7 @@ caption: The whole method in one view, seven heritage sources, each stripped to 
 - src: /projects/homhuan/homhuan-product-diffuser-inspiration.webp
   alt: Traditional Thai floral mobile woven from banana tree and garland
   caption: The source, a flat frame cut from banana tree, woven with a fresh garland, beautiful but wilting within a day.
-- src: /projects/homhuan/homhuan-product-diffuser.jpg
+- src: /projects/homhuan/homhuan-product-diffuser.webp
   alt: Homhuan flat reed diffuser with paper frame and piped fragrance beads
   caption: The translation, paper frame, one unbroken thread, fragrance beads piped where flowers were. A reed-and-oil bottle does the steady work.
 
@@ -160,19 +160,19 @@ titleEm: one period
 
 ## imageGrid
 
-- src: /projects/homhuan/homhuan-product-candle.jpg
+- src: /projects/homhuan/homhuan-product-candle.webp
   alt: Candle with Benjarong-inspired ceramic holder
   caption: Candle, from tian ob. Sized small because the herbal-spice-and-wax mix suits tiny batches, which is exactly why refills, not volume, became the model.
-- src: /projects/homhuan/homhuan-product-hanging-diffuser.png
+- src: /projects/homhuan/homhuan-product-hanging-diffuser.webp
   alt: Hanging three-dimensional reed diffuser in die-cut paper
   caption: Diffuser, from the mobile again, but read for its silhouette, not its weave, so a single source yields two distinct objects.
-- src: /projects/homhuan/homhuan-product-container.jpg
+- src: /projects/homhuan/homhuan-product-container.webp
   alt: Ceramic perfuming storage desk object
   caption: Perfuming storage, from cabinet scenting. Moved out of the wardrobe onto the desk and given the recovered fresh-petal recipe as its consumable.
-- src: /projects/homhuan/homhuan-product-miller-locket.jpg
+- src: /projects/homhuan/homhuan-product-miller-locket.webp
   alt: Ceramic and brass miller for grinding fragrance beads and locket-form solid perfume holder
   caption: Miller keeps the period form but drops the medicinal masher. The locket is paired with it so the make-your-own ritual reads in sequence.
-- src: /projects/homhuan/homhuan-set.png
+- src: /projects/homhuan/homhuan-set.webp
   alt: The seven products shown together as a family
   caption: One recurring holder shape, varied only by colour and glaze, lets seven different sources still read as a single family.
 
@@ -184,7 +184,7 @@ titleEm: in three months
 
 ## image
 
-src: /projects/homhuan/homhuan-render-to-reality.png
+src: /projects/homhuan/homhuan-render-to-reality.webp
 alt: Concept render and shifted collection comparison
 caption: Concept render beside the finished collection, the family held even as individual objects shifted in production.
 
