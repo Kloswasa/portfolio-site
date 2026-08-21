@@ -87,7 +87,7 @@ export const projects: Project[] = [
     caseStudyKind: "major",
     yearLabel: "2019 · Capstone",
     industry: "Home & lifestyle",
-    coverImage: { src: "/projects/homhuan/homhuan-cover.png", alt: "HomHuan cover image" },
+    coverImage: { src: "/projects/homhuan/homhuan-cover.webp", alt: "HomHuan cover image" },
   },
   {
     id: 3,
