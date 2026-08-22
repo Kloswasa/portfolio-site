@@ -134,7 +134,7 @@ export const projects: Project[] = [
     caseStudyKind: "minor",
     yearLabel: "2021 · Industrial",
     industry: "Food & beverage",
-    coverImage: { src: "/projects/busaba/busaba-cover.png", alt: "Busaba Dessert Bar cover image" },
+    coverImage: { src: "/projects/busaba/busaba-cover.webp", alt: "Busaba Dessert Bar cover image" },
   },
   {
     id: 6,
