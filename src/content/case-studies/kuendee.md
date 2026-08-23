@@ -3,10 +3,11 @@ kind: minor
 slug: kuendee
 hero:
   breadcrumb: Kuendee
-  eyebrow: "002 · Booth Design · Modular retail system + graphics"
+  eyebrow: "006 · Booth Design · Modular retail system + graphics"
   titleLine1: Kuendee
   titleLine2: Retail Booth
   summary: A reconfigurable retail booth for a fertiliser and gardening materials distributor, splitting a tight footprint and displaying a rotating range, with backdrop illustration and infographics designed to match.
+  layout: split
   image:
     src: /projects/kuendee/kuendee-head-cover.png
     alt: Kuendee booth installed in a home improvement store, showing two-sided product display and illustrated backdrop

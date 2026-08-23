@@ -49,6 +49,7 @@ export function MajorCaseStudyView({
       <MajorCaseStudyHero
         hero={caseStudy.hero}
         experienceLink={experienceLink}
+        project={project}
       />
 
       <div className="cs-major__layout">

@@ -8,7 +8,7 @@ const cioCaseStudy = {
   "slug": "cio",
   "hero": {
     "breadcrumb": "Cio Packaging",
-    "eyebrow": "012 · Packaging design · Structure",
+    "eyebrow": "012 · Packaging Design · Structure",
     "titleLine1": "Cio",
     "titleLine2": "Packaging",
     "summary": "A packaging structure that locks open at the ideal angle, so the product inside is easy to reach without the lid collapsing or flopping shut.",

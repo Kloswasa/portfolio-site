@@ -7,9 +7,10 @@ hero:
   titleLine1: Australia
   titleLine2: Call
   summary: A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.
+  layout: split
   image:
-    src: /projects/quiz-game/quiz-game-cover.png
-    alt: Wildlife illustrations representing Australia Call personality types, painted in a soft palette
+    src: /projects/quiz-game/quiz-game-head-cover.png
+    alt: Phone mockup of the Australia Call quiz on a beach collage, with polaroids, a wildlife sign, and a boomerang
   meta:
     - label: Role
       value: Designer, illustrator, developer

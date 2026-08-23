@@ -4,7 +4,11 @@ import {
   SnapSectionReveal,
 } from "@/src/components/motion/SnapSectionReveal";
 import type { MajorCaseStudyHero as HeroData } from "@/src/lib/case-studies/types";
-import type { ProjectExperienceLink } from "@/src/lib/projects";
+import {
+  getVisibleProjects,
+  type Project,
+  type ProjectExperienceLink,
+} from "@/src/lib/projects";
 
 function HeroBotanicalSvg() {
   return (
@@ -62,7 +66,35 @@ function HeroBotanicalSvg() {
   );
 }
 
-export function MajorCaseStudyHero({
+function HeroBreadcrumb({ label }: { label: string }) {
+  return (
+    <div className="cs-major__breadcrumb">
+      <Link href="/work">Work</Link>
+      <span aria-hidden>/</span>
+      <span>{label}</span>
+    </div>
+  );
+}
+
+function HeroTitle({
+  line1,
+  line2,
+  stacked,
+}: {
+  line1: string;
+  line2: string;
+  stacked: boolean;
+}) {
+  return (
+    <h1 className="cs-major__hero-title">
+      {line1}
+      {stacked ? <br /> : " "}
+      <em>{line2}</em>
+    </h1>
+  );
+}
+
+function HeroMeta({
   hero,
   experienceLink,
 }: {
@@ -70,72 +102,161 @@ export function MajorCaseStudyHero({
   experienceLink?: ProjectExperienceLink | null;
 }) {
   return (
-    <section className="cs-major__hero" id="hook">
-      <div className="cs-major__hero-dots" aria-hidden />
-      <div className="cs-major__hero-bg" aria-hidden>
-        {hero.image ? (
+    <div className="cs-major__meta-strip">
+      {hero.meta.map(({ label, value }) => (
+        <div key={label} className="cs-major__meta-item">
+          <div className="cs-major__meta-label">{label}</div>
+          <div className="cs-major__meta-val">{value}</div>
+        </div>
+      ))}
+      {experienceLink ? (
+        <div className="cs-major__meta-item cs-major__meta-cta">
+          <div className="cs-major__meta-label">
+            {experienceLink.sectionLabel}
+          </div>
+          <a
+            className="btn btn-gold cs-major__meta-btn"
+            href={experienceLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {experienceLink.label}
+          </a>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function projectFrame(slug: string): string {
+  const index = getVisibleProjects().findIndex((item) => item.slug === slug);
+  return String(Math.max(index, 0) + 1).padStart(2, "0");
+}
+
+function splitHeroEyebrow(
+  eyebrow: string,
+  fallbackNumber: string,
+): { number: string; label: string } {
+  const match = eyebrow.match(/^(\d{2,3})\s*·\s*(.+)$/);
+  if (!match) {
+    return { number: fallbackNumber, label: eyebrow };
+  }
+
+  return {
+    number: match[1].slice(-2),
+    label: match[2],
+  };
+}
+
+function HeroEyebrow({ text }: { text: string }) {
+  const { label } = splitHeroEyebrow(text, "");
+  return <div className="eyebrow">{label}</div>;
+}
+
+function HeroMediaOverlay({
+  project,
+  eyebrow,
+}: {
+  project: Project;
+  eyebrow: string;
+}) {
+  const { number, label } = splitHeroEyebrow(
+    eyebrow,
+    projectFrame(project.slug),
+  );
+
+  return (
+    <div className="cs-major__hero-media-chrome" aria-hidden>
+      <div className="cs-major__hero-media-gradient" />
+      <div className="cs-major__hero-media-overlay">
+        <div className="cs-major__hero-media-number">{number}</div>
+        <div className="eyebrow">{label}</div>
+      </div>
+    </div>
+  );
+}
+
+export function MajorCaseStudyHero({
+  hero,
+  experienceLink,
+  project,
+}: {
+  hero: HeroData;
+  experienceLink?: ProjectExperienceLink | null;
+  project: Project;
+}) {
+  const heroImage = hero.image ?? project.coverImage;
+  const isSplit = hero.layout !== "overlay" && Boolean(heroImage);
+  const showMediaOverlay = isSplit && Boolean(heroImage);
+
+  return (
+    <section
+      className={isSplit ? "cs-major__hero cs-major__hero--split" : "cs-major__hero"}
+      id="hook"
+    >
+      {isSplit ? null : <div className="cs-major__hero-dots" aria-hidden />}
+      <div
+        className="cs-major__hero-bg"
+        aria-hidden={isSplit ? undefined : true}
+      >
+        {heroImage ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={hero.image.src}
-            alt={hero.image.alt}
+            src={heroImage.src}
+            alt={heroImage.alt}
             className="cs-major__hero-img"
           />
-        ) : (
+        ) : isSplit ? null : (
           <HeroBotanicalSvg />
         )}
+        {showMediaOverlay ? (
+          <HeroMediaOverlay project={project} eyebrow={hero.eyebrow} />
+        ) : null}
       </div>
-      <div className="cs-major__hero-gradient" aria-hidden />
+      {isSplit ? null : <div className="cs-major__hero-gradient" aria-hidden />}
 
       <SnapSectionReveal className="cs-major__hero-content" amount={0.15}>
-        <SnapItem>
-          <div className="cs-major__breadcrumb">
-            <Link href="/work">Work</Link>
-            <span aria-hidden>/</span>
-            <span>{hero.breadcrumb}</span>
-          </div>
-        </SnapItem>
-
-        <SnapItem>
-          <div className="eyebrow">{hero.eyebrow}</div>
-        </SnapItem>
-
-        <SnapItem>
-          <h1 className="cs-major__hero-title">
-            {hero.titleLine1}
-            <br />
-            <em>{hero.titleLine2}</em>
-          </h1>
-        </SnapItem>
-
-        <SnapItem>
-          <p className="cs-major__hero-summary">{hero.summary}</p>
-        </SnapItem>
-
-        <SnapItem>
-          <div className="cs-major__meta-strip">
-            {hero.meta.map(({ label, value }) => (
-              <div key={label} className="cs-major__meta-item">
-                <div className="cs-major__meta-label">{label}</div>
-                <div className="cs-major__meta-val">{value}</div>
+        {isSplit ? (
+          <>
+            <SnapItem className="cs-major__hero-intro-slot">
+              <div className="cs-major__hero-intro">
+                <HeroBreadcrumb label={hero.breadcrumb} />
+                <HeroTitle
+                  line1={hero.titleLine1}
+                  line2={hero.titleLine2}
+                  stacked={false}
+                />
+                
+                <p className="cs-major__hero-summary">{hero.summary}</p>
               </div>
-            ))}
-            {experienceLink ? (
-              <div className="cs-major__meta-item cs-major__meta-cta">
-                <div className="cs-major__meta-label">
-                  {experienceLink.sectionLabel}
-                </div>
-                <a
-                  className="btn btn-gold cs-major__meta-btn"
-                  href={experienceLink.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {experienceLink.label}
-                </a>
-              </div>
-            ) : null}
-          </div>
-        </SnapItem>
+            </SnapItem>
+            <SnapItem>
+              <HeroMeta hero={hero} experienceLink={experienceLink} />
+            </SnapItem>
+          </>
+        ) : (
+          <>
+            <SnapItem>
+              <HeroBreadcrumb label={hero.breadcrumb} />
+            </SnapItem>
+            <SnapItem>
+              <HeroEyebrow text={hero.eyebrow} />
+            </SnapItem>
+            <SnapItem>
+              <HeroTitle
+                line1={hero.titleLine1}
+                line2={hero.titleLine2}
+                stacked
+              />
+            </SnapItem>
+            <SnapItem>
+              <p className="cs-major__hero-summary">{hero.summary}</p>
+            </SnapItem>
+            <SnapItem>
+              <HeroMeta hero={hero} experienceLink={experienceLink} />
+            </SnapItem>
+          </>
+        )}
       </SnapSectionReveal>
     </section>
   );

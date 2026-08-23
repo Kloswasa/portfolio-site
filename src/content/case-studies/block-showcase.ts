@@ -12,6 +12,7 @@ const blockShowcaseCaseStudy = {
     "titleLine1": "Block",
     "titleLine2": "Showcase",
     "summary": "A living reference page that renders every major case study content block, use it to preview layout, spacing, and typography before writing real copy.",
+    "layout": "split",
     "image": {
       "src": "/projects/quiz-game/quiz-game-cover.png",
       "alt": "Decorative cover used for the block showcase hero"

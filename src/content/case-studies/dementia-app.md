@@ -3,10 +3,11 @@ kind: major
 slug: dementia-app
 hero:
   breadcrumb: Dementia Caregiver
-  eyebrow: "UX Research · Healthtech · 2024 / 2026"
+  eyebrow: "003 · UX Research · Healthtech · 2024 / 2026"
   titleLine1: Dementia
   titleLine2: Caregiver
   summary: A usability evaluation of a caregiver monitoring app, and the re-analysis I ran a year later that reframed the findings as a trust and safety problem.
+  layout: split
   image:
     src: /projects/dementia-app/dementia_head_cover.webp
     alt: The prototype's home screen alongside a study of the eight tasks the evaluation tested

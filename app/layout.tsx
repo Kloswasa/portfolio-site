@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Fraunces, Syne, Lato } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import Script from "next/script";
 import { NavProvider } from "@/src/context/NavContext";
 import { MenuButton } from "@/src/components/chrome/MenuButton";
 import { NavOverlay } from "@/src/components/chrome/NavOverlay";
@@ -76,7 +75,6 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="min-h-dvh bg-bg text-text antialiased">
-        <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
         <SmoothScroll>
         <NavProvider>
           <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">

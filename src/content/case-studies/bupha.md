@@ -4,12 +4,13 @@ slug: bupha
 approachLabel: The Decision
 hero:
   breadcrumb: Bupha
-  eyebrow: 009 · Graphic design · Illustration
+  eyebrow: 010 · Graphic Design · Illustration
   titleLine1: Bupha
   titleLine2: Line
   summary: Graphic design and illustration for a local business's friendlier
     sub-brand, a separate product line that invites approachability without
     abandoning the parent shop's credibility.
+  layout: split
   image:
     src: /projects/bupha/bupha-cover.png
     alt: Bupha cover image

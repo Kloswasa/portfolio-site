@@ -3,10 +3,11 @@ kind: minor
 slug: flomax
 hero:
   breadcrumb: Flomax
-  eyebrow: "003 · Graphic Design · Kids mask packaging"
+  eyebrow: "007 · Graphic Design · Kids mask packaging"
   titleLine1: Flomax
   titleLine2: Kids Mask Packaging
   summary: A youth-facing graphic style for Flomax's filter face mask, designed for children while staying connected to the brand identity.
+  layout: split
   image:
     src: /projects/flomax/flomax-head-cover.png
     alt: Flomax kids face mask packaging showing the alternative graphic style

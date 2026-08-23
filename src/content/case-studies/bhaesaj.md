@@ -4,10 +4,11 @@ slug: bhaesaj
 approachLabel: The Direction
 hero:
   breadcrumb: Bhaesaj Skincare
-  eyebrow: 008 · Packaging design · Beauty
+  eyebrow: 008 · Packaging Design · Beauty
   titleLine1: Bhaesaj
   titleLine2: Lip Balm Packaging
   summary: A packaging design exploration for Bhaesaj, a traditional lip balm made since 1989, translating an established art direction into decisions about shape, surface, and function.
+  layout: split
   image:
     src: /projects/bhae/bhaesaj-head-cover.png
     alt: 3D render of the Bhaesaj lip balm packaging direction

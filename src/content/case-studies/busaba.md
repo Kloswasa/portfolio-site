@@ -3,10 +3,11 @@ kind: minor
 slug: busaba
 hero:
   breadcrumb: Signature Dessert & Fork
-  eyebrow: "001 · Industrial Design · Signature dessert + bespoke fork"
+  eyebrow: "005 · Industrial Design · Signature dessert + bespoke fork"
   titleLine1: Signature Dessert
   titleLine2: "& Fork"
   summary: A signature plated dessert and a bespoke fork for a fine dessert bar in Ayutthaya, each form translated from a piece of local heritage.
+  layout: split
   image:
     src: /projects/busaba/busaba-cover.webp
     alt: Signature dessert and bespoke fork styled together on a plate

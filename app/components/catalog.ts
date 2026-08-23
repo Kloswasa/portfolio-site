@@ -263,7 +263,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "MajorCaseStudyHero",
     path: "src/components/case-study/major/MajorCaseStudyHero.tsx",
     category: "case-study",
-    description: "Full-bleed hero for major case studies.",
+    description: "Split editorial hero with image overlay when a cover is present; full-bleed overlay when it is not.",
     usedOn: "/work/[slug]",
   },
   {

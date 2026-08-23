@@ -8,10 +8,15 @@ const thaihomCaseStudy = {
   "slug": "thaihom",
   "hero": {
     "breadcrumb": "Thai Hom Infographic Book",
-    "eyebrow": "011 · Graphic design · Editorial",
+    "eyebrow": "011 · Graphic Design · Editorial",
     "titleLine1": "Thai",
     "titleLine2": "Hom",
     "summary": "An infographic book showcasing ingredients that represent Thai aroma, every illustration and graphic element authored by hand for a cohesive sensory narrative.",
+    "layout": "split",
+    "image": {
+      "src": "/projects/thai-hom/thai-hom-cover.png",
+      "alt": "Thai Hom cover image"
+    },
     "meta": [
       {
         "label": "Client",

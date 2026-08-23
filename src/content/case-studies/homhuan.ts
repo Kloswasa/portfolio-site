@@ -8,10 +8,11 @@ const homhuanCaseStudy = {
   "slug": "homhuan",
   "hero": {
     "breadcrumb": "Homhuan",
-    "eyebrow": "004 · Industrial Design · Heritage Translation · 2019",
+    "eyebrow": "002 · Industrial Design · Heritage Translation · 2019",
     "titleLine1": "Hom",
     "titleLine2": "Huan",
     "summary": "A collection of seven home fragrance products that translate Thai heritage scent practices from a century ago into objects that sit in a modern home without apology.",
+    "layout": "split",
     "image": {
       "src": "/projects/homhuan/homhuan-cover.webp",
       "alt": "The full Homhuan collection of seven fragrance products arranged as a family"

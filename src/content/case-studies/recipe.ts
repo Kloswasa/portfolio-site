@@ -8,7 +8,7 @@ const recipeCaseStudy = {
   "slug": "recipe",
   "hero": {
     "breadcrumb": "Family Recipes",
-    "eyebrow": "003 · Product design · Food",
+    "eyebrow": "004 · Product Design · Food",
     "titleLine1": "Family",
     "titleLine2": "Recipes",
     "summary": "A recipe app for saving, sharing, and cooking dishes passed down across generations, with photos, stories, and measurements that match how people actually cook.",
