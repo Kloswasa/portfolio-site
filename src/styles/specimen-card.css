@@ -4,7 +4,7 @@
   --specimen-card-surface: var(--color-surface);
   --specimen-card-border: var(--color-border-subtle);
   --specimen-card-accent: var(--color-accent);
-  --specimen-card-primary: var(--color-primary);
+  --specimen-card-primary: var(--color-header-bg);
 
   position: relative;
   display: block;
@@ -118,8 +118,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 25%,
-    color-mix(in srgb, var(--specimen-card-primary) 90%, transparent) 100%
+    transparent 20%,
+    color-mix(in srgb, var(--specimen-card-primary) 95%, transparent) 95%
   );
   opacity: 0.72;
   transition: opacity 280ms ease;

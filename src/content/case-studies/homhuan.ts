@@ -20,7 +20,7 @@ const homhuanCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "Solo. Research, concept, industrial design, ceramics and materials, fragrance development, branding and packaging."
+        "value": "Solo. Research, concept, industrial design, materials, fragrance development, branding and packaging."
       },
       {
         "label": "Team",
