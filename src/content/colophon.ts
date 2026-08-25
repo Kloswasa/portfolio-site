@@ -11,7 +11,7 @@ import type {
 } from "@/src/lib/colophon/types";
 
 export const COLOPHON_HERO_META: AboutHeroMeta = {
-  watermark: "\u2018 Colophon \u2019",
+  watermark: "\u2018Colophon\u2019",
   eyebrow: "COLOPHON \u00b7 DESIGN SYSTEM \u00b7 DESIGN ENGINEERING",
   titleLine1: "This",
   titleLine2: "Site",
