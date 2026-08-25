@@ -197,11 +197,8 @@
   --cs-hero-copy-w: 28rem;
   display: grid;
   grid-template-columns:
-    minmax(
-      calc(var(--spacing-20) + var(--cs-hero-copy-w) + var(--spacing-12)),
-      3fr
-    )
-    minmax(0, 5fr);
+    calc(var(--spacing-20) + var(--cs-hero-copy-w) + var(--spacing-8))
+    minmax(0, 1fr);
   grid-template-areas: "content media";
   align-items: stretch;
   background: var(--color-bg);
@@ -214,7 +211,7 @@
   gap: var(--spacing-6);
   max-width: none;
   height: 100%;
-  padding: var(--spacing-8) var(--spacing-12) var(--spacing-10) var(--spacing-20);
+  padding: var(--spacing-8) var(--spacing-8) var(--spacing-10) var(--spacing-12);
 }
 
 .cs-major__hero--split .cs-major__hero-content > * {
