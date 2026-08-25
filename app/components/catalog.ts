@@ -247,7 +247,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "ColophonSpecimen",
     path: "src/components/about/ColophonSpecimen.tsx",
     category: "about",
-    description: "Live token colour bar for the colophon brief.",
+    description: "Live token colour plate for the colophon brief, laid out like the about portrait.",
     usedOn: "/colophon",
   },
   {

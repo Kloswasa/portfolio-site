@@ -49,10 +49,6 @@
   -webkit-text-stroke: 1px color-mix(in srgb, var(--color-text) 40%, transparent);
 }
 
-.about-page .work-hero__scroll {
-  display: none;
-}
-
 .about-page .work-hero__inner {
   display: block;
 }
@@ -126,11 +122,6 @@
   --color-border-strong: color-mix(in srgb, var(--color-text) 52%, transparent);
   --color-accent: color-mix(in srgb, var(--color-tertiary) 72%, var(--color-text) 38%);
   --color-secondary: color-mix(in srgb, var(--color-text) 36%, transparent);
-}
-
-.about-page .work-hero__illustration text {
-  display: block;
-  opacity: 0.85;
 }
 
 .about-page .work-hero__illustration svg {

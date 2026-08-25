@@ -34,16 +34,17 @@ export const COLOPHON_BRIEF_BLOCK: AboutBlock = {
 
 export const COLOPHON_BRIEF: ColophonBrief = {
   lead: [
-    "\u2003Every other project in this archive was made for someone else. This one is the exception \u2014 I am the designer, the engineer, the author, and the",
+    "\u2003Every other project in this archive was made for someone else. This one is the exception \u2014 I am the designer, the engineer, the author, and the ",
     { em: " client" },
-    ".",
+    " at once.",
+    
   ],
   paragraphs: [
     "\u2003I started with a moodboard, then asked Claude to propose a first design system and screens. The making happened in Cursor, roughly eighty percent of the work. Figma was a ruler: I used it to justify layout, not to originate the site.",
     "\u2003The product brief stayed narrow: adding a case study should be authoring, not engineering. If publishing a new project meant writing components, the site would rot the moment I got busy, which is exactly how portfolios die.",
-    "\u2003The code is not immaculate, and the making took time. That was the point to try a workflow where AI speeds the start, and human craft still decides what stays. Two JSON files remain the only token source. Markdown compiles to typed TypeScript. Components sit in four layers. JSON in, CSS and TypeScript out, never the reverse.",
+    "\u2003The code isn't immaculate, and it took time. That was the point — a workflow where AI speeds the start, and craft still decides what stays. Two JSON files are the only token source. Markdown compiles to typed TypeScript. Components sit in four layers. JSON in, CSS and TypeScript out, never the reverse.",
   ],
-  specimenLabel: "Live tokens \u00b7 restyle with the theme",
+  specimenLabel: "LIVE TOKENS\nRestyle with the theme",
   stampValue: "v0.1",
   stampLabel: "2026",
 };

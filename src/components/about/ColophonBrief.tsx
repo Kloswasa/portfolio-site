@@ -14,23 +14,27 @@ export function ColophonBrief({ block, brief }: ColophonBriefProps) {
     <ScrollReveal as="section" className="colophon-block" revealOnScroll={false}>
       <AboutBlockHead block={block} />
 
-      <p className="colophon-brief__lead">
-        <RichText value={brief.lead} />
-      </p>
+      <div className="colophon-brief">
+        <ColophonSpecimen
+          label={brief.specimenLabel}
+          stampValue={brief.stampValue}
+          stampLabel={brief.stampLabel}
+        />
 
-      <div className="colophon-brief__copy">
-        {brief.paragraphs.map((paragraph) => (
-          <p className="colophon-brief__p" key={paragraph}>
-            {paragraph}
+        <div className="colophon-brief__prose">
+          <p className="colophon-brief__lead">
+            <RichText value={brief.lead} />
           </p>
-        ))}
-      </div>
 
-      <ColophonSpecimen
-        label={brief.specimenLabel}
-        stampValue={brief.stampValue}
-        stampLabel={brief.stampLabel}
-      />
+          <div className="colophon-brief__copy">
+            {brief.paragraphs.map((paragraph) => (
+              <p className="colophon-brief__p" key={paragraph}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
     </ScrollReveal>
   );
 }

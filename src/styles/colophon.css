@@ -8,14 +8,32 @@
   padding-top: var(--colophon-pad-section);
 }
 
-/* ── Brief ── */
+/* ── Brief (mirrors about-story + portrait) ── */
+.colophon-brief {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .colophon-brief {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--spacing-16);
+    align-items: center;
+  }
+}
+
+.colophon-brief__prose {
+  min-width: 0;
+}
+
 .colophon-brief__lead {
-  margin: 0 0 var(--spacing-8);
-  max-width: 42rem;
+  margin: 0 0 var(--spacing-6);
   font-family: var(--font-heading);
   font-style: italic;
   font-size: var(--text-display-sm);
-  line-height: 1.3;
+  line-height: 1.25;
   color: var(--color-text);
   text-align: justify;
 }
@@ -27,8 +45,6 @@
 .colophon-brief__copy {
   display: grid;
   gap: var(--spacing-4);
-  max-width: 38rem;
-  margin-bottom: var(--spacing-12);
 }
 
 .colophon-brief__p {
@@ -40,33 +56,52 @@
   text-align: justify;
 }
 
-/* ── Token bar ── */
+/* ── Token plate (portrait analog) ── */
 .colophon-specimen {
-  margin: 0;
+  position: relative;
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+  padding-right: var(--spacing-4);
+  padding-bottom: var(--spacing-6);
+}
+
+.colophon-specimen__plate {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-header-bg);
+  box-shadow: var(--shadow-xl);
 }
 
 .colophon-specimen__bar {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: 100%;
   gap: var(--spacing-px);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
   background: var(--color-border);
 }
 
 .colophon-specimen__swatch {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  min-height: 0;
   background: var(--color-surface);
 }
 
 .colophon-specimen__chip {
   display: block;
-  min-height: 4.5rem;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .colophon-specimen__name {
-  padding: var(--spacing-2) var(--spacing-3);
+  padding: var(--spacing-1) var(--spacing-2);
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   letter-spacing: var(--tracking-label-lg);
@@ -74,31 +109,55 @@
   color: var(--color-text-subtle);
 }
 
-.colophon-specimen__caption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--spacing-2) var(--spacing-6);
-  margin-top: var(--spacing-3);
+
+
+.colophon-specimen__label {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 3;
+  margin: 0;
+  max-width: calc(100% - var(--spacing-12));
+  white-space: pre-line;
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   letter-spacing: var(--tracking-label-lg);
+  line-height: 1.9;
   text-transform: uppercase;
-  color: var(--color-text-subtle);
+  color: var(--color-text);
 }
 
 .colophon-specimen__stamp {
-  color: var(--color-tertiary);
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: var(--shadow-accent);
+  text-align: center;
 }
 
-@media (max-width: 639px) {
-  .colophon-specimen__bar {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.colophon-specimen__stamp strong {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-text-on-accent);
+}
 
-  .colophon-specimen__chip {
-    min-height: 3.5rem;
-  }
+.colophon-specimen__stamp span {
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-label-xl);
+  text-transform: uppercase;
+  color: var(--color-text-on-accent);
 }
 
 /* ── Inventory rows ── */

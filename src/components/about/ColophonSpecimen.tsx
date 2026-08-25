@@ -20,23 +20,25 @@ export function ColophonSpecimen({
 }: ColophonSpecimenProps) {
   return (
     <figure className="colophon-specimen">
-      <div className="colophon-specimen__bar" aria-hidden="true">
-        {SWATCHES.map((swatch) => (
-          <span className="colophon-specimen__swatch" key={swatch.label}>
-            <span
-              className="colophon-specimen__chip"
-              style={{ background: swatch.css }}
-            />
-            <span className="colophon-specimen__name">{swatch.label}</span>
-          </span>
-        ))}
+      <div className="colophon-specimen__plate">
+        <div className="colophon-specimen__bar" aria-hidden="true">
+          {SWATCHES.map((swatch) => (
+            <span className="colophon-specimen__swatch" key={swatch.label}>
+              <span
+                className="colophon-specimen__chip"
+                style={{ background: swatch.css }}
+              />
+              <span className="colophon-specimen__name">{swatch.label}</span>
+            </span>
+          ))}
+        </div>
+        <span className="colophon-specimen__mat" aria-hidden="true" />
+        <figcaption className="colophon-specimen__label">{label}</figcaption>
       </div>
-      <figcaption className="colophon-specimen__caption">
-        <span>{label}</span>
-        <span className="colophon-specimen__stamp">
-          {stampValue} · {stampLabel}
-        </span>
-      </figcaption>
+      <div className="colophon-specimen__stamp" aria-hidden="true">
+        <strong>{stampValue}</strong>
+        <span>{stampLabel}</span>
+      </div>
     </figure>
   );
 }
