@@ -18,7 +18,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-  "A product designer in Melbourne who designs and builds,\ndrawn to the structure beneath an interface,\nand to the person on the other side of the screen.",
+    "A product designer in Melbourne who designs and builds from research and design through to production code.\nDrawn to the structure beneath an interface, and the person on the other side of the screen.",
   stats: [
     { label: "Based in", value: "Melbourne" },
     { label: "Practising since", value: "2019" },
@@ -47,12 +47,12 @@ export const ABOUT_STORY: AboutStory = {
   lead: [
     "I design with",
     { em: " attention" },
-    ", then build what I create — so the care carries from Figma to code.",
+    ", then build what I create, so the care carries from design to code.",
   ],
   
   paragraphs: [
-    "I came to product design through visual craft: type, grid, the structure beneath surfaces, and a habit of looking closely. That training never really left.",
-    "I work across design and code. What I shape in Figma, I can ship in a development environment. I'm after both the precision of a well-built system and the warmth of something made by someone who cares who's on the other side of the screen.",
+    "I came to product through visual craft: type, grid, the structure beneath surfaces, and a habit of looking closely. That training never really left. It is still how I read an interface, and how I keep the person on the other side of the screen in view.",
+    "Agency and independent practice taught me to ship under real constraint. I use research to decide what gets built, not only how it looks, and I work in both design and engineering so that care survives the handoff.",
   ],
   signature: "\u2014 Klaus",
 };
@@ -175,7 +175,7 @@ const practiceSkills =
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered tools.",
   storyIntro:
-    "I'm a product designer in Melbourne who designs and builds. \nI care about the structure beneath the surface, and the person on the other side of the screen.",
+    "I'm a product designer in Melbourne who designs and builds — from research and Figma through to production code. Research decides what ships; craft and engineering keep it holding together for the person on the other side of the screen.",
   skills: practiceSkills,
   statusLabel: "Open to work",
   availabilityHeading: "Open to product related roles.",
@@ -189,7 +189,7 @@ export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
 export const ABOUT_QUOTE: AboutQuote = {
   watermark: "Look twice",
   quote:
-    "\u201cI learned to design by learning to look \u2014 slowly, and twice. Everything else followed from that.\u201d",
+    "\u201cI learned to design by learning to look, carefully, and twice. Everything else followed from that.\u201d",
   source: "On the practice \u00b7 2024",
 };
 
@@ -205,7 +205,7 @@ export const ABOUT_END_COPY: AboutEndCopy = {
     {
       label: "Download Resume \u2193",
       href: siteConfig.resume.downloadHref,
-      variant: "outline",
+      variant: "accent",
     },
   ],
 };

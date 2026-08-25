@@ -269,10 +269,9 @@
 }
 
 .about-portrait__stamp span {
-  margin-top: 3px;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
-  letter-spacing: var(--tracking-label-lg);
+  font-size: var(--text-md);
+  letter-spacing: var(--tracking-label-xl);
   text-transform: uppercase;
   color: var(--color-text-on-accent);
 }
@@ -315,7 +314,7 @@
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.875rem;
-  color: var(--color-tertiary);
+  color: var(--color-accent);
 }
 
 /* ── 03 Field record (timeline) ── */

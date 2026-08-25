@@ -17,7 +17,7 @@ type HeroSectionProps = {
 };
 
 function AboutHeading({ text }: { text: string }) {
-  const emphasis = "intention & care";
+  const emphasis = "building with care";
   const index = text.indexOf(emphasis);
 
   if (index === -1) {

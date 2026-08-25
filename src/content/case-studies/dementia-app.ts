@@ -7,11 +7,11 @@ const dementiaAppCaseStudy = {
   "kind": "major",
   "slug": "dementia-app",
   "hero": {
-    "breadcrumb": "Dementia Caregiver",
+    "breadcrumb": "Dementia Wandering Detection",
     "eyebrow": "003 · UX Research · Healthtech · 2024 / 2026",
     "titleLine1": "Dementia",
-    "titleLine2": "Caregiver",
-    "summary": "A usability evaluation of a caregiver monitoring app, and the re-analysis ran a year later to reframe the findings as a trust and safety problem.",
+    "titleLine2": "Wandering Detection",
+    "summary": "A wandering-detection app for dementia caregivers, from team research and a collaborative Figma prototype through Agile usability testing, then a later re-analysis that reframed the findings as a trust and safety problem.",
     "layout": "split",
     "image": {
       "src": "/projects/dementia-app/dementia_head_cover.webp",
@@ -20,7 +20,7 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "2024 · designed as team. 2026 · re-analysis into a redesign."
+        "value": "2024 · led research, prototyping, and usability testing. 2026 · re-analysis into a redesign."
       },
       {
         "label": "Team",
@@ -46,7 +46,7 @@ const dementiaAppCaseStudy = {
           "type": "prose",
           "paragraphs": [
             "  Many caregivers don't live with the person they care for. The person with dementia is home. The caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.",
-            "  In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes."
+            "  In 2024 my team designed a wandering-detection prototype for caregivers: research to set the direction, a Figma prototype built with the team, then Agile usability testing. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes."
           ]
         },
         {
@@ -116,7 +116,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
+            "  The project was a team of four. I ran user research with the group to define requirements and pick a direction, then led the non-designers through Figma so we could build the first prototype together. I took that to a high-fidelity version, validated across three peer reviews and a tutor evaluation. The usability testing was mine to lead: Agile cycles, findings documented comparatively across rounds, so each pass had a measurable improvement to aim at. I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
           ]
         },
         {
@@ -129,7 +129,7 @@ const dementiaAppCaseStudy = {
           "type": "image",
           "src": "/projects/dementia-app/dementia-app-hifed.webp",
           "alt": "The team's unified high-fidelity Figma prototype, cover frame",
-          "caption": "One iOS-based system, unified in the final week, so the evaluation tested a coherent product rather than four people's separate screens."
+          "caption": "The high-fidelity prototype, validated across three peer reviews and a tutor evaluation, so the usability tests ran against a coherent product rather than four people's separate screens."
         }
       ]
     },

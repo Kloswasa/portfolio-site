@@ -5,6 +5,7 @@ import type { PageEndAction, PageEndCopy } from "@/src/lib/page-end/types";
 const ACTION_CLASS: Record<PageEndAction["variant"], string> = {
   primary: "btn btn-primary",
   outline: "btn btn-outline",
+  accent: "btn btn-gold",
 };
 
 interface PageEndSectionProps {

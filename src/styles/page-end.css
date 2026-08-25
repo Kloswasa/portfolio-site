@@ -41,3 +41,16 @@
   gap: var(--spacing-5);
   margin-top: var(--spacing-2);
 }
+
+@media (max-width: 767px) {
+  .page-end__actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: min(100%, 22rem);
+  }
+
+  .page-end__actions a {
+    width: 100%;
+  }
+}
