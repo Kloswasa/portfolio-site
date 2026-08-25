@@ -548,7 +548,7 @@
 /* Callout */
 .cs-major__callout {
   background: var(--color-primary);
-  color: var(--color-surface);
+  color: var(--color-text-inverse);
   padding: var(--spacing-8) var(--spacing-8);
   margin: var(--spacing-10) 0;
   position: relative;
@@ -593,8 +593,12 @@
 
 .cs-major__callout-body {
   font-size: var(--text-body-lg);
-  color: var(--color-border-strong);
+  color: color-mix(in srgb, var(--color-text-inverse) 78%, transparent);
   line-height: 1.75;
+}
+
+.cs-major__callout-body strong {
+  color: var(--color-text-inverse);
 }
 
 /* Stats */
@@ -646,9 +650,12 @@
   text-transform: uppercase;
 }
 
-.cs-major__stat--dark .cs-major__stat-label,
-.cs-major__stat--mid .cs-major__stat-label {
+.cs-major__stat--dark .cs-major__stat-label {
   color: var(--color-border-strong);
+}
+
+.cs-major__stat--mid .cs-major__stat-label {
+  color: color-mix(in srgb, var(--color-text-inverse) 70%, transparent);
 }
 
 .cs-major__stat--light .cs-major__stat-label {

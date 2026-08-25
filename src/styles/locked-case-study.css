@@ -143,18 +143,21 @@
 .locked-study__unlock-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: var(--spacing-3);
 }
 
 .locked-study__unlock-input {
   flex: 1 1 12rem;
   min-width: 0;
-  padding: 0.6rem 0.75rem;
+  box-sizing: border-box;
+  padding: 10px 16px;
   font-family: var(--font-body);
-  font-size: var(--text-body-lg);
+  font-size: var(--text-body);
+  line-height: 1.25;
   color: var(--color-text);
   background: var(--color-bg);
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid var(--color-border);
 }
 
 .locked-study__unlock-input:focus-visible {
@@ -171,43 +174,7 @@
 .locked-study__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: var(--spacing-3);
   margin-top: var(--spacing-8);
-}
-
-.locked-study__cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 1.1rem;
-  font-family: var(--font-mono);
-  font-size: var(--text-label-lg);
-  letter-spacing: var(--tracking-label-lg);
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-text);
-  border: 1px solid var(--color-border-subtle);
-  transition: border-color 200ms ease, color 200ms ease;
-}
-
-.locked-study__cta:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.locked-study__cta--primary {
-  color: var(--color-text-inverse);
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.locked-study__cta--primary:hover {
-  color: var(--color-text-inverse);
-  background: color-mix(in srgb, var(--color-primary) 85%, var(--color-text));
-  border-color: color-mix(in srgb, var(--color-primary) 85%, var(--color-text));
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .locked-study__cta {
-    transition: none;
-  }
 }

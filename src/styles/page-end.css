@@ -32,7 +32,7 @@
 .page-end__actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: var(--spacing-5);
   margin-top: var(--spacing-2);

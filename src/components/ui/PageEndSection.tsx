@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
-import type { PageEndCopy } from "@/src/lib/page-end/types";
+import type { PageEndAction, PageEndCopy } from "@/src/lib/page-end/types";
+
+const ACTION_CLASS: Record<PageEndAction["variant"], string> = {
+  primary: "btn btn-primary",
+  outline: "btn btn-outline",
+};
 
 interface PageEndSectionProps {
   copy: PageEndCopy;
@@ -70,9 +75,7 @@ export function PageEndSection({
           <Link
             key={action.label}
             href={action.href}
-            className={
-              action.variant === "ghost" ? "btn btn-outline" : "btn btn-primary"
-            }
+            className={ACTION_CLASS[action.variant]}
           >
             {action.label}
           </Link>

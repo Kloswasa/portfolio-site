@@ -14,17 +14,32 @@ export function AboutTimeline({ block, entries }: AboutTimelineProps) {
 
       <ol className="about-record">
         {entries.map((entry) => (
-          <li className="about-record__row" key={entry.year + entry.role}>
-            <span className="about-record__year">{entry.year}</span>
+          <li
+            className={[
+              "about-record__row",
+              entry.year ? null : "about-record__row--no-year",
+              entry.tag ? null : "about-record__row--no-tag",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            key={`${entry.year ?? ""}-${entry.role}`}
+          >
+            {entry.year ? (
+              <span className="about-record__year">{entry.year}</span>
+            ) : null}
             <div className="about-record__body">
               <h3 className="about-record__role">{entry.role}</h3>
               {entry.specialisation ? (
                 <p className="about-record__specialisation">{entry.specialisation}</p>
               ) : null}
               <p className="about-record__place">{entry.university ?? entry.place}</p>
-              <p className="about-record__note">{entry.note}</p>
+              {entry.note ? (
+                <p className="about-record__note">{entry.note}</p>
+              ) : null}
             </div>
-            <span className="about-record__tag">{entry.tag}</span>
+            {entry.tag ? (
+              <span className="about-record__tag">{entry.tag}</span>
+            ) : null}
           </li>
         ))}
       </ol>

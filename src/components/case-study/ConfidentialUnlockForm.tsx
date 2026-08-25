@@ -53,7 +53,7 @@ export function ConfidentialUnlockForm() {
           />
           <button
             type="submit"
-            className="locked-study__cta locked-study__cta--primary"
+            className="btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isPending || password.length === 0}
           >
             {isPending ? "Checking…" : "Unlock"}

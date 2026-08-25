@@ -74,7 +74,7 @@ export function HeroSection({
             <Link className="btn btn-primary" href={primaryCta.href}>
               {primaryCta.label}
             </Link>
-            <Link className="btn btn-text" href={secondaryCta.href}>
+            <Link className="btn-text" href={secondaryCta.href}>
               {secondaryCta.label} <span aria-hidden>→</span>
             </Link>
           </SnapItem>

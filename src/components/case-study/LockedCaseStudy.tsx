@@ -58,11 +58,11 @@ export function LockedCaseStudy({ project }: { project: Project }) {
             href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
               `Access request, ${project.title}`,
             )}`}
-            className="locked-study__cta locked-study__cta--primary"
+            className="btn btn-primary"
           >
             Request access
           </a>
-          <Link href="/work" className="locked-study__cta">
+          <Link href="/work" className="btn btn-outline">
             Back to the archive
           </Link>
         </div>

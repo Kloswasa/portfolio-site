@@ -170,7 +170,7 @@ export const COLOPHON_END_COPY: AboutEndCopy = {
   titleAccent: "in action?",
   actions: [
     { label: "Browse components \u2192", href: "/components", variant: "primary" },
-    { label: "View tokens", href: "/tokens", variant: "ghost" },
-    { label: "About the designer", href: "/about", variant: "ghost" },
+    { label: "View tokens", href: "/tokens", variant: "outline" },
+    { label: "About the designer", href: "/about", variant: "outline" },
   ],
 };

@@ -106,20 +106,14 @@ export const ABOUT_EDUCATION_BLOCK: AboutBlock = {
 
 export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
   {
-    year: "2024-2025",
     role: "Master of Information Technology",
     specialisation: "Software Development specialisation",
     university: "Swinburne University · Melbourne",
-    note: "the deliberate decision to learn the other half of the craft, so design ideas would never have to wait for someone else to build them.",
-    tag: "2 yrs",
   },
   {
-    year: "2015-2019",
     role: "Bachelor of Decorative Art (Design)",
     specialisation: "Product Design specialisation",
     university: "Silpakorn University · Bangkok",
-    note: "Where the eye for form and the instinct for storytelling first met. The roots of everything that came after.",
-    tag: "4 yrs",
   },
 ];
 
@@ -207,11 +201,11 @@ export const ABOUT_END_COPY: AboutEndCopy = {
   titleAccent: "let\u2019s make something.",
   actions: [
     { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "primary" },
-    { label: "See the work", href: "/work", variant: "ghost" },
+    { label: "See the work", href: "/work", variant: "outline" },
     {
       label: "Download Resume \u2193",
       href: siteConfig.resume.downloadHref,
-      variant: "ghost",
+      variant: "outline",
     },
   ],
 };

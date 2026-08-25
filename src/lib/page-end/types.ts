@@ -1,7 +1,7 @@
 export interface PageEndAction {
   label: string;
   href: string;
-  variant: "primary" | "ghost";
+  variant: "primary" | "outline";
 }
 
 export interface PageEndCopy {

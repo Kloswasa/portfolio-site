@@ -32,13 +32,13 @@ export interface AboutStory {
 
 
 export interface AboutTimelineEntry {
-  year: string;
+  year?: string;
   role: string;
   specialisation?: string;
   place?: string;
   university?: string;
-  note: string;
-  tag: string;
+  note?: string;
+  tag?: string;
 }
 
 export interface AboutInstrumentTag {

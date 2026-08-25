@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 import Link from "next/link";
 import { PlayCard } from "@/src/components/play/PlayCard";
-import { PLAY_END_COPY } from "@/src/content/play";
+import { COLOPHON_END_COPY } from "@/src/lib/colophon";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { FilterBar } from "@/src/components/ui/FilterBar";
 import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
@@ -209,7 +209,7 @@ export function MenuButtonDemo() {
 }
 
 export function PageEndSectionDemo() {
-  return <PageEndSection copy={PLAY_END_COPY} showOrnament />;
+  return <PageEndSection copy={COLOPHON_END_COPY} />;
 }
 
 export function CatalogNav({ sections }: { sections: { id: string; label: string }[] }) {
