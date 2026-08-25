@@ -175,7 +175,7 @@ const practiceSkills =
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered tools.",
   storyIntro:
-    "I'm a product designer in Melbourne who designs and builds — from research and Figma through to production code. Research decides what ships; craft and engineering keep it holding together for the person on the other side of the screen.",
+    "I'm a product designer in Melbourne who designs and builds from research and Figma through to production code. Research decides what ships; craft and engineering keep it holding together for the person on the other side of the screen.",
   skills: practiceSkills,
   statusLabel: "Open to work",
   availabilityHeading: "Open to product related roles.",

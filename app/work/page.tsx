@@ -9,7 +9,7 @@ import {
 export const metadata = {
   title: "Work",
   description:
-    "A complete record of design work — catalogued entries across product, industrial, packaging, and graphic design.",
+    "A complete record of design work: catalogued entries across product, industrial, packaging, and graphic design.",
 };
 
 export default function WorkPage() {

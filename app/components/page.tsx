@@ -146,7 +146,7 @@ export default function ComponentsPage() {
               Components
             </h1>
             <p className="mt-4 font-body text-lg font-light text-text-muted">
-              Every reusable piece in this repo — primitives, cards, motion
+              Every reusable piece in this repo: primitives, cards, motion
               wrappers, and page sections. Live demos below; the inventory table
               links to routes and source paths across the whole project.
             </p>
@@ -396,7 +396,7 @@ export default function ComponentsPage() {
               <p className="mb-6 font-body text-text-muted">
                 Section-level stagger coordinator. Wrap children in{" "}
                 <span className="font-mono text-text">SnapItem</span> for the
-                cascade — used on the home hero and featured section.
+                cascade: used on the home hero and featured section.
               </p>
               <SnapSectionRevealDemo />
             </SectionShell>
