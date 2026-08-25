@@ -17,7 +17,7 @@ const links = [
   { href: "/work", label: "Works", num: "02" },
   { href: "/play", label: "Play", num: "03" },
   { href: "/about", label: "About", num: "04" },
-  { href: "/colophon", label: "About this site", num: "05" },
+  { href: "/colophon", label: "this site", num: "05" },
 ];
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;

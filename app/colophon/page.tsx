@@ -14,7 +14,7 @@ import {
 } from "@/src/lib/colophon";
 
 export const metadata = {
-  title: "About this site",
+  title: "this site",
   description:
     "The token pipeline, content compiler, and component architecture behind this portfolio.",
 };
