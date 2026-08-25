@@ -6,7 +6,7 @@ hero:
   eyebrow: "006 · Booth Design · Modular retail system + graphics"
   titleLine1: Kuendee
   titleLine2: Retail Booth
-  summary: A reconfigurable retail booth for a fertiliser and gardening materials distributor, splitting a tight footprint and displaying a rotating range, with backdrop illustration and infographics designed to match.
+  summary: Reconfigurable retail booth for a gardening distributor, space-splitting layout for a rotating range, with matching backdrop illustration and infographics.
   layout: split
   image:
     src: /projects/kuendee/kuendee-head-cover.png
@@ -19,7 +19,7 @@ hero:
     - label: Timeline
       value: "2021"
     - label: Deliverable
-      value: Modular booth system, backdrop illustration, product infographics
+      value: Booth system, backdrop illustration, product infographics
 ---
 # context
 eyebrow: 01 · Context
@@ -40,7 +40,7 @@ size:md
   The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other.
 
 ## image
-src: /projects/kuendee/kuendee-constraint-size.png
+src: /projects/kuendee/kuendee-constraint-size.webp
 alt: Isometric diagram showing the booth's space constraints and dimensions
 caption: Space constraint isometric and dimensions.
 size:md

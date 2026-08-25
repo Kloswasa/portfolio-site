@@ -139,6 +139,7 @@
   line-height: 1.25;
   max-width: 30rem;
   margin-bottom: var(--spacing-4);
+  text-align: justify;
 }
 
 .cs-major__meta-strip {
@@ -595,6 +596,7 @@
   font-size: var(--text-body-lg);
   color: color-mix(in srgb, var(--color-text-inverse) 78%, transparent);
   line-height: 1.75;
+  text-align: justify;
 }
 
 .cs-major__callout-body strong {
@@ -721,6 +723,7 @@
   font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.7;
+  text-align: justify;
 }
 
 /* Annotation */
@@ -746,6 +749,7 @@
   font-size: var(--text-body);
   color: var(--color-warning-text);
   line-height: 1.7;
+  text-align: justify;
 }
 
 /* Two col */
@@ -769,6 +773,7 @@
   font-size: var(--text-body-lg);
   color: var(--color-text-muted);
   line-height: 1.75;
+  text-align: justify;
 }
 
 /* Single image */
@@ -976,6 +981,7 @@ a.cs-major__image-credit:hover {
   font-size: var(--text-body-sm);
   color: var(--color-text-muted);
   line-height: 1.7;
+  text-align: justify;
 }
 
 /* Artifact */
@@ -1062,6 +1068,7 @@ a.cs-major__image-credit:hover {
   font-size: var(--text-body);
   color: var(--color-text-muted);
   line-height: 1.65;
+  text-align: justify;
 }
 
 /* Reflections */
@@ -1091,6 +1098,7 @@ a.cs-major__image-credit:hover {
   font-size: var(--text-base);
   color: var(--color-text-muted);
   line-height: 1.7;
+  text-align: justify;
 }
 
 .cs-major__reflections li:first-child {
@@ -1171,6 +1179,7 @@ a.cs-major__image-credit:hover {
   color: var(--color-text-muted);
   line-height: 1.7;
   max-width: 36rem;
+  text-align: justify;
 }
 
 .cs-major__type-mono {

@@ -53,9 +53,9 @@ export function ColophonView({
 
       <div className="about-body about-container">
         <ColophonBrief block={briefBlock} brief={brief} />
+        <ColophonPullquote quote={quote} />
         <ColophonStack block={stackBlock} groups={stack} />
         <ColophonPipelines block={pipelinesBlock} pipelines={pipelines} />
-        <ColophonPullquote quote={quote} />
         <ColophonLayers block={layersBlock} layers={layers} />
       </div>
 

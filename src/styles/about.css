@@ -413,6 +413,7 @@
   font-size: var(--text-body-lg);
   line-height: 1.65;
   color: var(--color-text-muted);
+  text-align: justify;
 }
 
 .about-record__tag {

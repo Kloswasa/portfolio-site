@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "this site",
   description:
-    "The token pipeline, content compiler, and component architecture behind this portfolio.",
+    "How this portfolio was made: moodboard, a generated first system, then craft in Cursor \u2014 with Figma as a layout check.",
 };
 
 export default function ColophonPage() {

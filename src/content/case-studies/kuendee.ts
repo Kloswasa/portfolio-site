@@ -11,7 +11,7 @@ const kuendeeCaseStudy = {
     "eyebrow": "006 · Booth Design · Modular retail system + graphics",
     "titleLine1": "Kuendee",
     "titleLine2": "Retail Booth",
-    "summary": "A reconfigurable retail booth for a fertiliser and gardening materials distributor, splitting a tight footprint and displaying a rotating range, with backdrop illustration and infographics designed to match.",
+    "summary": "Reconfigurable retail booth for a gardening distributor, space-splitting layout for a rotating range, with matching backdrop illustration and infographics.",
     "layout": "split",
     "image": {
       "src": "/projects/kuendee/kuendee-head-cover.png",
@@ -32,7 +32,7 @@ const kuendeeCaseStudy = {
       },
       {
         "label": "Deliverable",
-        "value": "Modular booth system, backdrop illustration, product infographics"
+        "value": "Booth system, backdrop illustration, product infographics"
       }
     ]
   },
@@ -63,7 +63,7 @@ const kuendeeCaseStudy = {
         },
         {
           "type": "image",
-          "src": "/projects/kuendee/kuendee-constraint-size.png",
+          "src": "/projects/kuendee/kuendee-constraint-size.webp",
           "alt": "Isometric diagram showing the booth's space constraints and dimensions",
           "caption": "Space constraint isometric and dimensions.",
           "size": "md"

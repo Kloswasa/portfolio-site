@@ -68,6 +68,29 @@
   .text-heading-4xl,
   .text-heading-5xl {
     font-family: var(--font-heading);
+    text-align: start;
+  }
+
+  /* Editorial body copy */
+  p {
+    text-align: justify;
+  }
+
+  .eyebrow,
+  .section-label,
+  .hero-role,
+  .home-section__watermark,
+  .work-hero__watermark,
+  .cs-major__type-heading,
+  .cs-major__type-mono,
+  .about-story__sign,
+  .about-portrait__label,
+  .about-interstitial__source,
+  .colophon-pipeline__command,
+  .colophon-pipeline__source,
+  .colophon-layer__path,
+  .colophon-stack__label {
+    text-align: start;
   }
 
   /* Scrollbar */

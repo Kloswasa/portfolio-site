@@ -726,6 +726,7 @@
   font-size: 1rem;
   line-height: 1.75;
   color: var(--play-viewer-note);
+  text-align: justify;
 }
 
 .play-viewer__codehead {

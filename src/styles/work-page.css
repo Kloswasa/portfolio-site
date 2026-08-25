@@ -162,6 +162,7 @@
   line-height: 1.75;
   color: var(--color-text-muted);
   white-space: pre-line;
+  text-align: justify;
 }
 
 .work-hero__stats {

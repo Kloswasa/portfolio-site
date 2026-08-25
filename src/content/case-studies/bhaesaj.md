@@ -7,7 +7,7 @@ hero:
   eyebrow: 008 · Packaging Design · Beauty
   titleLine1: Bhaesaj
   titleLine2: Lip Balm Packaging
-  summary: A packaging design exploration for Bhaesaj, a traditional lip balm made since 1989, translating an established art direction into decisions about shape, surface, and function.
+  summary: Packaging exploration for Bhaesaj, a lip balm brand since 1989, translating established art direction into shape, surface, and function.
   layout: split
   image:
     src: /projects/bhae/bhaesaj-head-cover.png

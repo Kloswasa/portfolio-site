@@ -11,6 +11,10 @@
   border-top: 2px solid var(--color-primary);
 }
 
+.page-end .eyebrow {
+  text-align: center;
+}
+
 .page-end__ornament {
   opacity: 0.35;
 }

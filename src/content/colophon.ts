@@ -12,13 +12,13 @@ import type {
 
 export const COLOPHON_HERO_META: AboutHeroMeta = {
   watermark: "\u2018Colophon\u2019",
-  eyebrow: "COLOPHON \u00b7 DESIGN SYSTEM \u00b7 DESIGN ENGINEERING",
+  eyebrow: "COLOPHON \u00b7 CRAFT \u00b7 COLLABORATION WITH AI",
   titleLine1: "This",
   titleLine2: "Site",
   description:
-    "The token pipeline, content compiler, and component architecture behind this portfolio \u2014 built so one person can maintain it over years.",
+    "Moodboard first, a generated system as a sketch, then the site built by eye \u2014 an experiment in collaborating with AI without giving up the looking twice.",
   stats: [
-    { label: "Stack", value: "Next.js 15" },
+    { label: "Cursor \u00b7 Figma", value: "80 / 20" },
     { label: "Design tokens", value: "100" },
     { label: "Components", value: "65" },
     { label: "Case studies", value: "12" },
@@ -27,20 +27,21 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
 
 export const COLOPHON_BRIEF_BLOCK: AboutBlock = {
   kicker: "\u00a7 01",
-  title: "The brief",
-  infoStrong: "Why it exists",
-  infoDetail: "Authoring, not engineering",
+  title: "The making",
+  infoStrong: "How it was made",
+  infoDetail: "Cursor ~80 \u00b7 Figma ~20",
 };
 
 export const COLOPHON_BRIEF: ColophonBrief = {
   lead: [
-    "Every other project in this archive was made for someone else. This one is the exception \u2014 I am the designer, the engineer, the author, and the",
+    "\u2003Every other project in this archive was made for someone else. This one is the exception \u2014 I am the designer, the engineer, the author, and the",
     { em: " client" },
     ".",
   ],
   paragraphs: [
-    "The brief I set was narrow on purpose: adding a case study should be authoring, not engineering. If publishing a new project meant writing components, the site would rot the moment I got busy, which is exactly how portfolios die.",
-    "Two JSON files are the only token source. Markdown compiles to typed TypeScript. Components sit in four layers, generic to specific. The architecture is a single rule \u2014 JSON in, CSS and TypeScript out, never the reverse.",
+    "\u2003I started with a moodboard, then asked Claude to propose a first design system and screens. The making happened in Cursor, roughly eighty percent of the work. Figma was a ruler: I used it to justify layout, not to originate the site.",
+    "\u2003The product brief stayed narrow: adding a case study should be authoring, not engineering. If publishing a new project meant writing components, the site would rot the moment I got busy, which is exactly how portfolios die.",
+    "\u2003The code is not immaculate, and the making took time. That was the point to try a workflow where AI speeds the start, and human craft still decides what stays. Two JSON files remain the only token source. Markdown compiles to typed TypeScript. Components sit in four layers. JSON in, CSS and TypeScript out, never the reverse.",
   ],
   specimenLabel: "Live tokens \u00b7 restyle with the theme",
   stampValue: "v0.1",
@@ -51,10 +52,19 @@ export const COLOPHON_STACK_BLOCK: AboutBlock = {
   kicker: "\u00a7 02",
   title: "Inventory",
   infoStrong: "What it runs on",
-  infoDetail: "Architecture, runtime, browse",
+  infoDetail: "Method, architecture, runtime",
 };
 
 export const COLOPHON_STACK: ColophonStackGroup[] = [
+  {
+    label: "Method",
+    items: [
+      { label: "Moodboard", key: true },
+      { label: "Claude", key: true },
+      { label: "Cursor", key: true },
+      { label: "Figma" },
+    ],
+  },
   {
     label: "Architecture",
     items: [
@@ -91,8 +101,8 @@ export const COLOPHON_STACK: ColophonStackGroup[] = [
 
 export const COLOPHON_QUOTE: ColophonPullquote = {
   quote:
-    "A generator does not prevent drift. It makes drift cheap to find and fix in one place.",
-  source: "On the token pipeline \u00b7 2026",
+    "A generated system is a sketch. Craft is deciding what stays.",
+  source: "On making with AI \u00b7 2026",
 };
 
 export const COLOPHON_PIPELINES_BLOCK: AboutBlock = {
@@ -108,7 +118,7 @@ export const COLOPHON_PIPELINES: ColophonPipeline[] = [
     title: "Tokens",
     command: "npm run tokens:gen",
     source: "design-tokens/tokens.*.json",
-    body: "Nine token groups flatten to 100 CSS variables and 80 dark overrides. A second exporter writes W3C DTCG files, keeping tokens portable back to Figma.",
+    body: "Nine token groups flatten to 100 CSS variables and 80 dark overrides. A second exporter writes W3C DTCG files, so the recipes can travel \u2014 including into Figma when I need a ruler.",
   },
   {
     num: "02",

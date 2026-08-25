@@ -17,6 +17,7 @@
   font-size: var(--text-display-sm);
   line-height: 1.3;
   color: var(--color-text);
+  text-align: justify;
 }
 
 .colophon-brief__lead em {
@@ -36,6 +37,7 @@
   font-size: var(--text-body-xl);
   line-height: 1.85;
   color: var(--color-text-muted);
+  text-align: justify;
 }
 
 /* ── Token bar ── */
@@ -238,6 +240,7 @@ a.colophon-stack__item:hover {
   font-size: var(--text-body-lg);
   line-height: 1.65;
   color: var(--color-text-muted);
+  text-align: justify;
 }
 
 /* ── Pullquote ── */
@@ -327,6 +330,7 @@ a.colophon-stack__item:hover {
   font-size: var(--text-body-lg);
   line-height: 1.6;
   color: var(--color-text-muted);
+  text-align: justify;
 }
 
 .colophon-layer__count {
