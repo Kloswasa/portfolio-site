@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "A muscle-sensing wearable for climbers that shows what each move cost, not just what it looked like.",
     technologies: ["Wearable hardware","CAD", "Physical device" ],
     tone: "primary",
-    workTab: "product",
+    workTab: "industrial",
     caseStudyKind: "major",
     yearLabel: "2026 · Prototype",
     industry: "Sports",
