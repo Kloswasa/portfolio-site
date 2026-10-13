@@ -5,6 +5,7 @@ hero:
   breadcrumb: Forception
   eyebrow: Industrial Design · Wearable Hardware · 2026
   titleLine1: Forception
+  titleLine2: Wearable
   summary: A muscle-sensing wearable for climbers that shows what each move cost, not just what it looked like.
   layout: split
   image:
