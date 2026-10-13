@@ -45,17 +45,17 @@ const forceptionCaseStudy = {
         {
           "type": "image",
           "src": "/projects/forception/capricorn-logo.svg",
-          "alt": "Capricon tech logo",
-          "caption": "Capricorn Tech Connect Pty Ltd:",
+          "alt": "Capricorn Tech logo",
+          "caption": "Capricorn Tech Connect Pty Ltd.",
           "size": "md"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  This project had built under the competition [Capricorn Productathon 2026](https://www.capricorntech.com.au/builder) under \"AI × Sports\" theme, which our team focusing on \"Bouldering\" or indoor climbing sport.",
-            "  We catched a pain point where climbers film themselves to improve, records shows how a body moved but it can't show how hard a forearm worked, or why a session still hurts the next day.",
-            "  Two of our team boulder regularly and kept hitting that gap. Most training tools are camera-based, so they share the blind spot.",
-            "  Our team separate task for each member, which I owned the physical device design role. Its job: hold the sensor on exactly the right muscle while the climber pulls hard."
+            "  This project was built for the [Capricorn Productathon 2026](https://www.capricorntech.com.au/builder) under the \"AI × Sports\" theme. Our team focused on bouldering.",
+            "  We caught a pain point. Climbers film themselves to improve, but a recording shows how the body moved. It can't show how hard the forearm worked, or why a session still hurts the next day.",
+            "  Two teammates boulder regularly and kept running into that gap. Most training tools are camera-based, so they share the blind spot.",
+            "  Our team split the tasks. I owned physical device design. The device's job: hold the sensor on exactly the right muscle while the climber pulls hard."
           ]
         },
         {
@@ -107,7 +107,7 @@ const forceptionCaseStudy = {
             },
             {
               "label": "IMU wearables (Catapult)",
-              "body": "Body-worn motion sensors give coaches movement and load data. Built for team sport, they track the body, not a single muscle.",
+              "body": "Body-worn motion sensors give coaches movement and load data. Built for team sports, they track the body, not a single muscle.",
               "image": "/projects/forception/Catapult_logo.svg",
               "imageAlt": "Catapult logo"
             }
@@ -117,7 +117,7 @@ const forceptionCaseStudy = {
           "type": "prose",
           "paragraphs": [
             "  Neither reads the forearm, where a climber's grip gives out. So we kept the camera and added the arm. A phone records the session while AI tracks movement, and a forearm wearable reads muscle activity through EMG, motion and proximity sensors. The app syncs both, showing what each move cost, not just what it looked like.",
-            "  Especially, EMG that set the rules for my part. The sensor only reads cleanly when it sits flat on the right muscle and stays pressed there, so the device had to grip firmly, survive being pulled against, and stay out of the way."
+            "  EMG, in particular, set the rules for my part. The sensor only reads cleanly when it sits flat on the right muscle position and stays pressed there, so the device had to grip firmly, survive being pulled against, and stay out of the way."
           ]
         }
       ]
@@ -125,7 +125,7 @@ const forceptionCaseStudy = {
     "concept": {
       "eyebrow": "03 · Concept",
       "title": "One body, then three",
-      "titleEm": "The problem wasn't size, but what is?",
+      "titleEm": "The problem wasn't size, but arrangement.",
       "blocks": [
         {
           "type": "image",
@@ -136,8 +136,8 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I started with paper cut-outs to estimate the footprint, separated into unit, without knowing how the wiring could run.",
-            "  Then, our team purposed that it can combine into one unit and stacking up sensors, due to mimise the sizing. Therefore, I planned wire channels around every part, and ribs and bosses to hold it all under strap tension."
+            "  I started with paper cut-outs, split into units, to estimate the footprint, before I knew how the wiring could run.",
+            "  Then our team proposed combining everything into one unit and stacking the sensors, to minimise the size. Therefore, I planned wire channels around every part, and ribs and bosses to hold it all under strap tension."
           ]
         },
         {
@@ -158,7 +158,7 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The final is nearly the same size, at 14.6 × 5.9 cm. I didn't shrink it. I split it into three units with flexing gaps, each sized to what it holds. The button unit is just 3.2 × 3.2 cm."
+            "  The final version is nearly the same size, at 14.6 × 5.9 cm. I didn't shrink it. I split it into three units with flexing gaps, each sized to what it holds. The button unit is just 3.2 × 3.2 cm."
           ]
         }
       ]
@@ -177,7 +177,7 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Each version after V1 began with new information: an added part, a relaxed wiring constraint, or a sensor in the wrong place. My job was to turn each change into a print fast enough to hold a two-week schedule."
+            "  Each version after V1 began with new information: an added part, a relaxed wiring constraint, or a sensor in the wrong place. My job was to turn each change into a print fast enough to keep to a two-week schedule."
           ]
         },
         {
@@ -196,17 +196,17 @@ const forceptionCaseStudy = {
             {
               "num": "03",
               "title": "V3 · Vertical wiring, first sensors realigned",
-              "body": "Wires could bend vertically, so I cut the size by over 30%, also rotated the EMG sensor, stacking the motor freed a unit for the button"
+              "body": "Wires could bend vertically, so I cut the size by over 30% and rotated the EMG sensor. Stacking the motor freed a unit for the button."
             },
             {
               "num": "04",
               "title": "V4 · Three units, a cover and second sensors realigned",
-              "body": "Rib and boss placement are tested along with proximity sensor relocated, added a PLA cover with a proximity window. First app test."
+              "body": "Rib and boss placement was tested, the proximity sensor was relocated, and a PLA cover with a proximity window was added. First app test."
             },
             {
               "num": "05",
               "title": "V5 · Sensors realigned",
-              "body": "Final testing and the velcro was replaced with the EMG sensor's own strap."
+              "body": "Final testing. Velcro was replaced with the EMG sensor's own strap."
             }
           ]
         },
@@ -215,7 +215,7 @@ const forceptionCaseStudy = {
           "paragraphs": [
             "**The button gets its own end unit.** It starts and stops recording, pressed by the other hand before and after a climb. Alone at the end, it's easy to find and clear of the sensors.",
             "**The EMG sensor follows the muscle, not the band.** Testing showed it needed to run along the muscle line toward the little finger. I rotated it and re-planned the unit in one redesign.",
-            "**The proximity sensor tilts 15°.** It reads distance to the wall, so it needs a clear view. Moved to the back edge and tilted, its signal reflects predictably with no blind spots.",
+            "**The proximity sensor tilts 15°.** It reads distance to the wall, so it needs a clear view. I moved it to the back edge and tilted it, so its signal reflects predictably, with no blind spots.",
             "**Velcro wasn't enough.** It let the EMG sensor shift as the arm pulled. I adapted the sensor's own strap and trimmed the print to fit."
           ]
         },
@@ -266,13 +266,13 @@ const forceptionCaseStudy = {
           "type": "image",
           "src": "/projects/forception/forception-prototype.webp",
           "alt": "CAD section view of the TPU body showing internal ribs and bosses",
-          "caption": "The final version on body while run an initial testing."
+          "caption": "The final version on the arm during an initial test."
         }
       ]
     },
     "outcome": {
       "eyebrow": "06 · Outcome",
-      "title": "A climber, gym, honest limitation",
+      "title": "A climber, a gym, an honest limitation",
       "titleEm": "First runner-up from 14 teams",
       "blocks": [
         {
@@ -309,13 +309,13 @@ const forceptionCaseStudy = {
           "items": [
             {
               "src": "/projects/forception/forception-demo-day-2.webp",
-              "alt": "Testing on Judge body with real time sync between device and application",
-              "caption": "Testing on Judge body with real time sync between device and application"
+              "alt": "Testing on a judge, with real-time sync between the device and the app",
+              "caption": "Testing on a judge, with real-time sync between the device and the app"
             },
             {
               "src": "/projects/forception/forception-demo-day-3.webp",
-              "alt": "Product showcase during final day",
-              "caption": "Product showcase during final day"
+              "alt": "Product showcase during the final day",
+              "caption": "Product showcase during the final day"
             }
           ]
         },
@@ -330,7 +330,7 @@ const forceptionCaseStudy = {
             {
               "value": "14 → 3",
               "label": "Demo day",
-              "body": "Top three, judged by industry from Australia and the US."
+              "body": "Top three, judged by industry experts from Australia and the US."
             },
             {
               "value": "$2,000",
@@ -342,13 +342,13 @@ const forceptionCaseStudy = {
         {
           "type": "image",
           "src": "/projects/forception/forception-result.webp",
-          "alt": "The project alongside certificate",
+          "alt": "The project alongside the certificate",
           "caption": "The project alongside the certificate."
         },
         {
           "type": "reflections",
           "items": [
-            "Some constraints can't be asked for. The engineers often found them only when a test failed. Next time: ask for what's known, and leave room for what isn't.",
+            "Some constraints can't be named in advance. The engineers often found them only when a test failed. Next time: ask for what's known, and leave room for what isn't.",
             "My industrial design background mattered. Ribs and bosses were standard for me and new to the team.",
             "A test is only as good as its least finished part. The device was ready; the app wasn't. Next time I'd align hardware and software milestones first.",
             "One tester shows where to look, not what's true. The forearm issue needs more climbers to confirm."
