@@ -45,7 +45,16 @@ export type MajorContentBlock =
       }[];
     }
   | { type: "annotation"; text: string }
-  | { type: "twoCol"; items: { label: string; body: string }[] }
+  | {
+      type: "twoCol";
+      items: {
+        label: string;
+        body: string;
+        /** Optional logo or illustration above the body. Requires imageAlt. */
+        image?: string;
+        imageAlt?: string;
+      }[];
+    }
   | {
       type: "artifact";
       variant: "audit-map" | "token-hierarchy";
@@ -117,8 +126,10 @@ export type MajorContentBlock =
     }
   | {
       type: "video";
+      /** Local file path, or a YouTube watch / share / embed URL. */
       src: string;
-      poster: string;
+      /** Required for a file. Omitted for YouTube, which supplies its own poster. */
+      poster?: string;
       alt: string;
       caption: string;
     };

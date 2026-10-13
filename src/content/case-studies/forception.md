@@ -1,0 +1,277 @@
+---
+kind: major
+slug: forception
+hero:
+  breadcrumb: Forception
+  eyebrow: Industrial Design · Wearable Hardware · 2026
+  titleLine1: Forception
+  summary: A muscle-sensing wearable for climbers that shows what each move cost, not just what it looked like.
+  layout: split
+  image:
+    src: /projects/forception/forception-cover.webp
+    alt: The Forception wearable strapped to a climber's forearm on a climbing wall
+  meta:
+    - label: Role
+      value: Physical device design (sizing, CAD, 3D-printed prototyping, materials), presentation and video editing
+    - label: Team
+      value: Team of five
+    - label: Duration
+      value: 1 week proposal, 2 weeks prototype build
+    - label: Status
+      value: Prototype · First runner-up, Physical AI in Sports
+---
+
+# brief
+
+eyebrow: 01 · Brief
+title: A wearable tracker for climbers
+titleEm: Built in two weeks
+
+## image
+
+src: /projects/forception/capricorn-logo.svg
+alt: Capricon tech logo
+caption: Capricorn Tech Connect Pty Ltd: 
+size: md
+
+## prose
+
+  This project had built under the competition [Capricorn Productathon 2026](https://www.capricorntech.com.au/builder) under "AI × Sports" theme, which our team focusing on "Bouldering" or indoor climbing sport.
+
+  We catched a pain point where climbers film themselves to improve, records shows how a body moved but it can't show how hard a forearm worked, or why a session still hurts the next day.
+
+  Two of our team boulder regularly and kept hitting that gap. Most training tools are camera-based, so they share the blind spot.
+
+  Our team separate task for each member, which I owned the physical device design role. Its job: hold the sensor on exactly the right muscle while the climber pulls hard.
+
+## stats
+
+- value: "2 weeks"
+  label: Prototype build
+  variant: dark
+- value: "$500"
+  label: Prototype funding
+  variant: mid
+- value: "5"
+  label: Printed versions
+  variant: mid
+- value: "5"
+  label: Team members
+  variant: light
+
+# research
+
+eyebrow: 02 · Research
+title: Cameras see movement,
+titleEm: not effort
+
+## prose
+
+We looked at the two kinds of tools already in use.
+
+## twoCol
+
+- label: Camera-based (Belay AI)
+  body: Computer vision tracks body position, speed and centre of gravity. It shows how a climber moved, not how hard their muscles worked.
+  image: /projects/forception/logo_medium-05.webp
+  imageAlt: Belay AI logo
+- label: IMU wearables (Catapult)
+  body: Body-worn motion sensors give coaches movement and load data. Built for team sport, they track the body, not a single muscle.
+  image: /projects/forception/Catapult_logo.svg
+  imageAlt: Catapult logo
+
+## prose
+
+  Neither reads the forearm, where a climber's grip gives out. So we kept the camera and added the arm. A phone records the session while AI tracks movement, and a forearm wearable reads muscle activity through EMG, motion and proximity sensors. The app syncs both, showing what each move cost, not just what it looked like.
+
+  Especially, EMG that set the rules for my part. The sensor only reads cleanly when it sits flat on the right muscle and stays pressed there, so the device had to grip firmly, survive being pulled against, and stay out of the way.
+
+  
+
+# concept
+
+eyebrow: 03 · Concept
+title: One body, then three
+titleEm: The problem wasn't size, but what is?
+
+
+## image
+
+src: /projects/forception/forception-paper-sizing.webp
+alt: Paper cut-outs used to estimate the device's footprint on a forearm
+caption: Paper sizing, before I knew how the wiring could run.
+
+## prose
+  I started with paper cut-outs to estimate the footprint, separated into unit, without knowing how the wiring could run. 
+
+  Then, our team purposed that it can combine into one unit and stacking up sensors, due to mimise the sizing. Therefore, I planned wire channels around every part, and ribs and bosses to hold it all under strap tension.
+
+## imagePair
+
+- src: /projects/forception/forception-first-prototype.webp
+  alt: First prototype, a single flat rectangular TPU body
+  caption: "V1: one 14.2 × 6.7 cm body. It fit the parts, not the arm."
+- src: /projects/forception/forception-final-prototype.webp
+  alt: Final prototype, three connected units in a narrow band
+  caption: "Final: 14.6 × 5.9 cm across three units. Same footprint, and it bends."
+
+## prose 
+  The final is nearly the same size, at 14.6 × 5.9 cm. I didn't shrink it. I split it into three units with flexing gaps, each sized to what it holds. The button unit is just 3.2 × 3.2 cm.
+
+
+
+
+
+# craft
+
+eyebrow: 04 · Craft
+title: Designing around parts that kept moving
+titleEm: Every version started with something new
+
+## image
+
+src: /projects/forception/forception-iterations.webp
+alt: Each device body iteration
+caption: Each device body iteration
+
+## prose
+
+  Each version after V1 began with new information: an added part, a relaxed wiring constraint, or a sensor in the wrong place. My job was to turn each change into a print fast enough to hold a two-week schedule.
+
+## process
+
+- num: "01"
+  title: V1 · One body
+  body: Every part in one rigid TPU rectangle.
+- num: "02"
+  title: V2 · Two units
+  body: A vibration motor and button were added. I split the body in two, with a flex trench between.
+- num: "03"
+  title: V3 · Vertical wiring, first sensors realigned
+  body: Wires could bend vertically, so I cut the size by over 30%, also rotated the EMG sensor, stacking the motor freed a unit for the button
+- num: "04"
+  title: V4 · Three units, a cover and second sensors realigned
+  body: Rib and boss placement are tested along with proximity sensor relocated, added a PLA cover with a proximity window. First app test.
+- num: "05"
+  title: V5 · Sensors realigned
+  body: Final testing and the velcro was replaced with the EMG sensor's own strap.
+
+## prose
+
+**The button gets its own end unit.** It starts and stops recording, pressed by the other hand before and after a climb. Alone at the end, it's easy to find and clear of the sensors.
+
+**The EMG sensor follows the muscle, not the band.** Testing showed it needed to run along the muscle line toward the little finger. I rotated it and re-planned the unit in one redesign.
+
+**The proximity sensor tilts 15°.** It reads distance to the wall, so it needs a clear view. Moved to the back edge and tilted, its signal reflects predictably with no blind spots.
+
+**Velcro wasn't enough.** It let the EMG sensor shift as the arm pulled. I adapted the sensor's own strap and trimmed the print to fit.
+
+## image
+
+src: /projects/forception/forception-v5.webp
+alt: CAD of the final device showing sensor placement
+caption: Final version, EMG sensor rotated to the muscle line toward the little finger. Proximity sensor at the back edge of the housing, tilted 15°. Button isolated in its own 3.2 × 3.2 cm end unit.
+
+# build
+
+eyebrow: 05 · Build
+title: Five prints in under two weeks
+titleEm: Two to six hours from a change to a part on the arm
+
+
+## prose
+
+  Funding landed on Sunday. The electronics arrived Thursday, and nothing could be tested on an arm until then.
+
+  Changes came from two sides. Mine were structural: ribs and bosses for strap tension, tighter space in each unit. The engineers' came from testing the electronics inside each version.
+
+  The loop: one to three hours in CAD, one to three on the printer, then onto the arm. When the printer died for a night, so did the schedule.
+
+## stats
+
+- value: "1–2 h"
+  label: CAD per change
+  variant: dark
+- value: "1–3 h"
+  label: Print per version
+  variant: mid
+
+## prose
+
+**TPU for the body, PLA for the cover.** The body flexes around the forearm and takes the strap's pull. The rigid PLA cover adds durability and a window for the proximity sensor.
+
+Coming from industrial design, I treated internal structure as part of the job. The team's earlier projects left components loose. Here, every part sits in its own ribs and bosses.
+
+## image
+
+src: /projects/forception/forception-prototype.webp
+alt: CAD section view of the TPU body showing internal ribs and bosses
+caption: The final version on body while run an initial testing.
+
+# outcome
+
+eyebrow: 06 · Outcome
+title: A climber, gym, honest limitation
+titleEm: First runner-up from 14 teams
+## pullquote
+
+text: It helps me learn what I need to focus on.
+source: Climber, gym field test
+
+## prose
+
+  We tested the device on a climber at a gym, with a semi-final version of the app. One session, one tester: a field test, not validation. It answered my question: does the device stay put, and out of the way, on a real wall?
+
+
+
+## video
+
+src: https://www.youtube.com/embed/_rQ5V7L8ucY
+alt: Demo-day video of the device on the wall, with the app syncing in real time
+caption: Demo-day video. The device on the wall, with the app syncing in real time. 
+
+
+
+## prose
+
+  He found it comfortable and easy to use, and said the stats would help climbers, especially more advanced ones, decide what to train next. He also said it could get in the way on climbs that lean heavily on the forearms. For a device that sits on the forearm, that's a fair criticism, and it's the first thing I'd work on next.
+
+
+
+## prose
+  I also edited both pitch videos. The first, for the overseas judges, came together in 90 minutes between the end of testing and the deadline. The demo-day video showed the tester climbing with the app syncing live, so judges saw the full flow. I also refined the presentation visuals and suggested its flow.
+
+## imagePair
+
+- src: /projects/forception/forception-demo-day-2.webp
+  alt: Testing on Judge body with real time sync between device and application
+  caption: Testing on Judge body with real time sync between device and application
+- src: /projects/forception/forception-demo-day-3.webp
+  alt: Product showcase during final day
+  caption: Product showcase during final day
+
+## outcomes
+
+- value: "14 → 8"
+  label: Proposal round
+  body: Funded with $500 to build a working prototype in two weeks.
+- value: "14 → 3"
+  label: Demo day
+  body: Top three, judged by industry from Australia and the US.
+- value: "$2,000"
+  label: First runner-up
+  body: Prize awarded for the finished prototype and pitch.
+
+## image
+
+src: /projects/forception/forception-result.webp
+alt: The project alongside certificate
+caption: The project alongside the certificate.
+
+
+## reflections
+
+- Some constraints can't be asked for. The engineers often found them only when a test failed. Next time: ask for what's known, and leave room for what isn't.
+- My industrial design background mattered. Ribs and bosses were standard for me and new to the team.
+- A test is only as good as its least finished part. The device was ready; the app wasn't. Next time I'd align hardware and software milestones first.
+- One tester shows where to look, not what's true. The forearm issue needs more climbers to confirm.

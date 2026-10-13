@@ -10,12 +10,12 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 
 | Block | Pattern | Use for |
 |-------|---------|---------|
-| `prose` | free text | Body paragraphs (blank line = new para; 4-space indent = nested line; `**bold**` supported) |
+| `prose` | free text | Body paragraphs (blank line = new para; 4-space indent = nested line; `**bold**` and `[label](https://…)` links supported) |
 | `stats` | YAML list | Metric row (`value`, `label`, `variant`: dark \| mid \| light) |
 | `pullquote` | key-value | Large quote (`text`, `source`) |
 | `findings` | YAML list | Research cards (`num`, `label`, `title`, `body`; optional `image`, `imageAlt`) |
 | `annotation` | key-value | Small aside (`text`) |
-| `twoCol` | YAML list | Side-by-side points (`label`, `body`) |
+| `twoCol` | YAML list | Side-by-side points (`label`, `body`; optional `image`, `imageAlt`) |
 | `artifact` | key-value | Built-in diagram (`variant`: audit-map \| token-hierarchy, `label`, `caption`, optional `captionMeta`) |
 | `process` | YAML list | Step columns (`num`, `title`, `body`) |
 | `callout` | key-value | Highlight box (`label`, `title`, `body`) |
@@ -29,7 +29,7 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
-| `video` | key-value | Video embed (`src`, `poster`, `alt`, `caption`) |
+| `video` | key-value | File or YouTube (`src`, `alt`, `caption`; `poster` required for a file) |
 
 ---
 
@@ -40,7 +40,7 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 ```markdown
 ## prose
 
-First paragraph with **bold emphasis**.
+First paragraph with **bold emphasis** and a [linked phrase](https://example.com).
 
     Indented nested line.
 
@@ -78,7 +78,15 @@ src: /projects/example/clip.mp4
 poster: /projects/example/poster.png
 alt: Accessible description
 caption: Caption under the player
+
+## video
+
+src: https://www.youtube.com/watch?v=VIDEO_ID
+alt: Accessible description
+caption: Caption under the player
 ```
+
+A file `src` (`.mp4`) needs `poster`. A YouTube link does not: `youtube.com/watch`, `youtu.be`, `/embed`, `/shorts`, and `/live` all work. A `t` or `start` time in the URL is kept.
 
 `size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures.
 
@@ -118,6 +126,8 @@ size: sm
 ```
 
 Optional `image` + `imageAlt` render a small illustration inside the finding card. Both are required together.
+
+`twoCol` items accept the same optional `image` + `imageAlt` pair, rendered above the label. Both are required together.
 
 ```markdown
 ## imageGrid

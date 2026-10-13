@@ -35,7 +35,7 @@
   --color-info-bg: #DCE9F5;
   --color-info-text: #152952;
   --font-heading: 'Fraunces', Georgia, serif;
-  --font-body: 'Prompt', system-ui, sans-serif;
+  --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: 'Syne', 'Fira Code', monospace;
   --text-2xs: 0.5rem;
   --text-xs: 0.563rem;
@@ -139,7 +139,7 @@
   --color-info-bg: #152952;
   --color-info-text: #B5D0EC;
   --font-heading: 'Fraunces', Georgia, serif;
-  --font-body: 'Prompt', system-ui, sans-serif;
+  --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: 'Syne', 'Fira Code', monospace;
   --text-2xs: 0.5rem;
   --text-xs: 0.563rem;

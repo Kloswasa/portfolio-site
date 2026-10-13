@@ -28,7 +28,7 @@ Pixel conversions below assume a 16px root (`1rem` = 16px).
 | Case study `imagePair` `size: md` | any | **1024px** wide total | 32rem (~512px) | |
 | Case study `imageGrid` | any (square crops well) | **1360px** per cell | 3-col → 2-col → 1-col | Full main column |
 | Case study `findings` inline | any | **160×160** max | 5rem (~80px) | Optional `image` + `imageAlt` |
-| Case study `video` poster | **16:9** | **1088×612** | player is 80% of parent (~544px in the content column) | Paired with `.mp4` |
+| Case study `video` poster | **16:9** | **1088×612** | player is 80% of parent (~544px in the content column) | File `.mp4` only. A YouTube `src` has no poster |
 | Case study **GIF** (default `image`) | any | **680px** wide, **≤ 1.5 MB** (3 MB hard max) | 42.5rem (~680px) | 1× display, not 2×. See [GIFs](#gifs) |
 | Case study **GIF** `size: md` | any | **320px** wide, **≤ 800 KB** | 20rem (~320px) | |
 | Case study **GIF** `size: sm` | any | **160px** wide, **≤ 400 KB** | 10rem (~160px) | |

@@ -38,7 +38,7 @@
   },
   "font": {
     "heading": { "value": "'Fraunces', Georgia, serif", "type": "fontFamilies" },
-    "body":    { "value": "'Prompt', system-ui, sans-serif", "type": "fontFamilies" },
+    "body":    { "value": "'Lato', system-ui, sans-serif", "type": "fontFamilies" },
     "mono":    { "value": "'Syne', 'Fira Code', monospace", "type": "fontFamilies" }
   },
   "text": {

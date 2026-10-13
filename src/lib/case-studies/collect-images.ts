@@ -17,12 +17,13 @@ function collectFromBlock(block: MajorContentBlock, urls: Set<string>): void {
       }
       break;
     case "findings":
+    case "twoCol":
       for (const item of block.items) {
         if (item.image) urls.add(item.image);
       }
       break;
     case "video":
-      urls.add(block.poster);
+      if (block.poster) urls.add(block.poster);
       break;
   }
 }

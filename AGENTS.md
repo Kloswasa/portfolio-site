@@ -62,10 +62,10 @@ Full token hygiene audit and usage guide: [`docs/token-hygiene.md`](docs/token-h
 
 ## Typography rules
 
-Fonts load in `app/layout.tsx` via `next/font/google` and bind to CSS variables on `<html>` (runtime source of truth):
+Fonts load in `app/layout.tsx` and bind to CSS variables on `<html>` (runtime source of truth):
 
 - `font-heading` (**Fraunces**): headings only
-- `font-body` (**Prompt**): everything else
+- `font-body` (**Lato**): everything else
 - `font-mono` (**Syne**): stamps, labels, and technical accents
 
 Keep `design-tokens/tokens.*.json` `font.*` values aligned, then run `npm run tokens:gen`.
@@ -165,7 +165,7 @@ Minor studies use `context → work → outcome`, with an optional `approach` se
 - List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`, `imageGrid`): YAML list under `## blockType`
 - Empty blocks (`ornament`, `colorSpecimen`, `typeSpecimen`): `## blockType` with no body
 - `reflections`: markdown `-` list items
-- Inline `**bold**` is supported in prose and body-text fields
+- Inline `**bold**` and `[label](https://…)` links are supported in prose and body-text fields
 
 ---
 

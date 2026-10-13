@@ -189,8 +189,8 @@ export default function ComponentsPage() {
                   (Fraunces) applies to headings and{" "}
                   <span className="font-mono text-text">text-heading-*</span>{" "}
                   utilities.{" "}
-                  <span className="font-mono text-text">font-body</span> (DM
-                  Sans) is the default for everything else. Mono labels use{" "}
+                  <span className="font-mono text-text">font-body</span> (Lato)
+                  is the default for everything else. Mono labels use{" "}
                   <span className="font-mono text-text">font-mono</span> (Syne).
                 </p>
                 <div className="grid gap-4 border border-border-subtle bg-bg p-6">

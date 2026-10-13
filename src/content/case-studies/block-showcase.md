@@ -221,7 +221,7 @@ Build sections document how something was made, process steps, highlighted decis
   body: See the callout below for highlighted insights, principles, or role summaries.
 - num: "03"
   title: video block
-  body: Embeds a video with poster, controls, alt text, and a caption.
+  body: Embeds a file (poster required) or a YouTube link, with alt text and a caption.
 - num: "04"
   title: prose block
   body: Back to narrative paragraphs to tie the evidence together.
@@ -237,7 +237,7 @@ body: Callouts draw attention to a single idea, a design principle, a key decisi
 src: /projects/quiz-game/quiz-game-resultpage-video.mp4
 poster: /projects/quiz-game/quiz-game-video-resultpage-cover.png
 alt: Sample video block showing a result page walkthrough
-caption: video block, src, poster, alt, and caption are all required.
+caption: File video. src, poster, alt, and caption are required. A YouTube link omits poster.
 
 # outcome
 

@@ -311,7 +311,7 @@ const blockShowcaseCaseStudy = {
             {
               "num": "03",
               "title": "video block",
-              "body": "Embeds a video with poster, controls, alt text, and a caption."
+              "body": "Embeds a file (poster required) or a YouTube link, with alt text and a caption."
             },
             {
               "num": "04",
@@ -331,7 +331,7 @@ const blockShowcaseCaseStudy = {
           "src": "/projects/quiz-game/quiz-game-resultpage-video.mp4",
           "poster": "/projects/quiz-game/quiz-game-video-resultpage-cover.png",
           "alt": "Sample video block showing a result page walkthrough",
-          "caption": "video block, src, poster, alt, and caption are all required."
+          "caption": "File video. src, poster, alt, and caption are required. A YouTube link omits poster."
         }
       ]
     },

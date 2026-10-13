@@ -60,6 +60,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  
   {
     id: 1,
     slug: "quiz-game",
@@ -81,7 +82,7 @@ export const projects: Project[] = [
     title: "HomHuan",
     description:
       "Thai heritage translated into a modern home fragrance set, solo capstone industrial design project.",
-    technologies: ["Industrial design", "Craftsmanship", "Branding"],
+    technologies: ["Heritage design", "Craftsmanship", "Branding"],
     tone: "primary",
     workTab: "industrial",
     caseStudyKind: "major",
@@ -91,6 +92,20 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    slug: "forception",
+    title: "Forception",
+    description:
+      "A muscle-sensing wearable for climbers that shows what each move cost, not just what it looked like.",
+    technologies: ["Wearable hardware","CAD", "Physical device" ],
+    tone: "primary",
+    workTab: "product",
+    caseStudyKind: "major",
+    yearLabel: "2026 · Prototype",
+    industry: "Sports",
+    coverImage: { src: "/projects/forception/forception-cover.webp", alt: "Forception cover image" },
+  },
+  {
+    id: 4,
     slug: "dementia-app",
     title: "Dementia App",
     description:
@@ -105,23 +120,6 @@ export const projects: Project[] = [
     coverImage: { src: "/projects/dementia-app/dementia_app_cover.webp", alt: "Dementia App cover image" },
    
   },
-  {
-    id: 4,
-    slug: "recipe",
-    title: "Family Recipes",
-    description:
-      "A recipe app for saving, sharing, and cooking family dishes across generations.",
-    technologies: ["AI product", "Product research", "TypeScript"],
-    tone: "primary",
-    workTab: "product",
-    caseStudyKind: "major",
-    yearLabel: "2026 · Researching",
-    industry: "Food & beverage",
-    liveUrl: "https://family-recipes.app",
-    confidential: true,
-    lockStatus: "researching",
-  },
-  
   {
     id: 5,
     slug: "busaba",
@@ -262,6 +260,23 @@ export const projects: Project[] = [
       alt: "Block showcase cover placeholder",
     },
     hidden: true,
+  },
+  {
+    id: 14,
+    slug: "recipe",
+    title: "Family Recipes",
+    description:
+      "A recipe app for saving, sharing, and cooking family dishes across generations.",
+    technologies: ["AI product", "Product research", "TypeScript"],
+    tone: "primary",
+    workTab: "product",
+    caseStudyKind: "major",
+    yearLabel: "2026 · Researching",
+    industry: "Food & beverage",
+    liveUrl: "https://family-recipes.app",
+    confidential: true,
+    lockStatus: "researching",
+    hidden: true
   },
 ];
 

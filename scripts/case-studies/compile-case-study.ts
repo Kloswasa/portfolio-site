@@ -13,6 +13,7 @@ import type {
   MinorSectionId,
 } from "../../src/lib/case-studies/types";
 import { MAJOR_SECTION_ORDER } from "../../src/lib/case-studies/sections";
+import { getYouTubeVideoId } from "../../src/lib/youtube";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const contentDir = join(__dirname, "../../src/content/case-studies");
@@ -178,14 +179,22 @@ function parseArtifactBlock(text: string): MajorContentBlock {
 function parseVideoBlock(text: string): MajorContentBlock {
   const fields = parseKeyValueBlock(text);
 
-  if (!fields.src || !fields.poster || !fields.alt || !fields.caption) {
-    throw new Error("video blocks require src, poster, alt, and caption fields");
+  if (!fields.src || !fields.alt || !fields.caption) {
+    throw new Error("video blocks require src, alt, and caption fields");
+  }
+
+  const youtubeId = getYouTubeVideoId(fields.src);
+
+  if (!youtubeId && !fields.poster) {
+    throw new Error(
+      "video blocks that are not YouTube links require a poster field",
+    );
   }
 
   return {
     type: "video",
     src: fields.src,
-    poster: fields.poster,
+    ...(youtubeId || !fields.poster ? {} : { poster: fields.poster }),
     alt: fields.alt,
     caption: fields.caption,
   };
@@ -257,15 +266,35 @@ function parseFindingsBlock(text: string): MajorContentBlock {
 }
 
 function parseTwoColBlock(text: string): MajorContentBlock {
-  const items = parseYamlList<{ label: string; body: string }>(text, "twoCol");
+  const items = parseYamlList<{
+    label: string;
+    body: string;
+    image?: string;
+    imageAlt?: string;
+  }>(text, "twoCol");
 
   for (const item of items) {
     if (!item.label || !item.body) {
       throw new Error("twoCol items require label and body");
     }
+    if (item.image && !item.imageAlt) {
+      throw new Error("twoCol items with image require imageAlt");
+    }
+    if (item.imageAlt && !item.image) {
+      throw new Error("twoCol items with imageAlt require image");
+    }
   }
 
-  return { type: "twoCol", items };
+  return {
+    type: "twoCol",
+    items: items.map((item) => ({
+      label: item.label,
+      body: item.body,
+      ...(item.image && item.imageAlt
+        ? { image: item.image, imageAlt: item.imageAlt }
+        : {}),
+    })),
+  };
 }
 
 function parseProcessBlock(text: string): MajorContentBlock {

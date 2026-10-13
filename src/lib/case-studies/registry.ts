@@ -5,6 +5,7 @@ import busaba from "@/src/content/case-studies/busaba";
 import cio from "@/src/content/case-studies/cio";
 import dementiaApp from "@/src/content/case-studies/dementia-app";
 import flomax from "@/src/content/case-studies/flomax";
+import forception from "@/src/content/case-studies/forception";
 import homhuan from "@/src/content/case-studies/homhuan";
 import jtimber from "@/src/content/case-studies/jtimber";
 import kuendee from "@/src/content/case-studies/kuendee";
@@ -26,6 +27,7 @@ const caseStudiesBySlug = {
   thaihom,
   "quiz-game": quizGame,
   "dementia-app": dementiaApp,
+  forception,
   recipe,
   "block-showcase": blockShowcase,
 } as const satisfies Record<string, CaseStudy>;

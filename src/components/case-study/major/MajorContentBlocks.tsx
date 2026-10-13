@@ -5,6 +5,7 @@ import {
   SnapSectionReveal,
 } from "@/src/components/motion/SnapSectionReveal";
 import type { MajorContentBlock } from "@/src/lib/case-studies/types";
+import { getYouTubeEmbedUrl } from "@/src/lib/youtube";
 
 function OrnamentSvg() {
   return (
@@ -47,15 +48,34 @@ function parseProseLine(line: string): { content: string; indentLevel: number } 
   return { content: match[2], indentLevel };
 }
 
-/** Renders `**bold**` spans as `<strong>`; leaves unmatched text as-is. */
+const INLINE_TOKEN = /(\*\*[^*]+\*\*|\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g;
+
+/** Renders `**bold**` as `<strong>` and `[label](https://…)` as a link. */
 function InlineText({ text }: { text: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const parts = text.split(INLINE_TOKEN);
 
   return (
     <>
       {parts.map((part, index) => {
         if (part.startsWith("**") && part.endsWith("**") && part.length > 4) {
           return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+
+        const link = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+        const label = link?.[1];
+        const href = link?.[2];
+        if (label && href) {
+          return (
+            <a
+              key={index}
+              className="cs-major__inline-link"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
+          );
         }
 
         return <span key={index}>{part}</span>;
@@ -214,6 +234,15 @@ function Block({ block }: { block: MajorContentBlock }) {
         <div className="cs-major__two-col">
           {block.items.map((item) => (
             <div key={item.label}>
+              {item.image && item.imageAlt ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="cs-major__two-col-image"
+                  loading="lazy"
+                />
+              ) : null}
               <div className="cs-major__two-col-label">{item.label}</div>
               <div className="cs-major__two-col-body">
                 <InlineText text={item.body} />
@@ -412,21 +441,38 @@ function Block({ block }: { block: MajorContentBlock }) {
         </figure>
       );
 
-    case "video":
+    case "video": {
+      const embedUrl = getYouTubeEmbedUrl(block.src);
+
       return (
         <figure className="cs-major__video">
-          <video
-            className="cs-major__video-player"
-            src={block.src}
-            poster={block.poster}
-            controls
-            playsInline
-            preload="metadata"
-            aria-label={block.alt}
-          />
+          {embedUrl ? (
+            <div className="cs-major__video-frame">
+              <iframe
+                className="cs-major__video-embed"
+                src={embedUrl}
+                title={block.alt}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          ) : (
+            <video
+              className="cs-major__video-player"
+              src={block.src}
+              poster={block.poster}
+              controls
+              playsInline
+              preload="metadata"
+              aria-label={block.alt}
+            />
+          )}
           <figcaption className="cs-major__video-caption">{block.caption}</figcaption>
         </figure>
       );
+    }
 
     case "colorSpecimen":
       return (
@@ -459,7 +505,7 @@ function Block({ block }: { block: MajorContentBlock }) {
             <p className="cs-major__type-heading text-heading-3xl">Editorial headline</p>
           </div>
           <div className="cs-major__type-row">
-            <span className="cs-major__type-meta">Body · Prompt</span>
+            <span className="cs-major__type-meta">Body · Lato</span>
             <p className="cs-major__type-body">
               Body copy at base size, used for narrative paragraphs, captions, and
               supporting detail across case study sections.
