@@ -220,10 +220,19 @@ const forceptionCaseStudy = {
           ]
         },
         {
-          "type": "image",
-          "src": "/projects/forception/forception-v5.webp",
-          "alt": "CAD of the final device showing sensor placement",
-          "caption": "Final version, EMG sensor rotated to the muscle line toward the little finger. Proximity sensor at the back edge of the housing, tilted 15°. Button isolated in its own 3.2 × 3.2 cm end unit."
+          "type": "imagePair",
+          "items": [
+            {
+              "src": "/projects/forception/forception-v5.webp",
+              "alt": "CAD of the final device showing sensor placement",
+              "caption": "Final version with cover and uncover showing sensor arrangement"
+            },
+            {
+              "src": "/projects/forception/forception-assembly.webp",
+              "alt": "Final prototype, three connected units in a narrow band",
+              "caption": "Final version assembly drawing"
+            }
+          ]
         }
       ]
     },

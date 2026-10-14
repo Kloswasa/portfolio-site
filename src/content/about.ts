@@ -74,6 +74,13 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
     tag: "Present",
   },
   {
+    year: "2026",
+    role: "Productathon — First runner-up",
+    place: "Capricorn Tech Connect · Physical AI in Sports",
+    note: "Two weeks to design the physical device for a muscle-sensing climbing wearable, in a team of five. First runner-up among 14 teams, with a $2,000 prize.",
+    tag: "Award",
+  },
+  {
     year: "2025",
     role: "Industry Hackathon — Winner",
     place: "Swinburne University x Practera x VirtualCC · Melbourne",
@@ -128,14 +135,16 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   {
     label: "Practice",
     tags: [
-      { label: "Product strategy", key: true },
-      { label: "Design systems", key: true },
-      { label: "User research" },
+      { label: "User research", key: true },
+      { label: "Prototyping", key: true },
+      { label: "Usability testing" },
+      { label: "Accessibility" },
+      { label: "Design systems" },
       { label: "Interaction design" },
       { label: "Information architecture" },
-      { label: "Prototyping" },
-      { label: "Accessibility" },
-      { label: "User-centered design" },
+      { label: "Industrial design" },
+      { label: "Packaging design" },
+      { label: "Illustration" },
     ],
   },
   {
@@ -143,16 +152,17 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
     tags: [
       { label: "Figma", key: true },
       { label: "Figma Variables" },
-      { label: "Tokens Studio" },
       { label: "Procreate" },
-      { label: "HTML / CSS / JS" },
+      { label: "CAD" },
+      { label: "3D printing" },
+      { label: "3D rendering" },
       { label: "React" },
       { label: "Next.js" },
-      { label: "Tailwind CSS" },
       { label: "TypeScript" },
+      { label: "Tailwind CSS" },
+      { label: "Framer Motion" },
       { label: "Prisma" },
       { label: "GitHub" },
-
     ],
   },
   {
