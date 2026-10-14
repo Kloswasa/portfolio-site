@@ -88,7 +88,7 @@ export const projects: Project[] = [
     caseStudyKind: "major",
     yearLabel: "2024 · Research",
     industry: "Healthcare",
-    liveUrl: "https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=59kZj5is6ZiXtOdx-1",
+    liveUrl: "https://www.figma.com/proto/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=1-2&p=f&viewport=602%2C483%2C0.06&t=m8HsVuyuBgcUVRwl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1&page-id=0%3A1",
     coverImage: { src: "/projects/dementia-app/dementia_app_cover.webp", alt: "Dementia App cover image" },
    
   },
