@@ -84,7 +84,7 @@ caption: The status card sits above the fold, so the caregiver's first glance an
 ## button
 
 label: Visit the Figma prototype
-href: https://www.figma.com/design/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=0-1&t=LDX20meEATYoacDR-1
+href: https://www.figma.com/proto/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=1-2&p=f&viewport=602%2C483%2C0.06&t=m8HsVuyuBgcUVRwl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1&page-id=0%3A1
 variant: accent
 
 ## image
