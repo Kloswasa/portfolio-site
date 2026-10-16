@@ -231,17 +231,11 @@ export const tokens: TokenRecord = {
     "cssVar": "--font-mono",
     "darkValue": "'Syne', 'Fira Code', monospace"
   },
-  "text.2xs": {
-    "value": "0.5rem",
-    "type": "fontSizes",
-    "cssVar": "--text-2xs",
-    "darkValue": "0.5rem"
-  },
   "text.xs": {
-    "value": "0.563rem",
+    "value": "0.615rem",
     "type": "fontSizes",
     "cssVar": "--text-xs",
-    "darkValue": "0.563rem"
+    "darkValue": "0.615rem"
   },
   "text.label": {
     "value": "0.625rem",

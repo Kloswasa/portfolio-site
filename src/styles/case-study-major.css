@@ -398,7 +398,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: calc(var(--spacing-12) + var(--spacing-4));
+  height: calc(var(--spacing-16) + var(--spacing-4));
   padding-inline: var(--spacing-5);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
@@ -1180,7 +1180,7 @@ a.cs-major__image-credit:hover {
 
 .cs-major__color-swatch-token {
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--color-text-subtle);

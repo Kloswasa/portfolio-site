@@ -37,8 +37,7 @@
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: 'Syne', 'Fira Code', monospace;
-  --text-2xs: 0.5rem;
-  --text-xs: 0.563rem;
+  --text-xs: 0.615rem;
   --text-label: 0.625rem;
   --text-label-lg: 0.6875rem;
   --text-sm: 0.750rem;
@@ -141,8 +140,7 @@
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: 'Syne', 'Fira Code', monospace;
-  --text-2xs: 0.5rem;
-  --text-xs: 0.563rem;
+  --text-xs: 0.615rem;
   --text-label: 0.625rem;
   --text-label-lg: 0.6875rem;
   --text-sm: 0.750rem;

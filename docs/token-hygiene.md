@@ -55,8 +55,7 @@ Consolidated scale; near-duplicates were merged onto the nearest step:
 
 | Token | Value | CSS variable | Tailwind utility | Absorbs |
 |-------|-------|--------------|------------------|---------|
-| `text.2xs` | 0.5rem | `--text-2xs` | `text-2xs` | 0.4375rem, 0.5rem |
-| `text.xs` | 0.563rem | `--text-xs` | `text-xs` | 0.5625rem, 0.58rem |
+| `text.xs` | 0.563rem | `--text-xs` | `text-xs` | 0.4375rem, 0.5rem, 0.5625rem, 0.58rem |
 | `text.label` | 0.625rem | `--text-label` | `text-label` | 0.6, 0.62, 0.625, 0.66rem, 10px |
 | `text.labelLg` | 0.6875rem | `--text-label-lg` | `text-label-lg` | 0.7rem, 11px |
 
