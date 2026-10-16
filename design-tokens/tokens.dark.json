@@ -42,8 +42,8 @@
     "mono":    { "value": "'Syne', 'Fira Code', monospace", "type": "fontFamilies" }
   },
   "text": {
-    "xs":   { "value": "0.750rem",   "type": "fontSizes" },
-    "label":    { "value": "0.625rem",  "type": "fontSizes" },
+    "xs":   { "value": "0.68rem",   "type": "fontSizes" },
+    "label":    { "value": "0.65rem",  "type": "fontSizes" },
     "labelLg":  { "value": "0.6875rem", "type": "fontSizes" },
     "sm":   { "value": "0.775rem",   "type": "fontSizes" },
     "bodySm": { "value": "0.830rem", "type": "fontSizes" },

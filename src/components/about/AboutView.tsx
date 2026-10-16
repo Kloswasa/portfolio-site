@@ -1,5 +1,6 @@
 import { WorkHero } from "@/src/components/work/WorkHero";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
+import { AboutHeroContacts } from "@/src/components/about/AboutHeroContacts";
 import { AboutInstruments } from "@/src/components/about/AboutInstruments";
 import { AboutQuote } from "@/src/components/about/AboutQuote";
 import { AboutStory } from "@/src/components/about/AboutStory";
@@ -47,7 +48,11 @@ export function AboutView({
         meta={heroMeta}
         watermark={heroMeta.watermark}
         illustration="forget-me-not"
-      />
+      >
+        {heroMeta.contacts ? (
+          <AboutHeroContacts links={heroMeta.contacts} />
+        ) : null}
+      </WorkHero>
 
       <div className="about-body about-container">
         <AboutStory block={storyBlock} story={story} />

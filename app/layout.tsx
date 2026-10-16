@@ -80,7 +80,7 @@ export default function RootLayout({
           <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">
             <Link
               href="/"
-              className="pointer-events-auto text-sm font-semibold uppercase tracking-label-lg text-text"
+              className="pointer-events-auto font-heading text-base font-semibold uppercase tracking-label-lg text-text"
             >
               {siteConfig.name}
             </Link>

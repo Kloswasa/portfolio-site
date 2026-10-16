@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import type { WorkHeroMeta } from "@/src/lib/work/types";
 
@@ -10,12 +11,14 @@ interface WorkHeroProps {
   meta: WorkHeroMeta;
   watermark?: string;
   illustration?: WorkHeroIllustration;
+  children?: ReactNode;
 }
 
 export function WorkHero({
   meta,
   watermark = "\u2018 Works \u2019",
   illustration = "wax-flower",
+  children,
 }: WorkHeroProps) {
   return (
     <header className="work-hero">
@@ -40,6 +43,8 @@ export function WorkHero({
           </h1>
 
           <p className="work-hero__description">{meta.description}</p>
+
+          {children}
 
           <div className="work-hero__stats" aria-label="Work archive statistics">
             {meta.stats.map((stat) => (

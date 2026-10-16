@@ -4,8 +4,20 @@ import type { WorkHeroMeta } from "@/src/lib/work/types";
 export type RichSegment = string | { em: string };
 export type RichText = RichSegment[];
 
+/** One link in the about heading — email, CV, or another contact. */
+export interface AboutHeroContact {
+  label: string;
+  value: string;
+  href: string;
+  /** Opens in a new tab. Use for the CV file and social profiles. */
+  external?: boolean;
+}
+
 /** Hero reuses the shared work page hero shape. */
-export type AboutHeroMeta = WorkHeroMeta & { watermark: string };
+export type AboutHeroMeta = WorkHeroMeta & {
+  watermark: string;
+  contacts?: AboutHeroContact[];
+};
 
 /** Section header used across the about page (matches the play block-head pattern). */
 export interface AboutBlock {

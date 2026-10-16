@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Klaus W",
+  name: "KW",
   title: "Product Designer",
   tagline:
     "Product designer in Melbourne who designs and builds from research, design through to production code.",

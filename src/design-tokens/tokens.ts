@@ -232,16 +232,16 @@ export const tokens: TokenRecord = {
     "darkValue": "'Syne', 'Fira Code', monospace"
   },
   "text.xs": {
-    "value": "0.750rem",
+    "value": "0.68rem",
     "type": "fontSizes",
     "cssVar": "--text-xs",
-    "darkValue": "0.750rem"
+    "darkValue": "0.68rem"
   },
   "text.label": {
-    "value": "0.625rem",
+    "value": "0.65rem",
     "type": "fontSizes",
     "cssVar": "--text-label",
-    "darkValue": "0.625rem"
+    "darkValue": "0.65rem"
   },
   "text.labelLg": {
     "value": "0.6875rem",

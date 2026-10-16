@@ -25,6 +25,25 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
     { label: "Works in", value: "Design \u00b7 Code" },
     { label: "Status", value: "Open to work" },
   ],
+  contacts: [
+    {
+      label: "Email",
+      value: siteConfig.email,
+      href: `mailto:${siteConfig.email}`,
+    },
+    {
+      label: "CV",
+      value: "Download",
+      href: siteConfig.resume.downloadHref,
+      external: true,
+    },
+    {
+      label: "LinkedIn",
+      value: "Profile",
+      href: siteConfig.social.linkedin,
+      external: true,
+    },
+  ],
 };
 
 export const ABOUT_STORY_BLOCK: AboutBlock = {
@@ -60,7 +79,7 @@ export const ABOUT_STORY: AboutStory = {
 
 export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
   kicker: "  03",
-  title: "A field record",
+  title: "Experience record",
   infoStrong: "The path",
   infoDetail: "Newest first \u00b7 full CV on request",
 };
@@ -106,7 +125,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
 
 export const ABOUT_EDUCATION_BLOCK: AboutBlock = {
   kicker: "  04",
-  title: "Formal study",
+  title: "Study",
   infoStrong: "Education",
   infoDetail: "Degrees and specialisations",
 };
@@ -126,7 +145,7 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
 
 export const ABOUT_INSTRUMENTS_BLOCK: AboutBlock = {
   kicker: "  02",
-  title: "Instruments",
+  title: "Skills",
   infoStrong: "Curated, not exhaustive",
   infoDetail: "How the work gets made",
 };
@@ -135,8 +154,8 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   {
     label: "Practice",
     tags: [
-      { label: "User research", key: true },
-      { label: "Prototyping", key: true },
+      { label: "User research"},
+      { label: "Prototyping"},
       { label: "Usability testing" },
       { label: "Accessibility" },
       { label: "Design systems" },
@@ -150,7 +169,7 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   {
     label: "Tools",
     tags: [
-      { label: "Figma", key: true },
+      { label: "Figma"},
       { label: "Figma Variables" },
       { label: "Procreate" },
       { label: "CAD" },
