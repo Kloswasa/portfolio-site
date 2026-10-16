@@ -256,10 +256,10 @@ export const tokens: TokenRecord = {
     "darkValue": "0.6875rem"
   },
   "text.sm": {
-    "value": "0.70rem",
+    "value": "0.750rem",
     "type": "fontSizes",
     "cssVar": "--text-sm",
-    "darkValue": "0.07rem"
+    "darkValue": "0.750rem"
   },
   "text.bodySm": {
     "value": "0.8125rem",
