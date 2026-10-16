@@ -103,7 +103,7 @@
 .colophon-specimen__name {
   padding: var(--spacing-1) var(--spacing-2);
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label-lg);
   text-transform: lowercase;
   color: var(--color-text-subtle);
@@ -120,7 +120,7 @@
   max-width: calc(100% - var(--spacing-12));
   white-space: pre-line;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label-lg);
   line-height: 1.9;
   text-transform: uppercase;
@@ -287,7 +287,7 @@ a.colophon-stack__item:hover {
 .colophon-pipeline__source {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-subtle);
@@ -376,7 +376,7 @@ a.colophon-stack__item:hover {
 .colophon-layer__path {
   margin: 0 0 var(--spacing-2);
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label-lg);
   text-transform: uppercase;
   color: var(--color-text-subtle);

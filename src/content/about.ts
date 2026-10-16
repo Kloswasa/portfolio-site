@@ -28,7 +28,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
 };
 
 export const ABOUT_STORY_BLOCK: AboutBlock = {
-  kicker: "\u00a7 01",
+  kicker: "  01",
   title: "In brief",
   infoStrong: "The short version",
   infoDetail: "Who, and how I got here",
@@ -59,7 +59,7 @@ export const ABOUT_STORY: AboutStory = {
 
 
 export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
-  kicker: "\u00a7 03",
+  kicker: "  03",
   title: "A field record",
   infoStrong: "The path",
   infoDetail: "Newest first \u00b7 full CV on request",
@@ -105,7 +105,7 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
 ];
 
 export const ABOUT_EDUCATION_BLOCK: AboutBlock = {
-  kicker: "\u00a7 04",
+  kicker: "  04",
   title: "Formal study",
   infoStrong: "Education",
   infoDetail: "Degrees and specialisations",
@@ -125,7 +125,7 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
 ];
 
 export const ABOUT_INSTRUMENTS_BLOCK: AboutBlock = {
-  kicker: "\u00a7 02",
+  kicker: "  02",
   title: "Instruments",
   infoStrong: "Curated, not exhaustive",
   infoDetail: "How the work gets made",

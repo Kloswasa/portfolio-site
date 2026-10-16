@@ -228,7 +228,7 @@
   margin: 0;
   white-space: pre-line;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label-lg);
   line-height: 1.9;
   color: color-mix(in srgb, var(--color-text-inverse) 65%, transparent);
@@ -412,7 +412,7 @@
   padding: 4px 9px;
   white-space: nowrap;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-tertiary);

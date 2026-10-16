@@ -18,7 +18,7 @@ export function MajorCaseStudyNext({
   const cardProject = toWorkCardProject(nextProject, cardIndex);
 
   return (
-    <section className="cs-major__next" id="next">
+    <section className="cs-major__next" id="next" data-snap-section="">
       <SnapSectionReveal className="cs-major__next-inner" amount={0.2}>
         <SnapItem>
           <div className="cs-major__next-label">Next project</div>

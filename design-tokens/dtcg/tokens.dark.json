@@ -129,12 +129,6 @@
     "$type": "fontFamily"
   },
   "text": {
-    "2xs": {
-      "$value": {
-        "value": 0.5,
-        "unit": "rem"
-      }
-    },
     "xs": {
       "$value": {
         "value": 0.563,

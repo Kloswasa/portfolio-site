@@ -12,7 +12,7 @@ export function HomeFeaturedSection() {
   const featured = getFeaturedWorkCards(FEATURED_COUNT);
 
   return (
-    <section id="featured" className="home-featured">
+    <section id="featured" data-snap-section="" className="home-featured">
       <SnapSectionReveal className="home-section__inner home-featured__inner">
         <p className="home-section__watermark" aria-hidden="true">
           {SECTION_NUMBER}

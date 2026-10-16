@@ -1,9 +1,20 @@
 "use client";
 
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, useReducedMotion } from "framer-motion";
 import { useEffect, useState, type ReactNode } from "react";
 import { BotanicalLoader } from "@/src/components/ui/BotanicalLoader";
 import { preloadImages } from "@/src/lib/preload-images";
+
+/** Minimum time the botanical entrance stays up when motion is allowed. */
+const LOADER_FLOOR_MS = 600;
+
+function waitForPaint(): Promise<void> {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => resolve());
+    });
+  });
+}
 
 export function ImagePreloader({
   imageUrls,
@@ -12,24 +23,47 @@ export function ImagePreloader({
   imageUrls: string[];
   children: ReactNode;
 }) {
-  const [ready, setReady] = useState(imageUrls.length === 0);
+  const reduceMotion = useReducedMotion();
+  const [loaderVisible, setLoaderVisible] = useState(true);
 
+  // Warm the cache in the background; never gate the entrance on it.
   useEffect(() => {
     if (imageUrls.length === 0) return;
+    void preloadImages(imageUrls);
+  }, [imageUrls]);
+
+  // Reveal once the hero has painted (plus a short floor so the sway reads).
+  useEffect(() => {
+    // Wait until the reduced-motion preference is known (null on first SSR/hydrate).
+    if (reduceMotion === null) return;
 
     let cancelled = false;
+    const startedAt = performance.now();
 
-    preloadImages(imageUrls).then(() => {
-      if (!cancelled) setReady(true);
-    });
+    void (async () => {
+      await waitForPaint();
+      if (cancelled) return;
+
+      if (!reduceMotion) {
+        const elapsed = performance.now() - startedAt;
+        const remaining = LOADER_FLOOR_MS - elapsed;
+        if (remaining > 0) {
+          await new Promise<void>((resolve) => {
+            window.setTimeout(resolve, remaining);
+          });
+        }
+      }
+
+      if (!cancelled) setLoaderVisible(false);
+    })();
 
     return () => {
       cancelled = true;
     };
-  }, [imageUrls]);
+  }, [reduceMotion]);
 
   useEffect(() => {
-    if (ready) return;
+    if (!loaderVisible) return;
 
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -37,11 +71,13 @@ export function ImagePreloader({
     return () => {
       document.body.style.overflow = prev;
     };
-  }, [ready]);
+  }, [loaderVisible]);
 
   return (
     <>
-      <AnimatePresence>{!ready && <BotanicalLoader />}</AnimatePresence>
+      <AnimatePresence>
+        {loaderVisible && <BotanicalLoader />}
+      </AnimatePresence>
       {children}
     </>
   );

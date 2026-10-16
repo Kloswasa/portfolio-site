@@ -13,7 +13,7 @@ export function MajorCaseStudySection({
   section: MajorSectionContent;
 }) {
   return (
-    <section className="cs-major__section" id={id}>
+    <section className="cs-major__section" id={id} data-snap-section="">
       <SnapSectionReveal amount={0.1}>
         <SnapItem>
           <div className="eyebrow mb-3">{section.eyebrow}</div>

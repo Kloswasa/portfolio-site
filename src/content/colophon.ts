@@ -26,7 +26,7 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
 };
 
 export const COLOPHON_BRIEF_BLOCK: AboutBlock = {
-  kicker: "\u00a7 01",
+  kicker: "  01",
   title: "The making",
   infoStrong: "How it was made",
   infoDetail: "Cursor ~80 \u00b7 Figma ~20",
@@ -50,7 +50,7 @@ export const COLOPHON_BRIEF: ColophonBrief = {
 };
 
 export const COLOPHON_STACK_BLOCK: AboutBlock = {
-  kicker: "\u00a7 02",
+  kicker: "  02",
   title: "Inventory",
   infoStrong: "What it runs on",
   infoDetail: "Method, architecture, runtime",
@@ -107,7 +107,7 @@ export const COLOPHON_QUOTE: ColophonPullquote = {
 };
 
 export const COLOPHON_PIPELINES_BLOCK: AboutBlock = {
-  kicker: "\u00a7 03",
+  kicker: "  03",
   title: "Pipelines",
   infoStrong: "Author \u2192 compile \u2192 validate",
   infoDetail: "One command each",
@@ -138,7 +138,7 @@ export const COLOPHON_PIPELINES: ColophonPipeline[] = [
 ];
 
 export const COLOPHON_LAYERS_BLOCK: AboutBlock = {
-  kicker: "\u00a7 04",
+  kicker: "  04",
   title: "Layers",
   infoStrong: "Generic to specific",
   infoDetail: "Import down, never sideways",

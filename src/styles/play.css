@@ -793,7 +793,7 @@
 .play-viewer__tool {
   padding: 3px 9px;
   font-family: var(--font-mono);
-  font-size: var(--text-2xs);
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-caps);
   color: var(--play-viewer-tool-fg);
   border: 1px solid var(--play-viewer-tool-border);

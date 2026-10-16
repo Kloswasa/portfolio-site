@@ -193,6 +193,7 @@ export function MajorCaseStudyHero({
     <section
       className={isSplit ? "cs-major__hero cs-major__hero--split" : "cs-major__hero"}
       id="hook"
+      data-snap-section=""
     >
       {isSplit ? null : <div className="cs-major__hero-dots" aria-hidden />}
       <div

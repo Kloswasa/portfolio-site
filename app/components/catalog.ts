@@ -153,7 +153,8 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "SmoothScroll",
     path: "src/components/chrome/SmoothScroll.tsx",
     category: "chrome",
-    description: "Lenis smooth-scroll provider for the document.",
+    description:
+      "Lenis smooth-scroll provider. After a scroll settles near a marked section, it eases the page onto that section.",
     usedOn: "app/layout.tsx",
   },
   {
