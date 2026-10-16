@@ -232,10 +232,10 @@ export const tokens: TokenRecord = {
     "darkValue": "'Syne', 'Fira Code', monospace"
   },
   "text.xs": {
-    "value": "0.615rem",
+    "value": "0.750rem",
     "type": "fontSizes",
     "cssVar": "--text-xs",
-    "darkValue": "0.615rem"
+    "darkValue": "0.750rem"
   },
   "text.label": {
     "value": "0.625rem",
@@ -250,22 +250,22 @@ export const tokens: TokenRecord = {
     "darkValue": "0.6875rem"
   },
   "text.sm": {
-    "value": "0.750rem",
+    "value": "0.775rem",
     "type": "fontSizes",
     "cssVar": "--text-sm",
-    "darkValue": "0.750rem"
+    "darkValue": "0.775rem"
   },
   "text.bodySm": {
-    "value": "0.8125rem",
+    "value": "0.830rem",
     "type": "fontSizes",
     "cssVar": "--text-body-sm",
-    "darkValue": "0.8125rem"
+    "darkValue": "0.830rem"
   },
   "text.body": {
-    "value": "0.875rem",
+    "value": "0.885rem",
     "type": "fontSizes",
     "cssVar": "--text-body",
-    "darkValue": "0.875rem"
+    "darkValue": "0.885rem"
   },
   "text.bodyLg": {
     "value": "0.9375rem",
