@@ -42,6 +42,7 @@ export function HeroSection({
   return (
     <section
       id="hero"
+      data-snap-section=""
       className="hero relative grid overflow-hidden md:grid-cols-2"
     >
       <div className="hero-left relative z-10 flex flex-col justify-end bg-bg px-8 pb-12 pt-24 md:px-12 md:pb-20 md:pt-32">

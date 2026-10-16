@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { ReactLenis } from 'lenis/react';
 import type { LenisOptions } from 'lenis';
+import { SectionSnap } from '@/src/components/chrome/SectionSnap';
 
 /** Slightly lower lerp = longer ease-out (more “coast” / inertia). */
 const lenisOptions: LenisOptions = {
@@ -32,6 +33,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   return (
     <ReactLenis root options={lenisOptions}>
+      <SectionSnap />
       {children}
     </ReactLenis>
   );

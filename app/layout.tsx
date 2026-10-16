@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Syne, Lato } from "next/font/google";
+import { Fraunces, Montserrat, Lato } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -28,7 +28,7 @@ const bodyFont = Lato({
   style: ["normal", "italic"],
 });
 
-const monoFont = Syne({
+const monoFont = Montserrat({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",

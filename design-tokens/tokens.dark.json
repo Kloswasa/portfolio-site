@@ -46,7 +46,7 @@
     "xs":   { "value": "0.563rem",   "type": "fontSizes" },
     "label":    { "value": "0.625rem",  "type": "fontSizes" },
     "labelLg":  { "value": "0.6875rem", "type": "fontSizes" },
-    "sm":   { "value": "0.750rem",   "type": "fontSizes" },
+    "sm":   { "value": "0.07rem",   "type": "fontSizes" },
     "bodySm": { "value": "0.8125rem", "type": "fontSizes" },
     "body":   { "value": "0.875rem",  "type": "fontSizes" },
     "bodyLg": { "value": "0.9375rem", "type": "fontSizes" },

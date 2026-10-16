@@ -34,7 +34,7 @@ export function HomeAboutSection() {
   const remainingSkills = teaser.skills.length - VISIBLE_SKILLS;
 
   return (
-    <section id="about" className="home-about">
+    <section id="about" data-snap-section="" className="home-about">
       <SnapSectionReveal className="home-about__inner">
         <p className="home-section__watermark" aria-hidden="true">
           {SECTION_NUMBER}
