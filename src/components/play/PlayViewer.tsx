@@ -1,17 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { PlayCanvas, type PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
-import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
-import {
-  PlayZoomableImage,
-  type PlayZoomableImageHandle,
-} from "@/src/components/play/PlayZoomableImage";
-import type { PlayImage, PlayWork } from "@/src/lib/play/types";
-import { plateAspectRatio, playImageSrc } from "@/src/lib/play/utils";
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import type { PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
+import { PlayViewerPlate } from "@/src/components/play/PlayViewerPlate";
+import type { PlayZoomableImageHandle } from "@/src/components/play/PlayZoomableImage";
+import type { PlayWork } from "@/src/lib/play/types";
+import { playImageSrc, playWorkImages } from "@/src/lib/play/utils";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useReducedMotion } from "framer-motion";
+import { AnimatePresence, useReducedMotion } from "framer-motion";
 
 interface PlayViewerProps {
   works: PlayWork[];
@@ -31,70 +28,23 @@ export function PlayViewer({
   onNavigate,
 }: PlayViewerProps) {
   const reduceMotion = useReducedMotion();
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const [developing, setDeveloping] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(true);
   const [mounted, setMounted] = useState(false);
-  const [stackZoomed, setStackZoomed] = useState(false);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [imageDimensions, setImageDimensions] = useState<Record<number, { width: number; height: number }>>({});
+  /** 1 = next, -1 = previous, 0 = opened from the grid. */
+  const [direction, setDirection] = useState(0);
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
-  const stackRef = useRef<HTMLDivElement | null>(null);
   const activeZoomRef = useRef<PlayZoomableImageHandle | null>(null);
-  const zoomRefs = useRef<(PlayZoomableImageHandle | null)[]>([]);
-  const scalesRef = useRef<number[]>([]);
 
   const work = works[currentIndex];
+  const hasRasterImages = work ? playWorkImages(work).length > 0 : false;
 
-  const images: PlayImage[] = useMemo(() => {
-    if (!work) return [];
-    if (work.images && work.images.length > 0) return work.images;
-    if (work.imageSrc) {
-      return [
-        {
-          src: work.imageSrc,
-          alt: work.imageAlt,
-          width: work.imageWidth,
-          height: work.imageHeight,
-        },
-      ];
-    }
-    return [];
-  }, [work]);
-
-  const isStack = images.length > 1;
-  const hasRasterImages = images.length > 0;
-
-  const plateAspect = useMemo(() => {
-    const dims = imageDimensions[activeImageIndex];
-    if (dims) return plateAspectRatio(dims.width, dims.height);
-
-    const image = images[activeImageIndex];
-    if (image?.width && image?.height) {
-      return plateAspectRatio(image.width, image.height);
-    }
-
-    return 1;
-  }, [activeImageIndex, imageDimensions, images]);
-
-  const plateStyle = useMemo(
-    (): CSSProperties & Record<"--play-plate-aspect", string> => ({
-      "--play-plate-aspect": String(plateAspect),
-    }),
-    [plateAspect],
+  const go = useCallback(
+    (step: 1 | -1) => {
+      setDirection(step);
+      onNavigate((currentIndex + step + works.length) % works.length);
+    },
+    [currentIndex, onNavigate, works.length],
   );
-
-  const handleImageNaturalSize = useCallback((index: number, width: number, height: number) => {
-    setImageDimensions((prev) => {
-      const existing = prev[index];
-      if (existing?.width === width && existing?.height === height) return prev;
-      return { ...prev, [index]: { width, height } };
-    });
-  }, []);
-
-  const handleZoomChange = useCallback((index: number, _zoomed: boolean, scale: number) => {
-    scalesRef.current[index] = scale;
-    setStackZoomed(scalesRef.current.some((s) => s > 1));
-  }, []);
 
   const handleZoomIn = useCallback(() => {
     activeZoomRef.current?.zoomIn();
@@ -111,61 +61,9 @@ export function PlayViewer({
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    const stack = stackRef.current;
-    if (!stack) return;
-    stack.scrollTop = 0;
-    stack.scrollLeft = 0;
-    setStackZoomed(false);
-    setActiveImageIndex(0);
-    scalesRef.current = [];
-    activeZoomRef.current = zoomRefs.current[0] ?? null;
-  }, [currentIndex]);
-
-  useEffect(() => {
-    setImageDimensions(() => {
-      const seeded: Record<number, { width: number; height: number }> = {};
-      images.forEach((image, index) => {
-        if (image.width && image.height) {
-          seeded[index] = { width: image.width, height: image.height };
-        }
-      });
-      return seeded;
-    });
-  }, [images]);
-
-  useEffect(() => {
-    const stack = stackRef.current;
-    if (!stack || !isStack || stackZoomed) return;
-
-    const items = stack.querySelectorAll<HTMLElement>(".play-viewer__stack-img");
-    if (items.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let bestIndex = 0;
-        let bestRatio = 0;
-
-        for (const entry of entries) {
-          const index = Array.from(items).indexOf(entry.target as HTMLElement);
-          if (index < 0) continue;
-          if (entry.intersectionRatio > bestRatio) {
-            bestRatio = entry.intersectionRatio;
-            bestIndex = index;
-          }
-        }
-
-        if (bestRatio > 0) setActiveImageIndex(bestIndex);
-      },
-      { root: stack, threshold: [0, 0.35, 0.55, 0.75, 1] },
-    );
-
-    items.forEach((item) => observer.observe(item));
-    return () => observer.disconnect();
-  }, [isStack, stackZoomed, images, currentIndex]);
-
-  useEffect(() => {
     if (!open) {
-      setDetailsOpen(false);
+      setDetailsOpen(true);
+      setDirection(0);
       return;
     }
     const prev = document.body.style.overflow;
@@ -176,11 +74,19 @@ export function PlayViewer({
   }, [open]);
 
   useEffect(() => {
-    if (!open) return;
-    setDeveloping(true);
-    const timer = setTimeout(() => setDeveloping(false), 650);
-    return () => clearTimeout(timer);
-  }, [open, currentIndex]);
+    if (!open || works.length < 2) return;
+    const neighbours = [
+      works[(currentIndex + 1) % works.length],
+      works[(currentIndex - 1 + works.length) % works.length],
+    ];
+    for (const neighbour of neighbours) {
+      const cover = playWorkImages(neighbour)[0];
+      if (!cover) continue;
+      const img = new Image();
+      img.decoding = "async";
+      img.src = playImageSrc(cover.src);
+    }
+  }, [open, currentIndex, works]);
 
   useEffect(() => {
     if (!open) return;
@@ -189,8 +95,8 @@ export function PlayViewer({
         if (detailsOpen) setDetailsOpen(false);
         else onClose();
       }
-      if (e.key === "ArrowLeft") onNavigate((currentIndex - 1 + works.length) % works.length);
-      if (e.key === "ArrowRight") onNavigate((currentIndex + 1) % works.length);
+      if (e.key === "ArrowLeft") go(-1);
+      if (e.key === "ArrowRight") go(1);
       if (e.key === "i" || e.key === "I") setDetailsOpen((v) => !v);
       if (hasRasterImages && (e.key === "+" || e.key === "=")) {
         e.preventDefault();
@@ -207,7 +113,7 @@ export function PlayViewer({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, detailsOpen, currentIndex, works.length, onClose, onNavigate, hasRasterImages, handleZoomIn, handleZoomOut, handleZoomReset]);
+  }, [open, detailsOpen, go, onClose, hasRasterImages, handleZoomIn, handleZoomOut, handleZoomReset]);
 
   if (!mounted || !work) return null;
 
@@ -231,34 +137,6 @@ export function PlayViewer({
       />
 
       <div className="play-viewer__top">
-        <div className="play-viewer__nav-group">
-          <button
-            type="button"
-            className="play-viewer__nav"
-            aria-label="Previous work"
-            onClick={() => {
-              setDetailsOpen(false);
-              onNavigate((currentIndex - 1 + works.length) % works.length);
-            }}
-          >
-            ‹
-          </button>
-          <span className="play-viewer__counter">
-            {String(currentIndex + 1).padStart(2, "0")} / {String(works.length).padStart(2, "0")}
-          </span>
-          <button
-            type="button"
-            className="play-viewer__nav"
-            aria-label="Next work"
-            onClick={() => {
-              setDetailsOpen(false);
-              onNavigate((currentIndex + 1) % works.length);
-            }}
-          >
-            ›
-          </button>
-        </div>
-
         <button type="button" className="play-viewer__close" onClick={onClose}>
           Close <span aria-hidden="true">✕</span>
         </button>
@@ -266,77 +144,18 @@ export function PlayViewer({
 
       <div className="play-viewer__stage">
         <div className="play-viewer__plate-wrap">
-          <div
-            className="play-viewer__plate"
-            data-adaptive={hasRasterImages ? "true" : undefined}
-            data-developing={developing && !reduceMotion ? "true" : undefined}
-            style={hasRasterImages ? plateStyle : undefined}
-          >
-            <div className="play-viewer__media">
-              {work.medium === "code" && work.sketch ? (
-                <PlayCanvas
-                  key={`${work.id}-${open}`}
-                  sketch={work.sketch}
-                  paused={effectivePaused}
-                  onReady={(handle) => {
-                    canvasHandleRef.current = handle;
-                  }}
-                />
-              ) : images.length > 0 ? (
-                <div
-                  ref={stackRef}
-                  className="play-viewer__stack"
-                  data-single={isStack ? undefined : "true"}
-                  data-stack={isStack ? "true" : undefined}
-                  data-has-zoom={stackZoomed ? "true" : undefined}
-                  tabIndex={isStack ? 0 : undefined}
-                  onWheel={
-                    isStack && !stackZoomed
-                      ? (e) => {
-                          e.stopPropagation();
-                        }
-                      : undefined
-                  }
-                >
-                  {images.map((image, i) => (
-                    <PlayZoomableImage
-                      key={image.src}
-                      ref={(handle) => {
-                        zoomRefs.current[i] = handle;
-                        if (i === 0 && handle) activeZoomRef.current = handle;
-                      }}
-                      src={playImageSrc(image.src)}
-                      alt={image.alt ?? `${work.title} — ${i + 1} of ${images.length}`}
-                      width={image.width}
-                      height={image.height}
-                      className="play-viewer__stack-img"
-                      loading={i === 0 ? "eager" : "lazy"}
-                      onNaturalSize={(width, height) => handleImageNaturalSize(i, width, height)}
-                      onZoomChange={(zoomed, scale) => handleZoomChange(i, zoomed, scale)}
-                      onActivate={() => {
-                        activeZoomRef.current = zoomRefs.current[i] ?? null;
-                        setActiveImageIndex(i);
-                      }}
-                      wheelZoom={!isStack}
-                    />
-                  ))}
-                </div>
-              ) : work.illustration ? (
-                <PlayIllustration name={work.illustration} />
-              ) : null}
-            </div>
-            {isStack ? (
-              <>
-                <span className="play-viewer__stack-cue play-viewer__stack-cue--desktop" aria-hidden="true">
-                  ↓ {images.length} images
-                </span>
-                <span className="play-viewer__stack-cue play-viewer__stack-cue--mobile" aria-hidden="true">
-                  ‹ › swipe · {images.length}
-                </span>
-              </>
+          <AnimatePresence mode="wait" custom={direction}>
+            {open ? (
+              <PlayViewerPlate
+                key={work.id}
+                work={work}
+                direction={direction}
+                paused={effectivePaused}
+                zoomTargetRef={activeZoomRef}
+                canvasHandleRef={canvasHandleRef}
+              />
             ) : null}
-            {/* <div className="play-viewer__mat" aria-hidden="true" /> */}
-          </div>
+          </AnimatePresence>
         </div>
 
         <aside className="play-viewer__label">
@@ -387,6 +206,34 @@ export function PlayViewer({
                 </span>
               ))}
             </div>
+
+            <nav className="play-viewer__nav-group" aria-label="Browse works">
+              <button
+                type="button"
+                className="play-viewer__nav"
+                data-dir="prev"
+                aria-label="Previous work"
+                title="Previous work (←)"
+                onClick={() => go(-1)}
+              >
+                <span className="play-viewer__nav-arrow" aria-hidden="true">‹</span>
+                Prev
+              </button>
+              <span className="play-viewer__counter">
+                {String(currentIndex + 1).padStart(2, "0")} / {String(works.length).padStart(2, "0")}
+              </span>
+              <button
+                type="button"
+                className="play-viewer__nav"
+                data-dir="next"
+                aria-label="Next work"
+                title="Next work (→)"
+                onClick={() => go(1)}
+              >
+                Next
+                <span className="play-viewer__nav-arrow" aria-hidden="true">›</span>
+              </button>
+            </nav>
           </div>
         </aside>
       </div>

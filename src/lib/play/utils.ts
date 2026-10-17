@@ -1,3 +1,21 @@
+import type { PlayImage, PlayWork } from "@/src/lib/play/types";
+
+/** Viewer image set for a work — `images` when present, else the single cover image. */
+export function playWorkImages(work: PlayWork): PlayImage[] {
+  if (work.images && work.images.length > 0) return work.images;
+  if (work.imageSrc) {
+    return [
+      {
+        src: work.imageSrc,
+        alt: work.imageAlt,
+        width: work.imageWidth,
+        height: work.imageHeight,
+      },
+    ];
+  }
+  return [];
+}
+
 /** Resolve a play asset path from `public/` (handles bare paths like `play/illustration/foo.png`). */
 export function playImageSrc(src: string): string {
   if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("/")) {

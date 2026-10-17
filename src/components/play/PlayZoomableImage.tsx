@@ -7,6 +7,7 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  type CSSProperties,
 } from "react";
 
 const MIN_SCALE = 1;
@@ -26,10 +27,13 @@ interface PlayZoomableImageProps {
   width?: number;
   height?: number;
   className?: string;
+  style?: CSSProperties;
   loading?: "lazy" | "eager";
   onZoomChange?: (zoomed: boolean, scale: number) => void;
   onActivate?: () => void;
   onNaturalSize?: (width: number, height: number) => void;
+  /** Fires once the image is decoded and paintable (or failed to load). */
+  onSettled?: () => void;
   /** Allow wheel zoom without ctrl/meta (single-image mode). */
   wheelZoom?: boolean;
 }
@@ -64,15 +68,21 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
       width,
       height,
       className,
+      style,
       loading = "lazy",
       onZoomChange,
       onActivate,
       onNaturalSize,
+      onSettled,
       wheelZoom = false,
     },
     ref,
   ) {
     const frameRef = useRef<HTMLDivElement | null>(null);
+    const imgRef = useRef<HTMLImageElement | null>(null);
+    const settledRef = useRef(false);
+    const onSettledRef = useRef(onSettled);
+    onSettledRef.current = onSettled;
     const pointersRef = useRef<Map<number, { x: number; y: number }>>(new Map());
     const pinchRef = useRef<{ distance: number; scale: number } | null>(null);
     const dragRef = useRef<{ x: number; y: number; tx: number; ty: number } | null>(null);
@@ -142,6 +152,25 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
     useEffect(() => {
       onZoomChange?.(scale > 1, scale);
     }, [scale, onZoomChange]);
+
+    const settle = useCallback(() => {
+      if (settledRef.current) return;
+      settledRef.current = true;
+      onSettledRef.current?.();
+    }, []);
+
+    const settleAfterDecode = useCallback(
+      (img: HTMLImageElement) => {
+        img.decode().then(settle, settle);
+      },
+      [settle],
+    );
+
+    useEffect(() => {
+      settledRef.current = false;
+      const img = imgRef.current;
+      if (img?.complete && img.naturalWidth > 0) settleAfterDecode(img);
+    }, [src, settleAfterDecode]);
 
     const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
       const shouldZoom = e.ctrlKey || e.metaKey || scale > 1 || wheelZoom;
@@ -249,6 +278,7 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
       <div
         ref={frameRef}
         className={`play-zoomable${className ? ` ${className}` : ""}`}
+        style={style}
         data-zoomed={scale > 1 ? "true" : undefined}
         onWheel={handleWheel}
         onPointerDown={handlePointerDown}
@@ -264,6 +294,7 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
           }}
         >
           <img
+            ref={imgRef}
             src={src}
             alt={alt}
             width={width}
@@ -277,7 +308,9 @@ export const PlayZoomableImage = forwardRef<PlayZoomableImageHandle, PlayZoomabl
               if (img.naturalWidth > 0 && img.naturalHeight > 0) {
                 onNaturalSize?.(img.naturalWidth, img.naturalHeight);
               }
+              settleAfterDecode(img);
             }}
+            onError={settle}
           />
         </div>
       </div>
