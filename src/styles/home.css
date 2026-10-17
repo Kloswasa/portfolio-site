@@ -188,7 +188,7 @@
 
 @media (min-width: 1024px) {
   .home-about__grid {
-    gap: var(--spacing-16);
+    gap: var(--spacing-24);
   }
 }
 
@@ -266,9 +266,14 @@ button.home-about__skill:active {
 .home-about__actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: var(--spacing-4);
   padding-top: var(--spacing-2);
+}
+
+.home-about__actions > .btn {
+  flex: 1 1 0;
+  min-width: max-content;
 }
 
 .home-about__panel {
