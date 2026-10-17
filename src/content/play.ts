@@ -152,7 +152,6 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     dim: "Home fragrance · 2019",
     description:
       "Illustration exploring Thai home aroma ingredients from a wide range of scents, arranged in an infographic booklet form.",
-    projectSlug: "thai-hom",
     cardDescription: "Thai home aroma ingredients for the infographic booklet.",
     tools: ["Digital", "Heritage", "Illustrator", "Photoshop"],
     tag: "Heritage",
@@ -218,7 +217,6 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     dim: "Packaging · 2021",
     description:
       "A packaging illustration for the local entrepreneur's product. A quiet garden scene, layered foliage, dappled light, and small moments of growth observed at walking pace.",
-    projectSlug: "bupha",
     cardDescription: "Packaging illustration for the local entrepreneur's product.",
     tools: ["Photoshop", "Procreate"],
     tag: "Packaging",
