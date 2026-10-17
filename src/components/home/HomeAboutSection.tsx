@@ -58,7 +58,14 @@ export function HomeAboutSection() {
               <Link className="btn btn-secondary" href="/about">
                 Read the full story
               </Link>
-              
+              <a
+                className="btn btn-primary"
+                href={siteConfig.resume.downloadHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV ↓
+              </a>
             </div>
           </SnapItem>
 
