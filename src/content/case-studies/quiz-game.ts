@@ -28,7 +28,7 @@ const quizGameCaseStudy = {
       },
       {
         "label": "Duration",
-        "value": "6 months · 2025"
+        "value": "6 months · 2025-2026"
       },
       {
         "label": "Status",
@@ -45,8 +45,8 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  A personality quiz result is easy to make and easy to forget. If the output were a one-word label, the product would be played once and closed, and a newcomer to Australia would be no closer to knowing where to go. The result had to earn its usefulness or the whole thing would be a horoscope.",
-            "    **The brief**: design a quiz that helps newcomers to Australia, including those in Melbourne and Sydney, identify their travel style, using Holland's personality model as the framework.",
+            "  A personality quiz result is easy to make and easy to forget. A one-word label gets played once and closed, leaving a newcomer no closer to knowing where to go. The result had to be useful, or it was just a horoscope.",
+            "    **The brief**: design a quiz that helps newcomers to Australia, including in Melbourne and Sydney, find their travel style using Holland's personality model.",
             "Two things in that brief made it harder than a normal quiz."
           ]
         },
@@ -57,7 +57,7 @@ const quizGameCaseStudy = {
               "num": "01",
               "label": "Framework",
               "title": "Holland's model",
-              "body": "Holland's model is a framework used mainly for careers, not for trips. Bridging it to travel was a translation challenge, not a styling problem. Even the type names had to be recast for the context. In this project, Holland's \"Investigative\" became \"the Curious Explorer\".",
+              "body": "Holland’s model is built for careers, not travel. Adapting it was a translation problem, even for the names, so “Investigative” became “the Curious Explorer”.",
               "image": "/projects/quiz-game/quiz-game-hexagon.png",
               "imageAlt": "Hexagon icon illustrating the Holland framework"
             },
@@ -65,7 +65,7 @@ const quizGameCaseStudy = {
               "num": "02",
               "label": "Audience",
               "title": "Strangers to Australia",
-              "body": "The audience hadn't been to Australia, so being told you are \"the Curious Explorer\" is useless on its own. The differentiator had to live on the output side, to turn the result page into something that helps a stranger know where to go and what to expect.",
+              "body": "Newcomers hadn’t been to Australia, so a type name alone meant nothing. The result page had to show them where to go and what to expect.",
               "image": "/projects/quiz-game/quiz-game-question-mark.png",
               "imageAlt": "Question mark icon illustrating unfamiliarity with Australia"
             }
@@ -81,7 +81,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Five people who could become future travellers to Australia were interviewed, and patterns in what they expected from a result emerged from those conversations."
+            "  Interviews with five prospective travellers to Australia revealed clear patterns in what they wanted from a result."
           ]
         },
         {
@@ -110,7 +110,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Moving to Australian aesthetic recognition: wildlife and natural scenes were named as Australia's signature in every interview, but wildlife recognition stopped at two animals."
+            "  Every interviewee named wildlife and natural scenery as Australia's signature, but few could name an animal beyond two."
           ]
         },
         {
@@ -139,7 +139,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. \n  Scenery became the ambient backdrop of the quiz, while a native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each personality type's identity on the result page, where the personal weight had to live."
+            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. \n  Scenery became the quiz's backdrop. A native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each type's identity on the result page, where the personal weight lives."
           ]
         },
         {
@@ -151,7 +151,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision two: every pairing had to hold under two lenses.**\n  Each animal was matched to its type through natural behaviour and meaning in Aboriginal belief, and kept only if it held under both."
+            "**Decision two: every pairing had to hold under two lenses.**\n  Each animal was matched by natural behaviour and by meaning in Aboriginal belief, and kept only if both agreed."
           ]
         },
         {
@@ -179,7 +179,7 @@ const quizGameCaseStudy = {
           "type": "callout",
           "label": "Scope",
           "title": "What this research was not",
-          "body": "Direct community consultation, paid cultural advisor review, and Country-specific mapping were outside a three-month internship's scope. A fuller version would build those in, ideally with a cultural advisor co-authoring the matching from the outset, not verifying it after the fact."
+          "body": "Direct community consultation, paid cultural advisor review, and Country-specific mapping were beyond an internship's scope. A fuller version would have a cultural advisor co-author the matching from the start, not verify it afterwards."
         }
       ]
     },
