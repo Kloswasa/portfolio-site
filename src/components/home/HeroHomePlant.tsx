@@ -1,10 +1,11 @@
 "use client";
 
-import { useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 import { PlayIllustration } from "@/src/components/play/PlayIllustrations";
 import { WorkHeroBotanical } from "@/src/components/work/WorkHeroBotanical";
+import { useHeroPlantInk } from "@/src/hooks/useHeroPlantInk";
 import { useHeroPlantTilt } from "@/src/hooks/useHeroPlantTilt";
 import {
   DEFAULT_HERO_PLANT_ID,
@@ -86,20 +87,28 @@ function pickHeroPlant(): HeroPlant {
 
 export function HeroHomePlant() {
   const pathname = usePathname();
-  const [plant, setPlant] = useState(DEFAULT_PLANT);
+  const [plant, setPlant] = useState<HeroPlant | null>(null);
   const reduceMotion = useReducedMotion();
-  const tiltRef = useHeroPlantTilt(!reduceMotion);
+  const allowMotion = !reduceMotion;
+  const tiltRef = useHeroPlantTilt(allowMotion);
+  const inkComplete = useHeroPlantInk(
+    tiltRef,
+    plant?.id ?? null,
+    allowMotion,
+  );
 
   useEffect(() => {
     setPlant(pickHeroPlant());
   }, [pathname]);
+
+  if (!plant) return null;
 
   return (
     <>
       <div
         ref={tiltRef}
         className="hero-botanical"
-        data-tilt={reduceMotion ? undefined : ""}
+        data-tilt={allowMotion ? "" : undefined}
         data-plant={plant.id}
         data-play-plant={plant.play ? "" : undefined}
         aria-hidden="true"
@@ -107,13 +116,19 @@ export function HeroHomePlant() {
         {plant.render()}
       </div>
 
-      <div className="hero-stamp font-mono text-xs leading-loose tracking-stamp">
+      <motion.div
+        key={plant.id}
+        className="hero-stamp font-mono text-xs leading-loose tracking-stamp"
+        initial={allowMotion ? { opacity: 0 } : false}
+        animate={{ opacity: inkComplete ? 1 : 0 }}
+        transition={{ duration: allowMotion ? 0.35 : 0, ease: "easeOut" }}
+      >
         {plant.stampLines.map((line) => (
           <span key={`${plant.id}-${line}`} className="block">
             {line}
           </span>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 }

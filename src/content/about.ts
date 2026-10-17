@@ -18,30 +18,39 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-    "A product designer in Melbourne who designs and builds from research and design through to production code.\nDrawn to the structure beneath an interface, and the person on the other side of the screen.",
+    "Melbourne product designer, from research to production code.\nFocused on underlying structure and the people it serves.",
   stats: [
+    { label: "Status", value: "Open to work" },
     { label: "Based in", value: "Melbourne" },
     { label: "Practising since", value: "2019" },
     { label: "Works in", value: "Design \u00b7 Code" },
-    { label: "Status", value: "Open to work" },
   ],
   contacts: [
     {
       label: "Email",
       value: siteConfig.email,
       href: `mailto:${siteConfig.email}`,
+      variant: "primary",
     },
     {
       label: "CV",
-      value: "Download",
+      value: "Download CV",
       href: siteConfig.resume.downloadHref,
+      variant: "accent",
       external: true,
+    },
+  ],
+  contactHeading: "Contact",
+  socials: [
+    {
+      label: "GitHub",
+      href: siteConfig.social.github,
+      icon: "github",
     },
     {
       label: "LinkedIn",
-      value: "Profile",
       href: siteConfig.social.linkedin,
-      external: true,
+      icon: "linkedin",
     },
   ],
 };

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
 import { MenuButton } from "@/src/components/chrome/MenuButton";
 import { NavOverlay } from "@/src/components/chrome/NavOverlay";
+import { ThemeToggle } from "@/src/components/chrome/ThemeToggle";
 import { PageLoader } from "@/src/components/chrome/PageLoader";
 import { PageTransition } from "@/src/components/chrome/PageTransition";
 import { SmoothScroll } from "@/src/components/chrome/SmoothScroll";
@@ -85,7 +86,7 @@ export default function RootLayout({
               {siteConfig.name}
             </Link>
             <div className="pointer-events-auto flex items-center gap-3">
-              
+              <ThemeToggle />
               <MenuButton />
             </div>
           </header>

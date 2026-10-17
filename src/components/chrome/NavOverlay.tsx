@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useNav } from "@/src/context/NavContext";
-import { ThemeToggle } from "@/src/components/chrome/ThemeToggle";
 import {
   HoverRippleLayer,
   NAV_RIPPLE_DURATION,
@@ -255,9 +254,6 @@ export function NavOverlay() {
         >
           <span className="font-mono text-label-lg uppercase tracking-stamp text-info-text/35">
             Portfolio · 2026
-          </span>
-          <span className="font-mono text-label-lg uppercase tracking-stamp text-info-text/35">
-            <ThemeToggle tone="default" />
           </span>
         </motion.div>
       </motion.div>

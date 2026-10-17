@@ -42,15 +42,27 @@ export function AboutView({
   quote,
   endCopy,
 }: AboutViewProps) {
+  const [leadStat, ...facts] = heroMeta.stats;
+
   return (
     <div className="about-page">
       <WorkHero
-        meta={heroMeta}
+        meta={{ ...heroMeta, stats: facts }}
         watermark={heroMeta.watermark}
         illustration="forget-me-not"
       >
-        {heroMeta.contacts ? (
-          <AboutHeroContacts links={heroMeta.contacts} />
+        {leadStat ? (
+          <p className="about-hero__status">
+            <span className="work-hero__stat-label">{leadStat.label}</span>
+            <span className="work-hero__stat-value">{leadStat.value}</span>
+          </p>
+        ) : null}
+        {heroMeta.contacts || heroMeta.socials ? (
+          <AboutHeroContacts
+            heading={heroMeta.contactHeading ?? "Contact"}
+            links={heroMeta.contacts ?? []}
+            socials={heroMeta.socials ?? []}
+          />
         ) : null}
       </WorkHero>
 
