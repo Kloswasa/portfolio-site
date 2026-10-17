@@ -661,6 +661,10 @@
   width: 0;
 }
 
+.play-viewer__sheet-handle {
+  display: none;
+}
+
 .play-viewer__back {
   display: flex;
   align-items: center;
@@ -882,7 +886,11 @@
     border-radius: 0;
     background: var(--play-viewer-label-bg);
     box-shadow: var(--shadow-lg);
-    transition: max-height var(--duration-slower) var(--ease-spring);
+    display: flex;
+    flex-direction: column;
+    transition:
+      max-height var(--duration-slower) var(--ease-spring),
+      transform var(--duration-slow) var(--ease);
   }
 
   .play-viewer[data-details="true"] .play-viewer__label {
@@ -892,21 +900,45 @@
     pointer-events: auto;
   }
 
-  .play-viewer__label-inner {
-    width: 100% !important;
-    max-height: 62vh;
-    padding: var(--spacing-5) var(--spacing-5) var(--spacing-12);
-    overflow-y: auto;
+  .play-viewer__sheet-handle {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--spacing-3) 0 var(--spacing-2);
+    border: 0;
+    background: none;
+    cursor: grab;
+    touch-action: none;
   }
 
-  .play-viewer__label-inner::before {
-    content: "";
-    display: block;
-    width: 36px;
+  .play-viewer__sheet-handle:active {
+    cursor: grabbing;
+  }
+
+  .play-viewer__sheet-handle-bar {
+    width: 44px;
     height: 4px;
-    margin: 0 auto var(--spacing-5);
-    border-radius: 0;
     background: var(--play-viewer-sheet-handle);
+    transition: background var(--duration) var(--ease);
+  }
+
+  .play-viewer__sheet-handle:hover .play-viewer__sheet-handle-bar,
+  .play-viewer__sheet-handle:focus-visible .play-viewer__sheet-handle-bar {
+    background: var(--color-accent);
+  }
+
+  .play-viewer__label-inner {
+    flex: 1 1 auto;
+    width: 100% !important;
+    min-height: 0;
+    max-height: none;
+    padding: var(--spacing-2) var(--spacing-5) var(--spacing-12);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
 
   .play-viewer__title {

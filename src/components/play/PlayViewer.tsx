@@ -34,6 +34,9 @@ export function PlayViewer({
   const [direction, setDirection] = useState(0);
   const canvasHandleRef = useRef<PlayCanvasHandle | null>(null);
   const activeZoomRef = useRef<PlayZoomableImageHandle | null>(null);
+  const sheetRef = useRef<HTMLElement | null>(null);
+  const sheetDragRef = useRef<{ startY: number; dy: number } | null>(null);
+  const sheetDraggedRef = useRef(false);
 
   const work = works[currentIndex];
   const hasRasterImages = work ? playWorkImages(work).length > 0 : false;
@@ -45,6 +48,32 @@ export function PlayViewer({
     },
     [currentIndex, onNavigate, works.length],
   );
+
+  const handleSheetPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    sheetDragRef.current = { startY: e.clientY, dy: 0 };
+    sheetDraggedRef.current = false;
+    if (sheetRef.current) sheetRef.current.style.transition = "none";
+  };
+
+  const handleSheetPointerMove = (e: React.PointerEvent<HTMLButtonElement>) => {
+    const drag = sheetDragRef.current;
+    const sheet = sheetRef.current;
+    if (!drag || !sheet) return;
+    drag.dy = Math.max(0, e.clientY - drag.startY);
+    if (drag.dy > 4) sheetDraggedRef.current = true;
+    sheet.style.transform = `translate3d(0, ${drag.dy}px, 0)`;
+  };
+
+  const handleSheetPointerEnd = () => {
+    const drag = sheetDragRef.current;
+    const sheet = sheetRef.current;
+    sheetDragRef.current = null;
+    if (!drag || !sheet) return;
+    sheet.style.transition = "";
+    sheet.style.transform = "";
+    if (drag.dy > 72) setDetailsOpen(false);
+  };
 
   const handleZoomIn = useCallback(() => {
     activeZoomRef.current?.zoomIn();
@@ -124,6 +153,7 @@ export function PlayViewer({
       className="play-viewer"
       data-open={open ? "true" : "false"}
       data-details={detailsOpen ? "true" : "false"}
+      data-lenis-prevent
       role="dialog"
       aria-modal="true"
       aria-label="Work detail"
@@ -158,7 +188,21 @@ export function PlayViewer({
           </AnimatePresence>
         </div>
 
-        <aside className="play-viewer__label">
+        <aside ref={sheetRef} className="play-viewer__label">
+          <button
+            type="button"
+            className="play-viewer__sheet-handle"
+            aria-label="Hide details"
+            onPointerDown={handleSheetPointerDown}
+            onPointerMove={handleSheetPointerMove}
+            onPointerUp={handleSheetPointerEnd}
+            onPointerCancel={handleSheetPointerEnd}
+            onClick={() => {
+              if (!sheetDraggedRef.current) setDetailsOpen(false);
+            }}
+          >
+            <span className="play-viewer__sheet-handle-bar" aria-hidden="true" />
+          </button>
           <div className="play-viewer__label-inner">
             <button
               type="button"
