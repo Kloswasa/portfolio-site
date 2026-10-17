@@ -58,7 +58,7 @@ alt: Catalogue journey map
 caption: Catalogue journey map design.
 
 ## prose
-  The design necessitated a cohesive and adaptable visual framework to synthesize five distinct content formats into a unified reading experience. Moreover, to make an experience become seamless, a reading order need to consider what user after from catalouge from building a trust to an evidence.
+  The design needed a cohesive, adaptable visual framework to bring five distinct content formats into one reading experience. To keep that experience seamless, the reading order had to follow what a customer is looking for as they move through the catalogue: first building trust, then presenting the evidence.
 
 ## image
 src: /projects/jtimber/jtimber-assets.gif

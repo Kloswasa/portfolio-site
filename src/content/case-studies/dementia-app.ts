@@ -11,7 +11,7 @@ const dementiaAppCaseStudy = {
     "eyebrow": "003 · UX Research · Healthtech · 2024 / 2026",
     "titleLine1": "Dementia",
     "titleLine2": "Caregiver",
-    "summary": "A usability evaluation of a caregiver monitoring app, and the re-analysis ran a year later to reframe the findings as a trust and safety problem.",
+    "summary": "A usability evaluation of a caregiver monitoring app, and the re-analysis, run a year later, that reframed the findings as a trust and safety problem.",
     "layout": "split",
     "image": {
       "src": "/projects/dementia-app/dementia_head_cover.webp",
@@ -20,7 +20,7 @@ const dementiaAppCaseStudy = {
     "meta": [
       {
         "label": "Role",
-        "value": "2024 · designed as team. 2026 · re-analysis into a redesign."
+        "value": "2024 · designed as a team. 2026 · re-analysis into a redesign."
       },
       {
         "label": "Team",
@@ -46,7 +46,7 @@ const dementiaAppCaseStudy = {
           "type": "prose",
           "paragraphs": [
             "  Many caregivers don't live with the person they care for. The person with dementia is home. The caregiver is at work, or across town. Background research described the pattern: leaving work mid-shift when something felt wrong, and a low background dread on the quiet days. The not-knowing was its own cost.",
-            "  In 2024 my team evaluated a caregiver monitoring prototype. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes."
+            "  In 2024 a caregiver monitoring prototype was evaluated. In 2026 I re-analysed the same data alone, and it reframed everything. This case study documents both passes."
           ]
         },
         {
@@ -79,7 +79,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The prototype was a mobile app built on a single promise, call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia is. Every feature either delivered that or supported it."
+            "  The prototype was a mobile app built on a single promise, call it the five-second rule: within seconds of opening it, the caregiver should know where the person with dementia (PwD) is. Every feature either delivered that or supported it."
           ]
         },
         {
@@ -116,7 +116,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine, I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
+            "  The project was a team of four. Research, concepts, and prototyping were shared. In the final week I unified our high-fidelity screens under one iOS-based system. The evaluation itself was mine: I designed the eight tasks, wrote the questionnaires, ran every session and interview, and authored the report."
           ]
         },
         {
@@ -141,8 +141,8 @@ const dementiaAppCaseStudy = {
         {
           "type": "image",
           "src": "/projects/dementia-app/dementia_evaluation_tasks.webp",
-          "alt": "Dementia care giver evaluation tasks overview",
-          "caption": "Dementia care giver evaluation tasks overview."
+          "alt": "Dementia caregiver evaluation tasks overview",
+          "caption": "Dementia caregiver evaluation tasks overview."
         },
         {
           "type": "process",
@@ -174,7 +174,7 @@ const dementiaAppCaseStudy = {
           "type": "image",
           "src": "/projects/dementia-app/Dementia-evaluation.png",
           "alt": "A remote evaluation session, split screen with prototype on one side and task instructions on the other",
-          "caption": "Remote, split-screen sessions, prototype one side, task script the other, so participants worked naturally while their misses were captured live."
+          "caption": "Remote, split-screen sessions, with the prototype on one side and the task script on the other, so participants worked naturally while their misses were captured live."
         },
         {
           "type": "prose",
@@ -191,7 +191,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The SUS was 81.5. Six of eight tasks passed target. Three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching, one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study."
+            "  The SUS was 81.5. Six of eight tasks passed target. Three of four participants said they'd recommend the app. On its own terms, the prototype did well. But three tasks are worth watching: one that passed cleanly, one that failed on the numbers, and one that passed the numbers while the stopwatch disagreed. The distance between those last two is the rest of this case study."
           ]
         },
         {
@@ -217,7 +217,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The other five tasks echoed these at smaller scale, two shared Task 4's discoverability problem, three passed as cleanly as Task 1."
+            "  The other five tasks echoed these at smaller scale: two shared Task 4's discoverability problem, and three passed as cleanly as Task 1."
           ]
         }
       ]
@@ -230,7 +230,7 @@ const dementiaAppCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The evaluation was finished. The data wasn't. Task 8 kept coming back to me. The metrics answer one question, can the user do the thing, and Task 8 passed it: three of four completed it unassisted, P4 rated it easy."
+            "  The evaluation was finished. The data wasn't. Task 8 kept coming back to me. The metrics answer one question (can the user do the thing?) and Task 8 passed it: three of four completed it unassisted, P4 rated it easy."
           ]
         },
         {
@@ -254,7 +254,7 @@ const dementiaAppCaseStudy = {
           "type": "image",
           "src": "/projects/dementia-app/dementia_tasks_collapse.webp",
           "alt": "Eight evaluation tasks grouped into three root causes, with Task 8 spanning two of them",
-          "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes, Task 8, which started it, spans two."
+          "caption": "Grouped by the gap between metric and behaviour, eight task problems collapse into three root causes. Task 8, which started it, spans two."
         },
         {
           "type": "findings",

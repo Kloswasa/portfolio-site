@@ -35,7 +35,7 @@ caption: Bhaesaj logo
 size: sm
 
 ## prose
-  Bhaesaj, a Thai traditional lip balm brand founded in 1989, is modernising its image.
+  Bhaesaj (pay-sat), a Thai traditional lip balm brand founded in 1989, is modernising its image.
   The brand strategist and design team developed a new "modern classic" visual direction, clean, spacious, and inspired by classic medicine labels, and invited me to redesign the brand's original lip balm packaging to match.
 
 ## image
@@ -45,7 +45,7 @@ caption: Moodboard
 
 
 ## prose
-  A board carries a feeling and a mood, but it was my work to decide how the packaging should be, thickness, lid mechanic, or surface finish that reads as heritage rather than pastiche.
+  A board carries a feeling and a mood, but it was my job to decide what the packaging should be: its thickness, lid mechanic, and surface finish, so that it reads as heritage rather than pastiche.
   The direction also carried its own trap: classic and modern balance on a narrow line, and a direction that leans too far either way misses on both counts at once.
 
 # work
@@ -81,7 +81,7 @@ titleEm: to form.
 ## image
 src: /projects/bhae/bhaesaj-2D-3D.gif
 alt: Lip balm packaging sketch exploration moving from 2D selection into a 3D render
-caption: A lip balm packaging sketch exploration from 2D, selected and turned into 3D.
+caption: A lip balm packaging sketch exploration, selected from 2D and turned into 3D.
 
 ## prose
     Working from the words rather than the pictures produced a range of shape, surface, and functional options that the board itself did not imply.
@@ -108,5 +108,5 @@ caption: From the board's language to resolved form sketches, surface direction,
   body: A recognisable traditional product reworked without tipping into pastiche.
 
 ## prose
-  The next stage would have been production: material selection, manufacturing, sorting a supplier, and finishing packaging touch. The work was held at parent-company level on budget, with the decision to stay with the classic packaging.
+  The next stage would have been production: material selection, manufacturing, sourcing a supplier, and final packaging finishes. The work was held at parent-company level because of budget, with the decision to stay with the classic packaging.
   Taking a brief and widening it before narrowing, treating the words as a space of possibilities rather than a picture to reproduce, is the move I rely on most in digital product work, where the brief is almost always a direction rather than a definition.

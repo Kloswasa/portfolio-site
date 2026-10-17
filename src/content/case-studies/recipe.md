@@ -28,7 +28,7 @@ titleEm: objects, not rows.
 
 ## prose
 
-Unlike generic recipe aggregators, the experience centers the cook and the family context behind each dish.
+Unlike generic recipe aggregators, the experience centres the cook and the family context behind each dish.
 
 Interviewees stored recipes in Notes, WhatsApp, and handwritten cards. Search failed across formats. Scaling servings and unit conversion caused friction at cook time.
 
@@ -194,8 +194,8 @@ titleEm: in twelve weeks
 
 - value: "5"
   label: Beta families
-  body: Five families imported and cooked recipes across the full loop, import,
-    browse, cook, share.
+  body: Five families imported and cooked recipes across the full loop (import,
+    browse, cook, share).
 - value: 120+
   label: Recipes imported
   body: Early adopters brought handwritten cards, WhatsApp forwards, and Notes
@@ -207,11 +207,11 @@ titleEm: in twelve weeks
 
 ## prose
 
-Shipped responsive web app with share links for relatives without accounts and print-friendly recipe cards.
+I shipped a responsive web app with share links for relatives without accounts and print-friendly recipe cards.
 
 ## reflections
 
-- Investing in import flows (photo of handwritten card → draft) would be the next bet, manual entry slowed early adoption.
+- Investing in import flows (photo of handwritten card → draft) would be the next bet: manual entry slowed early adoption.
 - I'd prototype print layouts earlier. Families asked for physical cards sooner than expected.
 - The designer format gave room to show both IA shifts and cook-mode rationale in one narrative arc.
 

@@ -9,6 +9,7 @@ import type {
   ColophonPullquote,
   ColophonStackGroup,
 } from "@/src/lib/colophon/types";
+import { getVisibleProjects } from "@/src/lib/projects";
 
 export const COLOPHON_HERO_META: AboutHeroMeta = {
   watermark: "\u2018Colophon\u2019",
@@ -20,8 +21,8 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
   stats: [
     { label: "Cursor \u00b7 Figma", value: "80 / 20" },
     { label: "Design tokens", value: "100" },
-    { label: "Components", value: "65" },
-    { label: "Case studies", value: "12" },
+    { label: "Components", value: "68" },
+    { label: "Case studies", value: String(getVisibleProjects().length) },
   ],
 };
 

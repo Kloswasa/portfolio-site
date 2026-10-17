@@ -58,13 +58,12 @@ export const WORK_HERO_META: WorkHeroMeta = {
     { label: "Disciplines", value: String(disciplineCount) },
     { label: "Industries", value: String(industryCount) },
     { label: "Years active", value: String(maxYear - minYear + 1) },
-    { label: "Collaborators", value: "10+" },
   ],
 };
 
 export const WORK_END_COPY: PageEndCopy = {
   kicker: "The end of the record",
-  titleLead: "If you like something more amuse,",
-  titleAccent: "Let's see my playground",
+  titleLead: "If you like something more amusing,",
+  titleAccent: "Let\u2019s see my playground",
   actions: [{ label: "Browse play →", href: "/play", variant: "primary" }],
 };

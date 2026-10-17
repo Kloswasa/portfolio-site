@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     id: 1,
     slug: "quiz-game",
-    title: "Australia Call",
+    title: "Australia Calls",
     description:
       "A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.",
     technologies: ["Next.js", "Tailwind", "Prisma", "Figma", "Procreate"],
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     yearLabel: "2025 · Product",
     industry: "Travel",
     liveUrl: "https://australia-call.vision-verse.com.au/",
-    coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Call cover image" },
+    coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Calls cover image" },
   },
   {
     id: 2,

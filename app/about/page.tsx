@@ -10,6 +10,7 @@ import {
   ABOUT_EDUCATION,
   ABOUT_EDUCATION_BLOCK,
   ABOUT_TIMELINE,
+  ABOUT_TIMELINE_ACTION,
   ABOUT_TIMELINE_BLOCK,
 } from "@/src/lib/about";
 
@@ -28,6 +29,7 @@ export default function AboutPage() {
         story={ABOUT_STORY}
         timelineBlock={ABOUT_TIMELINE_BLOCK}
         timeline={ABOUT_TIMELINE}
+        timelineAction={ABOUT_TIMELINE_ACTION}
         educationBlock={ABOUT_EDUCATION_BLOCK}
         education={ABOUT_EDUCATION}
         instrumentsBlock={ABOUT_INSTRUMENTS_BLOCK}

@@ -33,7 +33,7 @@ alt: Kuendee organic supply logo
 caption: Kuendee, an organic supply brand.
 size:md
 ## prose
-  Kuendee is an organic supplier of fertiliser and growing materials, biochar, clay pebbles, and more, aiming to distribute through home and hardware retailers.
+  Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers.
 
 
 ## prose
@@ -46,13 +46,13 @@ caption: Space constraint isometric and dimensions.
 size:md
 
 ## prose
-  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately.
+  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates, plus the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately.
 # work
 eyebrow: 02 · Work
 title: A system, not
 titleEm: a structure.
 ## prose
-  The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object, display units that recombine as the range rotates and the footprint changes from retailer to retailer.
+  The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object: display units that recombine as the range rotates and the footprint changes from retailer to retailer.
 ## process
 - num: "01"
   title: Constraints
@@ -67,7 +67,7 @@ titleEm: a structure.
 ## image
 src: /projects/kuendee/kuendee-design-approaches.gif
 alt: Sample booth display approaches using a variety of Kuendee products
-caption: Booth display approaches sample, using the customer's variety of products.
+caption: Booth display approaches sample, using the client's variety of products.
 
 ## prose
   The split into two zones became the organising logic rather than a limitation: gardening goods read as one coherent story, compost bins and bulk items as another, which let each side be packed tightly without becoming a jumble.
@@ -79,7 +79,7 @@ alt: Booth illustration samples including backdrop, infographic signage, and pro
 caption: Booth illustration sample, including backdrop, infographic signage, and product signs.
 
 ## prose
-  I then designed the graphic layer on top, an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration.
+  I then designed the graphic layer on top: an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration.
 
 ## button
 

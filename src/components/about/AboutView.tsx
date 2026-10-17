@@ -12,6 +12,7 @@ import type {
   AboutInstrumentGroup,
   AboutQuote as AboutQuoteData,
   AboutStory as AboutStoryData,
+  AboutTimelineAction,
   AboutTimelineEntry,
 } from "@/src/lib/about/types";
 
@@ -21,6 +22,7 @@ interface AboutViewProps {
   story: AboutStoryData;
   timelineBlock: AboutBlock;
   timeline: AboutTimelineEntry[];
+  timelineAction?: AboutTimelineAction;
   educationBlock: AboutBlock;
   education: AboutTimelineEntry[];
   instrumentsBlock: AboutBlock;
@@ -35,6 +37,7 @@ export function AboutView({
   story,
   timelineBlock,
   timeline,
+  timelineAction,
   educationBlock,
   education,
   instrumentsBlock,
@@ -70,7 +73,11 @@ export function AboutView({
         <AboutStory block={storyBlock} story={story} />
         <AboutInstruments block={instrumentsBlock} groups={instruments} />
         <AboutQuote quote={quote} />
-        <AboutTimeline block={timelineBlock} entries={timeline} />
+        <AboutTimeline
+          block={timelineBlock}
+          entries={timeline}
+          action={timelineAction}
+        />
         <AboutTimeline block={educationBlock} entries={education} />
       </div>
 

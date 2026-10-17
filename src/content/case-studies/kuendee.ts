@@ -52,7 +52,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Kuendee is an organic supplier of fertiliser and growing materials, biochar, clay pebbles, and more, aiming to distribute through home and hardware retailers."
+            "  Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers."
           ]
         },
         {
@@ -71,7 +71,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates and the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately."
+            "  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates, plus the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately."
           ]
         }
       ]
@@ -84,7 +84,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object, display units that recombine as the range rotates and the footprint changes from retailer to retailer."
+            "  The two requirements only reconcile through density and modularity, so I designed the booth as a set of parts rather than one object: display units that recombine as the range rotates and the footprint changes from retailer to retailer."
           ]
         },
         {
@@ -111,7 +111,7 @@ const kuendeeCaseStudy = {
           "type": "image",
           "src": "/projects/kuendee/kuendee-design-approaches.gif",
           "alt": "Sample booth display approaches using a variety of Kuendee products",
-          "caption": "Booth display approaches sample, using the customer's variety of products."
+          "caption": "Booth display approaches sample, using the client's variety of products."
         },
         {
           "type": "prose",
@@ -128,7 +128,7 @@ const kuendeeCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I then designed the graphic layer on top, an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration."
+            "  I then designed the graphic layer on top: an illustrated backdrop and a set of product infographics, so a shopper in a hardware aisle could understand what biochar or clay pebbles actually do, and so the identity held together across every configuration."
           ]
         },
         {

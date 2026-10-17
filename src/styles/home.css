@@ -238,6 +238,31 @@
   background: color-mix(in srgb, var(--color-bg) 70%, transparent);
 }
 
+button.home-about__skill {
+  margin: 0;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+  transition:
+    color var(--duration) var(--ease),
+    border-color var(--duration) var(--ease),
+    background-color var(--duration) var(--ease);
+}
+
+button.home-about__skill:hover {
+  color: var(--color-text);
+  border-color: var(--color-tertiary);
+}
+
+button.home-about__skill:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-tertiary) 35%, transparent);
+}
+
+button.home-about__skill:active {
+  opacity: 0.8;
+}
+
 .home-about__actions {
   display: flex;
   flex-wrap: wrap;
@@ -354,7 +379,57 @@
 }
 
 .home-about__panel-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3);
   margin-top: var(--spacing-8);
+}
+
+.home-about__socials {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.home-about__social {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  transition: color var(--duration) var(--ease);
+}
+
+.home-about__social:hover {
+  color: var(--color-accent);
+}
+
+.home-about__social:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 45%, transparent);
+}
+
+.home-about__social-icon {
+  display: block;
+  width: var(--spacing-6);
+  height: var(--spacing-6);
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.home-about__social-icon--linkedin {
+  -webkit-mask-image: url("/images/about/linkedin-svgrepo-com.svg");
+  mask-image: url("/images/about/linkedin-svgrepo-com.svg");
+}
+
+.home-about__social-icon--github {
+  -webkit-mask-image: url("/images/about/github-svgrepo-com.svg");
+  mask-image: url("/images/about/github-svgrepo-com.svg");
 }
 
 .home-about__stamp {

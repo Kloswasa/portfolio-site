@@ -1,13 +1,18 @@
 import { AboutBlockHead } from "@/src/components/about/AboutBlockHead";
 import { ScrollReveal } from "@/src/components/motion/ScrollReveal";
-import type { AboutBlock, AboutTimelineEntry } from "@/src/lib/about/types";
+import type {
+  AboutBlock,
+  AboutTimelineAction,
+  AboutTimelineEntry,
+} from "@/src/lib/about/types";
 
 interface AboutTimelineProps {
   block: AboutBlock;
   entries: AboutTimelineEntry[];
+  action?: AboutTimelineAction;
 }
 
-export function AboutTimeline({ block, entries }: AboutTimelineProps) {
+export function AboutTimeline({ block, entries, action }: AboutTimelineProps) {
   return (
     <ScrollReveal as="section" className="about-block">
       <AboutBlockHead block={block} />
@@ -43,6 +48,20 @@ export function AboutTimeline({ block, entries }: AboutTimelineProps) {
           </li>
         ))}
       </ol>
+
+      {action ? (
+        <div className="about-record__action">
+          <a
+            className="btn btn-gold"
+            href={action.href}
+            {...(action.external
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
+          >
+            {action.label}
+          </a>
+        </div>
+      ) : null}
     </ScrollReveal>
   );
 }

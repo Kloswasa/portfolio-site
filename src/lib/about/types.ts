@@ -67,6 +67,14 @@ export interface AboutTimelineEntry {
   tag?: string;
 }
 
+/** Optional button shown under a timeline list (e.g. CV download). */
+export interface AboutTimelineAction {
+  label: string;
+  href: string;
+  /** Opens in a new tab. */
+  external?: boolean;
+}
+
 export interface AboutInstrumentTag {
   label: string;
   key?: boolean;

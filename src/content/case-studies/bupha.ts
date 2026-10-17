@@ -46,7 +46,7 @@ const buphaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "An established local business wanted a secondary product line aimed at younger customers and gift buyers, same quality, warmer personality. The parent brand reads formal. Bupha needed to feel approachable from three metres on a market stall.",
+            "Bupha (boop-pah) began when an established local business wanted a secondary product line aimed at younger customers and gift buyers, with the same quality and a warmer personality. The parent brand reads formal. Bupha needed to feel approachable from three metres on a market stall.",
             "Scope covered label graphics, a small illustration set for three products, and a simple brand mark extension, not a full rebrand."
           ]
         },
@@ -99,7 +99,7 @@ const buphaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Six illustration motifs, ingredients, local landmarks, gift moments, mix across three product labels. Shared border treatment and rounded sans type unify the line without repeating the same hero image."
+            "Six illustration motifs (ingredients, local landmarks, gift moments) mix across three product labels. Shared border treatment and rounded sans type unify the line without repeating the same hero image."
           ]
         },
         {

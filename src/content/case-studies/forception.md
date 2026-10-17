@@ -171,7 +171,7 @@ caption: Each device body iteration
 
 - src: /projects/forception/forception-v5.webp
   alt: CAD of the final device showing sensor placement
-  caption: Final version with cover and uncover showing sensor arrangement
+  caption: Final version with and without the cover, showing sensor arrangement
 - src: /projects/forception/forception-assembly.webp
   alt: Final prototype, three connected units in a narrow band
   caption: Final version assembly drawing
@@ -210,7 +210,7 @@ Coming from industrial design, I treated internal structure as part of the job. 
 ## image
 
 src: /projects/forception/forception-prototype.webp
-alt: CAD section view of the TPU body showing internal ribs and bosses
+alt: The final version on the arm during an initial test
 caption: The final version on the arm during an initial test.
 
 # outcome
@@ -244,7 +244,7 @@ caption: Demo-day video. The device on the wall, with the app syncing in real ti
 
 
 ## prose
-  I also edited both pitch videos. The first, for the overseas judges, came together in 90 minutes between the end of testing and the deadline. The demo-day video showed the tester climbing with the app syncing live, so judges saw the full flow. I also refined the presentation visuals and suggested its flow.
+  I also edited both pitch videos. The first, for the overseas judges, came together in 90 minutes between the end of testing and the deadline. The demo-day video showed the tester climbing with the app syncing live, so judges saw the full flow. I also refined the presentation visuals and suggested the flow of the pitch.
 
 ## imagePair
 

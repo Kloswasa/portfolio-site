@@ -225,7 +225,7 @@ const forceptionCaseStudy = {
             {
               "src": "/projects/forception/forception-v5.webp",
               "alt": "CAD of the final device showing sensor placement",
-              "caption": "Final version with cover and uncover showing sensor arrangement"
+              "caption": "Final version with and without the cover, showing sensor arrangement"
             },
             {
               "src": "/projects/forception/forception-assembly.webp",
@@ -274,7 +274,7 @@ const forceptionCaseStudy = {
         {
           "type": "image",
           "src": "/projects/forception/forception-prototype.webp",
-          "alt": "CAD section view of the TPU body showing internal ribs and bosses",
+          "alt": "The final version on the arm during an initial test",
           "caption": "The final version on the arm during an initial test."
         }
       ]
@@ -310,7 +310,7 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I also edited both pitch videos. The first, for the overseas judges, came together in 90 minutes between the end of testing and the deadline. The demo-day video showed the tester climbing with the app syncing live, so judges saw the full flow. I also refined the presentation visuals and suggested its flow."
+            "  I also edited both pitch videos. The first, for the overseas judges, came together in 90 minutes between the end of testing and the deadline. The demo-day video showed the tester climbing with the app syncing live, so judges saw the full flow. I also refined the presentation visuals and suggested the flow of the pitch."
           ]
         },
         {

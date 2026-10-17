@@ -83,7 +83,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as Flomax at a glance, while the flexible layer, illustration, colour handling, and the energy of the layout, carried the shift toward a younger audience."
+            "  I separated the identity's load-bearing elements from the parts open to interpretation, then pushed hard on the open ones. The fixed elements stayed intact so the pack still read as Flomax at a glance, while the flexible layer (illustration, colour handling, and the energy of the layout) carried the shift toward a younger audience."
           ]
         },
         {
@@ -115,7 +115,7 @@ const flomaxCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it sits directly next to its adult counterpart."
+            "  The balance mattered more than usual here: a mask is only protective if it actually gets worn, so packaging that appeals to a child does real work, but the parent making the purchase still needs the product to read as a filtration product from a manufacturer they trust. The result had to earn attention on a shelf where it would sit directly next to its adult counterpart."
           ]
         },
         {

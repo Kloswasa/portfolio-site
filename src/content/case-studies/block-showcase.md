@@ -170,7 +170,7 @@ size: sm
   alt: Brolga illustration sample
   caption: imageGrid · item 2
 - src: /projects/quiz-game/quiz-game-cover.png
-  alt: Australia Call cover
+  alt: Australia Calls cover
   caption: imageGrid · item 3 (three or more images)
 
 ## imagePair

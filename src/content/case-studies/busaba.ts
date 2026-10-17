@@ -52,7 +52,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Busaba, a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for their new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
+            "  Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
           ]
         },
         {
@@ -76,7 +76,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I worked from two fixed sources as a reference, one per object. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it."
+            "  I worked from two fixed reference sources, one per object. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it."
           ]
         },
         {
@@ -102,7 +102,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  The fork's form is drawn from the client's own iconic traditional Thai architecture, extracting a curve and line applied into the cutlery form."
+            "  The fork's form is drawn from the client's own iconic traditional Thai architecture: a curve and line extracted and applied to the cutlery form."
           ]
         },
         {
@@ -120,7 +120,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Meanwhile, the dessert's Thong-Bolan silhouette comes from Ayutthaya's old currency, Pod-Duang, the shape and details minimised while still keeping the form of the currency."
+            "  Meanwhile, the dessert's Thong-Bolan silhouette comes from Ayutthaya's old currency, Pod-Duang, with its shape and details simplified while keeping the form of the currency."
           ]
         },
         {
@@ -190,7 +190,7 @@ const busabaCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "Translating fixed heritage, architecture, Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface."
+            "Translating fixed heritage, from architecture to Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface."
           ]
         },
         {

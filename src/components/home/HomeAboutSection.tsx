@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeAboutBotanical } from "@/src/components/home/HomeAboutBotanical";
+import { HomeAboutSkills } from "@/src/components/home/HomeAboutSkills";
 import {
   SnapItem,
   SnapSectionReveal,
@@ -8,7 +9,11 @@ import { ABOUT_HOME_TEASER } from "@/src/lib/about";
 import { siteConfig } from "@/src/lib/config";
 
 const SECTION_NUMBER = "03";
-const VISIBLE_SKILLS = 5;
+
+const PANEL_SOCIALS = [
+  { label: "LinkedIn", icon: "linkedin", href: siteConfig.social.linkedin },
+  { label: "GitHub", icon: "github", href: siteConfig.social.github },
+] as const;
 
 function AboutHeading({ text }: { text: string }) {
   const emphasis = "considered";
@@ -30,8 +35,6 @@ function AboutHeading({ text }: { text: string }) {
 export function HomeAboutSection() {
   const { email, location } = siteConfig;
   const teaser = ABOUT_HOME_TEASER;
-  const skills = teaser.skills.slice(0, VISIBLE_SKILLS);
-  const remainingSkills = teaser.skills.length - VISIBLE_SKILLS;
 
   return (
     <section id="about" data-snap-section="" className="home-about">
@@ -49,16 +52,7 @@ export function HomeAboutSection() {
 
             <p className="home-about__lead">{teaser.storyIntro}</p>
 
-            <div className="home-about__skills" aria-label="Focus areas">
-              {skills.map((skill) => (
-                <span className="home-about__skill" key={skill}>
-                  {skill}
-                </span>
-              ))}
-              {remainingSkills > 0 ? (
-                <span className="home-about__skill">+{remainingSkills} more</span>
-              ) : null}
-            </div>
+            <HomeAboutSkills skills={teaser.skills} />
 
             <div className="home-about__actions">
               <Link className="btn btn-secondary" href="/about">
@@ -80,11 +74,6 @@ export function HomeAboutSection() {
               <h3 className="home-about__panel-heading">
                 {teaser.availabilityHeading}
               </h3>
-
-              <p className="home-about__panel-copy">
-                {teaser.availabilityDescription}
-              </p>
-
               <dl className="home-about__stats">
                 <div>
                   <dt className="home-about__stat-label">Experience</dt>
@@ -95,17 +84,36 @@ export function HomeAboutSection() {
                   <dd className="home-about__stat-value">{location}</dd>
                 </div>
               </dl>
-
               <div className="home-about__panel-cta">
                 <a className="btn btn-gold" href={`mailto:${email}`}>
                   {email}
                 </a>
+                <div className="home-about__socials">
+                  {PANEL_SOCIALS.map((social) => (
+                    <a
+                      key={social.label}
+                      className="home-about__social"
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                    >
+                      <span
+                        className={`home-about__social-icon home-about__social-icon--${social.icon}`}
+                        aria-hidden="true"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
+              <p className="home-about__panel-copy">
+                {teaser.availabilityDescription}
+              </p>
             </div>
 
             <div className="home-about__stamp" aria-hidden="true">
-              <strong>{teaser.experience}</strong>
-              <span>Field record · {SECTION_NUMBER}</span>
+              
+             
             </div>
           </SnapItem>
         </div>

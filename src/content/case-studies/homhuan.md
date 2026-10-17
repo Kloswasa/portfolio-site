@@ -6,7 +6,7 @@ hero:
   eyebrow: "002 · Industrial Design · Heritage Translation · 2019"
   titleLine1: Hom
   titleLine2: Huan
-  summary: A collection of seven home fragrance products that translate Thai heritage scent practices from a century ago into objects that sit in a modern home without apology.
+  summary: A collection of seven home-fragrance products that translate Thai heritage scent practices from a century ago into objects that sit in a modern home without apology.
   layout: split
   image:
     src: /projects/homhuan/homhuan-cover.webp
@@ -30,9 +30,9 @@ titleEm: made for a modern home
 
 ## prose
 
-  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use, staying in the museum, and the modern home smells like nowhere in particular.
+  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use and staying in the museum, while the modern home smells like nowhere in particular.
 
-  Homhuan is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of the heritage, culture, mechanism, or form, and modernises it so it can sit in a contemporary space without explaining where it came from.
+  Homhuan (hawm-hoo-an) is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of its heritage, whether culture, mechanism, or form, and modernises it so it can sit in a contemporary space without explaining where it came from.
 
 ## stats
 
@@ -64,7 +64,7 @@ size: md
 
 ## prose
 
-  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob**, lit, extinguished, and trapped under a lid so its smoke perfumes a dessert, into a modern piece. It translated so cleanly it raised a bigger question.
+  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob** (lit, extinguished, and trapped under a lid so its smoke perfumes a dessert), into a modern piece. It translated so cleanly it raised a bigger question.
 
 ## pullquote
 
@@ -74,12 +74,12 @@ source: Reflection
 ## image
 
 src: /projects/homhuan/homhuan-research-diagram.png
-alt: stage
+alt: diagram
 caption: The whole method in one view.
 size: md
 
 ## prose
-  For the capstone I dove deeply into the heritage sources and the golden age of Thai fragrance a century ago.
+  For the capstone I dived deep into the heritage sources and the golden age of Thai fragrance a century ago.
     From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.
 
 
@@ -109,15 +109,15 @@ caption: The whole method in one view, seven heritage sources, each stripped to 
 
 - src: /projects/homhuan/homhuan-product-brass.webp
   alt: Aroma stove configured with a brass pan warming solid incense
-  caption: Brass pan over a tea light, dry heat warms solid incense, so scent releases faster and stronger with no flame touching it.
+  caption: Brass pan over a tea light, where dry heat warms solid incense, so scent releases faster and stronger with no flame touching it.
 - src: /projects/homhuan/homhuan-product-ceramic.webp
   alt: Aroma stove configured with a ceramic pot boiling an aroma bag
-  caption: Ceramic pot for wet heat, an aroma bag steeps like tea, giving a second, fuller way to run the same stove, mild and long.
+  caption: Ceramic pot for wet heat, where an aroma bag steeps like tea, giving a second, fuller way to run the same stove, mild and long.
 
 ## prose
 
 **Reed Diffuser, from the Thai floral mobile.** 
-  The woven garland was decorative, perishable, and hung. The pattern structure is kept and swapped for what it is made of, so the heritage form never compromises how well it diffuses.
+  The woven garland was decorative, perishable, and hung. The pattern structure is kept and the material swapped, so the heritage form never compromises how well it diffuses.
 
 ## imagePair
 
@@ -136,13 +136,13 @@ source: Reed Diffuser
 ## prose
 
 **The one I cut, a hanging perfuming candle.** 
-  A rich source, clean translation. It came from scenting a cabinet with a candle, made compact to hang upside down. However, it got cut anyway. An inverted candle is a safety risk at home, and the collection already scented enclosed spaces elsewhere. It failed twice, as an object you could live with, and as one the set needed.
+  A rich source, clean translation. It came from scenting a cabinet with a candle, made compact to hang upside down. Even so, it was cut. An inverted candle is a safety risk at home, and the collection already scented enclosed spaces elsewhere. It failed twice, as an object you could live with, and as one the set needed.
 
 ## image
 
 src: /projects/homhuan/homhuan-dropped-idea.webp
 alt: Concept sketch and render of the rejected upside-down hanging perfuming candle
-caption: Cut at concept stage on two compounding grounds, an inverted flame is unsafe at home, and another product already covered enclosed spaces.
+caption: Cut at concept stage on two compounding grounds: an inverted flame is unsafe at home, and another product already covered enclosed spaces.
 
 ## pullquote
 
@@ -191,7 +191,7 @@ caption: Concept render beside the finished collection, the family held even as 
 
 ## prose
 
-  Homhuan was designed and produced solo in three months across six materials, ceramic, brass, glass, paper, wax, and wood. One holder shape recurs throughout, varied only by colour and glaze, so seven objects still read as one family.
+  Homhuan was designed and produced solo in three months across six materials (ceramic, brass, glass, paper, wax, and wood). One holder shape recurs throughout, varied only by colour and glaze, so seven objects still read as one family.
 
 ## imageGrid
 
@@ -255,7 +255,7 @@ caption: Homhuan project displayed at Bangkok Design Week 2019
 ## prose
 
   The translation logic held. The objects did not all resolve. Seven products in three months meant most were built once, not iterated. 
-  The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, neither showed up until the object existed.
+  The stove is the clearest case: the gap between tea light and vessel was too tight, so it overheated, and without airflow holes the flame starved before burning to the end. Both are fixable in a second prototype, but neither showed up until the object existed.
 
 ## reflections
 

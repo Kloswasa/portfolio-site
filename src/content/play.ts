@@ -41,19 +41,19 @@ const ALL_PLAY_HERO_META: PlayHeroMeta = {
     { label: "Illustrations", value: "6" },
     { label: "Live sketches", value: "6" },
     { label: "Tools", value: "Canvas · SVG" },
-    { label: "Since", value: "2021" },
+    { label: "Since", value: "2019" },
   ],
 };
 
 const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
   ...ALL_PLAY_HERO_META,
   description:
-  "On and off the clock illustrations .\n Some from client work, \nsome made simply for the pleasure of it. \nClick to see the full image of each collection.",
+  "On and off the clock illustrations.\nSome from client work,\nsome made simply for the pleasure of it.\nClick to see the full image of each collection.",
    stats: [
     { label: "Illustrations", value: "6" },
     { label: "Media", value: "Digital" },
     { label: "Tools", value: "Procreate" },
-    { label: "Since", value: "2021" },
+    { label: "Since", value: "2019" },
   ],
 };
 
@@ -95,31 +95,31 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     images: [
       {
         src: "play/illustration/illustration-AUcall-cover.png",
-        alt: "AU Call — overall",
+        alt: "Australia Calls — overall",
         width: 595,
         height: 650,
       },
       {
         src: "play/illustration/illustration-AUcall-characters.png",
-        alt: "AU Call — characters",
+        alt: "Australia Calls — characters",
         width: 1458,
         height: 2064,
       },
       {
         src: "play/illustration/illustration-AUcall-quizes.png",
-        alt: "AU Call — quizes",
+        alt: "Australia Calls — quizzes",
         width: 1458,
         height: 1934,
       },
       {
         src: "play/illustration/illustration-AUcall-quizes-2.png",
-        alt: "AU Call — quizes-2",
+        alt: "Australia Calls — quizzes, part 2",
         width: 1458,
         height: 1934,
       },
       {
         src: "play/illustration/illustration-AUcall-scenes.png",
-        alt: "AU Call — scenes",
+        alt: "Australia Calls — scenes",
         width: 1200,
         height: 670,
       },
@@ -134,7 +134,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     dim: "Deity study · 2020",
     description:
       "A hand-rendered Ganesha study, ornamental line work balanced against open negative space. Inspired by my Bachelor degree university logo.",
-    cardDescription: "An illustration of Ganesha inpried from my university logo.",
+    cardDescription: "An illustration of Ganesha inspired by my university logo.",
     tools: ["Illustrator", "Photoshop", "Cultural"],
     tag: "Cultural",
     cardTools: "Digital · 2020",
@@ -151,7 +151,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     meta: "Digital · 2019",
     dim: "Home fragrance · 2019",
     description:
-      "Illustration exploring Thai home aroma ingredients from a wide range of scents, arrange in the inforgraphic booklet form.",
+      "Illustration exploring Thai home aroma ingredients from a wide range of scents, arranged in an infographic booklet form.",
     projectSlug: "thai-hom",
     cardDescription: "Thai home aroma ingredients for the infographic booklet.",
     tools: ["Digital", "Heritage", "Illustrator", "Photoshop"],
@@ -181,15 +181,15 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     medium: "illustration",
     index: "I·04",
     title: "Compose Zone",
-    meta: "Digital · 2023",
-    dim: "Booth design · 2023",
+    meta: "Digital · 2021",
+    dim: "Booth design · 2021",
     description:
       "A composition illustration in composition retail booth, the illustration apply to both backdrop and infographic signage.",
     projectSlug: "kuendee",
     cardDescription: "Illustration for the composition retail booth",
     tools: [ "Photoshop", "Printing"],
     tag: "Booth design",
-    cardTools: "Digital · 2023",
+    cardTools: "Digital · 2021",
     imageSrc: "play/illustration/illustration-kuendee-backdrop.png",
     imageAlt: "Compose Zone illustration",
     imageWidth: 595,
@@ -214,15 +214,15 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     medium: "illustration",
     index: "I·05",
     title: "In the Garden illustration",
-    meta: "Digital · 2023",
-    dim: "Packaging · 2023",
+    meta: "Digital · 2021",
+    dim: "Packaging · 2021",
     description:
       "A packaging illustration for the local entrepreneur's product. A quiet garden scene, layered foliage, dappled light, and small moments of growth observed at walking pace.",
     projectSlug: "bupha",
     cardDescription: "Packaging illustration for the local entrepreneur's product.",
     tools: ["Photoshop", "Procreate"],
     tag: "Packaging",
-    cardTools: "Digital · 2023",
+    cardTools: "Digital · 2021",
     imageSrc: "play/illustration/illustration-bupha.png",
     imageAlt: "Bupha packaging illustration",
     imageWidth: 595,

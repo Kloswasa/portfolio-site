@@ -33,7 +33,7 @@ caption: Busaba signature white Thai architecture hotel.
 size:md
 
 ## prose
-  Busaba, a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for their new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props.
+  Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props.
 
 ## pullquote
 
@@ -51,7 +51,7 @@ title: Heritage, translated
 titleEm: into form.
 
 ## prose
-  I worked from two fixed sources as a reference, one per object. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it.
+  I worked from two fixed reference sources, one per object. The design decision that held the piece together was pairing them, brand heritage in the tool, civic heritage on the plate, so the two objects read as a matched set rather than a dessert with cutlery beside it.
 
 ## process
 - num: "01"
@@ -65,7 +65,7 @@ titleEm: into form.
   body: Prototyping the fork for the hand. Setting the dessert form for repeatable service.
 
 ## prose
-  The fork's form is drawn from the client's own iconic traditional Thai architecture, extracting a curve and line applied into the cutlery form.
+  The fork's form is drawn from the client's own iconic traditional Thai architecture: a curve and line extracted and applied to the cutlery form.
 
 ## image
 src: /projects/busaba/busaba-fork-ref.webp
@@ -77,7 +77,7 @@ src: /projects/busaba/busaba-fork-design.webp
 alt: 3D render of the bespoke fork with the extracted architectural line applied
 caption: 3D render with the extracted line and form applied to the fork design.
 ## prose
-  Meanwhile, the dessert's Thong-Bolan silhouette comes from Ayutthaya's old currency, Pod-Duang, the shape and details minimised while still keeping the form of the currency.
+  Meanwhile, the dessert's Thong-Bolan silhouette comes from Ayutthaya's old currency, Pod-Duang, with its shape and details simplified while keeping the form of the currency.
 
 
 ## imagePair
@@ -115,7 +115,7 @@ caption: Live Busaba dessert bar
   label: Signature tableware
   body: Both dessert and fork served as the bar's signature pairing after opening.
 ## prose
-Translating fixed heritage, architecture, Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface.
+Translating fixed heritage, from architecture to Ayutthaya's currency, into new physical objects is the same move I make now, turning brand and context into a digital product interface.
 
 
 ## button

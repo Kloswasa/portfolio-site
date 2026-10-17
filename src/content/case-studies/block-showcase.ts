@@ -237,7 +237,7 @@ const blockShowcaseCaseStudy = {
             },
             {
               "src": "/projects/quiz-game/quiz-game-cover.png",
-              "alt": "Australia Call cover",
+              "alt": "Australia Calls cover",
               "caption": "imageGrid · item 3 (three or more images)"
             }
           ]
