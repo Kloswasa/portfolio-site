@@ -61,8 +61,7 @@ export function HomeAboutSection() {
               <a
                 className="btn btn-primary"
                 href={siteConfig.resume.downloadHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                download={siteConfig.resume.filename}
               >
                 Download CV ↓
               </a>

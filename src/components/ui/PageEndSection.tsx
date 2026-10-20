@@ -72,15 +72,26 @@ export function PageEndSection({
         <em>{copy.titleAccent}</em>
       </h2>
       <div className="page-end__actions">
-        {copy.actions.map((action) => (
-          <Link
-            key={action.label}
-            href={action.href}
-            className={ACTION_CLASS[action.variant]}
-          >
-            {action.label}
-          </Link>
-        ))}
+        {copy.actions.map((action) =>
+          action.download ? (
+            <a
+              key={action.label}
+              href={action.href}
+              download={action.download}
+              className={ACTION_CLASS[action.variant]}
+            >
+              {action.label}
+            </a>
+          ) : (
+            <Link
+              key={action.label}
+              href={action.href}
+              className={ACTION_CLASS[action.variant]}
+            >
+              {action.label}
+            </Link>
+          ),
+        )}
       </div>
     </ScrollReveal>
   );

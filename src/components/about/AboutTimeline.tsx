@@ -54,9 +54,11 @@ export function AboutTimeline({ block, entries, action }: AboutTimelineProps) {
           <a
             className="btn btn-gold"
             href={action.href}
-            {...(action.external
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
+            {...(action.download
+              ? { download: action.download }
+              : action.external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
           >
             {action.label}
           </a>

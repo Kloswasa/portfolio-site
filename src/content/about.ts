@@ -38,7 +38,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
       value: "Download CV",
       href: siteConfig.resume.downloadHref,
       variant: "accent",
-      external: true,
+      download: siteConfig.resume.filename,
     },
   ],
   contactHeading: "Contact",
@@ -97,7 +97,7 @@ export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
 export const ABOUT_TIMELINE_ACTION: AboutTimelineAction = {
   label: "Download CV \u2193",
   href: siteConfig.resume.downloadHref,
-  external: true,
+  download: siteConfig.resume.filename,
 };
 
 export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
@@ -255,6 +255,7 @@ export const ABOUT_END_COPY: AboutEndCopy = {
       label: "Download CV \u2193",
       href: siteConfig.resume.downloadHref,
       variant: "accent",
+      download: siteConfig.resume.filename,
     },
   ],
 };

@@ -12,8 +12,10 @@ export interface AboutHeroContact {
   value: string;
   href: string;
   variant: AboutHeroContactVariant;
-  /** Opens in a new tab. Use for the CV file and social profiles. */
+  /** Opens in a new tab. Use for profiles hosted on another site. */
   external?: boolean;
+  /** Suggested filename. Renders a file download instead of a new tab. */
+  download?: string;
 }
 
 export type AboutHeroSocialIcon = "github" | "linkedin";
@@ -73,6 +75,8 @@ export interface AboutTimelineAction {
   href: string;
   /** Opens in a new tab. */
   external?: boolean;
+  /** Suggested filename. Renders a file download instead of a new tab. */
+  download?: string;
 }
 
 export interface AboutInstrumentTag {

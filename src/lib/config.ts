@@ -15,8 +15,10 @@ export const siteConfig = {
     filename: "CV.pdf",
     year: "2026",
     note: "Two pages. Updated August 2026.",
-    downloadHref:
-      "https://drive.google.com/uc?export=download&id=1nkG1fe-w0nRGXvikKYSKybnOvuI4b6gq",
+    /** Same-origin file route. A direct Drive link opens the Drive page on mobile. */
+    downloadHref: "/cv",
+    sourceHref:
+      "https://drive.usercontent.google.com/download?id=1nkG1fe-w0nRGXvikKYSKybnOvuI4b6gq&export=download",
   },
 
   site: {

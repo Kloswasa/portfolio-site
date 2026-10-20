@@ -976,7 +976,7 @@ a.cs-major__image-credit:hover {
 /* Process */
 .cs-major__process {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin: var(--spacing-12) 0;
 }
@@ -986,7 +986,7 @@ a.cs-major__image-credit:hover {
   border-left: 1px solid var(--color-border);
 }
 
-.cs-major__process-col:first-child {
+.cs-major__process-col:nth-child(3n + 1) {
   border-left: none;
   padding-left: 0;
 }
@@ -1553,6 +1553,16 @@ a.cs-major__image-credit:hover {
     grid-template-columns: 1fr 1fr;
   }
 
+  .cs-major__process-col:nth-child(3n + 1) {
+    border-left: 1px solid var(--color-border);
+    padding-left: var(--spacing-6);
+  }
+
+  .cs-major__process-col:nth-child(odd) {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .cs-major__two-col {
     grid-template-columns: 1fr;
     gap: var(--spacing-6);
@@ -1609,6 +1619,11 @@ a.cs-major__image-credit:hover {
 
   .cs-major__process {
     grid-template-columns: 1fr;
+  }
+
+  .cs-major__process-col {
+    border-left: none;
+    padding-left: 0;
   }
 
   .cs-major__color-specimen {

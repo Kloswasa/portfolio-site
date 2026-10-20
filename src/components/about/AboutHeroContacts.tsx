@@ -39,9 +39,11 @@ export function AboutHeroContacts({
                 <a
                   className={CONTACT_CLASS[link.variant]}
                   href={link.href}
-                  {...(link.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
+                  {...(link.download
+                    ? { download: link.download }
+                    : link.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                 >
                   {link.value}
                 </a>
