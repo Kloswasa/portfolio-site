@@ -43,35 +43,26 @@ const kuendeeCaseStudy = {
       "titleEm": "full range.",
       "blocks": [
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/kuendee/kuendee-logo.png",
           "alt": "Kuendee organic supply logo",
+          "body": "Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers.",
           "caption": "Kuendee, an organic supply brand.",
           "size": "md"
         },
         {
-          "type": "prose",
-          "paragraphs": [
-            "  Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers."
-          ]
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other."
-          ]
-        },
-        {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/kuendee/kuendee-constraint-size.webp",
           "alt": "Isometric diagram showing the booth's space constraints and dimensions",
+          "body": "The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other.",
           "caption": "Space constraint isometric and dimensions.",
-          "size": "md"
+          "size": "md",
+          "side": "right"
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates, plus the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately."
+            "  The display also had to show as much of the range as possible, since a distributor’s value to a retailer is breadth. With a rotating product mix and each branch expecting its own selection, a single fixed build would have failed straight away."
           ]
         }
       ]

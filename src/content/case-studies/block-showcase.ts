@@ -24,7 +24,7 @@ const blockShowcaseCaseStudy = {
       },
       {
         "label": "Blocks",
-        "value": "19 content types"
+        "value": "20 content types"
       },
       {
         "label": "Format",
@@ -53,7 +53,7 @@ const blockShowcaseCaseStudy = {
           "type": "stats",
           "items": [
             {
-              "value": "19",
+              "value": "20",
               "label": "Block types",
               "variant": "dark"
             },
@@ -133,6 +133,21 @@ const blockShowcaseCaseStudy = {
               "body": "Each item has a mono-style label and a body paragraph beneath it."
             }
           ]
+        },
+        {
+          "type": "imageInfo",
+          "src": "/projects/jtimber/JTimber-logo.png",
+          "alt": "J.Timber wordmark",
+          "body": "imageInfo places a logo on the left and a paragraph on the right. Use it for a client mark beside a short description. **Bold** and [links](https://example.com) work in the body. Omit label when the paragraph is enough.",
+          "label": "J.Timber"
+        },
+        {
+          "type": "imageInfo",
+          "src": "/projects/jtimber/JTimber-logo.png",
+          "alt": "J.Timber wordmark",
+          "body": "side right swaps the pair, so the paragraph leads and the logo sits on the right.",
+          "label": "J.Timber",
+          "side": "right"
         }
       ]
     },
@@ -344,7 +359,7 @@ const blockShowcaseCaseStudy = {
           "type": "outcomes",
           "items": [
             {
-              "value": "19",
+              "value": "20",
               "label": "Blocks rendered",
               "body": "Every MajorContentBlock variant appears at least once on this page."
             },
@@ -371,7 +386,7 @@ const blockShowcaseCaseStudy = {
           "items": [
             "prose, body paragraphs with optional indentation.",
             "stats · pullquote · findings · annotation · twoCol, research and context blocks.",
-            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid, visual blocks.",
+            "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imageInfo · imagePair · imageGrid, visual blocks.",
             "process · callout · video, build and evidence blocks.",
             "outcomes · reflections, closing blocks for results and learnings."
           ]

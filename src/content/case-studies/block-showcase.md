@@ -15,7 +15,7 @@ hero:
     - label: Purpose
       value: Component reference
     - label: Blocks
-      value: 19 content types
+      value: 20 content types
     - label: Format
       value: Major case study
     - label: Status
@@ -36,7 +36,7 @@ The prose block is the workhorse, one or more paragraphs of body copy. Blank lin
 
 ## stats
 
-- value: "19"
+- value: "20"
   label: Block types
   variant: dark
 - value: "6"
@@ -91,6 +91,21 @@ text: Annotations render with a ↳ note prefix. Use them for asides that should
   body: Two-column blocks accept any number of items but read best with two parallel points.
 - label: Right column
   body: Each item has a mono-style label and a body paragraph beneath it.
+
+## imageInfo
+
+src: /projects/jtimber/JTimber-logo.png
+alt: J.Timber wordmark
+label: J.Timber
+body: imageInfo places a logo on the left and a paragraph on the right. Use it for a client mark beside a short description. **Bold** and [links](https://example.com) work in the body. Omit label when the paragraph is enough.
+
+## imageInfo
+
+src: /projects/jtimber/JTimber-logo.png
+alt: J.Timber wordmark
+label: J.Timber
+side: right
+body: side right swaps the pair, so the paragraph leads and the logo sits on the right.
 
 # concept
 
@@ -247,7 +262,7 @@ titleEm: and reflections
 
 ## outcomes
 
-- value: "19"
+- value: "20"
   label: Blocks rendered
   body: Every MajorContentBlock variant appears at least once on this page.
 - value: "2"
@@ -265,7 +280,7 @@ The outcome section closes the narrative arc. Pair outcome metrics with reflecti
 
 - prose, body paragraphs with optional indentation.
 - stats · pullquote · findings · annotation · twoCol, research and context blocks.
-- artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imagePair · imageGrid, visual blocks.
+- artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imageInfo · imagePair · imageGrid, visual blocks.
 - process · callout · video, build and evidence blocks.
 - outcomes · reflections, closing blocks for results and learnings.
 

@@ -26,27 +26,25 @@ eyebrow: 01 · Context
 title: Small footprint,
 titleEm: full range.
 
-
-## image
+## imageInfo
 src: /projects/kuendee/kuendee-logo.png
 alt: Kuendee organic supply logo
 caption: Kuendee, an organic supply brand.
 size:md
-## prose
-  Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers.
+side: left
+body: Kuendee (kuhn-dee) is an organic supplier of fertiliser and growing materials (biochar, clay pebbles, and more), aiming to distribute through home and hardware retailers.
 
-
-## prose
-  The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other.
-
-## image
+## imageInfo
 src: /projects/kuendee/kuendee-constraint-size.webp
 alt: Isometric diagram showing the booth's space constraints and dimensions
 caption: Space constraint isometric and dimensions.
 size:md
+side: right
+body: The brief set two requirements that pulled against each other. The space was limited by the retailer and had to be split into two distinct sides: gardening products on one, compost bins and larger goods on the other.
+
 
 ## prose
-  At the same time, the display had to carry as much of the range as possible, because a distributor's value to a retailer is showing breadth. Add a product mix that rotates, plus the client's own expectation that each branch would display a different selection, and a single fixed build would have failed immediately.
+  The display also had to show as much of the range as possible, since a distributor’s value to a retailer is breadth. With a rotating product mix and each branch expecting its own selection, a single fixed build would have failed straight away.
 # work
 eyebrow: 02 · Work
 title: A system, not

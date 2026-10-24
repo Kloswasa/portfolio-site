@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: "Australia Calls",
     description:
       "A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.",
-    technologies: ["Next.js", "Tailwind", "Prisma", "Figma", "Procreate"],
+    technologies: ["Next.js", "Prisma", "Procreate", "Figma", "Tailswind"],
     tone: "primary",
     workTab: "product",
     caseStudyKind: "major",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     title: "Forception",
     description:
       "A muscle-sensing wearable for climbers that shows what each move cost, not just what it looked like.",
-    technologies: ["Wearable hardware","CAD", "Physical device" ],
+    technologies: ["Wearable hardware","CAD", "Collaboration" ],
     tone: "primary",
     workTab: "industrial",
     caseStudyKind: "major",

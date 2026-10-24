@@ -43,20 +43,12 @@ const forceptionCaseStudy = {
       "titleEm": "Built in two weeks",
       "blocks": [
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/forception/capricorn-logo.svg",
           "alt": "Capricorn Tech logo",
+          "body": "This project was built for the [Capricorn Productathon 2026](https://www.capricorntech.com.au/builder) under the \"AI × Sports\" theme. Our team focused on bouldering.",
           "caption": "Capricorn Tech Connect Pty Ltd.",
           "size": "md"
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  This project was built for the [Capricorn Productathon 2026](https://www.capricorntech.com.au/builder) under the \"AI × Sports\" theme. Our team focused on bouldering.",
-            "  We caught a pain point. Climbers film themselves to improve, but a recording shows how the body moved. It can't show how hard the forearm worked, or why a session still hurts the next day.",
-            "  Two teammates boulder regularly and kept running into that gap. Most training tools are camera-based, so they share the blind spot.",
-            "  Our team split the tasks. I owned physical device design. The device's job: hold the sensor on exactly the right muscle while the climber pulls hard."
-          ]
         },
         {
           "type": "stats",
@@ -67,20 +59,16 @@ const forceptionCaseStudy = {
               "variant": "dark"
             },
             {
-              "value": "$500",
-              "label": "Prototype funding",
-              "variant": "mid"
-            },
-            {
-              "value": "5",
-              "label": "Printed versions",
-              "variant": "mid"
-            },
-            {
               "value": "5",
               "label": "Team members",
               "variant": "light"
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "paragraphs": [
+            "  Our team split the tasks. I owned physical device design, which need to **build from scratch with custom sensors planning under two weeks timeline.**"
           ]
         }
       ]
@@ -93,7 +81,8 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "We looked at the two kinds of tools already in use."
+            " We caught a pain point. Climbers film themselves to improve, but a recording shows how the body moved. It can't show how hard the forearm worked, or why a session still hurts the next day.",
+            "  Our two teammates boulder regularly and kept running into that gap. Most training tools are camera-based, so they share the blind spot. Therefore, we looked at the two kinds of tools already in use."
           ]
         },
         {
@@ -112,13 +101,6 @@ const forceptionCaseStudy = {
               "imageAlt": "Catapult logo"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  Neither reads the forearm, where a climber's grip gives out. So we kept the camera and added the arm. A phone records the session while AI tracks movement, and a forearm wearable reads muscle activity through EMG, motion and proximity sensors. The app syncs both, showing what each move cost, not just what it looked like.",
-            "  EMG, in particular, set the rules for my part. The sensor only reads cleanly when it sits flat on the right muscle position and stays pressed there, so the device had to grip firmly, survive being pulled against, and stay out of the way."
-          ]
         }
       ]
     },
@@ -128,6 +110,13 @@ const forceptionCaseStudy = {
       "titleEm": "The problem wasn't size, but arrangement.",
       "blocks": [
         {
+          "type": "prose",
+          "paragraphs": [
+            "  \n  Neither products in market reads the forearm, where a climber's grip fails.\n  Therefore, we decide to keep the camera and added the arm. **A phone records the session while AI tracks movement, and a forearm wearable reads muscle activity through EMG, motion and proximity sensors. The app syncs both, showing what each move cost, not just how it looked.**",
+            "  **EMG set the rules for my part.** It only reads cleanly when it sits flat on the right muscle and stays pressed there, so the device had to grip firmly, survive being pulled against, and stay out of the way."
+          ]
+        },
+        {
           "type": "image",
           "src": "/projects/forception/forception-paper-sizing.webp",
           "alt": "Paper cut-outs used to estimate the device's footprint on a forearm",
@@ -136,49 +125,39 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  I started with paper cut-outs, split into units, to estimate the footprint, before I knew how the wiring could run.",
-            "  Then our team proposed combining everything into one unit and stacking the sensors, to minimise the size. Therefore, I planned wire channels around every part, and ribs and bosses to hold it all under strap tension."
+            "  I started with paper cut-outs, split into units, to estimate the footprint, before I knew how the wiring could run."
           ]
         },
         {
-          "type": "imagePair",
-          "items": [
-            {
-              "src": "/projects/forception/forception-first-prototype.webp",
-              "alt": "First prototype, a single flat rectangular TPU body",
-              "caption": "V1: one 14.2 × 6.7 cm body. It fit the parts, not the arm."
-            },
-            {
-              "src": "/projects/forception/forception-final-prototype.webp",
-              "alt": "Final prototype, three connected units in a narrow band",
-              "caption": "Final: 14.6 × 5.9 cm across three units. Same footprint, and it bends."
-            }
-          ]
+          "type": "image",
+          "src": "/projects/forception/forception-first-prototype.webp",
+          "alt": "First prototype, a single flat rectangular TPU body",
+          "caption": "\"V1: one 14.2 × 6.7 cm body. It fit the parts, not the arm.\""
         },
         {
           "type": "prose",
           "paragraphs": [
-            "  The final version is nearly the same size, at 14.6 × 5.9 cm. I didn't shrink it. I split it into three units with flexing gaps, each sized to what it holds. The button unit is just 3.2 × 3.2 cm."
+            " Then our team proposed combining everything into one unit and stacking the sensors, to minimise the size. Therefore, I planned wire channels around every part, and ribs and bosses to hold it all under strap tension."
           ]
         }
       ]
     },
     "craft": {
       "eyebrow": "04 · Craft",
-      "title": "Designing around parts that kept moving",
-      "titleEm": "Every version started with something new",
+      "title": "Designing follow requirements",
+      "titleEm": "that kept moving",
       "blocks": [
-        {
-          "type": "image",
-          "src": "/projects/forception/forception-iterations.webp",
-          "alt": "Each device body iteration",
-          "caption": "Each device body iteration"
-        },
         {
           "type": "prose",
           "paragraphs": [
             "  Each version after V1 began with new information: an added part, a relaxed wiring constraint, or a sensor in the wrong place. My job was to turn each change into a print fast enough to keep to a two-week schedule."
           ]
+        },
+        {
+          "type": "image",
+          "src": "/projects/forception/forception-iterations.webp",
+          "alt": "Each device body iteration",
+          "caption": "Each device body iteration"
         },
         {
           "type": "process",
@@ -238,8 +217,8 @@ const forceptionCaseStudy = {
     },
     "build": {
       "eyebrow": "05 · Build",
-      "title": "Five prints in under two weeks",
-      "titleEm": "Two to six hours from a change to a part on the arm",
+      "title": "Five prints, two weeks",
+      "titleEm": "Be flexible",
       "blocks": [
         {
           "type": "prose",
@@ -267,27 +246,22 @@ const forceptionCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**TPU for the body, PLA for the cover.** The body flexes around the forearm and takes the strap's pull. The rigid PLA cover adds durability and a window for the proximity sensor.",
-            "Coming from industrial design, I treated internal structure as part of the job. The team's earlier projects left components loose. Here, every part sits in its own ribs and bosses."
+            "  **TPU for the body, PLA for the cover.** The body flexes around the forearm and takes the strap's pull. The rigid PLA cover adds durability and a window for the proximity sensor.",
+            "  Coming from industrial design, I treated internal structure as part of the job. The team's earlier projects left components loose. Here, every part sits in its own ribs and bosses."
           ]
-        },
-        {
-          "type": "image",
-          "src": "/projects/forception/forception-prototype.webp",
-          "alt": "The final version on the arm during an initial test",
-          "caption": "The final version on the arm during an initial test."
         }
       ]
     },
     "outcome": {
       "eyebrow": "06 · Outcome",
       "title": "A climber, a gym, an honest limitation",
-      "titleEm": "First runner-up from 14 teams",
+      "titleEm": "and the result",
       "blocks": [
         {
-          "type": "pullquote",
-          "text": "It helps me learn what I need to focus on.",
-          "source": "Climber, gym field test"
+          "type": "video",
+          "src": "https://www.youtube.com/embed/_rQ5V7L8ucY",
+          "alt": "Demo-day video of the device on the wall, with the app syncing in real time",
+          "caption": "Demo-day video. The device on the wall, with the app syncing in real time."
         },
         {
           "type": "prose",
@@ -296,10 +270,9 @@ const forceptionCaseStudy = {
           ]
         },
         {
-          "type": "video",
-          "src": "https://www.youtube.com/embed/_rQ5V7L8ucY",
-          "alt": "Demo-day video of the device on the wall, with the app syncing in real time",
-          "caption": "Demo-day video. The device on the wall, with the app syncing in real time."
+          "type": "pullquote",
+          "text": "It helps me learn what I need to focus on.",
+          "source": "Climber, gym field test"
         },
         {
           "type": "prose",

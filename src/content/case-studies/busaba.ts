@@ -43,28 +43,24 @@ const busabaCaseStudy = {
       "titleEm": "the table.",
       "blocks": [
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/busaba/busaba-architecture.webp",
           "alt": "Busaba's signature white Thai architecture hotel facade",
+          "body": "Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props.",
           "caption": "Busaba signature white Thai architecture hotel.",
-          "size": "md"
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props."
-          ]
-        },
-        {
-          "type": "pullquote",
-          "text": "Both had to survive real service.",
-          "source": "The constraint"
+          "size": "md",
+          "side": "right"
         },
         {
           "type": "prose",
           "paragraphs": [
             "  The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place."
           ]
+        },
+        {
+          "type": "pullquote",
+          "text": "Both had to survive real service.",
+          "source": "The constraint"
         }
       ]
     },

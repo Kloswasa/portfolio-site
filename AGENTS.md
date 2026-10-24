@@ -155,13 +155,13 @@ Major studies use `brief → research → concept → craft → build → outcom
 
 Minor studies use `context → work → outcome`, with an optional `approach` section between `context` and `work`. Set optional `approachLabel` in frontmatter to customize that section’s navigation label.
 
-**Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `button`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imagePair`, `imageGrid`, `video`
+**Supported block types:** `prose`, `stats`, `pullquote`, `findings`, `annotation`, `twoCol`, `artifact`, `process`, `callout`, `button`, `ornament`, `colorSpecimen`, `typeSpecimen`, `componentGrid`, `outcomes`, `reflections`, `image`, `imageInfo`, `imagePair`, `imageGrid`, `video`
 
 **Full shortlist + syntax:** [`docs/case-study-blocks.md`](docs/case-study-blocks.md)
 
 **Image export sizes** (covers, heroes, blocks, GIFs, play, about): [`docs/image-sizes.md`](docs/image-sizes.md)
 
-- Key-value blocks (`pullquote`, `video`, `image`, `artifact`, `callout`, `annotation`): `key: value` lines under `## blockType`
+- Key-value blocks (`pullquote`, `video`, `image`, `imageInfo`, `artifact`, `callout`, `annotation`): `key: value` lines under `## blockType`
 - List blocks (`stats`, `findings`, `twoCol`, `process`, `outcomes`, `componentGrid`, `imagePair`, `imageGrid`): YAML list under `## blockType`
 - Empty blocks (`ornament`, `colorSpecimen`, `typeSpecimen`): `## blockType` with no body
 - `reflections`: markdown `-` list items

@@ -30,23 +30,14 @@ titleEm: made for a modern home
 
 ## prose
 
-  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use and staying in the museum, while the modern home smells like nowhere in particular.
-
   Homhuan (hawm-hoo-an) is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of its heritage, whether culture, mechanism, or form, and modernises it so it can sit in a contemporary space without explaining where it came from.
 
 ## stats
-
-- value: "7"
-  label: Products
-  variant: dark
-- value: "6"
-  label: Materials
-  variant: mid
-- value: "5"
-  label: Signature scents
+- value: "Solo"
+  label: Capstone project
   variant: mid
 - value: "3mo"
-  label: Solo, research to production
+  label: Research to production
   variant: light
 
 # research
@@ -55,33 +46,28 @@ eyebrow: 02 · Research
 title: A century back,
 titleEm: then forward
 
-## image
+
+## imageInfo
 
 src: /projects/homhuan/homhuan-tienob.webp
 alt: Tienob sample
 caption: Tian ob, the beginning of the project
 size: md
-
-## prose
-
-  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob** (lit, extinguished, and trapped under a lid so its smoke perfumes a dessert), into a modern piece. It translated so cleanly it raised a bigger question.
+side: left
+body:  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob** (lit, extinguished, and trapped under a lid so its smoke perfumes a dessert), into a modern piece. It translated so cleanly it raised a bigger question.
 
 ## pullquote
 
 text: If one heritage practice works this well, what would a whole collection look like?
 source: Reflection
 
-## image
-
+## imageInfo
 src: /projects/homhuan/homhuan-research-diagram.png
 alt: diagram
 caption: The whole method in one view.
 size: md
-
-## prose
-  For the capstone I dived deep into the heritage sources and the golden age of Thai fragrance a century ago.
-    From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.
-
+side: left
+body:  For the capstone I dived deep into the heritage sources and the golden age of Thai fragrance a century ago. From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.
 
 
 # concept

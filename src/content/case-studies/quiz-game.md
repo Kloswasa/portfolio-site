@@ -30,11 +30,7 @@ titleEm: applied to travel
 
 ## prose
 
-  A personality quiz result is easy to make and easy to forget. A one-word label gets played once and closed, leaving a newcomer no closer to knowing where to go. The result had to be useful, or it was just a horoscope.
-
-    **The brief**: design a quiz that helps newcomers to Australia, including in Melbourne and Sydney, find their travel style using Holland's personality model.
-
-Two things in that brief made it harder than a normal quiz.
+    **The brief**: design a quiz that helps newcomers to Australia, including in Melbourne and Sydney, find their travel style using Holland's personality model. Two things in that brief made it harder than a normal quiz.
 
 
 

@@ -362,10 +362,10 @@ function parseComponentGridBlock(text: string): MajorContentBlock {
   };
 }
 
-function parseImageSize(value: string | undefined): "sm" | "md" | undefined {
+function parseImageSize(value: string | undefined): "sm" | "md" | "lg" | undefined {
   if (!value) return undefined;
-  if (value !== "sm" && value !== "md") {
-    throw new Error('image size must be "sm" or "md" (omit for full width)');
+  if (value !== "sm" && value !== "md" && value !== "lg") {
+    throw new Error('image size must be "sm", "md", or "lg" (omit for full width)');
   }
   return value;
 }
@@ -405,6 +405,32 @@ function splitListBlockMeta(text: string): {
   }
 
   return { meta, listText: lines.slice(i).join("\n") };
+}
+
+function parseImageInfoBlock(text: string): MajorContentBlock {
+  const fields = parseKeyValueBlock(text);
+
+  if (!fields.src || !fields.alt || !fields.body) {
+    throw new Error("imageInfo blocks require src:, alt:, and body: fields");
+  }
+
+  const size = parseImageSize(fields.size);
+  const side = fields.side;
+
+  if (side && side !== "left" && side !== "right") {
+    throw new Error('imageInfo side must be "left" or "right"');
+  }
+
+  return {
+    type: "imageInfo",
+    src: fields.src,
+    alt: fields.alt,
+    body: fields.body,
+    ...(fields.label ? { label: fields.label } : {}),
+    ...(fields.caption ? { caption: fields.caption } : {}),
+    ...(size ? { size } : {}),
+    ...(side === "right" ? { side: "right" as const } : {}),
+  };
 }
 
 function parseImageBlock(text: string): MajorContentBlock {
@@ -549,6 +575,8 @@ function parseBlock(type: string, text: string): MajorContentBlock {
       return parseReflectionsBlock(text);
     case "image":
       return parseImageBlock(text);
+    case "imageInfo":
+      return parseImageInfoBlock(text);
     case "imagePair":
       return parseImagePairBlock(text);
     case "imageGrid":

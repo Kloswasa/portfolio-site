@@ -324,7 +324,10 @@ function Block({ block }: { block: MajorContentBlock }) {
 
     case "outcomes":
       return (
-        <div className="cs-major__outcomes">
+        <div
+          className="cs-major__outcomes"
+          data-count={block.items.length}
+        >
           {block.items.map((item) => (
             <div key={item.label} className="cs-major__outcome">
               <div className="cs-major__outcome-val">{item.value}</div>
@@ -356,6 +359,42 @@ function Block({ block }: { block: MajorContentBlock }) {
             ))}
           </ol>
         </>
+      );
+
+    case "imageInfo":
+      return (
+        <div
+          className={[
+            "cs-major__image-info",
+            block.size ? `cs-major__image-info--${block.size}` : null,
+            block.side === "right" ? "cs-major__image-info--right" : null,
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
+          <figure className="cs-major__image-info-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={block.src}
+              alt={block.alt}
+              className="cs-major__image-info-img"
+              loading="lazy"
+            />
+            {block.caption ? (
+              <figcaption className="cs-major__image-info-caption">
+                {block.caption}
+              </figcaption>
+            ) : null}
+          </figure>
+          <div className="cs-major__image-info-copy">
+            {block.label ? (
+              <div className="cs-major__image-info-label">{block.label}</div>
+            ) : null}
+            <p className="cs-major__image-info-body">
+              <InlineText text={block.body} />
+            </p>
+          </div>
+        </div>
       );
 
     case "image":

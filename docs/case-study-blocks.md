@@ -26,8 +26,9 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `componentGrid` | YAML list | Component inventory cards (`label`, `title`, `count`, `variant`: primary \| dark \| mid \| deepest) |
 | `outcomes` | YAML list | Result metrics (`value`, `label`, `body`) |
 | `reflections` | `-` list | Numbered takeaways |
-| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
-| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
+| `image` | key-value | Single image (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`, optional `size`: sm \| md \| lg). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
+| `imageInfo` | key-value | Image beside a paragraph (`src`, `alt`, `body`; optional `label`, optional `caption`, optional `size`: sm \| md \| lg, optional `side`: left \| right). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
+| `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md \| lg). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `video` | key-value | File or YouTube (`src`, `alt`, `caption`; `poster` required for a file) |
 
@@ -47,9 +48,9 @@ First paragraph with **bold emphasis** and a [linked phrase](https://example.com
 Second paragraph after a blank line.
 ```
 
-Inline `**bold**` also works in body fields on `pullquote`, `findings`, `annotation`, `twoCol`, `process`, `callout`, `outcomes`, and `reflections`.
+Inline `**bold**` also works in body fields on `pullquote`, `findings`, `annotation`, `twoCol`, `imageInfo`, `process`, `callout`, `outcomes`, and `reflections`.
 
-### Key-value — `pullquote`, `annotation`, `callout`, `button`, `artifact`, `image`, `video`
+### Key-value — `pullquote`, `annotation`, `callout`, `button`, `artifact`, `image`, `imageInfo`, `video`
 
 ```markdown
 ## pullquote
@@ -72,6 +73,22 @@ credit: Photo by Jane Doe
 creditHref: https://example.com/photo
 size: sm
 
+## imageInfo
+
+src: /projects/example/logo.svg
+alt: Client logo
+label: Client name
+body: A short paragraph about the client. **Bold** and [a link](https://example.com) work in the body. Omit label when the paragraph is enough on its own.
+
+## imageInfo
+
+src: /projects/example/facade.webp
+alt: Hotel facade
+caption: Optional caption under the image
+size: md
+side: right
+body: side right places the photograph on the right and the paragraph on the left. Omit side, or set left, to keep the image on the left.
+
 ## video
 
 src: /projects/example/clip.mp4
@@ -88,7 +105,7 @@ caption: Caption under the player
 
 A file `src` (`.mp4`) needs `poster`. A YouTube link does not: `youtube.com/watch`, `youtu.be`, `/embed`, `/shorts`, and `/live` all work. A `t` or `start` time in the URL is kept.
 
-`size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures.
+`size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures, `lg` for large figures.
 
 Optional `credit` is an attribution line under the caption. Add `creditHref` to make it a link (opens in a new tab). `creditHref` requires `credit`.
 
@@ -170,8 +187,9 @@ Recommended pixel dimensions for each `size` token, including GIFs: [`docs/image
 
 | Block | Count | Size |
 |-------|-------|------|
-| `image` | 1 | optional `size: sm` \| `md` (default full width). GIF: 680px wide / ≤ 1.5 MB |
-| `imagePair` | 2 | optional block-level `size: sm` \| `md` above the list |
+| `image` | 1 | optional `size: sm` \| `md` \| `lg` (default full width). GIF: 680px wide / ≤ 1.5 MB |
+| `imageInfo` | 1 image + paragraph | omit `size` or `sm` for a logo (10rem wide, 5rem tall). `size: md` for a photograph (20rem wide). `size: lg` for a large photograph (32rem wide). `side: right` puts the image on the right |
+| `imagePair` | 2 | optional block-level `size: sm` \| `md` \| `lg` above the list |
 | `imageGrid` | 3+ | always full width |
 
 ---

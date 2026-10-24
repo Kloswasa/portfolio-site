@@ -28,25 +28,24 @@ eyebrow: 01 · Context
 title: A mood board is
 titleEm: not a decision.
 
-## image
+## imageInfo
 src: /projects/bhae/bhaesaj-original.png
 alt: Bhaesaj traditional lip balm brand logo
-caption: Bhaesaj logo
-size: sm
+caption: Bhaesaj lipbalm with logo
+size:md
+side: left
+body: Bhaesaj (pay-sat), a Thai traditional lip balm brand founded in 1989, is modernising its image. The brand strategist and design team developed a new "modern classic" visual direction, clean, spacious, and inspired by classic medicine labels, and invited me to redesign the brand's original lip balm packaging to match.
 
-## prose
-  Bhaesaj (pay-sat), a Thai traditional lip balm brand founded in 1989, is modernising its image.
-  The brand strategist and design team developed a new "modern classic" visual direction, clean, spacious, and inspired by classic medicine labels, and invited me to redesign the brand's original lip balm packaging to match.
 
-## image
+## imageInfo
 src: /projects/bhae/bhaesaj-direction-branding.png
 alt: Mood board for the Bhaesaj modern classic packaging direction
-caption: Moodboard
+caption: Initial moodboard
+size:lg
+side: right
+body:  A board carries a feeling and a mood, but it was my job to decide what the packaging should be: its thickness, lid mechanic, and surface finish, so that it reads as heritage rather than pastiche.
+ The direction also carried its own trap: classic and modern balance on a narrow line, and a direction that leans too far either way misses on both counts at once.
 
-
-## prose
-  A board carries a feeling and a mood, but it was my job to decide what the packaging should be: its thickness, lid mechanic, and surface finish, so that it reads as heritage rather than pastiche.
-  The direction also carried its own trap: classic and modern balance on a narrow line, and a direction that leans too far either way misses on both counts at once.
 
 # work
 eyebrow: 02 · Work

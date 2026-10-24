@@ -45,7 +45,6 @@ const homhuanCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "  Home fragrance is bought, used, and refilled endlessly, yet it is almost always culturally anonymous. Meanwhile the Thai heritage scent practices of a century ago are disappearing from use and staying in the museum, while the modern home smells like nowhere in particular.",
             "  Homhuan (hawm-hoo-an) is a collection of seven home-fragrance products, each translated from a different Thai heritage scent practice of a century ago. Every object keeps part of its heritage, whether culture, mechanism, or form, and modernises it so it can sit in a contemporary space without explaining where it came from."
           ]
         },
@@ -53,23 +52,13 @@ const homhuanCaseStudy = {
           "type": "stats",
           "items": [
             {
-              "value": "7",
-              "label": "Products",
-              "variant": "dark"
-            },
-            {
-              "value": "6",
-              "label": "Materials",
-              "variant": "mid"
-            },
-            {
-              "value": "5",
-              "label": "Signature scents",
+              "value": "Solo",
+              "label": "Capstone project",
               "variant": "mid"
             },
             {
               "value": "3mo",
-              "label": "Solo, research to production",
+              "label": "Research to production",
               "variant": "light"
             }
           ]
@@ -82,17 +71,12 @@ const homhuanCaseStudy = {
       "titleEm": "then forward",
       "blocks": [
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/homhuan/homhuan-tienob.webp",
           "alt": "Tienob sample",
+          "body": "Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob** (lit, extinguished, and trapped under a lid so its smoke perfumes a dessert), into a modern piece. It translated so cleanly it raised a bigger question.",
           "caption": "Tian ob, the beginning of the project",
           "size": "md"
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  Homhuan started from one object. In an earlier project I had reworked a single Thai heritage candle, **tian ob** (lit, extinguished, and trapped under a lid so its smoke perfumes a dessert), into a modern piece. It translated so cleanly it raised a bigger question."
-          ]
         },
         {
           "type": "pullquote",
@@ -100,17 +84,12 @@ const homhuanCaseStudy = {
           "source": "Reflection"
         },
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/homhuan/homhuan-research-diagram.png",
           "alt": "diagram",
+          "body": "For the capstone I dived deep into the heritage sources and the golden age of Thai fragrance a century ago. From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes.",
           "caption": "The whole method in one view.",
           "size": "md"
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  For the capstone I dived deep into the heritage sources and the golden age of Thai fragrance a century ago.\n    From that research, heritage fragrance could be categorised into five families and eighteen types. Most of what I found described a way of living, how people used scent day to day. That let me translate rituals, not just shapes."
-          ]
         }
       ]
     },

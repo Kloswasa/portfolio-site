@@ -8,6 +8,7 @@ import type { Project } from "@/src/lib/projects";
 function collectFromBlock(block: MajorContentBlock, urls: Set<string>): void {
   switch (block.type) {
     case "image":
+    case "imageInfo":
       urls.add(block.src);
       break;
     case "imagePair":

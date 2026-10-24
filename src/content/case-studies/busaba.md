@@ -26,24 +26,23 @@ eyebrow: 01 · Context
 title: Heritage to
 titleEm: the table.
 
-## image
+## imageInfo
+
 src: /projects/busaba/busaba-architecture.webp
 alt: Busaba's signature white Thai architecture hotel facade
 caption: Busaba signature white Thai architecture hotel.
-size:md
+size: md
+side: right
+body: Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props.
+
 
 ## prose
-  Busaba (boot-sa-bah), a hotel and café in Ayutthaya, wanted a signature dessert and its own presentation for its new fine dessert bar, objects that felt native to where they stood, not generic fine-dining props.
+  The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place.
 
 ## pullquote
 
 text: Both had to survive real service.
 source: The constraint
-
-
-
-## prose
-  The dessert had to be repeatable by the kitchen, the fork producible and comfortable in the hand. Success meant two objects a guest would recognise as belonging only to this place.
 
 # work
 eyebrow: 02 · Work

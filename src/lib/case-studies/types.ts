@@ -100,7 +100,26 @@ export type MajorContentBlock =
       credit?: string;
       creditHref?: string;
       /** Omit for full content width. */
-      size?: "sm" | "md";
+      size?: "sm" | "md" | "lg";
+    }
+  | {
+      /** Image on the left, paragraph on the right. */
+      type: "imageInfo";
+      src: string;
+      alt: string;
+      /** Optional heading above the paragraph, e.g. the client name. */
+      label?: string;
+      /** Optional line under the image. */
+      caption?: string;
+      /**
+       * Omit or `sm` for a logo (10rem, 5rem tall).
+       * `md` for a photograph (20rem).
+       * `lg` for a large photograph (32rem).
+       */
+      size?: "sm" | "md" | "lg";
+      /** Which side the image sits on. Defaults to the left. */
+      side?: "left" | "right";
+      body: string;
     }
   | {
       type: "imagePair";
@@ -112,7 +131,7 @@ export type MajorContentBlock =
         creditHref?: string;
       }[];
       /** Omit for full content width. */
-      size?: "sm" | "md";
+      size?: "sm" | "md" | "lg";
     }
   | {
       type: "imageGrid";

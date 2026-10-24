@@ -43,29 +43,21 @@ const flomaxCaseStudy = {
       "titleEm": "same brand.",
       "blocks": [
         {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/flomax/flomax-logo.png",
           "alt": "Flomax logo for an air filter manufacturer",
+          "body": "Flomax, an air filter manufacturer, had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down.",
           "caption": "Flomax, an air filter manufacturer.",
           "size": "md"
         },
         {
-          "type": "prose",
-          "paragraphs": [
-            "  Flomax, an air filter manufacturer, had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down."
-          ]
-        },
-        {
-          "type": "image",
+          "type": "imageInfo",
           "src": "/projects/flomax/flomax-original-pack.png",
           "alt": "Flomax filter mask original package",
-          "caption": "Flomax filter mask original package."
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "  The original graphics were built to signal filtration performance to an adult buyer, not a child. The constraint was that the new style still had to sit under the same brand identity and shelf beside the adult range as one family. Success meant packaging a child would respond to and a parent would still trust."
-          ]
+          "body": "Flomax, an air filter manufacturer, had built a facial filter mask line for adults. Extending it to a kids product meant the packaging could not simply be scaled down.",
+          "caption": "Flomax filter mask original package.",
+          "size": "lg",
+          "side": "right"
         }
       ]
     },

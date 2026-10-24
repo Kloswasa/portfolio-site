@@ -23,13 +23,19 @@ Pixel conversions below assume a 16px root (`1rem` = 16px).
 | Case study `image` (default) | any | **1360px** wide max | 42.5rem (~680px) | `--cs-content-w` |
 | Case study `image` `size: sm` | any | **320px** wide max | 10rem (~160px) | Icons, small UI shots |
 | Case study `image` `size: md` | any | **640px** wide max | 20rem (~320px) | Detail crops |
+| Case study `image` `size: lg` | any | **1024px** wide max | 32rem (~512px) | Large figures |
+| Case study `imageInfo` logo (`sm` or omit) | any | **320px** wide, **160px** tall max | 10rem wide (~160px), 5rem tall (~80px) | Client mark beside a paragraph. Transparent PNG or SVG |
+| Case study `imageInfo` `size: md` | any | **640px** wide | 20rem (~320px) | Photograph beside a paragraph |
+| Case study `imageInfo` `size: lg` | any | **1024px** wide | 32rem (~512px) | Large photograph beside a paragraph |
 | Case study `imagePair` (default) | any | **1360px** wide total (~680px per side @2×) | 2-col in the main column | Omit `size` |
 | Case study `imagePair` `size: sm` | any | **640px** wide total | 20rem (~320px) | |
 | Case study `imagePair` `size: md` | any | **1024px** wide total | 32rem (~512px) | |
+| Case study `imagePair` `size: lg` | any | **1536px** wide total | 48rem (~768px) | |
 | Case study `imageGrid` | any (square crops well) | **1360px** per cell | 3-col → 2-col → 1-col | Full main column |
 | Case study `findings` inline | any | **160×160** max | 5rem (~80px) | Optional `image` + `imageAlt` |
 | Case study `video` poster | **16:9** | **1088×612** | player is 80% of parent (~544px in the content column) | File `.mp4` only. A YouTube `src` has no poster |
 | Case study **GIF** (default `image`) | any | **680px** wide, **≤ 1.5 MB** (3 MB hard max) | 42.5rem (~680px) | 1× display, not 2×. See [GIFs](#gifs) |
+| Case study **GIF** `size: lg` | any | **512px** wide, **≤ 1.2 MB** | 32rem (~512px) | |
 | Case study **GIF** `size: md` | any | **320px** wide, **≤ 800 KB** | 20rem (~320px) | |
 | Case study **GIF** `size: sm` | any | **160px** wide, **≤ 400 KB** | 10rem (~160px) | |
 | Play card thumbnail | mixed | **595×842** (portrait) or **842×595** (landscape) | specimen card **4:5** crop | [`play.ts`](../src/content/play.ts) `imageWidth` / `imageHeight` |
@@ -45,9 +51,10 @@ CSS layout caps come from:
 | Token / rule | Source | Display cap |
 |--------------|--------|-------------|
 | `--cs-content-w: 42.5rem` | [`src/styles/case-study-major.css`](../src/styles/case-study-major.css) | ~680px content column |
-| `.cs-major__image--sm` / `--md` | same | 10rem / 20rem (~160 / 320px) |
-| `.cs-major__image-pair--sm` / `--md` | same | 20rem / 32rem (~320 / 512px) |
+| `.cs-major__image--sm` / `--md` / `--lg` | same | 10rem / 20rem / 32rem (~160 / 320 / 512px) |
+| `.cs-major__image-pair--sm` / `--md` / `--lg` | same | 20rem / 32rem / 48rem (~320 / 512 / 768px) |
 | `.cs-major__finding-image` | same | 5rem (~80px) |
+| `.cs-major__image-info` | same | logo column 10rem wide, image max-height 5rem. `md` 20rem, `lg` 32rem |
 | `.cs-major__video-player` | same | `width: 80%` of parent |
 | `.cs-major__hero` | same | `min-height: calc(100dvh - 4rem)`, `object-fit: cover` |
 | `.specimen-card` | [`src/styles/specimen-card.css`](../src/styles/specimen-card.css) | **4:5** default |
@@ -101,11 +108,13 @@ Block syntax lives in [`docs/case-study-blocks.md`](case-study-blocks.md). `size
 ## image
 size: sm   → export ≤ 320px wide
 size: md   → export ≤ 640px wide
+size: lg   → export ≤ 1024px wide
 (default)  → export ≤ 1360px wide   (GIF: ≤ 680px wide)
 
 ## imagePair
 size: sm   → export ≤ 640px wide (pair total)
 size: md   → export ≤ 1024px wide (pair total)
+size: lg   → export ≤ 1536px wide (pair total)
 (default)  → export ≤ 1360px wide (pair total)
 ```
 
@@ -114,9 +123,14 @@ size: md   → export ≤ 1024px wide (pair total)
 | `image` default | `max-width: 42.5rem` (~680px) | 1360px wide (stills) / **680px wide (GIF)** |
 | `image` `size: sm` | 10rem (~160px) | 320px wide (stills) / **160px wide (GIF)** |
 | `image` `size: md` | 20rem (~320px) | 640px wide (stills) / **320px wide (GIF)** |
+| `image` `size: lg` | 32rem (~512px) | 1024px wide (stills) / **512px wide (GIF)** |
+| `imageInfo` logo | 10rem wide, 5rem tall (~160×80px) | 320×160 — stills or SVG |
+| `imageInfo` `size: md` | 20rem (~320px) wide | 640px wide |
+| `imageInfo` `size: lg` | 32rem (~512px) wide | 1024px wide |
 | `imagePair` default | 2-col, no max-width (main column) | 1360px wide total — stills only |
 | `imagePair` `size: sm` | 20rem (~320px) | 640px wide total |
 | `imagePair` `size: md` | 32rem (~512px) | 1024px wide total |
+| `imagePair` `size: lg` | 48rem (~768px) | 1536px wide total |
 | `imageGrid` | 3-col → 2-col (≤768px) → 1-col (≤480px) | 1360px per cell — stills only |
 | `findings` inline | 5rem (~80px) | 160×160 |
 | `video` poster | player `width: 80%` | 1088×612 (16:9) |
@@ -138,6 +152,7 @@ Display width is the same as any `image` block. Export at **1× that width**, no
 | `size` | Display | Export width | Target file | Hard max |
 |--------|---------|--------------|-------------|----------|
 | default | ~680px | **680px** | **≤ 1.5 MB** | 3 MB |
+| `lg` | ~512px | **512px** | **≤ 1.2 MB** | 2.5 MB |
 | `md` | ~320px | **320px** | **≤ 800 KB** | 1.5 MB |
 | `sm` | ~160px | **160px** | **≤ 400 KB** | 800 KB |
 
