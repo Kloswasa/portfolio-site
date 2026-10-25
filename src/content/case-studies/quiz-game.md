@@ -101,7 +101,7 @@ source: Differentiate approach
 
 ## prose
 **Decision one: split the two symbols of Australia by job.**
-  The interviews named two things as Australian identity: wildlife and natural scenes. 
+  The interviews named two things as Australian identity: **wildlife and natural scenes.**
   Scenery became the quiz's backdrop. A native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each type's identity on the result page, where the personal weight lives.
 
 ## image
@@ -110,7 +110,7 @@ alt: The quiz background illustration development
 caption: The quiz background illustration development from sketch to final version.
 ## prose
 **Decision two: every pairing had to hold under two lenses.**
-  Each animal was matched by natural behaviour and by meaning in Aboriginal belief, and kept only if both agreed.
+  Each animal was matched by natural behaviour and by meaning in Aboriginal belief, and kept only if both agreed. Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion.
     
 ## imagePair
 
@@ -120,11 +120,6 @@ caption: The quiz background illustration development from sketch to final versi
 - src: /projects/quiz-game/quiz-game-identical-brolga.png
   alt: Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type
   caption: Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour, beauty, creativity, resilience.
-    
-## prose
-
-**Decision three: AI surfaced candidates, sources decided.**
-  Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion.
 
 ## callout
 

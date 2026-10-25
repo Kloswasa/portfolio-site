@@ -137,7 +137,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: wildlife and natural scenes. \n  Scenery became the quiz's backdrop. A native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each type's identity on the result page, where the personal weight lives."
+            "**Decision one: split the two symbols of Australia by job.**\n  The interviews named two things as Australian identity: **wildlife and natural scenes.**\n  Scenery became the quiz's backdrop. A native animal (Platypus, Brolga, Kangaroo, Wombat, Southern Right Whale, or Dingo) carried each type's identity on the result page, where the personal weight lives."
           ]
         },
         {
@@ -149,7 +149,7 @@ const quizGameCaseStudy = {
         {
           "type": "prose",
           "paragraphs": [
-            "**Decision two: every pairing had to hold under two lenses.**\n  Each animal was matched by natural behaviour and by meaning in Aboriginal belief, and kept only if both agreed."
+            "**Decision two: every pairing had to hold under two lenses.**\n  Each animal was matched by natural behaviour and by meaning in Aboriginal belief, and kept only if both agreed. Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion."
           ]
         },
         {
@@ -165,12 +165,6 @@ const quizGameCaseStudy = {
               "alt": "Illustration of a brolga mid-dance, representing the Inspiration Seeker personality type",
               "caption": "Brolga as the Inspiration Seeker. Its ceremonial dance appears in both Dreamtime stories and its actual courtship behaviour, beauty, creativity, resilience."
             }
-          ]
-        },
-        {
-          "type": "prose",
-          "paragraphs": [
-            "**Decision three: AI surfaced candidates, sources decided.**\n  Research was AI-assisted, but every symbolism claim was cross-checked against Indigenous-affiliated, institutional, and academic sources before inclusion."
           ]
         },
         {
