@@ -31,6 +31,7 @@ Shortlist of every content block you can use in `src/content/case-studies/<slug>
 | `imagePair` | YAML list | Two side-by-side images (`src`, `alt`, `caption`; optional `credit` + `creditHref`; optional block `size`: sm \| md \| lg). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `imageGrid` | YAML list | 3+ images in a grid (`src`, `alt`, optional `caption`, optional `credit` + `creditHref`). Export sizes: [`docs/image-sizes.md`](image-sizes.md) |
 | `video` | key-value | File or YouTube (`src`, `alt`, `caption`; `poster` required for a file) |
+| `embed` | key-value | Framed live page (`src` https URL, `title`; optional `caption`, optional `label` for a new-tab link, optional `id` for an in-page link) |
 
 ---
 
@@ -50,7 +51,7 @@ Second paragraph after a blank line.
 
 Inline `**bold**` also works in body fields on `pullquote`, `findings`, `annotation`, `twoCol`, `imageInfo`, `process`, `callout`, `outcomes`, and `reflections`.
 
-### Key-value — `pullquote`, `annotation`, `callout`, `button`, `artifact`, `image`, `imageInfo`, `video`
+### Key-value — `pullquote`, `annotation`, `callout`, `button`, `artifact`, `image`, `imageInfo`, `video`, `embed`
 
 ```markdown
 ## pullquote
@@ -104,6 +105,26 @@ caption: Caption under the player
 ```
 
 A file `src` (`.mp4`) needs `poster`. A YouTube link does not: `youtube.com/watch`, `youtu.be`, `/embed`, `/shorts`, and `/live` all work. A `t` or `start` time in the URL is kept.
+
+```markdown
+## embed
+
+src: https://example.com
+title: Accessible name for the framed page
+caption: Optional caption under the phone frame
+label: Open live site
+id: quiz
+```
+
+`src` must be an `https` URL. `label`, when set, is a link to that URL and opens in a new tab. The framed page has to allow being embedded. `id`, when set, is the anchor a hero `play` button can scroll to (`href: "#quiz"`).
+
+A hero can add that button beside the live or prototype link:
+
+```yaml
+play:
+  label: Play now
+  href: "#quiz"
+```
 
 `size` is optional on `image` and `imagePair`. Omit it for full content width; use `sm` for icons/small assets, `md` for mid-width figures, `lg` for large figures.
 

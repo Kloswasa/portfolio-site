@@ -176,6 +176,38 @@ function parseArtifactBlock(text: string): MajorContentBlock {
   };
 }
 
+function parseEmbedBlock(text: string): MajorContentBlock {
+  const fields = parseKeyValueBlock(text);
+
+  if (!fields.src || !fields.title) {
+    throw new Error("embed blocks require src and title fields");
+  }
+
+  let src: URL;
+  try {
+    src = new URL(fields.src);
+  } catch {
+    throw new Error("embed src must be an https URL");
+  }
+
+  if (src.protocol !== "https:") {
+    throw new Error("embed src must be an https URL");
+  }
+
+  if (fields.id && !/^[A-Za-z][\w-]*$/.test(fields.id)) {
+    throw new Error("embed id must start with a letter and use only letters, numbers, hyphens, or underscores");
+  }
+
+  return {
+    type: "embed",
+    src: fields.src,
+    title: fields.title,
+    ...(fields.caption ? { caption: fields.caption } : {}),
+    ...(fields.label ? { label: fields.label } : {}),
+    ...(fields.id ? { id: fields.id } : {}),
+  };
+}
+
 function parseVideoBlock(text: string): MajorContentBlock {
   const fields = parseKeyValueBlock(text);
 
@@ -583,6 +615,8 @@ function parseBlock(type: string, text: string): MajorContentBlock {
       return parseImageGridBlock(text);
     case "video":
       return parseVideoBlock(text);
+    case "embed":
+      return parseEmbedBlock(text);
     default:
       throw new Error(`Unsupported block type: ${type}`);
   }

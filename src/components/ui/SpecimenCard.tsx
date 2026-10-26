@@ -17,6 +17,7 @@ export interface SpecimenCardProps {
   classification: ReactNode;
   title: string;
   tags: readonly string[];
+  description?: string;
   /** Password-gated specimen: overlays a lock stamp on the media */
   locked?: boolean;
   /** Lock stamp label; defaults to "Under NDA" */
@@ -32,6 +33,7 @@ export function SpecimenCard({
   classification,
   title,
   tags,
+  description,
   locked = false,
   lockLabel = "Under NDA",
 }: SpecimenCardProps) {
@@ -77,6 +79,9 @@ export function SpecimenCard({
             </span>
           ))}
         </div>
+        {description ? (
+          <p className="specimen-card__description">{description}</p>
+        ) : null}
       </div>
     </>
   );

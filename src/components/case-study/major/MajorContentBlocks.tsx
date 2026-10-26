@@ -513,6 +513,34 @@ function Block({ block }: { block: MajorContentBlock }) {
       );
     }
 
+    case "embed":
+      return (
+        <figure className="cs-major__embed" id={block.id}>
+          <div className="cs-major__embed-frame">
+            <iframe
+              className="cs-major__embed-frame-inner"
+              src={block.src}
+              title={block.title}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+          {block.caption ? (
+            <figcaption className="cs-major__embed-caption">{block.caption}</figcaption>
+          ) : null}
+          {block.label ? (
+            <a
+              className="btn btn-gold cs-major__embed-link"
+              href={block.src}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {block.label}
+            </a>
+          ) : null}
+        </figure>
+      );
+
     case "colorSpecimen":
       return (
         <div className="cs-major__color-specimen" aria-label="Color token specimen">

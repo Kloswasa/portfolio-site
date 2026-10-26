@@ -122,7 +122,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "ThemeToggle",
     path: "src/components/chrome/ThemeToggle.tsx",
     category: "chrome",
-    description: "Light / dark mode switch persisted to localStorage.",
+    description: "Light / dark mode switch. Dark is the default; the choice is persisted to localStorage.",
   },
   {
     id: "footer",
@@ -162,7 +162,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "WorkCard",
     path: "src/components/work/WorkCard.tsx",
     category: "cards",
-    description: "Polaroid-style project card with tilt and classification stamp.",
+    description: "Polaroid-style project card with tilt, classification stamp, and a short description under the tags.",
     usedOn: "/ · /work",
   },
   {

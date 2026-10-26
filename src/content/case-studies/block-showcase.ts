@@ -24,7 +24,7 @@ const blockShowcaseCaseStudy = {
       },
       {
         "label": "Blocks",
-        "value": "20 content types"
+        "value": "21 content types"
       },
       {
         "label": "Format",
@@ -53,7 +53,7 @@ const blockShowcaseCaseStudy = {
           "type": "stats",
           "items": [
             {
-              "value": "20",
+              "value": "21",
               "label": "Block types",
               "variant": "dark"
             },
@@ -347,6 +347,13 @@ const blockShowcaseCaseStudy = {
           "poster": "/projects/quiz-game/quiz-game-video-resultpage-cover.png",
           "alt": "Sample video block showing a result page walkthrough",
           "caption": "File video. src, poster, alt, and caption are required. A YouTube link omits poster."
+        },
+        {
+          "type": "embed",
+          "src": "https://australia-call.vision-verse.com.au/",
+          "title": "Australia Calls, the live quiz",
+          "caption": "embed. An https page in a phone-width frame. label is an optional new-tab link.",
+          "label": "Open live site"
         }
       ]
     },
@@ -359,7 +366,7 @@ const blockShowcaseCaseStudy = {
           "type": "outcomes",
           "items": [
             {
-              "value": "20",
+              "value": "21",
               "label": "Blocks rendered",
               "body": "Every MajorContentBlock variant appears at least once on this page."
             },
@@ -387,7 +394,7 @@ const blockShowcaseCaseStudy = {
             "prose, body paragraphs with optional indentation.",
             "stats · pullquote · findings · annotation · twoCol, research and context blocks.",
             "artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imageInfo · imagePair · imageGrid, visual blocks.",
-            "process · callout · video, build and evidence blocks.",
+            "process · callout · video · embed, build and evidence blocks.",
             "outcomes · reflections, closing blocks for results and learnings."
           ]
         },

@@ -7,6 +7,7 @@ export interface WorkCardProject {
   title: string;
   href: string;
   tags: string[];
+  description: string;
   classification: string;
   yearLabel: string;
   frame: string;

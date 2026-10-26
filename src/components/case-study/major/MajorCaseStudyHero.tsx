@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   SnapItem,
@@ -94,6 +96,24 @@ function HeroTitle({
   );
 }
 
+function scrollToHash(
+  event: React.MouseEvent<HTMLAnchorElement>,
+  href: string,
+) {
+  if (!href.startsWith("#") || href.length < 2) return;
+
+  const target = document.getElementById(href.slice(1));
+  if (!target) return;
+
+  event.preventDefault();
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  target.scrollIntoView({
+    behavior: reduce ? "auto" : "smooth",
+    block: "start",
+  });
+  window.history.replaceState(null, "", href);
+}
+
 function HeroMeta({
   hero,
   experienceLink,
@@ -101,6 +121,9 @@ function HeroMeta({
   hero: HeroData;
   experienceLink?: ProjectExperienceLink | null;
 }) {
+  const play = hero.play;
+  const showActions = Boolean(experienceLink || play);
+
   return (
     <div className="cs-major__meta-strip">
       {hero.meta.map(({ label, value }) => (
@@ -109,19 +132,32 @@ function HeroMeta({
           <div className="cs-major__meta-val">{value}</div>
         </div>
       ))}
-      {experienceLink ? (
+      {showActions ? (
         <div className="cs-major__meta-item cs-major__meta-cta">
           <div className="cs-major__meta-label">
-            {experienceLink.sectionLabel}
+            {experienceLink?.sectionLabel ?? "Play"}
           </div>
-          <a
-            className="btn btn-gold cs-major__meta-btn"
-            href={experienceLink.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {experienceLink.label}
-          </a>
+          <div className="cs-major__meta-actions">
+            {play ? (
+              <a
+                className="btn btn-primary cs-major__meta-btn"
+                href={play.href}
+                onClick={(event) => scrollToHash(event, play.href)}
+              >
+                {play.label}
+              </a>
+            ) : null}
+            {experienceLink ? (
+              <a
+                className="btn btn-gold cs-major__meta-btn"
+                href={experienceLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {experienceLink.label}
+              </a>
+            ) : null}
+          </div>
         </div>
       ) : null}
     </div>

@@ -179,15 +179,21 @@
 }
 
 .specimen-card__year-stamp {
+  top: 1rem;
   right: 1rem;
-  bottom: 3rem;
   text-align: right;
+  transform: translateY(-8px);
+}
+
+.specimen-card:has(.specimen-card__nda) .specimen-card__year-stamp {
+  top: 3.25rem;
 }
 
 .specimen-card__year-val {
   font-family: var(--font-heading);
   font-size: var(--text-body-xl);
   color: var(--color-text-inverse);
+  text-shadow: 0 1px 10px color-mix(in srgb, var(--specimen-card-primary) 80%, transparent);
 }
 
 .specimen-card__year-lbl {
@@ -267,6 +273,18 @@
   border: 1px solid color-mix(in srgb, var(--color-text-inverse) 22%, transparent);
   color: color-mix(in srgb, var(--color-text-inverse) 78%, transparent);
   padding: 0.2rem 0.4rem;
+}
+
+.specimen-card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0.65rem 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--color-text-inverse) 82%, transparent);
 }
 
 .specimen-card:hover .specimen-card__dots,

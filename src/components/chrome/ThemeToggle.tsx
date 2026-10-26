@@ -6,7 +6,7 @@ type Theme = "light" | "dark";
 type ThemeToggleTone = "default" | "inverse";
 
 function getThemeFromDom(): Theme {
-  if (typeof document === "undefined") return "light";
+  if (typeof document === "undefined") return "dark";
   return document.documentElement.classList.contains("dark") ? "dark" : "light";
 }
 
@@ -23,9 +23,9 @@ export function ThemeToggle({
   tone?: ThemeToggleTone;
   className?: string;
 }) {
-  const [theme, setTheme] = React.useState<Theme>("light");
+  const [theme, setTheme] = React.useState<Theme>("dark");
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     setTheme(getThemeFromDom());
   }, []);
 

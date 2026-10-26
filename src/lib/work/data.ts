@@ -22,6 +22,7 @@ export function toWorkCardProject(project: Project, index: number): WorkCardProj
     title: project.title,
     href: `/work/${project.slug}`,
     tags: project.technologies.slice(0, 3),
+    description: project.description,
     classification: CLASSIFICATION[project.workTab] ?? "Design",
     yearLabel: project.yearLabel,
     frame: String(index + 1).padStart(2, "0"),

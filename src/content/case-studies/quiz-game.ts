@@ -13,6 +13,10 @@ const quizGameCaseStudy = {
     "titleLine2": "Calls",
     "summary": "A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.",
     "layout": "split",
+    "play": {
+      "label": "Play now",
+      "href": "#quiz"
+    },
     "image": {
       "src": "/projects/quiz-game/quiz-game-head-cover.png",
       "alt": "Phone mockup of the Australia Calls quiz on a beach collage, with polaroids, a wildlife sign, and a boomerang"
@@ -288,10 +292,12 @@ const quizGameCaseStudy = {
           ]
         },
         {
-          "type": "button",
-          "label": "View live site",
-          "href": "https://australia-call.vision-verse.com.au/",
-          "variant": "accent"
+          "type": "embed",
+          "src": "https://australia-call.vision-verse.com.au/",
+          "title": "Australia Calls, the live quiz",
+          "caption": "The shipped quiz. Play it here, or open it on its own.",
+          "label": "Open live site",
+          "id": "quiz"
         },
         {
           "type": "pullquote",

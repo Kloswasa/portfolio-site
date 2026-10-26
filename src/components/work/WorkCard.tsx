@@ -55,6 +55,7 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
         classification={project.classification}
         title={project.title}
         tags={project.tags}
+        description={project.description}
         locked={project.confidential}
         lockLabel={
           project.confidential

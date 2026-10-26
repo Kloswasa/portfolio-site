@@ -407,7 +407,7 @@ export default function ComponentsPage() {
               filePath="src/components/work/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
-                Polaroid project card with tilt, year stamp, and classification.
+                Polaroid project card with tilt, year stamp, classification, and a short description under the tags.
                 Default and featured layouts for mosaic grids.
               </p>
               {sampleWorkCard ? (

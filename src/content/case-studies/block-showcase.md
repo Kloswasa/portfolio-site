@@ -15,7 +15,7 @@ hero:
     - label: Purpose
       value: Component reference
     - label: Blocks
-      value: 20 content types
+      value: 21 content types
     - label: Format
       value: Major case study
     - label: Status
@@ -36,7 +36,7 @@ The prose block is the workhorse, one or more paragraphs of body copy. Blank lin
 
 ## stats
 
-- value: "20"
+- value: "21"
   label: Block types
   variant: dark
 - value: "6"
@@ -254,6 +254,13 @@ poster: /projects/quiz-game/quiz-game-video-resultpage-cover.png
 alt: Sample video block showing a result page walkthrough
 caption: File video. src, poster, alt, and caption are required. A YouTube link omits poster.
 
+## embed
+
+src: https://australia-call.vision-verse.com.au/
+title: Australia Calls, the live quiz
+caption: embed. An https page in a phone-width frame. label is an optional new-tab link.
+label: Open live site
+
 # outcome
 
 eyebrow: 06 · Outcome
@@ -262,7 +269,7 @@ titleEm: and reflections
 
 ## outcomes
 
-- value: "20"
+- value: "21"
   label: Blocks rendered
   body: Every MajorContentBlock variant appears at least once on this page.
 - value: "2"
@@ -281,7 +288,7 @@ The outcome section closes the narrative arc. Pair outcome metrics with reflecti
 - prose, body paragraphs with optional indentation.
 - stats · pullquote · findings · annotation · twoCol, research and context blocks.
 - artifact · ornament · colorSpecimen · typeSpecimen · componentGrid · image · imageInfo · imagePair · imageGrid, visual blocks.
-- process · callout · video, build and evidence blocks.
+- process · callout · video · embed, build and evidence blocks.
 - outcomes · reflections, closing blocks for results and learnings.
 
 ## callout

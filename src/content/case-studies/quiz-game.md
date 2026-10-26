@@ -8,6 +8,9 @@ hero:
   titleLine2: Calls
   summary: A personality quiz that helps newcomers to Australia find a travel style and a first trip that suits them.
   layout: split
+  play:
+    label: Play now
+    href: "#quiz"
   image:
     src: /projects/quiz-game/quiz-game-head-cover.png
     alt: Phone mockup of the Australia Calls quiz on a beach collage, with polaroids, a wildlife sign, and a boomerang
@@ -210,11 +213,13 @@ caption: Project teaser showing parts of the quiz journey and result page
 ## prose
     The overall quiz performed well visually and in media. On the results, the wildlife-and-destination pairing was the strongest signal. Tips and trivia got less attention, likely because they were text-only.
 
-## button
+## embed
 
-label: View live site
-href: https://australia-call.vision-verse.com.au/
-variant: accent
+id: quiz
+src: https://australia-call.vision-verse.com.au/
+title: Australia Calls, the live quiz
+caption: The shipped quiz. Play it here, or open it on its own.
+label: Open live site
 
 ## pullquote
 

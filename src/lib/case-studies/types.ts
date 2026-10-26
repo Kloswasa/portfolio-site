@@ -151,6 +151,18 @@ export type MajorContentBlock =
       poster?: string;
       alt: string;
       caption: string;
+    }
+  | {
+      type: "embed";
+      /** Absolute https URL of a page that allows framing. */
+      src: string;
+      /** Accessible name for the iframe. */
+      title: string;
+      caption?: string;
+      /** When set, a new-tab link to src under the frame. */
+      label?: string;
+      /** Optional in-page target, e.g. a hero button that scrolls here. */
+      id?: string;
     };
 
 export interface MajorSectionContent {
@@ -175,6 +187,11 @@ export interface MajorCaseStudyHero {
    * right-side illustration with number and eyebrow.
    */
   layout?: "overlay" | "split";
+  /**
+   * In-page button beside the live or prototype link.
+   * `href` is a hash on this page, e.g. "#quiz".
+   */
+  play?: { label: string; href: string };
 }
 
 export interface MajorCaseStudy {
