@@ -38,6 +38,12 @@
   min-height: 18rem;
 }
 
+.specimen-card--polaroid.specimen-card--featured {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  min-height: 0;
+}
+
 .featured-mosaic {
   display: grid;
   flex: 1;
@@ -49,9 +55,9 @@
 
 @media (min-width: 768px) {
   .featured-mosaic {
-    grid-template-columns: 1.15fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    min-height: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    min-height: 0;
   }
 }
 
@@ -60,15 +66,9 @@
 }
 
 .featured-mosaic .specimen-card {
-  aspect-ratio: auto;
-  height: 100%;
-  min-height: 14rem;
-}
-
-@media (min-width: 768px) {
-  .featured-mosaic .specimen-card {
-    min-height: 0;
-  }
+  aspect-ratio: 4 / 5;
+  height: auto;
+  min-height: 0;
 }
 
 .specimen-card__media {
@@ -321,6 +321,135 @@
   transform: translateY(0);
 }
 
+/* Polaroid project card — index and year on the top margin, photo in the frame, caption on the paper. */
+
+.specimen-card--polaroid {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 4 / 5;
+  padding: var(--spacing-4) 0 var(--spacing-5);
+  gap: var(--spacing-3);
+  overflow: hidden;
+  background: var(--color-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-text);
+}
+
+.specimen-card--polaroid:hover,
+.specimen-card--polaroid:focus-visible {
+  box-shadow: var(--shadow-lg);
+}
+
+.specimen-card--polaroid:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.specimen-card--polaroid .specimen-card__top {
+  display: flex;
+  flex-shrink: 0;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding-inline: var(--spacing-4);
+}
+
+.specimen-card--polaroid .specimen-card__frame,
+.specimen-card--polaroid:hover .specimen-card__frame,
+.specimen-card--polaroid:focus-visible .specimen-card__frame {
+  position: static;
+  flex-shrink: 0;
+  padding: 0;
+  opacity: 1;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-stamp);
+  color: var(--specimen-card-accent);
+}
+
+.specimen-card--polaroid .specimen-card__year-stamp,
+.specimen-card--polaroid:hover .specimen-card__year-stamp,
+.specimen-card--polaroid:focus-visible .specimen-card__year-stamp {
+  position: static;
+  display: flex;
+  flex-shrink: 0;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  padding: 0;
+  opacity: 1;
+  text-align: right;
+  white-space: nowrap;
+  transform: none;
+}
+
+.specimen-card--polaroid .specimen-card__year-val {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-stamp);
+  color: var(--color-text);
+  text-shadow: none;
+}
+
+.specimen-card--polaroid .specimen-card__year-lbl {
+  color: var(--color-text-muted);
+}
+
+.specimen-card--polaroid .specimen-card__media {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-block: 1px solid var(--color-border);
+  background: var(--color-header-bg);
+}
+
+.specimen-card--polaroid .specimen-card__cover {
+  transition: transform var(--duration-slow) var(--ease);
+}
+
+.specimen-card--polaroid:hover .specimen-card__cover,
+.specimen-card--polaroid:focus-visible .specimen-card__cover {
+  transform: scale(1.035);
+}
+
+.specimen-card--polaroid .specimen-card__info,
+.specimen-card--polaroid:hover .specimen-card__info,
+.specimen-card--polaroid:focus-visible .specimen-card__info {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  flex-shrink: 0;
+  padding: 0 var(--spacing-4);
+  transform: none;
+}
+
+.specimen-card--polaroid .specimen-card__classification {
+  color: var(--color-text-muted);
+}
+
+.specimen-card--polaroid .specimen-card__title {
+  margin: var(--spacing-1) 0 0;
+  font-size: var(--text-heading-xl);
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+.specimen-card--polaroid .specimen-card__tag {
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.specimen-card--polaroid .specimen-card__description {
+  -webkit-line-clamp: 3;
+  text-align: start;
+  color: var(--color-text-muted);
+}
+
 @keyframes specimen-card-pulse {
   0%,
   100% {
@@ -342,8 +471,14 @@
   .specimen-card__year-stamp,
   .specimen-card__asterisk,
   .specimen-card__info,
-  .specimen-card__live-dot {
+  .specimen-card__live-dot,
+  .specimen-card--polaroid .specimen-card__cover {
     transition: none;
     animation: none;
+  }
+
+  .specimen-card--polaroid:hover .specimen-card__cover,
+  .specimen-card--polaroid:focus-visible .specimen-card__cover {
+    transform: none;
   }
 }

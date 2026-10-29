@@ -579,7 +579,7 @@ function Block({ block }: { block: MajorContentBlock }) {
             </p>
           </div>
           <div className="cs-major__type-row">
-            <span className="cs-major__type-meta">Mono · Syne</span>
+            <span className="cs-major__type-meta">Mono · Asul</span>
             <p className="cs-major__type-mono">01 · BRIEF · ROLE · DURATION</p>
           </div>
         </div>

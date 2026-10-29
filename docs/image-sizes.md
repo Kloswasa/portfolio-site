@@ -57,8 +57,8 @@ CSS layout caps come from:
 | `.cs-major__image-info` | same | logo column 10rem wide, image max-height 5rem. `md` 20rem, `lg` 32rem |
 | `.cs-major__video-player` | same | `width: 80%` of parent |
 | `.cs-major__hero` | same | `min-height: calc(100dvh - 4rem)`, `object-fit: cover` |
-| `.specimen-card` | [`src/styles/specimen-card.css`](../src/styles/specimen-card.css) | **4:5** default |
-| `.specimen-card--landscape` | same | **5:4** (work archive grid) |
+| `.specimen-card` | [`src/styles/specimen-card.css`](../src/styles/specimen-card.css) | **4:5** default (play cards) |
+| `.specimen-card--polaroid` | same | **4:5** project card; photo is inset, `object-fit: cover` |
 | `.about-portrait` | [`src/styles/about.css`](../src/styles/about.css) | max 22rem (~352px), **4:5** |
 | `.play-viewer__plate` | [`src/styles/play.css`](../src/styles/play.css) | max 1048×960 |
 
@@ -70,12 +70,12 @@ Prefer **WebP** for photos, **PNG** for UI/screenshots with transparency, **SVG*
 
 **Where:** [`src/lib/projects.ts`](../src/lib/projects.ts) `coverImage: { src, alt }`  
 **Files:** `/public/projects/<slug>/<slug>-cover.png`  
-**CSS:** Work archive cards use `.specimen-card--landscape` (**5:4**, `object-fit: cover`). Home featured mosaic reuses the same file at auto height. The case study “next project” footer also reuses it.
+**CSS:** Project cards are polaroids (`.specimen-card--polaroid`, **4:5**). The cover is cropped with `object-fit: cover` inside the photo frame. Home featured and the case study “next project” footer reuse the same file.
 
 | Variant | Size | When |
 |---------|------|------|
 | Standard | **1500×1200** PNG or WebP, **5:4** | Default for every project |
-| Wide | **2400×1350** (16:9) | Landscape-heavy work (e.g. quiz-game). The card still crops to 5:4 — keep the subject in the centre. |
+| Wide | **2400×1350** (16:9) | Landscape-heavy work (e.g. quiz-game). The photo frame crops with `object-fit: cover` — keep the subject in the centre. |
 | Optional 2× | 2400×1920 (5:4) | Only if a cover looks soft on a large display |
 
 **Naming:** `<slug>-cover.png`. Projects without a cover (recipe, cio) fall back to a gradient + SVG botanical — no raster needed.

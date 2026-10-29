@@ -191,7 +191,7 @@ export default function ComponentsPage() {
                   utilities.{" "}
                   <span className="font-mono text-text">font-body</span> (Lato)
                   is the default for everything else. Mono labels use{" "}
-                  <span className="font-mono text-text">font-mono</span> (Syne).
+                  <span className="font-mono text-text">font-mono</span> (Asul).
                 </p>
                 <div className="grid gap-4 border border-border-subtle bg-bg p-6">
                   <p className="text-heading-5xl">Heading 5xl</p>
@@ -407,8 +407,7 @@ export default function ComponentsPage() {
               filePath="src/components/work/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
-                Polaroid project card with tilt, year stamp, classification, and a short description under the tags.
-                Default and featured layouts for mosaic grids.
+                Polaroid project card. The year and index sit on the top margin, the cover sits in the photo frame, and the title, tags, and description sit on the caption.
               </p>
               {sampleWorkCard ? (
                 <div className="max-w-xs">

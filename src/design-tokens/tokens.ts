@@ -226,10 +226,10 @@ export const tokens: TokenRecord = {
     "darkValue": "'Lato', system-ui, sans-serif"
   },
   "font.mono": {
-    "value": "'Syne', 'Fira Code', monospace",
+    "value": "var(--font-asul), 'Asul', Georgia, serif",
     "type": "fontFamilies",
     "cssVar": "--font-mono",
-    "darkValue": "'Syne', 'Fira Code', monospace"
+    "darkValue": "var(--font-asul), 'Asul', Georgia, serif"
   },
   "text.xs": {
     "value": "0.68rem",

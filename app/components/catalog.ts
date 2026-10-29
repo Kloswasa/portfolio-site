@@ -162,7 +162,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "WorkCard",
     path: "src/components/work/WorkCard.tsx",
     category: "cards",
-    description: "Polaroid-style project card with tilt, classification stamp, and a short description under the tags.",
+    description: "Polaroid project card. Year and index sit on the top margin, the cover sits in the photo frame, and title, tags, and description sit on the caption.",
     usedOn: "/ · /work",
   },
   {

@@ -10,7 +10,7 @@ import type { WorkCardProject } from "@/src/lib/work/types";
 
 interface WorkCardProps {
   project: WorkCardProject;
-  /** Fills a tall grid cell (e.g. featured mosaic). Default keeps 4:5 ratio for galleries. */
+  /** Featured mosaic uses the same polaroid ratio as the archive. */
   layout?: "default" | "featured";
 }
 
@@ -20,8 +20,8 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
   const [yearValue, yearLabel = ""] = project.yearLabel.split(" · ");
   const cardClassName =
     layout === "featured"
-      ? "specimen-card specimen-card--link specimen-card--featured"
-      : "specimen-card specimen-card--link specimen-card--landscape";
+      ? "specimen-card specimen-card--link specimen-card--polaroid specimen-card--featured"
+      : "specimen-card specimen-card--link specimen-card--polaroid";
 
   return (
     <Link
@@ -62,6 +62,7 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
             ? getProjectLockCopy(project.lockStatus).stamp
             : undefined
         }
+        variant="polaroid"
       />
     </Link>
   );

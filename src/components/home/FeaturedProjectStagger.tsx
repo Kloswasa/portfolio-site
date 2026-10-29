@@ -47,7 +47,7 @@ export function FeaturedProjectStagger({ projects }: FeaturedProjectStaggerProps
   if (reduceMotion) {
     return (
       <div className={mosaicGridClass}>
-        <div className="md:row-span-2">
+        <div>
           <WorkCard project={featured} layout="featured" />
         </div>
         {rest.map((project) => (
@@ -67,7 +67,7 @@ export function FeaturedProjectStagger({ projects }: FeaturedProjectStaggerProps
       viewport={viewport}
       variants={containerVariants}
     >
-      <motion.div variants={itemVariants} className="md:row-span-2">
+      <motion.div variants={itemVariants}>
         <WorkCard project={featured} layout="featured" />
       </motion.div>
       {rest.map((project) => (
