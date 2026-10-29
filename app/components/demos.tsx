@@ -8,6 +8,8 @@ import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { FilterBar } from "@/src/components/ui/FilterBar";
 import { HoverRippleLayer, useHoverRipple } from "@/src/components/ui/HoverRipple";
 import { NavRippleLink } from "@/src/components/ui/NavRippleLink";
+import { SectionBlockHead } from "@/src/components/ui/SectionBlockHead";
+import { SpecimenCard } from "@/src/components/ui/SpecimenCard";
 import { TabBar, TabBarTab } from "@/src/components/ui/TabBar";
 import { TabbedGridSection } from "@/src/components/ui/TabbedGridSection";
 import {
@@ -188,8 +190,71 @@ export function FeaturedProjectStaggerDemo({
   projects: WorkCardProject[];
 }) {
   return (
-    <div className="featured-mosaic h-[28rem] max-w-4xl">
+    <div className="featured-mosaic max-w-4xl">
       <FeaturedProjectStagger projects={projects} />
+    </div>
+  );
+}
+
+export function SectionBlockHeadDemo() {
+  return (
+    <SectionBlockHead
+      kicker="Specimen"
+      title="Section block head"
+      infoStrong="Shared title row."
+      infoDetail=" Used on Play medium blocks and about-style sections."
+    />
+  );
+}
+
+export function SpecimenCardDemo() {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2">
+      <article className="specimen-card specimen-card--polaroid">
+        <SpecimenCard
+          variant="polaroid"
+          media={
+            <div
+              className="specimen-card__cover"
+              style={{
+                background:
+                  "linear-gradient(145deg, var(--color-primary) 0%, var(--color-secondary) 100%)",
+              }}
+              aria-hidden
+            />
+          }
+          mediaProps={{ "data-photo": "" }}
+          frame="01"
+          stampValue="2026"
+          stampLabel="Demo"
+          classification="Product Design"
+          title="Polaroid variant"
+          tags={["Asul", "Token", "Frame"]}
+          description="Project cards use this layout: index and year on top, cover flush in the frame, caption on the paper."
+        />
+      </article>
+      <article className="specimen-card">
+        <SpecimenCard
+          media={
+            <div
+              className="specimen-card__cover"
+              style={{
+                background:
+                  "linear-gradient(145deg, var(--color-tertiary) 0%, var(--color-primary) 100%)",
+              }}
+              aria-hidden
+            />
+          }
+          mediaProps={{ "data-photo": "" }}
+          frame="02"
+          stampValue="Live"
+          stampLabel="Sketch"
+          classification="Illustration"
+          title="Overlay variant"
+          tags={["Play", "Mat"]}
+          description="Play cards keep the full-bleed overlay treatment."
+        />
+      </article>
     </div>
   );
 }
