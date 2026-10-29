@@ -22,7 +22,7 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
 
   return (
     <article
-      className="specimen-card specimen-card--button"
+      className="specimen-card specimen-card--button specimen-card--polaroid"
       data-medium={work.medium}
       ref={cardRef}
       data-tilt={reduceMotion ? undefined : ""}
@@ -38,6 +38,7 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
       aria-label={`View ${work.title}`}
     >
       <SpecimenCard
+        variant="polaroid"
         media={
           isCode && work.sketch ? (
             <PlayCanvas sketch={work.sketch} paused={motionPaused} />
@@ -72,7 +73,8 @@ export function PlayCard({ work, motionPaused, onOpen }: PlayCardProps) {
           )
         }
         title={work.title}
-        tags={work.tools}
+        tags={work.tools.slice(0, 3)}
+        description={work.cardDescription}
       />
     </article>
   );

@@ -30,7 +30,9 @@ import {
   NavRippleLinkDemo,
   PlayCardDemo,
   PageEndSectionDemo,
+  SectionBlockHeadDemo,
   SnapSectionRevealDemo,
+  SpecimenCardDemo,
   TabBarDemo,
   TabbedGridSectionDemo,
 } from "./demos";
@@ -49,6 +51,8 @@ const DEMO_SECTIONS = [
   { id: "filter-bar", label: "FilterBar" },
   { id: "tab-bar", label: "TabBar" },
   { id: "copy-button", label: "CopyButton" },
+  { id: "section-block-head", label: "SectionBlockHead" },
+  { id: "specimen-card", label: "SpecimenCard" },
   { id: "scroll-reveal", label: "ScrollReveal" },
   { id: "snap-section", label: "SnapSectionReveal" },
   { id: "work-card", label: "WorkCard" },
@@ -191,7 +195,7 @@ export default function ComponentsPage() {
                   utilities.{" "}
                   <span className="font-mono text-text">font-body</span> (Lato)
                   is the default for everything else. Mono labels use{" "}
-                  <span className="font-mono text-text">font-mono</span> (Syne).
+                  <span className="font-mono text-text">font-mono</span> (Asul).
                 </p>
                 <div className="grid gap-4 border border-border-subtle bg-bg p-6">
                   <p className="text-heading-5xl">Heading 5xl</p>
@@ -369,6 +373,32 @@ export default function ComponentsPage() {
             </SectionShell>
 
             <SectionShell
+              id="section-block-head"
+              title="SectionBlockHead"
+              filePath="src/components/ui/SectionBlockHead.tsx · src/styles/section-block.css"
+            >
+              <p className="mb-6 font-body text-text-muted">
+                Shared section title row with optional kicker and info column.
+                Used on Play medium blocks and about-style sections.
+              </p>
+              <SectionBlockHeadDemo />
+            </SectionShell>
+
+            <SectionShell
+              id="specimen-card"
+              title="SpecimenCard"
+              filePath="src/components/ui/SpecimenCard.tsx · src/styles/specimen-card.css"
+            >
+              <p className="mb-6 font-body text-text-muted">
+                Shared shell for Work and Play cards. Polaroid puts the index
+                and year on the top margin, the cover flush in the frame, and
+                caption copy on the paper. Overlay keeps the full-bleed mat for
+                alternate treatments.
+              </p>
+              <SpecimenCardDemo />
+            </SectionShell>
+
+            <SectionShell
               id="scroll-reveal"
               title="ScrollReveal"
               filePath="src/components/motion/ScrollReveal.tsx"
@@ -407,8 +437,7 @@ export default function ComponentsPage() {
               filePath="src/components/work/WorkCard.tsx · WorkCardSvg.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
-                Polaroid project card with tilt, year stamp, classification, and a short description under the tags.
-                Default and featured layouts for mosaic grids.
+                Polaroid project card. The year and index sit on the top margin, the cover sits in the photo frame, and the title, tags, and description sit on the caption.
               </p>
               {sampleWorkCard ? (
                 <div className="max-w-xs">
@@ -425,8 +454,8 @@ export default function ComponentsPage() {
               filePath="src/components/home/FeaturedProjectStagger.tsx"
             >
               <p className="mb-6 font-body text-text-muted">
-                Home featured mosaic — first card spans two rows on desktop with
-                staggered motion reveals.
+                Home featured row of polaroid WorkCards with staggered motion
+                reveals.
               </p>
               <FeaturedProjectStaggerDemo projects={featured} />
             </SectionShell>
@@ -437,7 +466,8 @@ export default function ComponentsPage() {
               filePath="src/components/play/PlayCard.tsx · src/styles/specimen-card.css"
             >
               <p className="mb-6 font-body text-text-muted">
-                Play index card with medium badge, frame index, and gradient mat.
+                Polaroid play index card with medium stamp, tools, and a short
+                caption under the frame.
               </p>
               <PlayCardDemo />
             </SectionShell>
@@ -563,6 +593,13 @@ export default function ComponentsPage() {
                     </Link>
                   </li>
                   <li className="card p-4">
+                    <p className="font-medium text-text">HomeFeaturedSection</p>
+                    <p className="mt-1 text-sm">Featured polaroid WorkCard row.</p>
+                    <Link href="/#featured" className="btn-text mt-3">
+                      View on home <span aria-hidden>→</span>
+                    </Link>
+                  </li>
+                  <li className="card p-4">
                     <p className="font-medium text-text">Major case study</p>
                     <p className="mt-1 text-sm">Hero, chapters, reading bar, artifacts.</p>
                     <Link href="/work/quiz-game" className="btn-text mt-3">
@@ -577,6 +614,13 @@ export default function ComponentsPage() {
                     </Link>
                   </li>
                   <li className="card p-4">
+                    <p className="font-medium text-text">ColophonView</p>
+                    <p className="mt-1 text-sm">Brief, pipelines, layers, token specimen.</p>
+                    <Link href="/colophon" className="btn-text mt-3">
+                      Open colophon <span aria-hidden>→</span>
+                    </Link>
+                  </li>
+                  <li className="card p-4">
                     <p className="font-medium text-text">PlayView</p>
                     <p className="mt-1 text-sm">Hero, medium blocks, canvas viewer.</p>
                     <Link href="/play" className="btn-text mt-3">
@@ -585,7 +629,7 @@ export default function ComponentsPage() {
                   </li>
                   <li className="card p-4">
                     <p className="font-medium text-text">WorkView</p>
-                    <p className="mt-1 text-sm">Filter bar, hero, and image grid.</p>
+                    <p className="mt-1 text-sm">Filter bar, hero, and polaroid grid.</p>
                     <Link href="/work" className="btn-text mt-3">
                       Open work index <span aria-hidden>→</span>
                     </Link>

@@ -4,7 +4,7 @@
   --play-max-w: 128rem;
   --play-pad-x: var(--spacing-6);
   --play-pad-section: var(--spacing-12);
-  --play-gap-grid: var(--spacing-2);
+  --play-gap-grid: var(--spacing-5);
   --work-max-w: var(--play-max-w);
   --work-pad-x: var(--play-pad-x);
 
@@ -16,13 +16,14 @@
   .play-page {
     --play-pad-x: var(--spacing-10);
     --play-pad-section: var(--spacing-16);
-    --play-gap-grid: var(--spacing-2);
+    --play-gap-grid: var(--spacing-6);
   }
 }
 
 @media (min-width: 1024px) {
   .play-page {
     --play-pad-x: var(--spacing-16);
+    --play-gap-grid: var(--spacing-6);
   }
 }
 

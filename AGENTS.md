@@ -66,7 +66,7 @@ Fonts load in `app/layout.tsx` and bind to CSS variables on `<html>` (runtime so
 
 - `font-heading` (**Fraunces**): headings only
 - `font-body` (**Lato**): everything else
-- `font-mono` (**Syne**): stamps, labels, and technical accents
+- `font-mono` (**Asul**): stamps, labels, and technical accents
 
 Keep `design-tokens/tokens.*.json` `font.*` values aligned, then run `npm run tokens:gen`.
 

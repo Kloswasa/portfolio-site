@@ -31,7 +31,7 @@ const bodyFont = Lato({
 
 const monoFont = Asul({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-asul",
   display: "swap",
   weight: ["400", "700"],
 });

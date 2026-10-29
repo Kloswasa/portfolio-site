@@ -4,7 +4,7 @@
   --work-max-w: 128rem;
   --work-pad-x: var(--spacing-6);
   --work-pad-section: var(--spacing-12);
-  --work-gap-grid: var(--spacing-1);
+  --work-gap-grid: var(--spacing-5);
 
   background: var(--color-bg);
   color: var(--color-text);
@@ -14,14 +14,14 @@
   .work-page {
     --work-pad-x: var(--spacing-10);
     --work-pad-section: var(--spacing-16);
-    --work-gap-grid: var(--spacing-2);
+    --work-gap-grid: var(--spacing-6);
   }
 }
 
 @media (min-width: 1024px) {
   .work-page {
     --work-pad-x: var(--spacing-16);
-    --work-gap-grid: var(--spacing-2);
+    --work-gap-grid: var(--spacing-6);
   }
 }
 
