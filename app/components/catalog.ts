@@ -300,7 +300,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "HomeAboutSkills",
     path: "src/components/home/HomeAboutSkills.tsx",
     category: "sections",
-    description: "Expandable focus-area chips on the home about teaser.",
+    description: "Expandable practice and tools chips on the home about teaser.",
     usedOn: "/",
   },
   {

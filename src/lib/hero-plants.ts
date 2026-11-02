@@ -7,7 +7,12 @@ export type HeroPlantId =
   | "clover"
   | "lotus"
   | "chrysanthemum"
-  | "forget-me-not";
+  | "forget-me-not"
+  | "rose"
+  | "peony"
+  | "lily"
+  | "hydrangea"
+  | "sunflower";
 
 export const HERO_PLANT_IDS: HeroPlantId[] = [
   "wax-flower",
@@ -19,6 +24,11 @@ export const HERO_PLANT_IDS: HeroPlantId[] = [
   "lotus",
   "chrysanthemum",
   "forget-me-not",
+  "rose",
+  "peony",
+  "lily",
+  "hydrangea",
+  "sunflower",
 ];
 
 export const DEFAULT_HERO_PLANT_ID: HeroPlantId = "wax-flower";
@@ -52,4 +62,13 @@ export const HERO_PLANT_STAMPS: Record<
     "Specimen No. 031",
     "Myosotis sylvatica",
   ],
+  rose: ["Garden Rose", "Specimen No. 012", "Rosa gallica"],
+  peony: ["Chinese Peony", "Specimen No. 019", "Paeonia lactiflora"],
+  lily: ["Madonna Lily", "Specimen No. 028", "Lilium candidum"],
+  hydrangea: [
+    "Bigleaf Hydrangea",
+    "Specimen No. 036",
+    "Hydrangea macrophylla",
+  ],
+  sunflower: ["Common Sunflower", "Specimen No. 051", "Helianthus annuus"],
 };

@@ -75,13 +75,46 @@ const HERO_PLANTS: HeroPlant[] = [
     stampLines: HERO_PLANT_STAMPS["forget-me-not"],
     render: () => <PlayIllustration name="forget-me-not" />,
   },
+  {
+    id: "rose",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.rose,
+    render: () => <PlayIllustration name="rose" />,
+  },
+  {
+    id: "peony",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.peony,
+    render: () => <PlayIllustration name="peony" />,
+  },
+  {
+    id: "lily",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.lily,
+    render: () => <PlayIllustration name="lily" />,
+  },
+  {
+    id: "hydrangea",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.hydrangea,
+    render: () => <PlayIllustration name="hydrangea" />,
+  },
+  {
+    id: "sunflower",
+    play: true,
+    stampLines: HERO_PLANT_STAMPS.sunflower,
+    render: () => <PlayIllustration name="sunflower" />,
+  },
 ];
 
 const DEFAULT_PLANT =
   HERO_PLANTS.find((plant) => plant.id === DEFAULT_HERO_PLANT_ID) ?? HERO_PLANTS[0]!;
 
-function pickHeroPlant(): HeroPlant {
-  const id = HERO_PLANT_IDS[Math.floor(Math.random() * HERO_PLANT_IDS.length)]!;
+function pickHeroPlant(excludeId?: HeroPlantId): HeroPlant {
+  const pool = excludeId
+    ? HERO_PLANT_IDS.filter((id) => id !== excludeId)
+    : HERO_PLANT_IDS;
+  const id = pool[Math.floor(Math.random() * pool.length)]!;
   return HERO_PLANTS.find((plant) => plant.id === id) ?? DEFAULT_PLANT;
 }
 
@@ -103,6 +136,10 @@ export function HeroHomePlant() {
 
   if (!plant) return null;
 
+  const showAnotherPlant = () => {
+    setPlant((current) => pickHeroPlant(current?.id));
+  };
+
   return (
     <>
       <div
@@ -111,14 +148,26 @@ export function HeroHomePlant() {
         data-tilt={allowMotion ? "" : undefined}
         data-plant={plant.id}
         data-play-plant={plant.play ? "" : undefined}
-        aria-hidden="true"
+        role="button"
+        tabIndex={0}
+        aria-label="Change botanical"
+        onClick={showAnotherPlant}
+        onKeyDown={(event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          showAnotherPlant();
+        }}
       >
         {plant.render()}
       </div>
 
+      <div className="hero-plant-hint font-mono text-xs tracking-stamp">
+        Click to change plant
+      </div>
+
       <motion.div
         key={plant.id}
-        className="hero-stamp font-mono text-xs leading-loose tracking-stamp"
+        className="hero-stamp font-mono text-xs leading-relaxed tracking-stamp"
         initial={allowMotion ? { opacity: 0 } : false}
         animate={{ opacity: inkComplete ? 1 : 0 }}
         transition={{ duration: allowMotion ? 0.35 : 0, ease: "easeOut" }}

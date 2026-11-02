@@ -102,11 +102,17 @@ import type { PageEndCopy } from "@/src/lib/page-end/types";
 
 export type AboutEndCopy = PageEndCopy;
 
+/** One labelled skill list on the home about teaser. */
+export interface AboutHomeSkillGroup {
+  label: string;
+  skills: string[];
+}
+
 /** Home page about teaser — short slice of the full about record. */
 export interface AboutHomeTeaser {
   shortHeading: string;
   storyIntro: string;
-  skills: string[];
+  skillGroups: AboutHomeSkillGroup[];
   statusLabel: string;
   availabilityHeading: string;
   availabilityDescription: string;

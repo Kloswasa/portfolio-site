@@ -34,6 +34,16 @@ export function PlayIllustration({
       return <ChrysanthemumIllustration className={className} />;
     case "forget-me-not":
       return <ForgetMeNotIllustration className={className} />;
+    case "rose":
+      return <RoseIllustration className={className} />;
+    case "peony":
+      return <PeonyIllustration className={className} />;
+    case "lily":
+      return <LilyIllustration className={className} />;
+    case "hydrangea":
+      return <HydrangeaIllustration className={className} />;
+    case "sunflower":
+      return <SunflowerIllustration className={className} />;
     default:
       return null;
   }
@@ -748,6 +758,621 @@ function ForgetMeNotIllustration({ className }: { className?: string }) {
       <ForgetMeNotFlower x={135} y={278} scale={0.85} />
       <ForgetMeNotFlower x={120} y={260} scale={0.8} />
       <ForgetMeNotFlower x={248} y={238} scale={0.75} />
+    </svg>
+  );
+}
+
+const PLATE_INK = "var(--color-border-strong)";
+const PLATE_STEM = "var(--color-primary-muted)";
+const PLATE_WASH = "color-mix(in srgb, var(--color-border-strong) 9%, transparent)";
+const PLATE_ACCENT = "var(--color-accent)";
+
+function PlateCaption({ x, children }: { x: number; children: string }) {
+  return (
+    <text
+      x={x}
+      y="490"
+      fontFamily={MONO}
+      fontSize="8"
+      fill="color-mix(in srgb, var(--color-text-inverse) 30%, transparent)"
+      letterSpacing="2"
+    >
+      {children}
+    </text>
+  );
+}
+
+function RoseSprig({
+  x,
+  y,
+  rot,
+  scale = 1,
+}: {
+  x: number;
+  y: number;
+  rot: number;
+  scale?: number;
+}) {
+  const leaflet =
+    "M0 3 C-11 -2 -13 -20 -2 -36 C4 -32 9 -16 7 -3 C5 3 1 3 0 3 Z";
+
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${scale})`}>
+      <path
+        d="M0 4 C1 -12 0 -26 0 -40"
+        fill="none"
+        stroke={PLATE_STEM}
+        strokeWidth="1.15"
+        opacity="0.75"
+      />
+      {[
+        { tx: 0, ty: -36, angle: -4, scale: 1 },
+        { tx: -1, ty: -18, angle: -52, scale: 0.78 },
+        { tx: 2, ty: -16, angle: 46, scale: 0.74 },
+      ].map((leaf) => (
+        <g
+          key={`${leaf.tx}-${leaf.angle}`}
+          transform={`translate(${leaf.tx} ${leaf.ty}) rotate(${leaf.angle}) scale(${leaf.scale})`}
+        >
+          <path
+            d={leaflet}
+            fill={PLATE_WASH}
+            stroke={PLATE_INK}
+            strokeWidth="0.8"
+            strokeLinejoin="round"
+            opacity="0.7"
+          />
+          <path
+            d="M0 1 L0 -30"
+            fill="none"
+            stroke={PLATE_STEM}
+            strokeWidth="0.45"
+            opacity="0.5"
+          />
+        </g>
+      ))}
+    </g>
+  );
+}
+
+function RoseIllustration({ className }: { className?: string }) {
+  const petal = {
+    fill: PLATE_WASH,
+    stroke: PLATE_INK,
+    strokeWidth: 0.9,
+    strokeLinejoin: "round" as const,
+  };
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 198 C198 280 206 370 198 470"
+        stroke={PLATE_STEM}
+        strokeWidth="1.45"
+        fill="none"
+        opacity="0.55"
+      />
+      <g fill={PLATE_INK} opacity="0.55">
+        <path d="M200 286 L184 278 L200 298 Z" />
+        <path d="M200 344 L216 336 L200 356 Z" />
+        <path d="M200 404 L184 398 L200 416 Z" />
+      </g>
+      <RoseSprig x={198} y={300} rot={-52} scale={1.35} />
+      <RoseSprig x={202} y={372} rot={46} scale={1.2} />
+      <g opacity="0.55">
+        <path
+          d="M186 186 C166 202 152 220 166 228 C178 214 188 198 194 188 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.75"
+        />
+        <path
+          d="M214 186 C234 202 248 220 234 228 C222 214 212 198 206 188 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.75"
+        />
+        <path
+          d="M194 194 C186 214 196 230 206 220 C204 206 200 196 194 194 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.75"
+        />
+      </g>
+      <path
+        d="M200 172 C162 156 140 112 158 78 C174 50 200 58 208 90 C200 122 198 154 200 172 Z"
+        {...petal}
+        opacity="0.5"
+      />
+      <path
+        d="M200 172 C238 156 260 112 242 78 C226 50 200 58 192 90 C200 122 202 154 200 172 Z"
+        {...petal}
+        opacity="0.5"
+      />
+      <path
+        d="M192 180 C142 166 124 118 148 86 C166 62 192 78 198 114 C204 146 198 170 192 180 Z"
+        {...petal}
+        opacity="0.62"
+      />
+      <path
+        d="M208 180 C258 166 276 118 252 86 C234 62 208 78 202 114 C196 146 202 170 208 180 Z"
+        {...petal}
+        opacity="0.62"
+      />
+      <path
+        d="M154 148 C142 182 166 214 200 210 C234 214 258 182 246 148 C226 176 174 176 154 148 Z"
+        {...petal}
+        opacity="0.7"
+      />
+      <path
+        d="M184 164 C170 142 168 104 186 78 C196 64 208 74 206 96 C202 128 194 152 184 164 Z"
+        fill="color-mix(in srgb, var(--color-border-strong) 12%, transparent)"
+        stroke={PLATE_INK}
+        strokeWidth="0.8"
+        strokeLinejoin="round"
+        opacity="0.78"
+      />
+      <path
+        d="M216 164 C230 142 232 104 214 78 C204 64 192 74 194 96 C198 128 206 152 216 164 Z"
+        fill="color-mix(in srgb, var(--color-border-strong) 12%, transparent)"
+        stroke={PLATE_INK}
+        strokeWidth="0.8"
+        strokeLinejoin="round"
+        opacity="0.78"
+      />
+      <path
+        d="M200 160 C190 136 192 102 200 76 C208 102 210 136 200 160 Z"
+        fill="color-mix(in srgb, var(--color-border-strong) 14%, transparent)"
+        stroke={PLATE_INK}
+        strokeWidth="0.8"
+        strokeLinejoin="round"
+        opacity="0.85"
+      />
+      <path
+        d="M200 148 C194 128 196 110 200 96 M190 136 C184 120 186 108 192 98"
+        fill="none"
+        stroke={PLATE_INK}
+        strokeWidth="0.6"
+        opacity="0.55"
+      />
+      <circle cx="200" cy="118" r="2.4" fill={PLATE_ACCENT} opacity="0.9" />
+      <PlateCaption x={125}>ROSA · GALLICA</PlateCaption>
+    </svg>
+  );
+}
+
+function PeonyLeaf({ x, y, rot }: { x: number; y: number; rot: number }) {
+  const lobe =
+    "M0 4 C-16 0 -26 -22 -8 -42 C0 -30 10 -8 0 4 Z";
+
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot})`}>
+      <path
+        d="M0 10 C-1 -6 -2 -18 0 -32"
+        fill="none"
+        stroke={PLATE_STEM}
+        strokeWidth="0.8"
+        opacity="0.5"
+      />
+      {[
+        "translate(0 -28) rotate(-6) scale(1.2)",
+        "translate(0 -30) rotate(-34) scale(0.82)",
+        "translate(1 -28) rotate(30) scale(0.78)",
+        "translate(-4 -12) rotate(-62) scale(0.7)",
+        "translate(6 -10) rotate(54) scale(0.66)",
+      ].map((transform) => (
+        <path
+          key={transform}
+          d={lobe}
+          transform={transform}
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.8"
+          strokeLinejoin="round"
+          opacity="0.68"
+        />
+      ))}
+    </g>
+  );
+}
+
+function PeonyIllustration({ className }: { className?: string }) {
+  const cx = 200;
+  const cy = 176;
+  const petal =
+    "M0 16 C-24 6 -44 -16 -36 -50 C-32 -68 -18 -60 -16 -76 C-10 -88 -2 -72 2 -82 C8 -70 14 -90 22 -78 C28 -62 40 -66 42 -46 C50 -16 26 4 0 16 Z";
+  const layers = [
+    { count: 9, scale: 1.08, spin: 0, opacity: 0.5 },
+    { count: 11, scale: 0.78, spin: 12, opacity: 0.62 },
+    { count: 10, scale: 0.52, spin: 6, opacity: 0.74 },
+    { count: 8, scale: 0.3, spin: 18, opacity: 0.82 },
+  ] as const;
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 250 C202 320 196 390 202 470"
+        stroke={PLATE_STEM}
+        strokeWidth="1.6"
+        fill="none"
+        opacity="0.55"
+      />
+      <PeonyLeaf x={198} y={318} rot={-36} />
+      <PeonyLeaf x={204} y={378} rot={28} />
+      <g transform={`translate(${cx} ${cy})`}>
+        {layers.map((layer) =>
+          Array.from({ length: layer.count }).map((_, i) => (
+            <path
+              key={`${layer.scale}-${i}`}
+              d={petal}
+              transform={`rotate(${(i / layer.count) * 360 + layer.spin}) scale(${layer.scale})`}
+              fill={PLATE_WASH}
+              stroke={PLATE_INK}
+              strokeWidth="0.75"
+              strokeLinejoin="round"
+              opacity={layer.opacity}
+            />
+          )),
+        )}
+        {Array.from({ length: 8 }).map((_, i) => {
+          const angle = (i / 8) * Math.PI * 2;
+          return (
+            <circle
+              key={`stamen-${i}`}
+              cx={Math.cos(angle) * 7}
+              cy={Math.sin(angle) * 7}
+              r="1.7"
+              fill={PLATE_ACCENT}
+              opacity="0.8"
+            />
+          );
+        })}
+        <circle r="3" fill={PLATE_ACCENT} opacity="0.9" />
+      </g>
+      <PlateCaption x={100}>PAEONIA · LACTIFLORA</PlateCaption>
+    </svg>
+  );
+}
+
+function LilyTepal({
+  angle,
+  narrow = false,
+}: {
+  angle: number;
+  narrow?: boolean;
+}) {
+  const petal = narrow
+    ? "M0 12 C-12 2 -16 -26 -8 -70 C-2 -92 6 -84 8 -66 C16 -24 14 2 0 12 Z"
+    : "M0 16 C-24 4 -34 -22 -18 -68 C-8 -98 2 -86 6 -68 C14 -104 26 -88 26 -64 C38 -20 26 4 0 16 Z";
+
+  return (
+    <g transform={`rotate(${angle})`}>
+      <path
+        d={petal}
+        fill={PLATE_WASH}
+        stroke={PLATE_INK}
+        strokeWidth="0.9"
+        strokeLinejoin="round"
+        opacity={narrow ? 0.72 : 0.58}
+      />
+      <path
+        d={narrow ? "M0 6 L0 -66" : "M0 8 L0 -70"}
+        fill="none"
+        stroke={PLATE_STEM}
+        strokeWidth="0.5"
+        opacity="0.45"
+      />
+      <path
+        d={narrow ? "M-4 -58 C-8 -70 -2 -78 4 -68" : "M-6 -62 C-12 -78 -2 -86 6 -72"}
+        fill="none"
+        stroke={PLATE_INK}
+        strokeWidth="0.55"
+        opacity="0.4"
+      />
+    </g>
+  );
+}
+
+function LilyIllustration({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 230 C198 310 204 390 200 470"
+        stroke={PLATE_STEM}
+        strokeWidth="1.4"
+        fill="none"
+        opacity="0.55"
+      />
+      <path
+        d="M206 318 C248 294 282 270 308 250"
+        stroke={PLATE_STEM}
+        strokeWidth="1.15"
+        fill="none"
+        opacity="0.6"
+      />
+      <g transform="translate(308 250) rotate(32)">
+        <path
+          d="M0 0 C-8 10 -9 28 0 42 C9 28 8 10 0 0 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.85"
+          opacity="0.65"
+        />
+        <path d="M0 6 L0 36" stroke={PLATE_STEM} strokeWidth="0.45" opacity="0.45" />
+      </g>
+      <g transform="translate(170 318) rotate(-62)">
+        <path
+          d="M0 0 C-12 28 -10 70 0 108 C12 70 12 28 0 0 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.85"
+          opacity="0.6"
+        />
+        <path d="M0 6 L0 98" stroke={PLATE_STEM} strokeWidth="0.5" fill="none" opacity="0.4" />
+      </g>
+      <g transform="translate(230 368) rotate(58)">
+        <path
+          d="M0 0 C-11 24 -9 62 0 96 C11 62 11 24 0 0 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.85"
+          opacity="0.58"
+        />
+        <path d="M0 6 L0 86" stroke={PLATE_STEM} strokeWidth="0.5" fill="none" opacity="0.4" />
+      </g>
+      <g transform="translate(200 168)">
+        <LilyTepal angle={0} />
+        <LilyTepal angle={120} />
+        <LilyTepal angle={240} />
+        <LilyTepal angle={60} narrow />
+        <LilyTepal angle={180} narrow />
+        <LilyTepal angle={300} narrow />
+        {Array.from({ length: 6 }).map((_, i) => (
+          <g key={`stamen-${i}`} transform={`rotate(${i * 60 + 30})`}>
+            <path
+              d="M0 0 L0 -38"
+              stroke={PLATE_INK}
+              strokeWidth="0.7"
+              opacity="0.7"
+            />
+            <ellipse cx="0" cy="-42" rx="3.1" ry="6.4" fill={PLATE_ACCENT} opacity="0.9" />
+          </g>
+        ))}
+        <path d="M0 2 L0 -16" stroke={PLATE_INK} strokeWidth="0.8" opacity="0.65" />
+        <circle cy="-18" r="2.5" fill={PLATE_ACCENT} opacity="0.9" />
+      </g>
+      <PlateCaption x={115}>LILIUM · CANDIDUM</PlateCaption>
+    </svg>
+  );
+}
+
+function HydrangeaFloret({
+  x,
+  y,
+  scale,
+  rot,
+}: {
+  x: number;
+  y: number;
+  scale: number;
+  rot: number;
+}) {
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${scale})`}>
+      {[0, 90, 180, 270].map((angle) => {
+        const rad = (angle * Math.PI) / 180;
+        return (
+          <circle
+            key={angle}
+            cx={Math.cos(rad) * 7.2}
+            cy={Math.sin(rad) * 7.2}
+            r="6.4"
+            fill="color-mix(in srgb, var(--color-border-strong) 12%, transparent)"
+            stroke={PLATE_INK}
+            strokeWidth="0.75"
+            opacity="0.8"
+          />
+        );
+      })}
+      <circle r="2" fill={PLATE_ACCENT} opacity="0.92" />
+    </g>
+  );
+}
+
+const HYDRANGEA_FLORETS = (() => {
+  const items: { x: number; y: number; s: number; rot: number }[] = [
+    { x: 0, y: 4, s: 1.08, rot: 12 },
+  ];
+  const rings = [
+    { r: 24, n: 6, s: 0.98, turn: 8 },
+    { r: 42, n: 9, s: 0.86, turn: 18 },
+    { r: 58, n: 10, s: 0.72, turn: 4 },
+  ] as const;
+
+  for (const ring of rings) {
+    for (let i = 0; i < ring.n; i++) {
+      const angle = (i / ring.n) * Math.PI * 2 + (ring.turn * Math.PI) / 180;
+      items.push({
+        x: Math.cos(angle) * ring.r,
+        y: Math.sin(angle) * ring.r * 0.8,
+        s: ring.s,
+        rot: (i * 19) % 45,
+      });
+    }
+  }
+
+  return items.sort((a, b) => a.y - b.y);
+})();
+
+function HydrangeaIllustration({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 230 C198 310 204 390 200 470"
+        stroke={PLATE_STEM}
+        strokeWidth="1.55"
+        fill="none"
+        opacity="0.55"
+      />
+      <g transform="translate(196 318) rotate(-38) scale(1.15)">
+        <path
+          d="M0 2 C-20 -4 -30 -36 -16 -68 C-6 -82 6 -78 10 -62 C26 -48 24 -12 6 2 C3 4 0 2 0 2 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.9"
+          strokeLinejoin="round"
+          opacity="0.62"
+        />
+        <path
+          d="M2 0 C0 -24 -2 -48 -4 -66 M2 -22 C-10 -20 -16 -16 -22 -10 M2 -40 C-8 -38 -14 -32 -18 -26"
+          fill="none"
+          stroke={PLATE_STEM}
+          strokeWidth="0.45"
+          opacity="0.4"
+        />
+        <path
+          d="M-14 -18 L-20 -14 M-16 -36 L-24 -34 M-10 -54 L-16 -58 M12 -16 L20 -12 M14 -36 L22 -34 M8 -54 L14 -60"
+          fill="none"
+          stroke={PLATE_INK}
+          strokeWidth="0.6"
+          opacity="0.4"
+        />
+      </g>
+      <g transform="translate(206 372) rotate(32) scale(1.12)">
+        <path
+          d="M0 2 C-16 -2 -24 -30 -12 -58 C-4 -70 6 -66 8 -52 C22 -40 20 -8 4 2 Z"
+          fill={PLATE_WASH}
+          stroke={PLATE_INK}
+          strokeWidth="0.9"
+          strokeLinejoin="round"
+          opacity="0.6"
+        />
+        <path
+          d="M2 0 L0 -54 M2 -18 C-8 -16 -12 -12 -16 -8 M2 -34 C-6 -32 -10 -28 -14 -22"
+          fill="none"
+          stroke={PLATE_STEM}
+          strokeWidth="0.45"
+          opacity="0.4"
+        />
+      </g>
+      <g transform="translate(200 148)">
+        {HYDRANGEA_FLORETS.map((floret) => (
+          <HydrangeaFloret
+            key={`${floret.x}-${floret.y}`}
+            x={floret.x}
+            y={floret.y}
+            scale={floret.s}
+            rot={floret.rot}
+          />
+        ))}
+      </g>
+      <PlateCaption x={88}>HYDRANGEA · MACROPHYLLA</PlateCaption>
+    </svg>
+  );
+}
+
+const SUNFLOWER_SEEDS = Array.from({ length: 96 }, (_, i) => {
+  const golden = Math.PI * (3 - Math.sqrt(5));
+  const radius = 2.35 * Math.sqrt(i);
+  const angle = i * golden;
+  return {
+    x: Math.cos(angle) * radius,
+    y: Math.sin(angle) * radius,
+    r: 1.05 + (i / 96) * 0.8,
+  };
+});
+
+function SunflowerLeaf({ x, y, rot }: { x: number; y: number; rot: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rot})`}>
+      <path
+        d="M0 0 C-24 20 -30 62 -8 102 C4 114 16 104 16 86 C36 70 32 26 8 4 C4 0 0 0 0 0 Z"
+        fill={PLATE_WASH}
+        stroke={PLATE_INK}
+        strokeWidth="0.9"
+        strokeLinejoin="round"
+        opacity="0.64"
+      />
+      <path
+        d="M4 8 C2 40 2 72 4 100 M4 34 C-8 30 -16 24 -24 16 M4 34 C16 32 24 26 30 18 M4 58 C-8 56 -16 50 -22 42 M4 58 C14 56 22 50 28 42 M4 80 C-4 78 -10 74 -14 68 M4 80 C10 78 16 74 20 68"
+        fill="none"
+        stroke={PLATE_STEM}
+        strokeWidth="0.5"
+        opacity="0.45"
+      />
+      <path
+        d="M-16 28 L-24 22 M-20 52 L-30 50 M-12 78 L-20 84 M18 30 L28 24 M24 54 L34 52 M16 78 L24 86"
+        fill="none"
+        stroke={PLATE_INK}
+        strokeWidth="0.65"
+        strokeLinecap="round"
+        opacity="0.45"
+      />
+    </g>
+  );
+}
+
+function SunflowerIllustration({ className }: { className?: string }) {
+  const cx = 200;
+  const cy = 148;
+  const petal =
+    "M0 -32 C-8 -40 -11 -60 -5 -80 C-2 -90 2 -90 5 -80 C11 -60 8 -40 0 -32 Z";
+  const bract = "M0 -26 C-4 -36 -4 -52 0 -66 C4 -52 4 -36 0 -26 Z";
+
+  return (
+    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path
+        d="M200 230 C198 310 204 390 200 470"
+        stroke={PLATE_STEM}
+        strokeWidth="1.8"
+        fill="none"
+        opacity="0.58"
+      />
+      <SunflowerLeaf x={198} y={278} rot={-42} />
+      <SunflowerLeaf x={204} y={340} rot={34} />
+      <g transform={`translate(${cx} ${cy})`}>
+        {Array.from({ length: 24 }).map((_, i) => (
+          <path
+            key={`bract-${i}`}
+            d={bract}
+            transform={`rotate(${i * 15 + 7.5})`}
+            fill={PLATE_WASH}
+            stroke={PLATE_INK}
+            strokeWidth="0.6"
+            opacity="0.4"
+          />
+        ))}
+        {Array.from({ length: 24 }).map((_, i) => (
+          <path
+            key={`petal-${i}`}
+            d={petal}
+            transform={`rotate(${i * 15}) scale(${i % 2 === 0 ? 1 : 0.92})`}
+            fill="color-mix(in srgb, var(--color-border-strong) 7%, transparent)"
+            stroke={PLATE_INK}
+            strokeWidth="0.8"
+            strokeLinejoin="round"
+            opacity={i % 2 === 0 ? 0.7 : 0.55}
+          />
+        ))}
+        <circle
+          r="31"
+          fill="color-mix(in srgb, var(--color-border-strong) 14%, transparent)"
+          stroke={PLATE_INK}
+          strokeWidth="0.8"
+          opacity="0.75"
+        />
+        {SUNFLOWER_SEEDS.map((seed, i) => (
+          <circle
+            key={`seed-${i}`}
+            cx={seed.x}
+            cy={seed.y}
+            r={seed.r}
+            fill={i % 7 === 0 ? PLATE_ACCENT : PLATE_INK}
+            opacity={i % 7 === 0 ? 0.85 : 0.45}
+          />
+        ))}
+      </g>
+      <PlateCaption x={108}>HELIANTHUS · ANNUUS</PlateCaption>
     </svg>
   );
 }

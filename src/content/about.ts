@@ -172,6 +172,7 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
     tags: [
       { label: "User research"},
       { label: "Prototyping"},
+      { label: "Agentic Coding"},
       { label: "Usability testing" },
       { label: "Accessibility" },
       { label: "Design systems" },
@@ -186,11 +187,8 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
     label: "Tools",
     tags: [
       { label: "Figma"},
-      { label: "Figma Variables" },
+      { label: "Cursor" },
       { label: "Procreate" },
-      { label: "CAD" },
-      { label: "3D printing" },
-      { label: "3D rendering" },
       { label: "React" },
       { label: "Next.js" },
       { label: "TypeScript" },
@@ -204,6 +202,10 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
       { label: "InDesign" },
       { label: "Premiere Pro" },
       { label: "After Effects" },
+      { label: "CAD" },
+      { label: "3D printing" },
+      { label: "3D rendering" },
+      
     ],
   },
   {
@@ -217,17 +219,27 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
   },
 ];
 
-const practiceSkills =
-  ABOUT_INSTRUMENTS.find((group) => group.label === "Practice")?.tags.map(
-    (tag) => tag.label,
-  ) ?? [];
+const HOME_INSTRUMENT_LABELS = ["Practice", "Tools"] as const;
+
+function instrumentSkills(
+  label: (typeof HOME_INSTRUMENT_LABELS)[number],
+): string[] {
+  return (
+    ABOUT_INSTRUMENTS.find((group) => group.label === label)?.tags.map(
+      (tag) => tag.label,
+    ) ?? []
+  );
+}
 
 /** Home `#about` section — derived from the full about record where possible. */
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "I make small, considered products.",
   storyIntro:
     "Melbourne-based product designer, from research to production code. Research decides what ships; craft keeps it working for the people who use it.",
-  skills: practiceSkills,
+  skillGroups: HOME_INSTRUMENT_LABELS.map((label) => ({
+    label,
+    skills: instrumentSkills(label),
+  })),
   statusLabel: "Open to work. Melbourne / remote. ",
   availabilityHeading: "Open to product designers and related roles.",
   availabilityDescription:

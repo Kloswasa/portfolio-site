@@ -52,7 +52,7 @@ export function HomeAboutSection() {
 
             <p className="home-about__lead">{teaser.storyIntro}</p>
 
-            <HomeAboutSkills skills={teaser.skills} />
+            <HomeAboutSkills groups={teaser.skillGroups} />
 
             <div className="home-about__actions">
               <Link className="btn btn-secondary" href="/about">

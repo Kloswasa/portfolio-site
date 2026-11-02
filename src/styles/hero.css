@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
   --hero-plant-stroke: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
   --hero-plant-stroke-muted: color-mix(in srgb, var(--color-text-inverse) 42%, transparent);
@@ -54,6 +55,11 @@
   will-change: transform;
 }
 
+.hero-botanical:focus-visible {
+  outline: var(--spacing-px) solid color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
+  outline-offset: calc(-1 * var(--spacing-3));
+}
+
 .hero-botanical svg {
   width: calc(var(--spacing-32) * 2 + var(--spacing-10) * 2);
   height: calc(var(--spacing-32) * 3 + var(--spacing-8) + var(--spacing-5));
@@ -65,6 +71,17 @@
   left: var(--spacing-10);
   z-index: 3;
   color: color-mix(in srgb, var(--color-text-inverse) 5%, transparent);
+  user-select: none;
+}
+
+.hero-plant-hint {
+  position: absolute;
+  bottom: var(--spacing-10);
+  left: var(--spacing-10);
+  z-index: 3;
+  color: color-mix(in srgb, var(--color-text-inverse) 35%, transparent);
+  text-align: right;
+  pointer-events: none;
   user-select: none;
 }
 
