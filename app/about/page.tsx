@@ -13,11 +13,11 @@ import {
   ABOUT_TIMELINE_ACTION,
   ABOUT_TIMELINE_BLOCK,
 } from "@/src/lib/about";
+import { siteConfig } from "@/src/lib/config";
 
 export const metadata = {
   title: "About",
-  description:
-    "Klaus W. product designer in Melbourne who designs and builds, from research and design through to production code.",
+  description: siteConfig.site.description,
 };
 
 export default function AboutPage() {

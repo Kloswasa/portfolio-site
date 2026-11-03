@@ -71,7 +71,7 @@ export const projects: Project[] = [
     tone: "primary",
     workTab: "product",
     caseStudyKind: "major",
-    yearLabel: "2025 · Product",
+    yearLabel: "2026 · Product",
     industry: "Travel",
     liveUrl: "https://australia-call.vision-verse.com.au/",
     coverImage: { src: "/projects/quiz-game/quiz-game-cover.png", alt: "Australia Calls cover image" },
@@ -79,9 +79,9 @@ export const projects: Project[] = [
   {
     id: 2,
     slug: "dementia-app",
-    title: "Dementia App",
+    title: "Dementia Caregiver app",
     description:
-      "A dementia app that helps people with dementia stay connected with their loved ones.",
+      "A caregiver monitoring prototype revisited: evaluation, design-system redesign, and a feature rewrite where trust and clarity broke down.",
     technologies: ["Figma", "User-centered design", "Research"],
     tone: "secondary",
     workTab: "product",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     yearLabel: "2024 · Research",
     industry: "Healthcare",
     liveUrl: "https://www.figma.com/proto/7WcTmeu8pC8V9YuipIffOB/UCD?node-id=1-2&p=f&viewport=602%2C483%2C0.06&t=m8HsVuyuBgcUVRwl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1&page-id=0%3A1",
-    coverImage: { src: "/projects/dementia-app/dementia_app_cover.webp", alt: "Dementia App cover image" },
+    coverImage: { src: "/projects/dementia-app/dementia_app_cover.webp", alt: "Dementia Caregiver app cover image" },
    
   },
   

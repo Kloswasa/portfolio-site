@@ -82,7 +82,7 @@ export const ABOUT_STORY: AboutStory = {
   paragraphs: [
     "I come from the industrial design field, which looks at visual and physical craft: type, grid, form, material. That habit of looking closely is still how I read an interface and keep the person using it in view.",
     "Storytelling is also my passion. To illustrate, this portfolio draws on the love of printing. Pages follow a monograph, work is logged like a collectable stamp, and the botanicals come from cyanotype printing.",
-    "Agency and freelance work foster me to ship under real constraints. Research decides what gets built, and working across design and engineering means the care survives the handoff.",
+    "Agency and freelance work fostering me to ship under real constraints. Research decides what gets built, and working across design and engineering means the care survives the handoff.",
   ],
   signature: "\u2014 Klaus",
 };
@@ -106,14 +106,14 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
     year: "2025\u20132026",
     role: "Product Designer",
     place: "Vision Verse · Remote (Sydney) · Contract",
-    note: "Took a quiz game from research to production including illustration, interface, and front-end code working as one. Shipped to a custom domain within two weeks.",
-    tag: "Finished \u00b7 <6 mo",
+    note: "Took a quiz game from research to production \u2014 illustration, interface, and front-end as one. Six-month arc; live on a custom domain after a final two-week launch push.",
+    tag: "Finished \u00b7 6 mo",
   },
   {
     year: "2026",
     role: "Productathon — First runner-up",
     place: "Capricorn Tech Connect · Physical AI in Sports",
-    note: "Two weeks to build the physical device for a muscle-sensing climbing wearable, in a team of five. First runner-up among 14 teams, with a $2,000 prize.",
+    note: "One week to propose, two weeks to prototype a muscle-sensing climbing wearable, in a team of five. First runner-up among 14 teams, with a $2,000 prize.",
     tag: "Award",
   },
   {
@@ -237,7 +237,7 @@ function instrumentSkills(
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "\u201cI love completing\nthe l\u221ep\u201d",
   storyIntro:
-    "From research to decision-making, then design and craft translating into production code. Weaving stories into my work is also my passion, like this site that was built after a collectable and editorial.",
+    "From research to decision-making, then design and craft translating into production code. Weaving stories into my work is also my passion, like this site that has built after a collectable and editorial inspriration.",
   skillGroups: HOME_INSTRUMENT_LABELS.map((label) => ({
     label,
     skills: instrumentSkills(label),

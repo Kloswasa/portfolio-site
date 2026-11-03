@@ -53,7 +53,7 @@ export const WORK_HERO_META: WorkHeroMeta = {
   titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
   titleLine2: "Collectables",
   description:
-    "Each project is logged like a collectible. \nStudied, deliberate, committed to the page. \nHover to develop the image. Click to read the full record.",
+    "Each project is logged like a collectible. \nStudied, valued, out of nostalgia.",
   stats: [
     { label: "Disciplines", value: String(disciplineCount) },
     { label: "Industries", value: String(industryCount) },
