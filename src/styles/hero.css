@@ -1,6 +1,6 @@
 /* ── Hero (split layout — spacing via --spacing-* tokens) ── */
 .hero {
-  min-height: calc(100dvh - var(--spacing-16));
+  min-height: calc((100dvh - var(--spacing-16)) * 0.8);
 }
 
 .hero-left {
@@ -76,10 +76,10 @@
 
 .hero-plant-hint {
   position: absolute;
-  bottom: var(--spacing-10);
-  left: var(--spacing-10);
+  top: var(--spacing-10);
+  right: var(--spacing-10);
   z-index: 3;
-  color: color-mix(in srgb, var(--color-text-inverse) 35%, transparent);
+  color: color-mix(in srgb, var(--color-text) 35%, transparent);
   text-align: right;
   pointer-events: none;
   user-select: none;
@@ -128,10 +128,6 @@
   color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
 }
 
-.hero-role em {
-  font-style: italic;
-  color: var(--color-tertiary);
-}
 
 @keyframes hero-scroll-pulse {
   0% {

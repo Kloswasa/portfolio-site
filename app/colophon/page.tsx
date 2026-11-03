@@ -4,19 +4,20 @@ import {
   COLOPHON_BRIEF_BLOCK,
   COLOPHON_END_COPY,
   COLOPHON_HERO_META,
+  COLOPHON_IDEAS,
+  COLOPHON_IDEAS_BLOCK,
   COLOPHON_LAYERS,
-  COLOPHON_LAYERS_BLOCK,
   COLOPHON_PIPELINES,
-  COLOPHON_PIPELINES_BLOCK,
   COLOPHON_QUOTE,
   COLOPHON_STACK,
   COLOPHON_STACK_BLOCK,
+  COLOPHON_SYSTEM_BLOCK,
 } from "@/src/lib/colophon";
 
 export const metadata = {
   title: "this site",
   description:
-    "How this portfolio was made: moodboard, a generated first system, then craft in Cursor \u2014 with Figma as a layout check.",
+    "How this portfolio was made: editorial, collectible, and cyanotype botanical ideas, built in Cursor with Figma as a layout check.",
 };
 
 export default function ColophonPage() {
@@ -26,12 +27,13 @@ export default function ColophonPage() {
         heroMeta={COLOPHON_HERO_META}
         briefBlock={COLOPHON_BRIEF_BLOCK}
         brief={COLOPHON_BRIEF}
+        ideasBlock={COLOPHON_IDEAS_BLOCK}
+        ideas={COLOPHON_IDEAS}
         stackBlock={COLOPHON_STACK_BLOCK}
         stack={COLOPHON_STACK}
         quote={COLOPHON_QUOTE}
-        pipelinesBlock={COLOPHON_PIPELINES_BLOCK}
+        systemBlock={COLOPHON_SYSTEM_BLOCK}
         pipelines={COLOPHON_PIPELINES}
-        layersBlock={COLOPHON_LAYERS_BLOCK}
         layers={COLOPHON_LAYERS}
         endCopy={COLOPHON_END_COPY}
       />

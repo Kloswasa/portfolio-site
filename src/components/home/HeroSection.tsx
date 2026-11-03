@@ -16,22 +16,11 @@ type HeroSectionProps = {
   secondaryCta?: HeroCta;
 };
 
-function AboutHeading({ text }: { text: string }) {
-  const emphasis = "building with care";
-  const index = text.indexOf(emphasis);
-
-  if (index === -1) {
-    return <>{text}</>;
-  }
-
-  return (
-    <>
-      {text.slice(0, index)}
-      <em>{emphasis}</em>
-      {text.slice(index + emphasis.length)}
-    </>
-  );
-}
+const ROLE_TONE_CLASS = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  accent: "text-accent",
+} as const;
 
 export function HeroSection({
   primaryCta = siteConfig.hero.primaryCta,
@@ -61,13 +50,15 @@ export function HeroSection({
 
           <SnapItem>
             <p className="hero-role mb-8 pl-1 font-heading text-lrg font-medium text-text-muted md:mb-12 md:text-xl">
-              <AboutHeading text={hero.role} />
-            </p>
-          </SnapItem>
-
-          <SnapItem>
-            <p className="mb-12 max-w-full font-body text-base leading-relaxed text-text-muted md:max-w-sm ">
-              {hero.description}
+              {hero.roleLead}{" "}
+              {hero.role.map((part, index) => (
+                <span key={part.word}>
+                  {index > 0 ? (
+                    <span className="text-text"> + </span>
+                  ) : null}
+                  <span className={ROLE_TONE_CLASS[part.tone]}>{part.word}</span>
+                </span>
+              ))}
             </p>
           </SnapItem>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeAboutBotanical } from "@/src/components/home/HomeAboutBotanical";
+import { HomeAboutLoop } from "@/src/components/home/HomeAboutLoop";
 import { HomeAboutSkills } from "@/src/components/home/HomeAboutSkills";
 import {
   SnapItem,
@@ -15,19 +16,68 @@ const PANEL_SOCIALS = [
   { label: "GitHub", icon: "github", href: siteConfig.social.github },
 ] as const;
 
-function AboutHeading({ text }: { text: string }) {
+function withEmphasis(chunk: string) {
   const emphasis = "considered";
-  const index = text.indexOf(emphasis);
-
-  if (index === -1) {
-    return <>{text}</>;
-  }
+  const at = chunk.indexOf(emphasis);
+  if (at === -1) return chunk;
 
   return (
     <>
-      {text.slice(0, index)}
+      {chunk.slice(0, at)}
       <em>{emphasis}</em>
-      {text.slice(index + emphasis.length)}
+      {chunk.slice(at + emphasis.length)}
+    </>
+  );
+}
+
+const LOOP_MARK = "\u221e";
+
+function withLoopMark(text: string) {
+  if (!text.includes(LOOP_MARK)) return withEmphasis(text);
+
+  const spoken = text.replaceAll(LOOP_MARK, "oo");
+  const parts = text.split(LOOP_MARK);
+
+  return (
+    <>
+      <span className="sr-only">{spoken}</span>
+      <span aria-hidden="true">
+        {parts.map((part, index) => (
+          <span key={`${part}-${index}`}>
+            {withEmphasis(part)}
+            {index < parts.length - 1 ? <HomeAboutLoop /> : null}
+          </span>
+        ))}
+      </span>
+    </>
+  );
+}
+
+function AboutHeading({ text }: { text: string }) {
+  const lines = text.split("\n");
+
+  return (
+    <>
+      {lines.map((line, lineIndex) => {
+        const isLast = lineIndex === lines.length - 1;
+        const lastSpace = line.lastIndexOf(" ");
+        const lead = isLast && lastSpace !== -1 ? line.slice(0, lastSpace) : line;
+        const end = isLast && lastSpace !== -1 ? line.slice(lastSpace + 1) : "";
+
+        return (
+          <span key={`${lineIndex}-${line}`}>
+            {lineIndex > 0 ? <br /> : null}
+            {isLast && end ? (
+              <>
+                {withEmphasis(lead)}{" "}
+                <span className="home-about__heading-end">{withLoopMark(end)}</span>
+              </>
+            ) : (
+              withLoopMark(line)
+            )}
+          </span>
+        );
+      })}
     </>
   );
 }

@@ -1,8 +1,8 @@
 import { ColophonBrief } from "@/src/components/about/ColophonBrief";
-import { ColophonLayers } from "@/src/components/about/ColophonLayers";
-import { ColophonPipelines } from "@/src/components/about/ColophonPipelines";
+import { ColophonIdeas } from "@/src/components/about/ColophonIdeas";
 import { ColophonPullquote } from "@/src/components/about/ColophonPullquote";
 import { ColophonStack } from "@/src/components/about/ColophonStack";
+import { ColophonSystem } from "@/src/components/about/ColophonSystem";
 import { PageEndSection } from "@/src/components/ui/PageEndSection";
 import { WorkHero } from "@/src/components/work/WorkHero";
 import type {
@@ -10,6 +10,7 @@ import type {
   AboutEndCopy,
   AboutHeroMeta,
   ColophonBrief as ColophonBriefData,
+  ColophonIdea,
   ColophonLayer,
   ColophonPipeline,
   ColophonPullquote as ColophonPullquoteData,
@@ -20,12 +21,13 @@ interface ColophonViewProps {
   heroMeta: AboutHeroMeta;
   briefBlock: AboutBlock;
   brief: ColophonBriefData;
+  ideasBlock: AboutBlock;
+  ideas: ColophonIdea[];
   stackBlock: AboutBlock;
   stack: ColophonStackGroup[];
   quote: ColophonPullquoteData;
-  pipelinesBlock: AboutBlock;
+  systemBlock: AboutBlock;
   pipelines: ColophonPipeline[];
-  layersBlock: AboutBlock;
   layers: ColophonLayer[];
   endCopy: AboutEndCopy;
 }
@@ -34,12 +36,13 @@ export function ColophonView({
   heroMeta,
   briefBlock,
   brief,
+  ideasBlock,
+  ideas,
   stackBlock,
   stack,
   quote,
-  pipelinesBlock,
+  systemBlock,
   pipelines,
-  layersBlock,
   layers,
   endCopy,
 }: ColophonViewProps) {
@@ -53,10 +56,14 @@ export function ColophonView({
 
       <div className="about-body about-container">
         <ColophonBrief block={briefBlock} brief={brief} />
+        <ColophonIdeas block={ideasBlock} ideas={ideas} />
         <ColophonPullquote quote={quote} />
         <ColophonStack block={stackBlock} groups={stack} />
-        <ColophonPipelines block={pipelinesBlock} pipelines={pipelines} />
-        <ColophonLayers block={layersBlock} layers={layers} />
+        <ColophonSystem
+          block={systemBlock}
+          pipelines={pipelines}
+          layers={layers}
+        />
       </div>
 
       <PageEndSection copy={endCopy} />

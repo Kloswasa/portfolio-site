@@ -10,6 +10,14 @@ export interface ColophonBrief {
   stampLabel: string;
 }
 
+export interface ColophonIdea {
+  num: string;
+  title: string;
+  source: string;
+  from: string;
+  shows: string;
+}
+
 export interface ColophonStackItem {
   label: string;
   key?: boolean;
@@ -26,18 +34,16 @@ export interface ColophonPullquote {
   source: string;
 }
 
+/** One authoring lane in the system diagram. */
 export interface ColophonPipeline {
-  num: string;
   title: string;
-  command: string;
-  source: string;
-  body: string;
+  input: string;
+  output: string;
 }
 
+/** One UI band in the system diagram (top = specific). */
 export interface ColophonLayer {
-  num: string;
   title: string;
-  path: string;
+  role: string;
   count: string;
-  body: string;
 }

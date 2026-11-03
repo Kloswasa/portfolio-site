@@ -51,7 +51,7 @@ const industryCount = new Set(visibleProjects.map((project) => project.industry)
 export const WORK_HERO_META: WorkHeroMeta = {
   eyebrow: `THE WORK ARCHIVE · ${minYear} — ${maxYear}`,
   titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
-  titleLine2: "Collectibles",
+  titleLine2: "Collectables",
   description:
     "Each project is logged like a collectible. \nStudied, deliberate, committed to the page. \nHover to develop the image. Click to read the full record.",
   stats: [

@@ -395,7 +395,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "ColophonView",
     path: "src/components/about/ColophonView.tsx",
     category: "about",
-    description: "About-this-site page: brief, inventory, pipelines, and layer bands.",
+    description: "About-this-site page: brief, ideas diagram, inventory, and system diagram.",
     usedOn: "/colophon",
   },
   {
@@ -404,6 +404,14 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     path: "src/components/about/ColophonBrief.tsx",
     category: "about",
     description: "Colophon intro brief with specimen plate.",
+    usedOn: "/colophon",
+  },
+  {
+    id: "colophon-ideas",
+    name: "ColophonIdeas",
+    path: "src/components/about/ColophonIdeas.tsx",
+    category: "about",
+    description: "Three-column diagram for editorial, collectible, and botanical ideas.",
     usedOn: "/colophon",
   },
   {
@@ -423,19 +431,11 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     usedOn: "/colophon",
   },
   {
-    id: "colophon-pipelines",
-    name: "ColophonPipelines",
-    path: "src/components/about/ColophonPipelines.tsx",
+    id: "colophon-system",
+    name: "ColophonSystem",
+    path: "src/components/about/ColophonSystem.tsx",
     category: "about",
-    description: "Content and token pipeline diagrams.",
-    usedOn: "/colophon",
-  },
-  {
-    id: "colophon-layers",
-    name: "ColophonLayers",
-    path: "src/components/about/ColophonLayers.tsx",
-    category: "about",
-    description: "Architecture layer bands for the site stack.",
+    description: "Merged glanceable diagram: content pipelines and UI layer stack.",
     usedOn: "/colophon",
   },
   {

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useReducedMotion } from "framer-motion";
 
 type Theme = "light" | "dark";
 type ThemeToggleTone = "default" | "inverse";
@@ -24,26 +25,35 @@ export function ThemeToggle({
   className?: string;
 }) {
   const [theme, setTheme] = React.useState<Theme>("dark");
+  const reduceMotion = useReducedMotion();
 
   React.useLayoutEffect(() => {
     setTheme(getThemeFromDom());
   }, []);
 
-  const nextTheme: Theme = theme === "dark" ? "light" : "dark";
-  const base =
-    "rounded-none px-3 py-2 font-body text-xs font-semibold uppercase tracking-label-lg transition";
-  const defaultClasses =
-    "border border-border-subtle bg-bg text-text-muted hover:border-border hover:text-text";
-  const inverseClasses =
-    "border border-text-inverse/25 bg-transparent text-text-inverse/70 hover:border-text-inverse/45 hover:text-text-inverse";
+  const isDark = theme === "dark";
+  const nextTheme: Theme = isDark ? "light" : "dark";
+  const label = isDark ? "Dark" : "Light";
+
+  const trackDefault =
+    "border-border-subtle bg-surface text-text hover:border-border";
+  const trackInverse =
+    "border-text-inverse/25 bg-transparent text-text-inverse hover:border-text-inverse/45";
 
   return (
     <button
       type="button"
-      className={[base, tone === "inverse" ? inverseClasses : defaultClasses, className]
+      role="switch"
+      aria-checked={isDark}
+      aria-label={`Switch to ${nextTheme} mode`}
+      title={`Switch to ${nextTheme} mode`}
+      className={[
+        "relative inline-flex h-7 w-20 shrink-0 items-center border p-0.5 transition",
+        tone === "inverse" ? trackInverse : trackDefault,
+        className,
+      ]
         .filter(Boolean)
         .join(" ")}
-      aria-label={`Switch to ${nextTheme} mode`}
       onClick={() => {
         const next = getThemeFromDom() === "dark" ? "light" : "dark";
         applyTheme(next);
@@ -53,8 +63,27 @@ export function ThemeToggle({
         setTheme(next);
       }}
     >
-      {theme === "dark" ? "Dark" : "Light"}
+      <span
+        aria-hidden
+        className={[
+          "absolute inset-y-0 flex items-center px-2 font-body text-xs font-semibold uppercase tracking-label-lg",
+          isDark ? "left-0" : "right-0",
+        ].join(" ")}
+      >
+        {label}
+      </span>
+      <span
+        aria-hidden
+        className={[
+          "relative z-10 block h-5 w-5 bg-current",
+          isDark ? "translate-x-14" : "translate-x-0",
+        ].join(" ")}
+        style={{
+          transition: reduceMotion
+            ? undefined
+            : "transform var(--duration-slow) var(--ease)",
+        }}
+      />
     </button>
   );
 }
-

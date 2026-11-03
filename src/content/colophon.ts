@@ -4,6 +4,7 @@ import type {
   AboutEndCopy,
   AboutHeroMeta,
   ColophonBrief,
+  ColophonIdea,
   ColophonLayer,
   ColophonPipeline,
   ColophonPullquote,
@@ -17,7 +18,7 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
   titleLine1: "This",
   titleLine2: "Site",
   description:
-    "Moodboard first, a generated system as a sketch, then the site built by eye \u2014 an experiment in collaborating with AI without giving up the looking twice.",
+    "Three ideas from print and cyanotype, built by eye with AI as a collaborator.",
   stats: [
     { label: "Cursor \u00b7 Figma", value: "80 / 20" },
     { label: "Design tokens", value: "100" },
@@ -35,23 +36,51 @@ export const COLOPHON_BRIEF_BLOCK: AboutBlock = {
 
 export const COLOPHON_BRIEF: ColophonBrief = {
   lead: [
-    "\u2003Every other project in this archive was made for someone else. This one is the exception \u2014 I am the designer, the engineer, the author, and the ",
+    "\u2003Every other project in this archive was for someone else. Here I am designer, engineer, author, and ",
     { em: " client" },
     " at once.",
-    
   ],
   paragraphs: [
-    "\u2003I started with a moodboard, then asked Claude to propose a first design system and screens. The making happened in Cursor, roughly eighty percent of the work. Figma was a ruler: I used it to justify layout, not to originate the site.",
-    "\u2003The product brief stayed narrow: adding a case study should be authoring, not engineering. If publishing a new project meant writing components, the site would rot the moment I got busy, which is exactly how portfolios die.",
-    "\u2003The code isn't immaculate, and it took time. That was the point — a workflow where AI speeds the start, and craft still decides what stays. Two JSON files are the only token source. Markdown compiles to typed TypeScript. Components sit in four layers. JSON in, CSS and TypeScript out, never the reverse.",
+    "\u2003Moodboard first, then Claude for a sketch system. Most of the making happened in Cursor; Figma justified layout. A new case study should be authoring, not engineering. AI speeds the start; craft decides what stays.",
   ],
   specimenLabel: "LIVE TOKENS\nRestyle with the theme",
   stampValue: "v0.1",
   stampLabel: "2026",
 };
 
-export const COLOPHON_STACK_BLOCK: AboutBlock = {
+export const COLOPHON_IDEAS_BLOCK: AboutBlock = {
   kicker: "  02",
+  title: "The look",
+  infoStrong: "Three ideas",
+  infoDetail: "Print, touch, cyanotype",
+};
+
+export const COLOPHON_IDEAS: ColophonIdea[] = [
+  {
+    num: "01",
+    title: "Editorial",
+    source: "Printed monograph",
+    from: "Love of print and long-form reading",
+    shows: "About, colophon, case studies",
+  },
+  {
+    num: "02",
+    title: "Collectible",
+    source: "Physical card · stamp",
+    from: "Wanting something you could hold",
+    shows: "Work and play cards",
+  },
+  {
+    num: "03",
+    title: "Botanical",
+    source: "Cyanotype · plants",
+    from: "Cyanotype printing and botanic looking",
+    shows: "Heroes, stamps, chrome marks",
+  },
+];
+
+export const COLOPHON_STACK_BLOCK: AboutBlock = {
+  kicker: "  03",
   title: "Inventory",
   infoStrong: "What it runs on",
   infoDetail: "Method, architecture, runtime",
@@ -102,78 +131,30 @@ export const COLOPHON_STACK: ColophonStackGroup[] = [
 ];
 
 export const COLOPHON_QUOTE: ColophonPullquote = {
-  quote:
-    "A generated system is a sketch. Craft is deciding what stays.",
+  quote: "A generated system is a sketch. Craft is deciding what stays.",
   source: "On making with AI \u00b7 2026",
 };
 
-export const COLOPHON_PIPELINES_BLOCK: AboutBlock = {
-  kicker: "  03",
-  title: "Pipelines",
-  infoStrong: "Author \u2192 compile \u2192 validate",
-  infoDetail: "One command each",
+export const COLOPHON_SYSTEM_BLOCK: AboutBlock = {
+  kicker: "  04",
+  title: "The system",
+  infoStrong: "Ship content · build UI",
+  infoDetail: "Glanceable architecture",
 };
 
+/** Authoring lanes — left to right. */
 export const COLOPHON_PIPELINES: ColophonPipeline[] = [
-  {
-    num: "01",
-    title: "Tokens",
-    command: "npm run tokens:gen",
-    source: "design-tokens/tokens.*.json",
-    body: "Nine token groups flatten to 100 CSS variables and 80 dark overrides. A second exporter writes W3C DTCG files, so the recipes can travel \u2014 including into Figma when I need a ruler.",
-  },
-  {
-    num: "02",
-    title: "Content",
-    command: "npm run content:all",
-    source: "src/content/case-studies/*.md",
-    body: "A compiler turns markdown into a discriminated union of typed content blocks. Every project in the archive is authored the same way.",
-  },
-  {
-    num: "03",
-    title: "Data",
-    command: "npm run validate:data",
-    source: "scripts/validate-data.ts",
-    body: "Confirms every case study slug maps to a project record in both directions, and every catalogued component path exists on disk.",
-  },
+  { title: "Tokens", input: "JSON", output: "CSS vars" },
+  { title: "Content", input: "Markdown", output: "Typed blocks" },
+  { title: "Checks", input: "Slugs · paths", output: "Validated" },
 ];
 
-export const COLOPHON_LAYERS_BLOCK: AboutBlock = {
-  kicker: "  04",
-  title: "Layers",
-  infoStrong: "Generic to specific",
-  infoDetail: "Import down, never sideways",
-};
-
+/** UI bands — top = page-specific, bottom = shared. */
 export const COLOPHON_LAYERS: ColophonLayer[] = [
-  {
-    num: "01",
-    title: "Primitives",
-    path: "src/components/ui/",
-    count: "13",
-    body: "Badge, TabBar, FilterBar, CopyButton, PageEndSection \u2014 reusable across every feature.",
-  },
-  {
-    num: "02",
-    title: "Site chrome",
-    path: "src/components/chrome/",
-    count: "7",
-    body: "Nav, Footer, ThemeToggle, PageLoader \u2014 the shell every page shares.",
-  },
-  {
-    num: "03",
-    title: "Motion",
-    path: "src/components/motion/",
-    count: "2",
-    body: "ScrollReveal and SnapSectionReveal. The client boundary is crossed only where a hook or browser API genuinely requires it.",
-  },
-  {
-    num: "04",
-    title: "Feature sections",
-    path: "home/ \u00b7 work/ \u00b7 play/ \u00b7 about/ \u00b7 case-study/",
-    count: "46",
-    body: "Page-specific sections. A component may import from its own layer or layers above it, never sideways into another feature.",
-  },
+  { title: "Feature pages", role: "Home, work, play, about, case studies", count: "46" },
+  { title: "Motion", role: "Scroll and section reveals", count: "2" },
+  { title: "Site chrome", role: "Nav, footer, theme, loaders", count: "7" },
+  { title: "Primitives", role: "Shared cards, tabs, filters, ends", count: "13" },
 ];
 
 export const COLOPHON_END_COPY: AboutEndCopy = {

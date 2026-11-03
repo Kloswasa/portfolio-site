@@ -32,9 +32,12 @@ export const siteConfig = {
     eyebrow: "Product Designer · Melbourne",
     nameLine1: "Klaus",
     nameLine2: "W.",
-    role: "Designing and building with care",
-    description:
-      "From research and design through to production code. Research decides what ships; craft and engineering keep it holding together.",
+    roleLead: "The designer who",
+    role: [
+      { word: "Care", tone: "secondary" },
+      { word: "Craft", tone: "primary" },
+      { word: "Build", tone: "accent" },
+    ],
     sectionNumber: "01",
     primaryCta: { label: "View Work", href: "/work" },
     secondaryCta: { label: "About Me", href: "/about" },

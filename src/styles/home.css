@@ -207,6 +207,22 @@
   color: var(--color-tertiary);
 }
 
+.home-about .home-section__heading {
+  max-width: none;
+}
+
+.home-about__heading-end {
+  white-space: nowrap;
+}
+
+.home-about__loop {
+  display: inline-block;
+  width: calc(0.58em * 21 / 11.2);
+  height: 0.58em;
+  margin-inline: 0.04em;
+  vertical-align: -0.04em;
+}
+
 .home-about__lead {
   max-width: 36rem;
   font-family: var(--font-body);

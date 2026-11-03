@@ -161,8 +161,10 @@ export function HeroHomePlant() {
         {plant.render()}
       </div>
 
-      <div className="hero-plant-hint font-mono text-xs tracking-stamp">
-        Click to change plant
+      <div className="hero-plant-hint font-mono text-xs leading-relaxed tracking-stamp">
+        <span className="block">Click</span>
+        <span className="block">to change</span>
+        <span className="block">botanical</span>
       </div>
 
       <motion.div

@@ -615,7 +615,7 @@ export default function ComponentsPage() {
                   </li>
                   <li className="card p-4">
                     <p className="font-medium text-text">ColophonView</p>
-                    <p className="mt-1 text-sm">Brief, pipelines, layers, token specimen.</p>
+                    <p className="mt-1 text-sm">Brief, ideas, system diagram, token specimen.</p>
                     <Link href="/colophon" className="btn-text mt-3">
                       Open colophon <span aria-hidden>→</span>
                     </Link>

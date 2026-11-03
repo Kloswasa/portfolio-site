@@ -19,7 +19,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-    "Melbourne-based product designer, from research to production code.\nFocused on underlying structure and the people it serves.",
+    "Melbourne-based product designer, from research to production code.\nPrint-minded craft, physical touch, and botanical looking carried into digital work.",
   stats: [
     { label: "Status", value: "Open to work" },
     { label: "Based in", value: "Melbourne" },
@@ -74,14 +74,15 @@ export const ABOUT_STORY: AboutStory = {
     stampLabel: "2019",
   },
   lead: [
-    "I design with",
+    "I consider a research decision with",
     { em: " care" },
-    ", then build what I create, so it carries from design to code.",
+    ", then build what I design and craft, so it carries stories from a canvas and Figma to code.",
   ],
   
   paragraphs: [
-    "I came to product through visual and physical crafts: type, grid, form, material, the structure beneath surfaces, and a habit of looking closely. That training never really left. It is still how I read an interface, and how I keep the person on the other side of the screen in view.",
-    "Agency and independent practice taught me to ship under real constraint. I use research to decide what gets built, not only how it looks, and I work in both design and engineering so that care survives the handoff.",
+    "I come from the industrial design field, which looks at visual and physical craft: type, grid, form, material. That habit of looking closely is still how I read an interface and keep the person using it in view.",
+    "Storytelling is also my passion. To illustrate, this portfolio draws on the love of printing. Pages follow a monograph, work is logged like a collectable stamp, and the botanicals come from cyanotype printing.",
+    "Agency and freelance work foster me to ship under real constraints. Research decides what gets built, and working across design and engineering means the care survives the handoff.",
   ],
   signature: "\u2014 Klaus",
 };
@@ -212,6 +213,7 @@ export const ABOUT_INSTRUMENTS: AboutInstrumentGroup[] = [
     label: "Off the clock",
     tags: [
       { label: "Hiking" },
+      { label: "Botany" },
       { label: "Reading" },
       { label: "Cooking" },
       { label: "Meditation" },
@@ -233,15 +235,15 @@ function instrumentSkills(
 
 /** Home `#about` section — derived from the full about record where possible. */
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
-  shortHeading: "I make small, considered products.",
+  shortHeading: "\u201cI love completing\nthe l\u221ep\u201d",
   storyIntro:
-    "Melbourne-based product designer, from research to production code. Research decides what ships; craft keeps it working for the people who use it.",
+    "From research to decision-making, then design and craft translating into production code. Weaving stories into my work is also my passion, like this site that was built after a collectable and editorial.",
   skillGroups: HOME_INSTRUMENT_LABELS.map((label) => ({
     label,
     skills: instrumentSkills(label),
   })),
   statusLabel: "Open to work. Melbourne / remote. ",
-  availabilityHeading: "Open to product designers and related roles.",
+  availabilityHeading: "Open to product designer and related roles.",
   availabilityDescription:
     "Email is the best way to reach me.",
   experience: "Design + Build",
@@ -250,8 +252,8 @@ export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
 export const ABOUT_QUOTE: AboutQuote = {
   watermark: "Look twice",
   quote:
-    "\u201cI learned to design by learning to look, carefully, and twice. Everything else followed from that.\u201d",
-  source: "On the practice \u00b7 2024",
+    "\u201cI want a digital portfolio that still feels printed: editorial pages, collectible cards, and botanicals pressed like a cyanotype.\u201d",
+  source: "On the archive \u00b7 2026",
 };
 
 
