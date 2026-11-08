@@ -39,7 +39,7 @@
 }
 
 .specimen-card--polaroid.specimen-card--featured {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: auto;
   height: auto;
   min-height: 0;
 }
@@ -66,7 +66,7 @@
 }
 
 .featured-mosaic .specimen-card {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: auto;
   height: auto;
   min-height: 0;
 }
@@ -326,7 +326,8 @@
 .specimen-card--polaroid {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: auto;
+  height: auto;
   padding: var(--spacing-4) 0 var(--spacing-5);
   gap: var(--spacing-3);
   overflow: hidden;
@@ -363,8 +364,11 @@
   padding: 0;
   opacity: 1;
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-stamp);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
   color: var(--specimen-card-accent);
 }
 
@@ -385,23 +389,33 @@
 }
 
 .specimen-card--polaroid .specimen-card__year-val {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-stamp);
+  font-family: var(--font-sub);
+  font-size: 1.45rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
   color: var(--color-text);
   text-shadow: none;
 }
 
 .specimen-card--polaroid .specimen-card__year-lbl {
+  font-family: var(--font-sub);
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-text-muted);
 }
 
 .specimen-card--polaroid .specimen-card__media {
   position: relative;
   inset: auto;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   width: 100%;
-  min-height: 0;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-block: 1px solid var(--color-border);
   background: var(--color-header-bg);
@@ -445,9 +459,16 @@
 }
 
 .specimen-card--polaroid .specimen-card__description {
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   text-align: start;
   color: var(--color-text-muted);
+}
+
+.specimen-card--polaroid:hover .specimen-card__description,
+.specimen-card--polaroid:focus-visible .specimen-card__description {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
 }
 
 @keyframes specimen-card-pulse {

@@ -17,8 +17,6 @@ export function LockedCaseStudy({ project }: { project: Project }) {
   return (
     <article className="locked-study">
       <div className="locked-study__frame">
-        <p className="locked-study__eyebrow">{lockCopy.eyebrow}</p>
-
         <div className="locked-study__stamp" aria-hidden="true">
           <span className="locked-study__stamp-lock"> </span>
           <span>{lockCopy.stamp}</span>

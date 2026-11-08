@@ -37,7 +37,6 @@ export type AboutHeroMeta = WorkHeroMeta & {
 
 /** Section header used across the about page (matches the play block-head pattern). */
 export interface AboutBlock {
-  kicker: string;
   title: string;
   infoStrong: string;
   infoDetail: string;
@@ -113,7 +112,6 @@ export interface AboutHomeTeaser {
   shortHeading: string;
   storyIntro: string;
   skillGroups: AboutHomeSkillGroup[];
-  statusLabel: string;
   availabilityHeading: string;
   availabilityDescription: string;
   experience: string;

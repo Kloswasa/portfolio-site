@@ -31,6 +31,18 @@ function withEmphasis(chunk: string) {
 }
 
 const LOOP_MARK = "\u221e";
+const OPEN_WORD = "Open";
+
+function withOpenAccent(text: string) {
+  if (!text.startsWith(OPEN_WORD)) return text;
+
+  return (
+    <>
+      <em>{OPEN_WORD}</em>
+      {text.slice(OPEN_WORD.length)}
+    </>
+  );
+}
 
 function withLoopMark(text: string) {
   if (!text.includes(LOOP_MARK)) return withEmphasis(text);
@@ -95,7 +107,6 @@ export function HomeAboutSection() {
 
         <div className="home-about__grid">
           <SnapItem className="home-about__main">
-            <p className="eyebrow home-about__eyebrow">About</p>
             <h2 className="home-section__heading">
               <AboutHeading text={teaser.shortHeading} />
             </h2>
@@ -122,13 +133,8 @@ export function HomeAboutSection() {
             <HomeAboutBotanical />
 
             <div className="home-about__panel-inner">
-              <p className="home-about__status">
-                <span className="home-about__status-dot" aria-hidden="true" />
-                {teaser.statusLabel}
-              </p>
-
               <h3 className="home-about__panel-heading">
-                {teaser.availabilityHeading}
+                {withOpenAccent(teaser.availabilityHeading)}
               </h3>
               <dl className="home-about__stats">
                 <div>

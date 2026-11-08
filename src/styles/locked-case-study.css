@@ -15,14 +15,6 @@
   background: var(--color-surface);
 }
 
-.locked-study__eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: var(--tracking-stamp-lg);
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
 .locked-study__stamp {
   position: absolute;
   top: var(--spacing-6);

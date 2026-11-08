@@ -6,7 +6,6 @@ import { MajorReadingBar } from "@/src/components/case-study/major/MajorReadingB
 import {
   MAJOR_SECTION_ORDER,
   getCaseStudyNav,
-  getMinorSectionEyebrows,
   getMinorSectionOrder,
 } from "@/src/lib/case-studies/sections";
 import type {
@@ -35,13 +34,6 @@ export function MajorCaseStudyView({
     caseStudy.kind === "minor"
       ? getMinorSectionOrder(caseStudy.sections)
       : null;
-  const minorEyebrows =
-    caseStudy.kind === "minor"
-      ? getMinorSectionEyebrows(
-          minorSectionOrder!,
-          caseStudy.approachLabel,
-        )
-      : null;
 
   return (
     <div className="cs-major -mx-8">
@@ -61,10 +53,7 @@ export function MajorCaseStudyView({
                 <MajorCaseStudySection
                   key={id}
                   id={id}
-                  section={{
-                    ...caseStudy.sections[id]!,
-                    eyebrow: minorEyebrows![id],
-                  }}
+                  section={caseStudy.sections[id]!}
                 />
               ))
             : MAJOR_SECTION_ORDER.map((id) => (

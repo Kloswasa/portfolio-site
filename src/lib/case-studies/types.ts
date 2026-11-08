@@ -184,7 +184,7 @@ export interface MajorCaseStudyHero {
   /**
    * overlay: full-bleed image under inverse type.
    * split (default when a hero image is present): light editorial column +
-   * right-side illustration with number and eyebrow.
+   * right-side illustration with a catalog number.
    */
   layout?: "overlay" | "split";
   /**
@@ -214,7 +214,7 @@ export interface MinorCaseStudy {
   slug: string;
   hero: MajorCaseStudyHero;
   /**
-   * Nav + eyebrow label when `sections.approach` is present (default: "Approach").
+   * Nav label when `sections.approach` is present (default: "Approach").
    * e.g. "The Decision" for graphic minors, "Process" for a build-heavy piece.
    */
   approachLabel?: string;

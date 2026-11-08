@@ -35,6 +35,7 @@
   --color-info-bg: #DCE9F5;
   --color-info-text: #152952;
   --font-heading: 'Fraunces', Georgia, serif;
+  --font-sub: var(--font-windsong), 'WindSong', cursive;
   --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: var(--font-asul), 'Asul', Georgia, serif;
   --text-xs: 0.68rem;
@@ -138,6 +139,7 @@
   --color-info-bg: #152952;
   --color-info-text: #B5D0EC;
   --font-heading: 'Fraunces', Georgia, serif;
+  --font-sub: var(--font-windsong), 'WindSong', cursive;
   --font-body: 'Lato', system-ui, sans-serif;
   --font-mono: var(--font-asul), 'Asul', Georgia, serif;
   --text-xs: 0.68rem;

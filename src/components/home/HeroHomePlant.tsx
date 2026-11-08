@@ -17,7 +17,7 @@ import {
 type HeroPlant = {
   id: HeroPlantId;
   play?: boolean;
-  stampLines: readonly [string, string, string];
+  stampLines: readonly [string, string];
   render: () => ReactNode;
 };
 
@@ -110,6 +110,18 @@ const HERO_PLANTS: HeroPlant[] = [
 const DEFAULT_PLANT =
   HERO_PLANTS.find((plant) => plant.id === DEFAULT_HERO_PLANT_ID) ?? HERO_PLANTS[0]!;
 
+/** Plate tokens whose ink still meets WCAG AA in both themes. */
+const HERO_STAMP_PLATES = [
+  "header-bg",
+  "primary",
+  "secondary",
+  "tertiary",
+  "accent",
+  "primary-muted",
+] as const;
+
+type HeroStampPlate = (typeof HERO_STAMP_PLATES)[number];
+
 function pickHeroPlant(excludeId?: HeroPlantId): HeroPlant {
   const pool = excludeId
     ? HERO_PLANT_IDS.filter((id) => id !== excludeId)
@@ -118,9 +130,17 @@ function pickHeroPlant(excludeId?: HeroPlantId): HeroPlant {
   return HERO_PLANTS.find((plant) => plant.id === id) ?? DEFAULT_PLANT;
 }
 
+function pickStampPlate(exclude?: HeroStampPlate): HeroStampPlate {
+  const pool = exclude
+    ? HERO_STAMP_PLATES.filter((plate) => plate !== exclude)
+    : [...HERO_STAMP_PLATES];
+  return pool[Math.floor(Math.random() * pool.length)]!;
+}
+
 export function HeroHomePlant() {
   const pathname = usePathname();
   const [plant, setPlant] = useState<HeroPlant | null>(null);
+  const [plate, setPlate] = useState<HeroStampPlate | null>(null);
   const reduceMotion = useReducedMotion();
   const allowMotion = !reduceMotion;
   const tiltRef = useHeroPlantTilt(allowMotion);
@@ -132,54 +152,66 @@ export function HeroHomePlant() {
 
   useEffect(() => {
     setPlant(pickHeroPlant());
+    setPlate(pickStampPlate());
   }, [pathname]);
 
   if (!plant) return null;
 
   const showAnotherPlant = () => {
     setPlant((current) => pickHeroPlant(current?.id));
+    setPlate((current) => pickStampPlate(current ?? undefined));
   };
 
   return (
-    <>
-      <div
-        ref={tiltRef}
-        className="hero-botanical"
-        data-tilt={allowMotion ? "" : undefined}
-        data-plant={plant.id}
-        data-play-plant={plant.play ? "" : undefined}
-        role="button"
-        tabIndex={0}
-        aria-label="Change botanical"
-        onClick={showAnotherPlant}
-        onKeyDown={(event) => {
-          if (event.key !== "Enter" && event.key !== " ") return;
-          event.preventDefault();
-          showAnotherPlant();
-        }}
-      >
-        {plant.render()}
-      </div>
+    <aside
+      className="hero-plant-stamp"
+      data-plate={plate ?? undefined}
+      aria-label="Botanical specimen stamp"
+    >
+      <div className="hero-plant-stamp__plate">
+        <div
+          ref={tiltRef}
+          className="hero-botanical"
+          data-tilt={allowMotion ? "" : undefined}
+          data-plant={plant.id}
+          data-play-plant={plant.play ? "" : undefined}
+          role="button"
+          tabIndex={0}
+          aria-label="Change botanical"
+          onClick={showAnotherPlant}
+          onKeyDown={(event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            showAnotherPlant();
+          }}
+        >
+          {plant.render()}
+        </div>
 
-      <div className="hero-plant-hint font-mono text-xs leading-relaxed tracking-stamp">
-        <span className="block">Click</span>
-        <span className="block">to change</span>
-        <span className="block">botanical</span>
+        <motion.div
+          key={plant.id}
+          className="hero-stamp font-mono text-xs leading-relaxed tracking-stamp"
+          initial={allowMotion ? { opacity: 0 } : false}
+          animate={{ opacity: inkComplete ? 1 : 0 }}
+          transition={{ duration: allowMotion ? 0.35 : 0, ease: "easeOut" }}
+        >
+          {plant.stampLines.map((line, index) => (
+            <span
+              key={`${plant.id}-${line}`}
+              className={
+                index === 0
+                  ? "hero-stamp__name block"
+                  : "hero-stamp__meaning block"
+              }
+            >
+              {line}
+            </span>
+          ))}
+        </motion.div>
       </div>
-
-      <motion.div
-        key={plant.id}
-        className="hero-stamp font-mono text-xs leading-relaxed tracking-stamp"
-        initial={allowMotion ? { opacity: 0 } : false}
-        animate={{ opacity: inkComplete ? 1 : 0 }}
-        transition={{ duration: allowMotion ? 0.35 : 0, ease: "easeOut" }}
-      >
-        {plant.stampLines.map((line) => (
-          <span key={`${plant.id}-${line}`} className="block">
-            {line}
-          </span>
-        ))}
-      </motion.div>
-    </>
+      <p className="hero-plant-hint font-mono text-xs leading-relaxed tracking-stamp">
+        Click to change
+      </p>
+    </aside>
   );
 }

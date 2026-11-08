@@ -14,7 +14,6 @@ import { getVisibleProjects } from "@/src/lib/projects";
 
 export const COLOPHON_HERO_META: AboutHeroMeta = {
   watermark: "\u2018Colophon\u2019",
-  eyebrow: "COLOPHON \u00b7 CRAFT \u00b7 COLLABORATION WITH AI",
   titleLine1: "This",
   titleLine2: "Site",
   description:
@@ -28,7 +27,6 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
 };
 
 export const COLOPHON_BRIEF_BLOCK: AboutBlock = {
-  kicker: "  01",
   title: "The making",
   infoStrong: "How it was made",
   infoDetail: "Cursor ~80 \u00b7 Figma ~20",
@@ -49,7 +47,6 @@ export const COLOPHON_BRIEF: ColophonBrief = {
 };
 
 export const COLOPHON_IDEAS_BLOCK: AboutBlock = {
-  kicker: "  02",
   title: "The look",
   infoStrong: "Three ideas",
   infoDetail: "Print, touch, cyanotype",
@@ -80,7 +77,6 @@ export const COLOPHON_IDEAS: ColophonIdea[] = [
 ];
 
 export const COLOPHON_STACK_BLOCK: AboutBlock = {
-  kicker: "  03",
   title: "Inventory",
   infoStrong: "What it runs on",
   infoDetail: "Method, architecture, runtime",
@@ -136,7 +132,6 @@ export const COLOPHON_QUOTE: ColophonPullquote = {
 };
 
 export const COLOPHON_SYSTEM_BLOCK: AboutBlock = {
-  kicker: "  04",
   title: "The system",
   infoStrong: "Ship content · build UI",
   infoDetail: "Glanceable architecture",
@@ -158,7 +153,6 @@ export const COLOPHON_LAYERS: ColophonLayer[] = [
 ];
 
 export const COLOPHON_END_COPY: AboutEndCopy = {
-  kicker: "The end of the record",
   titleLead: "Want to see the system",
   titleAccent: "in action?",
   actions: [

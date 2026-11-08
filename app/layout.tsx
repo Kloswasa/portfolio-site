@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Asul  , Lato } from "next/font/google";
+import { Fraunces, Asul, Lato, WindSong } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -36,6 +36,13 @@ const monoFont = Asul({
   weight: ["400", "700"],
 });
 
+const subFont = WindSong({
+  subsets: ["latin"],
+  variable: "--font-windsong",
+  display: "swap",
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.site.title,
@@ -67,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable} scroll-pt-16`}
+      className={`${headingFont.variable} ${subFont.variable} ${bodyFont.variable} ${monoFont.variable} scroll-pt-16`}
       suppressHydrationWarning
     >
       <head>
@@ -79,7 +86,7 @@ export default function RootLayout({
           <header className="fixed inset-x-0 top-0 z-[400] flex h-16 items-center justify-between border-b border-border-subtle bg-bg/85 px-8 backdrop-blur-md pointer-events-none">
             <Link
               href="/"
-              className="pointer-events-auto font-heading text-base font-semibold uppercase tracking-label-lg text-text"
+              className="pointer-events-auto font-sub text-xl font-normal leading-none text-text"
             >
               {siteConfig.name}
             </Link>

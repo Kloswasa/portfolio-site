@@ -145,8 +145,7 @@ export default function ComponentsPage() {
             className="max-w-3xl scroll-mt-24"
             revealOnScroll={false}
           >
-            <span className="eyebrow">UI catalog</span>
-            <h1 className="mt-4 text-heading-4xl md:text-heading-5xl">
+            <h1 className="text-heading-4xl md:text-heading-5xl">
               Components
             </h1>
             <p className="mt-4 font-body text-lg font-light text-text-muted">
@@ -193,6 +192,8 @@ export default function ComponentsPage() {
                   (Fraunces) applies to headings and{" "}
                   <span className="font-mono text-text">text-heading-*</span>{" "}
                   utilities.{" "}
+                  <span className="font-mono text-text">font-sub</span>{" "}
+                  (WindSong) is the accent face for short emphasized lines.{" "}
                   <span className="font-mono text-text">font-body</span> (Lato)
                   is the default for everything else. Mono labels use{" "}
                   <span className="font-mono text-text">font-mono</span> (Asul).
@@ -203,6 +204,9 @@ export default function ComponentsPage() {
                   <p className="text-heading-3xl">Heading 3xl</p>
                   <p className="text-heading-2xl">Heading 2xl</p>
                   <p className="text-heading-xl">Heading xl</p>
+                  <p className="font-sub text-heading-3xl leading-none text-tertiary">
+                    Sub accent
+                  </p>
                   <p className="font-body text-lg text-text-muted">
                     Body lg — light weight for intros and descriptions.
                   </p>
@@ -210,7 +214,7 @@ export default function ComponentsPage() {
                     Body base — default paragraph size.
                   </p>
                   <p className="font-mono text-xs uppercase tracking-widest text-text-subtle">
-                    Mono xs — eyebrows and stamps
+                    Mono xs — stamps
                   </p>
                 </div>
               </div>
@@ -285,19 +289,12 @@ export default function ComponentsPage() {
 
                 <section>
                   <h3 className="text-heading-xl text-text">
-                    Section label · divider · eyebrow · clamp-2
+                    Section label · divider · clamp-2
                   </h3>
                   <div className="mt-4 max-w-xl grid gap-6">
                     <div>
                       <span className="section-label">Section label</span>
                       <hr className="divider" />
-                    </div>
-                    <div>
-                      <span className="eyebrow">Eyebrow / kicker</span>
-                      <p className="font-body text-text">
-                        Leading accent dash via{" "}
-                        <span className="font-mono text-xs">::before</span>.
-                      </p>
                     </div>
                     <p className="clamp-2 max-w-md text-sm text-text-muted">
                       Clamp-2 truncates long copy to two lines — useful on card
@@ -378,7 +375,7 @@ export default function ComponentsPage() {
               filePath="src/components/ui/SectionBlockHead.tsx · src/styles/section-block.css"
             >
               <p className="mb-6 font-body text-text-muted">
-                Shared section title row with optional kicker and info column.
+                Shared section title row with an info column.
                 Used on Play medium blocks and about-style sections.
               </p>
               <SectionBlockHeadDemo />

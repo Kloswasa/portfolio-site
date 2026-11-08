@@ -169,24 +169,10 @@ function projectFrame(slug: string): string {
   return String(Math.max(index, 0) + 1).padStart(2, "0");
 }
 
-function splitHeroEyebrow(
-  eyebrow: string,
-  fallbackNumber: string,
-): { number: string; label: string } {
-  const match = eyebrow.match(/^(\d{2,3})\s*·\s*(.+)$/);
-  if (!match) {
-    return { number: fallbackNumber, label: eyebrow };
-  }
-
-  return {
-    number: match[1].slice(-2),
-    label: match[2],
-  };
-}
-
-function HeroEyebrow({ text }: { text: string }) {
-  const { label } = splitHeroEyebrow(text, "");
-  return <div className="eyebrow">{label}</div>;
+function heroMediaNumber(eyebrow: string, fallbackNumber: string): string {
+  const match = eyebrow.match(/^(\d{2,3})\s*·\s*/);
+  if (!match) return fallbackNumber;
+  return match[1].slice(-2);
 }
 
 function HeroMediaOverlay({
@@ -196,17 +182,13 @@ function HeroMediaOverlay({
   project: Project;
   eyebrow: string;
 }) {
-  const { number, label } = splitHeroEyebrow(
-    eyebrow,
-    projectFrame(project.slug),
-  );
+  const number = heroMediaNumber(eyebrow, projectFrame(project.slug));
 
   return (
     <div className="cs-major__hero-media-chrome" aria-hidden>
       <div className="cs-major__hero-media-gradient" />
       <div className="cs-major__hero-media-overlay">
         <div className="cs-major__hero-media-number">{number}</div>
-        <div className="eyebrow">{label}</div>
       </div>
     </div>
   );
@@ -275,9 +257,6 @@ export function MajorCaseStudyHero({
           <>
             <SnapItem>
               <HeroBreadcrumb label={hero.breadcrumb} />
-            </SnapItem>
-            <SnapItem>
-              <HeroEyebrow text={hero.eyebrow} />
             </SnapItem>
             <SnapItem>
               <HeroTitle

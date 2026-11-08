@@ -65,7 +65,6 @@ export function PageEndSection({
   return (
     <ScrollReveal as="section" className={sectionClassName}>
       {showOrnament ? <PageEndOrnament /> : null}
-      <p className="eyebrow mb-0">{copy.kicker}</p>
       <h2 className="page-end__title">
         {copy.titleLead}
         <br />

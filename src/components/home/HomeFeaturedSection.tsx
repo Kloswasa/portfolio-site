@@ -18,14 +18,10 @@ export function HomeFeaturedSection() {
           {SECTION_NUMBER}
         </p>
 
-        <SnapItem as="header" className="home-section__header">
-          <p className="eyebrow mb-0">Featured</p>
-        </SnapItem>
-
         <div className="home-featured__content">
           <SnapItem className="home-featured__intro">
             <h2 className="home-section__heading">
-              Things I have been weaving.
+              Things I have been <em>Weaving.</em>
             </h2>
           </SnapItem>
 

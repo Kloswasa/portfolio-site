@@ -39,6 +39,12 @@
 }
 
 .colophon-brief__lead em {
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.55em;
+  line-height: 0.7;
+  letter-spacing: 0;
   color: var(--color-tertiary);
 }
 

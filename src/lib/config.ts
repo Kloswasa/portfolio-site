@@ -29,14 +29,13 @@ export const siteConfig = {
   },
 
   hero: {
-    eyebrow: "Product Designer · Melbourne",
     nameLine1: "Klaus",
     nameLine2: "W.",
     roleLead: "The designer who",
     role: [
       { word: "Care", tone: "secondary" },
-      { word: "Craft", tone: "primary" },
-      { word: "Build", tone: "accent" },
+      { word: "Craft", tone: "primary", script: true },
+      { word: "Build", tone: "accent", mono: true },
     ],
     sectionNumber: "01",
     primaryCta: { label: "View Work", href: "/work" },

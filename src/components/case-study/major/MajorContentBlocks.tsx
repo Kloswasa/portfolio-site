@@ -572,6 +572,10 @@ function Block({ block }: { block: MajorContentBlock }) {
             <p className="cs-major__type-heading text-heading-3xl">Editorial headline</p>
           </div>
           <div className="cs-major__type-row">
+            <span className="cs-major__type-meta">Sub · WindSong</span>
+            <p className="cs-major__type-sub">Accent line</p>
+          </div>
+          <div className="cs-major__type-row">
             <span className="cs-major__type-meta">Body · Lato</span>
             <p className="cs-major__type-body">
               Body copy at base size, used for narrative paragraphs, captions, and
