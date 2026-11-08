@@ -8,7 +8,6 @@ interface AboutBlockHeadProps {
 export function AboutBlockHead({ block }: AboutBlockHeadProps) {
   return (
     <SectionBlockHead
-      kicker={block.kicker}
       title={block.title}
       infoStrong={block.infoStrong}
       infoDetail={block.infoDetail}

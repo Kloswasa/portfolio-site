@@ -33,8 +33,6 @@ export function WorkHero({
 
       <div className="work-hero__inner work-container">
         <div className="work-hero__copy">
-          <p className="eyebrow mb-0">{meta.eyebrow}</p>
-
           <h1 className="work-hero__title">
             <span className="work-hero__title-line">{meta.titleLine1}</span>
             <span className="work-hero__title-line work-hero__title-line--accent">

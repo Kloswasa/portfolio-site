@@ -772,10 +772,7 @@ export default function TokensClient({ rows }: { rows: TokenRow[] }) {
     <main className="mx-auto min-w-0 max-w-6xl overflow-x-hidden px-6 py-16">
       <header className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <span className="eyebrow">
-            Token verification
-          </span>
-          <h1 className="mt-4 text-heading-4xl md:text-heading-5xl">Design tokens</h1>
+          <h1 className="text-heading-4xl md:text-heading-5xl">Design tokens</h1>
           <p className="mt-4 max-w-3xl font-body text-lg font-light text-text-muted">
             Resolved from CSS variables. Use this page to verify both light and dark mode values.
           </p>

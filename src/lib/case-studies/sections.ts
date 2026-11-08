@@ -47,25 +47,13 @@ const MINOR_SECTION_LABELS: Record<
   outcome: "Outcome",
 };
 
-/** Nav + in-page eyebrow label for a minor section (approach is per-project). */
+/** Nav label for a minor section (approach is per-project). */
 function getMinorSectionLabel(
   id: MinorSectionId,
   approachLabel?: string,
 ): string {
   if (id === "approach") return approachLabel ?? "Approach";
   return MINOR_SECTION_LABELS[id];
-}
-
-export function getMinorSectionEyebrows(
-  sectionOrder: MinorSectionId[],
-  approachLabel?: string,
-): Record<MinorSectionId, string> {
-  return Object.fromEntries(
-    sectionOrder.map((id, index) => [
-      id,
-      `${String(index + 1).padStart(2, "0")} · ${getMinorSectionLabel(id, approachLabel)}`,
-    ]),
-  ) as Record<MinorSectionId, string>;
 }
 
 export function getCaseStudyNav(caseStudy: CaseStudy): CaseStudyNavItem[] {

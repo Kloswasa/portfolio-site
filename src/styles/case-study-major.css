@@ -128,7 +128,14 @@
 }
 
 .cs-major__hero-title em {
-  font-style: italic;
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.35em;
+  line-height: 0.8;
+  letter-spacing: 0;
+  vertical-align: baseline;
   color: var(--color-border-strong);
 }
 
@@ -291,11 +298,6 @@
   color: var(--color-accent);
 }
 
-.cs-major__hero-media-overlay .eyebrow {
-  margin-bottom: 0;
-  color: var(--color-accent);
-}
-
 .cs-major__hero--split .cs-major__breadcrumb {
   color: var(--color-text-muted);
   margin-bottom: 0;
@@ -316,10 +318,6 @@
 
 .cs-major__hero--split .cs-major__hero-title em {
   color: var(--color-text);
-}
-
-.cs-major__hero--split .eyebrow {
-  margin-bottom: 0;
 }
 
 .cs-major__hero--split .cs-major__hero-summary {
@@ -471,7 +469,13 @@
 }
 
 .cs-major__section-title em {
-  font-style: italic;
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.35em;
+  line-height: 0.85;
+  letter-spacing: 0;
 }
 
 .cs-major__body {
@@ -1383,6 +1387,15 @@ a.cs-major__image-credit:hover {
 .cs-major__type-heading {
   color: var(--color-text);
   line-height: 1.15;
+}
+
+.cs-major__type-sub {
+  font-family: var(--font-sub);
+  font-size: var(--text-display-sm);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 0;
+  color: var(--color-tertiary);
 }
 
 .cs-major__type-body {

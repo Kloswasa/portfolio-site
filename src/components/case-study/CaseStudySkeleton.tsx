@@ -46,10 +46,6 @@ export function CaseStudySkeleton() {
             <Bone className="h-3 w-20" tone="hero" reduceMotion={reduceMotion} />
           </div>
 
-          <div className="eyebrow mb-3">
-            <Bone className="h-3 w-48" tone="hero" reduceMotion={reduceMotion} />
-          </div>
-
           <div className="cs-major__hero-title flex flex-col gap-3">
             <Bone className="h-16 w-80" tone="hero" reduceMotion={reduceMotion} />
             <Bone className="h-16 w-64" tone="hero" reduceMotion={reduceMotion} />
@@ -101,9 +97,6 @@ export function CaseStudySkeleton() {
 
         <article className="cs-major__main">
           <section className="cs-major__section">
-            <div className="eyebrow mb-3">
-              <Bone className="h-3 w-24" tone="body" reduceMotion={reduceMotion} />
-            </div>
             <div className="cs-major__section-title flex flex-col gap-3">
               <Bone className="h-10 w-64" tone="body" reduceMotion={reduceMotion} />
               <Bone className="h-10 w-48" tone="body" reduceMotion={reduceMotion} />

@@ -1,49 +1,242 @@
-/* ── Hero (split layout — spacing via --spacing-* tokens) ── */
+/* ── Hero (heading + botanical stamp) ── */
 .hero {
-  min-height: calc((100dvh - var(--spacing-16)) * 0.8);
+  min-height: calc((100dvh - var(--spacing-16)) * 0.2);
+  background: var(--color-bg);
 }
 
-.hero-left {
+/* Right 40% — field behind the botanical stamp. Same token as the “W.” */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 40%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-primary) 20%, transparent) var(--spacing-px),
+      transparent var(--spacing-px)
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-primary) 20%, transparent) var(--spacing-px),
+      transparent var(--spacing-px)
+    );
+  background-size: var(--spacing-6) var(--spacing-6);
+  background-position: top left;
+  /* Close the field on the right; the repeat starts on the left edge. */
+  box-shadow: inset calc(-1 * var(--spacing-px)) 0 0
+    color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.hero-inner {
   position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+  align-items: stretch;
+  width: 100%;
+  min-height: 100%;
 }
 
-.hero-right {
-  background: var(--color-primary);
+.hero-copy {
+  align-self: end;
+  min-width: 0;
+  max-width: 36rem;
+  padding: var(--spacing-16) var(--spacing-8) var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .hero-copy {
+    padding: var(--spacing-20) var(--spacing-12) var(--spacing-16);
+  }
+}
+
+.hero-copy h1 em {
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 0.8;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 .hero-name__initial {
+  font-size: 1.28em;
+  line-height: 0.4;
+  margin-right: 0.2em;
+  vertical-align: -0.005em;
+}
+
+.hero-role__words {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.45em;
+  row-gap: 0.15em;
+}
+
+.hero-role__plus {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.hero-role__script {
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1em;
+  line-height: 0.8;
+  letter-spacing: 0;
+  /* Optically center WindSong — letter body starts late; t exit runs long */
+  padding-inline: 0.08em 0.32em;
+}
+
+.hero-role__mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.hero-stamp-slot {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  flex-shrink: 0;
+  width: min(78%, 14rem);
+}
+
+@media (min-width: 768px) {
+  .hero-stamp-slot {
+    width: calc(16rem * 0.8);
+    transform: rotate(10deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-stamp-slot {
+    width: calc(18rem * 0.8);
+  }
+}
+
+/* Rectangular specimen stamp wrapping the botanical */
+.hero-plant-stamp {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  --hero-stamp-plate: var(--color-header-bg);
+  --hero-stamp-ink: var(--color-text-inverse);
+  /* Label color when the hint sits on the page, not the plate. */
+  --hero-stamp-hint: var(--color-header-bg);
+}
+
+.hero-plant-stamp__plate {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: 100%;
   overflow: hidden;
+  border: 3px solid color-mix(in srgb, var(--hero-stamp-ink) 50%, transparent);
+  background: var(--hero-stamp-plate);
+  box-shadow: var(--shadow);
 }
 
-.hero-right::before {
+/* Plate and ink each stay at or above 4.5:1. Hint matches that pair on the page. */
+.hero-plant-stamp[data-plate="header-bg"] {
+  --hero-stamp-plate: var(--color-header-bg);
+  --hero-stamp-ink: var(--color-text-inverse);
+  --hero-stamp-hint: var(--color-header-bg);
+}
+
+.hero-plant-stamp[data-plate="primary"] {
+  --hero-stamp-plate: var(--color-primary);
+  --hero-stamp-ink: var(--color-text-inverse);
+  --hero-stamp-hint: var(--color-primary);
+}
+
+.hero-plant-stamp[data-plate="secondary"] {
+  --hero-stamp-plate: var(--color-secondary);
+  --hero-stamp-ink: var(--color-text-inverse);
+  --hero-stamp-hint: var(--color-secondary);
+}
+
+.hero-plant-stamp[data-plate="tertiary"] {
+  --hero-stamp-plate: var(--color-tertiary);
+  --hero-stamp-ink: var(--color-text-inverse);
+  --hero-stamp-hint: var(--color-tertiary);
+}
+
+.hero-plant-stamp[data-plate="accent"] {
+  --hero-stamp-plate: var(--color-accent);
+  --hero-stamp-ink: var(--color-header-bg);
+  --hero-stamp-hint: var(--color-header-bg);
+}
+
+.hero-plant-stamp[data-plate="primary-muted"] {
+  --hero-stamp-plate: var(--color-primary-muted);
+  --hero-stamp-ink: var(--color-header-bg);
+  --hero-stamp-hint: var(--color-header-bg);
+}
+
+.dark .hero-plant-stamp[data-plate="header-bg"] {
+  --hero-stamp-hint: var(--color-text-inverse);
+}
+
+.dark .hero-plant-stamp[data-plate="primary"],
+.dark .hero-plant-stamp[data-plate="secondary"],
+.dark .hero-plant-stamp[data-plate="tertiary"] {
+  --hero-stamp-ink: var(--color-header-bg);
+}
+
+.dark .hero-plant-stamp[data-plate="accent"] {
+  --hero-stamp-hint: var(--color-accent);
+}
+
+.dark .hero-plant-stamp[data-plate="primary-muted"] {
+  --hero-stamp-ink: var(--color-text-inverse);
+  --hero-stamp-hint: var(--color-text-inverse);
+}
+
+.hero-plant-stamp__plate::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
   background-image: radial-gradient(
     circle,
-    color-mix(in srgb, var(--color-text-inverse) 9%, transparent) 1px,
+    color-mix(in srgb, var(--hero-stamp-ink) 9%, transparent) 1px,
     transparent 1px
   );
-  background-size: var(--spacing-6) var(--spacing-6);
+  background-size: var(--spacing-5) var(--spacing-5);
 }
 
 .hero-botanical {
   position: absolute;
-  inset: 0;
+  inset: var(--spacing-8) var(--spacing-4) var(--spacing-14);
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
-  --hero-plant-stroke: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
-  --hero-plant-stroke-muted: color-mix(in srgb, var(--color-text-inverse) 42%, transparent);
-  --hero-plant-accent: color-mix(in srgb, var(--color-text-inverse) 72%, transparent);
+  opacity: 0.5;
+  color: var(--hero-stamp-ink);
+  --hero-plant-stroke: var(--hero-stamp-ink);
+  --hero-plant-stroke-muted: color-mix(in srgb, var(--hero-stamp-ink) 80%, transparent);
+  --hero-plant-accent: var(--hero-stamp-ink);
 }
 
 .hero-botanical[data-play-plant] {
   --color-primary-muted: var(--hero-plant-stroke-muted);
   --color-border-strong: var(--hero-plant-stroke);
   --color-accent: var(--hero-plant-accent);
-  --color-secondary: color-mix(in srgb, var(--color-text-inverse) 32%, transparent);
+  --color-secondary: var(--hero-stamp-ink);
 }
 
 .hero-botanical[data-play-plant] text {
@@ -56,52 +249,83 @@
 }
 
 .hero-botanical:focus-visible {
-  outline: var(--spacing-px) solid color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
-  outline-offset: calc(-1 * var(--spacing-3));
+  outline: var(--spacing-px) solid var(--hero-stamp-ink);
+  outline-offset: calc(-1 * var(--spacing-2));
+}
+
+.hero-botanical svg,
+.hero-botanical svg * {
+  opacity: 1;
 }
 
 .hero-botanical svg {
-  width: calc(var(--spacing-32) * 2 + var(--spacing-10) * 2);
-  height: calc(var(--spacing-32) * 3 + var(--spacing-8) + var(--spacing-5));
+  width: 78%;
+  height: auto;
+  max-height: 100%;
 }
 
 .hero-number {
   position: absolute;
-  top: var(--spacing-10);
-  left: var(--spacing-10);
-  z-index: 3;
-  color: color-mix(in srgb, var(--color-text-inverse) 5%, transparent);
+  top: var(--spacing-4);
+  left: calc(60% + var(--spacing-4));
+  z-index: 4;
+  color: color-mix(in srgb, var(--color-primary) 18%, transparent);
   user-select: none;
+  pointer-events: none;
+}
+
+.hero-stamp {
+  position: absolute;
+  right: var(--spacing-3);
+  bottom: var(--spacing-3);
+  left: var(--spacing-3);
+  z-index: 3;
+  margin: 0;
+  color: color-mix(in srgb, var(--hero-stamp-ink) 50%, transparent);
+  text-align: left;
+}
+
+.hero-stamp__name {
+  font-family: var(--font-sub);
+  font-size: 1.65rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.hero-stamp__meaning {
+  margin-top: 0.15rem;
 }
 
 .hero-plant-hint {
   position: absolute;
-  top: var(--spacing-10);
-  right: var(--spacing-10);
+  top: var(--spacing-3);
+  right: var(--spacing-3);
   z-index: 3;
-  color: color-mix(in srgb, var(--color-text) 35%, transparent);
+  margin: 0;
+  color: color-mix(in srgb, var(--hero-stamp-ink) 50%, transparent);
   text-align: right;
   pointer-events: none;
   user-select: none;
 }
 
-.hero-stamp {
-  position: absolute;
-  right: var(--spacing-10);
-  bottom: var(--spacing-10);
-  z-index: 3;
-  color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
-  text-align: right;
-}
-
 .hero-scroll-indicator {
   position: absolute;
-  bottom: var(--spacing-10);
-  left: var(--spacing-10);
+  bottom: var(--spacing-6);
+  left: auto;
+  right: calc(40% + var(--spacing-3));
   z-index: 4;
-  display: flex;
+  display: none;
   align-items: center;
   gap: var(--spacing-3);
+}
+
+@media (min-width: 768px) {
+  .hero-scroll-indicator {
+    display: flex;
+  }
 }
 
 .hero-scroll-line {
@@ -109,7 +333,7 @@
   width: var(--spacing-px);
   height: var(--spacing-12);
   overflow: hidden;
-  background: color-mix(in srgb, var(--color-text-inverse) 20%, transparent);
+  background: color-mix(in srgb, var(--color-text) 20%, transparent);
 }
 
 .hero-scroll-line::after {
@@ -125,9 +349,8 @@
 
 .hero-scroll-text {
   writing-mode: vertical-rl;
-  color: color-mix(in srgb, var(--color-text-inverse) 55%, transparent);
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
 }
-
 
 @keyframes hero-scroll-pulse {
   0% {
@@ -142,35 +365,21 @@
 }
 
 @media (max-width: 767px) {
-  .hero-left {
-    order: 2;
-    padding-top: var(--spacing-12);
-    padding-bottom: var(--spacing-12);
-  }
-
-  .hero-right {
-    order: 1;
-    min-height: calc(var(--spacing-10) * 8);
-  }
-
-  .hero-botanical svg {
-    width: calc(var(--spacing-32) + var(--spacing-20) + var(--spacing-6));
-    height: calc(var(--spacing-32) * 2 + var(--spacing-6));
-  }
-
-  .hero-scroll-indicator {
+  .hero::before,
+  .hero-stamp-slot,
+  .hero-number {
     display: none;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-right {
-    min-height: calc(var(--spacing-32) * 2 + var(--spacing-1));
+  .hero-inner {
+    position: relative;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
   }
 
-  .hero-botanical svg {
-    width: calc(var(--spacing-32) + var(--spacing-16));
-    height: calc(var(--spacing-24) * 2 + var(--spacing-8));
+  .hero-copy {
+    padding-top: var(--spacing-12);
+    padding-bottom: var(--spacing-10);
   }
 }
 

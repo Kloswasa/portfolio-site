@@ -45,7 +45,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "CSS utilities",
     path: "app/globals.css",
     category: "foundation",
-    description: "Buttons, card, panel, input, eyebrow, badges, tabs, and layout helpers.",
+    description: "Buttons, card, panel, input, badges, tabs, and layout helpers.",
   },
   {
     id: "badge",
@@ -106,7 +106,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "SectionBlockHead",
     path: "src/components/ui/SectionBlockHead.tsx",
     category: "ui",
-    description: "Shared section title row with optional kicker and info column.",
+    description: "Shared section title row with an info column.",
     usedOn: "/play · /about",
   },
   {
@@ -123,7 +123,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "PageEndSection",
     path: "src/components/ui/PageEndSection.tsx",
     category: "ui",
-    description: "Shared end-of-page CTA with kicker, title, and actions.",
+    description: "Shared end-of-page CTA with a title and actions.",
     usedOn: "/play · /work · /about · /colophon",
   },
   {
@@ -276,7 +276,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "HeroHomePlant",
     path: "src/components/home/HeroHomePlant.tsx",
     category: "sections",
-    description: "Home hero botanical illustration with stamp and hover tilt.",
+    description: "Home hero botanical specimen stamp with hover tilt and click-to-swap.",
     usedOn: "/",
   },
   {
@@ -339,7 +339,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "AboutBlockHead",
     path: "src/components/about/AboutBlockHead.tsx",
     category: "about",
-    description: "Section kicker, title, and info column for about blocks.",
+    description: "Section title and info column for about blocks.",
     usedOn: "/about",
   },
   {

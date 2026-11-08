@@ -47,18 +47,6 @@
   }
 }
 
-.home-section__header {
-  position: relative;
-  z-index: 1;
-  margin-bottom: var(--spacing-10);
-}
-
-@media (min-width: 768px) {
-  .home-section__header {
-    margin-bottom: var(--spacing-4);
-  }
-}
-
 .home-section__heading {
   max-width: 14ch;
   font-family: var(--font-heading);
@@ -89,9 +77,25 @@
   flex: 1;
   flex-direction: column;
   min-height: 0;
+  max-width: none;
+  padding-inline: var(--spacing-8);
   padding-block: var(--spacing-16);
+}
 
-  
+@media (min-width: 768px) {
+  .home-featured__inner {
+    padding-inline: var(--spacing-32 );
+  }
+}
+
+.home-featured__inner .home-section__watermark {
+  right: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .home-featured__inner .home-section__watermark {
+    right: var(--spacing-12);
+  }
 }
 
 .home-featured__content {
@@ -198,12 +202,13 @@
   gap: var(--spacing-6);
 }
 
-.home-about__eyebrow {
-  margin-bottom: 0;
-}
-
 .home-section__heading em {
-  font-style: italic;
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.45em;
+  line-height: 0.75;
+  letter-spacing: 0;
   color: var(--color-tertiary);
 }
 
@@ -351,34 +356,22 @@ button.home-about__skill:active {
   z-index: 1;
 }
 
-.home-about__status {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  margin-bottom: var(--spacing-5);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: var(--tracking-label-lg);
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text-inverse) 65%, transparent);
-}
-
-.home-about__status-dot {
-  width: var(--spacing-2);
-  height: var(--spacing-2);
-  flex-shrink: 0;
-  border-radius: var(--radius-full);
-  background: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
-}
-
 .home-about__panel-heading {
-  max-width: 18ch;
+
   font-family: var(--font-heading);
   font-size: var(--text-heading-xl);
   line-height: 1.25;
   color: var(--color-text-inverse);
+}
+
+.home-about__panel-heading em {
+  font-family: var(--font-sub);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.45em;
+  line-height: 0.75;
+  letter-spacing: 0;
+  color: var(--color-accent);
 }
 
 @media (min-width: 768px) {
@@ -389,7 +382,7 @@ button.home-about__skill:active {
 
 .home-about__panel-copy {
   margin-top: var(--spacing-4);
-  max-width: 28rem;
+  max-width: 36rem;
   font-family: var(--font-body);
   font-size: var(--text-body-lg);
   line-height: 1.65;

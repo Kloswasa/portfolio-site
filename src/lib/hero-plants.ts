@@ -39,36 +39,20 @@ export function pickRandomHeroPlantId(): HeroPlantId {
 
 export const HERO_PLANT_STAMPS: Record<
   HeroPlantId,
-  readonly [string, string, string]
+  readonly [string, string]
 > = {
-  "wax-flower": [
-    "Geraldton Wax",
-    "Specimen No. 042",
-    "Chamelaucium uncinatum",
-  ],
-  branch: ["Common Hazel", "Specimen No. 017", "Corylus avellana"],
-  fern: ["Bracken Fern", "Specimen No. 001", "Pteridium aquilinum"],
-  magnolia: ["Southern Magnolia", "Specimen No. 005", "Magnolia grandiflora"],
-  dandelion: ["Common Dandelion", "Specimen No. 018", "Taraxacum officinale"],
-  clover: ["White Clover", "Specimen No. 044", "Trifolium repens"],
-  lotus: ["Sacred Lotus", "Specimen No. 007", "Nelumbo nucifera"],
-  chrysanthemum: [
-    "Garden Chrysanthemum",
-    "Specimen No. 023",
-    "Chrysanthemum morifolium",
-  ],
-  "forget-me-not": [
-    "Forget-me-not",
-    "Specimen No. 031",
-    "Myosotis sylvatica",
-  ],
-  rose: ["Garden Rose", "Specimen No. 012", "Rosa gallica"],
-  peony: ["Chinese Peony", "Specimen No. 019", "Paeonia lactiflora"],
-  lily: ["Madonna Lily", "Specimen No. 028", "Lilium candidum"],
-  hydrangea: [
-    "Bigleaf Hydrangea",
-    "Specimen No. 036",
-    "Hydrangea macrophylla",
-  ],
-  sunflower: ["Common Sunflower", "Specimen No. 051", "Helianthus annuus"],
+  "wax-flower": ["Geraldton Wax", "Lasting love"],
+  branch: ["Common Hazel", "Quiet wisdom"],
+  fern: ["Bracken Fern", "Sincere fascination"],
+  magnolia: ["Southern Magnolia", "Enduring dignity"],
+  dandelion: ["Common Dandelion", "Wishful resilience"],
+  clover: ["White Clover", "Good fortune"],
+  lotus: ["Sacred Lotus", "Rising purity"],
+  chrysanthemum: ["Garden Chrysanthemum", "Loyal joy"],
+  "forget-me-not": ["Forget-me-not", "True remembrance"],
+  rose: ["Garden Rose", "Devoted love"],
+  peony: ["Chinese Peony", "Honored prosperity"],
+  lily: ["Madonna Lily", "Renewed purity"],
+  hydrangea: ["Bigleaf Hydrangea", "Grateful understanding"],
+  sunflower: ["Common Sunflower", "Warm devotion"],
 };

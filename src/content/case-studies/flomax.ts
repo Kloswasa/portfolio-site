@@ -9,8 +9,8 @@ const flomaxCaseStudy = {
   "hero": {
     "breadcrumb": "Flomax",
     "eyebrow": "007 · Graphic Design · Kids mask packaging",
-    "titleLine1": "Flomax",
-    "titleLine2": "Kids Mask Packaging",
+    "titleLine1": "Flomax Kids Mask",
+    "titleLine2": "Packaging",
     "summary": "A youth-facing graphic style for Flomax's filter face mask, designed for children while staying connected to the brand identity.",
     "layout": "split",
     "image": {

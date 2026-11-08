@@ -7,7 +7,6 @@ export interface PageEndAction {
 }
 
 export interface PageEndCopy {
-  kicker: string;
   titleLead: string;
   titleAccent: string;
   actions: PageEndAction[];

@@ -15,7 +15,6 @@ import type {
 
 export const ABOUT_HERO_META: AboutHeroMeta = {
   watermark: "\u2018 About \u2019",
-  eyebrow: "ABOUT \u00b7 THE DESIGNER BEHIND THE ARCHIVE",
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
@@ -57,7 +56,6 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
 };
 
 export const ABOUT_STORY_BLOCK: AboutBlock = {
-  kicker: "  01",
   title: "In brief",
   infoStrong: "The short version",
   infoDetail: "Who, and how I got here",
@@ -89,7 +87,6 @@ export const ABOUT_STORY: AboutStory = {
 
 
 export const ABOUT_TIMELINE_BLOCK: AboutBlock = {
-  kicker: "  03",
   title: "Experience record",
   infoStrong: "The path",
   infoDetail: "Newest first \u00b7 full CV below",
@@ -141,7 +138,6 @@ export const ABOUT_TIMELINE: AboutTimelineEntry[] = [
 ];
 
 export const ABOUT_EDUCATION_BLOCK: AboutBlock = {
-  kicker: "  04",
   title: "Study",
   infoStrong: "Education",
   infoDetail: "Degrees and specialisations",
@@ -161,7 +157,6 @@ export const ABOUT_EDUCATION: AboutTimelineEntry[] = [
 ];
 
 export const ABOUT_INSTRUMENTS_BLOCK: AboutBlock = {
-  kicker: "  02",
   title: "Skills",
   infoStrong: "Curated, not exhaustive",
   infoDetail: "How the work gets made",
@@ -242,10 +237,9 @@ export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
     label,
     skills: instrumentSkills(label),
   })),
-  statusLabel: "Open to work. Melbourne / remote. ",
   availabilityHeading: "Open to product designer and related roles.",
   availabilityDescription:
-    "Email is the best way to reach me.",
+    "Available for onsite and remote work. Email is the best way to reach me.",
   experience: "Design + Build",
 };
 
@@ -259,7 +253,6 @@ export const ABOUT_QUOTE: AboutQuote = {
 
 
 export const ABOUT_END_COPY: AboutEndCopy = {
-  kicker: "The end of the record",
   titleLead: "If any of this resonates,",
   titleAccent: "let\u2019s make something.",
   actions: [

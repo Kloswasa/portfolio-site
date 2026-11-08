@@ -17,7 +17,7 @@ interface WorkCardProps {
 export function WorkCard({ project, layout = "default" }: WorkCardProps) {
   const reduceMotion = useReducedMotion();
   const cardRef = useTilt<HTMLAnchorElement>(!reduceMotion);
-  const [yearValue, yearLabel = ""] = project.yearLabel.split(" · ");
+  const [yearValue] = project.yearLabel.split(" · ");
   const cardClassName =
     layout === "featured"
       ? "specimen-card specimen-card--link specimen-card--polaroid specimen-card--featured"
@@ -51,7 +51,6 @@ export function WorkCard({ project, layout = "default" }: WorkCardProps) {
         }}
         frame={project.frame}
         stampValue={yearValue}
-        stampLabel={yearLabel}
         classification={project.classification}
         title={project.title}
         tags={project.tags}

@@ -32,7 +32,6 @@ const ALL_PLAY_MEDIUM_SECTIONS: PlayMediumSection[] = [
 ];
 
 const ALL_PLAY_HERO_META: PlayHeroMeta = {
-  eyebrow: "The Laboratory · Studies & Experiments",
   titleLine1: "Made for its",
   titleLine2: "own sake",
   description:
@@ -48,7 +47,7 @@ const ALL_PLAY_HERO_META: PlayHeroMeta = {
 const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
   ...ALL_PLAY_HERO_META,
   description:
-  "On and off the clock illustrations.\nSome from client work,\nsome made simply for the pleasure of it.\nClick to see the full image of each collection.",
+  "On and off the clock illustrations.\nSome from client work, some made simply for the joy of it.",
    stats: [
     { label: "Illustrations", value: "6" },
     { label: "Media", value: "Digital" },
@@ -390,7 +389,6 @@ export const PLAY_WORKS = PLAY_SHOW_CODE
 
 
 export const PLAY_END_COPY: PlayEndCopy = {
-  kicker: "The end of the record",
   titleLead: "If this is not enough,",
   titleAccent: "let\u2019s see my curated projects.",
   actions: [

@@ -20,7 +20,6 @@ type TabbedGridSectionProps<TTab extends string, TItem> = {
   tabs: TabbedGridTab<TTab>[];
   defaultTab: TTab;
   tabAriaLabel: string;
-  eyebrow: string;
   title: string;
   description: string;
   getItems: (tab: TTab) => TItem[];
@@ -36,7 +35,6 @@ export function TabbedGridSection<TTab extends string, TItem>({
   tabs,
   defaultTab,
   tabAriaLabel,
-  eyebrow,
   title,
   description,
   getItems,
@@ -56,7 +54,6 @@ export function TabbedGridSection<TTab extends string, TItem>({
 
       <ScrollReveal as="div" revealOnScroll={false}>
         <header className="max-w-xl">
-          <span className="eyebrow">{eyebrow}</span>
           <h1 className="text-heading-4xl md:text-heading-5xl">{title}</h1>
           <p className="mt-2 max-w-xl font-body text-base font-light leading-relaxed text-text-muted">
             {description}

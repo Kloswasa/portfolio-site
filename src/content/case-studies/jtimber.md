@@ -4,8 +4,8 @@ slug: jtimber
 hero:
   breadcrumb: JTimber
   eyebrow: "009 · Graphic Design · Flooring catalogue & 3D assets"
-  titleLine1: JTimber
-  titleLine2: Flooring Catalogue
+  titleLine1: JTimber Flooring
+  titleLine2: Catalogue
   summary: A 48-page flooring catalogue for a wood styling company, covering all products and services, managing from the assets to coordinated print publication.
   layout: split
   image:

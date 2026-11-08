@@ -49,7 +49,6 @@ const disciplineCount = new Set(visibleProjects.map((project) => project.workTab
 const industryCount = new Set(visibleProjects.map((project) => project.industry)).size;
 
 export const WORK_HERO_META: WorkHeroMeta = {
-  eyebrow: `THE WORK ARCHIVE · ${minYear} — ${maxYear}`,
   titleLine1: String(WORK_ARCHIVE_PROJECTS.length),
   titleLine2: "Collectables",
   description:
@@ -62,7 +61,6 @@ export const WORK_HERO_META: WorkHeroMeta = {
 };
 
 export const WORK_END_COPY: PageEndCopy = {
-  kicker: "The end of the record",
   titleLead: "If you like something more amusing,",
   titleAccent: "Let\u2019s see my playground",
   actions: [{ label: "Browse play →", href: "/play", variant: "primary" }],

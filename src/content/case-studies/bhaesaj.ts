@@ -9,8 +9,8 @@ const bhaesajCaseStudy = {
   "hero": {
     "breadcrumb": "Bhaesaj Skincare",
     "eyebrow": "008 · Packaging Design · Beauty",
-    "titleLine1": "Bhaesaj",
-    "titleLine2": "Lip Balm Packaging",
+    "titleLine1": "Bhaesaj Lip Balm",
+    "titleLine2": "Packaging",
     "summary": "Packaging exploration for Bhaesaj, a lip balm brand since 1989, translating established art direction into shape, surface, and function.",
     "layout": "split",
     "image": {

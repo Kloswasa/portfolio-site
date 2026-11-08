@@ -15,7 +15,6 @@ export type {
 
 export {
   getCaseStudyNav,
-  getMinorSectionEyebrows,
   getMinorSectionOrder,
   MAJOR_SECTION_ORDER,
 } from "@/src/lib/case-studies/sections";

@@ -171,7 +171,6 @@ export function TabbedGridSectionDemo() {
       ]}
       defaultTab="alpha"
       tabAriaLabel="Demo categories"
-      eyebrow="Composition"
       title="Tabbed grid shell"
       description="Shared header, TabBar, and responsive grid used on Work and Play index pages."
       getItems={(tab) => DEMO_ITEMS[tab]}
@@ -199,7 +198,6 @@ export function FeaturedProjectStaggerDemo({
 export function SectionBlockHeadDemo() {
   return (
     <SectionBlockHead
-      kicker="Specimen"
       title="Section block head"
       infoStrong="Shared title row."
       infoDetail=" Used on Play medium blocks and about-style sections."

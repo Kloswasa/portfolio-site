@@ -65,6 +65,7 @@ Full token hygiene audit and usage guide: [`docs/token-hygiene.md`](docs/token-h
 Fonts load in `app/layout.tsx` and bind to CSS variables on `<html>` (runtime source of truth):
 
 - `font-heading` (**Fraunces**): headings only
+- `font-sub` (**WindSong**): short accent lines and emphasized words inside headings. No italic cut — keep `font-style: normal`. Display sizes only.
 - `font-body` (**Lato**): everything else
 - `font-mono` (**Asul**): stamps, labels, and technical accents
 
