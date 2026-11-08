@@ -171,7 +171,7 @@ export const COMPONENT_CATALOG: CatalogEntry[] = [
     name: "ThemeToggle",
     path: "src/components/chrome/ThemeToggle.tsx",
     category: "chrome",
-    description: "Light / dark mode switch. Dark is the default; the choice is persisted to localStorage.",
+    description: "Sun and moon switch for light and dark mode. Dark is the default; the choice is persisted to localStorage.",
   },
   {
     id: "footer",
