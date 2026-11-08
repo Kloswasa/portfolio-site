@@ -21,7 +21,7 @@ export function HomeFeaturedSection() {
         <div className="home-featured__content">
           <SnapItem className="home-featured__intro">
             <h2 className="home-section__heading">
-              Things I have been <em>Weaving.</em>
+              Things I have <em>curated </em>  for you.
             </h2>
           </SnapItem>
 

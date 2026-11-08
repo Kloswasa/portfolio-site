@@ -17,7 +17,7 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
   titleLine1: "This",
   titleLine2: "Site",
   description:
-    "Three ideas from print and cyanotype, built by eye with AI as a collaborator.",
+    "Three ideas from print and cyanotype, woven by eye with AI as a collaborator.",
   stats: [
     { label: "Cursor \u00b7 Figma", value: "80 / 20" },
     { label: "Design tokens", value: "100" },
@@ -39,7 +39,7 @@ export const COLOPHON_BRIEF: ColophonBrief = {
     " at once.",
   ],
   paragraphs: [
-    "\u2003Moodboard first, then Claude for a sketch system. Most of the making happened in Cursor; Figma justified layout. A new case study should be authoring, not engineering. AI speeds the start; craft decides what stays.",
+    "\u2003Moodboard first, then Claude for a sketch system. Most of the making happened in Cursor; Figma justified layout. A new case study should be authoring, not engineering. AI speeds the start; weaving decides what stays.",
   ],
   specimenLabel: "LIVE TOKENS\nRestyle with the theme",
   stampValue: "v0.1",
@@ -63,8 +63,8 @@ export const COLOPHON_IDEAS: ColophonIdea[] = [
   {
     num: "02",
     title: "Collectible",
-    source: "Physical card · stamp",
-    from: "Wanting something you could hold",
+    source: "Physical card · stamp · polaroid ",
+    from: "Something you could collect",
     shows: "Work and play cards",
   },
   {

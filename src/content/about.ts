@@ -18,7 +18,7 @@ export const ABOUT_HERO_META: AboutHeroMeta = {
   titleLine1: "Klaus",
   titleLine2: "W.",
   description:
-    "Melbourne-based product designer, from research to production code.\nPrint-minded craft, physical touch, and botanical looking carried into digital work.",
+    "Melbourne-based product designer, from research to production code.\nWeaving physical touch into the digital work.",
   stats: [
     { label: "Status", value: "Open to work" },
     { label: "Based in", value: "Melbourne" },
@@ -72,14 +72,14 @@ export const ABOUT_STORY: AboutStory = {
     stampLabel: "2019",
   },
   lead: [
-    "I consider a research decision with",
-    { em: " care" },
-    ", then build what I design and craft, so it carries stories from a canvas and Figma to code.",
+    "I consider a research decision with care, then ",
+    { em: "weave" },
+    " what I design into production code, so it still inherits the stories from Figma.",
   ],
   
   paragraphs: [
     "I come from the industrial design field, which looks at visual and physical craft: type, grid, form, material. That habit of looking closely is still how I read an interface and keep the person using it in view.",
-    "Storytelling is also my passion. To illustrate, this portfolio draws on the love of printing. Pages follow a monograph, work is logged like a collectable stamp, and the botanicals come from cyanotype printing.",
+    "Weaving a story through the work is the other passion. This portfolio draws on the love of printing: pages follow a monograph, work is logged like a collectable stamp, and the botanicals come from cyanotype printing.",
     "Agency and freelance work fostering me to ship under real constraints. Research decides what gets built, and working across design and engineering means the care survives the handoff.",
   ],
   signature: "\u2014 Klaus",
@@ -230,9 +230,9 @@ function instrumentSkills(
 
 /** Home `#about` section — derived from the full about record where possible. */
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
-  shortHeading: "\u201cI love completing\nthe l\u221ep\u201d",
+  shortHeading: "\u201cI love weaving and\n  completing the l\u221ep\u201d",
   storyIntro:
-    "From research to decision-making, then design and craft translating into production code. Weaving stories into my work is also my passion, like this site that has built after a collectable and editorial inspriration.",
+    "From research to a decision, then weaving design into production code. The stories stay in the work like the way this site is built from a love of collectibles",
   skillGroups: HOME_INSTRUMENT_LABELS.map((label) => ({
     label,
     skills: instrumentSkills(label),
@@ -247,14 +247,14 @@ export const ABOUT_QUOTE: AboutQuote = {
   watermark: "Look twice",
   quote:
     "\u201cI want a digital portfolio that still feels printed: editorial pages, collectible cards, and botanicals pressed like a cyanotype.\u201d",
-  source: "On the archive \u00b7 2026",
+  source: "Portfolio concept \u00b7 2026",
 };
 
 
 
 export const ABOUT_END_COPY: AboutEndCopy = {
   titleLead: "If any of this resonates,",
-  titleAccent: "let\u2019s make something.",
+  titleAccent: "let\u2019s weave something.",
   actions: [
     { label: "Get in touch \u2192", href: `mailto:${siteConfig.email}`, variant: "primary" },
     { label: "See the work", href: "/work", variant: "outline" },

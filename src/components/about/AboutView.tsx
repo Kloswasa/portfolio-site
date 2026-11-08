@@ -53,6 +53,7 @@ export function AboutView({
         meta={{ ...heroMeta, stats: facts }}
         watermark={heroMeta.watermark}
         illustration="forget-me-not"
+        nameTitle
       >
         {leadStat ? (
           <p className="about-hero__status">

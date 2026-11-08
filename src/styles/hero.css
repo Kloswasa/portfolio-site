@@ -55,7 +55,8 @@
   }
 }
 
-.hero-copy h1 em {
+.hero-copy h1 em,
+.work-hero__title--name em {
   display: inline-block;
   font-family: var(--font-sub);
   font-style: normal;
@@ -65,7 +66,8 @@
   letter-spacing: 0;
 }
 
-.hero-copy h1 .hero-name__initial {
+.hero-copy h1 .hero-name__initial,
+.work-hero__title--name .hero-name__initial {
   font-size: 1.28em;
   line-height: 0.4;
   margin-right: 0.2em;

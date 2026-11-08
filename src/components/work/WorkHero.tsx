@@ -11,13 +11,36 @@ interface WorkHeroProps {
   meta: WorkHeroMeta;
   watermark?: string;
   illustration?: WorkHeroIllustration;
+  /** First letter and second line use the home hero name lockup. */
+  nameTitle?: boolean;
   children?: ReactNode;
+}
+
+function HeroNameTitle({
+  line1,
+  line2,
+}: {
+  line1: string;
+  line2: string;
+}) {
+  return (
+    <h1 className="work-hero__title work-hero__title--name">
+      <span className="work-hero__title-line">
+        <em className="hero-name__initial">{line1.slice(0, 1)}</em>
+        {line1.slice(1)}
+      </span>
+      <span className="work-hero__title-line">
+        <em className="text-primary">{line2}</em>
+      </span>
+    </h1>
+  );
 }
 
 export function WorkHero({
   meta,
   watermark = "\u2018 Works \u2019",
   illustration = "wax-flower",
+  nameTitle = false,
   children,
 }: WorkHeroProps) {
   return (
@@ -33,12 +56,16 @@ export function WorkHero({
 
       <div className="work-hero__inner work-container">
         <div className="work-hero__copy">
-          <h1 className="work-hero__title">
-            <span className="work-hero__title-line">{meta.titleLine1}</span>
-            <span className="work-hero__title-line work-hero__title-line--accent">
-              {meta.titleLine2}
-            </span>
-          </h1>
+          {nameTitle ? (
+            <HeroNameTitle line1={meta.titleLine1} line2={meta.titleLine2} />
+          ) : (
+            <h1 className="work-hero__title">
+              <span className="work-hero__title-line">{meta.titleLine1}</span>
+              <span className="work-hero__title-line work-hero__title-line--accent">
+                {meta.titleLine2}
+              </span>
+            </h1>
+          )}
 
           <p className="work-hero__description">{meta.description}</p>
 

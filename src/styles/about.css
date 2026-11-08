@@ -82,6 +82,11 @@
   }
 }
 
+.about-page .work-hero__title--name {
+  gap: 0;
+  line-height: 0.95;
+}
+
 .about-page .work-hero__description {
   max-width: 36rem;
 }
