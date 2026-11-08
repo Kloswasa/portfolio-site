@@ -17,7 +17,7 @@ export const COLOPHON_HERO_META: AboutHeroMeta = {
   titleLine1: "This",
   titleLine2: "Site",
   description:
-    "Three ideas from print and cyanotype, woven by eye with AI as a collaborator.",
+    "Three ideas from print and cyanotype, curated by eye with AI as a collaborator.",
   stats: [
     { label: "Cursor \u00b7 Figma", value: "80 / 20" },
     { label: "Design tokens", value: "100" },
