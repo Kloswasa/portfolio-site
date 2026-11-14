@@ -77,17 +77,17 @@ export function PlayView({
       <div className="play-page">
       <PlayHero meta={heroMeta} />
 
-      <FilterBar
-        options={filterOptions}
-        active={activeFilter}
-        count={visibleWorks.length}
-        onFilter={setActiveFilter}
-        containerClassName="play-container"
-        ariaLabel="Filter play entries"
-        tabAriaLabel="Play filters"
-
-        
-      />
+      {filterOptions.length > 0 ? (
+        <FilterBar
+          options={filterOptions}
+          active={activeFilter}
+          count={visibleWorks.length}
+          onFilter={setActiveFilter}
+          containerClassName="play-container"
+          ariaLabel="Filter play entries"
+          tabAriaLabel="Play filters"
+        />
+      ) : null}
 
       <div className="play-body play-container">
         {mediumSections.map((section) => (

@@ -91,12 +91,10 @@
   display: inline-block;
   font-family: var(--font-sub);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.1em;
   line-height: 0.8;
   letter-spacing: 0;
-  /* Optically center WindSong — letter body starts late; t exit runs long */
-  padding-inline: 0.08em 0.32em;
 }
 
 .hero-role__mono {

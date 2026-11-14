@@ -5,7 +5,7 @@ import type { PlayCanvasHandle } from "@/src/components/play/PlayCanvas";
 import { PlayViewerPlate } from "@/src/components/play/PlayViewerPlate";
 import type { PlayZoomableImageHandle } from "@/src/components/play/PlayZoomableImage";
 import type { PlayWork } from "@/src/lib/play/types";
-import { playImageSrc, playWorkImages } from "@/src/lib/play/utils";
+import { playDetailTags, playImageSrc, playWorkImages } from "@/src/lib/play/utils";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, useReducedMotion } from "framer-motion";
@@ -146,6 +146,7 @@ export function PlayViewer({
 
   if (!mounted || !work) return null;
 
+  const detailTags = playDetailTags(work.meta, work.dim);
   const effectivePaused = motionPaused || reduceMotion === true;
 
   const node = (
@@ -210,13 +211,14 @@ export function PlayViewer({
               onClick={() => setDetailsOpen(false)}
             >
               <span className="play-viewer__back-line" aria-hidden="true" />
-              Back to work
+              Hide details
             </button>
 
-            <p className="play-viewer__idx">{work.index}</p>
+            {work.medium === "illustration" ? null : (
+              <p className="play-viewer__idx">{work.index}</p>
+            )}
             <h2 className="play-viewer__title">{work.title}</h2>
-            <p className="play-viewer__meta">{work.meta}</p>
-            <p className="play-viewer__dim">{work.dim}</p>
+            <p className="play-viewer__meta">{detailTags}</p>
             <div className="play-viewer__rule" aria-hidden="true" />
             <p className="play-viewer__note">{work.description}</p>
 
@@ -303,10 +305,14 @@ export function PlayViewer({
             </button>
           </div>
         ) : null}
-        <span className="play-viewer__hint-frame">{work.index}</span>
-        <span className="play-viewer__hint-sep" aria-hidden="true">
-          ·
-        </span>
+        {work.medium === "illustration" ? null : (
+          <>
+            <span className="play-viewer__hint-frame">{work.index}</span>
+            <span className="play-viewer__hint-sep" aria-hidden="true">
+              ·
+            </span>
+          </>
+        )}
         <span className="play-viewer__hint-title">{work.title}</span>
         <span className="play-viewer__hint-sep" aria-hidden="true">
           ·

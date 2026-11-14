@@ -220,10 +220,10 @@ export const tokens: TokenRecord = {
     "darkValue": "'Fraunces', Georgia, serif"
   },
   "font.sub": {
-    "value": "var(--font-windsong), 'WindSong', cursive",
+    "value": "var(--font-ephesis), 'Ephesis', cursive",
     "type": "fontFamilies",
     "cssVar": "--font-sub",
-    "darkValue": "var(--font-windsong), 'WindSong', cursive"
+    "darkValue": "var(--font-ephesis), 'Ephesis', cursive"
   },
   "font.body": {
     "value": "'Lato', system-ui, sans-serif",

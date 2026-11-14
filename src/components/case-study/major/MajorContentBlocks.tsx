@@ -572,7 +572,7 @@ function Block({ block }: { block: MajorContentBlock }) {
             <p className="cs-major__type-heading text-heading-3xl">Editorial headline</p>
           </div>
           <div className="cs-major__type-row">
-            <span className="cs-major__type-meta">Sub · WindSong</span>
+            <span className="cs-major__type-meta">Sub · Ephesis</span>
             <p className="cs-major__type-sub">Accent line</p>
           </div>
           <div className="cs-major__type-row">

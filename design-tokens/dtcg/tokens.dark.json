@@ -114,8 +114,8 @@
     },
     "sub": {
       "$value": [
-        "var(--font-windsong)",
-        "WindSong",
+        "var(--font-ephesis)",
+        "Ephesis",
         "cursive"
       ]
     },

@@ -166,12 +166,13 @@
 }
 
 .home-about__inner .home-section__watermark {
-  right: var(--spacing-8);
+  right: auto;
+  left: var(--spacing-8);
 }
 
 @media (min-width: 768px) {
   .home-about__inner .home-section__watermark {
-    right: var(--spacing-12);
+    left: var(--spacing-12);
   }
 }
 
@@ -239,16 +240,24 @@
 }
 
 .home-about__skill-groups {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--spacing-6);
   padding-top: var(--spacing-2);
+}
+
+@media (min-width: 1024px) {
+  .home-about__skill-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--spacing-8);
+  }
 }
 
 .home-about__skill-group {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
+  min-width: 0;
 }
 
 .home-about__skill-label {
@@ -266,12 +275,14 @@
 .home-about__skills {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: var(--spacing-2);
 }
 
 .home-about__skill {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   padding: var(--spacing-1) var(--spacing-3);
   font-family: var(--font-mono);
   font-size: var(--text-xs);

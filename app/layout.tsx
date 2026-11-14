@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Asul, Lato, WindSong } from "next/font/google";
+import { Fraunces, Asul, Lato, Ephesis } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { NavProvider } from "@/src/context/NavContext";
@@ -36,11 +36,11 @@ const monoFont = Asul({
   weight: ["400", "700"],
 });
 
-const subFont = WindSong({
+const subFont = Ephesis({
   subsets: ["latin"],
-  variable: "--font-windsong",
+  variable: "--font-ephesis",
   display: "swap",
-  weight: ["400", "500"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -110,4 +110,3 @@ export default function RootLayout({
     </html>
   );
 }
-

@@ -6,7 +6,7 @@ hero:
   eyebrow: "003 · UX Research · Healthtech · 2024 / 2026"
   titleLine1: Dementia
   titleLine2: Caregiver
-  summary: A usability evaluation of a caregiver monitoring app, and the re-analysis, run a year later, that reframed the findings as a trust and safety problem.
+  summary: A usability evaluation of a caregiver monitoring app, and the re-analysis.
   layout: split
   image:
     src: /projects/dementia-app/dementia_head_cover.webp
@@ -26,7 +26,7 @@ hero:
 
 eyebrow: 01 · Brief
 title: An evaluation,
-titleEm: and a second look, a year later
+titleEm: and a second look
 
 ## prose
 
@@ -241,6 +241,6 @@ title: Reflection
 
 - The 2024 evaluation was rigorous in method but small in sample: four participants, all female, none with real dementia caregiving experience. The findings held internally, but before any of them generalise they need users who actually live the problem. Rigour of method is not rigour of sample.
 
-- Coming back to my own data a year later, with different questions, changed what I could see. That wasn't luck. It was distance. In future evaluations I want to build the "come back later with fresh questions" step in on purpose, not by accident.
+- Coming back to my own data, with different questions, changed what I could see. That wasn't luck. It was distance. In future evaluations I want to build the "come back later with fresh questions" step in on purpose, not by accident.
 
 - The distinction I ended up drawing, between whether the user can do the thing and whether their confidence matches reality, isn't specific to this app. Any interface with real-world stakes benefits from asking both. That's the lens I take forward.

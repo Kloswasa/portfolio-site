@@ -111,6 +111,8 @@ export function HomeAboutSection() {
               <AboutHeading text={teaser.shortHeading} />
             </h2>
 
+     
+
             <p className="home-about__lead">{teaser.storyIntro}</p>
 
             <HomeAboutSkills groups={teaser.skillGroups} />

@@ -56,9 +56,7 @@ const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
   ],
 };
 
-export const PLAY_FILTER_OPTIONS = PLAY_SHOW_CODE
-  ? ALL_PLAY_FILTER_OPTIONS
-  : ALL_PLAY_FILTER_OPTIONS.filter((option) => option.key !== "code");
+export const PLAY_FILTER_OPTIONS = PLAY_SHOW_CODE ? ALL_PLAY_FILTER_OPTIONS : [];
 
 export const PLAY_HERO_META = PLAY_SHOW_CODE
   ? ALL_PLAY_HERO_META
@@ -76,7 +74,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "au-call",
     medium: "illustration",
-    index: "I·01",
+    index: "01",
     title: "Australia Calls illustrations",
     meta: "Digital · 2025",
     dim: "Quiz game · 2025",
@@ -86,7 +84,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardDescription: "Illustration series for the Australia Calls quiz game.",
     tools: ["Procreate", "Digital", "Illustration", "Quiz game"],
     tag: "Collection",
-    cardTools: "Digital · 2025",
+    cardTools: "2025",
     imageSrc: "play/illustration/illustration-AUcall-cover.png",
     imageAlt: "Australia Calls illustrations",
     imageWidth: 595,
@@ -127,16 +125,16 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "ganesha",
     medium: "illustration",
-    index: "I·02",
+    index: "02",
     title: "Ganesha",
     meta: "Digital · 2020",
-    dim: "Deity study · 2020",
+    dim: "Illustration · 2020",
     description:
       "A hand-rendered Ganesha study, ornamental line work balanced against open negative space. Inspired by my Bachelor degree university logo.",
     cardDescription: "An illustration of Ganesha inspired by my university logo.",
     tools: ["Illustrator", "Photoshop", "Cultural"],
     tag: "Cultural",
-    cardTools: "Digital · 2020",
+    cardTools: "2020",
     imageSrc: "play/illustration/illustration-ganesha.png",
     imageAlt: "Ganesha illustration",
     imageWidth: 595,
@@ -145,16 +143,16 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "thai-hom",
     medium: "illustration",
-    index: "I·03",
+    index: "03",
     title: "Thai Hom",
     meta: "Digital · 2019",
-    dim: "Home fragrance · 2019",
+    dim: "Illustration · 2019",
     description:
       "Illustration exploring Thai home aroma ingredients from a wide range of scents, arranged in an infographic booklet form.",
     cardDescription: "Thai home aroma ingredients for the infographic booklet.",
     tools: ["Digital", "Heritage", "Illustrator", "Photoshop"],
     tag: "Heritage",
-    cardTools: "Digital · 2019",
+    cardTools: "2019",
     imageSrc: "play/illustration/illustration-thhom.png",
     imageAlt: "Thai Hom infographic booklet illustration",
     imageWidth: 842,
@@ -177,7 +175,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "compose-zone",
     medium: "illustration",
-    index: "I·04",
+    index: "04",
     title: "Compose Zone",
     meta: "Digital · 2021",
     dim: "Booth design · 2021",
@@ -187,7 +185,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardDescription: "Illustration for the composition retail booth",
     tools: [ "Photoshop", "Printing"],
     tag: "Booth design",
-    cardTools: "Digital · 2021",
+    cardTools: "2021",
     imageSrc: "play/illustration/illustration-kuendee-backdrop.png",
     imageAlt: "Compose Zone illustration",
     imageWidth: 595,
@@ -210,7 +208,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "in-the-garden",
     medium: "illustration",
-    index: "I·05",
+    index: "05",
     title: "In the Garden illustration",
     meta: "Digital · 2021",
     dim: "Packaging · 2021",
@@ -219,7 +217,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardDescription: "Packaging illustration for the local entrepreneur's product.",
     tools: ["Photoshop", "Procreate"],
     tag: "Packaging",
-    cardTools: "Digital · 2021",
+    cardTools: "2021",
     imageSrc: "play/illustration/illustration-bupha.png",
     imageAlt: "Bupha packaging illustration",
     imageWidth: 595,
@@ -228,7 +226,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
   {
     id: "thai-agriculture",
     medium: "illustration",
-    index: "I·06",
+    index: "06",
     title: "Thai AgTech editorial calendar",
     meta: "Digital · 2023",
     dim: "Editorial calendar · 2023",
@@ -237,7 +235,7 @@ const ALL_PLAY_WORKS: PlayWork[] = [
     cardDescription: "Editorial calendar illustration in Thai AgTech theme.",
     tools: ["Illustrator"],
     tag: "Editorial",
-    cardTools: "Digital · 2023",
+    cardTools: "2023",
     imageSrc: "play/illustration/illustration-thargriculture.png",
     imageAlt: "Thai Agriculture editorial calendar illustration",
     imageWidth: 842,

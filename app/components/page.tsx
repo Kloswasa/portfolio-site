@@ -193,7 +193,7 @@ export default function ComponentsPage() {
                   <span className="font-mono text-text">text-heading-*</span>{" "}
                   utilities.{" "}
                   <span className="font-mono text-text">font-sub</span>{" "}
-                  (WindSong) is the accent face for short emphasized lines.{" "}
+                  (Ephesis) is the accent face for short emphasized lines.{" "}
                   <span className="font-mono text-text">font-body</span> (Lato)
                   is the default for everything else. Mono labels use{" "}
                   <span className="font-mono text-text">font-mono</span> (Asul).

@@ -16,6 +16,21 @@ export function playWorkImages(work: PlayWork): PlayImage[] {
   return [];
 }
 
+const TAGGED_YEAR = /^(.*)\s·\s(\d{4})$/;
+
+/**
+ * One detail line. When both tags end in the same year, the year is kept once
+ * at the end: "Digital · Packaging · 2021".
+ */
+export function playDetailTags(meta: string, dim: string): string {
+  const metaMatch = meta.match(TAGGED_YEAR);
+  const dimMatch = dim.match(TAGGED_YEAR);
+  if (metaMatch && dimMatch && metaMatch[2] === dimMatch[2]) {
+    return `${metaMatch[1]} · ${dimMatch[1]} · ${metaMatch[2]}`;
+  }
+  return `${meta} · ${dim}`;
+}
+
 /** Resolve a play asset path from `public/` (handles bare paths like `play/illustration/foo.png`). */
 export function playImageSrc(src: string): string {
   if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("/")) {
