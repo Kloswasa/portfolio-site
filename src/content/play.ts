@@ -51,7 +51,7 @@ const PLAY_HERO_META_ILLUSTRATION_ONLY: PlayHeroMeta = {
    stats: [
     { label: "Illustrations", value: "6" },
     { label: "Media", value: "Digital" },
-    { label: "Tools", value: "Procreate" },
+    { label: "Tools", value: "Mix" },
     { label: "Since", value: "2019" },
   ],
 };

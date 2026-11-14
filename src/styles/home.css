@@ -48,7 +48,7 @@
 }
 
 .home-section__heading {
-  max-width: 14ch;
+  max-width: 16ch;
   font-family: var(--font-heading);
   font-size: var(--text-heading-2xl);
   line-height: 1.15;
@@ -57,7 +57,7 @@
 
 @media (min-width: 768px) {
   .home-section__heading {
-    max-width: 16ch;
+    max-width: 22ch;
     font-size: var(--text-heading-3xl);
   }
 }

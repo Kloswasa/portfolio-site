@@ -232,7 +232,7 @@ function instrumentSkills(
 export const ABOUT_HOME_TEASER: AboutHomeTeaser = {
   shortHeading: "\u201cI love weaving and\n  completing the l\u221ep\u201d",
   storyIntro:
-    "From research to a decision, then weaving design into production code. The stories stay in the work like the way this site is built from a love of collectibles",
+    "Weaving the process from one to another. Research, analyse to a decision, then design and build into production code. The stories stitch stay in the work, like the way this site is crafted from my love of collectibles.",
   skillGroups: HOME_INSTRUMENT_LABELS.map((label) => ({
     label,
     skills: instrumentSkills(label),

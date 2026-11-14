@@ -62,14 +62,14 @@
   font-style: normal;
   font-weight: 400;
   font-size: 1.5em;
-  line-height: 0.8;
+  line-height: 0.4;
   letter-spacing: 0;
 }
 
 .hero-copy h1 .hero-name__initial,
 .work-hero__title--name .hero-name__initial {
-  font-size: 1.28em;
-  line-height: 0.4;
+  font-size: 1.5em;
+  line-height: 0.75;
   margin-right: 0.2em;
   vertical-align: -0.005em;
 }
@@ -91,8 +91,8 @@
   display: inline-block;
   font-family: var(--font-sub);
   font-style: normal;
-  font-weight: 400;
-  font-size: 1.1em;
+  font-weight: 600;
+  font-size: 1.2em;
   line-height: 0.8;
   letter-spacing: 0;
 }
